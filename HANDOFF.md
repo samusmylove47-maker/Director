@@ -11816,6 +11816,10 @@ prefix. This closes the other sixteen.**
 | R28 | **ONE PUBLISHED FIGURE IS WRONG NOW** (amended by R29) — `build27.py:103` says ten dungeons where the data holds eleven; `build5.py:144` says six where it is five. Correct at the generator, derived not retyped. **Name the corpora** (survey / catalogue / turn-in items) — nine one-word edits, and it is what makes `gate.py:259` reachable | `pending` | **stands** |
 | R29 | **R28 AMENDED.** Defect 1 (ten dungeons vs eleven) stands. Defect 2 does not: the "six" is a real count over item+group — `Fine steel weapons` is the sixth. **A population mismatch, not an invented number.** Acting on R28 as published would have introduced a wrong figure | `pending` | **stands; amends R28** |
 | R30 | **The Concordance is DECLINED as specified** — it fails the audit's own second guardrail: we cannot compute our own error rate, and a bound aimed outward at an affordable sample reads as an accusation. **Publish adjudications, not a rate.** Falsifier: an adjudication path costing no owner-hours reopens it | `pending` | **stands** |
+| R31 | **A roster row is not evidence of a session's state — only a FAILED SEND is.** Names rotate; a live session appears under a generated name. Bind identity to the repository, which does not rotate. Fifth instance of the scope shape, mine, and it idled Session A for hours on deadline night | `pending` | **stands** |
+| R32 | **=Lockouts keys on boss/zone/difficulty, never item ids.** B owns item→source; D owns source→runnable-this-week; E owns impact and order. **Actionability is THREE-WAY, never boolean**, and the not-knowing value is loud — an unknown upgrade is neither ranked actionable nor dropped | `pending` | **stands** |
+| R33 | **`alsoDies`→completion keys STAYS INERT.** It can only fail toward "the raid is done", and tonight's product exists to tell a player what they can still do. Arming it needs a matched pair first | `pending` | **stands** |
+| R34 | **The "=" branding is IDENTITY, not description.** It does not solve the stranger test and was never going to — the descriptive line beside each tool name does. Both ship | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -12980,3 +12984,91 @@ named the check, exited 0 without blocking; payload restored byte-identical.
 > **B's own words: "a field that looks like it does something, on an object whose
 > consumer never asks."** Same shape as `_nr`, as `ge-r`, as the fixture's `_why`.
 > **Caught by reading the exit logic before running rather than after.**
+
+### 31 Aug 20:4xZ — RULING R31: a roster row is not evidence of a session's state. Only a failed send is
+
+**Session 0 reported the scope shape's FOURTH instance within the hour, as
+standing. It is mine to fix structurally rather than warn about again.**
+
+| | claim | property of | attached to |
+|---|---|---|---|
+| 1 | *"Shara's main"* | a branch | a repo with no such branch |
+| 2 | *"Session 0 is gone"* | one listing | the world |
+| 3 | *"the frozen branch"* | a **file** | the branch containing it |
+| **4** | ***"C is offline"*** | **three named rows** | **the session** |
+
+> **THE EVIDENCE THAT SETTLES IT: three different parties have now committed this
+> shape AFTER reading the correction for it.** Instance 2 was mine, about Session
+> 0, by the identical mechanism. **Instance 4 was produced by D — in the same
+> message in which D reported that its own address had rotated and that Session
+> 0's had too.**
+>
+> **A prose rule does not prevent this. Four warnings have not prevented it.**
+> Session 0 said so and declined to propose the mechanism, correctly, because it
+> would have been designing how sessions address each other. **That is mine.**
+
+#### And I committed instance 5 tonight, at cost
+
+**I reported A, C and D offline all evening and told the owner that four of five
+Phase-0 items were blocked on it.** All three were **running under auto-generated
+names** — `repo-docs-review-37a9c9-7a`, `eqls-auras-d4`, `eqlslockouts-fd` —
+while the rows titled `EQLS Main Session A` and `EQLS Auras Session C` sat stale
+and offline.
+
+**A's queue was empty for hours, holding an instruction that expires Wednesday,
+on the night of a Tuesday-morning deadline. That is the most expensive error I
+have made today and it was this exact shape.** The owner caught it from outside;
+neither end of the link could.
+
+#### R31 — the structural rule
+
+> **A ROSTER ROW IS NOT EVIDENCE OF A SESSION'S STATE. The only admissible
+> evidence that a session is unreachable is A SEND THAT FAILED, quoted.**
+>
+> `ListAgents` tells you what rows exist. **It does not tell you who is running**
+> — names rotate, registrations go stale, and a live session appears under a
+> generated name that matches nothing you remember.
+>
+> **So the supportable claims are:**
+> - *"no row named X is listed"* — a fact about a listing
+> - *"I sent to X and got: No agent named 'X' is reachable"* — a **measurement**
+>
+> **And the unsupportable one is "X is offline."**
+
+**Why this is structural and not another warning:** it makes the check *return
+both answers*. A send succeeds or it fails with a named error — **the instrument
+can say "reachable" and can say "not reachable", and a roster row can only ever
+say one thing that gets read as the other.** It converts an inference into a
+measurement, which is the move this project makes everywhere else.
+
+**It has already worked once tonight, before I ruled it.** I sent to
+`eql-source-07`, the send **failed with a named error**, and I reported it as
+gone — correctly, because the failure was the evidence. **The same day I reported
+three sessions offline from rows alone and was wrong about all three.**
+
+#### The second half, and it is the cheaper one
+
+> **BIND IDENTITY TO THE ARTIFACT, NOT THE SESSION NAME.** Session names rotate.
+> **Repository names do not.**
+>
+> *"C is offline"* is unsayable. *"`EQLSAuras` has not moved since 16:23Z"* is a
+> measurement, and it is the thing anyone actually wanted to know.
+
+**Session 0 already applies this and flagged its own limit while doing so:** a
+quiet repository is *"equally consistent with a session working uncommitted,
+idle, or gone. I cannot distinguish them and am not going to try."* **Correct —
+and its prior applies first: its sweep interval is longer than the sessions'
+commit interval, so quiet is its lag before it is their silence.**
+
+#### One thing NOT adjudicated, deliberately
+
+**Session 0 measured that `git rev-parse --short b6e3bfd` returns SEVEN
+characters in its clone, which does not reproduce D's account of the same fact.
+It type-flagged its explanation — abbreviation length is a property of the local
+object database, partial versus full clone — as INFERENCE, not measurement, and
+adjudicated nothing.**
+
+**If that inference holds, both renderings are honest, nobody abbreviated
+wrongly, and D's self-correction over-swung onto a document that was already
+correct.** **Third pass on one trivial fact. I am not making it a fourth, and
+Session 0 said the same before I did.**
