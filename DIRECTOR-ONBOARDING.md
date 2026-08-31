@@ -136,10 +136,28 @@ Everything else here is scaffolding for this. Each was paid for.
 
 **Five and six unify, and the unified form is the more useful one:**
 
-> **A check has two outputs — a verdict and a description — and in every case we
-> have found, only the verdict was ever checked by anything.** One is untested
-> code; the other is unread output. **A green run and an accurate green run are
-> not the same object.**
+> ~~**A check has two outputs — a verdict and a description — and in every case
+> we have found, only the verdict was ever checked by anything.**~~ One is
+> untested code; the other is unread output. **A green run and an accurate green
+> run are not the same object.**
+>
+> **STRUCK 31 August 2026, and ratified by the Director who wrote it.** The
+> struck sentence is **false, falsified by the case that generated the rule**:
+> `scripts/check.py` on `eql-source` `origin/main` @ `e6039020` holds **five
+> occurrences of `_nr`, two of them conditionals** — `812` (`if _nr < _nd:` →
+> `fail()`) and `820`. **The description was checked. Twice.**
+>
+> **It should read: "only the verdict was ever checked against the DATA."**
+> `_nr` and `_nd` are both `_gh.count(...)` — two readings of the same artifact,
+> never of the data. The guard compares the page against the page, which is why
+> both could be wrong together and agree. **The fault is the SOURCE of the
+> reading, not whether anything consumed it.**
+>
+> **Why the wording mattered enough to strike rather than footnote:** the
+> compressed form points at the wrong fix. It implies *"also check the
+> description"* — **but the description was checked and the guard still passed
+> while the page lost a refusal.** A session that reads the struck line and
+> dutifully adds a check on its description **reproduces the bug.**
 
 **Three rules that fall out of it:**
 
@@ -240,8 +258,26 @@ and that is the channel.**
 
 **Sibling clones already exist under the scratchpad** — `dpeek` (EQLSLockouts),
 `epeek` (sky-ledger), `bpeek` (EQL50ups), `cpeek` (EQLSAuras), `spk`
-(`LoxyBee/EQLS-Auras`, Shara's). **`add_repo` is gated; plain `git clone` is
-not.** That is how to read another session's tree.
+(`LoxyBee/EQLS-Auras`, Shara's). ~~**`add_repo` is gated; plain `git clone` is
+not.**~~ That is how to read another session's tree.
+
+**STRUCK 31 August 2026, and ratified by the Director who wrote it.**
+**`add_repo` is not gated** — the cloud observation sweep called it and it
+succeeded on the first attempt. **It was gated in that one cloud session, which
+is a fact about a session written as a fact about the tool.** And the clone
+worked for a different reason than the line implies: **an anonymous read of a
+public repository needs no credential at all.** Only the *push* was refused.
+**Right conclusion, wrong mechanism** — and the mechanism is the half this file's
+own §5 warns is the unreliable one.
+
+**The standing rule that came out of it, and it outranks the correction:**
+
+> **A permission bound that enumerates actions is incomplete wherever the agent
+> can acquire capabilities. Bound the acquisition, not only the act.** A list of
+> what an agent may do is not a boundary if *"obtain more permissions"* is absent
+> from the list of what it may not. **Capability acquisition is the owner's to
+> grant, never a session's to take** — including the Director's. A session that
+> finds itself lacking a permission **says so and stops.**
 
 ---
 
