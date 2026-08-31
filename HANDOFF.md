@@ -10954,3 +10954,56 @@ that field with `persist_session: false`.
 > scheduled fire is the test and it has not happened at time of writing.** Not
 > concluding from one run on the wrong path — that is the error the last entry in
 > the old record was written about.
+
+### 31 Aug 15:25Z — THE CHANNEL WORKS. First message ever sent from this post, and the armed-vs-inert test is closed
+
+**`SendMessage` → `EQLS Project DIRECTOR [4408a8]`, `success: true`, msg_id
+`d37f1009-daa5-4c79-93af-74d9ddc41030`.** Fresh listing read immediately before
+sending; the target row was `cloud · idle`, not offline.
+
+> **The constraint that defined this post for its whole existence — *the Director
+> cannot initiate* — is no longer true, and it has now been demonstrated rather
+> than asserted.** The channel is **one-way**: the transport says a cloud session
+> cannot message back yet. The outgoing Director answers in `HANDOFF.md` on the
+> frozen branch under `## HANDOVER VERIFICATION`, deliberately, as its last write.
+
+**The listing is worse than §2 records.** Nineteen rows became twenty-one, and the
+duplicate registrations have grown: **Session A appears four times and Session C
+three times, every one of them offline**, plus `Old: First Session A` and
+`EQL Source Website Main`. §2 says six of nineteen. **Do not send on a name
+without reading a fresh listing — the rule holds harder than when it was
+written.**
+
+#### `persistent_session_id` is INERT — closed on the scheduled path
+
+| fired | how | run session |
+|---|---|---|
+| 14:24:22Z | scheduled | `cse_01BMHC1Ax4gtRstMjFS4qn4c` — **this run minted the stored id** |
+| 14:56:52Z | manual | `cse_019tZSav1W4teaYgQKLcNPqc` |
+| 15:23:47Z | **scheduled** | `cse_018kUAUymXZyaKmqN8ShFjiL` |
+
+**Three runs, three distinct session ids, none equal to the stored
+`session_01BMHC1Ax4gtRstMjFS4qn4c`**, which the API still reports with
+`persist_session: false`. **Stale metadata; nothing resumes it.**
+
+**The 15:23 fire is the control and the 14:56 manual run is not.** I fired the
+manual one to test a payload fix that had never executed, and explicitly did not
+treat it as the answer — *a manual run is not the scheduled path*, and concluding
+from the wrong path is the error the old record ends on.
+
+**Stated at the width of the evidence:** I have direct evidence the session **ids
+differ**. That a run held **no memory** is inferred from its behaviour — it
+re-read the record from scratch — and was not measured. **The field is inert; I
+did not measure amnesia.**
+
+**And the 15:23 run diffed against `SWEEP-LOG.md` rather than anything hardcoded**,
+reported the path it took, and confirmed it granted itself nothing. The loop is
+closed and the two reporting requirements added at 14:26 and 14:59 both fired.
+
+#### What was sent
+
+Two shas, the result above, and **two errors in `DIRECTOR-ONBOARDING.md`** — §4's
+unification claim, falsified by `check.py:812` where the description gates a
+`fail()`; and §7's `add_repo is gated`, which is right in conclusion and wrong in
+mechanism. Both carry their falsifier. **Whether they hold is the outgoing
+Director's to rule on, not mine to bank.**
