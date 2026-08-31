@@ -11836,6 +11836,7 @@ prefix. This closes the other sixteen.**
 | R48 | **Link, do not copy.** Merging IS the publish — no zero-merge path to eqlsource.com exists. `=Upgrades` already has the zero-merge shape (link to B's own host); E's bundle needs a merge, so queue it rather than avoid it; the threat meter is an overlay, so the site ships a description page and a `/releases/latest/` link | `pending` | **stands** |
 | R49 | **`EQLS_SKIP_APPS` authorised** as a bounded exception to A's stand-off. Every `./build.sh` on any branch drags in sibling-repo rebuilds — A hit it three times tonight on a copy-edit branch, and recovery needs four generators re-run because they embed the build hash. **At three tools, every unrelated branch makes three publish decisions nobody made** | `pending` | **stands** |
 | R50 | **The roster join is three-way — `raid-boss` / `unknown`, never boss/not-boss.** D's roster sees 10 of 293 distinct mobs; a boolean forces the other 283 into "not a boss" and the meter silently fails to start on every named mob. **Third subsystem tonight to reach the same rule** | `pending` | **stands** |
+| R51 | **`EQLS_SKIP_APPS` defaults to UNSET.** A guard that silently stops a real publish is worse than the problem it solves — the Sky Ledger once served a build three releases old to testers because a copier no-opped quietly. Opt in when the branch is not about an app | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -14124,3 +14125,99 @@ engagement detection — and all three collapse to one rule:**
 corpus. 293 IS A FLOOR ON THE REAL NUMBER, NOT THE NUMBER**, and the article split
 is a property of that corpus. **D stated it rather than letting the numbers travel
 bare.**
+
+### 31 Aug 22:5xZ — PR #157 IS MERGED AND LIVE. Verified independently, and my own check was wrong first
+
+**`origin/main` is `c1ca66b9`, "Merge pull request #157". The site work is on
+eqlsource.com.**
+
+**Verified by me from the repository rather than from A's report, the way a past
+merge taught this project to:**
+
+```
+6c9b9a93  ANCESTOR   WS1
+668211f5  ANCESTOR   WS2 + WS3
+858e9aa0  ANCESTOR   WS4
+dfb44b32  ANCESTOR   WS1 restructure
+58f8321c  ANCESTOR   media deferred
+8501c802  ANCESTOR   mediadefer.js
+
+git log origin/main..origin/claude/foreground-the-tools   ->   EMPTY
+scripts/mediadefer.js on main                            ->   present, 14,056 bytes
+```
+
+**All six landed. Nothing left behind.** So the restructure, the `=` system with
+its descriptive lines, both derived counts, `SINGLE_UNSTRIPPED`, the media
+deferral and the check that guards it are **live**.
+
+#### My verification was wrong before it was right, and I caught it by looking
+
+**My first pattern reported FOUR eager media references on the live homepage — a
+regression that would have meant 2.19 MB still loading before a stranger sees
+anything.**
+
+**It was my grep.** `src="assets/media` matches the tail of `data-src="assets/media`.
+**The four hits were the four DEFERRED attributes, which is exactly correct.**
+
+**Re-run with a pattern I first proved fires on an eager line and not on a
+deferred one:**
+
+```
+eager refs on live main    0      (pattern proven to return 1 on an eager sample)
+deferred refs              4
+```
+
+> **Fifth instrument-aimed-at-the-wrong-surface moment of the day, and the first
+> where I built the matched pair BEFORE reporting rather than after being
+> corrected.** I was one send from telling A its merged work had regressed on the
+> public site.
+
+#### R51 — the default is unset, and that is the load-bearing decision
+
+**`EQLS_SKIP_APPS` is PR #158. Ten minutes as costed, `git diff main -- public/`
+empty.**
+
+**A's matched pair, and the second arm is the one that matters:**
+
+```
+EQLS_SKIP_APPS=1   both copiers announce NOT COPIED, 0 files changed
+unset              lockouts copies, 3 files changed
+```
+
+> *"Without that second row the flag would be indistinguishable from a flag that
+> prevents nothing."*
+
+> **DEFAULT IS UNSET.** A's reasoning, ratified: *"A guard that silently stopped a
+> real publish is worse than the problem it solves — the Sky Ledger served a build
+> three releases old for a day, to testers, because a copier no-opped quietly."*
+>
+> **Opt in when your branch is not about an app.** The failure mode of a
+> default-on skip is invisible and lands on readers; the failure mode of
+> default-off is a republish someone notices.
+
+#### And it had to fix a false statement in the build log to do it honestly
+
+**`skyledger.py`'s no-op printed *"repo not found"* — its only no-op.** With two of
+them, **a deliberate skip reporting itself as a missing checkout is a false
+statement in the build log**, and this project has spent whole evenings on exactly
+that class of thing. **Extracted to `keep_committed(reason)`, matching
+`lockouts.py`, which already had it for the same reason.**
+
+**The env check is one helper in `_build/appskip.py` rather than written twice, and
+declared in `check.py`'s import-only list beside `accents.py` so the
+generator-coverage check does not go quiet.**
+
+**Rebased onto the merged main and re-verified THERE rather than on the base it
+branched from: `check.py` 716 green, `gate_selftest` 38 of 38 — which also confirms
+the `SINGLE_UNSTRIPPED` cases are alive in main — and `mediadefer.js` clean.**
+
+#### One thing left, named rather than silently carried
+
+**`lockouts.py`'s `keep_committed` prints an em dash that a Windows console renders
+as mojibake, visible in #158's own log lines.** `skyledger.py`'s new strings use
+`-` for that reason. **One character, in a file A was already editing, left because
+the brief was one thing.**
+
+**That is the discipline I would least like to lose: A had the file open, saw an
+adjacent defect, fixed the one it was sent for, and reported the other rather than
+widening its own brief at midnight.**
