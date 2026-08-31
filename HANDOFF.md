@@ -11833,6 +11833,9 @@ prefix. This closes the other sixteen.**
 | R45 | **A's static/runtime split adopted over my single-check ruling.** The static half needs no browser and always runs, so the costliest regression is caught on machines where mine would have evaporated. The check also WARNs on an empty population and caught the sixth shape inside itself | `pending` | **stands; improves R44** |
 | R46 | **A hand-written contract is worth more than a generated one.** A fixture generated from the producer's output blesses whatever it already does and can only detect change, never wrongness. B's hand-written fixture caught `months_seen` shipping as `["Aug"]` instead of an int, on its first use | `pending` | **stands** |
 | R47 | **The threat meter's viability is measured before the aggregator is built.** One client cannot see everything seven other players do; the question is what FRACTION it sees and what the meter says about the rest. **A bound ships; a fraction dressed as a measurement does not.** C reads E's parser before writing one | `pending` | **stands** |
+| R48 | **Link, do not copy.** Merging IS the publish — no zero-merge path to eqlsource.com exists. `=Upgrades` already has the zero-merge shape (link to B's own host); E's bundle needs a merge, so queue it rather than avoid it; the threat meter is an overlay, so the site ships a description page and a `/releases/latest/` link | `pending` | **stands** |
+| R49 | **`EQLS_SKIP_APPS` authorised** as a bounded exception to A's stand-off. Every `./build.sh` on any branch drags in sibling-repo rebuilds — A hit it three times tonight on a copy-edit branch, and recovery needs four generators re-run because they embed the build hash. **At three tools, every unrelated branch makes three publish decisions nobody made** | `pending` | **stands** |
+| R50 | **The roster join is three-way — `raid-boss` / `unknown`, never boss/not-boss.** D's roster sees 10 of 293 distinct mobs; a boolean forces the other 283 into "not a boss" and the meter silently fails to start on every named mob. **Third subsystem tonight to reach the same rule** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13965,3 +13968,159 @@ three tools are usable tomorrow or are three artifacts in three repositories.**
 
 **D stands off the three, asked only for the roster.** Its Plane of Hate ruling is
 still owed by me and is not forgotten.
+
+### 31 Aug 22:3xZ — RULING R48 & R49: link, do not copy — and the republish trap is a blocker at three tools
+
+**I asked A for a zero-merge path to eqlsource.com. A corrected the premise, which
+was the useful answer.**
+
+> **"No merge, nothing that needs the owner awake" CANNOT REACH eqlsource.com.**
+> `wrangler.jsonc` serves `assets.directory` = `public/` from a dashboard-connected
+> Worker and there is **no deploy workflow** in `.github/workflows` — only
+> `survey-refresh.yml`. **MERGING IS THE PUBLISH.** Anything whose ADDRESS is on
+> eqlsource.com needs a merge, tonight and every night.
+
+**The question with an answer is: which addresses already exist, and which point
+somewhere another session can change without us.**
+
+#### Three distribution patterns are already live and they are not equal
+
+| | pattern | merge cost |
+|---|---|---|
+| **1** | **Copy-in under a content hash** — `public/app/sky-ledger.dad68d2b.html`, `eqls-lockouts.16d4edad.html` | **A merge PER BUILD, by design** |
+| **2** | **Link to a host the other session controls** — `=Upgrades` → B's own Pages site | **ZERO, indefinitely** |
+| **3** | **Link to a release asset** — the home page pins `v1.1.0` in the URL | a merge per release, **removable** |
+
+> **The content hash is LOAD-BEARING and it is exactly what forbids zero-merge.**
+> `skyledger.py`'s header records that an unhashed copy went stale in readers'
+> caches the way the stylesheet did. **A new build is a new filename, a new
+> manifest and a new merge, ON PURPOSE.** Pattern 1 is the opposite of what I asked
+> for and it is the one I was pointing at.
+>
+> **Pattern 2 is the answer and it shipped some time ago.** `=Upgrades` already has
+> it. **I asked for a thing that already exists.**
+
+**Pattern 3 is one line from becoming pattern 2:** GitHub serves
+`/releases/latest/download/<name>` as a stable address. **It needs a VERSION-LESS
+ASSET NAME** — which is the release publisher's change, not the site's. **For Sky
+Ledger that is E; for =Auras that is Shara and therefore the owner's.** Flagged
+both.
+
+#### R48 — the distribution ruling, per tool
+
+> **`CLAUDE.md` already holds the general rule: do not ship a worse copy of
+> something that exists; link to it. COPY-IN EARNS ITS COST ONLY WHERE WE DECODE,
+> WE VALIDATE, OR WE HOLD SOMETHING THE OTHER HOST CANNOT** — the Sky Ledger
+> refusing a drop rate it cannot measure is that. **For a tool already reachable at
+> its own address, copying it in buys a merge per build and nothing else.**
+
+| tool | ruling |
+|---|---|
+| **=Upgrades (B)** | **Nothing. It already has the zero-merge shape. Do not copy it in.** |
+| **DPS meter (E)** | **Bundle under the contract — and it needs a merge, because the contract's whole point is that the SITE decodes and the ENGINE computes. GET THE MERGE QUEUED, NOT AVOIDED.** |
+| **Threat meter (C)** | **AN OVERLAY IS NOT A PAGE.** The site's job is a description page and a download link — the `=Auras` shape. **Fix the release URL to `/latest/` and it never needs another merge after the first.** |
+
+**That last row changes what C builds and it goes to C now.**
+
+#### R49 — the republish trap, measured tonight, and it is already breaking at two
+
+> **Every `./build.sh` on ANY branch drags in whatever the sibling repos have built
+> since the branch point. A hit it THREE TIMES tonight on a branch about copy
+> edits — it pulled a 17 KB lockout rebuild each time.**
+>
+> **And recovery is not just reverting: four generators embed the build hash, so
+> the pages go on naming a file that no longer exists** — which is the 404
+> constraint. **Revert, re-run `build1`/`build2`/`build30`/`build23`, re-stamp.
+> Every time.**
+
+**With three tools, every unrelated branch picks up three unrelated app
+republishes, and each is A PUBLISH DECISION NOBODY MADE.**
+
+> **RULING R49: `EQLS_SKIP_APPS` is AUTHORISED as a bounded exception to A's
+> stand-off.** Ten minutes, defensive, and it is now worth three times what it was
+> when A costed it. **It protects the three projects from silently republishing
+> each other while their sessions are heads-down.** Nothing else on the site
+> reopens.
+
+**Three smaller faults A measured, recorded so a third copier does not re-learn
+them:**
+
+- **Hash conventions already disagree** — `skyledger.py` uses sha1, `lockouts.py`
+  the repo's own sha256[:8]. **Two tools, two conventions, nothing enforcing
+  either.**
+- **Discovery is hardcoded per tool** (`ClaSkyApp`, `EQLSLockouts`), and
+  `skyledger.py`'s fixed `../ClaSkyApp` **resolved to nothing inside a worktree and
+  SILENTLY kept the committed copy.** `lockouts.py` records that fault and avoids
+  it. **A third copier gets to re-learn it.**
+- **No contract is enforced at copy time.** `BUNDLE-CONTRACT.md` governs E's
+  engine; **nothing validates an app bundle as it is copied.**
+
+#### What a session must publish for the copy path to pick it up
+
+**Read out of `lockouts.py` and `skyledger.py` rather than remembered:** one
+**self-contained** HTML file — `check.py`'s egress rule covers `public/app/*.html`,
+so **a CDN script or an external webfont FAILS THE BUILD**, the same rule that took
+the site from 715 pages fetching Google to zero. **It must parse:** `toolsmoke.js`
+parses every served bundle for the heredoc-escape fault **that shipped a broken Sky
+Ledger to a public release for six minutes while 196 assertions stayed green.**
+Named `<prefix>.<hash>.html` at `public/app/` in the source repo, with `latest.txt`
+naming the current build.
+
+### 31 Aug 22:3xZ — RULING R50: the engagement trigger does not exist, and D killed two heuristics before anyone spent an hour on them
+
+**`docs/BOSS-ROSTER.md` published at `421d4871`, 116 green. The headline is a
+NEGATIVE and it changes what C builds.**
+
+```
+distinct mobs slain                293
+matched by the roster               10
+kill lines that are roster bosses   29 of 1,774 = 1.6%
+```
+
+> **283 of 293 distinct mobs are invisible to it.** The spec says *named/boss*.
+> **D has the BOSS half for five raids and none of the NAMED half. Its roster is
+> not the engagement trigger and cannot be made into one tonight.**
+
+**It is a plain joinable list needing no engine** — `isRaidBoss`,
+`normaliseBossName`, no state, no parsing. **And `RAID_OF_BOSS` keys are
+LOWER-CASED: D measured "0 of 10" itself before catching it**, and said so
+precisely so C would not discover it the hard way.
+
+#### D pre-killed the two detectors C would otherwise have tried
+
+| heuristic | result |
+|---|---|
+| **article** — `a`/`an`/`the` means trash | catches 9 of 10 — and **MISSES `a dracoliche`, a real Plane of Fear boss.** A 1-in-10 false negative against the only ground truth in existence |
+| **"it deals damage back"** | **10 of 10 roster bosses AND 82 of 88 capital-initial non-roster names. No discrimination whatsoever** |
+
+**A weak lead recorded only as a lead:** roster bosses die 2–3 times in 11 days
+against a non-roster max of 88 — **but it needs a time window and cannot classify
+on first sight, which is exactly when a threat meter must decide.**
+
+> **That is an hour C does not have to spend, produced by a session that then
+> STOPPED rather than building on C's ground.** D built no part of the meter,
+> parsed no logs for it, and did not even fetch B's catalogue — noting only that
+> B's 1,958 mob names are a larger population worth joining, **and that the check
+> is B's or C's and not its own.**
+
+#### R50 — and it is the third instance of one shape tonight
+
+> **RULING: the roster join is HIGH-PRECISION, VERY-LOW-RECALL, and returns
+> THREE-WAY — `raid-boss` / `unknown`. NEVER boss / not-boss.**
+>
+> **D's reasoning: a boolean forces 283 unclassified mobs into "not a boss", and
+> the meter then fails to start on every named mob in the game, SILENTLY.**
+
+**Three subsystems tonight — lockout actionability, upgrade rankability,
+engagement detection — and all three collapse to one rule:**
+
+> **WHERE THE INSTRUMENT CANNOT SEE, IT SAYS SO LOUDLY RATHER THAN GUESSING A
+> SIDE.** Ruled independently in three places within four hours, each time because
+> a session refused a boolean it could not source.
+
+#### The limit carried with every figure above
+
+**Surface is 4 logs, 57.7 MB, 11 days, one character pair — a subset of the 434 MB
+corpus. 293 IS A FLOOR ON THE REAL NUMBER, NOT THE NUMBER**, and the article split
+is a property of that corpus. **D stated it rather than letting the numbers travel
+bare.**
