@@ -11807,11 +11807,12 @@ prefix. This closes the other sixteen.**
 | R19 | **Rulings self-name with the `RULING:` prefix; Session 0 records `audited through <sha>, <date>`** | `aa29642` | **stands** |
 | R20 | **RETRACTION: the gear seam does not exist.** New scope is the owner's decision, not a ruling of mine | `aa29642` | **stands** |
 | R21 | **The homepage must name the UNIT beside a count** where two counts of different corpora appear. Falsifier recorded: n=1 | `5c3b9cc` | **stands** |
-| R22 | **F12 is self-dispatchable by A and never needed a ruling** — a measurement with a falsifier in A's own repository | `5c3b9cc` | **stands** |
+| R22 | ~~F12 is self-dispatchable by A and never needed a ruling~~ — **figures and scope wrong; see R27** | `5c3b9cc` | **amended by R27** |
 | R23 | **The practices ledger section stays, and every entry must name the failure that bought it.** Structural, not a rule: you cannot enter it without also entering the record of having erred | `345da25` | **stands** |
 | R24 | **The SHIP REGISTER is opened** — the counterpart to the list of things not to build. Every row carries an owner and a state | `d5ad58d` | **stands** |
 | R25 | **The ruling index must not drift silently.** Adding the row is part of making the ruling; Session 0 computes the tripwire | `a126a39` | **stands** |
 | R26 | **F03: move the hero SVG after the headline, delete nothing.** Its arithmetic is right, its UNIT is wrong — over the wire the SVGs are 39.9% of the blocking path, not 85.4%, and its Phase 0 makes the page 2.23x heavier. Add the search field at +121 brotli | `pending` | **stands** |
+| R27 | **R22 AMENDED.** Four of its figures were wrong and its scope was wrong: the block is 3,470 bytes on **673** pages (items *and* named), `site.css` is 87,350. **And it is not decision-free — a one-page cold arrival gets worse.** A's to weigh | `pending` | **stands; amends R22** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -12603,3 +12604,87 @@ statement above is byte-weight and document order. **And whether Cloudflare serv
 brotli rather than gzip in production was not verified live**; under gzip the
 SVGs are 46.1% of blocking bytes rather than 39.9%, **and the ruling holds either
 way.**
+
+### 31 Aug 20:4xZ — RULING R27: R22 AMENDED. Four of its figures were wrong, its SCOPE was wrong, and it is not decision-free
+
+**A survey preparing the F12 change refuted four numbers in my own ruling. None
+overturns it. All change the arithmetic and one changes the scope.**
+
+| R22 said | actually | how it went wrong |
+|---|---|---|
+| block is **3,471** bytes | **3,470** | `_partials.head()` emits `{extra}</head>` with no separator — **the extra byte I counted was the `\n` closing the theme `<script>`** |
+| ships on **441** pages | **673** | 441 in `public/items/` **and 232 in `public/named/`**, byte-identical, **same `page()` in `build17.py`** |
+| **1,530,711** duplicated bytes | **2,335,310** total; 1,530,270 for items alone | wrong multiplier **and** wrong scope |
+| `site.css` is **88,795** bytes | **87,350** | **88,795 is the CRLF working-tree size on this Windows clone.** The committed blob is 87,350 and hashes `0ebb828c` — **exactly the `?v=` on all 701 pages.** The 88,795 copy hashes `361cabb8` and matches nothing |
+
+#### How I got them wrong, and it is a fault I had already found today
+
+**I took the byte figures from a survey and did not verify them.** I spot-checked
+the *identical-block* claim with my own `md5sum` — that one held — **and passed
+the sizes straight through.** That is the reproduction-versus-verification fault
+for the third time today, in the ruling I wrote *after* putting the rule in my own
+standing orders.
+
+**Worse: I let a CRLF-inflated number through having found that exact fault this
+morning.** `core.autocrlf=true` on this machine was the first thing I diagnosed
+today — it is why I checked committed blobs rather than the working tree when I
+seeded the repository. **Eight hours later I published a working-tree byte count
+as a repository fact.**
+
+> **The scope error is the one that matters.** *441 item pages* is a search
+> result; *673 pages across two directories emitted by one function* is a survey.
+> **I ruled on the surface the audit happened to name instead of the surface the
+> generator actually covers** — and this project's own rule is that a search
+> establishes presence and only a survey establishes absence.
+
+#### R27: the ruling stands, amended
+
+> **R22 stands: the block moves to `site.css`. It now covers 673 pages, not 441.
+> And it is NOT the decision-free item I called it.**
+>
+> **A one-page cold visit gets WORSE: +1,218 raw / +36 brotli.** Break-even falls
+> between page one and page two. **Item and named pages exist substantially to
+> catch single-page search arrivals** — so the trade is *traversing readers and
+> returning readers gain, a stranger arriving on one page pays.* **That is a real
+> trade-off and I called it decision-free. It is A's to weigh, and I am handing it
+> over rather than deciding it.**
+
+#### The survey proved its own check could fail, which is why I believe it
+
+**Cascade: the winning declaration for every (element, pseudo-element, property)
+across all 673 pages — 89 distinct element signatures — computed before and after.
+0 of 89 changed.**
+
+**And a NEGATIVE CONTROL: the same rules *prepended* instead of appended report 3
+changes, led by `max-width: 74ch → var(--max)`.** So the zero is a measurement and
+not a dead instrument. **A matched pair, run without being asked for one.**
+
+**The single genuine risk is `.ent` versus `.shell` on `max-width`** — both
+specificity (0,1,0), both live on `<div class="shell ent">`, so **order decides
+and nothing else does.** That is why the patch appends at end of file, and why
+`conformance.js` cannot catch it: the given invariant is a one-line grep instead.
+
+#### AND A LOUD FINDING THAT IS NOT F12 — an armed guard-gap in `eql-source`
+
+> **`scripts/stamp.py`'s `INPUTS` do not include `public/assets/site.css`, and
+> nothing compares a page's `?v=` to the file's actual hash.**
+>
+> **So editing `site.css` without running `./build.sh` leaves every check GREEN
+> while readers are served a stale cached stylesheet.** `_asset_v()` computes
+> `sha1(file)[:8]` correctly and `check.py` never asks whether the emitted `?v=`
+> still matches. **That is the exact 16 August 2026 failure `_asset_v` was written
+> to prevent, reachable through the one door the guard does not watch.**
+
+**This is armed rather than inert, and R22 walks straight into it** — the change
+edits `site.css`, which is precisely the input `stamp.py` does not fingerprint.
+**Form 4, and the single act that arms it is the change I just ruled.**
+
+**Also found, and it blocks verification before anything is changed:
+`check.py` ALREADY FAILS `public/ is stale` on a CRLF clone**, proven by
+fingerprinting git's LF blobs against `state/last-build.json` and matching, while
+the working tree does not — **and `gate_selftest.py` refuses to run while that is
+red.** A session cloning this repository on Windows cannot verify anything until
+that is understood.
+
+**None of this is mine to fix. It is `eql-source`, A is offline, and it goes into
+the register as a finding with a proposal attached.**
