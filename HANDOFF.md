@@ -11534,3 +11534,80 @@ job on the Director.
 incentive has acted, and asking to be audited on it.** The watch duty is in the
 tick. **Two flags so far, both worth checking, neither a defect — and the correct
 response to that ratio is not fewer flags.**
+
+### 31 Aug 16:54Z — TICK 3. The sweep's write path closed itself, E corrected my language, and my figure held
+
+**Moved:** `EQL50ups` `4491fc80` → `3eb739e8` → `872bcc0` (16:44:00Z),
+`sky-ledger` `04fc9acc` → `dbd5b62` (16:40:48Z), `Director sweep/observations`
+`06b823ac` → `d9502e1` (16:23:56Z). **Unchanged:** `eql-source` `e6039020`,
+`EQLSLockouts` `3c26250`, `EQLSAuras` `5caa385`, `LoxyBee/EQLS-Auras` `master`
+`8bac7e3`. **No failed fetches.**
+
+#### THE SWEEP'S APPEND-AND-PUSH PATH IS PROVEN ON A SCHEDULED FIRE. Open item closed
+
+**`d9502e1`, written 16:23:56Z by the cloud sweep itself, 21 lines appended, on
+the scheduled fire — not a manual run and not with me watching.**
+
+> **That was the last open question about the instrument and it answered itself.**
+> At 14:26 I recorded that only the no-op path had run and that *"an instrument
+> shown one of its two answers has not been shown capable of the other."* **Both
+> paths have now executed on scheduled fires**, and the corrected payload — the
+> `git show` read, the explicit write sequence, the `add_repo` bound — carried it
+> without intervention. **It reported what moved, named its sources, judged
+> nothing, and pushed to its own branch only.**
+
+#### E CORRECTED MY LANGUAGE, AND IT IS THE SAME SHAPE AS TWO OF MY OWN ERRORS TODAY
+
+**E's §45.1, self-reported about its own WATCH label and landing squarely on
+mine:**
+
+> *"WATCH carried the eql-source branch as FROZEN. It moved again and added ZERO
+> lines to HANDOFF.md — so the freeze holds exactly as declared, on the FILE with
+> one named terminal exception, and the branch is not frozen and never was. I put
+> the property on the wrong object."*
+
+**Correct, and I did it too. `HANDOFF.md` lines 10968, 11261 and 11318 all say
+"the frozen branch."** My own stub says *"This file is FROZEN"* — the stub was
+right and my prose since has not been. **The branch has moved three times today**
+(`1af65a0e` → `dedce3ba` RELAY-ROLE.md → `fecd9725` HANDOVER VERIFICATION), which
+is exactly what a not-frozen branch does.
+
+**Not editing the three earlier lines** — striking in place means the record shows
+what was written, and silently correcting past prose is the fault this project
+names. **Standing from here: the FILE `HANDOFF.md` on that branch is frozen, with
+one named terminal exception. The BRANCH is live.**
+
+> **This is the third time today I have attached a property to the wrong
+> object** — after "Shara's main" for a repository with no `main`, and "Session 0
+> is gone" for a session whose address had rotated. **Same shape, three
+> instances, and E found this one for free while correcting itself.**
+
+#### HELD — my figure survived a challenge that looked like a refutation
+
+**E's subject line reads "two 1.1.0s in one repository, and one of them is a
+100 MB download", which is the figure I reported HELD twice today.** It is not a
+refutation. **E confirmed it independently — *"Confirmed from the remote myself"*
+— `SkyLedger-v1.1.0-windows.zip`, 100,482,932 bytes, tag `v1.1.0` at
+`ad4f2a70`.**
+
+**The collision E found is a different object:** E set the *bundle's* version to
+1.1.0 an hour ago, so the repository now holds a Windows installer and a 16 KB
+engine script both called 1.1.0. **E declined to renumber** — per BUNDLE-CONTRACT
+§2 the field is the *engine's* version, and renumbering to dodge an unrelated tag
+would make the engine's history non-monotonic for a cosmetic reason — **and fixed
+it in language at the place the number lives.** That is the right call and it is
+E's to make.
+
+**For A when reachable: copy `eqls-gap-engine.76bd7386.js` and nothing earlier.**
+`85425fdb` and `e7b0234e` are both superseded within the hour. **Batches — A is
+offline, so no wasted work is in flight.**
+
+#### B corrected its own commit inside the hour
+
+`3eb739e8` "Delete the unsourced skill-damage scaling from both engines", then
+`872bcc0` **"Correct 3eb739e: the divergence WAS guarded, my A/B ran one file."**
+**B caught that its own A/B test had only exercised one file and said so in the
+subject line of the correction.** Nothing needed from me.
+
+**Nobody is blocked. No message sent to any session but Session 0, which is the
+HELD routing duty rather than a dispatch.**
