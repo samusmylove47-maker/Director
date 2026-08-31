@@ -11830,6 +11830,7 @@ prefix. This closes the other sixteen.**
 | R42 | **R28 AMENDED: naming the corpora is necessary and NOT sufficient.** The tool-card grid is a `LEDGERS` entry, stripped before ledger-stripped rules run, so rewording alone ships a check that reports nothing. Counts go through `SINGLE_UNSTRIPPED` | `pending` | **stands; amends R28** |
 | R43 | **R26 REFUTED BY MEASUREMENT.** The hero reorder is −14 ms at p=0.49 — no effect. The render-blocking stylesheet (−962 ms) and **2.19 MB of autoplay video** (−426 ms) are the cost. Do not inline site.css; critical-CSS is the form. **My brotli figures were computed at q11 and production serves q4** | `pending` | **stands; refutes R26** |
 | R44 | **Land A's CDP probe as a hand-run check.** Nothing in `check.py`, `toolsmoke` or `conformance.js` can see a runtime observer attaching a `src` — and the probe already caught a false negative where the harness reported a working feature as broken. Matched pair already demonstrated | `pending` | **stands** |
+| R45 | **A's static/runtime split adopted over my single-check ruling.** The static half needs no browser and always runs, so the costliest regression is caught on machines where mine would have evaporated. The check also WARNs on an empty population and caught the sixth shape inside itself | `pending` | **stands; improves R44** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13686,3 +13687,91 @@ today.
 **One ledger entry, together.** Neither is a dead instrument; both are honest
 positives that do not bear on the claim they were offered for. **That is a sharper
 form than either half and I would not have made it.**
+
+### 31 Aug 22:0xZ — RULING R45: A's split improves my ruling, and the check caught the sixth shape INSIDE ITSELF
+
+**`scripts/mediadefer.js` landed at `8501c802`, 14,056 bytes. Bounds met: hand-run,
+not in `build.sh`, WARNs and exits 0 without a browser, header states its own
+blindness the way `conformance.js` does.**
+
+#### R45 — the split was not in my ruling and it is better than my ruling
+
+**I ruled one browser-driven check. A shipped two halves:**
+
+> **STATIC** — no built page may carry an eager `src=` or `poster=` pointing at
+> media. **Decidable from the file, needs no browser, ALWAYS RUNS.**
+> **RUNTIME** — every `<video>` holding a `data-src` must actually attach it when
+> scrolled to. **Needs Chrome; WARNs and exits 0 without one.**
+
+**So the regression that costs the most is caught even on a machine with no
+Chrome, and only "does it still arrive" degrades to a warning.** My version would
+have made the whole check evaporate on any machine without a browser — **which is
+most CI, and exactly where a regression lands unseen.**
+
+**Proven by mutation, each half separately:**
+
+```
+trailer made eager again       -> EXIT 1, "1 EAGER <video> media reference(s)"
+deferred but observer broken   -> EXIT 1, "[FAIL] sltrailer"
+restored                       -> EXIT 0
+```
+
+**A's own note on why the second arm matters:** *"'Deferred and never arrives' and
+'deferred and arrives' now read differently instead of both looking like
+absence."*
+
+**And one thing A did not report, which I found reading the file:** at line 302 it
+**WARNs if no deferred `<video>` exists in any built page at all.** So the check
+cannot pass vacuously against a tree where the feature was deleted — **the
+empty-population lesson, applied to itself, unprompted.**
+
+#### THE ENTRY OF THE NIGHT: a comfortable zero inside the file arguing against comfortable zeros
+
+**A's second fault in its own check:**
+
+> **The image counter printed "0 lazy, 0 eager" against a tree holding two of
+> one.** It matched the whole `src="..."` and tested an anchored extension against
+> it, **so the trailing quote defeated every match.**
+
+> **A BRANCH REPORTING A COMFORTABLE ZERO, INSIDE THE FILE WHOSE ENTIRE ARGUMENT
+> IS THAT A GREEN LIGHT PROVES NOTHING ABOUT A SURFACE IT NEVER REACHED.**
+
+**The sixth shape, occurring inside the instrument built to catch it.** And A
+caught it **by cross-checking the count against an independent grep, not by
+reading the verdict** — *"the same operation that has caught four of my own false
+outputs this week."*
+
+**A's reason for reporting both faults rather than fixing them quietly is the
+sentence I would keep:** *"a new check that was correct first time is a claim I
+would not believe from anyone else tonight."*
+
+#### The first fault was a scope error, and the page was right
+
+**The check initially failed the build over two screenshots on
+`tools/sky-ledger.html`. Both carry `loading="lazy"` and are natively deferred.**
+
+> **The rule was wrong, not the page.** A had written *"no eager media anywhere"*
+> when the property we actually depend on is about **`<video>` specifically —
+> which has no native lazy attribute, and where `autoplay` overrides `preload`.**
+
+**A check failing on a correct page is the cheap direction for a rule to be wrong
+in**, and it was caught in minutes because it failed loudly. **The same error
+written the other way — a rule too narrow — would have passed silently forever.**
+
+#### A DECLINED TO EDIT CLAUDE.md ON MY INSTRUCTION, AND IT WAS RIGHT
+
+> *"CLAUDE.md's file map documents every other script and this one is absent from
+> it. I do not edit CLAUDE.md on a peer's instruction — it is the file a cold
+> session reads first, and the owner's. One line when they want it; I am not going
+> to be the reason a rule about that file gets loosened at 2am."*
+
+**RATIFIED, and it is the boundary holding exactly where it should.** I am a peer
+to `eql-source`, not its owner. **A rule that survives a deadline is a rule; one
+that bends at 2am was never one.**
+
+> **SURFACED TO THE OWNER, NOT ACTED ON: `scripts/mediadefer.js` is absent from
+> `CLAUDE.md`'s file map, which documents every other script.** One line, the
+> owner's to add or to decline. **Recorded here so it is not lost, and not fixed
+> here because it is not mine to fix.**
+
+**PR #157 now carries six commits, all pushed, none merged.**
