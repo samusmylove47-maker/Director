@@ -11813,7 +11813,7 @@ prefix. This closes the other sixteen.**
 | R25 | **The ruling index must not drift silently.** Adding the row is part of making the ruling; Session 0 computes the tripwire | `a126a39` | **stands** |
 | R26 | **F03: move the hero SVG after the headline, delete nothing.** Its arithmetic is right, its UNIT is wrong — over the wire the SVGs are 39.9% of the blocking path, not 85.4%, and its Phase 0 makes the page 2.23x heavier. Add the search field at +121 brotli | `pending` | **stands** |
 | R27 | **R22 AMENDED.** Four of its figures were wrong and its scope was wrong: the block is 3,470 bytes on **673** pages (items *and* named), `site.css` is 87,350. **And it is not decision-free — a one-page cold arrival gets worse.** A's to weigh | `pending` | **stands; amends R22** |
-| R28 | **ONE PUBLISHED FIGURE IS WRONG NOW** (amended by R29) — `build27.py:103` says ten dungeons where the data holds eleven; `build5.py:144` says six where it is five. Correct at the generator, derived not retyped. **Name the corpora** (survey / catalogue / turn-in items) — nine one-word edits, and it is what makes `gate.py:259` reachable | `pending` | **stands** |
+| R28 | **ONE PUBLISHED FIGURE IS WRONG NOW** (amended by R29, R42) — `build27.py:103` says ten dungeons where the data holds eleven; `build5.py:144` says six where it is five. Correct at the generator, derived not retyped. **Name the corpora** (survey / catalogue / turn-in items) — nine one-word edits, and it is what makes `gate.py:259` reachable | `pending` | **stands** |
 | R29 | **R28 AMENDED.** Defect 1 (ten dungeons vs eleven) stands. Defect 2 does not: the "six" is a real count over item+group — `Fine steel weapons` is the sixth. **A population mismatch, not an invented number.** Acting on R28 as published would have introduced a wrong figure | `pending` | **stands; amends R28** |
 | R30 | **The Concordance is DECLINED as specified** — it fails the audit's own second guardrail: we cannot compute our own error rate, and a bound aimed outward at an affordable sample reads as an accusation. **Publish adjudications, not a rate.** Falsifier: an adjudication path costing no owner-hours reopens it | `pending` | **stands** |
 | R31 | **A roster row is not evidence of a session's state — only a FAILED SEND is.** Names rotate; a live session appears under a generated name. Bind identity to the repository, which does not rotate. Fifth instance of the scope shape, mine, and it idled Session A for hours on deadline night | `pending` | **stands** |
@@ -11826,6 +11826,8 @@ prefix. This closes the other sixteen.**
 | R38 | **A published data artifact names the path to its own records in its manifest.** Two consumers read the same file ten minutes apart and both mis-located the record array; neither was caught by a check. One line makes it unrepresentable | `pending` | **stands** |
 | R39 | **A brief that names places is a SEARCH, not a survey.** When I list locations that is a starting set, never a boundary — establishing the boundary is the session's. A found four rename homes where my brief named two; 679 pages carried the old label | `pending` | **stands** |
 | R40 | **The 2H subtraction keys on `wp.skill`, a Tier 2 wiki field, and the dependency prints in the `basis`.** Zero two-handers list SECONDARY in their slot list, so the payload cannot express two-handedness | `pending` | **stands** |
+| R41 | **The hero search field points at The Index, not `search.html`.** That page indexes 39 *pages*, not items, and says so on itself. My R26 was right on mechanism and wrong on destination | `pending` | **stands; corrects R26** |
+| R42 | **R28 AMENDED: naming the corpora is necessary and NOT sufficient.** The tool-card grid is a `LEDGERS` entry, stripped before ledger-stripped rules run, so rewording alone ships a check that reports nothing. Counts go through `SINGLE_UNSTRIPPED` | `pending` | **stands; amends R28** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13388,3 +13390,107 @@ today. That is the difference between fixing a number and fixing the class.
 > five, corrected myself to six, and **either way it was a value someone had
 > agreed on.** Derived is a different object. **That sentence is the whole lesson
 > from my own mistake on it.**
+
+### 31 Aug 21:3xZ — RULING R41 & R42: my search target was wrong, and R28's fix would have shipped a check that reports nothing
+
+**A corrected me three times in one message and two of them change rulings.**
+
+#### First, my error, because it framed the whole message
+
+**I told A to "go to WS1 and treat it as the whole remaining job." WS1 had shipped
+at 16:33 — nearly three hours earlier.**
+
+```
+858e9aa0  17:23  WS4 done, and the unit word was not what was blocking the gate
+668211f5  17:06  WS2 and WS3 done; the rename had a third home nobody listed
+6c9b9a93  16:33  WS1 done; your search target was wrong and I moved it
+```
+
+> **I re-derived the HEAD and inferred the BRANCH.** My own tick says *re-derive,
+> do not remember* — I did, on one commit subject, and read a point as a whole.
+> **`git log origin/main..<branch>` was one command away.**
+>
+> **Same shape as the roster rows, the catalogue keys and the interface
+> paraphrase: a single reading standing in for a surface.** Fourth today.
+
+#### R41 — the search field's destination was wrong, and it would have been actively bad
+
+**My brief pointed the hero search form at `build23.py`'s `?q=` — that is
+`search.html`.**
+
+> **`search.html` indexes 39 PAGES, not items — and says so on itself: *"Looking
+> for an item or a named mob? The Index does that properly."***
+>
+> **A stranger typing "Dark Reaver" into a hero search field expects the item.** I
+> would have pointed the site's new front door at a 39-row site-section index, on
+> the night the whole change exists to help a stranger find an item.
+
+**A pointed it at The Index and added `?q=` there, mirroring `build23.py:190`.
+Proven by matched pair over real `file://`: no query renders 447 of 447 rows,
+`?q=Journeyman` renders 1 of 447.**
+
+**RULED: A's target stands. My R26 was right on the mechanism — `?q=`, a plain GET
+form, +121 brotli — and wrong on the destination**, which is the half that
+mattered.
+
+#### R42 — R28 AMENDED. Naming the corpora is necessary and NOT sufficient
+
+**I ruled that naming the corpora is *"what makes `gate.py` able to reach"* the
+typed counts. That is false as stated, and acting on it alone would have produced
+a green check over the worst instances.**
+
+**Verified in `scripts/gate.py:45-70`:**
+
+```
+LEDGERS = [ …
+    ("tools/index.html", 'class="cards c2"', r'<a class="card"[^>]*>.*?</a>'),
+```
+
+> **The entire tool-card grid is a LEDGER — stripped before any ledger-stripped
+> rule runs.** So **every count inside a tool card is invisible to such a rule**,
+> and `tools/index.html` is precisely where the worst collision lives: *items*
+> carrying 435, 128 and 3,663 across three adjacent cards.
+>
+> **Rewording alone would have produced a check that reports nothing.** The words
+> were never what was blocking the gate.
+
+**A's fix: counts now go through `SINGLE_UNSTRIPPED`. Selftest 38 of 38,
+`check.py` 716 green.**
+
+#### And the method that found it is a new shape
+
+> **A: "I found that only because my two new selftest cases MISSED. I had already
+> confirmed the new rules matched 9 and 4 real sites and WOULD HAVE CALLED THAT
+> PROOF. The positive was there and it was worthless."**
+
+**A POSITIVE CONTROL DRAWN FROM OUTSIDE THE BLIND REGION PROVES NOTHING ABOUT THE
+BLIND REGION.** The rule genuinely matched 9 and 4 real sites — a real positive,
+honestly obtained — **and every one of them was outside the stripped grid.**
+
+**This is not the dead-instrument shape. The instrument worked. It was pointed at
+a surface from which the failures had already been removed** — and the proof of
+its working was drawn from that same surface. **A matched pair is not enough if
+both arms sit outside the region under test.**
+
+**Recorded as the ledger's newest entry, bought by an audit finding of mine that
+would have shipped a reassuring green.**
+
+#### The `gate.py` comment nobody asked for, which is the argument for all of this
+
+`gate.py:835-845` records why that grid became a ledger in the first place — **and
+that the same drift then happened AGAIN**:
+
+> *"50 Upgrades shipped on 18 Aug 2026, was announced by a band on the home page
+> and linked from 700-odd footers, and had no card on `tools/index.html` for the
+> whole of that day — the one tool being posted publicly was the one missing from
+> the tool list. Twice is a class of fault."*
+
+**The exemption that hid tonight's counts exists because of a real fault it was
+right to fix.** Both are true. **A ledger that stops a ceiling forbidding new
+zones also stops a rule seeing the counts inside it**, and nothing connected those
+two facts until A's selftest missed.
+
+#### One disagreement neither of us is spending a minute on
+
+**A measures the `h1` at byte 5,032; I said 5,082.** A's is from the built file
+and is authoritative. **50 bytes on an 81% improvement. Recorded and closed.**
