@@ -10801,3 +10801,68 @@ is the same judgement that bounded the cloud sweep to observation.
 - **Not established** whether the MCP path works anywhere from a local session,
   whether the allowlist does anything, or whether the cloud routine's environment
   can do the job it was given. **Its first fire is the positive control.**
+
+### 31 Aug 14:24Z — THE POSITIVE CONTROL RAN, AND IT PROVED ONE OF THE SWEEP'S TWO ANSWERS
+
+**`trig_01Ggg5rESVs22cqUHhLHPQpY` fired at 14:24:22Z**, run session
+`cse_01BMHC1Ax4gtRstMjFS4qn4c`, `result: success`, 3 turns, 22 seconds, model
+`claude-sonnet-5`. Read from the run log, not from the create call.
+
+**What it establishes.** The environment provisions and runs; a cloud session can
+clone the migrated record and read it; the five refs were read correctly and all
+matched; and the sweep **wrote nothing, committed nothing and pushed nothing**,
+reporting "no change" in one line. **The migration is validated end-to-end from
+the outside** — the record is reachable at its new home by something that is not
+me.
+
+#### What it does NOT establish, which is the more useful half
+
+> **Only the no-op path ran.** Nothing had moved, so the sweep took the
+> write-nothing branch. **The append-and-push path has never executed.** By this
+> project's own first failure shape, an instrument that has demonstrated one of
+> its two answers has not been shown to be able to give the other.
+
+**And that untested path contained a real defect, found in the run log rather
+than by a check.** The first Bash call **exited 1**:
+
+```
+rm -rf /tmp/d && git clone … && cd /tmp/d && tail -120 HANDOFF.md
+  && tail -40 SWEEP-LOG.md      <-- exit 1
+```
+
+**`SWEEP-LOG.md` exists only on `sweep/observations`, never on `main`**, so in a
+fresh clone of the default branch the file is not there. **My payload told it to
+read a file that cannot be present.** The run survived only because the failure
+landed after the `HANDOFF.md` read and the agent carried on — so the sweep
+completed successfully **having never read its own log**, and said nothing about
+the failed step because nothing asked it to.
+
+**Two things fixed in the payload at 14:26Z:** read `SWEEP-LOG.md` with
+`git show origin/sweep/observations:SWEEP-LOG.md`, and the write path spelled out
+as an exact command sequence including a git identity, since a sandbox has none.
+**And the sweep is now told to report which of the two paths it took and to state
+plainly if any command failed** — the run that just happened would have told me
+about the exit 1 if it had been asked, and it was not.
+
+> **The fault is mine and it is the fifth shape, one step removed: the check
+> fired, the step failed, and the failure was invisible in the result.** The run
+> reported `success` and *was* successful at the thing it was asked to conclude.
+> **A green run and an accurate green run are not the same object** — and this is
+> the first instance of that in my own work, on the first fire.
+
+#### `persist_session` was wrong and is now false
+
+The routine was created `persist_session: true` and the first fire minted
+`session_01BMHC1Ax4gtRstMjFS4qn4c`. **From the second fire onward it would have
+resumed that session — while its own prompt tells it "you are a fresh cloud
+session with no memory of any prior conversation."** A live instruction asserting
+something false about the session reading it.
+
+**Set to `false` at 14:26:41Z.** Fresh every hour is also the correct behaviour on
+the merits: the sweep's whole job is to diff against the written record, and
+*re-derive, do not remember* is a standing rule. An observation sweep accumulating
+a conversation across days is how an observer starts having opinions.
+
+**Not established:** `persistent_session_id` still reads
+`session_01BMHC1Ax4gtRstMjFS4qn4c` in the API response with `persist_session`
+false. **Whether that stale id is inert is unknown; the 15:23Z fire is the test.**
