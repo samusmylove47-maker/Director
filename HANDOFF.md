@@ -11810,6 +11810,8 @@ prefix. This closes the other sixteen.**
 | R22 | **F12 is self-dispatchable by A and never needed a ruling** — a measurement with a falsifier in A's own repository | `5c3b9cc` | **stands** |
 | R23 | **The practices ledger section stays, and every entry must name the failure that bought it.** Structural, not a rule: you cannot enter it without also entering the record of having erred | `345da25` | **stands** |
 | R24 | **The SHIP REGISTER is opened** — the counterpart to the list of things not to build. Every row carries an owner and a state | `d5ad58d` | **stands** |
+| R25 | **The ruling index must not drift silently.** Adding the row is part of making the ruling; Session 0 computes the tripwire | `a126a39` | **stands** |
+| R26 | **F03: move the hero SVG after the headline, delete nothing.** Its arithmetic is right, its UNIT is wrong — over the wire the SVGs are 39.9% of the blocking path, not 85.4%, and its Phase 0 makes the page 2.23x heavier. Add the search field at +121 brotli | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -12459,3 +12461,145 @@ across one"* — so three surveys are running against the read-only clone, produ
 audit's single highest-leverage finding — additionally need the game install,
 which this post deliberately does not have. **That is the binding constraint on
 the critical path and no amount of orchestration moves it.**
+
+### 31 Aug 20:2xZ — RULING R26: F03's arithmetic is right, its UNIT is wrong, and its cure makes the symptom worse
+
+**A survey of the sixteen inline SVGs, run against the read-only clone at
+`e6039020`, refutes F03's remedy and finds a better one the audit did not
+consider. All four of its premises re-verified exactly first: 16 SVGs, 206,316
+bytes, 85.36%, largest 21,607 across 96 paths, zero `<img>`/`<picture>`/
+`background-image`.**
+
+#### The unit is the whole argument, and it is wrong
+
+**The site is served by a Cloudflare Worker.** `public/_headers:3-6` says so
+outright. **So raw bytes are not transfer bytes.**
+
+| | raw | brotli |
+|---|---|---|
+| `index.html` | 241,709 | **27,281** |
+| the sixteen SVGs | 206,316 (**85.4%**) | **19,515** |
+| render-blocking total | — | **48,941** — including a **20,554-byte stylesheet the audit never mentions** |
+
+**Over the wire the SVGs are 39.9% of the blocking path, not 85.4%.** Path data
+compresses ~10.6:1; the rest of the page ~4.5:1.
+
+> **THE PROOF THAT SETTLES IT.** The same 85-byte attribute string appears **751
+> times**, and every coordinate carries a redundant trailing `.0` because
+> `round(v, 0)` returns a float. **Stripping both removes 111,378 raw bytes — 46%
+> of the document — and saves 823 brotli bytes.**
+>
+> **A change that deletes nearly half the file to save under a kilobyte over the
+> wire is the clearest possible demonstration that the raw-byte framing does not
+> describe what a reader pays.** *"Fifty bytes of decoration for every byte of
+> value"* describes a file on disk, not a download.
+
+#### The audit's Phase 0, executed literally, makes the page 2.23x HEAVIER
+
+| | brotli |
+|---|---|
+| today | **27,281** |
+| delete all sixteen | 7,766 |
+| **+ the working search field the audit asks for** | **60,854** |
+
+**The search index — `window.__S__`, inlined in `search.html`, 194,949 raw —
+compresses at 3.7:1 against the drawings' 10.6:1.** Deleting the art to make room
+for it is **a bad trade by a factor of 2.7 on the audit's own axis.**
+
+#### And "decoration" is the wrong word for what they are
+
+**These are the walkable floors of thirteen zones, read out of the game's own
+`.s3d` meshes.** The hero **publishes its own provenance on the page** —
+`index.html:73` renders *"Najena, drawn from the game's own mesh — 96 paths, 877
+points, 3 storeys"*, and the 96 was counted against the markup and matches.
+
+**`DESIGN.md:96-98` names the floor plan in bold as part of the site's signature,
+under a heading that reads "Do not change these. They are the identity."** And
+`:364-368` records *why* it exists: the previous ornament was a radial gradient
+that *"encoded nothing"* and was removed for being untrue. **Deleting the drawings
+would reverse a decision the binding brief made on evidential grounds.**
+
+#### RULING R26
+
+> **(e) — MOVE THE HERO SVG AFTER THE HEADLINE. Delete nothing.**
+>
+> **The audit found a real problem and misdiagnosed its cause as weight rather
+> than ORDER.** The hero sits ahead of the `<h1>`, pushing *"Norrath, measured."*
+> to **byte 26,689**. A stranger on a slow connection waits on 21 KB of line work
+> before the sentence telling them what the site is. **That is real and the audit
+> deserves the credit for finding it.**
+>
+> **But `.hero-art` is `position:absolute` with an explicit `z-index`
+> (`site.css:706`, `:732`), so source order has no effect on layout or paint.**
+> Moving one `<div>` after another in `build1.py` lands the headline at **byte
+> 5,082 — the same 81% improvement deleting it would give, for zero bytes, zero
+> deletions and no visual change.**
+>
+> **Option (e) was not on the audit's list and it dominates option (b) entirely.**
+
+**Also ruled: add the search field.** `build23.py:190` already accepts `?q=`, so a
+plain GET form is **+121 brotli bytes** and needs no JavaScript. **The audit is
+right that the page needs a field and wrong that anything must be deleted to
+afford one.**
+
+#### Externalising is the worst option and the inline-ness is LOAD-BEARING — measured in a browser
+
+**CSS custom properties do not cross the external-SVG boundary.** Reproduced with
+the site's own rule, loaded over HTTP:
+
+| method | stroke |
+|---|---|
+| inline (today) | `rgb(217, 162, 39)` — the zone accent. **Correct** |
+| external via `<object>` | `rgb(0, 0, 0)` — **pure black** |
+| external via `<img>` / `<use>` | 0 paths reachable from the parent document |
+
+> **Black is not a neutral failure. `heroart.py:110-118` documents the exact
+> incident: on 16 Aug 2026 the drawing "rendered as a solid black mass covering
+> the hero, with the headline buried under it."** Externalising makes that the
+> **permanent** rendering rather than a stylesheet-failure edge case. **It also
+> costs 2,446 MORE brotli bytes and adds 14 requests to a page that currently
+> makes zero.**
+
+#### Two findings that are not F03 and are worth more than it
+
+**1. `CLAUDE.md` §6 IS STALE, AND IT IS THE FILE A SESSION READS FIRST.** It
+describes the plate cards — accent wash, cropped number — **and never mentions the
+floor plan that `DESIGN.md:96-98` names in bold as the signature.** A session
+reading only `CLAUDE.md` would not learn the SVGs are identity at all.
+
+**This is the same failure that file already records about itself** over three
+typefaces versus four: *"The checker and the design brief agreed; this file was
+the outlier, and it is the one a session reads first."* **Second confirmed
+instance of the same fault in the same file.** Fixing it does not wait on any
+decision.
+
+**2. THE SCALING RISK IS REAL AND HAS A KNOWN THRESHOLD.** Plate art is **linear
+in zone count** — mean 14,138 raw / 1,279 brotli per zone.
+
+| zones | plate art raw | brotli |
+|---|---|---|
+| **13 today** | 179 KB | 16 KB |
+| 30 | 414 KB | 37 KB |
+| 50 | 690 KB | 62 KB |
+
+**At about 30 zones the plate art alone exceeds today's entire page transfer.**
+The spectrum that preceded the cards was withdrawn on 2026-08-08 for failing
+**exactly this test** — *"Ten bars read as a chart; thirty read as clutter… A
+signature element that breaks when the project succeeds is the wrong
+signature."* **The plate art passes it today and does not pass it forever.** The
+fix is paging or a lower `max_paths`, not deletion, and it is a future problem
+with a number attached rather than a vague worry.
+
+**3. `check.py` STAYS GREEN IF ALL SIXTEEN ARE DELETED.** `check.py:121-124`
+deliberately does not require the home page to enumerate zones. **The guard on the
+site's stated identity is the brief, not the build** — a guard that is not a gate,
+on the thing `DESIGN.md` marks "do not change these."
+
+#### What was NOT established, and it bounds everything above
+
+**No browser was pointed at the deployed site and no network condition was
+simulated. There is no measured first-paint or LCP figure** — every first-paint
+statement above is byte-weight and document order. **And whether Cloudflare serves
+brotli rather than gzip in production was not verified live**; under gzip the
+SVGs are 46.1% of blocking bytes rather than 39.9%, **and the ruling holds either
+way.**
