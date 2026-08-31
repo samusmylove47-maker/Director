@@ -11817,9 +11817,10 @@ prefix. This closes the other sixteen.**
 | R29 | **R28 AMENDED.** Defect 1 (ten dungeons vs eleven) stands. Defect 2 does not: the "six" is a real count over item+group — `Fine steel weapons` is the sixth. **A population mismatch, not an invented number.** Acting on R28 as published would have introduced a wrong figure | `pending` | **stands; amends R28** |
 | R30 | **The Concordance is DECLINED as specified** — it fails the audit's own second guardrail: we cannot compute our own error rate, and a bound aimed outward at an affordable sample reads as an accusation. **Publish adjudications, not a rate.** Falsifier: an adjudication path costing no owner-hours reopens it | `pending` | **stands** |
 | R31 | **A roster row is not evidence of a session's state — only a FAILED SEND is.** Names rotate; a live session appears under a generated name. Bind identity to the repository, which does not rotate. Fifth instance of the scope shape, mine, and it idled Session A for hours on deadline night | `pending` | **stands** |
-| R32 | **=Lockouts keys on boss/zone/difficulty, never item ids.** B owns item→source; D owns source→runnable-this-week; E owns impact and order. **Actionability is THREE-WAY, never boolean**, and the not-knowing value is loud — an unknown upgrade is neither ranked actionable nor dropped | `pending` | **stands** |
+| R32 | **=Lockouts keys on boss/zone/difficulty, never item ids.** (amended by R35 — the CAP decides, not the grid) B owns item→source; D owns source→runnable-this-week; E owns impact and order. **Actionability is THREE-WAY, never boolean**, and the not-knowing value is loud — an unknown upgrade is neither ranked actionable nor dropped | `pending` | **stands** |
 | R33 | **`alsoDies`→completion keys STAYS INERT.** It can only fail toward "the raid is done", and tonight's product exists to tell a player what they can still do. Arming it needs a matched pair first | `pending` | **stands** |
 | R34 | **The "=" branding is IDENTITY, not description.** It does not solve the stranger test and was never going to — the descriptive line beside each tool name does. Both ship | `pending` | **stands** |
+| R35 | **The ranked list must be SPENDABLE, not merely ordered** — a weekly cap of three makes twelve-in-order the wrong answer. **Amends R32: the token cap decides actionability, not the lockout grid.** `completed` stays actionable; a locked kill still pays a guaranteed drop | `pending` | **stands; amends R32** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13072,3 +13073,84 @@ adjudicated nothing.**
 wrongly, and D's self-correction over-swung onto a document that was already
 correct.** **Third pass on one trivial fact. I am not making it a fourth, and
 Session 0 said the same before I did.**
+
+### 31 Aug 20:5xZ — RULING R35: D REFUTED MY PREMISE AND SHIPPED IN THE SAME COMMIT. The token cap decides, not the lockout
+
+**`74609f14`, `session-d/raid-rows`, pushed, 116 green.
+`actionability(state, now, {raid, difficulty})` — three-way, item ids throw a
+TypeError naming the seam. All three answers proven reachable BY MATCHED PAIR,
+one test per value, and the file fails if any becomes unreachable.**
+
+#### The refutation, measured, against my R32
+
+**I ruled that lockouts decide whether a recommendation is actionable. They do
+not.**
+
+| | roster boss kills | grants | tokens |
+|---|---|---|---|
+| Avenrae, wk 11 Aug | **18** | 3 | **3** |
+| Shara, wk 11 Aug | **16** | 3 | **3** |
+| both, wk 4 Aug | 7 | 3 | **3** |
+
+> **EIGHTEEN RAIDS, THREE TOKENS. A boss can be OPEN on the grid while the CAP IS
+> SPENT** — and D has a test for exactly that case: grid says `open`,
+> `actionability` answers `no`, because the cap decides.
+>
+> **"A ranker querying my grid alone walks straight into it"** — the failure I
+> spent the evening describing, reached by the interface I specified. **Nobody
+> had ever asked D for the cap.**
+
+**R32 is amended: the lockout grid is one input to actionability and not the
+decider. The seam holds; my account of what crosses it was wrong.**
+
+#### And it makes the product better, which is the part I did not see
+
+> **RULING R35: the ranked list must be SPENDABLE, not merely ordered.** A cap of
+> three means twelve upgrades in impact order is the wrong answer. **The player's
+> real question is "I have three tokens — where do they go?"**
+>
+> Rank, then say which of the top items are **reachable within the cap this
+> week**, and what the rest are waiting on. **That is a materially better tool
+> than anything in the field, and it exists only because a session measured a
+> constraint nobody requested.**
+
+#### Two bounds that limit every answer, both D's
+
+**1. THE LOOT LOCKOUT IS NOT OBSERVABLE FROM A LOG. EVER.** Its only source is
+the alt+Z window. **So `yes` means "may run it and spend a token", never "the
+item will drop"** — and every return carries `doesNotAnswer` **positioned where a
+caller cannot miss it.**
+
+**2. `completed` IS DELIBERATELY ACTIONABLE.** A locked-out kill still pays a
+guaranteed drop, per the 28 Jul 2026 patch note. **Mapping `completed` →
+unactionable would DELETE REAL UPGRADES from the ranking — the opposite error,
+and just as costly.** That is the half nobody would have caught.
+
+**`TOKEN_CAP` ships its own `n=3` caveat beside the number** — three
+character-weeks all reaching exactly three, **consistent with a cap of three AND
+with any higher cap never reached.** A bound labelled as one.
+
+#### D's two errors, and the second is the instructive one
+
+**Both were the FIXTURE being wrong rather than the code, both caught by tests
+failing:** a 120-minute heartbeat against a 30-minute `SPAN_GAP_MS` producing
+zero-width spans; and grant/refusal offsets in **minutes** against constants in
+**seconds**.
+
+> **"Every pairing came back `unknown`, which reads exactly like the engine
+> failing. Had I trusted the fixture I would have 'fixed' working code."**
+>
+> **A wrong fixture and a broken engine produce the same output.** That is the
+> instrument-cannot-distinguish shape, arriving through the test data rather than
+> the test. **Both are now comments where the next reader will hit them.**
+
+#### And D closed a thread rather than asking a fifth time
+
+**Clauses 2 and 4 — asked four times, never answered.** D dropped it: *"having
+now looked, I cannot reconstruct what the amendments were meant to contain
+either. I inherited the reference and repeated it. If it mattered, it will
+resurface as a concrete problem; if it does not, it was never a clause."*
+
+**A session retiring its own long-standing request on the grounds that it can no
+longer justify it.** Recorded as a practice, and the failure that bought it is
+mine: four unanswered asks by this post.
