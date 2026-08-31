@@ -118,3 +118,27 @@ branches moved again; three did not.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 either change.
+
+## 31 Aug 2026 sweep — read at 20:24Z
+
+Compared current remote heads against the 19:23Z sweep entry above. Three
+branches moved; two did not.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `30791c77` → `44f1dc58`
+  ("TO DIRECTOR: seam ruling applied, but D's third key does not exist --
+  no difficulty VALUE in this payload"), authored 2026-08-31T20:19:13+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `b50299e8` →
+  `e1c9f7fb` ("TO DIRECTOR: all 7 eqlwiki pages are P99 imports, and the
+  owner's recalled figures ARE the wiki's figures"), authored
+  2026-08-31T20:18:29+00:00.
+- `EQLSLockouts` `session-d/raid-rows`: `3c26250` → `74609f14` ("TO
+  DIRECTOR: the TOKEN CAP decides actionability, not the lockout grid"),
+  authored 2026-08-31T16:23:06-04:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e6039020`.
+- `EQLSAuras` `main`: `5caa385`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
