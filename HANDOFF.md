@@ -11829,6 +11829,7 @@ prefix. This closes the other sixteen.**
 | R41 | **The hero search field points at The Index, not `search.html`.** That page indexes 39 *pages*, not items, and says so on itself. My R26 was right on mechanism and wrong on destination | `pending` | **stands; corrects R26** |
 | R42 | **R28 AMENDED: naming the corpora is necessary and NOT sufficient.** The tool-card grid is a `LEDGERS` entry, stripped before ledger-stripped rules run, so rewording alone ships a check that reports nothing. Counts go through `SINGLE_UNSTRIPPED` | `pending` | **stands; amends R28** |
 | R43 | **R26 REFUTED BY MEASUREMENT.** The hero reorder is −14 ms at p=0.49 — no effect. The render-blocking stylesheet (−962 ms) and **2.19 MB of autoplay video** (−426 ms) are the cost. Do not inline site.css; critical-CSS is the form. **My brotli figures were computed at q11 and production serves q4** | `pending` | **stands; refutes R26** |
+| R44 | **Land A's CDP probe as a hand-run check.** Nothing in `check.py`, `toolsmoke` or `conformance.js` can see a runtime observer attaching a `src` — and the probe already caught a false negative where the harness reported a working feature as broken. Matched pair already demonstrated | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13593,3 +13594,95 @@ conclusion and is a reason to re-run it."**
 **It named the limitation that cuts TOWARD its own finding and called for a
 re-run anyway.** That is the discipline this project keeps asking for, arriving
 from the one party with no stake in the answer.
+
+### 31 Aug 21:5xZ — RULING R44: land the CDP probe. And PR #157 is with the owner
+
+**A shipped the media deferral and opened PR #157. Five commits, pushed, none
+merged.**
+
+```
+58f8321c  media deferred
+dfb44b32  WS1 restructure
+858e9aa0  WS4
+668211f5  WS2 + WS3
+6c9b9a93  WS1
+```
+
+**Both trailers and both posters deferred behind an `IntersectionObserver`, `src`
+and `poster` held in `data-` attributes, 300px `rootMargin`. No eager `src` or
+`poster` referencing media survives in the built page — so a parse-time fetch is
+not unlikely, it is IMPOSSIBLE.** That is a structure making the error
+unrepresentable rather than a rule forbidding it.
+
+#### R44 — the probe lands
+
+**Three checks exist and none can see this.** `conformance.js` **aborts every
+non-file request by design** and its own header forbids extending it to judge what
+it cannot fetch. `toolsmoke` runs under a stub DOM. `check.py` reads shipped HTML.
+**An observer that attaches a `src` at runtime is invisible to all three, and the
+property we now depend on — media that must NOT load eagerly and MUST load on
+scroll — is a runtime behaviour by construction.**
+
+> **RULING R44: land it. Hand-run like `conformance.js` and `toolrender.js`, NOT
+> in `build.sh`. WARN and exit 0 where no browser is installed. State in its
+> header what it cannot see.**
+
+**It already has its matched pair and I am not asking for one to be built:**
+
+```
+before  src=false  poster=false
+after   src=true   poster=true   paused=false      both trailers, one load, real Chrome 1440x900
+```
+
+**AND IT HAS ALREADY CAUGHT A FALSE NEGATIVE BEFORE SHIPPING.** The browser pane
+snapshots into a context where `window.innerHeight` is 0, **so nothing can
+intersect anything and a fresh observer times out.** A's words: *"That artefact
+reads exactly like a broken feature, and I nearly filed it as one."*
+
+> **A check that distinguishes "the feature is broken" from "the harness cannot
+> see the feature" is worth more than one that only tests the feature** — and this
+> one did it once already, against its author's own change.
+
+#### A named the cost against its own work
+
+> *"The no-script reader loses the motion. The `autoplay` attribute was what gave
+> it to them and the old comment said so."*
+
+**Poster and `aria-label` remain; reduced-motion and sub-700px unchanged.** That
+sentence is the whole difference between a deferral and a regression, and A wrote
+it about its own change rather than letting it pass as free.
+
+**And it declined the stylesheet on the guard-gap reasoning:** critical-CSS is real
+work, and `stamp.py` not fingerprinting `site.css` means a mistake there passes
+every check while readers get a stale sheet. **A job to do awake.**
+
+#### My fourth corrected figure of the day
+
+**2,191,073, not 2,191,782.** The 709 is `site.js`, and **`site.js` is not media** —
+I enumerated everything carrying a `src` or `poster` and called the total
+*"referenced media"*. **Immaterial to the ruling, and recorded because the ruling
+was about media weight and I inflated it with a script.**
+
+#### A's correction to my own error rule, which is better than the rule
+
+> **"The fix that worked for me was not resolving to remember harder, it was that
+> `git log origin/main..HEAD` is cheap enough to run without deciding whether it
+> is worth it. DECIDING IS THE EXPENSIVE STEP."**
+
+**I wrote R39 and my step-6 additions as resolutions — as things to remember to
+do.** A rule requiring judgement about when to apply it **gets applied when you
+are already suspicious, which is precisely when you least need it.**
+
+**Making the check unconditional and cheap removes the judgement.** That is the
+structural form and it applies to every "be more careful" rule I have written
+today.
+
+#### And A unified tonight's two measurement failures better than I did
+
+> **LEDGERS: a positive drawn from OUTSIDE THE BLIND REGION.**
+> **n=9: a positive drawn from TOO FEW RUNS.**
+> **"Both are real measurements answering a question nobody asked."**
+
+**One ledger entry, together.** Neither is a dead instrument; both are honest
+positives that do not bear on the claim they were offered for. **That is a sharper
+form than either half and I would not have made it.**
