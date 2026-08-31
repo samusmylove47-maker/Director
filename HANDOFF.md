@@ -11168,3 +11168,66 @@ time. **And I mislabelled it "Shara's main" in an earlier entry today** — the 
 was right because the command fell back to `master`, so a correct number carried
 a wrong label. That is the sixth shape and it is the third time today I have
 found it in my own output.
+
+### 31 Aug 16:07Z — TICK 2. B withdrew a request to me, and named a real blocker while doing it
+
+**Re-derived.** Unchanged: `eql-source` `e6039020`, `sky-ledger` `04fc9ac`,
+`EQLSLockouts` `3c26250`, `EQLSAuras` `5caa385`. **`LoxyBee/EQLS-Auras` `master`
+resolved to `8bac7e3`** — the repair from tick 1 works, and the instrument now
+returns the answer it could not an hour ago.
+
+**Moved: `EQL50ups` `80758b8` → `4491fc8` (15:46:23Z), "Withdraw the
+item.selection request: the ruling already existed".**
+
+#### B withdrew its own request and published the cost
+
+B had asked me whether the ranked-delta exception supersedes E's `item.selection`
+refusal. **It withdrew the question itself**, finding the 30 August architecture
+already answered it — *"I had the document and under-read it, read a handoff
+boundary as a veto, and stopped — roughly seven hours on the owner's headline
+feature."*
+
+**Nothing was needed from me. B unblocked itself and said what it cost.** That is
+the fourth session to publish its own error before being asked, and the second
+today.
+
+#### And it found the thing nobody had named. VERIFIED, not accepted
+
+B's claim: E's shipped engine names "The 50 Upgrades gear input" as what would
+settle `worn.stats`, **and has no input path to receive it.**
+
+**I ran B's command verbatim on `sky-ledger` at `04fc9ac`:**
+
+```
+grep -o "context\.[a-zA-Z_]*" bundle/eqls-gap-engine.js | sort -u
+  -> context.marker_raw
+```
+
+**One field. `gear` and `worn` appear nowhere else in the bundle except a
+falsifier string at :249 and inside the refusal object itself:**
+
+```
+:290  { lane: "worn.stats", reason: "no_log_evidence",
+:292    what_would_settle_it: "The 50 Upgrades gear input, or a character-panel reading." }
+```
+
+> **The refusal is correct — a log does not show worn stats — and the settler it
+> names cannot reach it.** The engine reads one context field and gear is not it.
+> **This is not a defect in the refusal; it is a missing seam between two
+> sessions, and it sits under the owner's headline feature.**
+
+**B was careful about what it did NOT claim, which is why the report is
+trustworthy:** it flagged `what_would_settle_it` as **E's gloss, not a ruling.**
+That distinction is the whole reason this is a gap rather than a contradiction.
+
+#### It batches, and it needs a ruling I am not making on a tick
+
+**Nobody does different work in the next hour.** B has withdrawn and moved on; E
+reported "none needing action" at tick 9; A and D are offline. **No message
+sent.**
+
+**But it is a MECHANISM question — a new input path between E's engine and B's
+gear data — and the standing rule is explicit that mechanism work needs a ruling
+rather than self-dispatch.** That ruling is mine and it is owed. **Recorded as
+owed rather than improvised at 16:07 on a clock tick**, and surfaced to the owner
+because it is their headline feature that has been blocked on an unnamed seam.
