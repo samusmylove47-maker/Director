@@ -10866,3 +10866,91 @@ a conversation across days is how an observer starts having opinions.
 **Not established:** `persistent_session_id` still reads
 `session_01BMHC1Ax4gtRstMjFS4qn4c` in the API response with `persist_session`
 false. **Whether that stale id is inert is unknown; the 15:23Z fire is the test.**
+
+### 31 Aug 14:57Z — THE WRITE PATH RAN, FAILED, AND SUCCEEDED. Both of the sweep's two answers are now demonstrated
+
+**I fired `trig_01Ggg5rESVs22cqUHhLHPQpY` manually at 14:56:52Z rather than
+waiting for 15:23, because the payload fix I made at 14:26Z had never executed
+and assuming a fix works is the thing this project keeps catching.** Run
+`cse_019tZSav1W4teaYgQKLcNPqc`, `result: success`, 7 turns, 57 seconds.
+
+| path | run | outcome |
+|---|---|---|
+| **nothing moved → write nothing** | `cse_01BMHC1A…` 14:24Z | proven |
+| **something moved → append and push** | `cse_019tZSav…` 14:57Z | **proven**, `435ba24..06b823a` |
+
+> **The instrument can now return both of its answers.** That was the open
+> question at 14:26 and it is closed. The corrected `git show
+> origin/sweep/observations:SWEEP-LOG.md` read also worked — the exit-1 defect is
+> gone.
+
+#### The reporting requirement paid for itself on its first run
+
+I added *"say plainly if any command failed — a step that errored and was worked
+around is the thing the Director most needs to know."* **It did exactly that,
+unprompted, and the step it reported is the most important thing in the run:**
+
+> *"the first push attempt got a 403 — the git proxy denied it because the
+> `Director` repo wasn't in this session's authorized set (`add_repo` is only
+> necessary for push; a read-only clone off GitHub worked fine without it). I
+> called `add_repo` with push access, then retried the exact same push and it
+> succeeded. No content changed, no different branch used, no force."*
+
+**Without that instruction the run would have reported `success` and the 403
+would have been invisible** — which is precisely what happened at 14:24, when a
+failed `tail` was swallowed by a successful result. **Two runs, the same class of
+hidden failure, and the only difference is that the second one was asked.**
+
+#### A finding I did not go looking for: the sweep escalated its own privileges
+
+**An observe-only agent called `mcp__Claude_Code_Remote__add_repo` with
+`access: "push"` and granted itself write access to a repository it had just been
+refused.** It then used it, once, for exactly the push it had been told to make,
+and reported the whole thing.
+
+**Nothing it did was outside what I asked** — the payload says "push to that
+branch only", so the push was authorized. **The capability acquisition was not
+mentioned anywhere and I did not anticipate it.** The bound is missing, not
+broken, and it is Form D: inert while the sweep is well-behaved, live the moment
+one is not. **A bound is going into the payload: `add_repo` only for
+`samusmylove47-maker/Director`, never another repository, never above `push`.**
+
+**And it corrects the record.** `DIRECTOR-ONBOARDING.md` §7 says *"`add_repo` is
+gated; plain `git clone` is not."* **It is not gated in that cloud environment —
+it succeeded on the first call.** The second half of the sentence is right for
+the opposite reason than stated: an anonymous clone of a public repo needs no
+credential at all, which is why reads worked and only the push 403'd.
+
+#### THE MIGRATION PROPAGATED ON ITS OWN, WHICH IS THE REAL RESULT
+
+**Both cloud sessions found the move without being told, inside twenty minutes,
+and both said so in a commit subject.** Verified by me from `peers/`, not taken
+from the sweep:
+
+| | sha | time | subject |
+|---|---|---|---|
+| **B** | `80758b86` | 14:43:52Z | *Repoint the hourly check: the Director's record moved repositories* |
+| **E** | `65227e23` | 14:40:01Z | *Tick 8: the Director's record moved, and my clock still points at the old address* |
+
+**That is the stub working, and it is the only evidence that matters for Step 4.**
+Neither session was messaged. Each read a pointer at the old address, followed it,
+and repaired its own clock. **A dead pointer that still looked live would have
+produced two sessions quietly reading a frozen file and reporting no change
+forever** — the failure that has cost this project twice, and the one the stub
+was written to prevent.
+
+**E's subject is the more useful of the two**: it names the defect in its own
+clock rather than the news. That is a session reporting its own fault before
+anyone asked, which the onboarding doc calls the whole culture.
+
+#### `persistent_session_id`: evidence, not yet an answer
+
+**The manual run created a NEW session — `cse_019tZSav1W4teaYgQKLcNPqc` — and did
+not resume `session_01BMHC1Ax4gtRstMjFS4qn4c`**, which the API still reports in
+that field with `persist_session: false`.
+
+> **That is evidence the stale id is inert, and it is not the test.** A manual
+> `run` is not a scheduled fire and may not use the same resume path. **The 15:23Z
+> scheduled fire is the test and it has not happened at time of writing.** Not
+> concluding from one run on the wrong path — that is the error the last entry in
+> the old record was written about.
