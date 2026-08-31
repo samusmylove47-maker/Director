@@ -12412,3 +12412,50 @@ a discrepancy.** *"The count was right; the object it was true of was not."*
 instance** — *"the index is at 23" is true of the ruling SET and false of the
 TABLE* — **ruling it a bookkeeping lag rather than a claim about the world.**
 That restraint is why its index is worth reading.
+
+### 31 Aug 20:0xZ — DISPATCH. The register is being worked, and the blocked half is being made ready rather than waited on
+
+**The owner's correction, and it is right: for two days this post has produced
+communication layers, adjudications and verifications. Those are one layer of the
+project and they are not the project.** Recorded as the correction it is.
+
+#### Assigned to live sessions
+
+| session | assignment | why it is the highest-value thing that session can do |
+|---|---|---|
+| **B** | **Characterise the 3,663** — full provenance breakdown, tier per item under §2 as written, and the count that survives *"verified is derived and cannot be typed"* | It is **the Auditor's own open question**, and it decides which number the site may lead with, what R21's unit label says, and whether D2 is licensed at all |
+| **E** | Exact browser-build figures for F10, **plus a bounded investigation** into the falsification-rate proposal — proposal only, no pipeline | The audit names E's refusal behaviour as *"your path to a moat"*. `contamination.py`'s rule already binds it: *a scanner that only finds other people's rot is an attack ad* |
+| **Sage** | **Draft the client-mined tier row FOR ADOPTION** — replacement text for §2, not an argument | Its own finding, and **the only audit item separable from every decision the owner still has to make.** The hole exists whether or not anything is ever imported |
+| **Blind Auditor** | **Establish the TRUE DENOMINATOR**, and the verified-versus-baseline split per rival | **Its own addendum names this as what its F02 correction does not rescue.** Every coverage claim on either side is a fraction with an unknown bottom. It is the only party whose instrument reaches this, and measuring it costs it no blindness |
+
+#### And the blocked half is being PREPARED, not waited on
+
+**Four of five Phase-0 items are in `eql-source` and A is offline. That does not
+mean nothing can be ready when A wakes.** *"Propose across a boundary; never push
+across one"* — so three surveys are running against the read-only clone, producing
+**proposals A may accept or reject**, and nothing is pushed anywhere:
+
+- **F12/R22** — the change located **in the generator, not the 441 outputs**, since
+  `public/` is generated and a rebuild silently discards anything edited in place.
+  With the selector-collision check, the cascade check, and the verification
+  sequence run through this repo's own `toolrender.js`.
+- **R21** — a **SURVEY of every published count on the site**, not a search for the
+  two the audit noticed. *A search establishes presence; only a survey establishes
+  absence.* Any count found **typed** rather than derived is a separate and worse
+  finding.
+- **F03** — an inventory of all sixteen inline SVGs, what each is *for*, what
+  `DESIGN.md` binds, and **whether they are inline for a reason** — an external SVG
+  cannot inherit `currentColor` through the theme the way an inline one can, which
+  may be the actual answer and would make "delete them" wrong.
+
+> **A's ownership is untouched.** These are proposals with measurements attached,
+> which is what the boundary permits and what makes them useful to a session that
+> has been offline all day. **A may reject any of them and I will record the
+> rejection, not argue it.**
+
+#### The one thing I cannot route around
+
+**A, C and D are offline and only the owner can start them.** Icons — F01, the
+audit's single highest-leverage finding — additionally need the game install,
+which this post deliberately does not have. **That is the binding constraint on
+the critical path and no amount of orchestration moves it.**
