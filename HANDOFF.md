@@ -11806,6 +11806,10 @@ prefix. This closes the other sixteen.**
 | R18 | **The scope watch is a recorder, not a detector.** Do not extend it to read prose; that would make it a reader of content | `7133bd5` | **stands** |
 | R19 | **Rulings self-name with the `RULING:` prefix; Session 0 records `audited through <sha>, <date>`** | `aa29642` | **stands** |
 | R20 | **RETRACTION: the gear seam does not exist.** New scope is the owner's decision, not a ruling of mine | `aa29642` | **stands** |
+| R21 | **The homepage must name the UNIT beside a count** where two counts of different corpora appear. Falsifier recorded: n=1 | `5c3b9cc` | **stands** |
+| R22 | **F12 is self-dispatchable by A and never needed a ruling** — a measurement with a falsifier in A's own repository | `5c3b9cc` | **stands** |
+| R23 | **The practices ledger section stays, and every entry must name the failure that bought it.** Structural, not a rule: you cannot enter it without also entering the record of having erred | `345da25` | **stands** |
+| R24 | **The SHIP REGISTER is opened** — the counterpart to the list of things not to build. Every row carries an owner and a state | `d5ad58d` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -12368,3 +12372,43 @@ column.**
 
 **D1 icons, D2 client-mined import, D4 Discord, D5 analytics.** These change what
 the site **is**, not what it claims. **The owner decides; sessions execute after.**
+
+### 31 Aug 19:4xZ — RULING R25: the index must not be able to drift silently. Session 0 computes the tripwire
+
+**Session 0 found the ruling index four behind — the table held R1–R20 while
+R21, R22, R23 and R24 existed only as prose headings. The instrument I built to
+end prose-only rulings had become one.**
+
+**Its consequence, stated plainly and correctly:** *"my consistency check covers
+R1–R20 by table and R21–R23 not at all… the null I reported an hour ago is still
+exactly true and is now also exactly incomplete."*
+
+> **And the sentence that makes this P1 rather than housekeeping: "the instrument
+> that made that sentence sayable is three entries out of date, and if it keeps
+> drifting the sentence quietly reverts to the first form while sounding like the
+> second."** *"I checked twenty and found none"* decays into *"I have not noticed
+> a contradiction"* **with no visible change.** That is a check whose passing
+> output stops meaning what it says — the sixth shape, in the governance layer.
+
+**Table repaired: R21–R24 added, 24 rows.**
+
+> **RULING R25: adding the index row is part of making the ruling, not a follow-up
+> to it. And because I have now demonstrated I will forget, SESSION 0 COMPUTES THE
+> TRIPWIRE: greppable `RULING:` commits on main versus `R`-numbered table rows. A
+> disagreement is a finding and it reports it.**
+>
+> **This is not delegating my bookkeeping.** It is a count, not a judgement, it is
+> exactly what a stakeless consistency checker is for, and **Session 0 computed it
+> unprompted before I asked.** The numbers will not agree exactly — one commit can
+> carry two rulings — **so the check is "did the table move when a `RULING:`
+> commit landed", not equality.**
+
+**How it was found is the part worth keeping.** Session 0's row count disagreed
+with my claim that the index was at 23. **It went looking for R21–R23 before
+saying anything, found them as headings, and only then had a finding rather than
+a discrepancy.** *"The count was right; the object it was true of was not."*
+
+**It also flagged the adjacency to the scope shape and declined to call it an
+instance** — *"the index is at 23" is true of the ruling SET and false of the
+TABLE* — **ruling it a bookkeeping lag rather than a claim about the world.**
+That restraint is why its index is worth reading.
