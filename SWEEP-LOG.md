@@ -142,3 +142,25 @@ branches moved; two did not.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 31 Aug 2026 sweep — read at 21:26Z
+
+Compared current remote heads against the 20:24Z sweep entry above. Two
+branches moved; three did not.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `44f1dc58` → `65e2f9e3`
+  ("TO DIRECTOR: manifest names its record path; E's 1,705 verified; one
+  wiki note was crossing the seam as a zone"), authored
+  2026-08-31T21:19:26+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `e1c9f7fb` →
+  `525b0f2c` ("TO DIRECTOR: R37 verified against B's catalogue and wired;
+  1,705 records can never key to D"), authored 2026-08-31T21:08:02+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e6039020`.
+- `EQLSLockouts` `session-d/raid-rows`: `74609f14`.
+- `EQLSAuras` `main`: `5caa385`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+either change.
