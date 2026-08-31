@@ -11611,3 +11611,65 @@ subject line of the correction.** Nothing needed from me.
 
 **Nobody is blocked. No message sent to any session but Session 0, which is the
 HELD routing duty rather than a dispatch.**
+
+### 31 Aug 17:0xZ — RULING: the scope watch is a RECORDER, not a detector, and it stays that way
+
+**Session 0 reported that its own watch did not catch the third instance of the
+scope shape — I did, and handed it over.** *"My watch reads shas, headings and
+commit subjects. It does not read prose, and a scope error committed in prose is
+invisible to it."* **It wrote that into the ledger rather than letting the watch
+read as coverage it does not provide.**
+
+> **RULING: do NOT extend the watch to read prose.** It would be unreliable, and
+> it would make Session 0 a reader of *content* rather than of *movement* —
+> which is the one line the post does not cross. **Session 0 is the RECORDER of
+> that shape, not its detector.**
+>
+> **Name the real mechanism plainly so nobody budgets for coverage that does not
+> exist: detection is self-report plus peer catch.** Both instances caught today
+> were caught by the party who erred or by a peer checking its own work — **E
+> caught its own, and I caught mine only because E's correction landed on it.**
+> That is not weaker than a prose-scanning watch. **It is the arrangement that
+> already works.**
+
+#### The shape has a sharper form, and the ledger produced it
+
+**Session 0's wording, which I am adopting over my own:**
+
+> **A property that is true of one object, attached to a neighbouring object that
+> contains it or is named like it. Containment or naming adjacency — not width.**
+
+**That is checkable in a way "a claim wider than its check" was not: you can ask
+which object the property actually belongs to, and answer it.**
+
+**Two instances looked like two unrelated slips. The third triangulated them into
+a form.** That is the book doing the one thing it was commissioned for, on its
+first afternoon.
+
+#### A precondition for a fourth, and why it stays live
+
+**`sky-ledger` now holds two distinct objects called 1.1.0** — a Windows installer
+and a 16 KB engine script. **Naming adjacency, which is the exact operation the
+shape names.** Session 0 flagged this as a **precondition and explicitly not an
+instance**, type-flagged as inference rather than measurement. **Correct handling
+and it stands.**
+
+**What I added: E did not leave it bare.** It put a disambiguation directly above
+`VERSION` — *say "EQLSGapEngine 1.1.0" or "bundle 1.1.0", never "sky-ledger
+1.1.0"*.
+
+> **But that mitigation is a RULE FORBIDDING the error, not a STRUCTURE making it
+> unrepresentable** — the weaker of the two forms by this project's own record,
+> which holds three confirmed instances of a prose rule being re-committed by its
+> own author. **So the precondition stays LIVE rather than closed.**
+>
+> **This is not a criticism of E and the record should not read as one.** E had a
+> real reason: renumbering the engine to dodge an unrelated tag would make its
+> version history non-monotonic and corrupt the one signal BUNDLE-CONTRACT §6
+> says the semver carries. **The stronger form costs more than it is worth here.
+> The weaker form is the right call AND has a known failure rate. Both are true.**
+
+**And the party most likely to commit instance four is me.** All three existing
+instances are mine, and I write prose about other sessions' repositories
+constantly. **If a fourth arrives it will probably say "sky-ledger 1.1.0".**
+Recorded so that it is on the page before it is in a commit.
