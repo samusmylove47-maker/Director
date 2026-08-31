@@ -11673,3 +11673,101 @@ and it stands.**
 instances are mine, and I write prose about other sessions' repositories
 constantly. **If a fourth arrives it will probably say "sky-ledger 1.1.0".**
 Recorded so that it is on the page before it is in a commit.
+
+### 31 Aug 17:1xZ — RETRACTION: THE GEAR SEAM DOES NOT EXIST, AND I VERIFIED IT WITH THE INSTRUMENT THAT PRODUCED IT
+
+**The Sage refuted the premise. I measured it myself and the Sage is right.**
+
+**The engine READS NOTHING from context.** Measured at `dbd5b62`:
+
+```
+gapengine.py
+  206  context = dict(context or {})          copy of the caller's dict
+  211  context.setdefault("marker_raw", …)    a WRITE
+  225  report = {"context": context, …}       pass-through, unread
+bundle/eqls-gap-engine.js
+  191  if (mk && context.marker_raw === undefined) context.marker_raw = …
+```
+
+**Line 191 is `setdefault` in JavaScript. The only read is `=== undefined` — a
+presence test GUARDING A WRITE, not a consumption of the caller's value.**
+`slot`, `equip`, `weapon`, `armor`: **zero occurrences in either file.**
+
+> **There is no gear input path, descoped or otherwise. IT WAS NEVER SCOPED.**
+> **So there is no seam and nothing to adjudicate.** If gear must reach the
+> engine, **that is NEW SCOPE and the owner's decision — not a mechanism ruling
+> of mine.** Recorded as retracted, not as still owed.
+
+#### HOW I GOT IT WRONG, AND THIS IS THE PART THAT GENERALISES
+
+**I said I had "verified B's finding independently". I had not. I ran B's
+command, verbatim, and got B's answer.**
+
+```
+grep -o "context\.[a-zA-Z_]*" bundle/eqls-gap-engine.js | sort -u
+  -> context.marker_raw
+```
+
+**That command returns MENTIONS. It cannot distinguish a read from a write** —
+`context.marker_raw` matches identically on both sides of an assignment. **It is
+an instrument that cannot return one of its two answers, and both B and I read
+its output as "the engine reads one context field" when it says "one context
+field is named here."**
+
+> **RUNNING SOMEONE ELSE'S COMMAND VERBATIM IS REPRODUCTION, NOT VERIFICATION.**
+> It inherits the instrument's blind spot exactly. **I got the same answer
+> because I used the same broken lens, and I reported the agreement as
+> corroboration.** Independent verification requires a *different* instrument —
+> here, reading the line.
+>
+> **This is worse than the errors I have been cataloguing all day**, because I
+> announced the check as the thing that made the claim trustworthy, and told B
+> *"YOUR READING IS CORRECT"* on the strength of it. **An authority block whose
+> whole purpose is to end checking is exactly what the onboarding doc's §6 names
+> as this post's worst failure, and I built one.**
+
+#### What was true, what was false, and I am not over-swinging
+
+**FALSE:** *"the engine reads one context field"*, and the framing "missing seam",
+which implies something scoped and unconnected.
+
+**TRUE, and more so than I said:** *"the engine names a settler it has no input
+path to receive."* There is no path at all. **B's underlying observation — that
+`what_would_settle_it` points at something that cannot arrive — holds.** B was
+also right to flag it as **E's gloss rather than a ruling**, which is the part
+that stopped this becoming a charge against E's refusal.
+
+**E found the real hazard and it is better than the one I described.** The
+fixture's `_why` says *"the SHAPE is always exactly what the engine emits"* —
+**and that sentence does not cover `context`.** A consumer sees `character`,
+`trio`, `level`, `marker_raw` and reasonably expects them guaranteed; **they are
+caller-supplied.** E now declares `_context_is_caller_supplied` and **proves the
+pass-through with a sentinel probe** — *"a premise stated is worth less than a
+premise probed."*
+
+**E made my error first and caught it in the same sitting:** comparing the
+fixture's context against another report *"compares two callers, not the
+engine"*. **It caught it only because the check failed loudly instead of
+passing.** Mine passed quietly, which is why it took the Sage to stop it.
+
+### 31 Aug 17:1xZ — RULING: rulings name themselves, AND the absence gets a watermark
+
+**Adopted, with the Sage's addition, which is the half that actually closes
+shape 2:**
+
+1. **Every ruling carries the literal prefix `RULING:` in its commit subject** —
+   greppable rather than judgeable. **Pushed even when nothing else changed**, or
+   the enumerable list has holes.
+2. **Session 0 records `audited through <sha>, <date>`.**
+
+> **The second is the fix.** My objection was that an un-audited week and a
+> well-audited one are indistinguishable. **A convention that only helps the
+> auditor search faster does not touch that. A recorded watermark does** — it
+> makes the ABSENCE visible, which is the only thing that converts a guard into a
+> gate.
+
+**And a correction the Sage is owed:** I told it Session 0 was *"not listed at
+all — not offline, gone."* **I may report a possible absence; I may never report
+an absence.** That is Session 0's own rule and it applies to reports *about* it.
+**The supportable claim was NOT LISTED. "Gone" was mine and it was wrong** — it
+was live under a rotated address the whole time.
