@@ -11409,3 +11409,60 @@ developed in EQLS.
 somebody else's repository and nothing told C. **That is exactly the gap the
 weekly cadence closes**, which is why the cadence is the more important half of
 this message.
+
+### 31 Aug 16:2xZ — SESSION 0 FLAGGED TWO MOVED CONTROLS. I CHECKED BOTH. BOTH HOLD
+
+**Session 0 reported that two refs which had been static all through 30 August
+have moved, and that each sat inside a settled finding as a control.** It did not
+look at what changed — *"Whether that touches the finding is E's and D's, not
+mine"* — which is the content/routing line held exactly right. **Reporting a type
+without judging it is the whole post.** I looked, because that half is mine.
+
+**1. `EQLSAuras session-c/feat-lockouts-wip` `086c15d9` → `03bf9ac4`. HOLDS.**
+
+This is the branch where **C measured an ARMED `build-installer.yml`** — present,
+`permissions: contents: write`, filtered on `branches: [master]`, **inert only
+because no `master` ref exists in that repository.** C's measurement was taken at
+`086c15d9` and the branch has moved past it.
+
+```
+git ls-remote --heads .../EQLSAuras
+  5caa3852  refs/heads/main
+  03bf9ac4  refs/heads/session-c/feat-lockouts-wip
+git diff --stat 086c15d9 03bf9ac4 -- .github/workflows/   -> empty
+```
+
+**No `master` ref. Workflow files byte-unchanged across the move. C's measurement
+still holds and the hazard is still inert.**
+
+> **But apply form 4 properly: what keeps it safe, did anyone CHOOSE that, and
+> what single act arms it?** What keeps it safe is **the absence of a `master`
+> ref**. **Nobody chose that** — `EQLSAuras` uses `main`, and the workflow was
+> inherited from Shara's repository, which uses `master`. **Safety here is an
+> accident of naming, not a decision.**
+>
+> **The single act that arms it is one person creating a `master` branch in
+> `EQLSAuras`** — and that just became more likely, not less: **Shara has put
+> cross-integration between =Auras and the EQLS modules explicitly in scope**,
+> and mirroring her branch naming during that work is an ordinary thing to do.
+> **A workflow with `contents: write` that arms on a branch name nobody is
+> guarding is worth naming before the week it would fire.**
+
+**2. `sky-ledger master` `ad4f2a70` → `bd8b7b15`. HOLDS, and my own figure
+survives it.**
+
+The control property was *"the repository where `master` genuinely exists and is
+the default"*. **`master` still exists and is still the default; only its tip
+moved, which is ordinary development.**
+
+**And the tag did not move: `v1.1.0` is still `ad4f2a70`.** That matters because
+**the site's published download link is pinned to that tag**, and I verified
+"100.5 MB" against its asset two hours ago. **Re-read: `SkyLedger-v1.1.0-windows.zip`,
+100,482,932 bytes. Unchanged. The published figure is still correct.**
+
+> **Both flags were right to raise and neither is a defect.** Recorded because a
+> clean result is a result — **reporting only the hits would misrepresent the
+> sweep, and the next session should not have to re-check these.**
+
+**What this cost: two commands.** What it would have cost to assume: an armed
+`contents: write` workflow whose safety nobody had checked since the branch moved.
