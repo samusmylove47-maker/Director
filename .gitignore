@@ -6,3 +6,7 @@ peers/
 *.log
 .DS_Store
 Thumbs.db
+
+# Claude Code local runtime state (session ids, pids, lock files). Machine-local,
+# and this repository is public.
+.claude/
