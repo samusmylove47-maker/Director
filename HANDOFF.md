@@ -11842,6 +11842,9 @@ prefix. This closes the other sixteen.**
 | R54 | **An actor the meter cannot classify as a person does not enter the top-4.** Three-way — person / not-a-person / unknown, unknown shown. The top melee actor in the corpus is a CHARM PET at 63% of name-shaped melee. **Fourth subsystem tonight decided by this rule** | `pending` | **stands** |
 | R55 | **The trio level rule is UNRESOLVED and I retract both assertions of it.** `CLAUDE.md:122-124` says lowest with no source or date; B's `levelCheck` takes highest and is test-pinned; nobody has measured. **The gate is a caller-supplied input** | `pending` | **stands** |
 | R56 | **The pending lockouts publish is one commit and it is the OWNER'S decision.** `74609f14` — the token cap work — is the only commit touching the engine since the committed artifact was built. Four hashes reconciled as one artifact at four ages; nobody measured wrongly. A's gap-report counterpart is four commands, recorded as available, **not commissioned tonight** | `pending` | **stands** |
+| R57 | **"Rank on damage" is WITHDRAWN — damage is ANTI-CORRELATED with threat.** The player dealing 1.85x the damage took 18% of the mob hits. A damage-led board puts the wrong name at rank 1 for the whole corpus, disprovable by a player glancing at their health bar | `pending` | **stands; withdraws part of R47** |
+| R58 | **The threat formula has an invented constant and a SIGN ERROR.** No damage-to-hate or healing-to-hate rate exists in any repo; eqlwiki's four hate pages 404. And hate tools are DUMPS — adding them moves a player UP the meter at the moment they moved DOWN the real list | `pending` | **stands** |
+| R59 | **Ship an AGGRO BOARD, not a threat meter.** Who the mob is swinging at: 7,665 observations, 58 mobs, 483 switch events, two regexes, no coefficient. Plus the one clean signal — `<Actor> has captured <Mob>'s attention!`, 38 lines, previously filed as a refusal. **C writes its own parser; E's regexes are anchored on the literal `You `** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -14441,3 +14444,129 @@ someone else's finding beating its own document.** And it re-attached its bound:
 **the 293 distinct mobs are a FLOOR from 57.7 MB of a 434 MB corpus.**
 
 > **"If C joins against them, that limit has to travel with the number."**
+
+### 31 Aug 23:2xZ — RULING R57–R59: ship an AGGRO BOARD, not a threat meter. Damage is anti-correlated with threat
+
+**A 12-agent pass over the 181,345-line corpus reverses the ruling I gave C an hour
+ago and reframes the product. C's co-presence measurement is untouched — this is a
+different axis and it is the one that decides what ships.**
+
+#### R57 — "rank on damage, which is measured" is WITHDRAWN
+
+**Measured on segment A, 80,998 lines, players hand-seeded from the `/who` roster
+at `corpus:34283-34284`:**
+
+| | damage dealt | mob melee hits received | damage taken |
+|---|---|---|---|
+| **Shara** (the logging character) | **1,025,709 — 64.9%** | 529 — 18.0% | 36,823 — 14.4% |
+| **Avenrae** | 555,862 — 35.1% | **2,415 — 82.0%** | **219,630 — 85.6%** |
+
+> **The player who dealt 1.85× the damage is the one the mobs were NOT hitting, on
+> 82% of landed swings, across 23.5 hours.**
+>
+> **A damage-led leaderboard puts the wrong name at rank 1 for essentially the
+> entire corpus — and it is disprovable by a player glancing at their own health
+> bar.**
+
+**WHAT I VERIFIED AND WHAT I COULD NOT.** I ran my own pass and **could not
+reproduce that split, because my regex is anchored on a name and is therefore
+BLIND TO FIRST-PERSON LINES** — it cannot see the logging character's damage at
+all. **Sixth wrong-surface instrument of the day, mine, named rather than
+presented as confirmation.**
+
+**What did reproduce is worse than the report:**
+
+```
+Heart harpie    2,383,798 damage dealt   <- TOP DEALER IN THE FILE. A CHARM PET.
+Avenrae           292,906 dealt, 212,545 taken across 3,278 hits
+```
+
+**The top damage dealer by a factor of eight is a pet**, and the player-shaped name
+taking the most hits is not the top dealer. **Direction corroborated; the specific
+figures are the pass's and I could not check them.**
+
+#### R58 — the formula has an invented constant and a SIGN ERROR
+
+> **There is no damage-to-hate or healing-to-hate conversion anywhere in the seven
+> repositories.** `sky-ledger/BUILDS.md:198-202`: eqlwiki's Aggro, Hate_Management,
+> Tanking and Crowd_Control pages **"all 404 — verified"**, and **"Whether healing
+> generates threat is unpublished at every tier."** Two honest implementations of
+> that formula can differ by **3×** with no evidence separating them.
+
+**Per-spell constants DO exist, in B's UNCONSUMED scraped research — correcting an
+earlier claim that there were none anywhere:**
+
+```
+jmoyers-spelllines-merged.json:29828   SK Terror 200 -> 400 -> 450, "10.0 hate per mana"
+nathanbates-items.json:242289          "Capped at 1200 Hate per charge for Cleric and Paladin"
+eqbuddy-harvest-spells.json:1          "This DD proc will cause 475 hate"
+```
+
+**All free-text prose, none structured, and NONE of them a damage- or
+healing-to-hate RATE.** The per-spell constants are recoverable; **the two rates
+the formula needs are not.**
+
+> **AND THE SIGN IS WRONG ON TERM THREE.** `BUILDS.md:199-200` — *"Every other hate
+> tool in the game is a DUMP except Shadow Knight's two Terror spells."*
+>
+> **A hate dump moves you DOWN the list. The spec ADDS it. A player who correctly
+> sheds aggro would move UP this meter at the moment they moved down the real
+> one.**
+
+#### R59 — ship the aggro board. It is denser and needs no coefficient
+
+**Not an estimate of threat — a direct observation of its consequence, from two
+regexes:**
+
+```
+7,665  mob-attacks-a-named-player observations
+   58  distinct mobs with an observable aggro target
+  483  aggro-holder SWITCH events
+  902  six-second windows carrying >= 4 observations
+```
+
+> **A tank losing aggro nine times in a fight is the most actionable fact in this
+> data, and it is the fact the specified meter does not contain.**
+
+**And there is exactly ONE clean ground-truth hate event, which the prior plan filed
+as a `no_log_evidence` refusal:**
+
+```
+"<Actor> has captured <Mob>'s attention!"   38 lines whole file   Avenrae 37, one pet
+"You have captured"  -> 0        "failed to taunt" -> 4
+```
+
+> **A parser that greps `taunt` sees only the four failures and reports a 100%
+> TAUNT FAILURE RATE.** That line names both actor and mob and is the only
+> unambiguous hate signal in the corpus.
+
+#### The seam, decided: C writes its own parser
+
+**Three independent reasons, any one sufficient.** `gapengine.py:26-31` — **five of
+seven regexes are anchored on the literal `You `**, and an aggro board reads
+mob→player lines exclusively, so **E's coverage of them is zero.** **E holds no
+actor name anywhere** — `"You"` is a literal inside the regexes, so even its one row
+cannot be labelled. And **`gapEngine(lines, context)` is batch-only**, re-parsing
+the whole array per call, with `BUNDLE-CONTRACT` §8 **explicitly declining
+streaming** — an overlay tailing at 200 ms is the opposite architecture.
+
+**Widening E is a scope ADDITION: it breaks verb inflection (`You crush` /
+`Avenrae crushes`), the `points`/`point` singular, the `$` anchor and casing at
+once.**
+
+**Built as `threatCore.js` satisfying C's own `ENGINE-CONTRACT.md:31-34` — lines
+and an explicit `now` in, JSON-clonable state out, no Electron, no DOM, no
+filesystem, CommonJS — it is the SAME ARTIFACT whether it lands in a browser page
+or is vendored into Shara's app, and the delivery question stops blocking the
+build.**
+
+#### What it can never show, and the display says so on its face
+
+**A threat MAGNITUDE** — the hate list is server-side and never printed; no log
+will settle it. **Anything below one second** — the log clock has no sub-second
+field. **Coverage** — chat is server-wide, combat is radius-limited, so every
+number is a lower bound of unknown tightness.
+
+> **To the owner, unsoftened: this answers a SMALLER question than was asked, it is
+> the LARGEST question the log can answer, and the question as asked needs a
+> coefficient nobody in this project has measured.**
