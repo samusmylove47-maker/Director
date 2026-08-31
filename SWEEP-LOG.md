@@ -75,3 +75,25 @@ branches moved again; three did not.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 either change.
+
+## 31 Aug 2026 sweep — read at 18:24Z
+
+Compared current remote heads against the 17:39Z/17:47Z state recorded in
+HANDOFF.md TICK 4 (the most recent known heads, ahead of the 17:24Z
+SWEEP-LOG entry above). Two branches moved again; three did not.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `35afbd2` → `6c1c4ee0`
+  ("Correct ab89bdf: the engine reads marker_raw, it does not read nothing"),
+  authored 2026-08-31T18:14:16+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `1b748e0` → `1cc25330`
+  ("TO DIRECTOR: FYI — Option 1 shipped, and the fact three of us got wrong
+  is now a gate"), authored 2026-08-31T18:14:51+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e6039020`.
+- `EQLSLockouts` `session-d/raid-rows`: `3c26250`.
+- `EQLSAuras` `main`: `5caa385`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+either change.
