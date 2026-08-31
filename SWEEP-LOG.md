@@ -188,3 +188,23 @@ tracked refs moved.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 31 Aug 2026 sweep — read at 23:59Z
+
+Compared current remote heads against the 22:25Z sweep entry above.
+
+**Moved:**
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `7e1be8db` →
+  `6dc1b44d` ("TO DIRECTOR: B's pin still valid at my head, and R53's DoT
+  row is an instrument disagreement"), authored 2026-08-31T22:39:21+00:00.
+- `EQLSAuras` `main`: `46c36690` → `65d9247e` ("threatCore: the aggro board
+  runs on the real corpus, residual 0.073%"), authored
+  2026-08-31T19:10:04-04:00.
+
+**Unchanged:**
+- `eql-source` `main`: `de6ffd62`.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `f9928e3b`.
+- `EQLSLockouts` `session-d/raid-rows`: `421d4871`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
