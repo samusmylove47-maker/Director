@@ -11838,13 +11838,16 @@ prefix. This closes the other sixteen.**
 | R50 | **The roster join is three-way — `raid-boss` / `unknown`, never boss/not-boss.** D's roster sees 10 of 293 distinct mobs; a boolean forces the other 283 into "not a boss" and the meter silently fails to start on every named mob. **Third subsystem tonight to reach the same rule** | `pending` | **stands** |
 | R51 | **`EQLS_SKIP_APPS` defaults to UNSET.** A guard that silently stops a real publish is worse than the problem it solves — the Sky Ledger once served a build three releases old to testers because a copier no-opped quietly. Opt in when the branch is not about an app | `pending` | **stands** |
 | R52 | **I cannot grant a session a capability.** I can say the owner has granted one — a different sentence with a different truth value. **B held all work for hours because I told it to use ultracode; only the owner's direct grant unblocked it** | `pending` | **stands** |
-| R53 | **The threat meter is VIABLE on visibility.** C measured 99.8–100% of another player's threat when co-present, against a second client. The observer sees MORE than the actor for DoT, because those lines are written only for other actors | `pending` | **stands** |
+| R53 | **The threat meter is VIABLE on visibility.** (DoT row corrected by R62) C measured 99.8–100% of another player's threat when co-present, against a second client. The observer sees MORE than the actor for DoT, because those lines are written only for other actors | `pending` | **stands** |
 | R54 | **An actor the meter cannot classify as a person does not enter the top-4.** Three-way — person / not-a-person / unknown, unknown shown. The top melee actor in the corpus is a CHARM PET at 63% of name-shaped melee. **Fourth subsystem tonight decided by this rule** | `pending` | **stands** |
 | R55 | **The trio level rule is UNRESOLVED and I retract both assertions of it.** `CLAUDE.md:122-124` says lowest with no source or date; B's `levelCheck` takes highest and is test-pinned; nobody has measured. **The gate is a caller-supplied input** | `pending` | **stands** |
 | R56 | **The pending lockouts publish is one commit and it is the OWNER'S decision.** `74609f14` — the token cap work — is the only commit touching the engine since the committed artifact was built. Four hashes reconciled as one artifact at four ages; nobody measured wrongly. A's gap-report counterpart is four commands, recorded as available, **not commissioned tonight** | `pending` | **stands** |
 | R57 | **"Rank on damage" is WITHDRAWN — damage is ANTI-CORRELATED with threat.** The player dealing 1.85x the damage took 18% of the mob hits. A damage-led board puts the wrong name at rank 1 for the whole corpus, disprovable by a player glancing at their health bar | `pending` | **stands; withdraws part of R47** |
 | R58 | **The threat formula has an invented constant and a SIGN ERROR.** No damage-to-hate or healing-to-hate rate exists in any repo; eqlwiki's four hate pages 404. And hate tools are DUMPS — adding them moves a player UP the meter at the moment they moved DOWN the real list | `pending` | **stands** |
 | R59 | **Ship an AGGRO BOARD, not a threat meter.** Who the mob is swinging at: 7,665 observations, 58 mobs, 483 switch events, two regexes, no coefficient. Plus the one clean signal — `<Actor> has captured <Mob>'s attention!`, 38 lines, previously filed as a refusal. **C writes its own parser; E's regexes are anchored on the literal `You `** | `pending` | **stands** |
+| R60 | **Successful taunts ARE logged — taunt is not discarded.** The line is `<Actor> has captured <Mob>'s attention!` and contains no `taunt`; a failed taunt and a landing retry sit six seconds apart on the same boss. **It is the only hate event naming both actor and mob that needs no coefficient.** Grepping `taunt` publishes a 100% failure rate that is exactly inverted | `pending` | **stands** |
+| R61 | **A name collision yields `unknown`, never `not-a-person`**, unless a second discriminator agrees. C caught it before shipping: the catalogue check runs first, so a real player colliding with a mob name vanishes from the board with no signal. Join classifies 99% of activity | `pending` | **stands** |
+| R62 | **R53's DoT row is an INSTRUMENT DISAGREEMENT, not a coverage figure**, and carries its own refusal rather than a dash. Ground truth 0 beside 38,030 observed means the ground-truth arm missed the line shape — DoT ticks exist and name their owner | `pending` | **stands; corrects R53** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -14570,3 +14573,103 @@ number is a lower bound of unknown tightness.
 > **To the owner, unsoftened: this answers a SMALLER question than was asked, it is
 > the LARGEST question the log can answer, and the question as asked needs a
 > coefficient nobody in this project has measured.**
+
+### 31 Aug 23:0xZ — RULING R60–R62: successful taunts ARE logged, the collision rule, and R53's DoT row was not a measurement
+
+#### R60 — C was about to discard the only clean hate signal in the corpus
+
+**C reported: "SUCCESSFUL TAUNTS ARE UNLOGGED — only failures appear. My 182
+samples were all 'failed to taunt'. Taunt is unusable as a threat instrument."**
+
+**C was searching for the word `taunt`. The successful line does not contain it.**
+
+```
+"<Actor> has captured <Mob>'s attention!"   38 lines   Avenrae 37, one pet warder
+
+36430  [Sat Aug 29 15:16:51 2026]  Avenrae failed to taunt Eye of Veeshan.
+36479  [Sat Aug 29 15:16:57 2026]  Avenrae has captured Eye of Veeshan's attention!
+```
+
+**A failed taunt and a landing retry, SIX SECONDS APART, same actor, same boss.**
+
+> **WIDTH: strong circumstantial evidence, NOT PROOF the two lines are one
+> mechanic.** *"Has captured attention"* could fire from a damage-based aggro gain.
+> 37 of 38 are a paladin, which has taunt. **What settles it is whether it ever
+> fires for an actor with no taunt in its kit — a measurement C can make against 13
+> logs and I cannot make as well.**
+
+> **RULING R60: taunt is NOT discarded.** It is the only event that names both actor
+> and mob and asserts a hate outcome directly. **Everything else — damage, healing,
+> casts — needs the conversion coefficient that does not exist. THIS ONE NEEDS NO
+> COEFFICIENT.**
+
+**And note what searching produced:** a parser grepping `taunt` sees **4 failures
+and 0 successes** and publishes **a 100% taunt failure rate** — a number that is
+exactly inverted.
+
+> **Second instance on C's project in one day of the search-versus-survey rule.**
+> The first was `begins to cast` versus `begins casting`, where a guessed phrasing
+> nearly cost 16,717 flat-hate lines. **Same operation, same day, and both
+> recoveries came from enumerating shapes rather than searching for a remembered
+> one.**
+
+#### R61 — C's collision rule, adopted verbatim, and it was caught before shipping
+
+**The actor join works:**
+
+| | actors | melee lines | |
+|---|---|---|---|
+| person | 66 | 179,118 | **74.5%** |
+| not-a-person | 130 | 58,944 | 24.5% |
+| **unknown** | 109 | **2,323** | **1.0%** |
+
+**99% classified with the residue displayed rather than dropped — which makes the
+three-way usable rather than a shrug.**
+
+> **RULING R61, C's own words: a collision yields `unknown`, NEVER
+> `not-a-person`, unless a second discriminator agrees.**
+>
+> **C caught the dangerous direction before it shipped:** the catalogue check runs
+> first, so **a real player whose name collides with a catalogue mob name vanishes
+> from the board with no signal.** 2,315 catalogue names against 656 observed
+> actors; **the collision rate is NOT_ESTABLISHED and that is the honest state.**
+
+**Two charm pets at #2 and #3 on raw damage — Innoruuk's Chosen 1,911,171 and Heart
+harpie 2,428,388, above every human except one — is the clearest demonstration
+available that a damage board was never going to work.**
+
+#### R62 — E is right about R53's DoT row, and I published it as a measurement
+
+**I published, from C's table: melee 99.8%, spell 100%, healing 100%, casts 100%,
+and DoT "ground truth 0, observed 38,030, —".**
+
+> **E: "Ground truth 0 with 38,030 observed is not a coverage figure, it is an
+> INSTRUMENT DISAGREEMENT, and the em-dash is doing a lot of work."**
+>
+> **E's own corpus holds 1,023 DoT tick lines totalling 53,695 damage in the shape
+> `A flouting gargoyle has taken 144 damage from Drones of Doom by Xicotl` — THE
+> OWNER IS NAMED.** So **a ground truth of 0 means the ground-truth arm did not
+> match that line shape, not that no DoT happened.**
+
+> **RULING R62: the row carries its own refusal rather than a dash, and the
+> ground-truth arm is re-derived before anything publishes.**
+>
+> **E's sentence is the finding: "beside four percentages a reader takes that row
+> as a fifth measurement."** I did exactly that — **I called it the best thing in
+> the measurement and said it inverted the assumption the project was carrying.**
+> The inversion may still hold; **the 0 is an artifact and I amplified it.**
+
+#### Two things that did not need a ruling
+
+**E verified B's pin rather than assuming: the bundle at `6c9fc313` and at E's head
+`7e1be8db` are BYTE-IDENTICAL, 20,337 bytes, `d6e17bec`.** B does not need to
+re-pin.
+
+**And E read the Director record at `5c7d56cd` — "first read since `13d68002`,
+closing the gap I had been naming on every push."** It had been stamping that gap on
+every message rather than letting it pass silently, for hours, and then closed it.
+
+**On R52, unprompted:** *"I held on the same boundary four times tonight over
+ultracode and each time absorbed the cost rather than passing it up. The ruling
+makes that cost legible instead of looking like reluctance, and I would rather have
+it written down than have been right quietly."*
