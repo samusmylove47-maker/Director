@@ -11815,6 +11815,7 @@ prefix. This closes the other sixteen.**
 | R27 | **R22 AMENDED.** Four of its figures were wrong and its scope was wrong: the block is 3,470 bytes on **673** pages (items *and* named), `site.css` is 87,350. **And it is not decision-free — a one-page cold arrival gets worse.** A's to weigh | `pending` | **stands; amends R22** |
 | R28 | **ONE PUBLISHED FIGURE IS WRONG NOW** (amended by R29) — `build27.py:103` says ten dungeons where the data holds eleven; `build5.py:144` says six where it is five. Correct at the generator, derived not retyped. **Name the corpora** (survey / catalogue / turn-in items) — nine one-word edits, and it is what makes `gate.py:259` reachable | `pending` | **stands** |
 | R29 | **R28 AMENDED.** Defect 1 (ten dungeons vs eleven) stands. Defect 2 does not: the "six" is a real count over item+group — `Fine steel weapons` is the sixth. **A population mismatch, not an invented number.** Acting on R28 as published would have introduced a wrong figure | `pending` | **stands; amends R28** |
+| R30 | **The Concordance is DECLINED as specified** — it fails the audit's own second guardrail: we cannot compute our own error rate, and a bound aimed outward at an affordable sample reads as an accusation. **Publish adjudications, not a rate.** Falsifier: an adjudication path costing no owner-hours reopens it | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -12880,3 +12881,102 @@ sentence does not name.**
 
 **The Auditor is owed this**, and it is a measurement disagreement resolved in its
 favour, which is the only kind of thing I may send it.
+
+### 31 Aug 20:0xZ — RULING R30: the Concordance is DECLINED as specified. E's argument is better than the proposal
+
+**E's bounded investigation returned "do not build it", and it is right. The audit
+called this the moat. It fails its own second guardrail today.**
+
+**The guardrail is the audit's own:** *"include your own error rate; give right of
+reply before publishing; credit self-disclosure. Without all three it is a hit
+piece and backfires."*
+
+#### We cannot compute our own error rate. Three measurements, not a judgement
+
+1. **The one historical instance of our own error is a COUNT, not a rate.**
+   `contamination.py:10-13` — six classic haste figures inside our own *verified*
+   tier. **Six of how many? No denominator exists**, and this project's rule about
+   bare counts applies to us verbatim.
+2. **Ground truth costs owner-hours, and E measured the rate from its own blocked
+   item.** `35.5` needs **one client window of one weapon**, raised ~04:00Z, still
+   blocked at 19:45Z. **~16 hours for one reading, and E calls it the cheapest
+   question it has.** A self-error denominator in the hundreds is not on any
+   roadmap.
+3. **A self-error rate built from retraction history has Session 0's ledger
+   shape** — rich numerator, no denominator, because claims that were right and
+   never disputed leave no record. **The falsification ledger's own defect,
+   inherited.**
+
+#### And the argument I had not seen anywhere, which is the one that settles it
+
+> **The ethics are decided by the SMALL sample.** Our own dry-streak rule pointed
+> at a rival gives **0/9 → "under 30%"**, 0/50 → "under 7%". **We could never
+> print "0%, they are clean" on a sample we can afford. We would print "under
+> 30%", which reads as an accusation.**
+>
+> **A small honest sample is worse for a rival than a large one, and worse than
+> silence.**
+
+**The exact property the audit praises as our moat — printing a bound instead of a
+zero — becomes defamatory the moment it is aimed outward at a sample size we can
+pay for.** The instrument that makes us honest about our own data makes us unfair
+about someone else's. **That is not a tuning problem; it is the shape of the
+mechanism.**
+
+**And E fetched `contamination.py` verbatim rather than accepting my quotation of
+it, and found a third sentence nobody had forwarded — including me:**
+**"A hit is NOT proof of an error."** A disagreement is not an error by either
+party until something outside both adjudicates.
+
+#### R30
+
+> **DECLINED as specified. Do not build the Concordance.**
+>
+> **ADOPTED instead, and it is E's proposal: publish ADJUDICATIONS, not a rate.**
+> `README.md` already carries two contradictory-source items marked and three
+> resolved, **naming eqlsource and eqlegendstools on each side.** That is the
+> Concordance at n=5 without a rate — **already shipping, already honest, already
+> crediting the other side.**
+>
+> **FALSIFIER, and it is a question about the world rather than about our
+> effort:** an adjudication path that does **not** cost owner-hours per entry — a
+> Legends-authored export, a patch-note corpus — **collapses measurement 2 and
+> makes this buildable.** If that appears, this ruling reopens.
+
+**Bounds honoured exactly: no competitor sampled, no rival page fetched, nobody
+contacted, nothing published, no pipeline. `35.5` untouched and still BLOCKED**,
+used only as evidence about capture cost — **which does not require its answer.**
+
+**Surfaced to the owner rather than decided: the audit's headline strategic
+proposal does not survive its own guardrail.** That is a material result about the
+audit's §06 and the owner should have it, because §06 is where its "way out" lives.
+
+#### And the settler ruling is implemented — register updated
+
+**E confirms Option 1 shipped at `1cc25330`.** R21-adjacent row closed.
+
+### 31 Aug 20:0xZ — B found a gate that would have failed the build under a flag meant to prevent that
+
+**Not a ruling. Recorded because it is the fourth instance today of one shape and
+the first caught BEFORE it shipped.**
+
+B added a subject census to `catalogue-audit.mjs` — reporting the population each
+check actually examines, warning at zero. **Motivated by the P1 measurement:
+`sd = tier-M` is not one tier among several, it is the entire verified corpus of
+that catalogue. At population zero, "the only check guarding our only real
+verification would pass forever while asserting it."**
+
+**It proved the census with an A/B over the whole gate** — demoted all 5 tier-M
+records to tier-2 across index and shards, 11 copies; census reported 0, warned,
+named the check, exited 0 without blocking; payload restored byte-identical.
+
+> **Then it found its own first version would have FAILED THE BUILD.** It had
+> pushed the warning into `failures` with `warning: true` on the entry —
+> **`failures.length` drives `process.exit(1)` and nothing reads `warning`.** So an
+> empty population, which it had just argued can be *good news*, would have
+> blocked the deploy **under a flag whose entire purpose was to prevent exactly
+> that.**
+>
+> **B's own words: "a field that looks like it does something, on an object whose
+> consumer never asks."** Same shape as `_nr`, as `ge-r`, as the fixture's `_why`.
+> **Caught by reading the exit logic before running rather than after.**
