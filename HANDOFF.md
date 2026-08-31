@@ -11813,7 +11813,8 @@ prefix. This closes the other sixteen.**
 | R25 | **The ruling index must not drift silently.** Adding the row is part of making the ruling; Session 0 computes the tripwire | `a126a39` | **stands** |
 | R26 | **F03: move the hero SVG after the headline, delete nothing.** Its arithmetic is right, its UNIT is wrong — over the wire the SVGs are 39.9% of the blocking path, not 85.4%, and its Phase 0 makes the page 2.23x heavier. Add the search field at +121 brotli | `pending` | **stands** |
 | R27 | **R22 AMENDED.** Four of its figures were wrong and its scope was wrong: the block is 3,470 bytes on **673** pages (items *and* named), `site.css` is 87,350. **And it is not decision-free — a one-page cold arrival gets worse.** A's to weigh | `pending` | **stands; amends R22** |
-| R28 | **TWO PUBLISHED FIGURES ARE WRONG NOW** — `build27.py:103` says ten dungeons where the data holds eleven; `build5.py:144` says six where it is five. Correct at the generator, derived not retyped. **Name the corpora** (survey / catalogue / turn-in items) — nine one-word edits, and it is what makes `gate.py:259` reachable | `pending` | **stands** |
+| R28 | **ONE PUBLISHED FIGURE IS WRONG NOW** (amended by R29) — `build27.py:103` says ten dungeons where the data holds eleven; `build5.py:144` says six where it is five. Correct at the generator, derived not retyped. **Name the corpora** (survey / catalogue / turn-in items) — nine one-word edits, and it is what makes `gate.py:259` reachable | `pending` | **stands** |
+| R29 | **R28 AMENDED.** Defect 1 (ten dungeons vs eleven) stands. Defect 2 does not: the "six" is a real count over item+group — `Fine steel weapons` is the sixth. **A population mismatch, not an invented number.** Acting on R28 as published would have introduced a wrong figure | `pending` | **stands; amends R28** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -12800,3 +12801,82 @@ that can drift.
 **Four things the survey marked NOT ESTABLISHED rather than guessing**, including
 whether `RACES.DEF` is a real race — which decides whether a typed `/ 16` in the
 race tracker is already a third defect. **Left open, not filled in.**
+
+### 31 Aug 20:0xZ — RULING R29: R28's second defect is AMENDED. The "six" is real, and I over-swung
+
+**Cross-checking the Blind Auditor's independent count of our own site against my
+read of the datasets surfaced a discrepancy — 441 unique names against my 435 —
+and resolving it corrected MY ruling, not its measurement.**
+
+```
+unique names, kind==item only        : 435
+unique names, item + group           : 441
+names appearing >1x among items      : 5
+names appearing >1x among item+group : 6
+   Black Tome with Silver Runes · FINE STEEL WEAPONS · Froglok Blood
+   Froglok Meat · Gargoyle Eye · Red Dragon Scales
+entries excluding fragments          : 447
+```
+
+**Every figure the Auditor published is correct for the payload it measured.**
+441 unique names, 6 appearing twice, 447 entries — **it counted across items AND
+groups, which is what the shipped `window.__IX__` contains.** I counted
+`kind == "item"` only and called its number wrong.
+
+#### What this does to R28
+
+**R28 defect 1 STANDS, unchanged** — `build27.py:103` says *ten dungeons* where
+`zones-index.json` holds eleven, and its own arithmetic reaches twelve beside a
+thirteen. Verified twice. **Nothing about that moves.**
+
+> **R28 defect 2 is AMENDED. I ruled that `build5.py:144`'s "six drop in two
+> zones" was simply WRONG and should be five. It is not wrong — it is SIX, over
+> `item + group`, and `Fine steel weapons` is the sixth.**
+>
+> **The survey's diagnosis — that the six was "borrowed from `item_groups: 6`, a
+> different quantity" — was a guess, and I published it as a finding.** The real
+> explanation is duller and worse: **it is a genuine count of a different
+> population from the one the rest of the sentence describes.**
+
+**The defect is real and it is a different defect.** *"435 items, 440 rows: six
+drop in two zones"* states two item-only figures and then a third computed over
+items **and** groups. **A reader takes "six of those 435", and five of them are.**
+
+> **So it is not an invented number. It is an R21 unit collision inside a single
+> sentence** — which makes it evidence FOR R21 rather than a separate hard-rule
+> breach. **Downgraded from "wrong figure" to "population mismatch". Still a
+> defect, still fixed at the generator, and no longer a violation of "never
+> invent a number."**
+
+#### The shape, and it is mine for the fourth time today
+
+**I over-corrected.** The survey said "five, not six"; I verified *five* against
+the item-only population, found agreement, and published. **My check and the
+survey's check shared the same unexamined assumption — which population "six"
+was counting — so agreement between them established nothing.**
+
+> **Two instruments, one blind spot, and the agreement felt like evidence. That
+> is L13's shape exactly, committed again four hours later in a ruling.** The
+> thing that caught it was **a third party measuring the same site by a different
+> route and disagreeing** — the Auditor, from outside, with no access to the
+> datasets I was reading.
+>
+> **This is the strongest argument yet for the blind audit existing at all**, and
+> it is an argument I could not have constructed from inside.
+
+**And the honest position was between the claim and its retraction, again.**
+Original prose: *six*. My retraction: *five*. Truth: **six of a population the
+sentence does not name.**
+
+#### R29
+
+> **R28 stands as amended. `build27.py:103` is a live wrong number and is
+> unchanged. `build5.py:144` is a population mismatch, is evidence for R21, and
+> the fix is to name the unit — not to change the six to a five.**
+>
+> **Anyone acting on R28 as published would have introduced a wrong number into a
+> sentence that did not have one.** That is why this is a ruling and not a
+> footnote.
+
+**The Auditor is owed this**, and it is a measurement disagreement resolved in its
+favour, which is the only kind of thing I may send it.
