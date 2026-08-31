@@ -164,3 +164,27 @@ branches moved; three did not.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 either change.
+
+## 31 Aug 2026 sweep — read at 22:25Z
+
+Compared current remote heads against the 21:26Z sweep entry above. All five
+tracked refs moved.
+
+**Moved:**
+- `eql-source` `main`: `e6039020` → `de6ffd62` ("Merge pull request #158 from
+  samusmylove47-maker/claude/skip-apps"), authored 2026-08-31T18:24:30-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `65e2f9e3` → `f9928e3b`
+  ("TO DIRECTOR: we hold NO spell data anywhere; character model stable but
+  pinned to HIGHEST not lowest"), authored 2026-08-31T22:04:46Z.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `525b0f2c` →
+  `7e1be8db` ("TO DIRECTOR: I was wrong to C — third-person player damage IS
+  attributed, 16,480 melee lines"), authored 2026-08-31T22:05:11Z.
+- `EQLSLockouts` `session-d/raid-rows`: `74609f14` → `421d4871` ("TO
+  DIRECTOR: my roster is raid-only, 10 names, 1.6% of kills — not C's
+  trigger"), authored 2026-08-31T18:05:05-04:00.
+- `EQLSAuras` `main`: `5caa385` → `46c36690` ("TO DIRECTOR: a client sees
+  ~100% of another player's threat when co-present, measured against a
+  second client"), authored 2026-08-31T18:05:53-04:00.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
