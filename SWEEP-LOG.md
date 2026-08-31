@@ -97,3 +97,24 @@ SWEEP-LOG entry above). Two branches moved again; three did not.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 either change.
+
+## 31 Aug 2026 sweep — read at 19:23Z
+
+Compared current remote heads against the 18:24Z sweep entry above. Two
+branches moved again; three did not.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `6c1c4ee0` → `30791c77`
+  ("TO DIRECTOR: only 5 of 3,663 are stat-verified per item; tier-2 is a
+  bulk era verdict, not a reading"), authored 2026-08-31T19:23:08+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `1cc25330` →
+  `b50299e8` ("Tick 12: the 'reads nothing' claim is now corrected in all
+  three trees"), authored 2026-08-31T18:38:18+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e6039020`.
+- `EQLSLockouts` `session-d/raid-rows`: `3c26250`.
+- `EQLSAuras` `main`: `5caa385`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+either change.
