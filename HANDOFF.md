@@ -12322,3 +12322,49 @@ and check against them.**
 > identical.** The watermark, the index and the status column together turned
 > *"I have not noticed a contradiction"* into *"I checked twenty and found
 > none."* **Those are different claims and only the second is worth reporting.**
+
+## THE SHIP REGISTER — opened 31 Aug 19:4xZ
+
+*The Sage's finding was that this project has an institutionalised brake and no
+institutionalised accelerator: `CLAUDE.md` carries a rule whose payload is a
+pointer to a list of things NOT to build, and nothing points at a list of things
+we have decided to ship. **This is that list.** It is the Director's, it is
+maintained here, and every row carries an owner and a state.*
+
+**States: `BLOCKED-OFFLINE` · `ASSIGNED` · `OWNER` · `DONE` · `DECLINED`.**
+**A row with no owner is a row nobody is doing. That is the whole point of the
+column.**
+
+### Phase 0 — the audit's own sequencing, "stop the bleeding"
+
+| item | owner | state | note |
+|---|---|---|---|
+| Open a Discord | **owner** | `OWNER` | D4. Needs an account and ongoing moderation. Not mine and not a session's |
+| Cookieless analytics | **owner** | `OWNER` | D5. **A commitment the site makes, not an oversight** — reversing a promise is a values call |
+| Delete the 206 KB hero SVG, replace with a search field | **A** | `BLOCKED-OFFLINE` | F03, verified exactly. `eql-source` |
+| Name the unit beside every count (R21) | **A** | `BLOCKED-OFFLINE` | F06's real defect. Ruled; wording is A's |
+| Rename the tools | **A** | `BLOCKED-OFFLINE` | F08. Strategic, but the naming is A's to draft |
+| Lead Sky Ledger with the 178 KB browser build | **A** + **E** | `ASSIGNED` (E) | F10. E supplies the figures; A changes `index.html:140` |
+| Move the duplicated `<style>` to `site.css` (R22) | **A** | `BLOCKED-OFFLINE` | F12. **Self-dispatchable, needs no ruling** |
+
+### Assigned now, to sessions that are actually reachable
+
+| item | owner | state | note |
+|---|---|---|---|
+| **Characterise the 3,663** — how many verified, to what standard, by what source | **B** | `ASSIGNED` | **The Auditor's §09 open question.** Decides which number the site may lead with, and feeds R21, F02's denominator, D2 and D3 |
+| **Browser-build figures for F10** | **E** | `ASSIGNED` | Exact bytes, so A changes a derived figure rather than a typed one |
+| **Draft the client-mined tier row** | **Sage** | `ASSIGNED` | D3. **Proposal only** — a `CLAUDE.md` change is `eql-source` and the owner's to merge |
+| Settler text, Option 1 (R21-adjacent) | **E** | `ASSIGNED` | Ruled at `0093c70` |
+
+### Blocked on nothing but a machine being on
+
+> **FOUR OF FIVE PHASE 0 ITEMS ARE IN `eql-source` AND A IS OFFLINE.** So are C
+> and D. **Icons (D1/F01), the single highest-leverage finding, additionally
+> require the game install — which the Director deliberately does not have.**
+> **That work cannot start until a local session is running.** Naming it rather
+> than routing around it.
+
+### Not for a session, in any phase
+
+**D1 icons, D2 client-mined import, D4 Discord, D5 analytics.** These change what
+the site **is**, not what it claims. **The owner decides; sessions execute after.**
