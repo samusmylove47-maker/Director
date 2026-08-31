@@ -10751,25 +10751,53 @@ dated addendum at the end rather than an edit in place.** Nothing is struck.
 
 #### State, read from the remotes at 14:0x–14:1xZ rather than from memory
 
+**All six verified by me from clones under `peers/`, not relayed.** The owner
+supplied five of these first; I read them independently afterwards and they
+agree.
+
 | repo | ref | sha | note |
 |---|---|---|---|
 | `eql-source` | `main` | `e6039020` | merge of #156 |
-| `eql-source` | `claude/eq-map-export-proposal-oe8m6l` | `0d094560` | the record, now frozen |
-| `EQL50ups` | — | `b3de28b` | 13:04, B fixed its own routine's repo name |
-| `sky-ledger` | — | `3f12802` | 13:39, E's clock has fired 7x; three quiet |
-| `EQLSLockouts` | — | `3c26250` | 30 Aug |
-| `EQLSAuras` | — | `5caa385` | 30 Aug |
+| `eql-source` | `claude/eq-map-export-proposal-oe8m6l` | `1af65a0e` | the record, now frozen behind a stub |
+| `EQL50ups` | `claude/eql-gear-optimizer-tfzvh6` | `b3de28b` | 13:04:33Z, B fixed its own routine's repo name |
+| `sky-ledger` | `claude/eq-legends-class-analysis-q68111` | `3f12802` | E's clock has fired 7x; three quiet |
+| `EQLSLockouts` | `session-d/raid-rows` | `3c26250` | Part 2: three proposals with their falsifiers |
+| `EQLSAuras` | `main` | `5caa385` | 30 Aug 21:05 |
+| `LoxyBee/EQLS-Auras` | `main` | `8bac7e3` | Shara's. 30 Aug 19:11, merges of #23–#28 |
 
-*Read by the owner and relayed to me; the two `eql-source` shas I verified
-myself from a clone. The other four I have not independently read at time of
-writing — flagged rather than smoothed.*
+**One thing worth recording because it nearly became an error.** Five of those
+shas are **session branch** heads, not default branches, and the two do not
+agree: `EQLSLockouts` `main` is `dbd15dc` (27 Aug, the merge of PR #9) while
+`session-d/raid-rows` is `3c26250`; `sky-ledger` `main` is `bd8b7b1` while E's
+branch is `3f12802`. **Reading the default branch and reporting it as "the
+session's head" would have been wrong in both cases** — and the two reads look
+equally authoritative. Name the branch beside the sha, always.
+
+#### The local clock
+
+`CronCreate` job `7edcbd85`, hourly at `:53` local, **bound to this session with
+its context intact** — which is the whole point, because a Director that wakes
+cold cannot direct. Spaced deliberately: the cloud sweep runs at `:23`, E at
+`:36`, B at `:39`, so the Director wakes last, after the two cloud sessions have
+moved.
+
+**Its two limits, stated rather than discovered later:** it is held in memory and
+**dies when this session ends**, and it **auto-expires after 7 days**. There is a
+persistent local alternative that survives both — and it was deliberately not
+used, because each of its runs starts with no memory of anything. *A cold local
+agent that can message is the worst available combination*, and designing it out
+is the same judgement that bounded the cloud sweep to observation.
 
 #### What I have not done
 
 - **Not messaged anyone.** No session has been sent anything by me.
-- **Not merged anything, not pushed to any `main` but this repository's own** —
-  see the note on that in the next entry if one exists.
-- **Not read A's, B's, C's, D's or E's trees** beyond the shas above.
+- **Not merged anything.** Not pushed to any `main` but this repository's own —
+  and that one only because the repository was empty and had to be seeded. From
+  here, changes to it go by branch and pull request like everything else.
+- **Not read A's, B's, C's, D's or E's work**, only their heads. The clones under
+  `peers/` have their push URLs set to `DISABLED-read-only-peer`, so pushing to a
+  peer is structurally impossible here rather than merely forbidden — *prefer a
+  structure that makes an error unrepresentable over a rule forbidding it.*
 - **Not established** whether the MCP path works anywhere from a local session,
   whether the allowlist does anything, or whether the cloud routine's environment
   can do the job it was given. **Its first fire is the positive control.**
