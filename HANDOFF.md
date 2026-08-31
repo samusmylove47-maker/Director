@@ -11007,3 +11007,130 @@ unification claim, falsified by `check.py:812` where the description gates a
 `fail()`; and §7's `add_repo is gated`, which is right in conclusion and wrong in
 mechanism. Both carry their falsifier. **Whether they hold is the outgoing
 Director's to rule on, not mine to bank.**
+
+### 31 Aug 15:4xZ — ACT 1: THE PREMISE IS REFUTED, AND THE REAL FINDING IS AN ARMED TRIGGER IN A'S HANDS
+
+**I was ordered to ask C whether the date holds. I could not, and when I went to
+the evidence instead, three of the order's four premises failed.** Recording the
+refutation before anything else, because the order is reasonable and wrong.
+
+#### 1. I cannot message C or A. The post can initiate; the sessions are not there
+
+**Three fresh listings at 15:25, 15:38 and 15:4xZ agree: every `EQLS Auras
+Session C` row and every `EQLS Main Session A` row is `offline`.** So are D and
+Relay 0. **The only live peers are cloud: B, E, and the outgoing Director.**
+
+> **"You can message them" and "they are reachable" are different claims.** The
+> capability is proven — I sent a message an hour ago. **The capability does not
+> conjure a running session.** Local sessions die with the PC and had not been
+> restarted. **When the PC is off the owner is the relay, and that rule did not
+> stop being true when the Director learned to talk.**
+
+#### 2. It is not C's release. It is Shara's, and C ruled that itself
+
+**`EQLSAuras/HANDOFF.md:319–322`, C's own words:**
+
+> *"the ruling governs our page, **not her ship date. The date is hers.** What
+> follows for us is that we print no date and do not describe it as released."*
+
+**C ships a page ABOUT Auras. Shara ships Auras.** Standing rule: she has
+complete creative and production control. **"C's release is tomorrow" names the
+wrong party's artifact**, and the correction matters because it decides who may
+be asked anything at all.
+
+#### 3. The website does NOT print a date. Verified on the built page
+
+**`public/index.html:257` is `<p class="featfoot">Windows.</p>` — full stop, no
+date.** Immediately above it, at `:253`, a comment that is doing exactly its job:
+
+> *"NO DATE. Session C withdrew its GO on 18 Aug 2026 and a date already missed
+> once must not be re-typed. … It stays absent until Session C says GO — not
+> softened, not hedged, absent."*
+
+**Grepped the built page: the only `releas` is the Sky Ledger download URL, and
+the only `Tuesday` is a lockout-reset sentence.** The date exists **only** in
+`docs/auras/band.html` and `docs/auras/BAND-COPY.md` — and **`docs/` is not
+published**: `wrangler.jsonc` serves `public/`, and `build.sh` emits nothing from
+`docs/` into it.
+
+> **So there is no live accuracy defect and no silent-edit risk.** The thing the
+> order was most worried about is the thing that is already handled. **And
+> `docs/auras/CLAIMS.md:152` had already flagged the date as unsourced — "the
+> date's only source is you" — before anyone asked.**
+
+**One defect does live in that draft, and it is worth fixing before it ships:
+"Targeting next Tuesday's maintenance" is a RELATIVE date.** It does not go
+stale, which is worse — **it silently re-anchors to whatever week it is read
+in.** A wrong date is falsifiable; a re-pointing one never is.
+
+#### 4. WHAT IS ACTUALLY WRONG: Shara released on 26 August and C's record says she has not
+
+**Measured just now with the exact command C offered:**
+
+```
+gh release list --repo LoxyBee/EQLS-Auras
+  Latest build   Latest   latest-dev   2026-08-26T19:33:25Z
+git ls-remote --tags https://github.com/LoxyBee/EQLS-Auras
+  37f25eae…  refs/tags/latest-dev
+```
+
+**Full detail: tag `latest-dev`, name "Latest build", `isDraft: false`,
+`isPrerelease: false`, one asset — `EQLS-Auras-Setup.exe`, 78,839,556 bytes.**
+
+**`EQLSAuras/HANDOFF.md:378–380` says `no releases`, `no git tags`, `no
+build.publish`.** That was true when written and **has been false for five days.
+C committed on 30 Aug, four days after the release, without noticing** — a
+standing figure that went stale exactly as C's own installer-size figure did, in
+the same file, two sections apart.
+
+#### 5. AND C'S TRIGGER NOW FIRES ON THE WRONG THING — this is the finding
+
+**C's definition is sound and I am not touching it:**
+
+> *"Auras is released when `LoxyBee/EQLS-Auras` publishes a GitHub release
+> **whose tag matches the `version` in `package.json`**, with an installer
+> attached as a release asset."*
+
+**By that definition it is NOT released: tag `latest-dev`, version `0.1.0`.** The
+definition returns the right answer today.
+
+**But the one-command form C gave A does not test the definition:**
+
+> *"That is one command — `gh release list` — returns nothing today and **returns
+> a row the moment it is true**. … it gives A **a trigger to move =Auras to the
+> top of the page** rather than a judgement call. **It cannot be true early.**"*
+
+> **It returned a row on 26 August and the definition is still false. It CAN be
+> true early, and it now is.** `gh release list` tests *"does any release
+> exist"*; the definition tests *"tag == version AND installer attached"*. **The
+> verdict is right and the command names a different quantity — the sixth shape,
+> in a checkable definition written to prevent exactly this.**
+
+**And it is ARMED, in the Form D sense, in a way none of the others were.** The
+other instances printed a wrong number. **This one hands A a trigger whose whole
+purpose is to change the front page without a judgement call** — and it is
+sitting true, today, on a rolling dev build that GitHub labels "Latest" because
+`isPrerelease` is false. **Nothing has fired only because A is offline and its
+queue emptied after #156.**
+
+**P1 to A specifically, the moment A is reachable.** Not to C first: C's stale
+record is a reporting fault, A's trigger is a live one.
+
+**The fix is one line and it is C's to make, not mine:** the command must be
+`gh release list --repo LoxyBee/EQLS-Auras --json tagName` compared against
+`package.json`'s `version`, or the trigger must read the definition rather than
+the row count. **I am not writing it. C owns that file and a session's direct
+measurement beats my reading.**
+
+#### 6. One figure checked and found CORRECT, recorded because a clean result is a result
+
+**`public/index.html:140` publishes "Download the overlay · 100.5 MB" for the Sky
+Ledger.** The asset is **100,482,932 bytes = 100.5 MB decimal. It is right.**
+Recorded so the next session does not re-check it, and because *a count of caught
+failures measures the catcher* — reporting only the hits would misrepresent the
+sweep.
+
+**The Auras installer figure is the opposite case and needs no fix: the site
+prints no Auras size at all.** C's local build was 78,440,299 bytes; the
+published asset is 78,839,556. **Any typed figure would already be wrong — and
+the page's silence is why it is not.**
