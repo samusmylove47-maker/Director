@@ -11821,6 +11821,8 @@ prefix. This closes the other sixteen.**
 | R33 | **`alsoDies`→completion keys STAYS INERT.** It can only fail toward "the raid is done", and tonight's product exists to tell a player what they can still do. Arming it needs a matched pair first | `pending` | **stands** |
 | R34 | **The "=" branding is IDENTITY, not description.** It does not solve the stranger test and was never going to — the descriptive line beside each tool name does. Both ship | `pending` | **stands** |
 | R35 | **The ranked list must be SPENDABLE, not merely ordered** — a weekly cap of three makes twelve-in-order the wrong answer. **Amends R32: the token cap decides actionability, not the lockout grid.** `completed` stays actionable; a locked kill still pays a guaranteed drop | `pending` | **stands; amends R32** |
+| R36 | **A relayed interface description is not the interface.** Name repo, branch, file and lines; never paraphrase a shape. E built to my description of D's contract and it was wrong three ways — the reason field would have shipped null on the happy path with a green selftest. **Third relay error today** | `pending` | **stands** |
+| R37 | **Difficulty is a property of the ENCOUNTER, not the item.** B supplies raid via `src.z`/`src.m`; E passes the difficulty the character is playing at; D answers for that pairing. Nobody derives an item difficulty — items drop across a range | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13154,3 +13156,105 @@ resurface as a concrete problem; if it does not, it was never a clause."*
 **A session retiring its own long-standing request on the grounds that it can no
 longer justify it.** Recorded as a practice, and the failure that bought it is
 mine: four unanswered asks by this post.
+
+### 31 Aug 21:0xZ — RULING R36 & R37: a relayed interface is not the interface; and difficulty is not a property of an item
+
+#### R36 — E built to MY DESCRIPTION of D's interface, and it was wrong three ways
+
+**E read D's actual source at `lockoutCore.js:2520-2650` and found what I relayed
+was wrong:**
+
+| | I relayed | D actually ships |
+|---|---|---|
+| answers | *"five cell states, `completed` and `not_looked` among them"* | **THREE answers only** — `yes / no / unknown`. D's own test asserts *"three-way only"* |
+| `completed` | *"arrives for you to treat as actionable"* | a **CELL STATE**. D collapses it to `yes` itself, citing the 28 Jul patch note |
+| reason field | *nothing — I never named it* | **`because`, not `why`** |
+
+> **The third would have shipped silently.** E's ranker read `r.get("why")`, which
+> returns **None** against D's real object — **so every row would have carried a
+> null explanation, on the happy path, with the selftest green, because E's stub
+> oracle used the field name I had given it.**
+>
+> **A tool that shows a player a recommendation and cannot say why it is or is not
+> actionable.** E: *"I would not have caught it from behaviour, because the answers
+> still matched. It surfaced only from reading the source."*
+
+**E named the shape, and it is mine at one remove:** *"That is the fault the
+Director was corrected on at 17:1x — running someone else's command is
+reproduction, not verification — and I committed the same one at one remove: I
+built to a DESCRIBED interface and called it building to the interface."*
+
+> **RULING R36: A RELAYED INTERFACE DESCRIPTION IS NOT THE INTERFACE. When I tell
+> one session about another's contract I name the REPO, BRANCH, FILE AND LINES and
+> stop. I do not paraphrase a shape.**
+>
+> **Third relay error today** — the Auditor's resource permission, D's offline
+> state, now D's contract. **Every one was me passing a description where a
+> pointer would have done.** A pointer can be read and disagreed with; **a
+> paraphrase carries my errors invisibly into someone else's code.**
+
+**And E found a gain I would have flattened:** D returns `unknownKind` — one of
+`coverage | reset-hour | raid-not-in-roster`. **Three different things to tell a
+player.** *Coverage* means more log would fix it and the player can act.
+*Reset-hour* is a measurement nobody has taken and they cannot. *Raid-not-in-
+roster* means unmeasured, not absent.
+
+**E also stopped duplicating the token cap across the seam** — it now reads
+`gates.tokenCap.cap` from D with `cap_source` naming which was used. *"Duplicating
+a constant across a seam is how the two drift, and I had duplicated it within an
+hour of being handed it."*
+
+#### R37 — difficulty is not a property of an item, and asking B for one is asking for a quantity that does not exist
+
+**Measured in B's shipped `web/public/bis/bis-catalog.json`:**
+
+```
+src shapes: {m,z} 1034 · {m,q,z} 685 · {c} 665 · {q} 634 · null 207 · {v} 78 · {m,v,z} 77 · {c,m,z} 76
+3663 − 207 null = 3456 = the manifest's withObtainability, exact
+difficulty / D0–D4 / Awakened / Adaptive / Fused / Refined: ZERO occurrences
+```
+
+**B supplies mob (`m`) and zone (`z`). It has no difficulty — and it should not.**
+
+> `CLAUDE.md` §2: the difficulty is **the lowest tier that drops, not the
+> commonest**, and *"in 1,742 upgradeable drops carrying an independent
+> difficulty, not one landed below the zone's tier"* — **an item drops across a
+> RANGE of difficulties.**
+>
+> **RULING R37: difficulty is a property of the ENCOUNTER INSTANCE, and it comes
+> from the PLAYER'S context — what they are running — never from the item.** B
+> supplies `raid` via `src.z`/`src.m`; **E passes the difficulty the character is
+> playing at**; D answers for that pairing. **Nobody derives an item difficulty,
+> because there is no such quantity.**
+
+#### A correction I nearly published, caught only by checking twice
+
+**My first pass reported "zero zone, zero boss, zero source — the seam is
+broken."** **Wrong.** I grepped for keys named `zone`, `boss`, `source`; the field
+is `src` with sub-keys `m`/`z`/`q`.
+
+> **Had I sent it, I would have told B its shipped artifact was empty when it is
+> not, on deadline night.** Same shape as everything else today: **an instrument
+> aimed at the wrong surface, returning a confident zero.**
+
+#### B nearly built a duplicate and checked the CODE rather than the doc comment
+
+> *"`rankSlotItems` already ranks every position by gain, `activeContext + canUse`
+> already gates trio eligibility, `acquisitionLines()` at `:702` already prints
+> zones/drops/quests, and the withheld band already refuses to rank unmeasured
+> items. **The player-facing answer substantially exists.**"*
+
+**The gap was never the ranking. It was that E runs a separate bundle in a separate
+repo and could not import a TypeScript module.** That is what shipped:
+`eqls-50upgrades.656d77f6.js` (13,248 B) and a merged `bis-catalog.json`, built to
+E's own bundle convention because *"a second convention is a second thing to go
+wrong."*
+
+**And the manifest carries its own caveat, unprompted:** *"Stat values are
+overwhelmingly wiki-derived. Every record carries `sd`; only 5 of 3663 are
+tier-M."*
+
+> **FIVE OF 3,663 ARE TIER-M.** That figure belongs in front of the owner before
+> anything publishes a ranked list built on it, and it is the honest counterpart
+> to the coverage argument — **our advantage over a rival's 9,360 records was
+> never that our numbers are measured. It is that we say which ones are.**
