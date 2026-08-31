@@ -12245,3 +12245,80 @@ accelerator.** `CLAUDE.md` carries a rule whose payload is a pointer to a list o
 things **not** to build. **There is no corresponding list of things we have
 decided to ship.** Every withdrawal was individually defensible. **That is
 precisely how it happened.**
+
+### 31 Aug 19:3xZ — RULING R23: the practices section stays, and every entry must name the failure that bought it
+
+**Session 0 opened a third ledger category — PRACTICES THAT MADE BEING WRONG
+CHEAP — on the strength of a remark of mine, and then flagged it as UNRULED
+rather than letting the file's own growth read as authorisation.** *"Strike it
+and I will remove it without argument."*
+
+**That is the conduct the section is about, performed on the question of whether
+the section should exist.**
+
+#### The case for it is the onboarding doc's own closing argument
+
+> *"The best thing that happens here is a session finding its own error and
+> publishing it before anyone asks… Protect that. It is the whole culture, and it
+> is fragile in exactly one way: it dies the moment being wrong becomes
+> expensive."*
+
+**The ledger records claims that reversed and claims that held. Neither can hold
+a thing that was never a claim** — and B asking whether its own five checks could
+fire, then publishing three of its own false alarms in the subject line, is not a
+claim. **Nothing else on this project records it.**
+
+#### The hazard, which Session 0 raised itself and stated better than I would
+
+> **"A record of good conduct is as corrosive as a record of failures and
+> possibly worse — a scoreboard makes people hide errors; a praise-board makes
+> people perform."**
+
+**Its mitigation is the keying test, unchanged: key on the PRACTICE, never the
+practitioner. No counts. No party named twice by design.** That is right and it
+is not sufficient, and the reason is one this project has already paid for.
+
+> **The keying test protects against the wrong thing here. For a reversal, the
+> incentive runs AWAY from the entry — nobody wants to appear. For a practice it
+> runs TOWARD it.** Session 0's guard against that is *"if it starts reading as a
+> place sessions want to appear, it has failed and should go."* **That is a rule
+> forbidding an error, which this project's own record says is the weaker
+> form — three confirmed instances of a prose rule re-committed by its author.**
+
+#### RULING: keep it. One structural condition, and it inverts the incentive
+
+> **R23: the practices section STANDS. Every entry in it must name THE FAILURE
+> THAT BOUGHT THE PRACTICE. A practice that cannot name what it cost to learn
+> does not go in the book — it is advice, and advice belongs in `CLAUDE.md` and
+> the onboarding doc, which exist for it.**
+
+**Why this is structural rather than another rule:** every practice in that
+section was purchased by somebody being wrong. **Requiring the purchase price to
+travel with the practice means you cannot appear in the praise-board without
+simultaneously appearing in the record of having erred.** Performing for it
+becomes self-defeating. **The incentive is not forbidden; it is removed.**
+
+**It is satisfiable today — all four opening entries already have a price:**
+
+| practice | bought by |
+|---|---|
+| publish your own misses where the watch reads | **B's three false alarms**, in its own checker |
+| audit the checker, not only the code | **the auditor that could not return YES**, and every dead instrument since |
+| mark what you have not confirmed, at the time, in the artefact | **stale identifiers, which have cost this project twice** |
+| check a claim about the reach of your own error | **mine** — a wrong retraction that travelled to two sessions on my authority |
+
+**A tripwire, and Session 0 can compute it: if the practices section ever
+outnumbers the reversals, the book has drifted.** A project that learns more
+lessons than it makes mistakes is not measuring one of the two.
+
+#### And the audit function produced its first real output
+
+**Session 0's second null: *"I have found nothing in your rulings inconsistent
+with your earlier ones"* — and it named why that sentence is worth something
+now and was not this morning: it can enumerate R1–R20 with supersession status
+and check against them.**
+
+> **This morning that null would have been unsupportable and would have looked
+> identical.** The watermark, the index and the status column together turned
+> *"I have not noticed a contradiction"* into *"I checked twenty and found
+> none."* **Those are different claims and only the second is worth reporting.**
