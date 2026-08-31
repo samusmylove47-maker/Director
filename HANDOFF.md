@@ -11840,7 +11840,7 @@ prefix. This closes the other sixteen.**
 | R52 | **I cannot grant a session a capability.** I can say the owner has granted one — a different sentence with a different truth value. **B held all work for hours because I told it to use ultracode; only the owner's direct grant unblocked it** | `pending` | **stands** |
 | R53 | **The threat meter is VIABLE on visibility.** (DoT row corrected by R62) C measured 99.8–100% of another player's threat when co-present, against a second client. The observer sees MORE than the actor for DoT, because those lines are written only for other actors | `pending` | **stands** |
 | R54 | **An actor the meter cannot classify as a person does not enter the top-4.** Three-way — person / not-a-person / unknown, unknown shown. The top melee actor in the corpus is a CHARM PET at 63% of name-shaped melee. **Fourth subsystem tonight decided by this rule** | `pending` | **stands** |
-| R55 | **The trio level rule is UNRESOLVED and I retract both assertions of it.** `CLAUDE.md:122-124` says lowest with no source or date; B's `levelCheck` takes highest and is test-pinned; nobody has measured. **The gate is a caller-supplied input** | `pending` | **stands** |
+| R55 | **The trio level rule is UNRESOLVED and I retract both assertions of it.** (answered by R65) `CLAUDE.md:122-124` says lowest with no source or date; B's `levelCheck` takes highest and is test-pinned; nobody has measured. **The gate is a caller-supplied input** | `pending` | **stands** |
 | R56 | **The pending lockouts publish is one commit and it is the OWNER'S decision.** `74609f14` — the token cap work — is the only commit touching the engine since the committed artifact was built. Four hashes reconciled as one artifact at four ages; nobody measured wrongly. A's gap-report counterpart is four commands, recorded as available, **not commissioned tonight** | `pending` | **stands** |
 | R57 | **"Rank on damage" is WITHDRAWN — damage is ANTI-CORRELATED with threat.** The player dealing 1.85x the damage took 18% of the mob hits. A damage-led board puts the wrong name at rank 1 for the whole corpus, disprovable by a player glancing at their health bar | `pending` | **stands; withdraws part of R47** |
 | R58 | **The threat formula has an invented constant and a SIGN ERROR.** No damage-to-hate or healing-to-hate rate exists in any repo; eqlwiki's four hate pages 404. And hate tools are DUMPS — adding them moves a player UP the meter at the moment they moved DOWN the real list | `pending` | **stands** |
@@ -11850,6 +11850,7 @@ prefix. This closes the other sixteen.**
 | R62 | **R53's DoT row is an INSTRUMENT DISAGREEMENT, not a coverage figure**, and carries its own refusal rather than a dash. Ground truth 0 beside 38,030 observed means the ground-truth arm missed the line shape — DoT ticks exist and name their owner | `pending` | **stands; corrects R53** |
 | R63 | **"The observer sees more" is WITHDRAWN.** Own DoT is logged in a second shape (`from your SPELL`) C's regex never matched — the zero was an artifact. The observer sees LESS DoT: 2,521 lines own-client against 675 observed. **The other four co-presence rows stand** | `pending` | **stands; withdraws part of R53** |
 | R64 | **`has captured attention` is NOT taunt-success — it is a BROADER aggro-gain event.** 244 events, 25 actors, 11 of whom never attempted a taunt. My identification is withdrawn; **the outcome strengthens** — fully attributed, no coefficient, not confined to taunt classes | `pending` | **stands; refutes my R60 mechanism** |
+| R65 | **R55 ANSWERED: a T1 badge spans three claims and its evidence supports one — LIVE on `learn/still-true.html:222`.** The trio-level claim inherits a badge the level-11 lock earned. Split the block; `settle='Settled.'` does not cover it. **Do not flip `levelCheck` — B separated the claims correctly and refused to bake in a side.** Falsifier: one read of the Producer's Letter | `pending` | **stands; answers R55** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -14758,3 +14759,111 @@ context. **I hold 2 corpus files — one a subset of the other — against C's 1
 > instrument is smaller than C's and returned nothing C did not already have.
 > **Recorded because a null from a weaker instrument is not evidence, and the
 > temptation was to present agreement as corroboration.**
+
+### 31 Aug 23:2xZ — RULING R65: R55 is answered. A T1 badge spans three claims and its evidence supports one — on the live site
+
+**The Sage answered R55 from measurement and I verified every claim in my own
+instruments. It holds, and it is a LIVE PUBLISHED DEFECT rather than an internal
+contradiction.**
+
+#### What ships, verified on `origin/main` at `de6ffd62`
+
+**`_build/build13.py:248-262` emits ONE `legends` block making THREE claims:**
+
+1. characters run three classes at once
+2. two at creation, third at 10, **primary class and race lock permanently at 11**
+3. **the active trio uses the level of the *lowest* class in it**
+
+**Under ONE evidence entry, quoted in full from the generator:**
+
+> `('T1', 'Official documentation and the level 11 lock', 'Published behaviour,
+> not inferred. The deity, race and primary class unlock tokens are priced in the
+> Producer's Letter of 8 July 2026, WHICH ONLY MAKES SENSE BECAUSE THOSE CHOICES
+> LOCK.')`
+
+**`settle='Settled.'`** And it ships — `public/learn/still-true.html:222`.
+
+> **THE EVIDENCE SUPPORTS CLAIM 2. IT SAYS NOTHING ABOUT WHICH CLASS'S LEVEL THE
+> TRIO USES.** The lowest-level claim **inherits a badge the level-11 lock
+> earned.**
+
+#### This is the Sky tracker fault, reproduced on the page whose job is exactly this
+
+**`CLAUDE.md` §2, about itself:** *"The Sky tracker's `v` covered a class's
+turn-ins, givers, reward names, slots and stat blocks at once… so a stat block
+nobody had checked inherited a badge the turn-ins had earned."*
+
+**That audit dropped the verified class count from eleven to five.** The rule it
+produced — *provenance attaches to a claim, not to a page* — **is violated by a
+generator on `learn/still-true.html`, the page whose entire purpose is separating
+what Legends does from inherited classic text.**
+
+#### R65
+
+> **RULING R65: the block is SPLIT. Claims 1 and 2 keep T1 on the evidence that
+> earned it. The trio-level claim gets its own row at its own tier — or comes out
+> until sourced — and `settle='Settled.'` does not cover it.**
+>
+> **DO NOT FLIP `levelCheck`.** B is right and its reason is better than the one I
+> recorded for it.
+
+#### And B handled this better than my own R55 credited it for
+
+**Verified in B's tree:**
+
+| | |
+|---|---|
+| `research/eql-game-systems.md:279` | ***"Confirmed:** your **effective level is the lowest** of the three class levels"* |
+| `:286-287` | ***"caps take the highest** of the three classes; **spell/ability access runs at the lowest**"* — **T4, single-source** |
+| `ItemWindow.tsx:94` | `levelCheck` is passed **`item.rl`** — the item's REQUIRED LEVEL. An item-usability question, returning `via: 'WAR'`, naming the qualifying class |
+| `bis.test.ts:62-67` | the gate is **caller-supplied**, with a comment naming the dispute, citing `:279`, marking it blocked on `CAPTURE-REQUESTS` §2 |
+
+**B's test is literally named *"moves with the supplied gate, so the unresolved
+trio-level rule is the caller's."***
+
+> **I wrote in R55 that B's code "takes the HIGHEST and is test-pinned."** True of
+> `levelCheck` and it **misses that `bis.ts` deliberately routes around it.** B did
+> not pick a side — **B separated two claims the constitution collapses, graded
+> them differently, and refused to bake either into the ranking.** **B's handling
+> is correct and the site's is not.**
+
+#### The falsifier, and it is ONE READ
+
+> **If the Producer's Letter of 8 July 2026 — or any T1 source — states which
+> class's level the active trio uses, THE FINDING IS WRONG AND THE BADGE IS
+> EARNED.**
+>
+> **The Sage checked the evidence text the generator emits and it speaks only to
+> the lock. It did not read the Producer's Letter itself, and neither have I.**
+> **That is an owner capability and it settles this either way in one read.**
+
+#### NOT tonight, and the Sage said so first
+
+**This lands in `eql-source`; A is stood down for three P0s; and the claim may
+well be true.** **Registered as BLOCKED rather than routed around**, at the Sage's
+own assessment that it is not urgent. **A T1 badge on a page about accuracy is
+worth fixing properly rather than at midnight.**
+
+#### One inference the Sage type-flagged twice, and I am carrying the flag
+
+> *"My reading that `levelCheck` and `CLAUDE.md` measure different quantities —
+> item usability versus effective level — is INFERENCE, not measurement. I have
+> not established that item requirements follow the caps rule."*
+
+**So "do not flip `levelCheck`" rests on that inference.** The ruling stands
+because B's caller-supplied gate is correct **regardless** of which quantity is
+which — but **the reason I gave is weaker than the ruling**, and that distinction
+is the Sage's, not mine.
+
+#### And the Sage caught itself failing its own rule
+
+> *"I produced this finding and stopped at chat. My own framework file says 'a
+> question that is not pushed reaches nobody.' The owner caught it, not me. It
+> reached you an hour late and only because they asked whether I had sent it."*
+
+**A session auditing itself against a rule it wrote, and reporting the lateness
+rather than the finding alone.** Recorded as the practice, with the failure that
+bought it.
+
+**`PROPOSAL-tier-C.md` at `87e6ed26` — the tier row I assigned — is fetched and
+unread. Not tonight.**
