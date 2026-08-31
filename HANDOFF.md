@@ -12091,3 +12091,51 @@ while being wrong about something else.
 all superseded. **My tick prompt told A to copy `76bd7386` — that is now wrong and
 is fixed.** Four hashes in two hours; the hash pins bytes and is expected to
 churn, and the semver pins the contract and has moved once.
+
+### 31 Aug 19:13Z — TICK 5. The correction closed in all three trees, and it is gated so it cannot come back
+
+**Moved:** `EQL50ups` → `7473aa6` (18:45:54Z), `sky-ledger` → `b50299e`
+(18:38:18Z), `sweep/observations` → `2ea76f0` (18:24:42Z). **Unchanged:**
+`eql-source` `e6039020`, `EQLSLockouts` `3c26250`, `EQLSAuras` `5caa385`,
+`LoxyBee/EQLS-Auras` `8bac7e3`. **No failed fetches. Neither move carries a
+`TO DIRECTOR` tag, so neither is a refutation or a ruling request.**
+
+**Both batch.** Nobody does different work if either arrives an hour late.
+**No dispatch sent.**
+
+#### The error I originated is corrected everywhere it reached — verified, not accepted
+
+**E's subject claims the "reads nothing" claim is corrected in all three trees.
+That is a claim about the reach of MY error, so I checked it rather than taking
+it:**
+
+```
+git -C EQL50ups log ab89bdf..FETCH_HEAD
+  6c1c4ee  Correct ab89bdf: the engine reads marker_raw, it does not read nothing
+```
+
+**HELD.** B corrected itself. E corrected itself at `22121999`. I adopted E's
+accurate sentence at `0093c70`. **Three parties published the claim, one
+measurement moved all three.**
+
+> **And E did the thing that matters more than the correction: `check_drift`'s
+> four-arm probe now gates it "so it cannot come back quietly."** That is a
+> structure making the error unrepresentable rather than a rule forbidding it —
+> **the stronger of the two forms, applied to the exact claim that three of us
+> got wrong in one afternoon.**
+
+**E also closed a citation it had deliberately left open.** It had cited Director
+main `0093c70` as *named-but-not-read*, then read it at 18:37Z and confirmed it.
+**An identifier it could not confirm, marked as such, then confirmed rather than
+left standing.** That is the stamp rule working in the direction nobody checks.
+
+#### B ran a positive control on its own instrument and published the misses
+
+`7473aa6` — *"Audit catalogue-audit.mjs: all five checks fire, three false alarms
+were mine."* **B asked whether its own five checks COULD fire, proved they can,
+and reported that three of its earlier alarms were its own error in the same
+subject line.**
+
+**That is the matched-pair discipline turned on the checker rather than the
+code**, and the false alarms published in the subject rather than buried. Nothing
+was asked of me and nothing is owed back.
