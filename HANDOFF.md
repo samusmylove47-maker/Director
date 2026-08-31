@@ -12139,3 +12139,109 @@ subject line.**
 **That is the matched-pair discipline turned on the checker rather than the
 code**, and the false alarms published in the subject rather than buried. Nothing
 was asked of me and nothing is owed back.
+
+### 31 Aug 19:2xZ — RULING: two audit findings were mine to act on and I deferred them. Correcting that
+
+**The owner asked whether I am addressing the audit. Partly, and the gap is
+mine.** I adjudicated which findings are true at `af082dc` and then spent two
+ticks on a correction chain. **Adjudication is not action, and I filed two things
+under "the owner's decision" that CLAUDE.md §1 puts with me.**
+
+> **The test I should have applied: does this change WHAT THE SITE CLAIMS, or does
+> it change WHAT THE SITE IS?** The first is mine — *"which claims enter the site,
+> how each is sourced, what is flagged uncertain."* The second is the owner's.
+> **I applied it to the settler text an hour ago and failed to apply it to the
+> audit.**
+
+#### R21 — RULING: the homepage must name the unit beside a count
+
+**F06's real defect, once "cannot count" is struck: `index.html:88` publishes
+`435 items indexed` and `:103` publishes `It holds 3,663 items`, and NOTHING ON
+THE PAGE SAYS THEY COUNT DIFFERENT THINGS.**
+
+**Both are correctly derived. Neither is typed. That was never the problem.** The
+problem is that a reader has no way to know one is *surveyed dungeon items* and
+the other is *the planner's catalogue* — and the Auditor, reading blind, concluded
+we cannot count. **A stranger reached the worst available reading from the
+published surface. That is the definition of a claim that is not carrying its
+own scope.**
+
+> **RULING: where the site publishes two counts of two different corpora, each
+> count names its unit at the point of use.** Not a footnote, not an explainer
+> page — beside the number.
+>
+> **This is CLAUDE.md's own rule applied one level up.** §2 already says a
+> provenance flag must attach to a claim rather than a page, because *"a boolean
+> per page will always lie eventually."* **A bare count has the same defect: it
+> inherits whatever denominator the reader supplies.** The Sky audit dropped the
+> verified class count from eleven to five by making the flag derive from the
+> claim. This is the same operation on the counter.
+
+**BOUNDED:** wording is A's, in A's repository, and the figures stay derived —
+this changes the label beside a number, never the number. **It does not decide
+whether the Index should expose more items.** That is scope and it is the owner's.
+
+**FALSIFIER, so this can be killed:** if a reader survey or a rewrite shows the
+unqualified counts are not misread, strike it. **The evidence for it today is
+n=1 — one blind reader, who misread it.** One is a sample, not a rate. **Recorded
+at the width of its evidence.**
+
+#### R22 — RULING: F12 is fair game for self-dispatch. It needs no ruling and never did
+
+**441 byte-identical 3,471-byte `<style>` blocks, in addition to a cached
+`site.css`, on pages served `max-age=0`. 1,530,711 duplicated bytes.**
+
+> **RULING: this is a MEASUREMENT with a falsifier, in A's own repository, and the
+> standing self-dispatch rule already permits it. A does not need me.** Measure
+> the bytes before, move the block to `site.css`, measure after, and prove the
+> pages still render identically with `toolrender.js` — *"toolsmoke says the pane
+> is full; only this says it is full of the same thing."*
+
+**I am recording it as permitted rather than ordering it**, because A's queue is
+A's and the rule is explicit that a session takes the top item of its own list.
+**But it should not sit unclaimed because everyone assumed the audit's items were
+the owner's.** They are not, uniformly. **This one is the cheapest fix on the list
+and the only one with no design decision attached** — destination file exists,
+already caches, content already identical.
+
+#### WHAT IS GENUINELY THE OWNER'S, PUT AS DECISIONS RATHER THAN NARRATIVE
+
+**Each of these changes what the site IS, not what it claims. None is mine.**
+
+| # | decision | what it costs | what it forecloses |
+|---|---|---|---|
+| **D1** | **Ship icons.** F01, the highest-leverage finding | **NOT one build step.** `palette.py` reads `.s3d` and extracts DXT1 **endpoint colours only** — its own docstring says *"not a decode"*. Block decompression to pixels, icon identification, naming and WebP encoding do not exist | nothing. Additive |
+| **D2** | **Import client-mined tables.** The audit's central strategic claim | needs **D3 first**, or the rows have no honest tier | the "small and careful" position, permanently |
+| **D3** | **Add a tier row between M and 1 for client-mined data** | a CLAUDE.md change and a re-grade | nothing — **and the hole exists whether or not D2 happens** |
+| **D4** | **Open a Discord** | ongoing moderation, a place we must staff | the "no room of our own" position |
+| **D5** | **Reverse the no-analytics position** | it is a **promise the site currently makes**, not an oversight it committed | a stated commitment |
+
+**D3 IS SEPARABLE AND I WANT THAT ON THE RECORD.** The Sage found it: **our tiers
+run M, 1, 2, 3, 4, 5 and there is no row for client-mined data.** Filing it at
+Tier 4 — *community aggregators* — would rank our own reads of the game's files
+**below a competitor's spreadsheet.**
+
+**We already treat it higher and never wrote it down.** `geometry.py` read the
+meshes and **used them to falsify six published Najena coordinates.** *We let mined
+data overturn a published claim.* **That is tier-1 behaviour, and the hierarchy
+does not describe our own practice.** The badge must carry its one real weakness:
+**stale on the next patch.**
+
+**D5 is miscategorised in the audit and I am flagging it rather than passing it
+on.** *"You are flying blind"* is true and verified — zero external script srcs
+across 701 pages. **But no-analytics is a commitment, not a defect**, and the
+audit's kill list frames it as an oversight. **Reversing a promise is a values
+decision and belongs to the owner in a way the other four do not.**
+
+#### The sentence I am not softening, and the four corrections do not touch it
+
+> *"Almost every criticism in it is a criticism of restraint, and restraint is the
+> reason the site is good… collectively they have produced a site that is more
+> careful than any competitor and less useful than all of them."*
+
+**And the Sage's finding, which is not in the audit and is the more actionable
+form of it: this project has an institutionalised brake and no institutionalised
+accelerator.** `CLAUDE.md` carries a rule whose payload is a pointer to a list of
+things **not** to build. **There is no corresponding list of things we have
+decided to ship.** Every withdrawal was individually defensible. **That is
+precisely how it happened.**
