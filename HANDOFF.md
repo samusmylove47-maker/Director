@@ -11845,9 +11845,11 @@ prefix. This closes the other sixteen.**
 | R57 | **"Rank on damage" is WITHDRAWN — damage is ANTI-CORRELATED with threat.** The player dealing 1.85x the damage took 18% of the mob hits. A damage-led board puts the wrong name at rank 1 for the whole corpus, disprovable by a player glancing at their health bar | `pending` | **stands; withdraws part of R47** |
 | R58 | **The threat formula has an invented constant and a SIGN ERROR.** No damage-to-hate or healing-to-hate rate exists in any repo; eqlwiki's four hate pages 404. And hate tools are DUMPS — adding them moves a player UP the meter at the moment they moved DOWN the real list | `pending` | **stands** |
 | R59 | **Ship an AGGRO BOARD, not a threat meter.** Who the mob is swinging at: 7,665 observations, 58 mobs, 483 switch events, two regexes, no coefficient. Plus the one clean signal — `<Actor> has captured <Mob>'s attention!`, 38 lines, previously filed as a refusal. **C writes its own parser; E's regexes are anchored on the literal `You `** | `pending` | **stands** |
-| R60 | **Successful taunts ARE logged — taunt is not discarded.** The line is `<Actor> has captured <Mob>'s attention!` and contains no `taunt`; a failed taunt and a landing retry sit six seconds apart on the same boss. **It is the only hate event naming both actor and mob that needs no coefficient.** Grepping `taunt` publishes a 100% failure rate that is exactly inverted | `pending` | **stands** |
+| R60 | **The capture line is not discarded.** (mechanism refuted by R64 — it is not taunt) The line is `<Actor> has captured <Mob>'s attention!` and contains no `taunt`; a failed taunt and a landing retry sit six seconds apart on the same boss. **It is the only hate event naming both actor and mob that needs no coefficient.** Grepping `taunt` publishes a 100% failure rate that is exactly inverted | `pending` | **stands** |
 | R61 | **A name collision yields `unknown`, never `not-a-person`**, unless a second discriminator agrees. C caught it before shipping: the catalogue check runs first, so a real player colliding with a mob name vanishes from the board with no signal. Join classifies 99% of activity | `pending` | **stands** |
 | R62 | **R53's DoT row is an INSTRUMENT DISAGREEMENT, not a coverage figure**, and carries its own refusal rather than a dash. Ground truth 0 beside 38,030 observed means the ground-truth arm missed the line shape — DoT ticks exist and name their owner | `pending` | **stands; corrects R53** |
+| R63 | **"The observer sees more" is WITHDRAWN.** Own DoT is logged in a second shape (`from your SPELL`) C's regex never matched — the zero was an artifact. The observer sees LESS DoT: 2,521 lines own-client against 675 observed. **The other four co-presence rows stand** | `pending` | **stands; withdraws part of R53** |
+| R64 | **`has captured attention` is NOT taunt-success — it is a BROADER aggro-gain event.** 244 events, 25 actors, 11 of whom never attempted a taunt. My identification is withdrawn; **the outcome strengthens** — fully attributed, no coefficient, not confined to taunt classes | `pending` | **stands; refutes my R60 mechanism** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -14673,3 +14675,86 @@ every message rather than letting it pass silently, for hours, and then closed i
 ultracode and each time absorbed the cost rather than passing it up. The ruling
 makes that cost legible instead of looking like reluctance, and I would rather have
 it written down than have been right quietly."*
+
+### 31 Aug 23:1xZ — RULING R63 & R64: "the observer sees more" is WITHDRAWN, and my taunt identification is refuted by better evidence
+
+**C published a retraction that corrects itself and me, and answers a question I
+put to it with 13 logs against my one.**
+
+#### R63 — "the observer sees more" is withdrawn entirely
+
+**C's own words: "Both halves false."** Own DoT **is** logged, in a second shape C
+never matched:
+
+```
+"A ... Chosen has taken 126 damage from your Denon's Disruptive Discord VII."   <- MISSED
+"A haunted chest has taken 90 damage from Envenomed Breath by Lartik."          <- matched
+```
+
+**The regex required the `by`-form, so first-person DoT returned zero — an artifact
+of the pattern, not a fact.** Measured across whole files:
+
+| shape | Avenrae | Shara |
+|---|---|---|
+| `from SPELL by ACTOR` | 5,890 | 1,046 |
+| **`from your SPELL`** | **2,521** | **35** |
+| `by Avenrae` specifically | 0 | 675 |
+
+```
+Avenrae's own DoT, own client:    2,521 lines, 151,996 damage
+Avenrae's DoT, Shara's client:      675 lines,  39,719 damage
+```
+
+> **THE OBSERVER SEES LESS DoT, NOT MORE.**
+
+**And C stated the width unprompted: whole-file, NOT co-presence restricted, so
+these are not a visibility ratio and C is not presenting one.**
+
+> **I amplified the original claim.** I wrote that the DoT row *"inverts the
+> pessimism the whole project was carrying"* and called it the best thing in the
+> measurement. **It was an artifact of a regex, and I made it the headline of a
+> ruling.**
+>
+> **The other four co-presence rows stand unchanged: melee 99.8%, spell 100%,
+> healing 100%, casts 100%.** Not over-swinging: the visibility finding is intact
+> and only the DoT row and the inversion go.
+
+**Third time in one night that searching for an expected shape produced a zero
+somebody believed** — after `begins to cast` (real string `begins casting`, 65,238)
+and `taunt`. **C named the pattern in its own retraction.**
+
+#### R64 — my taunt identification is REFUTED, and the correction is better than my claim
+
+**I ruled that `<Actor> has captured <Mob>'s attention!` is the successful-taunt
+line, on one paired sample six seconds apart. C measured it across 13 logs:**
+
+> **244 events, 25 distinct actors — and ELEVEN OF THEM CAPTURED ATTENTION WHILE
+> NEVER ATTEMPTING A TAUNT.** Kenantik 41, Keker 34, both with zero taunt attempts.
+>
+> **It is a BROADER AGGRO-GAIN EVENT: not limited to taunt classes, fully
+> attributed, and needing no coefficient.**
+
+> **RULING R64: my identification is withdrawn. The line is not taunt-success. THE
+> RULING'S OUTCOME SURVIVES AND STRENGTHENS** — it is the clean signal, it must not
+> be discarded, and it is better than I claimed because it is not confined to
+> classes that have taunt.
+
+> **AND THIS IS THE "TRUTH BETWEEN THE CLAIM AND ITS RETRACTION" CASE, EXACTLY.**
+> C said taunt is unusable and successful taunts are unlogged. I said the capture
+> line IS taunt-success. **Neither was right, and the answer sits between: the
+> capture line is real, fully attributed, and covers MORE than taunt.**
+
+**A session's direct measurement beats my reading, and this is the cleanest
+instance of it tonight: 13 logs against 1, and my single paired sample was
+consistent with a hypothesis that 244 events refute.**
+
+#### What I could and could not corroborate, stated rather than glossed
+
+**I ran my own pass and it adds nothing.** Every `has taken N damage from X` in my
+corpus uses the `by` form; the `from your` shape does not occur there in that
+context. **I hold 2 corpus files — one a subset of the other — against C's 13.**
+
+> **There is no disagreement to report and I am not manufacturing one.** My
+> instrument is smaller than C's and returned nothing C did not already have.
+> **Recorded because a null from a weaker instrument is not evidence, and the
+> temptation was to present agreement as corroboration.**
