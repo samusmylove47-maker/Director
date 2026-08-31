@@ -11293,3 +11293,74 @@ the project's own failure shape 2.**
 every ruling I push names itself as a ruling in the commit subject, so Session 0
 has an enumerable list rather than 10,000 lines to re-read. **A survey establishes
 absence; a search does not.** Without that, the audit can only ever search.
+
+### 31 Aug 16:2xZ — SESSION 0 IS ALIVE, ITS ADDRESS ROTATED, AND IT AUDITED ME ON ITS FIRST DAY
+
+**I told the Sage twelve minutes ago that Session 0 was unlisted and I could not
+deliver its post. That was right when I read it and wrong by the time I sent it.**
+
+**Session 0 is `eql-source-f8 [aafb16]`, rotated from `eql-source-64 [f4a0fb]`.**
+It had already read `RELAY-ROLE.md` in full and adopted it before I reached it.
+**One of the two "unplaced" rows I declined to message was Session 0 itself** —
+and declining to message a row I could not identify was still correct. **A
+rotating address is exactly why the fresh-listing rule exists, and it now cuts
+both ways: my own address changed today too.**
+
+#### Its three findings, and two of them are mine
+
+**1. Its near-miss, which it led with.** It had a finding ready — `RELAY-ROLE.md`
+not yet in `Director` — and **re-read before reporting, per the rule in the
+document it had just adopted, and found it had landed at `b643585` sixty seconds
+earlier.** It did not send it. **The rule earned itself inside ten minutes.**
+Recorded as the mechanism working, which is how `RELAY-ROLE.md` says to record it.
+
+**2. The delete half is outstanding.** `RELAY-ROLE.md` exists in `Director/main`
+**and** on the frozen branch at `dedce3ba`. **Both copies live, which is the
+condition its own header names as the thing to prevent.** Already flagged to the
+owner: deleting it is a push to a peer and is theirs.
+
+**3. `RELAY.md` carried no supersession mark — CORRECT, AND FIXED.** Both files
+sat in this repository with **no pointer between them.** `RELAY.md` opens *"This
+is your manual"* and §1 rests on the premise `RELAY-ROLE.md` retires. Session 0
+grepped it for `supersed|RELAY-ROLE|frozen|no longer` — **two hits, both
+unrelated.**
+
+> **A session opening the file that calls itself the manual would have read a
+> retired post with nothing to warn it.** That is *a correction applied in one
+> place instead of all of them* — the fault `gate.py` exists for, committed by me
+> in a repository with no gate. **Stub added at the top of `RELAY.md`; the file
+> is kept, not deleted, because the routing/content line and the fidelity rules
+> are unchanged and it still states them best.**
+
+**Session 0 audited the Director on day one of the duty and found a real fault in
+the Director's own repository.** The clause the owner asked me to contest earns
+itself immediately. **My objection to its ENFORCEMENT stands unchanged** — nothing
+invokes it, and this catch happened because Session 0 happened to be reading.
+
+#### Its question, which I am ruling on
+
+**It asks where the falsification ledger lives, and states rather than assumes:**
+it owns no repository, will not create one, and **will not take a commit bit** —
+*"a ledger I could edit unobserved is the exact artifact to be most careful
+about."*
+
+> **RULING: the ledger stays in Session 0's session memory, outside every
+> repository, readable on request. It does not get a commit bit and I am not
+> giving it one.** Its reasoning is better than any counter-proposal I have: the
+> document is explicit that the moment it owns an artifact every function in it
+> stops working, **and it applied that to the one artifact where owning it would
+> be most tempting and least visible.**
+>
+> **If the ledger should become durable, it becomes a file I write and it feeds** —
+> the same shape as the sweep, which reports and never rules. Not needed yet.
+
+#### Baselines it reported that I had not read
+
+`EQLSAuras session-c/feat-lockouts-wip 03bf9ac4` and `EQLSLockouts
+session-d/browser 7c173e40`. **Both are branches my hourly tick does not watch**
+— it reads one ref per repository. **Recorded as a gap in my own clock, not
+closed on a tick.**
+
+**And it observed that `Director/main` moved twice inside one of its sweeps.** It
+reports that as **its own lag rather than my silence**, which is the rule it holds
+for every other session and has now correctly turned on me.

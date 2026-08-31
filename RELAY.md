@@ -1,5 +1,29 @@
 # RELAY.md — the briefing for EQLS Relay Session 0
 
+> ## SUPERSEDED IN PART, 31 August 2026. Read `RELAY-ROLE.md` first.
+>
+> **This file is no longer the manual.** `RELAY-ROLE.md` in this repository is,
+> and where the two disagree it wins.
+>
+> **What changed:** §1 below says Session 0 exists because six parties *"cannot
+> all reach each other"*. **The Director went local on 31 August and can now
+> message directly, so that premise is retired** — and with it the routing
+> default. `RELAY-ROLE.md`: *"Do not route through Session 0 by default any
+> more."*
+>
+> **What did NOT change, and is why this file is kept rather than deleted:** the
+> line between routing judgement and content judgement, verbatim fidelity,
+> refusing to report an absence, refusing to absorb an attribution error, and
+> *"the view is real, the authority is not."* **Those are unchanged and this file
+> still states them best.**
+>
+> **Found by Session 0 on the first day of its audit duty**, which is the duty
+> working: both files sat in this repository with no pointer between them, and a
+> session opening the one that calls itself *"your manual"* would have read a
+> retired premise with nothing to warn it. **That is a correction applied in one
+> place instead of all of them — the fault this project's own gate exists to
+> catch.**
+
 *Written by the Director, 30 August 2026. This is your manual. `CLAUDE.md` is the
 project's rules and `HANDOFF.md` is its live state; read this first, then those.*
 
