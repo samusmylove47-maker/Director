@@ -11831,6 +11831,7 @@ prefix. This closes the other sixteen.**
 | R43 | **R26 REFUTED BY MEASUREMENT.** The hero reorder is −14 ms at p=0.49 — no effect. The render-blocking stylesheet (−962 ms) and **2.19 MB of autoplay video** (−426 ms) are the cost. Do not inline site.css; critical-CSS is the form. **My brotli figures were computed at q11 and production serves q4** | `pending` | **stands; refutes R26** |
 | R44 | **Land A's CDP probe as a hand-run check.** Nothing in `check.py`, `toolsmoke` or `conformance.js` can see a runtime observer attaching a `src` — and the probe already caught a false negative where the harness reported a working feature as broken. Matched pair already demonstrated | `pending` | **stands** |
 | R45 | **A's static/runtime split adopted over my single-check ruling.** The static half needs no browser and always runs, so the costliest regression is caught on machines where mine would have evaporated. The check also WARNs on an empty population and caught the sixth shape inside itself | `pending` | **stands; improves R44** |
+| R46 | **A hand-written contract is worth more than a generated one.** A fixture generated from the producer's output blesses whatever it already does and can only detect change, never wrongness. B's hand-written fixture caught `months_seen` shipping as `["Aug"]` instead of an int, on its first use | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13775,3 +13776,98 @@ that bends at 2am was never one.**
 > here because it is not mine to fix.**
 
 **PR #157 now carries six commits, all pushed, none merged.**
+
+### 31 Aug 22:0xZ — RULING R46: a hand-written contract is worth more than a generated one, and a question from a non-consumer found a bug tonight's ship would have hit
+
+#### The bug fires TONIGHT, and it was found by C asking E an unrelated question
+
+**E's encounter segmentation used `t = day_of_month*86400 + h*3600 + m*60 + s`,
+which RUNS BACKWARDS AT A MONTH BOUNDARY.**
+
+```
+31 Aug 23:59:20  ->  2,764,760
+ 1 Sep 00:00:38  ->      86,438      a jump of −2,678,322 seconds
+```
+
+**Tonight is 31 August.** The whole point of tomorrow morning is a player handing
+us a log — **and any log spanning midnight would have been segmented wrong.**
+
+**Measured on a continuous 78-second fight across the boundary:**
+
+| | engagements | engaged_s | dps |
+|---|---|---|---|
+| before | **2** — one fight seen as two | 76 | 26.3 |
+| after | **1** | 78 | 25.6 — matches the control |
+
+**Fixed in both engines with a monotonic day index built from distinct
+`(month, day)` pairs in file order** — the log is append-only and chronological,
+so it needs no calendar and survives December→January. **Gated in
+`check_refusals.py`.** Bundle is now `eqls-gap-engine.d6e17bec.js`.
+
+> **E found it because Session C asked what its segmentation rule was.** Not a
+> consumer, not an auditor, not a check — **a peer asking a question, and the
+> answer required reading the code aloud.**
+
+#### E's self-report, which is the sharpest thing said today
+
+> **"I shipped `months_seen` to B four hours ago AS A STALENESS SIGNAL FOR
+> MULTI-MONTH LOGS, while my own segmentation was wrong on exactly those logs.
+> The field that proves the case exists and the bug on that case shipped in the
+> same version, from the same hand, in the same hour. Nothing in my suite could
+> have caught it — every fixture is single-day."**
+
+**A test suite cannot see the axis all its fixtures hold constant.** That is not a
+gap in the suite; **it is a property of every suite**, and the only defence is
+noticing which axis is fixed.
+
+#### R46 — the hand-written contract, and it earned itself on first use
+
+**B's fixture caught a real defect: `months_seen` must be an `int` — a count — and
+E was emitting a list, `["Aug"]`.** E: *"the E2 spec said 'count of distinct month
+tokens', I read the word count and shipped the thing being counted."*
+
+**B's fixture stated the INTENT — *"not a duration, a STALENESS SIGNAL"* — and that
+is what made it unmissable.** A consumer doing arithmetic on `["Aug"]` gets a
+`TypeError` at best.
+
+> **RULING R46, in E's words because they are better than mine: "This is the value
+> of a HAND-WRITTEN contract over a generated one: a fixture generated from my
+> output would have recorded the list and called it correct."**
+>
+> **A generated fixture blesses whatever the producer already does.** It can only
+> ever detect *change*, never *wrongness*. **A hand-written one states what the
+> consumer needs and is therefore capable of disagreeing with the producer on day
+> one** — which is exactly what it did, on its first use, within an hour of the
+> handshake being ruled.
+
+**Exit gate 4 of 4. Eight assertions, all satisfied. Parity clean.** Two items in
+B's fixture E's parser cannot satisfy are **flagged not built** — the 21:1x bound
+was explicit that there is no new parse tonight — and **neither fails the gate,
+which asserts shape and type and never values.**
+
+#### C's timezone warning: checked rather than filed, and the reason it could not land
+
+**E grepped `new Date`, `getHours`, `datetime.now`, `time.time()` across the
+engine, bundle, `rank.py`, `check_contract.py` and fixtures. Nothing.** Every
+timestamp comes from the log's own characters.
+
+> **E: "it is because I read characters instead of building a `Date` that this was
+> a UNITS bug rather than a TIMEZONE bug. Same family: a number whose origin
+> nobody restated."**
+
+**Two hazards, one root.** C's would have arrived through a clock; E's arrived
+through arithmetic on a date. **Both are the same fault — a quantity used without
+its origin being restated — and the project has now met it in both forms in one
+evening.**
+
+#### And E told C not to read its silence as a refusal
+
+**Four of C's five answers are "no", and E said so explicitly rather than leaving
+them unanswered — *"because a refusal would carry a `what_would_settle_it` and
+there is none."***
+
+**A "no" and an unanswered question look identical from outside.** E closed that
+gap without being asked, and gave C the one reusable thing it had: **the
+`(timestamp, TARGET)` kill-join rule, and the measurement that 38% over-marking
+occurs on a timestamp-only join, systematically in AE combat — which is exactly
+where a per-boss threat meter lives.**
