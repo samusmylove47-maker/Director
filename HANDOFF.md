@@ -11813,6 +11813,7 @@ prefix. This closes the other sixteen.**
 | R25 | **The ruling index must not drift silently.** Adding the row is part of making the ruling; Session 0 computes the tripwire | `a126a39` | **stands** |
 | R26 | **F03: move the hero SVG after the headline, delete nothing.** Its arithmetic is right, its UNIT is wrong — over the wire the SVGs are 39.9% of the blocking path, not 85.4%, and its Phase 0 makes the page 2.23x heavier. Add the search field at +121 brotli | `pending` | **stands** |
 | R27 | **R22 AMENDED.** Four of its figures were wrong and its scope was wrong: the block is 3,470 bytes on **673** pages (items *and* named), `site.css` is 87,350. **And it is not decision-free — a one-page cold arrival gets worse.** A's to weigh | `pending` | **stands; amends R22** |
+| R28 | **TWO PUBLISHED FIGURES ARE WRONG NOW** — `build27.py:103` says ten dungeons where the data holds eleven; `build5.py:144` says six where it is five. Correct at the generator, derived not retyped. **Name the corpora** (survey / catalogue / turn-in items) — nine one-word edits, and it is what makes `gate.py:259` reachable | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -12688,3 +12689,114 @@ that is understood.
 
 **None of this is mine to fix. It is `eql-source`, A is offline, and it goes into
 the register as a finding with a proposal attached.**
+
+### 31 Aug 21:0xZ — RULING R28: TWO PUBLISHED FIGURES ARE WRONG RIGHT NOW, and the guard that should catch them cannot see them
+
+**A survey of every published count — enumerated, not searched — found 149 count
+sites rendering 255 instances. 117 sites derive their figure at build time. 32
+DO NOT. Two of those 32 are wrong today, on the live site.**
+
+**I verified both myself against the datasets rather than accepting the report.**
+
+#### Defect 1 — `_build/build27.py:103` → `public/data/index.html:146`
+
+> *"Thirteen zones of far more — **ten dungeons and two of the planes**"*
+
+```
+zones-index.json length: 13
+  plane entries      : 2   Plane of Fear, Plane of Hate
+  non-plane entries  : 11  … Castle Mistmoore, KEDGE KEEP
+```
+
+**Eleven dungeons, not ten. And the sentence's own arithmetic does not reach the
+number it opens with — ten plus two is twelve, beside a thirteen in the same
+sentence.**
+
+> **Kedge Keep was added and the prose did not move.** That is precisely the
+> §3 failure this project already records against itself: *"A number typed beside
+> the data it claims to come from is the fault this project keeps finding in other
+> people's work."*
+>
+> **And it is in the paragraph headed "Completeness", on the page that publishes
+> the data contract.**
+
+#### Defect 2 — `_build/build5.py:144` → `public/tools/index-search.html:163`
+
+> *"435 items, 440 rows: **six** drop in two zones"*
+
+```
+distinct item names : 435   ✓
+total item rows     : 440   ✓
+names with >1 row   : 5     Black Tome with Silver Runes, Froglok Blood,
+                            Froglok Meat, Gargoyle Eye, Red Dragon Scales
+counts.item_groups  : 6
+```
+
+**Five, not six.** 435 + 5 = 440, which the sentence's own two correct figures
+already imply. **The "six" is almost certainly borrowed from `item_groups: 6` — a
+different quantity entirely.**
+
+> **A typed number sitting between two derived ones, contradicted by their own
+> arithmetic.** The two figures that were read out of the data are right; the one
+> that was typed is wrong. **That is the whole argument for the rule, in one
+> sentence on a shipped page.**
+
+#### THE GUARD EXISTS AND CANNOT REACH THEM
+
+**`scripts/gate.py:259-330` already enforces "a derived count may not be
+contradicted in prose", words as well as digits.** Its own comment says it is
+*"anchored to the words the site actually uses"*.
+
+> **None of the 32 typed sites uses any of its four phrasings.** The gate is
+> correct, live, and **aimed at a surface that excludes every violation it would
+> catch.** Not a dead check — a check pointed at the wrong sentences. **It has
+> been green over both of these defects the whole time.**
+
+#### RULING R28
+
+> **1. Both figures are wrong and must be corrected at their generator, derived
+> rather than retyped.** `build27.py:103` and `build5.py:144`. Neither may be
+> fixed by typing the right number — **the rule is that a figure citing a dataset
+> is read out of that dataset at build time**, and both of these are already
+> sitting next to correctly-derived figures that prove the point.
+>
+> **2. The corpora get names, and the names are already in use.** `survey items`
+> (435) · `catalogue items` (3,663) · `turn-in items` (128). **The survey found
+> that every corpus is already named correctly SOMEWHERE on the site** — the fix
+> introduces no new vocabulary, and it is **nine one-word edits** across
+> `build1.py`, `build2.py` and `build28.py`.
+>
+> **3. And that is what makes the gate reachable.** Once each corpus has a
+> two-word name, **failing a bare `N items` becomes a rule a regex can hold.**
+> The naming is not cosmetic — **it is what converts an unenforceable prose rule
+> into a mechanical one**, which is this project's stated preference: *prefer a
+> structure that makes an error unrepresentable over a rule forbidding it.*
+
+#### The audit found the largest collision and not the worst one
+
+**`public/tools/index.html` is worse than the homepage.** The word *items* there
+carries **435, 128 and 3,663 across three adjacent cards** — and the Sky Ledger
+figure is printed **bare** at `build2.py:130` when every other page on the site
+calls that corpus *turn-in items*.
+
+**The homepage collision the audit found is two numbers fifteen lines apart. This
+is three, side by side, one of them stripped of the label it carries
+everywhere else.** R21 was ruled on the instance that was reported; **it governs
+this one more.**
+
+#### Scale, for the register
+
+**8 unit nouns name more than one corpus. 21 of 30 count-bearing surfaces carry
+counts of two or more corpora. 3 pages use one word for two different corpora on
+that same page.** 48 distinct corpora are counted across the site.
+
+**Also flagged and not yet ruled:** `sources.html:138-139` types *"21 bodies of
+walkable floor"* and *"nine readings"* — **both of which are derived on
+`raids/plane-of-sky.html` from `len(ISL)` and `len(RING)`.** Typed on the accuracy
+page, derived on the raid page. **Not wrong today. Wrong the day either number
+moves**, and the accuracy page is the worst place on the site to carry a figure
+that can drift.
+
+**Four things the survey marked NOT ESTABLISHED rather than guessing**, including
+whether `RACES.DEF` is a real race — which decides whether a typed `/ 16` in the
+race tracker is already a third defect. **Left open, not filled in.**
