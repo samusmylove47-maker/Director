@@ -11832,6 +11832,7 @@ prefix. This closes the other sixteen.**
 | R44 | **Land A's CDP probe as a hand-run check.** Nothing in `check.py`, `toolsmoke` or `conformance.js` can see a runtime observer attaching a `src` — and the probe already caught a false negative where the harness reported a working feature as broken. Matched pair already demonstrated | `pending` | **stands** |
 | R45 | **A's static/runtime split adopted over my single-check ruling.** The static half needs no browser and always runs, so the costliest regression is caught on machines where mine would have evaporated. The check also WARNs on an empty population and caught the sixth shape inside itself | `pending` | **stands; improves R44** |
 | R46 | **A hand-written contract is worth more than a generated one.** A fixture generated from the producer's output blesses whatever it already does and can only detect change, never wrongness. B's hand-written fixture caught `months_seen` shipping as `["Aug"]` instead of an int, on its first use | `pending` | **stands** |
+| R47 | **The threat meter's viability is measured before the aggregator is built.** One client cannot see everything seven other players do; the question is what FRACTION it sees and what the meter says about the rest. **A bound ships; a fraction dressed as a measurement does not.** C reads E's parser before writing one | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13871,3 +13872,96 @@ gap without being asked, and gave C the one reusable thing it had: **the
 `(timestamp, TARGET)` kill-join rule, and the measurement that 38% over-marking
 occurs on a timestamp-only join, systematically in AE combat — which is exactly
 where a per-boss threat meter lives.**
+
+## THE THREE-PROJECT PUSH — opened 31 Aug 22:1xZ by the owner
+
+**Everything behind three tools, worked in ultracode until they approach
+completion. Nobody interrupts them except at the Director's direction.**
+
+| | session | owns |
+|---|---|---|
+| **=Upgrades** | **B** | what to wear, ranked, and what to go and get |
+| **DPS meter** | **E** | damage per second and what to change |
+| **THREAT METER** | **C** | live threat per player against a boss, top-4 |
+
+### 31 Aug 22:1xZ — RULING R47: the threat meter's viability turns on one measurement nobody has taken
+
+**The owner's spec: threat = damage + healing + flat-hate spell casts + stuns +
+taunts, displayed live as the top ~4 players against a named or boss enemy.**
+
+**C's own viability pass already establishes most inputs exist as real line
+shapes** — melee, direct spell, DoT, healing, and **16,717 flat-hate cast lines** —
+and it corrected four defects in its own v1 engine before anyone asked: unscoped
+healing, a polluted verb lexicon, 16-day "encounters", and players appearing as
+targets.
+
+**C's stun call is right and I have ratified it: bosses are stun-immune so the
+effect line never fires while the hate still lands — KEY ON THE CAST.** A thing
+that would have been quietly wrong for a year if it had keyed on the effect.
+
+> **THE HINGE, AND IT IS UNRESOLVED. E reports: every regex it owns is anchored
+> `^You`, so third-person attribution matches nothing it has.**
+>
+> **A threat meter shows a leaderboard OF OTHER PLAYERS. A combat log is written
+> by ONE client.** C's own corpus sample — `Feedwhy begins casting Flash of Light`
+> — is third-person, so **cast lines DO carry other players even though E's
+> regexes do not match them.** Whether *damage* and *healing* do is not
+> established.
+>
+> **RULING R47: measured before the aggregator is built, not after.** The question
+> is not *"can I parse a third-person line"*. It is **"what FRACTION of another
+> player's threat can one client see, and what must the meter say about the
+> rest."**
+>
+> **If the answer is a BOUND rather than a value, that ships.** Printing a bound
+> instead of a zero is what an external auditor called the most intellectually
+> honest thing on any MMO database anywhere. **What must never ship is a number
+> that looks measured and is a fraction of one.**
+
+#### Anti-duplication is the Director's whole job tonight
+
+**Three sessions building adjacent things at speed is when duplication happens,
+and there have already been two near-misses in one evening:** B nearly rebuilt a
+ranking panel that already existed, caught by reading the code rather than the doc
+comment; E duplicated a constant across a seam **within an hour of being handed
+it**.
+
+**So C reads `gapengine.py` and `bundle/eqls-gap-engine.js` BEFORE writing a
+parser, and reports three lists: what E already parses, what E parses but
+discards, and what E cannot see.** *From the source, not from my description* — I
+paraphrased that interface once today and was wrong three ways.
+
+**The no-new-parse bound on E is LIFTED for the seam question only.** A seam is
+not scope creep.
+
+#### D holds the engagement trigger, and nobody had asked for it
+
+**The meter must know when a named or boss enemy is engaged. E measured its own
+tree: zero boss or named-mob markers anywhere. B's catalogue carries mob names as
+DROP SOURCES, not as an encounter roster.**
+
+> **D keys on raid, boss and difficulty. D has a roster.** Asked for it as a plain
+> joinable list, published the way it published `PARSER-INTERFACE.md` for E —
+> which worked, and is why that seam held. **And asked what the roster does NOT
+> contain**, because *named/boss* is the spec and a raid-only roster is a gap C
+> must know tonight rather than discover against a log.
+
+#### Two coefficients that must carry a tier before they carry a number
+
+**C cites flat hate values (200/400) and a healing-threat formula as known.**
+
+> **RULED: name the source for each, with its tier under `CLAUDE.md` §2. A classic
+> EverQuest source is tier 5 and the meter badges it.** A threat meter built on
+> unbadged classic coefficients is precisely the fault this site exists to refuse,
+> and the first hard rule does not relax because a number is convenient.
+
+#### Standing off
+
+**A holds PR #157 — done, unmerged, the owner's — and is asked ONE question:** the
+cheapest path from *a tool exists in another session's repo* to *a stranger can
+use it from eqlsource.com*, given `BUNDLE-CONTRACT.md`, `skyledger.py` and
+`build28.py` have shipped that path once already. **That decides whether tonight's
+three tools are usable tomorrow or are three artifacts in three repositories.**
+
+**D stands off the three, asked only for the roster.** Its Plane of Hate ruling is
+still owed by me and is not forgotten.
