@@ -33,3 +33,24 @@ branches moved; three did not.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 either change.
+
+## 31 Aug 2026 sweep — read at 15:5xZ
+
+Compared current remote heads against the 14:5xZ sweep entry above. Two
+branches moved again; three did not.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `80758b86` → `4491fc80`
+  ("Withdraw the item.selection request: the ruling already existed"),
+  authored 2026-08-31T15:46:23+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `65227e23` → `04fc9acc`
+  ("Tick 9: three refs moved, none needing action; WATCH bumped"), authored
+  2026-08-31T15:39:16+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e6039020`.
+- `EQLSLockouts` `session-d/raid-rows`: `3c26250`.
+- `EQLSAuras` `main`: `5caa385`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+either change.
