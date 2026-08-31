@@ -11811,7 +11811,7 @@ prefix. This closes the other sixteen.**
 | R23 | **The practices ledger section stays, and every entry must name the failure that bought it.** Structural, not a rule: you cannot enter it without also entering the record of having erred | `345da25` | **stands** |
 | R24 | **The SHIP REGISTER is opened** — the counterpart to the list of things not to build. Every row carries an owner and a state | `d5ad58d` | **stands** |
 | R25 | **The ruling index must not drift silently.** Adding the row is part of making the ruling; Session 0 computes the tripwire | `a126a39` | **stands** |
-| R26 | **F03: move the hero SVG after the headline, delete nothing.** Its arithmetic is right, its UNIT is wrong — over the wire the SVGs are 39.9% of the blocking path, not 85.4%, and its Phase 0 makes the page 2.23x heavier. Add the search field at +121 brotli | `pending` | **stands** |
+| R26 | ~~F03: move the hero SVG after the headline~~ **REFUTED BY MEASUREMENT — see R43.** Its arithmetic is right, its UNIT is wrong — over the wire the SVGs are 39.9% of the blocking path, not 85.4%, and its Phase 0 makes the page 2.23x heavier. Add the search field at +121 brotli | `pending` | **stands** |
 | R27 | **R22 AMENDED.** Four of its figures were wrong and its scope was wrong: the block is 3,470 bytes on **673** pages (items *and* named), `site.css` is 87,350. **And it is not decision-free — a one-page cold arrival gets worse.** A's to weigh | `pending` | **stands; amends R22** |
 | R28 | **ONE PUBLISHED FIGURE IS WRONG NOW** (amended by R29, R42) — `build27.py:103` says ten dungeons where the data holds eleven; `build5.py:144` says six where it is five. Correct at the generator, derived not retyped. **Name the corpora** (survey / catalogue / turn-in items) — nine one-word edits, and it is what makes `gate.py:259` reachable | `pending` | **stands** |
 | R29 | **R28 AMENDED.** Defect 1 (ten dungeons vs eleven) stands. Defect 2 does not: the "six" is a real count over item+group — `Fine steel weapons` is the sixth. **A population mismatch, not an invented number.** Acting on R28 as published would have introduced a wrong figure | `pending` | **stands; amends R28** |
@@ -11828,6 +11828,7 @@ prefix. This closes the other sixteen.**
 | R40 | **The 2H subtraction keys on `wp.skill`, a Tier 2 wiki field, and the dependency prints in the `basis`.** Zero two-handers list SECONDARY in their slot list, so the payload cannot express two-handedness | `pending` | **stands** |
 | R41 | **The hero search field points at The Index, not `search.html`.** That page indexes 39 *pages*, not items, and says so on itself. My R26 was right on mechanism and wrong on destination | `pending` | **stands; corrects R26** |
 | R42 | **R28 AMENDED: naming the corpora is necessary and NOT sufficient.** The tool-card grid is a `LEDGERS` entry, stripped before ledger-stripped rules run, so rewording alone ships a check that reports nothing. Counts go through `SINGLE_UNSTRIPPED` | `pending` | **stands; amends R28** |
+| R43 | **R26 REFUTED BY MEASUREMENT.** The hero reorder is −14 ms at p=0.49 — no effect. The render-blocking stylesheet (−962 ms) and **2.19 MB of autoplay video** (−426 ms) are the cost. Do not inline site.css; critical-CSS is the form. **My brotli figures were computed at q11 and production serves q4** | `pending` | **stands; refutes R26** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13494,3 +13495,101 @@ two facts until A's selftest missed.
 
 **A measures the `h1` at byte 5,032; I said 5,082.** A's is from the built file
 and is authoritative. **50 bytes on an 81% improvement. Recorded and closed.**
+
+### 31 Aug 21:4xZ — RULING R43: R26 IS REFUTED BY MEASUREMENT. The reorder does nothing; the stylesheet and 2.19 MB of autoplay video are the cost
+
+**I asked the Blind Auditor for the one thing that would beat my inference — a
+real first-paint measurement from outside. It ran it, and it refutes BOTH
+remedies for F03: its own and mine.**
+
+**Measured against a mirror of the live page at 600 kbit/s under production's
+actual compression, four variants byte-identical apart from the single change
+each tests:**
+
+| variant | n | median FCP | delta | p |
+|---|---|---|---|---|
+| **A** as-served | 30 | **1,078 ms** | — | — |
+| **B** reordered | 30 | 1,064 ms | **−14 ms** | **0.492** |
+| **D** css inlined | 15 | **116 ms** | **−962 ms** | **<0.001** |
+| **E** media removed | 15 | 652 ms | **−426 ms** | **<0.001** |
+
+**Full load: A 11,614 ms → E 2,298 ms.**
+
+> **"Document order only matters when the parser is the constraint, and it is
+> not. Nothing paints until `site.css` arrives on its own round trip, so the
+> headline's byte offset is irrelevant."**
+>
+> **R26's central recommendation was byte offset and document order. I flagged it
+> as inference and asked to be measured. I was, and I was wrong.**
+
+#### R43
+
+> **The hero reorder has NO MEASURED EFFECT and must not be cited as an
+> improvement.** It is harmless — zero bytes, no visual change — so it stands or
+> reverts at A's discretion. **It is not a fix.**
+>
+> **The homepage must not autoplay-fetch 1.8 MB of MP4 before a stranger has seen
+> anything.** Implementation is A's: `preload="none"`, intersection-observer, or
+> click-to-play behind the poster. **The videos are content and stay; the eager
+> fetch goes.**
+>
+> **Do NOT inline `site.css`.** The measuring party flagged D itself: *"a
+> mechanism probe, not a recommendation — inlining all 87 KB made full load
+> worse. The correct form is critical-CSS inlining."*
+
+**Verified by me from the repository, a different instrument from its served
+measurement:**
+
+```
+auras-trailer.5fc3fbbc.mp4        859,203
+sky-ledger-trailer.42d7f115.mp4   971,771
+auras-poster.5c861299.jpg         179,156
+sky-ledger-poster.af5c97c2.jpg    180,943
+                     TOTAL      2,191,782 bytes
+```
+
+**Its 2.19 MB, confirmed to the byte. Two `<video>` elements, eight `autoplay`
+attributes.** The existing script already suppresses autoplay below 700px and
+under reduced-motion — **so the case that pays is desktop, which `CLAUDE.md`
+names as the primary target.**
+
+#### MY BYTE MODEL WAS WRONG AT THE ROOT, AND IT INVALIDATES MY ARITHMETIC ON BOTH SIDES
+
+> **Cloudflare serves brotli q4, not q11.** q4 predicts the live transfer **within
+> 15 bytes** on both `index.html` and `site.css`. **q11 predicted 27,281 against a
+> live 39,547 — understating the wire cost by 45%.**
+
+**Every brotli figure in R26 was computed at q11**, including the *"39.9% of the
+blocking path"* I used to defend the inline drawings. **The defence may still
+stand — the measured media cost is the video, not the drawings — but the
+arithmetic I gave for it does not, and I am not restating a number I have not
+recomputed at the right level.**
+
+**And the correction runs the other way too:** stripping the repeated attribute
+strings and redundant trailing zeros saves **3,144 bytes at the served level**,
+not the 823 I quoted. **My "46% of the file for under a kilobyte" argument — the
+one I called decisive — was computed at the wrong compression level.**
+
+#### THE METHODOLOGICAL NOTE, WHICH IS WORTH MORE THAN THE RESULT
+
+> **"At n=9 the reordering appeared to win by 248 ms; at n=30 that collapsed to
+> noise, and the early figure is reported because it is what gets published when
+> someone stops at the first encouraging run."**
+
+**An n=9 run would have CONFIRMED my ruling, and I would have published it as
+measured rather than inferred.** The Auditor ran it to 30 and reported the
+encouraging early figure **specifically so nobody could quietly keep it.**
+
+**That is a party volunteering the number that would have flattered the person who
+commissioned the measurement.** It belongs in the practices section and the
+failure that bought it is mine.
+
+#### What the Auditor did NOT establish, in its own words
+
+**"No simulated RTT, one bandwidth, headless, mirrored origin rather than live.
+The missing latency would worsen the render-blocking penalty, which favours this
+conclusion and is a reason to re-run it."**
+
+**It named the limitation that cuts TOWARD its own finding and called for a
+re-run anyway.** That is the discipline this project keeps asking for, arriving
+from the one party with no stake in the answer.
