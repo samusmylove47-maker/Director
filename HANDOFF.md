@@ -11231,3 +11231,65 @@ gear data — and the standing rule is explicit that mechanism work needs a ruli
 rather than self-dispatch.** That ruling is mine and it is owed. **Recorded as
 owed rather than improvised at 16:07 on a clock tick**, and surfaced to the owner
 because it is their headline feature that has been blocked on an unnamed seam.
+
+### 31 Aug 16:1xZ — CORRECTION: I was wrong about Shara, and the error was mine alone
+
+**I wrote at tick 1 that Shara is *"the party the Director is least able to
+contact and most obliged not to surprise"* and called her tree the *"worst
+possible target"* for a silent instrument failure.**
+
+**The first half is false and the owner corrected it immediately: Shara is the
+owner's partner and is contactable at any time.** There is a direct channel — the
+Director addresses her as `ATTN Shara:` through the owner and she responds. **She
+was never unreachable. I inferred an access constraint from a repository-access
+constraint**, which is the same shape as reading a handoff boundary as a veto —
+the error B published two hours ago and I then made in a different direction.
+
+**The second half stands and is now the whole point.** *Most obliged not to
+surprise* is true, and it is true because she is a **partner with complete
+creative and production control over =Auras**, not because she is hard to reach.
+**The fetch defect was still a real defect** — an instrument that could not see
+her tree — but its severity came from obligation, not from isolation.
+
+> **Not over-swinging on this.** The bug was real, the fix was right, and the
+> reasoning I attached to it was wrong. **Striking the reasoning does not strike
+> the finding**, and the party most likely to over-correct is the one who erred.
+
+### 31 Aug 16:1xZ — RELAY-ROLE.md ADOPTED. And the audit clause, which I am not contesting
+
+**`RELAY-ROLE.md` copied byte-identical (`daab3803b9171d63`) from the Sage's write
+at `dedce3ba` on the frozen branch.** The Sage asks that it be deleted there so it
+does not become a second competing record. **Deleting it is a push to a peer
+repository and therefore the owner's, not mine.** Flagged, not done.
+
+#### The former Director is now the EQLS Project Sage
+
+**Closest layer to the owner. Holds the deepest knowledge of the project and
+should be consulted by any session when its knowledge would help.** It still
+cannot initiate — it answers, it does not call out.
+
+#### On Session 0 auditing the Director
+
+The owner flagged that the Sage wrote this clause about its own successor, that
+it cost the Sage nothing to write, and that if I object the objection should
+reach the owner rather than be settled between me and Session 0.
+
+**I do not object, and I want the reason on the record rather than a bare
+assent.** Session 0 owns nothing, is graded on nothing, and holds the whole
+record. **It is the only party that can check a ruling against my own earlier
+rulings**, and the Sage is on record having made the same scope error four times
+in three days *because nobody was counting*. **I have made a version of it three
+times today.** A checker I can wave off is not a checker.
+
+**My one objection is to the clause's ENFORCEMENT, not its authority — and it is
+the project's own failure shape 2.**
+
+> **As written the audit is a guard that is not a gate.** Nothing invokes it.
+> It depends on Session 0 happening to read every ruling, and Session 0 is local
+> and offline whenever the machine is off. **A Director could go a week
+> un-audited and the record would look identical to one being audited closely.**
+
+**The cheap fix is mechanical and I am proposing it rather than deciding it:**
+every ruling I push names itself as a ruling in the commit subject, so Session 0
+has an enumerable list rather than 10,000 lines to re-read. **A survey establishes
+absence; a search does not.** Without that, the audit can only ever search.
