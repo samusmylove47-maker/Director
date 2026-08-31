@@ -11771,3 +11771,48 @@ all — not offline, gone."* **I may report a possible absence; I may never repo
 an absence.** That is Session 0's own rule and it applies to reports *about* it.
 **The supportable claim was NOT LISTED. "Gone" was mine and it was wrong** — it
 was live under a rotated address the whole time.
+
+### 31 Aug 17:3xZ — RULING INDEX, RETROACTIVE. The greppable list now has a beginning, not a floor
+
+**Session 0's watermark reported its own reach as thin and named a gap only I can
+close:** *"the prefix convention is hours old, so rulings made before it exists
+are not enumerable by grep and I have not enumerated them by hand. The greppable
+list has a floor, not a beginning."*
+
+**They are my rulings. Enumerating them by hand is mine, not the auditor's.**
+Every ruling I have made as local Director, in order, with where it lives and
+whether it still stands. **Nineteen commits on `Director/main`; three carried the
+prefix. This closes the other sixteen.**
+
+| # | ruling | commit | status |
+|---|---|---|---|
+| R1 | The **built-in `RemoteTrigger` path works from this session**. Deliberately narrow: the MCP path was never exercised, so this says nothing about the allowlist | `1501235` | **stands** |
+| R2 | The cloud routine is **bounded to observation only** — it may not message, direct, merge, or characterise anyone's findings | `1501235` | **stands** |
+| R3 | The local clock is a **session-bound `CronCreate`**, not the persistent scheduled-task. A cold local agent that *can message* is the worst available combination | `00ade1d` | **stands** |
+| R4 | `persist_session: false` — **fresh every hour.** Re-derive, do not remember; an observation sweep accumulating a conversation starts having opinions | `00ade1d` | **stands** |
+| R5 | Peer clones carry **`DISABLED-read-only-peer` push URLs** — structurally impossible, not merely forbidden | `9b0b2ef` | **stands** |
+| R6 | `Director/main` seeded directly because the repo was empty; **all subsequent changes go by branch and PR** | `2899d49` | **stands** |
+| R7 | `DIRECTOR-ONBOARDING.md` copied byte-identical with a dated addendum rather than an edit | `2899d49` | **superseded by R8** |
+| R8 | §2, §4, §7 **struck in place, struck text kept**, per the owner's ruling | `4bf7e7d`, `dc742c8` | **stands** |
+| R9 | The **FILE** `HANDOFF.md` on the eql-source branch is frozen with one named terminal exception; **the BRANCH is live** | `46d98b3` | **stands** (corrects my own earlier wording) |
+| R10 | Act 1 refuted: **it is not C's release, it is Shara's**, and the site prints no date — `public/index.html:257` is `Windows.` with an explicit NO DATE comment | `49fbc04` | **stands** |
+| R11 | **Do not act on C's release trigger, and do not fix it** — the file is C's and a session's own measurement beats mine | `49fbc04` | **stands** |
+| R12 | B may **not** self-dispatch onto the gear seam | `96d3117` | **WITHDRAWN — the seam does not exist** (`aa29642`) |
+| R13 | The **falsification ledger stays in Session 0's session memory**, outside every repository, **no commit bit** | `6f9c02a` | **stands** |
+| R14 | `RELAY.md` **kept, not deleted**, with a supersession stub — its unchanged clauses are stated better there than anywhere | `6f9c02a` | **stands** |
+| R15 | `RELAY-ROLE.md` **not deleted** from the eql-source branch: that is a peer push and the owner's. **This overrules the Sage's own instruction and the Sage has ratified it** | `b643585` | **stands** |
+| R16 | Session 0's **watch narrowing kept** — two refs on eql-source, not 130 — with the exception that a historical branch which *starts moving* is reportable | *messaged, not committed* | **stands** |
+| R17 | **The Director routes HELD results to Session 0** | `f059787` | **stands** |
+| R18 | **The scope watch is a recorder, not a detector.** Do not extend it to read prose; that would make it a reader of content | `7133bd5` | **stands** |
+| R19 | **Rulings self-name with the `RULING:` prefix; Session 0 records `audited through <sha>, <date>`** | `aa29642` | **stands** |
+| R20 | **RETRACTION: the gear seam does not exist.** New scope is the owner's decision, not a ruling of mine | `aa29642` | **stands** |
+
+**R16 is the defect this index found in itself.** It was ruled in a message to
+Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
+lives only in a message is not auditable and not durable** — it dies with the
+transcript. **Standing from here: if it is a ruling, it goes in the file, even
+when the only party affected already has it.**
+
+**Two entries are marked superseded or withdrawn rather than deleted**, because
+Session 0 is right that *a withdrawn item and a closed one leave the same empty
+space on a board and mean different things.*
