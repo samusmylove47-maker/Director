@@ -11134,3 +11134,37 @@ sweep.
 prints no Auras size at all.** C's local build was 78,440,299 bytes; the
 published asset is 78,839,556. **Any typed figure would already be wrong — and
 the page's silence is why it is not.**
+
+### 31 Aug 15:42Z — TICK 1 of the local clock. One ref moved, nobody blocked, and the tick found a defect in itself
+
+**Re-derived, not remembered.** `eql-source` main `e6039020`, `EQL50ups`
+`80758b8`, `EQLSLockouts` `3c26250`, `EQLSAuras` `5caa385` — all unchanged.
+**Moved: `sky-ledger` `65227e23` → `04fc9ac` (15:39:16Z), "Tick 9: three refs
+moved, none needing action; WATCH bumped".**
+
+**Nobody is blocked and this batches.** E's own tick says none needing action.
+*If it arrives an hour late, does someone do work they would not otherwise have
+done?* No. **No message sent.**
+
+#### The tick's own instrument was broken, and it broke toward silence
+
+**`LoxyBee-EQLS-Auras` returned FETCH FAILED.** Diagnosed rather than passed
+over: **Shara's default branch is `master`. There is no `main` branch** —
+`git ls-remote --symref` returns `ref: refs/heads/master  HEAD`. **The prompt I
+wrote at 14:53 names `main`, so that repository fails to resolve on every tick.**
+
+> **A failed fetch and an unchanged ref produce the same line in a summary.**
+> Form 1, in the clock I had written three hours earlier: the instrument could
+> not return one of its two answers about Shara's tree, and the answer it could
+> not return is the one that matters — **she is the party the Director is least
+> able to contact and most obliged not to surprise.**
+
+**Fixed: job `7edcbd85` deleted, `77c2c909` created** with `master`, an explicit
+note that fetching `main` there reads exactly like "no change", and a standing
+line — **A FAILED FETCH IS NOT A CLEAN RESULT.** Verified by listing it back.
+
+**Shara's `master` is `8bac7e3`, 30 Aug 19:11, unmoved.** Read correctly this
+time. **And I mislabelled it "Shara's main" in an earlier entry today** — the sha
+was right because the command fell back to `master`, so a correct number carried
+a wrong label. That is the sixth shape and it is the third time today I have
+found it in my own output.
