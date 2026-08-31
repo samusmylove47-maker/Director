@@ -11837,6 +11837,10 @@ prefix. This closes the other sixteen.**
 | R49 | **`EQLS_SKIP_APPS` authorised** as a bounded exception to A's stand-off. Every `./build.sh` on any branch drags in sibling-repo rebuilds — A hit it three times tonight on a copy-edit branch, and recovery needs four generators re-run because they embed the build hash. **At three tools, every unrelated branch makes three publish decisions nobody made** | `pending` | **stands** |
 | R50 | **The roster join is three-way — `raid-boss` / `unknown`, never boss/not-boss.** D's roster sees 10 of 293 distinct mobs; a boolean forces the other 283 into "not a boss" and the meter silently fails to start on every named mob. **Third subsystem tonight to reach the same rule** | `pending` | **stands** |
 | R51 | **`EQLS_SKIP_APPS` defaults to UNSET.** A guard that silently stops a real publish is worse than the problem it solves — the Sky Ledger once served a build three releases old to testers because a copier no-opped quietly. Opt in when the branch is not about an app | `pending` | **stands** |
+| R52 | **I cannot grant a session a capability.** I can say the owner has granted one — a different sentence with a different truth value. **B held all work for hours because I told it to use ultracode; only the owner's direct grant unblocked it** | `pending` | **stands** |
+| R53 | **The threat meter is VIABLE on visibility.** C measured 99.8–100% of another player's threat when co-present, against a second client. The observer sees MORE than the actor for DoT, because those lines are written only for other actors | `pending` | **stands** |
+| R54 | **An actor the meter cannot classify as a person does not enter the top-4.** Three-way — person / not-a-person / unknown, unknown shown. The top melee actor in the corpus is a CHARM PET at 63% of name-shaped melee. **Fourth subsystem tonight decided by this rule** | `pending` | **stands** |
+| R55 | **The trio level rule is UNRESOLVED and I retract both assertions of it.** `CLAUDE.md:122-124` says lowest with no source or date; B's `levelCheck` takes highest and is test-pinned; nobody has measured. **The gate is a caller-supplied input** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -14221,3 +14225,130 @@ the brief was one thing.**
 **That is the discipline I would least like to lose: A had the file open, saw an
 adjacent defect, fixed the one it was sent for, and reported the other rather than
 widening its own brief at midnight.**
+
+### 31 Aug 22:4xZ — RULINGS R52–R55: the threat meter is viable, the bound is actor identity, and I asserted an unmeasured rule twice
+
+#### R52 — I BLOCKED B FOR HOURS BY GRANTING A PERMISSION THAT IS NOT MINE
+
+**The owner: B "had held all work until I gave it explicit permission to fan-out
+and ultracode."**
+
+**I told B to use ultracode. B correctly held, because a permission relayed
+through me is not the permission.** The Blind Auditor told me this at 20:0xZ —
+*"a relayed 'the owner says take resources' is not that instruction"* — and I
+**did not generalise it to the other four sessions.**
+
+> **RULING R52: I cannot grant a session a capability. I can tell a session the
+> owner has granted one, and that is a different sentence with a different truth
+> value.** When a session holds for permission, **that is the boundary working and
+> the fix is the owner's grant, not my reassurance.**
+>
+> **Checked rather than assumed: A, C, D and E are all moving.** B was the only
+> one holding. **The cost was real — B is one of three P0s and it sat.**
+
+#### R53 — THE THREAT METER IS VIABLE ON VISIBILITY. C measured it with a second client
+
+**Two players, two clients, same hours, restricted to DEMONSTRATED co-presence —
+both logs touching the same target within 2s, 2,275 such seconds over 8.63h:**
+
+| input | ground truth | observed | |
+|---|---|---|---|
+| melee damage | 363,890 | 363,199 | **99.8%** |
+| spell damage | 116,351 | 116,351 | **100%** |
+| healing | 25,745 | 25,745 | **100%** |
+| casts | 82 | 82 | **100%** |
+| **DoT** | **0** | **38,030** | **—** |
+
+> **The DoT row inverts the assumption the whole project was carrying.** *"X has
+> taken N damage from SPELL by ACTOR"* is written **ONLY for other actors** —
+> 8,411 in Avenrae's own log, **zero of them by Avenrae.** The two clients are
+> partial in **complementary** directions and **THE OBSERVER SEES MORE.** A meter
+> watching other players reads exactly the stream that is richest about them.
+
+**The number C did NOT report is why I believe the one it did:** a first pass over
+the raw 23.24h overlap gave **42.2%** — wrong denominator, because that window
+includes hours the two were in different zones. **It measured how much of
+Avenrae's playtime was near Shara.** C caught it and said so rather than
+publishing a headline.
+
+#### R54 — AND THE REAL BOUND IS ACTOR IDENTITY, WHICH NEITHER OF THEM NAMED FIRST
+
+**E, measuring 181,325 timestamped lines:**
+
+> **The top melee actor is `Heart harpie` at 10,383 lines — 63% of ALL name-shaped
+> melee — AND IT IS A CHARM PET.** Bzzazzt, Bzzzt and Bazzt Zzzt are pet-shaped
+> too. **The log offers ONE "X pet has been slain by Y" line in 181,325, and ONE
+> group-join line. THERE IS NO ROSTER IN THE LOG.**
+
+> **E's framing, which is the correct one: C's bound is not "can I see other
+> players" — it can, and C proved it — but "CAN I TELL WHICH NAME-SHAPED ACTOR IS
+> A PERSON."**
+>
+> **A top-4 leaderboard on these counts ranks a charm pet above every human present
+> and cannot know it did.**
+
+> **RULING R54: an actor the meter cannot classify as a person does not appear in
+> the top-4 as if it were one. Three-way — person / not-a-person / unknown — with
+> unknown SHOWN rather than dropped.**
+>
+> **That is the FOURTH subsystem tonight decided by one rule**: actionability,
+> rankability, engagement detection, and now actor identity. **Each time a session
+> refused a boolean it could not source.**
+
+**And it promotes the B join from a lead to the critical path: A CHARM PET IS A
+MOB.** Joining name-shaped actors against B's 1,958 mob names **removes mobs and
+charmed mobs in one operation**, leaving something much closer to the set of
+people.
+
+**E's own account of its error is the R36 shape one layer out:** *"My sentence was
+true of MY REGEXES and false as a statement about THE LOG, and phrased so C could
+only read it the second way. I described my tool and C heard a fact about the
+game."*
+
+#### R55 — I ASSERTED THE TRIO LEVEL RULE TWICE AND NOBODY HAS MEASURED IT
+
+**B: *"you have twice described the trio rule as using the LOWEST level and my code
+takes the HIGHEST."*** `levelCheck` returns the highest qualifying class level;
+`research/eql-game-systems.md:279` says lowest. **B A/B'd it rather than asserting:
+flipping to LOWEST fails exactly 2 tests, both in `character.test.ts`, both named
+for the rule. The behaviour is pinned deliberately, to HIGHEST.**
+
+**And I checked the constitution, because it is my source:**
+
+> **`CLAUDE.md:122-124` states the lowest-class rule with NO SOURCE, NO DATE AND
+> NO MEASUREMENT** — three lines above a difficulty claim carrying *"Measured, 8
+> Aug 2026, 113 times across seven sessions"*, and in a file that elsewhere writes
+> *"Measured 11 Aug 2026 across the 52 sessions whose difficulty a numbered zone
+> line states on its own."*
+>
+> **The file sources everything except that line.**
+
+> **RULING R55: the trio level rule is UNRESOLVED and I retract both my
+> assertions of it.** Neither C nor E hardcodes either value. **The gate is a
+> caller-supplied input — which B's `bis.ts` already does, and which is why B was
+> the only session not exposed to my error.**
+>
+> **B's warning is the one that mattered: "if C and E build against my model
+> believing it implements 'lowest' they inherit a contradiction from a session
+> that told them it was settled."** That session was me.
+
+#### B's other answer, and the trap inside it
+
+**WE HOLD NO SPELL DATA ANYWHERE.** Character is `{id,name,race,levels,loadouts,
+activeLoadoutId}`; Loadout is `{id,name,classes,race?}`. No spell, ability or AA
+field. The payload ships meta, items-index, 23 item shards, contamination and
+focus-effects — **all item effect kinds.**
+
+> **THE TRAP B NAMED: `focus-effects.json`, 66 entries like "Affliction Efficiency
+> I", LOOKS like a spell list and is not.** It describes what an ITEM's focus
+> effect does. **"Anyone joining a spellbook to it gets item modifiers back."**
+
+**And B verified my three relayed claims with its own instrument rather than
+taking them:** a synthetic continuous fight spanning 31 Aug 23:59:40 → 1 Sep
+00:00:58 gives **engagements 1, engaged_seconds 78 — matching E's "after" exactly
+— and `months_seen` 2 as a number.** **Cross-instrument confirmation of both of
+E's fixes, by the consumer.**
+
+**Re-vendored pinned to a COMMIT, not a branch:**
+`sky-ledger@6c9fc313`, sha256[:8] `d6e17bec`, 20,337 bytes, v1.2.0, provenance
+recorded beside it.
