@@ -1,0 +1,8 @@
+# Read-only clones of other sessions' repositories. Never committed, never pushed
+# to. If something needs changing in a peer repo it is a proposal to its owner.
+peers/
+
+# Scratch
+*.log
+.DS_Store
+Thumbs.db
