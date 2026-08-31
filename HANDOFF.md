@@ -11816,3 +11816,163 @@ when the only party affected already has it.**
 **Two entries are marked superseded or withdrawn rather than deleted**, because
 Session 0 is right that *a withdrawn item and a closed one leave the same empty
 space on a board and mean different things.*
+
+### 31 Aug 18:2xZ — RULING: THE BLIND AUDIT ADJUDICATED. Findings are mine; the decisions are the owner's
+
+**Conferred with the Auditor and the Sage as instructed. Twelve findings verified
+against the tree, four corrections from the Sage, one correction the Auditor made
+to itself before anyone found it.**
+
+> **THE SPLIT, AND IT IS CLAUDE.md §1 RATHER THAN MY PREFERENCE.** *"The human
+> directs. Priorities, scope, what publishes and when."* **So: which findings are
+> TRUE, how confident, and what is sourced — mine, and ruled below. Whether to
+> import client tables, build icons, open a Discord or reverse the analytics
+> position — the owner's, and presented, not decided.**
+>
+> **I am not implementing anything.**
+
+#### The verdict on all twelve
+
+| | finding | verdict |
+|---|---|---|
+| **F01** | zero `<img>` on the homepage | **VERIFIED, and stronger than stated** — also zero `<picture>`, zero `background-image` |
+| **F02** | coverage is a rounding error | **CORRECTED BY ITS AUTHOR.** Sitemap counts verified as leaf counts |
+| **F03** | 85.4% of homepage bytes are decoration | **VERIFIED EXACTLY** — 241,709 / 206,316 / 16 / 85.4%, every figure |
+| **F04** | not where your community lives | **SPLIT — see below** |
+| **F05** | markets methodology over utility | **strategic inference, not measured. Owner's call** |
+| **F06** | homepage contradicts itself | **MEASURED RIGHT, LABELLED WRONG — see below** |
+| **F07** | nothing brings anyone back | **strategic inference. Owner's call** |
+| **F08** | tools named for insiders | **strategic inference. Owner's call** |
+| **F09** | flying blind, no analytics | **VERIFIED.** Zero external script srcs sitewide; the only `<script src>` in 701 pages is `assets/site.js` |
+| **F10** | a 100.5 MB download | **VERIFIED** — and re-verified twice today at 100,482,932 bytes |
+| **F11** | deleted the 3D while a rival shipped it | **REFUTED ON CAUSE — see below** |
+| **F12** | per-page inline stylesheets | **VERIFIED, and the audit understated it** |
+
+#### F04 — the load-bearing half holds, the stated measurement does not
+
+**"Zero Discord/Reddit/YouTube/Twitch URLs" is false on two of four platforms.**
+Measured in `public/`: **Discord 0, Twitch 0 — correct. Reddit 1, YouTube 6.**
+Seven URLs, all crediting outside contributors — `@THEGAMEIS`, a cavepig guide on
+r/EQLegends, four video links.
+
+**Those exist because of CLAUDE.md §7's third exemption: named third parties keep
+their names.** So the site does link outward — **as credit, never as presence.**
+
+**And "one GitHub issue link and one release link" is false as written:** 718
+issue-link occurrences across 716 files, 4 release links across 2 files.
+
+> **The finding survives its own measurement being wrong.** *Zero Discord* is the
+> load-bearing part and it is exact. **We are the only serious project in this
+> field with no room of its own, and that is the point.** Strike the counts, keep
+> the finding.
+
+#### F06 — the sixth shape, committed by an auditor who could not have seen otherwise
+
+**Both numbers are exactly where the audit says** — `index.html:88` reads `435
+items indexed`, `:103` reads `It holds 3,663 items`, fifteen lines apart.
+
+**But "self-contradiction" and "a visitor concludes you cannot count" are false.
+They count different corpora and NEITHER IS TYPED:**
+
+- `435` = `index-data.json` `counts.item_pages`, computed by `extract.py:442`,
+  consumed at `build1.py:36`
+- `3,663` = `50-upgrades.json` `figures["counts.items"]`, a dated vendored
+  snapshot, consumed by path at `build1.py:233`
+
+**The site even states the arithmetic itself** at `items/index.html:85` — 435 item
+pages plus 6 family pages = the 441 leaf URLs.
+
+> **Verdict right, description names a different quantity. Our own sixth shape,
+> in the audit.** And **it is exactly what a blind read cannot reach** — the
+> datasets are not on the public surface.
+>
+> **THE STRATEGIC POINT SURVIVES INTACT, AND THE SAGE PUT IT BEST: this
+> contradiction is ours alone.** A visitor also cannot see the datasets. **Our own
+> planner holds eight times what our own Index exposes, and no competitor did that
+> to us.** Strike "cannot count", keep the finding.
+
+#### F11 — refuted on cause, and the audit's own remedy was already in place
+
+**Four records state the reason and none of them is geometry.** `CLAUDE.md:691`,
+the 17 Aug changelog, commit `ac6f3c7f`, `README.md:110`: withdrawn **because the
+tactic it illustrated — pulling the boss to island 7 — was inherited Project 1999
+text**, and the collaborator has always killed that boss where it spawns.
+
+**THE BADGE THE AUDIT PROPOSES ALREADY EXISTED.** `docs/PLANES.md:572` — *"Every
+model states in place whether it is surveyed or schematic, and the Eye of Veeshan
+one says schematic."* **It was present on that model and did not prevent the
+withdrawal, because the badge was not what was wrong.**
+
+**The date is wrong too** — the audit cites a 20 August entry; the withdrawal was
+17 August. The 20th is a correction to a share card that outlived the deletion by
+three days.
+
+**And the geometry runs the other way.** `BACKLOG.md:294`: `zone-geometry.json`
+holds **no walls and no per-floor heights**, so a 3D view *"would have to invent a
+height for every floor, every wall, and the gaps between storeys."* **The audit
+cites the mesh pipeline as the enabler; the repository cites it as the blocker.**
+
+> **THE SAGE'S SHARPER POINT, AND IT IS THE ONE THAT MATTERS.** The rule from that
+> withdrawal is **A DRAWING IS AN ASSERTION.** So the audit's remedy — badge it and
+> ship it — **is fine for a ZONE ATLAS and forbidden for an ENCOUNTER MODEL, and
+> the audit does not distinguish them.** Adopted uncritically its framing
+> **licenses re-shipping a false tactical assertion with a badge on it.** Split the
+> two before anyone builds either.
+>
+> **What survives: a rival ships a 3D atlas and we do not.** That argument is worth
+> having. **F11 does not make it.**
+
+#### F12 — verified, and worse than the audit said
+
+**441 item pages, each carrying a `<style>` block of 3,471 bytes.** The audit said
+"roughly 4 KB" and stopped there. Three things it did not measure:
+
+1. **All 441 blocks are BYTE-IDENTICAL** — one md5 across every page. There is no
+   per-page variation to preserve.
+2. **It is IN ADDITION to a cached stylesheet, not instead of one.** All 441 also
+   link `site.css` (88,795 B) — which carries a content hash and a one-hour
+   cache.
+3. **The pages themselves are `max-age=0, must-revalidate`.** So the identical
+   block is re-fetched on every page load **while the shared sheet is cached.**
+
+**1,530,711 duplicated bytes.** The audit called it "minor beside the rest of this
+list." **It is the cheapest fix on the list and the only one with no design
+decision attached** — the destination file already exists, already caches, and the
+content is already identical.
+
+#### THE STRUCTURAL FINDING: our tier hierarchy has no row for our own best source
+
+**The Sage's correction (A), and it is the most valuable thing to come out of
+this.** The audit proposes importing client-mined tables at **Tier 4** — but
+Tier 4 is *community aggregators, snapshot-dated.* **Client-mined data is
+first-hand from the game's own files. Filing it at 4 ranks our own reads of the
+client BELOW a competitor's spreadsheet.**
+
+**We already treat it higher and never wrote it down.** `geometry.py` reads the
+meshes and **used them to falsify six hand-plotted Najena coordinates** — we let
+mined data overturn a published claim. **That is tier-1 behaviour.**
+
+> **Our tiers run M, 1, 2, 3, 4, 5 and there is NO ROW for client-mined. That is a
+> real hole and the audit exposed it without naming it.** The fix is a tier between
+> M and 1: first-hand, structural, dated, **and stale on the next patch** — which is
+> its one genuine weakness and the thing the badge must carry.
+
+#### AND THE FINDING OF THE DAY, WHICH IS NOT IN THE AUDIT
+
+**The Sage, from a month of watching:**
+
+> **This project has an institutionalised brake and no institutionalised
+> accelerator.** The Sky tracker was withdrawn rather than fixed. The 3D was
+> deleted rather than re-badged. The encounter guide was withdrawn. **CLAUDE.md
+> contains a rule whose payload is a pointer to a list of things NOT to build, and
+> there is no corresponding list of things we have decided to ship.**
+
+**Every one of those calls was individually defensible. That is the point.** The
+audit's closing paragraph, which I am not softening:
+
+> *"Almost every criticism in it is a criticism of restraint, and restraint is the
+> reason the site is good… collectively they have produced a site that is more
+> careful than any competitor and less useful than all of them."*
+
+**Four corrections do not touch that sentence, and their existence must not be
+allowed to do the work of a rebuttal.** The Sage said so first and was right to.
