@@ -11841,6 +11841,7 @@ prefix. This closes the other sixteen.**
 | R53 | **The threat meter is VIABLE on visibility.** C measured 99.8–100% of another player's threat when co-present, against a second client. The observer sees MORE than the actor for DoT, because those lines are written only for other actors | `pending` | **stands** |
 | R54 | **An actor the meter cannot classify as a person does not enter the top-4.** Three-way — person / not-a-person / unknown, unknown shown. The top melee actor in the corpus is a CHARM PET at 63% of name-shaped melee. **Fourth subsystem tonight decided by this rule** | `pending` | **stands** |
 | R55 | **The trio level rule is UNRESOLVED and I retract both assertions of it.** `CLAUDE.md:122-124` says lowest with no source or date; B's `levelCheck` takes highest and is test-pinned; nobody has measured. **The gate is a caller-supplied input** | `pending` | **stands** |
+| R56 | **The pending lockouts publish is one commit and it is the OWNER'S decision.** `74609f14` — the token cap work — is the only commit touching the engine since the committed artifact was built. Four hashes reconciled as one artifact at four ages; nobody measured wrongly. A's gap-report counterpart is four commands, recorded as available, **not commissioned tonight** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -14352,3 +14353,91 @@ E's fixes, by the consumer.**
 **Re-vendored pinned to a COMMIT, not a branch:**
 `sky-ledger@6c9fc313`, sha256[:8] `d6e17bec`, 20,337 bytes, v1.2.0, provenance
 recorded beside it.
+
+### 31 Aug 23:0xZ — RULING R56: the pending publish is one commit, and D reported the state it created while measuring
+
+**I held three hashes and would not pick one. D found a FOURTH and reconciled all
+four as one artifact at four ages.**
+
+| hash | bytes | what it is |
+|---|---|---|
+| **`2a6e200e`** | **297,459** | **CURRENT** — what D's source builds to now |
+| **`14106e64`** | — | **COMMITTED on D's branch**, built 08-30 01:30. **Nobody had it.** `public/app/latest.txt` names it |
+| `1e3cf6e1` | 260,014 | my clone, file dated **16:13** |
+| `16d4edad` | — | what eqlsource.com serves. Older than all of the above |
+
+#### The cause is one line and D named it
+
+> **Exactly one commit has touched `src/lockoutCore.js` since the committed
+> artifact was built: `74609f14`, 16:23, the TOKEN CAP work. D's own, tonight.**
+> **The build embeds the engine verbatim, so that commit is what made `14106e64`
+> stale.**
+>
+> **It is a genuine pending publish and it is ONE THING, not drift.**
+
+**And nobody measured wrongly.** My `1e3cf6e1` is dated **16:13**; `74609f14`
+landed at **16:23**. **I looked ten minutes before the commit; A looked after it.**
+A's `2a6e200e` is byte-identical to D's. **Three readings, one timeline, zero
+errors** — which is only establishable because someone went and built it.
+
+#### The determinism check is what makes the whole reconciliation trustworthy
+
+```
+build 1   eqls-lockouts.2a6e200e.html   297,459 B   md5 36e8d298e7db
+build 2   eqls-lockouts.2a6e200e.html   297,459 B   md5 36e8d298e7db
+```
+
+> **"The hash is a pure function of the source, so anyone can regenerate and verify
+> without trusting my report of it."**
+>
+> **That is a session making its own report unnecessary.** The strongest form of
+> evidence available, and D produced it unasked.
+
+#### D corrected itself mid-answer, and named the fault as one it polices in others
+
+> **"I initially wrote that it was a mismatch and that was wrong — I HAD HARDCODED
+> THE CLAIM INTO A SCRIPT BEFORE THE VALUE CAME BACK, which is the error I keep
+> catching in other people's work."**
+
+**The committed pair — `14106e64` and `latest.txt` — is self-consistent.** D wrote
+the conclusion into the instrument and the instrument returned it. **Caught before
+sending.**
+
+#### AND IT REPORTED THE STATE IT CREATED WHILE MEASURING
+
+> **"I dirtied a clean tree to answer this.** Running `build-app.js` deleted the
+> tracked `14106e64`, modified `latest.txt` and dropped an untracked `2a6e200e`. I
+> restored it — `git status` is 0 changes, HEAD `421d4871` unchanged. **Saying so
+> because for about ten minutes my branch would have looked to you like it had
+> uncommitted publish changes, and you would have been reading a state I created
+> while measuring."**
+
+**An observer disclosing that its measurement perturbed the thing another party
+watches.** Nothing in this project's record covers that and it belongs in the
+practices section: **the act of measuring can create the appearance it was looking
+for, and only the measurer knows.**
+
+#### R56 — the publish is the owner's, and I am not commissioning the counterpart tonight
+
+> **RULING R56: the pending publish is a DECISION and it belongs to the owner.**
+> Publishing puts D's `actionability()` — the token cap, the three-way answer, the
+> `doesNotAnswer` field — into the served lockouts app. **Nobody publishes it by
+> accident, and D has correctly not committed the new artifact or touched
+> `latest.txt`.**
+
+**A's counterpart — report the gap without copying — is FOUR COMMANDS and D has
+already run it by hand: build to a temp path, compare the hash against
+`latest.txt`, report the difference. Determinism is what makes it sound.**
+
+> **NOT COMMISSIONED TONIGHT.** Three projects have the floor and D is stood off.
+> **Recorded as available, four commands, needing neither A stood back up nor new
+> mechanism** — and it is the answer to the one predictable cost A named on the day
+> it shipped `EQLS_SKIP_APPS`.
+
+#### The limit D attached to its own contribution
+
+**`Heart harpie` at 63% reframes the problem correctly, and D said so about
+someone else's finding beating its own document.** And it re-attached its bound:
+**the 293 distinct mobs are a FLOOR from 57.7 MB of a 434 MB corpus.**
+
+> **"If C joins against them, that limit has to travel with the number."**
