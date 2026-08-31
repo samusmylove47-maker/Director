@@ -67,9 +67,16 @@ as a condition. C proposes; C does not push without her consent.
 
 **The topology is the single most important operational fact:**
 
-> **The Director cannot initiate.** `SendMessage` is refused for this cloud
+> ~~**The Director cannot initiate.** `SendMessage` is refused for this cloud
 > session. **Your branch is your entire voice.** You write, and something else
-> must notice.
+> must notice.~~
+>
+> **STRUCK 31 August 2026 — true of a cloud Director, false of a local one, and
+> load-bearing enough that a reader could still act on it.** The post moved to a
+> local session that day and **a local Director can initiate: `SendMessage`
+> works.** The struck text is kept because it is the correct description of the
+> constraint the cloud Director actually operated under, and most of this file
+> was written from inside it. See the addendum at the end of this file.
 
 Local sessions die when the owner's PC goes off — that includes Relay 0, which is
 the only outbound path. **When the PC is off, the owner is the relay.** Keep a
