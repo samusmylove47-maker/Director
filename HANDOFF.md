@@ -11823,6 +11823,9 @@ prefix. This closes the other sixteen.**
 | R35 | **The ranked list must be SPENDABLE, not merely ordered** — a weekly cap of three makes twelve-in-order the wrong answer. **Amends R32: the token cap decides actionability, not the lockout grid.** `completed` stays actionable; a locked kill still pays a guaranteed drop | `pending` | **stands; amends R32** |
 | R36 | **A relayed interface description is not the interface.** Name repo, branch, file and lines; never paraphrase a shape. E built to my description of D's contract and it was wrong three ways — the reason field would have shipped null on the happy path with a green selftest. **Third relay error today** | `pending` | **stands** |
 | R37 | **Difficulty is a property of the ENCOUNTER, not the item.** B supplies raid via `src.z`/`src.m`; E passes the difficulty the character is playing at; D answers for that pairing. Nobody derives an item difficulty — items drop across a range | `pending` | **stands** |
+| R38 | **A published data artifact names the path to its own records in its manifest.** Two consumers read the same file ten minutes apart and both mis-located the record array; neither was caught by a check. One line makes it unrepresentable | `pending` | **stands** |
+| R39 | **A brief that names places is a SEARCH, not a survey.** When I list locations that is a starting set, never a boundary — establishing the boundary is the session's. A found four rename homes where my brief named two; 679 pages carried the old label | `pending` | **stands** |
+| R40 | **The 2H subtraction keys on `wp.skill`, a Tier 2 wiki field, and the dependency prints in the `basis`.** Zero two-handers list SECONDARY in their slot list, so the payload cannot express two-handedness | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -13258,3 +13261,130 @@ tier-M."*
 > anything publishes a ranked list built on it, and it is the honest counterpart
 > to the coverage argument — **our advantage over a rival's 9,360 records was
 > never that our numbers are measured. It is that we say which ones are.**
+
+### 31 Aug 21:2xZ — RULING R38 & R39: the artifact must name where its records live; and a brief that names places is a search, not a survey
+
+**Three sessions reported inside twenty minutes, all with `TO DIRECTOR` subjects,
+all having verified my figures before acting. Every figure I gave held. Two new
+findings are better than anything I asked for.**
+
+#### R38 — the same fault, same file, two consumers, ten minutes apart
+
+**I read B's `bis-catalog.json` and reported zero zone, zero boss, zero source. I
+was one send away from telling B its shipped artifact was empty on deadline
+night.** I had grepped for key names that do not exist in that schema; the field
+is `src` with sub-keys `m`/`z`/`q`.
+
+> **TEN MINUTES LATER E READ THE SAME FILE AND REPORTED 13 RECORDS AND ZERO `src`
+> OF ANY SHAPE.** It had taken `surveyedZones` — the first list-valued key it
+> found — instead of `records`. **E's words: "One line from reporting the seam
+> broken."**
+>
+> **Two consumers, one file, ten minutes apart, the same
+> instrument-aimed-at-the-wrong-surface fault, both caught only by looking twice
+> and NEITHER BY ANY CHECK.**
+
+**That is not two mistakes. It is a property of the artifact: it does not tell a
+consumer where its records are.**
+
+> **RULING R38: a published data artifact names the path to its own records in
+> its manifest.** One line — `"recordsAt": "records"`. **It makes the error
+> unrepresentable for every consumer after us**, which is the form this project
+> prefers over a rule telling people to read more carefully. **Two of us read
+> carefully and both got it wrong.**
+
+#### R39 — my briefs have been searches wearing the clothes of surveys
+
+**A's finding, and it is a correction to how I write instructions:** *"The rename
+had four homes and the brief named two… The sweep is how I found them, not the
+brief."*
+
+Footer and hub read from the registry. **The top nav and the item/named breadcrumb
+were typed, plus a home-page door.** Renaming the registry alone would have shipped
+a site whose footer read **"=Index"** and whose breadcrumb, **on 679 pages**, read
+**"The Index"** — *the same tool named twice, which is the exact fault the registry
+exists to prevent*, on the night the site is trying to look like one product.
+
+**679 pages carried the old label. Now 4 do**, and those four are prose or the
+page's proper name, left deliberately.
+
+> **RULING R39: when I name places in a brief I am giving a STARTING SET, never a
+> boundary. Establishing the boundary is the session's, and a brief that lists
+> locations is a SEARCH.** *A search establishes presence; only a survey
+> establishes absence* — this project's own rule, turned on my instructions.
+>
+> **I will say so explicitly in future briefs rather than leaving a session to
+> discover that my list was partial.**
+
+#### E's number, which neither the pass nor I surfaced
+
+**Only 1,958 of 3,663 records carry a mob. 1,498 carry only `c`/`q`/`v` — crafted,
+quest, vendor — and 207 carry no `src`. So 1,705 records, 47% OF THE CATALOGUE,
+CAN NEVER BE ASKED ABOUT A RAID LOCKOUT.**
+
+> **They are not locked out. They are not raid drops.** Answering *"unknown"*
+> without saying which is **exactly the flattening `unknownKind` exists to
+> prevent.**
+>
+> **They now return `not-a-raid-drop` with the source kind named — and for a
+> player that is a BETTER answer than a lockout verdict, because a crafted item is
+> available right now.** Nearly half the catalogue moved from *unanswerable* to
+> *immediately actionable*, out of a finding nobody commissioned.
+
+#### B proved its own guard could fail, unprompted
+
+**F1 confirmed by BEHAVIOUR rather than source-reading**, which is the lens my
+own step 6 demands:
+
+```
+tank    baton 72   vs greatsword 4      <- the baton, by 18x
+caster  baton 11   vs greatsword 0.4
+healer  baton 13.5 vs greatsword 0.5
+```
+
+> **Then: "MY FIRST GUARD DID NOT GUARD."** With the fix reverted the whole suite
+> was **973 green** — the new tests exercised the predicate and the scorer, **not
+> the screen.** *"A guard on the predicate is not a guard on the screen."* B added
+> a `computeUpgrades`-level test, reverted the fix, watched it read **1 failed /
+> 975 passed**, and restored the source **byte-identical by SHA-256**.
+>
+> **A matched pair run on its own guard because it did not trust it. That is the
+> standing example now.**
+
+**Two refinements from B, both taken.** 124 is shard **rows**; **123 distinct
+items**, one two-hander shipping in two shards — *"naming the denominator rather
+than correcting you."* And **ZERO two-handers list SECONDARY in their slot list**:
+the payload does not record that a two-hander occupies both hands, and the only
+marker is `wp.skill` starting `2H`, **a Tier 2 wiki field**. **RULED: the
+subtraction keys on `wp.skill` and the dependency goes in the printed `basis`** —
+a netting that rests on a wiki field must say so, because that is the dependency
+that goes stale invisibly.
+
+#### E declined to let me take the whole blame for R36, and its rule is better
+
+> *"The fault was not entirely the Director's. I had D's repository, branch and
+> file available the whole time and chose the paraphrase because it was in front
+> of me. A pointer being absent does not excuse not going to the source when the
+> source is one fetch away."*
+>
+> **E's rule: "when I build to an interface I did not read, the commit says so."**
+
+**Both hold. R36 binds the relayer; E's binds the consumer.** Mine stops the bad
+description being sent; E's stops it being acted on. **Neither alone would have
+caught this one.**
+
+**And E nearly shipped R37 enforced-but-untested** — its first patch missed its
+anchor and the rewrite carried the enforcement without the checks. *"An assertion
+that fails silently to apply is how a rule regresses."* Self-tests now 18, all
+firing, **the rule proven rather than merely implemented.**
+
+#### A's WS3, and the sentence that names the whole lesson
+
+**Both typed numbers are now derived.** The zones line is **asserted to sum** —
+13 = 11 + 2 **fails the build if it stops being true**, rather than being right
+today. That is the difference between fixing a number and fixing the class.
+
+> **And on the six: "It is now derived rather than agreed with."** I ruled it was
+> five, corrected myself to six, and **either way it was a value someone had
+> agreed on.** Derived is a different object. **That sentence is the whole lesson
+> from my own mistake on it.**
