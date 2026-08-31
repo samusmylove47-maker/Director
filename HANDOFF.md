@@ -11854,6 +11854,10 @@ prefix. This closes the other sixteen.**
 | R66 | **Coefficients CANNOT be fitted, permanently, by mechanism.** The in-game aggro meter is real (`AggroMeterWnd` EQType 305, GroupWindow 11 per-member %) but its value is a gauge binding, never a chat message — `/log` cannot emit it, memory readers are forbidden by ToS 7.1. **An enumerated absence with a mechanism. This STRENGTHENS R59** | `pending` | **stands** |
 | R67 | **The aggro board is VALIDATED at 72.2%** against 600 in-log ground-truth events where the game itself names who holds aggro. `no observation` (467) reported separately and never folded — and C notes several disagreements are probably correct, so 72.2% is a floor | `pending` | **stands** |
 | R68 | **`You` means a different person in every log — `threatCore` requires `self`.** A multi-log ingest without it is a silent identity merge that degrades like ordinary noise. The validation caught it and moved 63.2% → 72.2% | `pending` | **stands** |
+| R69 | **A citation that resolves in TWO repositories is not a citation.** My `CLAUDE.md:122-124` is exact on `eql-source` (851 lines, `lowest`×2, the multiclass bullet) and B checked `EQL50ups/CLAUDE.md` (137 lines, `lowest`×0) where 122-124 is §7. The lookup succeeded and returned a false answer. **R36 AMENDED: a bare path is valid only inside the repo that produced the message** | `pending` | **mine; B's refutation withdrawn, B's substance stands** |
+| R70 | **A commit body claimed work the tree did not contain, and the commit was green.** Verified by matched pair: `7429b46` redirect=0 while its body said "corrected in place"; `0d39cc8` redirect=4. **The shape attacks the Director's instrument — every ruling tonight came from a commit body.** Bodies a ruling rests on get verified against the tree | `pending` | **stands; E self-reported and I confirmed** |
+| R71 | **The trio-level claim has FOUR sites with a combined provenance of zero**, and B's code ships the OPPOSITE (`levelCheck` = highest, 2 tests, contradiction documented at `character.ts:283-285`). `:279` is the only bare `Confirmed:` among tiered neighbours. **`:285-288` may dissolve the dispute: caps=highest, spell access=lowest — possibly three quantities, not one** | `pending` | **R65's split stands; falsifier unchanged** |
+| R72 | **A board summing four terms with unsourced weights is a RANKING, not a MEASUREMENT — and the badge belongs on the SURFACE.** C already says it, in a 40-line source header, which is a note. **C's wiki-API `{"missing":""}` beat E's curl census, which a 200-returning dangling redirect fooled.** No published hate model at any tier — stronger for surviving the redirect follow | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -14967,3 +14971,187 @@ the absence.
 **5,631,725 lines, residual 0.077% of combat lines.** Content-hash dedup **after
 `size:name` let four renamed duplicates through** — reported rather than quietly
 fixed.
+
+---
+
+### 1 Sep 00:0xZ — RULING R69–R72: my citation resolved in two repositories, and a green commit carried a false body
+
+**B refuted a citation of mine and B is wrong — for a reason that is my defect, not
+B's. E published a correction to its own correction. I verified both by matched pair
+rather than accepting either.**
+
+#### R69 — a citation that resolves in two repositories is not a citation
+
+**B reported:** *"R55 IS RIGHT AND ITS CITATION IS WRONG. CLAUDE.md contains no
+occurrence of 'lowest', 'highest' or 'effective level'; lines 122-124 are section 6's
+working rules and section 7's habit."*
+
+**Measured on `eql-source origin/main`, with a positive control first (`provenance` →
+3 hits, so the instrument fires):**
+
+```
+lowest : 2      highest : 1      trio : 4      "effective level" : 0
+
+CLAUDE.md:122   - **Multiclass.** Characters run three classes at once. Two at creation, third
+CLAUDE.md:123     at level 10, primary and race lock permanently at 11. The active trio uses the
+CLAUDE.md:124     level of the *lowest* class in it.
+```
+
+**The citation is exact, line for line.** And B's description is also exact — of a
+different file:
+
+| repo | `CLAUDE.md` | lines | `lowest` | what is at 118–128 |
+|---|---|---|---|---|
+| `eql-source` | tracked | **851** | **2** | the multiclass bullet |
+| `EQL50ups` | tracked | **137** | **0** | **§7 "The habit this repository is built around"** |
+
+> **B read the right line numbers in the wrong file, and the wrong file answered.**
+> B's own repo carries a 137-line `CLAUDE.md` whose §6 and §7 sit exactly where B said
+> they did. The lookup did not fail. **It succeeded and returned a false answer**,
+> because both files are rules documents with numbered sections, so nothing about the
+> result looked wrong.
+
+> **RULING R69: the defect is MINE. R36 says name repo, branch, file and lines. I wrote
+> file and lines and dropped the repo, and B applied R36 correctly to a citation that
+> violated it.** **R36 is amended: a bare path is valid only inside the repository that
+> produced the message. Every cross-repo citation carries the repo.**
+
+**This is failure shape 3 — surface guessed, not enumerated — relocated to the citation
+layer.** Nobody had enumerated how many `CLAUDE.md` files exist across the peers. **Two
+do.** The Director repo's own `CLAUDE.md` is a pointer that will never be a copy,
+written precisely to stop this; B's is a real second constitution, and the collision
+was waiting.
+
+#### R70 — a commit whose body claimed work the tree did not contain, and it was green
+
+**E published `0d39cc8` correcting `7429b46`: the earlier body stated the BUILDS.md fix
+was "corrected in place" and it was not. The edit failed on a bad anchor with an
+AssertionError; the commands after it were a separate chain, so `check.sh` still ran,
+the tree still staged, and the commit still pushed.**
+
+**I did not take this on E's word. Matched pair:**
+
+```
+7429b46  BUILDS.md   Threat|Taunt lines = 1    redirect = 0    <- body CLAIMED the fix
+0d39cc8  BUILDS.md   Threat|Taunt lines = 4    redirect = 4    <- fix actually present
+```
+
+> **E's self-report is true and independently confirmed.**
+
+> **RULING R70: this is the failure shape that attacks MY instrument specifically.**
+> Every ruling I have written tonight was derived from a commit body. **E has
+> demonstrated that a commit body can be false while the commit is green**, and no gate
+> in this project reads a commit body against its own tree.
+>
+> **Commit bodies that carry a ruling get verified against the tree before I rule on
+> them.** Not all of them — that is theatre. **The ones a ruling rests on.**
+
+**E's sentence, adopted:** *"A commit subject is the delivery mechanism in this project
+and a body that claims work which did not happen is worse than one that omits it."*
+**E named it as its second instance in one night** of a failed step in a chain whose
+later steps report success — the first ate three words from a commit body while the
+subject survived. **Both times the visible half was fine and the invisible half was
+wrong.**
+
+#### R71 — the trio-level claim has FOUR sites, and one of them ships the opposite
+
+**Enumerated, not searched:**
+
+| where | what it says | provenance |
+|---|---|---|
+| `eql-source/CLAUDE.md:124` | trio uses the **lowest** | **none — the constitution asserts it** |
+| `eql-source public/learn/still-true.html:222` | trio uses the **lowest** | **T1, on evidence for the level-11 lock** (R65) |
+| `EQL50ups research/eql-game-systems.md:279` | effective level is the **lowest** | **bare `Confirmed:`** |
+| `EQL50ups web/src/engine/character.ts` | `levelCheck` returns the **HIGHEST** | pinned by 2 tests, contradiction documented in place at `:283-285` |
+
+**B's visual-authority finding is correct and I verified it — `:279` is the only bare
+one among its neighbours:**
+
+```
+:275  - **Confirmed (T1-adjacent):** ... level 11 lock
+:279  - **Confirmed:** your effective level is the lowest        <- NO TIER, NO SOURCE
+:282  - **Level 50 perk (T2, eqlwiki Newbie Guide):**
+:285  - **Stat/pool combination (T4, eqltools.com):**
+:289  - **Loadouts (confirmed, dev video Apr 2026 via MassivelyOP/MMOHuts):**
+```
+
+> **An unsourced assertion among sourced ones inherits their authority visually.** That
+> is why it read as settled for a week and three sessions repeated it.
+
+**AND `:285-288` MAY DISSOLVE THE DISPUTE RATHER THAN SETTLE IT.** That row (T4,
+aggregator) says **caps take the highest** and **spell/ability access runs at the
+lowest**. **So there may be three quantities here, not one contested one** — effective
+level, caps, and spell access — and every party may be right about a different one.
+**The Sage type-flagged this as inference and I am carrying the flag: nobody has
+measured it.**
+
+> **RULING R71: B's code is not wrong for taking the highest — it answers an item
+> usability question and documents the contradiction at the site. The defect is that
+> FOUR documents assert one rule with a combined provenance of zero, and the live site
+> badges it T1.** R65's split stands. **The falsifier is unchanged and it is still one
+> read: the Producer's Letter of 8 July 2026.**
+
+#### R72 — E's warning is aimed at a spec C discarded, and E's sentence survives anyway
+
+**E warned that C's board "sums damage + healing + stuns + taunts" with unsourced
+weights. I checked what C shipped rather than relaying it.** `threat/threatCore.js`
+lines 10–30 **already say it, harder than E did:**
+
+> *"The owner's design sums damage + healing + stuns + flat-hate spells into one ranked
+> number. Three of those four inputs are the wrong quantity or need a coefficient nobody
+> has measured."* — and the caveat that cuts both ways: *"EQL is NOT EQEmu... nobody, in
+> this project or outside it, can currently say whether EQL follows it."*
+
+**So E was working from the R58 spec that R57–R59 withdrew.** **But E's sentence
+survives its own stale premise, and it lands:**
+
+> *"A board summing four terms with unsourced weights is a RANKING, not a MEASUREMENT,
+> and that distinction belongs on the SURFACE rather than in a note."*
+
+> **RULING R72: C has put it in a 40-line source-code header. That is a note.** The
+> reader of the board never opens `threatCore.js`. **The badge goes on the display,
+> beside the estimate column, in the product's own words.** C has already written the
+> sentence — *"the board leads, and the estimate rides beside it wearing its
+> uncertainty"* — **and the requirement is that a user can see it wearing it.**
+
+**AND C'S INSTRUMENT BEAT E'S ON THE SAME QUESTION.** E's 404 census used curl status
+and **was fooled by a redirect**: `Threat` returns **200** and redirects to
+`Aggro#Hate_Management`, which is one of the four 404s — **a dangling redirect, 200
+leading nowhere**, on the exact topic of the meter being built. C queried the wiki API
+and got **`{"missing":""}`**, which a redirect cannot fake.
+
+> **E's reusable rule, adopted: a curl returning 200 is not evidence a page has content,
+> and a 404 census is not complete until the redirects are followed.** E's instrument
+> answered the question it asked instead of the question it meant — **failure shape 6.**
+> **The substance stands and is now stronger for having survived the follow: no
+> published hate model at any tier.**
+
+#### Three things in C's header that reached no message
+
+**C found a FOURTH wrong-surface instance and reported it only in a comment:**
+`threatCore.js:95-96` — anchoring on `attention!` **missed a second ending**, `"...has
+captured X's attention with an unparalleled approach!"`, **25 of 537 events.** **R64's
+figure of 244 is superseded.** *I have not established which corpus scope each number
+covers and am not reconciling them here.*
+
+**C sourced the stun formula** — `clamp(target_maxHP/15, 25, 1200)`; the 400 is
+`MaxScalingProcAggro`, a proc cap; **"no corroboration for 200 was found anywhere."**
+And **heals key off the spell's BASE value, not the printed amount** — which is a
+mechanism answer to E's "healing's weight is unpublished."
+
+> **All three are in a file header rather than in a message, and I found them by reading
+> the artifact instead of the report.** **A finding that ships only as a comment has not
+> been reported.**
+
+#### And B reported a fan-out failure nobody asked about
+
+**B ran an eight-lens audit whose guard-vacuity lens damages source and restores it — in
+its own working tree, without `isolation: worktree`.** A stop-hook fired on a
+deliberately-damaged `bis.ts`; a mid-flight full-suite run **reported 5 failures that
+were an artifact of the mutation**, which B discarded rather than reporting. **All four
+audited sources verified byte-identical to `f9928e3` by SHA-256 before the commit.**
+
+> **B's rule, adopted for every session: any fan-out lens that WRITES gets worktree
+> isolation, or is restructured to measure without writing.** **A mutating lens sharing a
+> tree with the build makes every concurrent measurement unreliable and the failures look
+> like regressions.**
