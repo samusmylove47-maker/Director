@@ -11851,6 +11851,9 @@ prefix. This closes the other sixteen.**
 | R63 | **"The observer sees more" is WITHDRAWN.** Own DoT is logged in a second shape (`from your SPELL`) C's regex never matched — the zero was an artifact. The observer sees LESS DoT: 2,521 lines own-client against 675 observed. **The other four co-presence rows stand** | `pending` | **stands; withdraws part of R53** |
 | R64 | **`has captured attention` is NOT taunt-success — it is a BROADER aggro-gain event.** 244 events, 25 actors, 11 of whom never attempted a taunt. My identification is withdrawn; **the outcome strengthens** — fully attributed, no coefficient, not confined to taunt classes | `pending` | **stands; refutes my R60 mechanism** |
 | R65 | **R55 ANSWERED: a T1 badge spans three claims and its evidence supports one — LIVE on `learn/still-true.html:222`.** The trio-level claim inherits a badge the level-11 lock earned. Split the block; `settle='Settled.'` does not cover it. **Do not flip `levelCheck` — B separated the claims correctly and refused to bake in a side.** Falsifier: one read of the Producer's Letter | `pending` | **stands; answers R55** |
+| R66 | **Coefficients CANNOT be fitted, permanently, by mechanism.** The in-game aggro meter is real (`AggroMeterWnd` EQType 305, GroupWindow 11 per-member %) but its value is a gauge binding, never a chat message — `/log` cannot emit it, memory readers are forbidden by ToS 7.1. **An enumerated absence with a mechanism. This STRENGTHENS R59** | `pending` | **stands** |
+| R67 | **The aggro board is VALIDATED at 72.2%** against 600 in-log ground-truth events where the game itself names who holds aggro. `no observation` (467) reported separately and never folded — and C notes several disagreements are probably correct, so 72.2% is a floor | `pending` | **stands** |
+| R68 | **`You` means a different person in every log — `threatCore` requires `self`.** A multi-log ingest without it is a silent identity merge that degrades like ordinary noise. The validation caught it and moved 63.2% → 72.2% | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -14867,3 +14870,100 @@ bought it.
 
 **`PROPOSAL-tier-C.md` at `87e6ed26` — the tier row I assigned — is fetched and
 unread. Not tonight.**
+
+### 31 Aug 23:3xZ — RULING R66–R68: the aggro board is VALIDATED at 72.2%, and calibration is impossible with a mechanism
+
+**C shipped `threatCore` running on 5,631,725 lines at 0.077% residual, and then
+validated it against ground truth the game itself asserts.**
+
+#### R66 — coefficients CANNOT be fitted, and the absence is enumerated rather than grepped
+
+**The in-game aggro meter is REAL and richer than anyone hoped.** `AggroMeterWnd`
+EQType **305** is your hate %, **303/307** the top hater's name and %,
+`GroupWindow` carries **eleven** per-member percentages, `ExtendedTarget` twenty
+more. **Evidenced from a real EQL character's UI ini and the 25 Aug patch notes.**
+
+> **AND ITS VALUE REACHES DISK BY NO MEANS THIS PROJECT SHOULD USE.** The number is
+> **a data binding onto a gauge, never a chat message**, so `/log` cannot emit it.
+> **The only programmatic accessors read the running client's memory, and Daybreak
+> ToS 7.1 forbids it.** OCR of one's own screen is precedent-only, has never been
+> done for this window, and **cannot enrich the existing corpus.**
+
+**Every one of the 6,713 `%` lines in C's corpus is experience gain.** Confirmed in
+mine at the smaller scale: 36 `%` lines, all experience.
+
+> **RULING R66: coefficients cannot be fitted, permanently, and the reason is a
+> MECHANISM rather than a failed search.** *"An enumerated absence with a
+> mechanism, not a failed grep."*
+>
+> **This does not qualify R59 — it STRENGTHENS it.** The aggro board is not a
+> fallback we settled for. **It is the only instrument that can exist**, and the
+> threat meter as specified is not merely unbuilt tonight but unbuildable within
+> the terms this project will operate under.
+
+#### R67 — the board is VALIDATED, and the honest denominator is stated
+
+**`You capture <mob>'s attention!` — 600 events in which THE GAME ITSELF asserts
+who holds aggro AND names the mob.** Against them:
+
+```
+agreed                        96
+disagreed                     37
+no observation in window     467
+AGREEMENT WHERE THE BOARD HAD DATA:  72.2%  (96/133)
+```
+
+> **`no observation` is reported separately and NEVER folded in.** It is the mob
+> not swinging within 30 s, and **folding it either way would flatter or damn the
+> result without evidence.** C stated that rather than picking the denominator
+> that suited it.
+
+**And C noted against its own number: several remaining disagreements are probably
+CORRECT — a capture followed by another player pulling aggro is exactly what losing
+aggro looks like.** So 72.2% is a floor on a floor.
+
+#### R68 — `You` means a different person in every log, and the validation caught it
+
+> **Ingesting Shara's and Avenrae's logs into one state recorded ONE PLAYER UNDER
+> TWO NAMES.** Agreement sat at **63.2%**, with nearly every disagreement reading
+> *"saw Avenrae instead of You"* — **while the ground truth came from Avenrae's OWN
+> log.**
+>
+> **`threatCore` now REQUIRES `self`. Fixing it moved 63.2% → 72.2%.**
+
+**The validation earned itself on first use by catching a modelling error nothing
+else could see.** A multi-log ingest without a `self` per log is a silent identity
+merge, and it degrades gracefully enough to look like ordinary noise.
+
+#### AND A ZERO I RELAYED, WHICH IS A NEW VARIANT AND NOT A WRONG STRING
+
+**I passed C the line `"You have captured" -> 0`.** C found **600** events of
+`You capture <mob>'s attention!`.
+
+**Measured in my own corpus just now: BOTH strings return zero.** So my figure was
+**correct for the log I hold** — and C's explanation is the finding:
+
+> *"The first-person form appears ONLY in Avenrae's logs and zero times in
+> Shara's — it fires for the logging player, so whether it exists depends on
+> whether that character tanks."*
+
+> **This is not a guessed pattern and not a wrong surface. It is a RIGHT
+> MEASUREMENT ON A CORPUS THAT STRUCTURALLY CANNOT CONTAIN THE THING.** Shara does
+> not tank, so first-person aggro-capture lines cannot appear in Shara's log at
+> any sample size. **Reporting that zero as a fact about the game is the error, and
+> no amount of re-running it would have caught it.**
+>
+> **It is step 5(d) sharpened: the axis my corpus holds constant is the LOGGING
+> CHARACTER'S ROLE, and every phenomenon that depends on role is invisible to it.**
+> Adding logs from the same character would not help. **Only a different character
+> would.**
+
+**Recorded as mine.** C caught it by having thirteen logs from two characters where
+I have two from one, and by asking *why* the shape was absent rather than accepting
+the absence.
+
+#### Engine state
+
+**5,631,725 lines, residual 0.077% of combat lines.** Content-hash dedup **after
+`size:name` let four renamed duplicates through** — reported rather than quietly
+fixed.
