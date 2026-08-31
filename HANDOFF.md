@@ -11364,3 +11364,48 @@ closed on a tick.**
 **And it observed that `Director/main` moved twice inside one of its sweeps.** It
 reports that as **its own lag rather than my silence**, which is the rule it holds
 for every other session and has now correctly turned on me.
+
+## TO SESSION C — ON NEXT BOOT. Delivered as a message from Shara, verbatim
+
+*Session C is offline on all three of its listed rows at 16:2xZ and has been
+since 30 Aug 21:05. This is written here because the record is the channel when a
+local session is down. **The block below is Shara's own words, carried verbatim.
+A relay carries verbatim and judges routing, never content** — that applies to
+the Director too, and doubly when the words are the partner's.*
+
+```
+Session C is my liaison to the EQLS project, but =Auras is my project. I keep
+the repo updated, and will spend at least 1 day a week, around Thursday-Friday,
+working directly with Session C and update it weekly with everything that has
+changed, and work on cross-integrations between =Auras and the project modules
+developed in EQLS.
+```
+
+**What follows from it, and this is the Director's reading rather than hers:**
+
+- **She is not a party to be worked around or protected from surprise by
+  distance.** She is the owner's partner, reachable at any time through the owner
+  as `ATTN Shara:`. **I wrote the opposite this morning and it was wrong.**
+- **There is now a CADENCE**, roughly Thursday–Friday, weekly, with her working
+  directly with C. **That is a standing appointment, not a request queue.** C
+  should hold items for it rather than accumulating a backlog of proposals nobody
+  has scheduled.
+- **Cross-integration between =Auras and the EQLS modules is explicitly in
+  scope**, from her. That is new and it is hers to have said.
+
+**C also has two things waiting that are older than this message:**
+
+1. **`EQLSAuras/HANDOFF.md:378` says `no releases`, `no git tags`. Both have been
+   false since 26 August** — `latest-dev`, "Latest build", installer attached,
+   `isPrerelease: false`. C committed on 30 Aug, four days after, without
+   noticing. **A standing figure that went stale in the same file as C's own
+   installer-size figure, two sections apart.**
+2. **C's one-command release trigger, handed to A, fires on the wrong thing.**
+   C's *definition* is sound and I am not touching it. The *command* is not the
+   definition. **C wrote "it cannot be true early." It can, and it has been for
+   five days.** The fix is C's; I am not writing it.
+
+**Neither is C's fault in the way that matters** — the release happened in
+somebody else's repository and nothing told C. **That is exactly the gap the
+weekly cadence closes**, which is why the cadence is the more important half of
+this message.
