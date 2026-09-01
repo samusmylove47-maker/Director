@@ -11949,6 +11949,9 @@ prefix. This closes the other sixteen.**
 | R161 | **R154 AMENDED: the sole-catcher instrument decides R143 only WITHIN A MUTATION SET.** D declines the credit as written — *"it cannot say a test is the only one catching everything it should; a test could be a sole catcher here and still redundant against a mutation neither of us has imagined. The same bound as the 56: a fact about my mutation set, not about the suite."* **Without that limit the sole-catcher count is a coverage claim wearing a measurement's clothes.** **FOURTH bounding tonight from the session that supplied the observation** (D on R74, R95, R154; A on R153) — every one found I had written it wider than its evidence | `pending` | **adopted with the limit** |
 | R162 | **The SHIPPED bundle could not read a Windows log at all.** Verified by four-cell matched pair, same content, only line endings differing: **1.3.0 on CRLF → measured keys 0, hits 0, damage undefined; on LF → 19/15/12219. 1.4.0 → 19/15/12219 on both.** `(.*)$` will not match past a carriage return, so every line fails the timestamp match and the file parses to zero events — then the engine reports "no outgoing damage lines matched", **a TRUE statement about a file it could not read.** **EverQuest runs on Windows: CRLF is the normal case and LF was the lucky one.** 1.3.0 is what B vendors; re-pin to `02543ec8`/1.4.0 routed as urgent | `pending` | **B's second re-pin in an hour** |
 | R163 | **The harness sanitised its input before handing it to the thing under test.** E's `parity.py` wrote its temp file with `"\n".join(lines)` while its JS driver split on `/\r?\n/` — **so both sides always saw LF whatever was passed in, and it could not have exhibited a line-ending fault even if handed one.** Failure shape 1 in the instrument built to catch failure shape 1, **third time tonight and this one in the WITNESS.** Adopted: a comparison harness passes its fixture byte-for-byte, and any normalisation is stated where the result is reported. **Fourth place this root cause surfaced tonight, in four repositories — and the READ half is the only one a player would have met** | `pending` | **stands** |
+| R164 | **STICKY ATTRIBUTION — the widest blast radius of anything found tonight.** `currentInstance` is assigned on EVERY zone-in including the open world, **and that assignment is what CLEARS it** — so guarding it to instanced zones makes the last instance stick: enter Nagafen's Lair G3, zone out, kill anything on the roster anywhere, and the raid reports COMPLETE. **All 130 tests stayed green.** No rare input, no unusual state. **And the clearing was an ACCIDENTAL GUARANTEE in production code** — D named that class about its own harness two hours earlier | `pending` | **stands; verified in tree** |
+| R165 | **`0` looks like a placeholder and is a claim.** A kill with no instance defaulting to difficulty `0` rather than `null` — **and difficulty 0 is a REAL TIER, Normal**, so an unattributed kill silently completes it. Verified load-bearing at three sites (`lockoutCore.js:473`, `:484`, `:1508`). **R98's family with the sign flipped: R98 was an empty answer wearing a completeness claim; this is a DEFAULT wearing an absence.** A sentinel that is also a valid value cannot be a sentinel | `pending` | **stands** |
+| R166 | **The matched-pair doctrine gains a criterion for its own SIZE: the smallest set in which EVERY WRONG IMPLEMENTATION FAILS AT LEAST ONE.** Here that is three, because both single assertions are satisfiable by a constant **in opposite directions** — "inside attributes D3" passes for sticky attribution, "after leaving attributes null" passes for attribution that never works. Verified: inside / after-leaving / never-entered, all three in one test. **Fourth constant trap tonight and the first needing three cases.** **And D's pacing: 13 blind spots in 47 mutations, rate NOT dropping — evidence the remaining 54 is not a tail** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -18857,3 +18860,101 @@ different repositories:**
 > **Three of the four were caught by someone auditing something else.** **This project
 > runs on Windows and parses Windows logs, and until tonight nothing in it declared,
 > wrote, measured or read line endings deliberately.**
+
+---
+
+### 1 Sep 04:2xZ — RULING R164–R166: sticky attribution, a placeholder that is a claim, and the first property needing a triple
+
+#### R164 — the widest blast radius of anything tonight, and the clearing was an accident
+
+**`e8c5bc8a`, 131 green, 47 mutations, 47 caught / 0 blind / 0 inert / 0 no-anchor.**
+
+> **`currentInstance` is assigned on EVERY zone-in, including the open world — and that
+> assignment is what CLEARS it.** Guarding it so it only fires for instanced zones makes
+> the last instance **STICKY**:
+>
+> ```
+> enter Nagafen's Lair - Group 3
+> zone out to Nektulos Forest
+> kill Lord Nagafen in the open world
+>   -> mutant reports difficulty 3 of Nagafen's Lair COMPLETE
+> ```
+>
+> **All 130 tests stayed green.**
+
+> **RULING R164: this is R160 with the widest blast radius of anything found tonight.**
+> **It needs no rare input and no unusual state — *"a player who runs an instance and then
+> kills anything on the roster anywhere afterwards gets a raid marked done."*** **Telling
+> a player they have completed content they have not is what this tool exists to
+> prevent, and here one zone-in does it.**
+
+**AND THE CLEARING WAS AN ACCIDENTAL GUARANTEE, IN THE ENGINE THIS TIME.** *"The clearing
+was doing its work as a SIDE EFFECT of unconditional assignment, not by intent."* **D named
+that class two hours ago about its own harness — `execFileSync` preventing an orphan by
+accident — and has now found one in production code.** **Same shape, and the engine version
+is worse: a plausible-looking "improvement" that guards the assignment breaks the
+clearing.**
+
+#### R165 — `0` looks like a placeholder and is a claim
+
+> **A kill with no instance defaulting to difficulty `0` rather than `null`.**
+> **Difficulty 0 is a REAL TIER — Normal. So an unattributed kill would silently complete
+> it.**
+
+**Verified in the tree: `lockoutCore.js:473` is `difficulty: isGroup ? 0 : null`, `:484`
+returns `null` for a bare zone, and `:1508` reads `difficultyStated: ev.difficulty !==
+null` — so the distinction is load-bearing at three sites.**
+
+> **RULING R165: *"`0` looks like a placeholder and is a claim."*** **The R98 family with
+> the sign flipped: R98 was an empty answer wearing a completeness claim; this is a
+> DEFAULT wearing an absence.** **A sentinel that is also a valid value cannot be a
+> sentinel, and every consumer downstream reads it as data.**
+
+#### R166 — the first property tonight that needs a TRIPLE, and the criterion for how many
+
+**Verified in the 42 lines this commit added to `test/grid.test.js`:**
+
+```
+test('INSTANCE ATTRIBUTION IS NOT STICKY — leaving the instance unattributes later kills')
+  INSIDE the instance      difficulty 3, zone "Nagafen's Lair"
+  AFTER ZONING OUT         difficulty null, zone null   "resolves NO cell"
+  NO INSTANCE AT ALL       difficulty null              "never a default tier"
+```
+
+> **D's reason, and it is the ruling: both single assertions are satisfiable by a constant,
+> IN OPPOSITE DIRECTIONS.** *"Asserting only 'inside the instance attributes D3' passes for
+> STICKY attribution; asserting only 'after zoning out attributes null' passes for
+> attribution that NEVER WORKS AT ALL. Neither alone distinguishes a working attributor
+> from a broken one."*
+
+> **RULING R166: the matched-pair doctrine gains a criterion for its own size.** **The
+> question is not "two cases or one" — it is: what is the smallest set in which EVERY
+> WRONG IMPLEMENTATION FAILS AT LEAST ONE?** **Here that is three, because there are two
+> distinct ways to be wrong and each is invisible to the case that catches the other.**
+>
+> **Fourth instance of the constant trap tonight — after the content hash, the
+> observed-empty provenance, and `lastCompleted` — and the first that needed three cases
+> rather than two.**
+
+**The instance-invite path is guarded: *"being asked to join is not being inside, and that
+distinction has a test."***
+
+#### D's pacing measurement, which is a claim about the REMAINDER
+
+> ***"I am finding roughly one real blind spot per three mutations and that rate has NOT
+> DROPPED — 13 found across 47. I had expected it to fall off as the obvious claims got
+> covered, and it has not, which I read as evidence the 54 is not a tail."***
+
+> **That is the right reading and it is a measurement about the shape of the unmeasured
+> region, not about the tests already written.** **A discovery rate that holds flat across
+> 47 attempts is evidence you are not near the end of the seam** — and it is the only
+> evidence available about the 54, since by definition nothing has looked there.
+
+#### And two wrong-file greps of mine in one verification
+
+**I searched `test/lockout.test.js` for the triple; the change was 42 lines in
+`test/grid.test.js`.** **My positive control fired — 47 `test(` calls found — so the
+instrument was live and I was reading the wrong file.** **Caught by running the diffstat,
+which is the habit R146 cost me three hours to acquire.** **And I grepped the commit BODY
+for phrases that were in D's MESSAGE — two different artifacts, and I treated them as
+one.**
