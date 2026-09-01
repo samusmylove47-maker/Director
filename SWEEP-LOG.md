@@ -711,3 +711,26 @@ Compared current remote heads against the 1 Sep 20:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 22:24Z
+
+Compared current remote heads against the 1 Sep 21:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `253d29ae` → `691492b1` ("Merge pull request #178
+  from samusmylove47-maker/claude/a11y-batch-2"), authored
+  2026-09-01T18:21:15-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `cc9864be` → `c9c6ee33`
+  ("RECORDS the owner's decision — this session stays cloud — and
+  re-raises the one thing I cannot close"), authored
+  2026-09-01T22:08:18+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `82ef2332` →
+  `0a21b18e` ("THE RETIREMENT ARM IN THE RECORD, and the sweep refuted
+  the hypothesis I started it with"), authored 2026-09-01T22:11:11+00:00.
+
+**Unchanged:**
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `7c7aaf25`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
