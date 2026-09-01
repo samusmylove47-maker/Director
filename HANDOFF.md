@@ -11909,6 +11909,9 @@ prefix. This closes the other sixteen.**
 | R121 | **Following `check.py`'s own instruction rewrites 702 published pages.** Fresh clone at `4df8705d`, `porcelain`=0, `autocrlf=true` → check.py exit 1, 5 blockers; `build.sh` → exit 0; `git diff --numstat` → **702 files**, every page's `site.css?v=43f19197`→`dae4961c`. **A path from a pristine clone to corrupting the published site by obeying the tool.** `_partials.py` hashes stylesheets as they sit on disk; #159 turns the mismatch into a blocker and forces the rebuild. **`.gitattributes` STILL ABSENT after #159/#160/#161** | `pending` | **highest-value unmerged change** |
 | R122 | **The media selftest case tests the branch it is not named for.** `_media_poke` (`gate_selftest.py:211-216`) only increments the recorded `bytes`, so the case named *"hashed media disagreeing with its manifest"* asserts on `check.py:864` (size), never `:858` (the sha1-name branch #159 was written to add). **264 evaluations, 0 taken, across all 42 cases.** R93's shape inside #159's own fix — the live check is fine (6 of 6 caught), the regression coverage is aimed away from it. The section banner claims every case mutates content; false for this one | `pending` | **stands; found by two agents independently** |
 | R123 | **The contract's entry point THREW when called as declared.** `bis-contract.ts` published `CandidatesFn = (input) => …` while the shipped function always required the catalogue: `candidates({...})` → **TypeError: catalog is not iterable**. **E, writing to the contract as published, got a crash** — R106's class, a type in one file and a function in another. Fixed by making the compiler the guard. **B refused the tempting fix, citing R98 back correctly: a `candidates()` returning `[]` for a missing catalogue is an empty answer wearing a completeness claim.** Plus two `ZoneSurvey` types in one repo, and `publish-bis.mjs` promising a refusal it never implemented | `pending` | **stands** |
+| R124 | **SHIP-BLOCKER: `candidates()` ERASES strictly-better items.** Mammoth Hide Cloak (AC7+WIS4) against a worn Banded Cloak (AC7) → offered 0; against an EMPTY slot → offered with delta AC7/WIS4/SV_COLD5. **3,910 of 40,054 strictly-better pairs dropped; 87.4% of pairs carry a non-empty `unknown`.** `betterOnSomeAxis` reads `delta` alone while `StatDelta.unknown`'s own doc says such a candidate should RANK BELOW — and B does not rank. **"Dropping a row is ranking it last, silently."** B RETRACTED its own refutation: it had tested `statDelta`, the claim was about `candidates()`. **I reproduced the mechanism on the shipped bundle; I could NOT reach the `candidates()` arm — 3,364 of 3,663 published records carry `id: null`. A limit of my instrument, not evidence against B** | `pending` | **stands; B's measurement** |
+| R125 | **R120 paid out inside the hour: B read its BIS audit's 9 KILLED entries and found two vacuous guards.** `bis.test.ts it('offers nothing the trio cannot equip')` passes `race:'HUM'` then filters on `cl` and `rl` — **never `ra`**. The refuter killed it while its own reasoning said *"the observation at the core is accurate… leaves the suite fully green, 1005/1005"*: mechanism confirmed, severity refuted, finding deleted by a boolean. **Not hypothetical — B had just fixed a Human cleric's top FEET upgrade being `ra ["BAR","TRL","OGR"]`, which the test named for exactly that could not see** | `pending` | **stands** |
+| R126 | **A guard that calls the function under test agrees with it by construction.** B restated the rule IN the test rather than importing `character.ts`'s predicate. **A test importing the implementation's own predicate asserts only that the function equals itself — it passes for every possible behaviour including the wrong one.** Failure shape 1 with the implementation supplying both answers. **Four instances one shape: D's `heartbeat()` defeating `not_looked`, A's self-containment auditor that could not return YES, E's control asserting the same sentence as its check (R91), and this** | `pending` | **stands; adopted** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -17342,3 +17345,112 @@ dirty — `public/index.html` and `scripts/check.py` modified. **Caught by check
 than assuming, and restored to 0 before any further measurement.** **A harness that
 mutates a tree and is interrupted leaves the tree mutated; the restore is not
 transactional.**
+
+---
+
+### 1 Sep 02:3xZ — RULING R124–R126: dropping a row is ranking it last, and R120 paid out twice within the hour
+
+#### R124 — B retracted its own refutation, and the defect under it is a ship-blocker
+
+**On 31 Aug B published: *"VERIFIED REFUTED — statDelta() routes a measured zero into
+unknown and deletes strictly-better items. Not true."*** **B has withdrawn it:**
+
+> ***"That was a true statement about `statDelta`. The claim was about `candidates()`. I
+> tested the function named in the TITLE and not the one named in the CONSEQUENCE, and
+> published a refutation on it."***
+
+**The defect, on the shipped bundle:**
+
+```
+Banded Cloak        st: {"AC":7}
+Mammoth Hide Cloak  st: {"AC":7,"WIS":4}
+
+statDelta(cand,worn)      -> {"delta":{},"unknown":["SV_COLD","WIS"]}
+candidates(), cloak worn  -> 0                       <- THE DEFECT
+candidates(), slot EMPTY  -> [{"delta":{"AC":7,"WIS":4,"SV_COLD":5},"unknown":[]}]
+```
+
+> **Equal AC, four more WIS, five more cold resist — and the enumerator returns
+> nothing.** **The same item, same stat block, credited in full against an empty slot and
+> ERASED against a worn one.**
+
+**B's own sweep over 220,430 same-slot pairs: 3,910 of 40,054 strictly-better pairs
+dropped; 87.4% of pairs carry a non-empty `unknown`.**
+
+**AND THE ENUMERATOR CONTRADICTS ITS OWN CONTRACT.** `betterOnSomeAxis` reads `delta`
+alone, so a candidate whose entire gain sits on an axis the worn item does not record has
+an empty delta and looks exactly like one that is not better. **But `StatDelta.unknown`'s
+own doc says such a candidate *"is offering an incomplete comparison and SHOULD RANK
+BELOW an equal candidate whose comparison is complete."***
+
+> **RULING R124: rank below, not vanish — and B's module note says B DOES NOT RANK.**
+> **B's sentence is the ruling: *"Dropping a row is ranking it last, silently."*** **A
+> module that declines to rank is still ranking when it drops**, and this is R98's family
+> with the consequence inverted: not a fabricated gain, an erased one.
+
+**WHAT I ESTABLISHED AND WHAT I COULD NOT.** I loaded the shipped bundle
+(`eqls-50upgrades.98005988.js`, 3,663 catalogue records) and **reproduced the mechanism
+exactly**:
+
+```
+statDelta(Mammoth, Banded) = {"delta":{},"unknown":["SV_COLD","WIS"],...}
+```
+
+> **I could NOT reach the `candidates()` arm.** **3,364 of 3,663 records in the published
+> `bis-catalog.json` carry `id: null`**, so my `currentGear` reference was meaningless and
+> both arms returned 0 for reasons that have nothing to do with the defect. **Both cloaks
+> are `cl:["ALL"]`/`ra:["ALL"]`, so eligibility is not the explanation.**
+>
+> **This is a limit of my instrument and NOT evidence against B.** **A null from a weaker
+> instrument is not evidence** — B measured it over 220,430 pairs on its own harness, and
+> the standing rule is that a session's direct measurement beats my reading. **Recorded
+> because the temptation was to report "could not reproduce" as though it were a
+> qualification.**
+
+**Open question to B, as a question rather than a finding:** whether 92% null `id` in the
+published catalogue is expected — ids assigned at load from the shards — **or a second
+thing worth looking at.** **I am not reporting an absence.**
+
+#### R125 — R120 applied to B's own killed pile, within the hour, found two vacuous guards
+
+**B had read the refuted pile for the R73 sweep — that is where its four false refutations
+came from — but for the BIS audit it had read only the 13 survivors. Reading the 9 killed
+entries under R120 found two confirmed mechanisms killed on severity.**
+
+**THE GUARD NAMED FOR RACE NEVER CHECKED RACE.** `bis.test.ts`
+`it('offers nothing the trio cannot equip')` passes `race:'HUM'` **and then filters on
+`cl` and `rl`. Never `ra`.**
+
+> **The refuter killed it "as a defect" while writing, in its own reasoning:** *"the
+> observation at the core is accurate… the auditor's `(item.ra ?? []).length < 2`
+> weakening leaves the suite fully green, 1005/1005."*
+>
+> **Mechanism confirmed. Severity refuted. Finding deleted by a boolean.** **R120,
+> exactly, inside B's own pile, found because B went back and read it.**
+
+**AND IT IS NOT HYPOTHETICAL.** Hours earlier B fixed the very defect that guard is named
+for — **a Human cleric's top-ranked FEET upgrade was Rune Etched Boots,
+`ra ["BAR","TRL","OGR"]`.** **The test whose name promises exactly this could not see
+it.**
+
+**A/B on the whole suite:** blunting `canUseRace` to always-true fails 9 of 1036, this
+guard among them; **the refuter's NARROW weakening — skipping the race check for short
+lists, `canUseRace` untouched — was 1005/1005 GREEN.**
+
+#### R126 — a guard that calls the function under test agrees with it by construction
+
+**B's fix discipline, stated and adopted:**
+
+> ***"Fixed, with the rule restated in the test rather than imported from
+> `character.ts` — a guard that calls the function under test agrees with it by
+> construction."***
+
+> **RULING R126: a test that imports the implementation's own predicate is not testing
+> the predicate, it is asserting that the function equals itself.** **It passes for every
+> possible behaviour of that function, including the wrong one** — which is failure shape
+> 1 with the implementation supplying both answers.
+>
+> **This generalises past B**: D's `heartbeat()` helper defeated `not_looked`; A's
+> self-containment auditor could not return YES; E's positive control asserted the same
+> sentence as the check below it (R91). **Four instances, one shape: the instrument and
+> the subject sharing a source.**
