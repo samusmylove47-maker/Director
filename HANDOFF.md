@@ -11868,6 +11868,10 @@ prefix. This closes the other sixteen.**
 | R80 | **My R76 exposure table counted NAME MATCHES and reported them as dependency — R69 one level up.** B: **zero** dependency (`bis.ts:208` destructures from B's OWN `obtainability()`); its safety was structural, since a 20:5x ruling meant no consumer was ever built. E: **exposed and I understated it** — `rank.py:161` calls the oracle, `rank.py:255` branches on `"no"`. **`grep -l` answers "does this string appear", not "does this session depend on that function"** | `pending` | **mine; R76's table corrected** |
 | R81 | **Two repos, one field name, and `'unknown'` meant opposite things** — D's = *asked, cannot answer*; B's = *nobody has asked*. A consumer joining them reads one as the other, and **no type checker can see it because both are strings.** B fixed the VALUE not the field (`'not-yet-asked'`), so nothing breaks on access, guarded by a test holding D's vocabulary as data. **Adopted: alike-named fields across repos must be provably disjoint or provably identical, asserted by a test** | `pending` | **stands** |
 | R82 | **It may not be established that this game gates EQUIPPING by level AT ALL** — B's only Tier M sighting of "Required Level" is on a click effect, not on wearing an item. If it holds, R55/R65/R71 have argued which class's level gates equipping when no level may. **Third "dissolves rather than settles" in one night.** Registered as a possible absence, not resolved. Falsifier is cheap and already on the capture list: six Shadow Rage item windows | `pending` | **registered; owner-blocked** |
+| R83 | **A catch rate without a coverage surface is a verdict without its denominator.** D mutation-tested its suite: **35 of 122 demonstrably non-vacuous, 87 never exercised by that mutation set** — "13 of 13 caught" would have read as a clean bill for a suite checked at 29%. Two blind spots closed; one proved a claim in D's OWN SOURCE false (`You hit yourself` does NOT also match melee — 276 lines, zero overlap; the ordering was never a guard, the `outgoing:false` flag is). Weekday mutation stayed green because **every fixture held the same axis constant** — tick rule 5(d) | `pending` | **stands; R73 applied to a suite** |
+| R84 | **An INERT mutation reported NOT CAUGHT, found while using the harness to hunt exactly that.** D was one step from calling a real test vacuous. **A mutation harness needs its own matched pair: every mutation shown to change behaviour before its verdict means anything.** And `git checkout` restored CRLF against an LF tree, so two mutations printed **SKIPPED — which rendered in the same column as a finding.** `SKIPPED` and `NOT CAUGHT` must never share a column | `pending` | **stands; CRLF is machine-wide** |
+| R85 | **THREE OF MY LAST FOUR RULING COMMITS LACK THE `RULING:` PREFIX** — `8071f8f`, `9a473e6`, `d288ec3`. Session 0 computes the drift tripwire from these subjects, so a grep finds R79–R82 and **misses R69–R78 entirely**, including both rulings that correct me. **I published the format rule to five sessions in the same hours I was failing it.** History not rewritten; Session 0 told explicitly | `pending` | **mine; ledger notified** |
+| R86 | **R76 sharpened by D, and the refinement is worse than my original.** A false `no` did not shorten E's list — E's `unknown` handling is correct — it produced **a present `blocked` row with a confident reason.** *"A blocked row with a reason looks like an answer."* **A missing row can be noticed; an answered one will not be.** Pending-publish hashes move with every source commit (`74609f14`→`2a6e200e`, `1c12af29`→`c0739a3a`): **a publish hash is meaningless without the commit that produced it** | `pending` | **stands; owner pointer corrected** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -15613,3 +15617,147 @@ all 119 tests, including reintroducing the false `no` to check the new test CATC
 rather than merely accompanying it.** *"A mutation nothing catches is a blind spot with
 a name and a line number."* **Reporting either way, including a null, which would
 itself be a result about the suite.**
+
+---
+
+### 1 Sep 00:3xZ — RULING R83–R86: 35 of 122, not 13 of 13 — and three of my own ruling commits are invisible
+
+#### R83 — the surface line is the finding, not the catch rate
+
+**D mutation-tested its suite to answer "which of your tests could only ever have
+agreed with you" mechanically. `EQLSLockouts:1c12af29`, 122 green, tree clean.**
+
+```
+tests in the suite                     122
+tests that failed under >= 1 mutation   35    <- demonstrably non-vacuous
+never exercised by this mutation set    87
+```
+
+> **D can claim 35, not 122.** The 87 is a fact about **D's mutation choices**, not
+> proof those tests are hollow.
+
+> **RULING R83: "13 of 13 mutations caught" would have read as a clean bill of health
+> for a suite checked at 29%.** **A catch rate without a coverage surface is a verdict
+> without its denominator** — the same fault as C's 72.2% before the
+> `no observation` row was stated, and the same fault as R73's file count. **This is
+> R73 applied to a test suite and it is the strongest form of it yet.**
+>
+> **D reported it because I asked for the surface. It would not otherwise have been in
+> the message, and D said so.** Recorded, because the ruling that produced a number is
+> worth as much as the number.
+
+**TWO BLIND SPOTS, both closed, and the first proved a claim IN D'S OWN SOURCE FALSE:**
+
+1. **`self-damage-after-melee`.** The comment said the match order is load-bearing
+   because `You hit yourself …` *"also matches the melee shape."* **Measured over 276
+   real self-damage lines: ZERO also match `DAMAGE_MELEE_RE`.** Self requires a
+   trailing `by <spell>.`; melee requires the line to end at `damage.` **The shapes are
+   disjoint and the ordering was never a guard.** What is load-bearing is the flag
+   `outgoing: false` — **which is what E depends on.** Now tested at
+   `test/lockout.test.js:693-703`.
+
+2. **`weekday-trusted-from-client`.** Replacing the derivation with
+   `indexOf(at.weekday)` left **all 119 green — because every fixture line has a
+   correct weekday, so the two always agreed.** **That is tick rule 5(d) exactly: the
+   axis every fixture held constant, which a suite cannot see.** Now tested with a line
+   that lies.
+
+**AND IT IS LIVE ON E'S P0, routed immediately:** a self-hit with no `by <spell>`
+clause **falls through to melee and is emitted as ordinary OUTGOING damage against a
+target named `yourself`**; and **801 of 137,690 damage rows (0.58%) carry
+`actor === target`, under just two names.**
+
+> **The log cannot tell one entity hitting itself apart from two entities sharing a
+> name, so a name-equality filter would SILENTLY DROP REAL DAMAGE.** D has not
+> filtered and has pinned both shapes. **With `Heart harpie` at the top of the damage
+> board as a charm pet, two same-named entities is the normal case here, not a corner.**
+
+#### R84 — an inert mutation reporting NOT CAUGHT, found while hunting exactly that
+
+**D's first false-`no` mutation set `answer` on the `else if` line and the branch body
+overwrote it immediately. It reported NOT CAUGHT.**
+
+> **D was one step from telling me the test written to catch the 31 Aug defect was
+> vacuous.** *"It was the mutation that could not produce the defect, not the test that
+> could not detect it."*
+
+> **RULING R84: failure shape 1 AT THE HARNESS LAYER, found while using the harness to
+> hunt failure shape 1.** **A mutation testing instrument needs its own matched pair:
+> every mutation must be shown to change behaviour BEFORE its catch/no-catch verdict
+> means anything.** An inert mutation and an undetected one are indistinguishable in
+> the output and **point in opposite directions.**
+
+**AND THE HARNESS CHANGED THE FILE IT WAS MEASURING.** `git checkout` restored the file
+as **CRLF against an LF working copy**, so multi-line anchors stopped matching and two
+mutations printed **SKIPPED** —
+
+> *"which renders in the same column as a finding."*
+
+> **`SKIPPED` and `NOT CAUGHT` must never share a column.** One is the instrument
+> declining to run; the other is the suite failing to notice. **Rendering them alike
+> is failure shape 5 — the check fires correctly and destroys its own message.**
+
+**The CRLF hazard is not D's alone.** Every `HANDOFF.md` commit I make tonight prints
+*"LF will be replaced by CRLF"*, and the `site.css` 87,350-vs-88,795 discrepancy earlier
+was the same artefact. **Recorded as a project-wide property of this machine, not an
+incident.**
+
+#### R85 — MY OWN RULING COMMITS ARE INVISIBLE TO THE INSTRUMENT THAT READS THEM
+
+**The standing format rule: every ruling carries the literal `RULING:` prefix in the
+commit subject. Checked my own last four:**
+
+```
+edaa5b4  RULING: R79-R82 — ...        <- compliant
+d288ec3  R76-R78: a false `no` ...    <- NO PREFIX
+9a473e6  R73-R75: 244 is retired ...  <- NO PREFIX
+8071f8f  R69-R72: my citation ...     <- NO PREFIX
+```
+
+> **RULING R85: three of four are non-compliant, and Session 0 computes the drift
+> tripwire from these subjects.** **A grep for `RULING:` finds R79–R82 and misses
+> R69–R78 entirely** — ten rulings, including the two that correct me.
+>
+> **The prefix is not decoration. It is the index another session reads**, and I
+> published a format rule to five sessions in the same hours I was failing it. **I am
+> not rewriting pushed history to hide it; Session 0 is told explicitly so the ledger
+> is not silently short.**
+
+**This is my own R70 family, one layer out: the commits are green, the record is
+complete, and the INSTRUMENT THAT READS THEM cannot see ten of them.**
+
+#### D refines R76, and the refinement is worse than my original
+
+> **D:** *"E being exposed but handling `unknown` correctly means the false `no` moved
+> reachable items into `blocked` with a confident reason rather than deleting rows.
+> **That is worse than deletion in one specific way — a `blocked` row with a reason
+> looks like an answer.**"*
+
+> **Accepted and it sharpens R76.** I ruled that a false `no` produces a silently
+> shorter list. **For E it produced something worse: a present row, a confident reason,
+> and a wrong conclusion.** **A missing row can be noticed. An answered one will not
+> be.**
+
+#### The R81 protocol working, first notice received
+
+**D, unprompted:** `unknownKind` **has exactly four values — `coverage`, `reset-hour`,
+`raid-not-in-roster`, `refusal-not-cap`** — and D will announce before adding a fifth.
+**That is the disjointness guard functioning as a protocol rather than as a test.**
+
+#### And a pointer correction the owner needs
+
+**Running D's suite REBUILDS the artifact**, so `git status` is never clean after a test
+run and the pending-publish hash moves with every source commit:
+
+```
+at 74609f14  ->  2a6e200e     <- the hash I have been carrying
+at 1c12af29  ->  c0739a3a     <- current
+```
+
+> **A pending-publish hash is meaningless without the commit that produced it.** Same
+> shape as the frozen-branch stub. **D nearly committed a build artifact through a
+> careless `git add -A`, caught it, restored, and confirmed `public/app` byte-identical
+> to HEAD. Publishing remains untouched and still the owner's.**
+
+**I checked my own `git add -A` habit on the same prompt: last four commits touched
+`HANDOFF.md` and nothing else; working tree clean.**
