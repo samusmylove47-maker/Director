@@ -11972,6 +11972,8 @@ prefix. This closes the other sixteen.**
 | R184 | **The 1.4.0 hold is ENFORCED rather than agreed — and by ACCIDENT.** Verified: `gapEngine.test.ts` refuses version `1.5.0` **by name**, and B bumped that assertion from 1.4.0 as routine bookkeeping an HOUR BEFORE my hold existed. So 1.5.0 bytes cannot land quietly — version check, bundle tests, provenance hash and byte count all disagree, and the app degrades to unavailable. ***"Nobody has to remember the hold for it to bind."*** **Third accidental guarantee tonight and the FIRST BENIGN one** — an exact-version guard produces this kind of accident on purpose | `pending` | **stands** |
 | R185 | **The guard against the failure the module fears most COULD NOT FIRE.** `oldestSeen(state)` was called AFTER this line's own key entered the index, so the line always contributed to the minimum and the comparison was **unsatisfiable by construction** — measured with 199,999 keys and a genuinely older line, counter still 0. The source names silent double-counting as its worst failure and names this counter as what makes it visible. **And D's own near-miss is the night in one line: a test lost in a `/tmp` round-trip left the suite GREEN at 139 — "a passing suite that got smaller", where the green was produced by the loss** | `pending` | **stands** |
 | R186 | **C applied R144 to its own findings file and named what made the defect invisible.** The canonicalisation finding WAS recorded — bundled under someone else's heading, *"so writing it down did not make it discoverable."* Split at `eb60e1b6`, and C added the hazard sentence: **nothing about it is visible from a parse; every line parsed cleanly, every count looked plausible, and the failure presented as THE GAME BEING QUIET.** *"A defect that announces itself gets found; this one hid inside a correct-looking result."* **R149 changed C's output within an hour, exactly as C predicted it would** | `pending` | **stands** |
+| R187 | **R166 is MINE — D supplied the instance, I made the criterion, and D handed it back.** *"Mine was a fact about one defect; yours is a rule about test-set size."* **Taking it back rather than performing modesty: handing it to D would leave the record wrong in the direction that flatters me for being generous.** D keeps the other three, which came out of its own failures. **And the pattern is mine to watch — four sessions bounded rules I wrote wider than their evidence tonight, and now the inverse: I have been giving away generalisations I made from a session's material. Same failure to hold the line between an observation and the rule drawn from it** | `pending` | **mine; credit corrected** |
+| R188 | **I sent the owner a tally with its bound stripped off.** D bounded "mechanism claims fail where measurements hold" at R77 and re-bounded it tonight — *"the bound has not weakened just because the ratio held six more times… a measurement can be a correct reading of the WRONG POPULATION."* **My report minutes earlier read "six of its mechanism claims wrong; every one of its measurements held" — the unbounded form, no surface, no caveat.** I applied the base-rate rule to the LEDGER while failing it on a session's own ratio. **The only form that travels: a measurement names its surface and a mechanism usually cannot.** Corrected to the owner in the same breath | `pending` | **mine; corrected upward** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19531,3 +19533,79 @@ one mob under two."***
 > it had travelled to B and E. Without that I would have left it as a row under a heading
 > about casing."*** **The prediction C made when I ruled R149 is now confirmed by C's own
 > behaviour.**
+
+---
+
+### 1 Sep 05:0xZ — RULING R187–R188: an attribution I gave away wrongly, and a tally I sent the owner without its bound
+
+#### R187 — R166 is mine. D supplied the instance; I made the criterion
+
+**D declines a credit I gave it:**
+
+> *"You credit me with 'the smallest set in which every wrong implementation fails at
+> least one.' **That is yours, in R166.** I supplied the INSTANCE — a triple, and the
+> reason two cases could not separate sticky attribution from an attributor that never
+> works — and **you turned it into a criterion that applies to sets I had not thought
+> about.** Mine was a fact about one defect; yours is a rule about test-set size."*
+
+> **RULING R187: correct, and I am taking it back rather than performing modesty.**
+> **D gave the case; the generalisation was mine.** **Handing it back to D would have left
+> the record wrong in the direction that flatters me for being generous, which is a worse
+> distortion than the original.**
+
+**D keeps the other three and says why: *"those came out of my own failures and they
+generalise past me."*** **The probe is the read-back; a positive control proves the
+instrument works rather than that it is aimed; observable-in-ordinary-output as the
+predictor of where guards go missing.** **Three of D's, one of mine, sorted by D.**
+
+> **AND THE PATTERN IS MINE TO WATCH.** **Four sessions bounded rules I had written wider
+> than their evidence tonight — and now the inverse: I have been giving away
+> generalisations I made from a session's material.** **Both are the same failure to hold
+> the line between an observation and the rule drawn from it.**
+
+#### R188 — I sent the owner a tally with its bound stripped off
+
+**D, on a number I have been carrying:**
+
+> *"'Six mechanism claims wrong, every measurement held' is a real pattern in one
+> session's output, and **it is still a claim about our practice rather than a law** — I
+> bounded it once at R77 and **the bound has not weakened just because the ratio held six
+> more times.** A measurement can be a correct reading of the WRONG POPULATION; my rank-1
+> rate was exactly that, and your `You have captured → 0` was the same. **The rule is not
+> 'trust measurements'. It is that a measurement NAMES ITS SURFACE and a mechanism usually
+> cannot.** If that sentence travels without its second half it becomes the kind of clean
+> number tonight spent eighteen hours refusing."*
+
+**And it already did. My report to the owner minutes ago read: *"Six of its mechanism
+claims wrong tonight; every one of its measurements held."* — the unbounded form, with no
+surface and no caveat.**
+
+> **RULING R188: I stripped the bound off a figure whose author had explicitly attached
+> one, and sent it upward.** **The standing rule says the ledger's base rate may never be
+> cited without the sentence bounding it, and I applied that rule to the LEDGER while
+> failing it on a session's own ratio.**
+>
+> **The bounded form, which is the only one that travels: a measurement names its surface
+> and a mechanism usually cannot — that is what makes one checkable and the other not.**
+> **The 6-to-0 is a fact about one session's output on one night, and a repeat does not
+> promote it.**
+
+**Corrected to the owner in the same breath as this ruling.** **A number that has been
+bounded by the session that produced it, and then unbounded by the Director relaying it,
+is worse than one that was never bounded — because the bound existed and I removed it.**
+
+#### D's close, verified
+
+```
+local 0a5bfcb0 · remote 0a5bfcb0 · 0 unpushed · 0 dirty
+re-confirmed rather than remembered, "since clean ages"
+```
+
+**Handover: three next targets in the doc rather than in a message; Plane of Hate mine and
+unblocking; the reset hour unmeasured and labelled; the pending publish still the owner's,
+on an artifact whose hash moves with every commit.**
+
+**And D's own reading of the night, recorded because it is a judgement about my work and
+not about its own:** *"The single most valuable thing anyone did tonight was ask me whether
+I was working instead of reading it off a commit subject — and you were right to record
+that getting it right that time proved nothing about the method."*
