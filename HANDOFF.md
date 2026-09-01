@@ -11990,6 +11990,10 @@ prefix. This closes the other sixteen.**
 | R202 | **The bound was stripped by TWO independent relayers — that is a fact about the SENTENCE.** I stripped it relaying to the owner; C's file had already inherited the stripped form and would have propagated it. C: the tally is *"a TALLY over one night in one project"*, while D established the mechanism — **a measurement names its surface and a mechanism usually cannot.** **The stripped version invites trusting measurements generally, which is false: a measurement over the wrong surface fails exactly as hard** — and C's counterexample is its own retired 244, a measurement wrong because a shell variable word-split. **The tally is quotable and the mechanism is not; a form that outlives its own qualification will shed it every time** | `pending` | **closes R188** |
 | R203 | **The page-date design is the OWNER'S and it dissolves the problem rather than solving it.** Not a machine-derived per-page date — **"Published on" set once when a page is genuinely published, "Last updated" beneath it only when an update actually changes that page**, small and findable, driven by the changelog. A build cannot know whether a change was meaningful; a person can. **Supersedes the per-page-mtime approach A had already shown to be the build date with extra steps.** One consequence named: the ~700 existing pages have no recorded publication date except in project history — a one-time backfill, and once it exists `sitemap.py` reads it instead of stamping today | `pending` | **owner's decision** |
 | R204 | **Publish the lockouts build — decided by the owner, and the ORDER is the finding.** The site serves one fingerprinted file, D built another; the fingerprint appears in every linking page, so the swap requires a rebuild. **And a rebuild right now rewrites all 715 dates, so a genuine one-file publish arrives inside seven hundred lines of false ones — "how a real change hides", landing on the change we most want to see.** **Dates first, then the publish is clean.** Same work, readable diff, both before the reset. **Not mine to execute: propose, never push, and merging is the publish** | `pending` | **A prepares, owner merges** |
+| R205 | **Sky damage verified, and CHEAPER than the audit filed it.** Two builders answer different questions and both document their choice: `build11.py`'s `_fullest()` prefers non-floor rows per `CLAUDE.md`; `skyloot.py:141` takes `max` over all fights. So "35,946 **or more**" states a floor ABOVE the fullest view of 23,321 — the sixth failure shape, verdict defensible, description names a different quantity. **The fix the audit costed at half a day is mostly done already: `damage_complete_max` is computed at `skyloot.py:151`, shipped in `sky-loot.json` for all 15 bosses, Bazzt Zzzt's is 23321 to the digit — and it has ZERO readers.** What is genuinely half a day is the headline, **hand-authored prose, not generated**: "about a 10th of what Cazic-Thule costs" is **16.1x** against the fullest view | `accepted` | **A** |
+| R206 | **The 673-page provenance failure verified with a positive control, not accepted on report.** Measured on the served tree: **0** catalogue pages carry `tier t1`–`t5`, **290** carry `tM`, of 675. **Control: 13 files elsewhere in `public/` DO carry t1–t5** — which is what makes the zero reportable rather than another dead grep. Badge machinery live on the exact pages; the absence is real and one-directional. **Measured provenance survives the generator, inherited provenance does not, on the 94% of URLs a stranger meets first — and 86 of those figures reach the `<meta description>` Google shows.** Ships in ONE commit with finding 3: `contamination.py` never scans the built tree, so it measures build inputs while the damage happens after them — pointing it at `public/**/*.html` makes the fix **proved rather than asserted** | `accepted` | **A** |
+| R207 | **What I reject and ratify, because a deferral without a reason is a silent narrowing of the owner's request.** **Rejected for today:** stale contrast comments (real, the signature fault in the best-annotated file — but **nothing renders below AA**, the cost falls on the next editor, first in the queue *after* promotion); the race-tool identity question (**inside Tuesday's rebuild** — but their 8 unlabelled selects do NOT defer, that is a barrier not an architecture question); the decorative SVG (audit says keep, agreed). **Ratified:** plate badges on everywhere — **an exemption nobody chose is drift, not policy**; `still-true`/`difficulty` keep their t1/t2 badges **and the exception gets written down**, because on the two pages about what is true the rung IS the point; `=` sigil wrapped `aria-hidden` — the only one of the three **a voice-control user cannot work around, because they cannot say the character** | `ruled` | **A** |
+| R208 | **Dates first — the reason changed and got stronger.** R204 ordered dates before the lockouts publish so one real change would not hide inside 715 false `lastmod` stamps. **Today is not one rebuild but a dozen, so the burial now applies to EVERY diff the owner is asked to read.** And the audit collapsed two jobs into one without knowing it — its "per-page `lastmod` from the dates the pages already print" **is the owner's published-on / last-updated design seen from the crawler's side**, so the backfill now pays for two findings. **Not tidiness: the difference between the owner reading a diff and approving one** | `ruled` | **A** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -20131,3 +20135,144 @@ decided, prepared by A, merged by the owner.**
 
 **No session is blocked, none is mid-run, and every one of the five verified its own state
 rather than asserting it.**
+
+---
+
+### 1 Sep 15:2xZ — RULING R205–R208: the audit triaged, two findings verified rather than accepted, and one is cheaper than filed
+
+**The owner commissioned an informed audit of the live site from the Sage and handed it
+to me with the instruction that decides the shape of today:**
+
+> ***"As the Director, you have to decide what to accept or reject from audits and
+> reviews. You hold the full picture and the plan, and you must execute your vision."***
+
+**47 findings survived the audit's own verification pass. I am not accepting them on
+the audit's authority, and I am not re-measuring all 47 either. I verified the two that
+change published numbers, because those are the two where accepting a wrong finding
+would make the site assert something false in a NEW way.**
+
+#### R205 — finding 2 verified, and it is CHEAPER than the audit filed it
+
+**The claim: `/raids/plane-of-sky` publishes Bazzt Zzzt at 35,946 "or more" at tier M
+while `/learn/difficulty` publishes the same boss at the same tier as 23,321, and six of
+eight Sky bosses disagree in the impossible direction — the figure labelled a FLOOR
+exceeds the figure presented as the fullest view.**
+
+**I traced both builders rather than trusting the report.**
+
+`_build/build11.py` — the difficulty page — implements the rule correctly and documents
+it. Its `_fullest()` prefers non-floor rows, and only when a group has nothing but
+partial views does it keep the strongest and **stay marked a floor**.
+
+`_build/skyloot.py:141` — the Sky page's data — does something different and also
+documents it: `best = max(fs, key=lambda f: f['damage_low'])` across **all** fights,
+carrying `damage_max_is_floor` to say whether the winner happened to be complete.
+
+> **RULING R205: both builders are internally coherent and they answer DIFFERENT
+> QUESTIONS — "the most damage anyone has observed" versus "the fullest view." That is
+> the defect. `CLAUDE.md` sets ONE rule, the fullest view, and one of the two builders
+> does not implement it.**
+>
+> **And the label is inverted in consequence, which is the sixth failure shape: the
+> verdict is defensible and the description names a different quantity. "35,946 or
+> more" tells a reader the floor is 35,946 when the fullest view of that boss is
+> 23,321 — a 3-attacker, 744-second, 90.8%-share fight with a 148-second late join,
+> printed as a lower bound over a complete 6-attacker, 46-second kill.**
+
+**THE PART THE AUDIT DID NOT FIND, and it changes the estimate: the correct field
+already exists, is already computed, and is already published.**
+`skyloot.py:151` computes `damage_complete_max` for every boss and writes it into
+`assets/sky-loot.json` — **Bazzt Zzzt's is 23321, matching what the difficulty page
+prints, to the digit.** A grep for consumers of that field returns **the definition and
+the fifteen data rows and nothing else. Zero readers.**
+
+> **So this is not "derive both pages from the same field, ~half a day." The field is
+> derived, correct, shipped, and unread. The build-side fix is pointing `build8.py` at
+> a value already sitting in its own input.**
+
+**What is genuinely half a day is the consequence, not the code:** the headline —
+*"its dearest boss costs about a 10th of what Cazic-Thule costs at Refined"* — is
+hand-authored prose in `public/raids/index.html:140` and `public/raids/plane-of-sky.html:314`,
+**not generated**, so no build change will correct it. Against the fullest view the
+multiple is **16.1x**. **A typed figure beside the data it claims to come from is this
+project's signature fault, and it is currently sitting in its most quotable sentence.**
+
+#### R206 — finding 1 verified with a positive control, and the count is exact
+
+**Measured on the served tree at `e0efe712`, not on the audit's word:**
+
+| | |
+|---|---|
+| catalogue pages carrying `tier t1`–`t5` | **0** |
+| catalogue pages carrying `tier tM` | **290** |
+| catalogue pages total | 675 |
+| **positive control** — files elsewhere in `public/` carrying `t1`–`t5` | **13** |
+
+**The control is the part that makes this reportable.** A bare zero from a grep is the
+shape that has fooled me three times — a dead instrument and an empty region are
+indistinguishable. **13 elsewhere proves the pattern matches when the thing is present,
+and 290 tM proves the badge machinery is live on these exact pages.** The absence is
+real and it is one-directional.
+
+> **RULING R206: accepted as filed, and it is the most consequential finding in the
+> audit — measured provenance survives the generator and inherited provenance does
+> not, on 94% of the site's URLs, which are the pages a stranger arriving from search
+> meets FIRST. A reader who has correctly learned the site's own rule reads every
+> unbadged figure as tier 2 or better. 86 of those figures reach `<meta name=
+> "description">`, which is the string Google shows.**
+>
+> **Paired with finding 3 and they ship in one commit. `contamination.py` globs
+> `_build/source/*.html` and never touches the built tree — it measures build INPUTS
+> while the damage happens between input and output. That is why finding 1 survived
+> two weeks: the self-audit cannot see the layer where the site fails. Pointing it at
+> `public/**/*.html` in the same commit makes the fix PROVED rather than asserted.**
+
+#### R207 — what I reject, defer, and ratify
+
+**REJECTED FOR TODAY, with the reason, because a deferral without one is a silent
+narrowing of the owner's request:**
+
+- **The stale contrast annotations.** Real, and it is the signature fault in the most
+  carefully annotated file on the project. **But nothing currently renders below AA.**
+  The cost falls on the next editor, not on any reader arriving this week. **First in
+  the queue after promotion, not in it.**
+- **The race tools' identity question** — whether the combo calculator is a tool or a
+  tab of the same file served at two URLs. **That sits inside the rebuild the owner has
+  already scheduled for Tuesday. Deciding it today would be decided again on Tuesday.**
+  **Their eight unlabelled `<select>` elements do NOT defer** — that is a barrier, not
+  an architecture question, and it is eight attributes.
+- **The 206KB of decorative SVG.** The audit says do not remove it and I agree.
+
+**RATIFIED — the audit's three "decisions, not defects", which are mine to settle:**
+
+1. **The plate badge exemption is applied unevenly, 6 of 13.** **Badges on, everywhere.
+   An exemption nobody chose is not a policy, it is drift.**
+2. **`/learn/still-true` and `/learn/difficulty` print t1/t2 badges against the "tiers 1
+   and 2 print plain" rule. Keep them, and write the exception down.** On the two pages
+   whose entire subject is what is true and how we know, showing the rung is the point.
+   **An undocumented exception is the same drift as item 1; a documented one is a rule.**
+3. **The `=` sigil.** `<span aria-hidden="true">=</span>` keeps the house style exactly
+   and stops a screen reader saying "equals Index" — **and it is the only one of the
+   three that a voice-control user currently cannot work around, because they cannot
+   say the character.**
+
+#### R208 — the order, and why dates still go first even though the reason changed
+
+**R204 put the page dates before the lockouts publish because a rebuild rewrites all 715
+`lastmod` stamps and would bury a genuine one-file change in seven hundred false ones.**
+
+**That reason is now stronger and broader than when I wrote it. Today is not one
+rebuild, it is a dozen — every fix on this list triggers one. So the burial applies to
+EVERY change the owner will be asked to read today, not just the lockouts swap.**
+
+**And the audit collapsed two jobs into one without knowing it:** its recommendation of
+"per-page `lastmod` from the dates the pages already print" **is the owner's own
+published-on / last-updated design, seen from the crawler's side.** The backfill was
+already the expensive part; it now pays for two findings instead of one.
+
+> **RULING R208: dates first, then the lockouts publish, then the generator work. Not a
+> preference about tidiness — it is the difference between the owner reading a diff and
+> approving one.**
+
+**None of this is mine to execute. Every item lands on a peer's `main`; the standing
+rule is propose, never push, and merging is the publish.**
