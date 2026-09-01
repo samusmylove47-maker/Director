@@ -613,3 +613,29 @@ Compared current remote heads against the 1 Sep 16:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 18:24Z
+
+Compared current remote heads against the 1 Sep 17:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `06f44b86` → `f8c89368` ("Merge pull request #172
+  from samusmylove47-maker/claude/lockouts-republish"), authored
+  2026-09-01T13:58:51-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `ea294060` → `e475cdb2`
+  ("CLOSES F17, F18 and F20 — three numeric claims on screens that no
+  longer survived the payload they name"), authored
+  2026-09-01T17:52:01+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `98078050` →
+  `1352da19` ("MAILBOX PROTOCOL: the channel to Session C already works;
+  what failed was addressing and notification, and neither needs a
+  session move"), authored 2026-09-01T18:03:36+00:00.
+- `EQLSAuras` `main`: `76d2b9b3` → `18d53f9b` ("E asked for a verb
+  census; claw and reave are REAL and E dropped them"), authored
+  2026-09-01T13:46:01-04:00.
+
+**Unchanged:**
+- `EQLSLockouts` `session-d/raid-rows`: `e54bc20c`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
