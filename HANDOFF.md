@@ -12008,6 +12008,10 @@ prefix. This closes the other sixteen.**
 | R212 | **Right decision, FALSE PREMISE — and I had already passed the premise to the owner.** I claimed a rebuild would ship sticky attribution "marking raids complete a player never ran"; D refuted it and I verified the refutation: `git log -S` on the assignment returns **one commit, its introduction, 23 Aug, never changed**. **The shipped code was always correct; the defect existed only in a mutation D wrote on purpose.** **A correct decision resting on a false premise is not a good decision, it is a lucky one** — and this premise was carrying weight immediately, as the sentence justifying blocking a publish the owner had approved. **D nearly made the same error inverted ten minutes later** — hypothesised the removed clock still rendered, grepped, got 3 hits, **stopped to look**: comments and a `setInterval` poll both versions have. **D checked before writing; I did not.** Attributing to D limited the damage and did not prevent it — **the transport class with me as transport again, this time an unchecked claim carried intact rather than a bound stripped** | `corrected` | **me** |
 | R213 | **The real reason is worse, and two faults compose on promotion day.** Verified by absence with a control: **`MIN_OBSERVED_FRACTION` does not exist in the shipped tool — there is no floor.** So the live app can render **a full week of 25 `open` cells from a handful of log lines**, read by a player as "you still owe all of these." **`/tools/lockouts` publishes *"A cell it has no history for reads not looked. It does not read open"* — the app violates the standard the page linking it asserts.** Heavier than a missing test: **the site keeps a promise on one page and breaks it in the software that page ships.** **Composes with the audit's finding that `/log on` appears zero times on the page and zero times in the 280KB app, and EQ logging is off by default** — so a thin log is **the condition most first-time readers arrive in**, and precisely the one producing confident `open` cells. **PR #10's headline to the owner is this, not "51 commits unmerged"** | `open` | **owner** |
 | R214 | **C killed its own headline with a control, and the finding outlives the result. "CANONICALISE THE KEY, AND IT IS STILL NOT AN IDENTITY."** C returned median 23.2%, p90 54.3%, 81% of pairs disagreeing — my hypothesis confirmed and quotable — **and did not send it**, because its control (each character's own damage, completely recorded in their own log) came back 88.8% disagreeing with rows reading *"Shara 0, Avenrae 930"*. **Impossible for one mob, therefore not one mob.** Measured cause: **"a dar ghoul knight" slain five times in one minute, 201 kills of that name, 24 damage lines against it in one second** — mass pulls of identically-named mobs, so a (name, second) key merges several entities and each log sums a different subset. **The disagreement was C's key colliding, not the logs disagreeing.** **C's item 5 said canonicalising fixes two spellings of one mob; this says canonicalising is correct AND INSUFFICIENT — a bug fix versus a fact about the data model.** **Q1 recorded as ANSWERED "the corpus cannot reach it"** — 9,275 co-witnessed cells, 115 qualifying fights, **0 co-witnessed named targets**, a measured boundary with a number on it. **Routed to D as a hypothesis and explicitly not a defect** (its tool keys on mob identity to decide what a player cleared); C now pointed at Lockouts. **Acquisition ask carried up: two players' logs of one raid answers Q1 in an hour** | `answered` | **C → D** |
+| R215 | **ABSENCE OF ONE GUARD IS NOT ABSENCE OF GUARDING — and I gave the wrong version to the owner as the reason their merge mattered.** I claimed the shipped tool renders 25 `open` cells from a thin log. **C refuted it; I verified on the repo at both commits.** In the OLD 27 Aug build, `lockoutCore.js:1868`, `if (!spans) cellState = 'not_looked'` is **the FIRST branch — it fires before any path reaches `open`.** C measured it down to 0.05% of a real log: **`open` is ZERO at every evidence level**, cells migrate 22→25 `not_looked`, completions decay 3→0. **`MIN_OBSERVED_FRACTION` really was absent and that measurement was sound — the error is the inference from it.** A stronger mechanism was supplying the property: a **coverage-spans-the-period** test, which a log covering the wrong hours cannot satisfy and which can name *which* hours are missing. **Failure shape three applied to mechanisms rather than files: I enumerated one candidate and treated it as the space.** **Second wrong mechanism I gave the owner today about one tool — both times I moved from a verified narrow measurement to a broad behavioural claim without executing the behaviour. C executed it; D ran its suite on the merged tree; I read code and reported outcomes.** **Surviving and untouched: `/log on` is absent from page and app, logging is off by default — *correct behaviour and useless output are compatible states*** | `corrected` | **me** |
+| R216 | **The two-vantage method cannot reach the lockout grid — closed by C and D independently, minutes apart, and C's reason is stronger.** D: the two characters' logs share **not one second** (Shara 19–29 Aug, Avenrae 9–17 Aug), zero co-witnessed roster kills from **disjoint** windows. **C: the grid's drivers are FIRST-PERSON** — `"You have been assigned the task"` 4 vs 6, `"has been slain by"` 7,558 vs 1,530 the only shared line. **Task grants exist only in the log of the character they happened to, so two grids are two legitimately different states, not one state seen twice** — which would hold even with perfect overlap. **Recorded as a property of the tool, not a gap in a corpus.** **And C kept the number worth more than the comparison: the entire lockout state rests on 4–6 task-grant lines, 45 drivers in 354,786 lines — 0.0127% of the input.** **Left OPEN rather than asserted:** whether two grouped players each receive their **own** grant line — if so a purpose-captured pair still answers it. **A fact about the game nobody has measured; put to D** | `answered / one open` | **D** |
+| R217 | **The cleanest accidental guarantee in the record, named by its holder with its expiry attached.** D on why C's identity finding misses its grid: *"that safety is a property of the roster being 10 hand-checked names, not of the engine handling the general case. If the roster ever discovers itself from timer rows, as the source says it should, that safety evaporates and C's finding becomes mine."* **147 same-second same-name collisions, 8.3% of kill lines, all trash; zero touching a roster boss; zero touching an `alsoDies` mob — the check that mattered, since a collision there would mean D's published 12/12 and 14/15 counts had been counting deduped events.** **The condition is not hypothetical — the source already says the roster should self-discover. A SCHEDULED hazard.** Directed into `UNREPORTED-FINDINGS.md` **as a precondition on that change, not a finding about today: a hazard recorded where the work will happen beats one recorded where it was found** | `recorded` | **D** |
+| R218 | **A dissolved my ordering constraint and asked me to re-rule rather than reordering quietly** — the behaviour the standing rules exist to produce. PR #167 derives `lastmod` from one `git log --name-only` pass, so **two consecutive builds now produce a byte-identical sitemap** and the fix's own diff is **15 lines where yesterday's build was 715**; 754 pages in 0.24s. **My order rested on ONE thing, diff noise, not on dates being valuable first — A did not argue the rationale, it removed the condition the rationale depended on. The ordering was a workaround for a defect and A fixed the defect; a workaround outliving its defect is the drift I ruled against this morning on the badge exemption.** Safe because it is the crawler field only and the owner's plan already ends with the sitemap reading the curated dates. **A's strongest argument was one I had not seen: the backfill is the one item that cannot be half-done across a promotion — real dates on some pages and nothing on others is worse than uniform silence.** A re-measured both my findings first, control included. **And the correction shape is the transferable part: after a FIFTH heredoc escape trap A's rule is not to be more careful but *"I do not write backslash content through a heredoc at all"* — care does not survive the fifth instance, a rule that eliminates the surface does. My equivalent, adopted: I do not report a behaviour I have not executed** | `re-ruled` | **A** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -20499,3 +20503,171 @@ a concrete request — **two players' logs of the same raid makes Q1 answerable 
 hour.** It needs targets whose name IS an identity, which is exactly the content the site
 publishes and exactly what C's corpus lacks. **E may hold two vantages of one Sky fight;
 the owner could ask a guildmate. Neither is today.**
+
+---
+
+### 1 Sep 16:3xZ — RULING R215–R217: an absent mechanism is not an absent property, the lockout grid rests on 0.0127% of its input, and a scheduled hazard named by its holder
+
+#### R215 — I VERIFIED AN ABSENCE CORRECTLY AND DREW THE WRONG CONCLUSION FROM IT
+
+**I claimed the shipped lockouts tool could render a week of 25 `open` cells from a thin
+log, and gave it to the owner as the reason their merge mattered. C refuted it. I verified
+the refutation on the actual repository at both the pre- and post-merge commits.**
+
+**`dbd15dc3` — the OLD 27 August build — `src/lockoutCore.js:1868`:**
+
+    let cellState;
+    if (!spans) {
+      cellState = 'not_looked';
+      because = ... `no record of ${h.hours}h inside this period`
+
+**`if (!spans)` is the FIRST branch in the chain. It fires before any path can reach
+`open`.** C measured the behaviour end to end, feeding a real log down to 0.05%:
+
+| kept | lines | drivers | completed | **open** | not_looked |
+|---|---|---|---|---|---|
+| 100% | 354,786 | 45 | 3 | **0** | 22 |
+| 10% | 35,478 | 8 | 0 | **0** | 25 |
+| 0.05% | 177 | 0 | 0 | **0** | 25 |
+
+**`open` is zero at every evidence level. Cells migrate to `not_looked`; completions decay
+to zero. That is correct degradation and the exact opposite of what I described.**
+
+> **RULING R215: `MIN_OBSERVED_FRACTION` really was absent — I established that with a
+> control that fired, and the measurement was sound. The error is the inference.** **I
+> concluded that because a NAMED mechanism was absent, the PROPERTY it would have
+> provided was absent. A different and stronger mechanism was supplying it.**
+>
+> **ABSENCE OF ONE GUARD IS NOT ABSENCE OF GUARDING.** **This is failure shape three —
+> the surface guessed, not enumerated — applied to mechanisms rather than to files. I
+> enumerated one candidate and treated it as the space of candidates.**
+
+**And the mechanism actually there is better than the one I went looking for.** A
+coverage-**spans**-the-period test, not a fraction floor. **A fraction can be satisfied by
+a log that covers the wrong hours; a span test cannot, and it can name WHICH hours are
+missing.** The module states its own reasoning at `:2053` — *"'open' is inferred… it means
+no kill was seen, which counts as evidence of absence only because coverage spans the
+period."* **That is search-versus-survey compiled into shipped code.**
+
+**THIS IS THE SECOND WRONG MECHANISM I HAVE GIVEN THE OWNER TODAY ABOUT ONE TOOL** — the
+first relayed from D and refuted by D, this one my own assertion. **The pattern is not two
+unlucky facts. Both times I moved from a verified narrow measurement to a broad claim
+about behaviour without executing the behaviour.** C executed it. D executed its suite on
+the merged tree rather than its branch. **I read code and reported outcomes.**
+
+**WHAT SURVIVES, and C states it better than I did:**
+
+> **A player who never enabled logging gets 25 `not_looked` cells and no instruction
+> anywhere for how to make them mean something. CORRECT BEHAVIOUR AND USELESS OUTPUT ARE
+> COMPATIBLE STATES.**
+
+**`/log on` appears zero times on the page and zero times in the 280KB app; EverQuest
+logging is off by default. That finding is untouched and it is the more important half —
+the fix is fifteen minutes and no amount of correctness in the grid closes it.**
+
+#### R216 — the two-vantage method cannot reach the lockout grid, and C's reason beats D's
+
+**Both sessions closed the same question from opposite sides within minutes of each
+other, without contact.**
+
+**D:** the two characters' logs share **not one second**. Shara 19–29 Aug, Avenrae 9–17
+Aug. **Zero co-witnessed roster-boss kills, from disjoint windows rather than sparse ones.**
+
+**C, and this is the stronger reason:** the grid's drivers are **first-person**.
+
+    "You have been assigned the task"   Shara 4   Avenrae 6
+    "has been slain by"                   7,558     1,530   <- the only SHARED line
+
+**Task grants are `You` lines and exist only in the log of the character they happened to.
+So comparing two grids compares two characters' LEGITIMATELY DIFFERENT STATES, not one
+state seen twice.** **D's disjoint windows are downstream of that; C's reason would hold
+even with perfect overlap.**
+
+> **RULING R216: recorded as a property of the tool, not a gap in a corpus.** **And the
+> number C kept is worth more than the comparison would have been: the entire lockout
+> state rests on 4 to 6 task-grant lines — 45 driver lines in 354,786, 0.0127% of the
+> input.** **Everything that grid asserts hangs off a ten-thousandth of what it reads.**
+
+**ONE QUESTION LEFT OPEN RATHER THAN ASSERTED, because I have been wrong twice today
+asserting unmeasured mechanisms:** C's objection is decisive for *retrospective*
+comparison. **It may not be decisive for a purpose-captured pair — if two grouped players
+each receive their OWN task-grant line for the same task, both grids have drivers and the
+comparison becomes valid.** **Whether that is true is a fact about the game and nobody has
+measured it. Put to D, whose corpus and parser are the only things that could settle it.
+If yes, the capture is worth requesting; if no, this is a permanent boundary rather than a
+missing dataset.**
+
+#### R217 — an accidental guarantee named by its holder, with its expiry date attached
+
+**D, unprompted, on why C's identity finding does not reach its grid:**
+
+> ***"My grid never looks at those names, so it is safe — and that safety is a property of
+> the roster being 10 hand-checked names, not of the engine handling the general case. If
+> the roster ever discovers itself from timer rows, as the source says it should, that
+> safety evaporates and C's finding becomes mine."***
+
+**147 same-second same-name collisions, 8.3% of kill lines, every one trash the roster
+never reads. Zero touching a roster boss. Zero touching an `alsoDies` mob — the check that
+mattered, because a collision there would mean D's published 12/12 and 14/15 counts had
+been counting deduped events.**
+
+> **RULING R217: this is the cleanest accidental guarantee in the record — a property
+> holding by side effect rather than by choice, identified by the person who benefits from
+> it, WITH the condition that ends it.** **And the condition is not hypothetical: the
+> source already says the roster should discover itself from timer rows. This is a
+> SCHEDULED hazard.**
+>
+> **Directed to be written into `UNREPORTED-FINDINGS.md` as a PRECONDITION on that change
+> rather than as a finding about today. A hazard recorded where the work will happen beats
+> one recorded where it was found.**
+
+#### R218 — A dissolved my ordering constraint and asked me to re-rule rather than reordering quietly
+
+**I had told A twice not to reorder. A found that the reason for the order had gone,
+stopped, and put it back to me with a recommendation. That is the behaviour the standing
+rules are supposed to produce and it is worth recording as such.**
+
+**PR #167: `lastmod` now derives from one `git log --name-only` pass over `public/` — a
+file's date is the last commit that actually changed it.**
+
+| | |
+|---|---|
+| before | every rebuild rewrote all 715 `<lastmod>` with `date.today()` |
+| after | **two consecutive builds produce a BYTE-IDENTICAL sitemap** |
+| the fix's own diff | **15 lines**, where the same build yesterday was 715 |
+| cost | 754 pages in **0.24 seconds**, 12 distinct dates |
+
+> **RULING R218: re-ruled. Section 2 now, backfill after.**
+>
+> **My order rested on ONE thing — diff noise — and not on the dates being valuable
+> first. A did not argue with the rationale; it removed the condition the rationale
+> depended on.** **The ordering was a workaround for a defect and A fixed the defect. A
+> workaround outliving its defect is the same drift I ruled against this morning on the
+> badge exemption.**
+
+**It does not pre-empt the owner's design and that is what makes it safe: this is the
+crawler field, the owner's is reader-facing and curated, and the owner's own plan already
+ends with `sitemap.py` reading the curated dates instead of stamping today. A changed what
+it reads in the meantime.**
+
+**A's strongest argument was one I had not seen: the backfill is the single item that
+cannot be half-done safely across a promotion.** **A partially-backfilled site publishes
+real publication dates on some pages and nothing on others, and a reader cannot tell
+which is which — worse than the current uniform silence.**
+
+**A independently re-measured both of my findings before accepting them, control
+included** — `damage_max=35946 / damage_max_is_floor=True / damage_complete_max=23321` to
+the digit, and 0 / 290 / 675 with the 13-file control holding. **That is the correct
+response to a Director who has been wrong twice in one hour, and I have told it to keep
+doing so whenever a finding of mine is about to cost it a day.**
+
+**AND THE CORRECTION SHAPE, which is the transferable part.** A hit the heredoc escape
+trap a **fifth** time, one day after recording the repair. Its new rule is not to be more
+careful: ***"I do not write backslash content through a heredoc at all."*** **Care does
+not survive the fifth instance; a rule that eliminates the surface does.**
+
+> **My equivalent, adopted today: I do not report a behaviour I have not executed.**
+> **Both of my wrong claims came from reading code and describing outcomes. C executed
+> the tool at five evidence levels; D ran its suite on the merged tree rather than its
+> branch; A measured two builds for byte-identity. Reading a guard tells you what is
+> written. Only running it tells you what happens.**
