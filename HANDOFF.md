@@ -11974,6 +11974,7 @@ prefix. This closes the other sixteen.**
 | R186 | **C applied R144 to its own findings file and named what made the defect invisible.** The canonicalisation finding WAS recorded — bundled under someone else's heading, *"so writing it down did not make it discoverable."* Split at `eb60e1b6`, and C added the hazard sentence: **nothing about it is visible from a parse; every line parsed cleanly, every count looked plausible, and the failure presented as THE GAME BEING QUIET.** *"A defect that announces itself gets found; this one hid inside a correct-looking result."* **R149 changed C's output within an hour, exactly as C predicted it would** | `pending` | **stands** |
 | R187 | **R166 is MINE — D supplied the instance, I made the criterion, and D handed it back.** *"Mine was a fact about one defect; yours is a rule about test-set size."* **Taking it back rather than performing modesty: handing it to D would leave the record wrong in the direction that flatters me for being generous.** D keeps the other three, which came out of its own failures. **And the pattern is mine to watch — four sessions bounded rules I wrote wider than their evidence tonight, and now the inverse: I have been giving away generalisations I made from a session's material. Same failure to hold the line between an observation and the rule drawn from it** | `pending` | **mine; credit corrected** |
 | R188 | **I sent the owner a tally with its bound stripped off.** D bounded "mechanism claims fail where measurements hold" at R77 and re-bounded it tonight — *"the bound has not weakened just because the ratio held six more times… a measurement can be a correct reading of the WRONG POPULATION."* **My report minutes earlier read "six of its mechanism claims wrong; every one of its measurements held" — the unbounded form, no surface, no caveat.** I applied the base-rate rule to the LEDGER while failing it on a session's own ratio. **The only form that travels: a measurement names its surface and a mechanism usually cannot.** Corrected to the owner in the same breath | `pending` | **mine; corrected upward** |
+| R189 | **The TRANSPORT CLASS with a PERSON as the transport, and it is the worst of the three variants.** Bash dropped a clause from a commit body; a `/tmp` round-trip dropped an entire test and the suite went GREEN; **and I dropped the bound off a ratio while relaying it upward.** *"The bound was present at authoring, absent at delivery, and nothing in the delivered form looked incomplete"* — the unbounded sentence reads perfectly well, which is why it survived. **D's reason it is the worst: a number that never had a bound is honestly unqualified; one that HAD it and lost it carries the authority of having been careful.** Remedy unchanged: **read back what LANDED, not what you sent** — third same-kind result today | `pending` | **stands; D's close** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19609,3 +19610,48 @@ on an artifact whose hash moves with every commit.**
 not about its own:** *"The single most valuable thing anyone did tonight was ask me whether
 I was working instead of reading it off a commit subject — and you were right to record
 that getting it right that time proved nothing about the method."*
+
+---
+
+### 1 Sep 05:0xZ — RULING R189: the transport class, with a person as the transport
+
+**D's closing observation, offered as a FACT rather than a mechanism — and it says why:**
+*"I have offered six of those tonight and four were wrong, so I will not close on a
+seventh."*
+
+> **The unbounded ratio reaching the owner is the TRANSPORT CLASS AGAIN, with a person as
+> the transport.**
+>
+> | transport | what it dropped |
+> |---|---|
+> | bash, double-quoted `-m` | a clause from a commit body |
+> | python-then-`cat` through `/tmp` | an entire test — and the suite went GREEN |
+> | **the Director relaying upward** | **the bound on a ratio** |
+
+> ***"The bound was present at authoring, absent at delivery, and NOTHING IN THE DELIVERED
+> FORM LOOKED INCOMPLETE. 'Six mechanism claims wrong, every measurement held' reads
+> perfectly well without its second half — which is exactly why it survived the trip."***
+
+> **RULING R189: this is the WORST of the three variants and D names why.** ***"A number
+> that never had a bound is honestly unqualified. One that HAD it and LOST it carries the
+> authority of having been careful."*** **The delivered form inherits the credibility of
+> the care taken upstream and none of the qualification that care produced.**
+
+**AND THE REMEDY IS THE ONE THAT HAS WORKED EVERY TIME TONIGHT: read back what LANDED, not
+what you SENT.** **I caught it by re-reading my own report** — **the third
+instrument-of-the-same-kind result today, after the diffstat catching my wrong file and D's
+grep-by-name catching the lost test.** **Not a better instrument. A second one, applied to
+the delivered artefact rather than the intended one.**
+
+**On R187, D's closing note, which is sharper than my own framing:**
+
+> ***"The record being accurate matters more than either of us being seen to be generous —
+> and a distortion introduced by generosity is still a distortion, just one nobody will
+> argue with."***
+
+> **A distortion nobody will argue with is more durable than one they will.** **That is why
+> taking R166 back was the correct direction and not merely the modest-looking one.**
+
+**D's final state, re-confirmed rather than remembered: `0a5bfcb0` both sides, 0 unpushed,
+0 dirty. Handover placed in `docs/UNREPORTED-FINDINGS.md` where a session with none of
+tonight's context can act on it.**
