@@ -11912,6 +11912,9 @@ prefix. This closes the other sixteen.**
 | R124 | **SHIP-BLOCKER: `candidates()` ERASES strictly-better items.** Mammoth Hide Cloak (AC7+WIS4) against a worn Banded Cloak (AC7) → offered 0; against an EMPTY slot → offered with delta AC7/WIS4/SV_COLD5. **3,910 of 40,054 strictly-better pairs dropped; 87.4% of pairs carry a non-empty `unknown`.** `betterOnSomeAxis` reads `delta` alone while `StatDelta.unknown`'s own doc says such a candidate should RANK BELOW — and B does not rank. **"Dropping a row is ranking it last, silently."** B RETRACTED its own refutation: it had tested `statDelta`, the claim was about `candidates()`. **I reproduced the mechanism on the shipped bundle; I could NOT reach the `candidates()` arm — 3,364 of 3,663 published records carry `id: null`. A limit of my instrument, not evidence against B** | `pending` | **stands; B's measurement** |
 | R125 | **R120 paid out inside the hour: B read its BIS audit's 9 KILLED entries and found two vacuous guards.** `bis.test.ts it('offers nothing the trio cannot equip')` passes `race:'HUM'` then filters on `cl` and `rl` — **never `ra`**. The refuter killed it while its own reasoning said *"the observation at the core is accurate… leaves the suite fully green, 1005/1005"*: mechanism confirmed, severity refuted, finding deleted by a boolean. **Not hypothetical — B had just fixed a Human cleric's top FEET upgrade being `ra ["BAR","TRL","OGR"]`, which the test named for exactly that could not see** | `pending` | **stands** |
 | R126 | **A guard that calls the function under test agrees with it by construction.** B restated the rule IN the test rather than importing `character.ts`'s predicate. **A test importing the implementation's own predicate asserts only that the function equals itself — it passes for every possible behaviour including the wrong one.** Failure shape 1 with the implementation supplying both answers. **Four instances one shape: D's `heartbeat()` defeating `not_looked`, A's self-containment auditor that could not return YES, E's control asserting the same sentence as its check (R91), and this** | `pending` | **stands; adopted** |
+| R127 | **I reported `.gitattributes` ABSENT to the owner twice while it was PRESENT.** MSYS2 path conversion rewrote `origin/main:.gitattributes` to `origin\main;.gitattributes` before git saw it — `cat-file -e` failed and printed ABSENT, and **`git show \| wc -l` returned 0, which is indistinguishable from "the file is empty".** R103's transport class in my own READING instrument, on the fact I had been escalating as highest-value. **And my positive control (`CLAUDE.md`, no leading dot) PASSED while the region under test was broken — rule 5(c), which I had been quoting at other sessions all night** | `pending` | **mine; corrected** |
+| R128 | **R121 is CLOSED, verified in the configuration that caused it.** A's `.gitattributes` shipped at `812b711e`, merged as **#162**. Fresh clone at `core.autocrlf=true` against `9765cc6d`: `zones.v1.json` blob 16282 = worktree 16282 (was 16742), `check.py` **exit 0**, dirty 0. **The path from a pristine Windows clone to rewriting 702 published pages by obeying the tool no longer exists.** A also found a consequence I missed — `stamp.py` fingerprints raw bytes, so a CRLF clone reported "public/ is stale", **which is what my own first scratch run hit and I attributed to one cause and stopped** | `pending` | **stands; trap closed** |
+| R129 | **One `null` covering two different hands.** `twoHandedCost` bailed identically for an EMPTY offhand (costs nothing, measured) and an UNRESOLVED one (something is there, worth unknown) — and `gain` subtracted `?? 0`: **a cost of zero asserted for an unpriced item, with no note on the row.** R98's shape one slot over. Now REJECTED rather than netted, or WITHHELD with `'offhand-unpriceable'`. **And the half B nearly shipped untested: a worn offhand scoring zero dropped the TWO-HANDED note, so the reader was never told their offhand empties — *"the arithmetic was never wrong; the disclosure was missing."*** B's A/B caught its own fix unguarded (1044 green) and it wrote the test first | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -17454,3 +17457,107 @@ lists, `canUseRace` untouched — was 1005/1005 GREEN.**
 > self-containment auditor could not return YES; E's positive control asserted the same
 > sentence as the check below it (R91). **Four instances, one shape: the instrument and
 > the subject sharing a source.**
+
+---
+
+### 1 Sep 02:5xZ — RULING R127–R129: I reported a file absent twice while it was present, and R121 is closed
+
+#### R127 — MY reading instrument mangled its own argument, and returned empty
+
+**I told the owner `.gitattributes` was ABSENT on `origin/main` in two consecutive
+reports. IT WAS PRESENT.** A shipped it at `812b711e` and the owner merged it as **#162
+at 22:38**.
+
+**Three instruments on the same question:**
+
+```
+git ls-tree origin/main -- .gitattributes
+  -> 100644 blob 2bffab91fad9692d31bcb76064e959ebca213fde   .gitattributes   PRESENT
+
+git cat-file -e "origin/main:.gitattributes"
+  -> fatal: Not a valid object name  origin\main;.gitattributes        <- MANGLED
+
+git show origin/main:.gitattributes | wc -l
+  -> 0                                                       <- READS AS EMPTY
+```
+
+> **MSYS2 path conversion rewrote the argument — `:` became `;` and `/` became `\` —
+> before git ever saw it.** **`cat-file -e` failed and my `&&`/`||` printed ABSENT;
+> `git show` failed and the pipeline printed 0 lines, which is indistinguishable from
+> "the file exists and is empty."**
+
+> **RULING R127: R103's transport class, in my own READING instrument, on the single fact
+> I had been escalating to the owner as the highest-value outstanding change.**
+> **Authoring succeeded, git succeeded at what it was actually asked, and the layer
+> between rewrote the question.**
+
+**AND I HAD A CONTROL THAT WOULD HAVE CAUGHT IT AND DREW IT FROM THE WRONG PLACE.**
+`git cat-file -e "origin/main:CLAUDE.md"` **works** — no leading dot, no mangling. **My
+positive control passed while the region under test was broken.** **That is tick rule
+5(c) exactly, and I have been quoting it at other sessions all night: the control must
+come from the region under test — here, a DOTFILE.**
+
+> **The correct reading is `MSYS2_ARG_CONV_EXCL='*' git show 'origin/main:.gitattributes'`
+> — 73 lines.** **Adopted: any `git show`/`cat-file` on a path beginning with a dot gets
+> the conversion disabled, and a zero-line result from `git show` is treated as a FAILED
+> READ until proven to be an empty file.**
+
+#### R128 — R121 is CLOSED, verified in the configuration that caused it
+
+**A's `.gitattributes` is 73 lines and carries its own measurements. A also found a
+consequence I had not:**
+
+> *"It reaches past those four: `stamp.py` fingerprints raw bytes, so a CRLF checkout
+> makes a pristine clone report **`public/ is stale`**."*
+
+**That is what my very first scratch clone hit, which I filed in R115 as "a real-looking
+result about the wrong tree."** **It was the wrong tree AND the CRLF fault; I named one
+cause and stopped.**
+
+**Verified with a fresh clone at `core.autocrlf=true` — the Windows default that produced
+the fault — against current main `9765cc6d`:**
+
+```
+HEAD 9765cc6d   autocrlf=true   dirty=0
+zones.v1.json   blob 16282  vs  worktree 16282        <- was 16742
+python scripts/check.py  ->  All checks passed        exit 0
+```
+
+> **RULING R128: the 702-page trap is closed.** **A pristine Windows clone now passes,
+> so the path from a clean checkout to rewriting every published page by obeying the tool
+> no longer exists.** **Measured in the broken configuration rather than in a corrected
+> one, which is the only version of this test that means anything.**
+
+#### R129 — one `null` covering two hands, and the disclosure that was missing
+
+**B closed 13 of 13 surviving BIS-audit findings. The last had two halves needing
+different answers and B's first fix guarded only one.**
+
+> **`twoHandedCost` bailed to `null` whenever `view.item` was undefined — covering an
+> EMPTY offhand and an UNRESOLVED one.** **Empty costs nothing and that zero is
+> measured. Unresolved means something IS in that hand and nobody knows its worth** — and
+> `gain` then subtracted `?? 0`.
+
+> **A cost of ZERO asserted for an unpriced item, with no note on the row.** **R98's
+> shape, one slot over from `worn-unresolved`** — and B named it that way itself.
+
+**Now separated: an unpriceable offhand makes a two-handed candidate REJECTED rather than
+netted, reusing the per-candidate walk so a one-hander further down is unaffected and
+still ranked. If nothing survives, the position is WITHHELD with `'offhand-unpriceable'`
+and a sentence — rather than counted as "already best."**
+
+**AND THE HALF B NEARLY SHIPPED UNTESTED.** The same function did
+`if (!offhandEp) return null`, so **a worn offhand scoring zero dropped the row's
+TWO-HANDED note entirely and the reader was never told their offhand empties.**
+
+> **B's sentence, adopted: *"The arithmetic was never wrong; the disclosure was
+> missing."*** **A correct number that omits what it cost the player is not a correct
+> answer.**
+
+**B's A/B caught that its OWN FIX was unguarded** — reverting that line left all 1044
+tests green. **So B wrote the test before shipping and re-ran the mutation: 1 failed /
+1045.**
+
+> **That is R95 applied to a fix IN FLIGHT: B established that its own repair was
+> enforced rather than merely present, before shipping it.** **The first session to run
+> that check on itself pre-emptively rather than after being asked.**
