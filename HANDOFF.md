@@ -12020,6 +12020,9 @@ prefix. This closes the other sixteen.**
 | R224 | **THE FIFTH SURFACE REMOVED, and C's is the cleanest statement of the shape.** C's tile rendered four observations identically to four thousand; it **nearly reached for a minimum-observations threshold and did not.** ***"Displaying the evidence beats judging it, and there is nothing to tune."*** Counts now always on the tile — `Grimtusk (4)` reads thin to anybody, `Grimtusk (312)` reads solid. **No constant, no calibration, nothing to defend — a design with nothing to tune cannot drift.** Third defect retired the same way: `showMargin` deleted because `(+3)` rendered identically to `(+3000)` and a three-swing margin is noise reading as a finding. **Five instances today of the only correction shape that has held: no backslash content through a heredoc; no reporting a behaviour unexecuted; no `title` as sole carrier of a claim; no pointer without a producer check; display the evidence rather than judging it.** **BADGE QUESTION RULED not routed: a badge marks a claim weaker than it looks, the overlay carries measurement only, so there is no unsourced claim there to protect — design upheld, and surfacing the estimate on the overlay REFUSED as trading a real guarantee for a convenience on launch day.** Residual is discoverability, not provenance | `ruled` | **C** |
 | R225 | **A's sharpening supersedes my pairing and is recorded as A's.** A **refused** to write the invariant in `eql-source` because it cannot rebuild D's source there, so the assertion could never fail — ***"the first of the two fault shapes I wrote into `inputscover.py` this morning, and I am not shipping one."*** **A check that cannot return one of its two answers converts an unmeasured property into a green tick.** **And A identified the actual mechanism I had missed: `lockouts.py` records file, hash, sha256, bytes, kb, read-date — every one a property of the FILE, none of the SOURCE — so a seven-commit-stale artifact and a current one are indistinguishable to A.** That is why the trap was armed against A's action, not D's. Contract term approved **as a follow-up, not today**: producing repo emits the source commit beside the artifact. **THE GENERALISATION:** *"Neither was caught by a check inside the thing that was wrong… every one of these needs an instrument that lives OUTSIDE the artifact it judges."* **R209 caught by a session reporting on itself; R222 by a Director measuring a repo he does not own. It explains why every catch today came from a second independent look and never a more careful first one — a careful first look is still inside.** **And A's own escape was structural: `EQLS_SKIP_APPS=1`, a guard A shipped in #158 — *"I did not avoid this trap by remembering it. The flag meant I could not walk into it"*** | `ruled` | **A** |
 | R226 | **D verified its own new check as a MATCHED PAIR, and ran the precondition before the negatives.** PR #12: **`EQLSLockouts` is served nowhere** — `repos/EQLSLockouts` 200 as the precondition (**without which the 404 below is uninformative**), `has_pages false`, no homepage, `/pages` 404, zero `.github` files on any ref, **and a control repo it cannot read returning the same 404.** So the rebuild is **self-consistency, not a publish.** **The new assertion reads the COMMITTED pointer out of git, builds from current source, and requires a match — comparing against the working-tree `latest.txt` would be a tautology, since every other test in that file builds first and overwrites it.** **And D ran it deliberately in the broken state FIRST: it fails before the rebuild and passes after.** ***"A check only ever seen to pass is not known to work"* — the rule D had been applying to everyone else's guards all day, applied for the first time to one it was writing at the moment of writing it.** 142 green | `PR #12 open` | **owner** |
+| R227 | **Both blockers merged and verified independently. #167 at 15:44Z, #12 at 15:46Z.** **The sitemap proof needs no build: today is 2026-09-01 and main reads 700 x 2026-08-31 and 15 x 2026-08-30 — if it were still stamping build day all 715 would read today.** Last night: 715 entries, ONE date, every page asserting it changed on build day. **Closed.** **One number does not reconcile and I put it back to A rather than guessing** — A reported 754 pages / 12 distinct dates, main carries 715 / 2. Three readings fit and I cannot distinguish them from here. **I told A explicitly NOT to "fix" the sitemap toward more dates: 700 pages sharing one date is HONEST if 700 pages genuinely last changed in one rebuild commit. The goal was never date diversity — it was that a build changing one page produces one changed `lastmod`, and since the date comes from file history rather than the clock, a byte-identical regeneration creates no commit and moves no date. The distinct-date count is a symptom of history, not a measure of the fix.** **#12: `latest.txt` names `fd053e47`, the file EXISTS in the tree at 305,191 bytes, and the stale `14106e64` is GONE rather than left beside it.** **The arc: D found 51 commits with no pathway at 15:03; all landed and certified by 15:46** | `closed` | **verified** |
+| R228 | **The owner turned the strategy into a LIFECYCLE, which has more reach than the decision it replaced.** Not *"the plates got old"* — *"new guides will come with new expansions, but they too will likely be de-emphasized as players explore and learn in game, and need maps far less, and need tools for raiding far more."* **So EVERY guide surface has a half-life set by how fast the playerbase learns the content, and tools do not.** **Guide work is a launch-window asset with a decay curve; tools are the permanent centre — and new expansion guides in winter 2026 and 2027 should be planned KNOWING they decay on the same arc, which is worth having before writing them rather than after.** **And the plates STAY, as a legacy of the project's origins:** the owner accepted the argument that **the plates are where the retractions live, where a page argues against itself, where a survey says its own percentages describe nothing about the zone now — the evidence a stranger needs before trusting a tool.** De-emphasising costs nothing while they stay reachable and the tools cite them; deleting would cost the thing that makes the tools credible. **In durable memory at the owner's explicit request** | `recorded` | **owner** |
+| R229 | **The character-sheet URL — answered from what we already run rather than from principle.** `race-unlocks.html` **already does this**: `decodeState(location.hash)` on arrival, `history.replaceState` writing state back. `50-upgrades` has **zero** URL state, so nothing collides. **THE FRAGMENT IS THE LOAD-BEARING DETAIL: everything after `#` is never transmitted to any server; everything after `?` is.** **A fragment link preserves the promise the site already makes and the audit verified — no page loads a cross-origin subresource, "Your data never leaves" holds as printed. A query-string version would break that silently and look identical to the user.** **It also beats a pasted code block for the community specifically — Discord auto-links URLs intact while breaking long code blocks across lines, and a link is shareable, so "here is my character, what should I upgrade" becomes a post someone else clicks.** Three constraints: **length, which must be MEASURED not assumed** (encode a real fully-geared character; item IDs over names, B's catalogue has all 3,663); **versioning**, since a link posted in October must work in December — **new code reading an old artifact is the exact failure caught three times today**; and **contents**, since a link is permanent once posted | `ruled` | **B, next Tue** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -20977,3 +20980,99 @@ hour earlier for the same reason, found independently.
 WHICH method A used and then assumed A had acted at all — the step before the one I
 guarded."* **Fourth wrong-surface variant today. Two mine, two D's, and every correction
 came from a second independent look.**
+
+---
+
+### 1 Sep 17:0xZ — RULING R227–R228: the day's blockers cleared and verified, and the owner sharpens the strategy into a lifecycle
+
+#### R227 — both blockers merged, both verified independently, and the sitemap proof is one line
+
+**The owner merged #167 at 15:44Z and #12 at 15:46Z. I verified each rather than relaying.**
+
+**#167 — the sitemap. The proof it works needs no build:**
+
+    today is 2026-09-01
+    sitemap on main reads  700 x 2026-08-31,  15 x 2026-08-30
+    if it were still stamping build day, all 715 would read 2026-09-01
+
+**It is definitively no longer stamping today.** **Last night I measured 715 entries with
+ONE distinct date — every page asserting it changed on build day. That defect is closed.**
+
+**ONE NUMBER DOES NOT RECONCILE AND I PUT IT BACK TO A RATHER THAN GUESSING:** A reported
+**754 pages, 12 distinct dates**; main carries **715 entries, 2 distinct dates.** Three
+readings fit — A measured pre-merge, the 754 counts files the sitemap does not emit, or the
+merge changed the result — **and I cannot distinguish them from here.** **I told A
+explicitly not to "fix" the sitemap toward more dates: 700 pages sharing one date is HONEST
+if 700 pages genuinely last changed in one rebuild commit.** **The goal was never date
+diversity. It was that a build changing one page produces one changed `lastmod` — and since
+the date comes from the file's history rather than the clock, a byte-identical regeneration
+creates no commit and moves no date.** **The distinct-date count is a symptom of history,
+not a measure of the fix.**
+
+**#12 — the lockouts pointer:**
+
+    latest.txt names   eqls-lockouts.fd053e47.html
+    tracked in tree    eqls-lockouts.fd053e47.html    <- the pointer names a file that EXISTS
+    size               305,191 bytes
+    the stale 14106e64 GONE — replaced, not accumulated
+
+**D certified it on a clean checkout of `main` rather than its own branch, which is the
+only version that means anything for a check whose purpose is catching this repo lying
+about itself. A is released to publish.**
+
+**THE DAY'S ARC IN ONE LINE: D found 51 commits with no pathway at 15:03. All of it is
+landed and certified by 15:46. Three PRs merged from D today, plus A's sitemap.**
+
+#### R228 — the owner turned the strategy into a lifecycle, and it changes future planning
+
+**Yesterday's note recorded that the plates are de-emphasised, not deleted. The owner
+sharpened it into something with more reach:**
+
+> ***"New guides will come with new expansions, but they too will likely be de-emphasized
+> as players explore and learn in game, and need maps far less — and need tools for raiding
+> far more."***
+
+> **RULING R228: this is not "the plates got old." EVERY GUIDE SURFACE HAS A HALF-LIFE SET
+> BY HOW FAST THE PLAYERBASE LEARNS THE CONTENT. TOOLS DO NOT.** **Guide work is a
+> launch-window asset with a decay curve; tools are the permanent centre.** **So new
+> expansion guides in winter 2026 and 2027 should be planned KNOWING they will be
+> de-emphasised on the same arc — which is a fact worth having before writing them rather
+> than after.**
+
+**AND THE PLATES STAY, AS A LEGACY OF THE PROJECT'S ORIGINS.** The owner accepted the
+argument I put: **the plates are where the retractions live, where a page argues against
+itself, where a survey says its own percentages describe nothing about the zone now.**
+**That is the evidence a stranger needs before trusting a tool.** **De-emphasising costs
+nothing while they stay reachable and the tools cite them; deleting would cost the thing
+that makes the tools credible.**
+
+**Recorded in durable memory rather than only here, at the owner's explicit request.**
+
+#### R229 — the character-sheet URL, answered from what we already run
+
+**The owner asked whether the upgrades tool could emit a pasteable link that opens a
+populated character sheet with recommended upgrades. I checked what exists rather than
+answering from principle.**
+
+**`public/tools/race-unlocks.html` already does exactly this** — `decodeState(location.hash)`
+on arrival, `history.replaceState` writing state back into the hash. **`50-upgrades` has
+zero URL state, so this is new work there and nothing collides with it.**
+
+> **RULING R229: yes, and the FRAGMENT is the load-bearing detail. Everything after `#` is
+> never transmitted to any server; everything after `?` is.** **A fragment link preserves
+> the promise the site already makes and the audit verified — no page loads a single
+> cross-origin subresource, "Your data never leaves" holds as printed.** **A query-string
+> version would break that silently and look identical to the user.**
+
+**It also beats a pasted code block for the community specifically: Discord auto-links URLs
+and leaves them intact while breaking long code blocks across lines — and a link is
+shareable, so "here is my character, what should I upgrade" becomes a post someone else
+clicks.**
+
+**Three constraints named, one of them a real risk:** **length** — full gear may outgrow
+what browsers and chat clients carry, and **this must be MEASURED rather than assumed:
+encode a realistic fully-geared character and see what it comes to.** Item IDs rather than
+names (B's catalogue has IDs for all 3,663) plus compression is the lever. **Versioning** —
+a link posted in October must work in December, so the payload carries a version marker,
+**because new code reading an old artifact is the exact failure caught three times today.**
+**Contents** — a link is permanent once posted, so it carries gear and nothing else.
