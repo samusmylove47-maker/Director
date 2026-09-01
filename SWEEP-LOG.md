@@ -355,3 +355,23 @@ Compared current remote heads against the 1 Sep 04:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 06:24Z
+
+Compared current remote heads against the 1 Sep 05:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `eb88e2b9` → `4705ecc5`
+  ("CLOSES the session: tip aea914c, no orders in the final range, tree
+  clean and pushed"), authored 2026-09-01T05:40:59+00:00.
+- `EQLSAuras` `main`: `69c1a76e` → `b05741bf` ("The bound went missing
+  TWICE independently, which makes it a property of the sentence"),
+  authored 2026-09-01T01:31:40-04:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e0efe712`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `fcc0922c`.
+- `EQLSLockouts` `session-d/raid-rows`: `0a5bfcb0`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
