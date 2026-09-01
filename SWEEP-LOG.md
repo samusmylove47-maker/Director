@@ -588,3 +588,28 @@ Compared current remote heads against the 1 Sep 15:23Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 17:24Z
+
+Compared current remote heads against the 1 Sep 16:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `74a38b44` → `06f44b86` ("Merge pull request #170
+  from samusmylove47-maker/claude/auras-current-copy"), authored
+  2026-09-01T13:18:54-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `8a6523c0` → `ea294060`
+  ("TO DIRECTOR: tip 4920aef; R229 already answered and its premise is
+  FALSE — the catalogue has ids on 8.4% of items, not all 3,663"),
+  authored 2026-09-01T16:43:38+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `9250907a` →
+  `98078050` ("TWELVE FABRICATED TIMESTAMPS CORRECTED, and a gate so the
+  next one cannot land"), authored 2026-09-01T16:45:43+00:00.
+- `EQLSAuras` `main`: `14cb64a1` → `76d2b9b3` ("HER parser found a bug in
+  MINE: 'frenzies on' is one verb, and my residual check could not see
+  it"), authored 2026-09-01T13:17:15-04:00.
+
+**Unchanged:**
+- `EQLSLockouts` `session-d/raid-rows`: `e54bc20c`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
