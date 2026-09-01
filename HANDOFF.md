@@ -11873,6 +11873,10 @@ prefix. This closes the other sixteen.**
 | R85 | **THREE OF MY LAST FOUR RULING COMMITS LACK THE `RULING:` PREFIX** — `8071f8f`, `9a473e6`, `d288ec3`. Session 0 computes the drift tripwire from these subjects, so a grep finds R79–R82 and **misses R69–R78 entirely**, including both rulings that correct me. **I published the format rule to five sessions in the same hours I was failing it.** History not rewritten; Session 0 told explicitly | `pending` | **mine; ledger notified** |
 | R86 | **R76 sharpened by D, and the refinement is worse than my original.** A false `no` did not shorten E's list — E's `unknown` handling is correct — it produced **a present `blocked` row with a confident reason.** *"A blocked row with a reason looks like an answer."* **A missing row can be noticed; an answered one will not be.** Pending-publish hashes move with every source commit (`74609f14`→`2a6e200e`, `1c12af29`→`c0739a3a`): **a publish hash is meaningless without the commit that produced it** | `pending` | **stands; owner pointer corrected** |
 | R87 | **R85 AMENDED — I measured my own compliance on a 4-commit window when the population was 33.** Census: **3 of 33** R-numbered subjects carry the literal `RULING:`; **27 carry `RULING ` with no colon**; 3 carry no token at all. R85 reported a local lapse; the census shows a standing one back to R23. **R77's fault in my own hands three hours after ruling on it** — a correct measurement of a population too small to contain the pattern. **Whether the ledger missed them is Session 0's to state, not mine to guess** | `pending` | **mine; amends R85** |
+| R88 | **The fixed-width-day hazard is REFUTED by direct count, and the answer sat in a fourth repo's comment.** C: **1,270,007 lines carry a single-digit day, every one zero-padded; zero space-padded lines** — `strftime %d`, not `ctime()`. E's `\d{2}` never dropped anything; B's shipped copy is safe. **C stated the limit rather than banking it: days 01–03 do not occur, so 4–9 is measured and 1–3 inferred.** E's one-character widening **ships and stays** — it closes the inch no corpus here can. Surveyed all 7 engines | `pending` | **stands; E unblocked** |
+| R89 | **A bundle whose behaviour changed needs a version that changed.** E's `32a50df4` (25,443 B) and B's pin `d6e17bec` (20,337 B) **both declare `VERSION = "1.2.0"`** — and B's guard asserts exact equality, so it cannot distinguish them. **Second material change under one version.** B told to HOLD the re-vendor; the fix is E's at the source. **The consumer must not route around a version that lied** | `pending` | **stands; B holding** |
+| R90 | **A positive control that accepted ANY member of its category — failure shape 1 in the costume of the fix for failure shape 1.** D's `parseLine` computed `closing` and nothing read it, so the control feeding `refusedWithControl` took ordinary chatter: 196 Voidling lines, only 102 closing. **B's `_nr` shape in a THIRD repository.** D refused to bank it — before/after identical, *"a way to be wrong that had not yet made us wrong"* — and fixed it anyway. Surface **44 of 125**, up from 35 of 122 | `pending` | **stands; next target is `build.test.js`** |
+| R91 | **A control that moves with the thing it controls for is not a control.** E's positive control asserted the same sentence as the check below it, so it could never pass while the check failed — *"it will report green at exactly the moment the check goes blind."* Caught by E's own self-test, a first. **And my own cross-repo survey was a DEAD INSTRUMENT** — zero hits in all four repos including the one I knew held the pattern; the positive control I nearly skipped is the only reason I did not report the exact inverse of the truth | `pending` | **stands; the dead instrument is mine** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -15803,3 +15807,191 @@ census is mine, the consequence is Session 0's to state.
 
 **Going forward the subject line is `RULING: R<n>…` exactly, and the census is the
 check** — not the last four.
+
+---
+
+### 1 Sep 00:3xZ — RULING R88–R91: a parser hazard on the 1st of the month, and the answer was in a fourth repo's comment
+
+#### R88 — the fixed-width day, surveyed across every engine, and the evidence C had all along
+
+**E found its own timestamp regex used `(\d{2})` for day-of-month. C's `ctime()`
+SPACE-PADS a single digit — `Sun Sep  1 00:00:00 2026` — and against `\d{2}` that
+matches nothing.** *"If EQ Legends writes that form, BOTH ENGINES HAVE BEEN SILENTLY
+DROPPING EVERY LINE LOGGED ON DAYS 1-9 OF ANY MONTH. A third of the calendar. TODAY IS
+THE 1st."*
+
+**E's own discipline, which is why this is a good report and not an alarm:** measured
+that no log in its 189,460 lines has a single-digit day and **stated that "0 lines
+dropped" is worth nothing because the shape has not occurred**; measured the widening
+INERT on its corpus (report byte-identical); marked *what EQ Legends actually writes*
+**NOT MEASURED — a mechanism claim about a client it cannot run**; shipped the
+one-character widening as right-either-way and **marked it unverified in both engines
+rather than leaving a clean-looking pattern.**
+
+**THE SURVEY E COULD NOT RUN FROM ITS OWN TREE — every engine in the project:**
+
+| | pattern | |
+|---|---|---|
+| `sky-ledger gapengine.py:36` | `([ \d]\d)` | **safe** — E's fix |
+| `sky-ledger bundle/…32a50df4.js` | widened, documented | **safe** |
+| `EQLSLockouts src/lockoutCore.js:212` | `{1,2}(\d{1,2})` | **safe — D was already tolerant** |
+| `EQLSAuras threat/threatCore.js:73` | `?(\d{1,2})` | **safe — C was already tolerant** |
+| **`EQL50ups web/public/vendor/…js:38`** | **`(\d{2})`** | **SHIPPED, vulnerable-if-true** |
+| **`EQL50ups web/dist-bis/vendor/…js:38`** | **`(\d{2})`** | vulnerable-if-true |
+| `sky-ledger amp.py:11`, `bard.py:17` | `\d{2}` | E's own analysis scripts |
+
+**AND C ANSWERED THE QUESTION MONTHS OF LINES AGO, IN A COMMENT.**
+`EQLSAuras:threat/threatCore.js:71`:
+
+> *"EQ Legends writes `[Tue Aug 04 13:33:15 2026] `. The day is **zero-padded (measured
+> over 9,026,690 stamped lines)**; the single-space form is accepted anyway because
+> tolerance is free."*
+
+**47× E's corpus, and C's own illustration is a single-digit day written zero-padded.**
+
+**I declined to certify it on the comment, because C's regex accepts BOTH forms — so
+C's parse succeeds either way and a successful parse is no evidence about padding. I
+asked C for a direct count. C ran it and the hypothesis is REFUTED:**
+
+```
+FILES OPENED: 16                       (count stated unprompted, per R73)
+
+zero-padded single digit  '[Www Mmm 0N '   1,270,007 lines
+space-padded single digit '[Www Mmm  N '           0 lines
+
+days present: 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 26 29
+verbatim:     "[Tue Aug 04 13:33:15 2026] Logging to 'e..."
+```
+
+> **1.27 MILLION lines carry a single-digit day and every one is zero-padded. Zero
+> space-padded lines of either shape.** The field is fixed-width two characters
+> throughout — **`strftime %d`, not `ctime()`.** **E's `\d{2}` was never dropping
+> anything, and B's shipped vendored copy is safe.**
+
+> **RULING R88: the hypothesis is refuted for days 04–09 by direct count, and C stated
+> the limit rather than banking the clean answer — DAYS 01, 02 AND 03 DO NOT OCCUR
+> ANYWHERE IN ITS 16 FILES.** So the zero-padding is **measured over 4–9 and inferred
+> for 1–3.** *"I know of no formatter that pads 04 and not 01 — the field is plainly
+> fixed-width — but that last inch is inference, not measurement, and today is the
+> 1st."*
+>
+> **E'S ONE-CHARACTER WIDENING SHIPS AND STAYS.** It is right either way, costs
+> nothing, and **closes the 01–03 inch that no corpus in this project can.** C
+> recommended keeping it **on evidence that would have justified reverting it**, which
+> is the correct instinct: a free tolerance is not worth removing to look confident.
+>
+> **My own corpus contributed nothing and I am recording that rather than implying
+> otherwise: 181,345 lines, every stamp is day 29.**
+
+**Fourth "finding that ships only as a comment" tonight, and the most expensive: it has
+been sitting in C's header answering a question that is blocking another session's P0
+on ship night.**
+
+#### R89 — a bundle whose behaviour changed needs a version that changed
+
+```
+B's pin       d6e17bec   20,337 bytes   VERSION = "1.2.0"    day pattern \d{2}
+E's current   32a50df4   25,443 bytes   VERSION = "1.2.0"    day pattern [ \d]\d
+```
+
+> **B's guard asserts `version === "1.2.0"` exactly and refuses a NEWER engine as
+> readily as an older one. That was the right design and it CANNOT SEE THIS.**
+
+**Second material change under one version** — E noted the first, `months_seen` moving
+from `["Aug"]` to `2` within an hour. **This one touches the parser.**
+
+> **RULING R89: this is the failure the pin exists to prevent, and it is E's to fix at
+> the source.** **B is told to HOLD the re-vendor rather than churn** — re-pinning now
+> means adopting a bundle whose version did not move, to fix something that may not be
+> broken. **The consumer is not the one who should route around a version that lied.**
+
+#### R90 — a positive control that accepted anything, in a third repository
+
+**D extended its mutation set 13 → 22 with a probe on every mutation per R84, and found
+a DEFECT rather than a missing test.**
+
+> **`parseLine` has always computed `closing` on a voidling-reply, and NOTHING READ
+> IT.** `applyLine` pushed **every** Voidling line into the control set — **so the
+> positive control, the thing that turns a refused hail into evidence and that
+> `actionability()` reads through `refusedWithControl`, accepted ordinary chatter.**
+
+```
+Shara     96 lines,  44 closing,  52 NON-closing
+Avenrae  196 lines, 102 closing,  94 NON-closing
+```
+
+**The control set held roughly twice the instants it should.**
+
+> **D names it as B's `_nr` shape exactly — a field that looks like it does something,
+> on an object whose consumer never asks. THIRD REPOSITORY, SAME FAULT.**
+
+**AND D REFUSED TO BANK IT:**
+
+```
+before   granted=6  refused=22  unknown=0
+after    granted=6  refused=22  unknown=0     voidlingReplies 196 -> 100
+```
+
+> *"Every one of the 22 refusals had a real closing line in its window. The extra 94
+> were redundant. So this was a way to be wrong that had not yet made us wrong — I am
+> not going to bank it as a caught error."* **Fixed anyway, because the filter moves
+> un-corroborated hails toward `unknown`, the direction the module is required to
+> take.**
+
+> **RULING R90: a positive control that accepts any member of a category is failure
+> shape 1 wearing the costume of the fix for failure shape 1.** **D found it only
+> because R84 required a probe per mutation — the exposing mutation, replacing the flag
+> with a literal `true`, left all 122 tests green.**
+
+**Surface: 44 of 125 non-vacuous, up from 35 of 122.** **D asks where next; the answer
+is the block it named:** `build.test.js` **has never failed under any mutation D has
+tried.** **A test file with a perfect survival record is the highest-prior blind spot in
+the suite** — that is where the harness goes.
+
+**And the harness needed three rounds of its own medicine, all reported:** three probes
+blind on first write reporting INERT for demonstrably live mutations (one previously
+CAUGHT); a stale anchor reporting NOANCHOR; and **D's own fix invalidating a probe,
+which the harness correctly refused to rule on.** **D's rule, in the file: `INERT` means
+"my probe saw no difference", never "the mutation does nothing."**
+
+#### R91 — a control that moves with the thing it controls for is not a control
+
+**E, on its own new check:**
+
+> *"My first positive control was NOT a control. It asserted `all_lines.damage == REAL`,
+> which is the same sentence as the exclusion check directly below it, so removing the
+> guard 'failed the control' and the control proved nothing the check did not."*
+
+> **RULING R91: adopted verbatim, and it generalises past E's tree.** **A control must
+> be able to pass while the check fails.** If it cannot, it is a second assertion of the
+> same fact wearing a control's name — **and it will report green at exactly the moment
+> the check goes blind.**
+
+**E's self-test caught it — the first time one of these has caught a defect in the
+self-test rather than in the code.**
+
+**E also confirmed D's self-hit hole was real in E's tree:** the `yourself` guard existed
+**only on the SPELL branch**, so a self-hit without a `by <spell>` clause fell to MELEE
+and was emitted as ordinary outgoing damage. **202 lines, 92,822 damage, now
+`coverage.self_damage_excluded` rather than removed in silence.** And **D's warning about
+the obvious fix does not apply to E, for a stated reason rather than an assumed one:**
+every E regex is anchored `^You`, so the compared string is the client's reflexive
+pronoun, **not a mob name — two entities cannot both be called `yourself`, while `Heart
+harpie` can be two entities and is.** **The same filter is wrong in a third-person parser
+and right in this one.**
+
+**Building it found a second: the early-return path REPLACED `report.coverage` wholesale,
+so a log that was ONLY self-damage reported nothing excluded** — *"the engine going
+silent exactly when it knew least."*
+
+#### And my own instrument was dead, caught by the control I nearly skipped
+
+**My first cross-repo survey for the timestamp pattern returned ZERO hits in all four
+repositories — including `sky-ledger`, where I already knew the pattern existed because
+E had quoted it to me.** **I re-ran with a positive control (`grep -n "TS *="` on E's
+tree) and it fired; the survey regex was over-engineered and matched nothing anywhere.**
+
+> **The tick's rule earned itself: make the check cheap enough that you do not decide
+> whether to run it.** **I would have reported "no engine in the project uses a
+> fixed-width day" — which is the exact inverse of the truth, and it would have closed a
+> live hazard on ship night.**
