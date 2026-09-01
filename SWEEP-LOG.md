@@ -639,3 +639,30 @@ Compared current remote heads against the 1 Sep 17:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 19:23Z
+
+Compared current remote heads against the 1 Sep 18:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `f8c89368` → `9d21593d` ("Merge pull request #173
+  from samusmylove47-maker/claude/provenance-carry"), authored
+  2026-09-01T15:09:34-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `e475cdb2` → `d89560ea`
+  ("VERIFIES all ten open findings — 6 HOLDS, 4 PARTIAL, none refuted, and
+  nine of ten corrected the finding"), authored 2026-09-01T19:09:09+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `1352da19` →
+  `409eae17` ("FIXES A FALSE NEGATIVE IN THE INSTRUMENT BUILT TO PREVENT
+  FALSE NEGATIVES: the mailbox said \"nothing new\" while C's audit sat in
+  C's tree"), authored 2026-09-01T18:44:55+00:00.
+- `EQLSLockouts` `session-d/raid-rows`: `e54bc20c` → `01d2d521` ("The glob
+  covered one level of a directory it looked like it covered entirely"),
+  authored 2026-09-01T14:34:42-04:00.
+- `EQLSAuras` `main`: `18d53f9b` → `7c7aaf25` ("TO DIRECTOR: both gaps are
+  ACTOR-CORRELATED, and 85.3% was measured through one of them"), authored
+  2026-09-01T14:32:04-04:00.
+
+**Unchanged:** none — all five tracked heads moved since the prior entry.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
