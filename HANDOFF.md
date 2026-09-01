@@ -11927,6 +11927,10 @@ prefix. This closes the other sixteen.**
 | R139 | **#163 and #164 merged 23:15; merged main is GREEN on a default Windows clone** (`autocrlf=true`, `1142939b`, tree clean, exit 0). **R119 conditions 1 and 2 verified IN PRODUCTION OUTPUT** — the caveat now names its exit (`run scripts/inputprobe.py to see those`) and the probe prints its own limits every run. Probe result on main: **152 paths opened, 109 build inputs, 112 fingerprinted, every observed input covered** | `pending` | **stands; verified in the broken config** |
 | R140 | **All three refusal arms verified — and I hit A's vacuous-test trap THREE TIMES proving it.** clean → exit 0; a generator importing `pathlib` → **exit 1**; **its own control neutered → exit 2**. My first two mutations of `inputprobe.py:71` SILENTLY DID NOT APPLY and the probe printed exit 0 both times — **identical to a passing control. I would have filed a MISS against the arm A added of its own initiative, because my test did not run.** **Adopted for everyone, mine first: a mutation is not applied until its new state is READ BACK. An unapplied mutation and a caught one are the same output** | `pending` | **stands; R94's readback moved to experiments** |
 | R141 | **#163 CLOSES R122, verified by complete matched pair.** Clean re-clone, baseline green, `check.py:887` mutated to `if False:` with the change READ BACK before believing it: `gate_selftest` now reports **"1 case(s) did not see the check they were written for fail. Either that check is dead, or this file is now testing something else — both are blockers."** Before #163 the same mutation left all 46 CAUGHT at exit 0. **And A's misfiled-vs-wrong correction is the tool's own message, not a commit note. R113's tracked-file argument likewise now reads to a human: "It is a TRACKED FILE, so this means it was DELETED."** | `pending` | **stands; chain closed** |
+| R142 | **A mutation that does not apply is indistinguishable from a guard that works — THREE sessions, three mechanisms, one night.** A's heredoc ate an escape; my regex guessed the wrong literal then the wrong escaping, three times in one verification; B's `str.replace` had six spaces against a source with four and returned **1046 GREEN**. **The two DIRECTIONS are the finding: mine pointed outward and would have accused a working guard, B's pointed inward and would have accused its own suite of being hollow.** Both arrive as a clean experimental result. Remedy proven by three independent recoveries: mutate line-wise, then READ THE LINE BACK | `pending` | **stands; structural, not careless** |
+| R143 | **A guard whose unique value cannot be demonstrated is recorded as UNDEMONSTRATED, not as a closed gap.** B widened a partition test from one gear-set shape to four, then tried three mutations to show the addition catches what the old suite misses — **none did**. Kept, because it is cheap and encodes a real invariant, and labelled honestly. **R83's mirror: R83 demands a coverage surface with every catch rate; this demands a value claim with every added guard.** The invariant holds across four shapes, all summing to 23 with no duplicates | `pending` | **adopted** |
+| R144 | **A ROW would have inherited the HEADING — the fault one level up from the one I found.** My R138 said the trio-level claim gets its own row at its own tier; A gave it its own ENTRY, because a row still sits under `status='changed'` and `settle='Settled.'`. **`status` and `settle` are inherited exactly as the T1 badge was.** And A invented no tier: `status='open'` was already the page's word for "nobody has shown either", and an em-dash evidence row already recorded the Paragon of Spirit 404 — **verified, 3 open entries on main, 4 on the branch.** The new entry names the failure in public, including the project's own working notes | `pending` | **#165 with the owner** |
+| R145 | **The transport class gains a FOURTH direction and it is TEMPORAL.** A on my orphaned child: it wrote `state/last-build.json` after my checkout reported clean, so **"the tree is clean" and "the tree is clean FOR NOW" rendered identically at the moment I read it.** The reading was TRUE when taken and false immediately after. Four directions now: the transport rewrote the argument; the mutation never applied; the step failed while later steps reported success; **the reading expired between taking it and using it.** Also: `gate_selftest`'s precondition control has now stopped THREE sessions | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -18069,3 +18073,164 @@ detected.**
 > here rather than accepted.** **Two of the four measurements first produced a WRONG
 > answer from my own instrument — a stale local `main`, and three mutations that never
 > applied — and both were caught by controls this project's own rulings required.**
+
+---
+
+### 1 Sep 03:3xZ — RULING R142–R143: three sessions hit the same trap in one night, and the two directions it fails in
+
+#### R142 — a mutation that does not apply is indistinguishable from a guard that works
+
+**B, unprompted, and it is the third independent instance tonight:**
+
+> *"I A/B'd whether the withheld push was guarded. The suite came back **1046 GREEN with
+> the branch disabled**, which reads as a serious vacuity. **It was not. My replacement
+> string had SIX spaces of indentation where the source has FOUR**, so `str.replace`
+> matched nothing and the 'damaged' arm was the undamaged source."*
+
+**Three sessions, three mechanisms, one night:**
+
+| session | mechanism | what it nearly produced |
+|---|---|---|
+| **A** | a heredoc ate the escape; no replacement happened | *"For one moment I read that as the control passing"* |
+| **Director** | a regex guessed the wrong literal, then wrong escaping — **three times in one verification** | a false **MISS** against the refusal arm A added of its own initiative |
+| **B** | `str.replace` with six spaces against a source with four | a false **VACUITY** against its own suite, 1046 green |
+
+> **RULING R142: this is a CLASS, and the two failure DIRECTIONS are the part worth
+> keeping.** **Mine pointed outward and would have accused a working guard. B's pointed
+> inward and would have accused its own suite of being hollow.** **Both arrive as a
+> clean-looking experimental result, and neither is distinguishable from success by its
+> output.**
+
+**The remedy is the same one in all three cases and it is now proven by three independent
+recoveries: replace LINE-WISE by index, then READ THE MUTATED LINE BACK and confirm it
+changed before believing any exit code.** **R94's readback rule, moved from commit bodies
+to experiments — and the fact that three sessions found it separately, within one hour,
+is the evidence it is structural rather than careless.**
+
+#### R143 — a guard whose unique value cannot be demonstrated is recorded as undemonstrated
+
+**B added a partition test widening an existing one at
+`upgrades-avenrae.test.ts:168` from one gear-set shape to four, adding exactly-once. Then
+it tried to show the addition catches something the old suite misses:**
+
+> *"I tried THREE mutations to show it catches something the suite misses and NONE did: a
+> double-count fired the old test too, and a partition break in the empty-set shape was
+> caught first by an unrelated narrowing test. **Keeping it — cheap, and it encodes a
+> real invariant — but recording that its unique value is UNDEMONSTRATED rather than
+> implying I closed a gap.**"*
+
+> **RULING R143: adopted.** **R83 requires a coverage surface with every catch rate. This
+> is its mirror: an ADDED guard states whether its unique value was demonstrated, and
+> "undemonstrated" is a legitimate and honest answer.** **Keeping a cheap test that
+> encodes a real invariant is correct; describing it as a closed gap would not be.**
+
+**The invariant itself holds — four gear-set shapes against the shipped payload, every
+one summing to 23 positions with no duplicates:**
+
+```
+empty set                  rows 23  settled 0  withheld 0  SUM 23
+one worn item              rows 22  settled 1  withheld 0  SUM 23
+an unresolvable worn item  rows 22  settled 0  withheld 1  SUM 23
+a profile blind to weapons rows 21  settled 0  withheld 2  SUM 23
+```
+
+**B reports it as *"not a finding"*, which is the correct label for a check that passed.**
+
+#### R136 confirmed independently, and B correctly declines the fix
+
+**B verified from its own side: `EQL50ups` has one head, `main` has never existed, and B
+is not creating it.** **Correct — creating a publish target is a capability, and
+capability acquisition is the owner's to grant.** **The question stands with the owner
+unchanged.**
+
+---
+
+### 1 Sep 03:4xZ — RULING R144–R145: A improved R138 in three ways, and the transport class gains a temporal direction
+
+#### R144 — a ROW would have inherited the heading, which is the fault one level up
+
+**#165 on `claude/trio-level-claim`. Verified in the branch, not from the message.**
+
+**My ruling said the trio-level claim *"gets its own ROW at its own tier."* A did not do
+that, and its reason is better than my ruling:**
+
+> *"A row inside the existing entry would still have sat under a heading reading **Changed
+> and Settled**, which is most of what was wrong with it."*
+
+> **RULING R144: I found a badge spanning three claims and prescribed a fix that leaves
+> the HEADING spanning them.** **`status` and `settle` are inherited by every row in an
+> entry exactly as the T1 badge was.** **The page is one question per entry, and *"does
+> the active trio run at the level of its lowest class?"* is a different question from
+> *"can you plan a character around one class?"* — so it needed its own entry.**
+
+**And A did not invent a tier, which is what R82 was warning about. Verified: `status='open'`
+appears 3 times on main and 4 on the branch — the vocabulary already existed.**
+
+> *"`build13.py`'s own header defines `open` as 'nobody has shown either, and we say what
+> would', and an em-dash evidence row already exists for an absence — it is how the
+> Paragon of Spirit 404 is recorded. **So the honest state had a shape on that page
+> already, and the entry had simply not been given it.** Choosing T3 or T5 would have
+> invented a confidence nobody holds."*
+
+**The result, read from the tree:**
+
+```
+entry 1  status='changed'  T1  settle='Settled.'
+         the trio clause REMOVED from `legends`
+         evidence now ends: "That covers the structure — three classes, two at
+         creation, a third at 10, locking at 11 — AND NOTHING BEYOND IT."
+
+entry 2  status='open'
+         q:       "Does the active trio run at the level of its lowest class?"
+         legends: "Not recorded. It is repeated widely, INCLUDING IN THIS PROJECT'S
+                   OWN WORKING NOTES … Nothing has been read that says so."
+         evidence: ('&mdash;', 'No source read', …)
+         settle:  "One read of the Producer's Letter of 8 July 2026 settles it
+                   either way, and it is the cheapest evidence available."
+```
+
+**And the new entry documents its own history in public:**
+
+> *"This sat inside the multiclass entry above until 31 August 2026, asserted at T1 and
+> marked Settled on evidence that spoke only to the level–11 lock: three claims, one
+> source, one badge. **That is the exact failure this page exists to refuse, on the page
+> that refuses it.**"*
+
+> **Not deleted, deliberately — *"the claim may well be right and removing it would lose
+> the question along with the error."*** **And A checked whether `eql-source` held other
+> sites rather than assuming, because R99 named a fifth in B's contract: it is the only
+> one there.**
+
+#### R145 — the transport class gains a FOURTH direction, and it is temporal
+
+**A on my orphaned background run:**
+
+> *"The child wrote `state/last-build.json` AFTER your checkout reported clean, so **'the
+> tree is clean' and 'the tree is clean FOR NOW' rendered identically at the moment you
+> read it.** Same shape as a mutation that never applied and a git read that returns zero
+> lines."*
+
+> **RULING R145: the class now has four directions and this one is TEMPORAL.** **The
+> reading was TRUE when taken and false immediately after, and nothing in its output
+> distinguishes a durable fact from an expiring one.**
+>
+> | direction | instance |
+> |---|---|
+> | the transport rewrote the argument | MSYS mangling a dot-path; a double-quoted `-m` |
+> | the mutation never applied | A's heredoc, my regex ×3, B's indentation |
+> | the step failed and later steps reported success | E's chained edit |
+> | **the reading expired between taking it and using it** | **my orphaned child** |
+
+**Two more from the same message, recorded:**
+
+**THE PROSE RATCHET CAUGHT A, and A measured rather than assumed which edit moved the
+number.** The entry took `index.html` to 1,129 words against 1,087 plus 40 slack. **A
+trimmed the body, measured, found it moved the count by ONE — because the home page
+renders only kind, title and date, not the body — and then trimmed the TITLE, which is
+what actually costs.** *"Raising the ceiling is a hand edit needing a reason and I was not
+going to spend one on a change log entry I could write shorter."*
+
+**And `gate_selftest`'s precondition control has now stopped THREE sessions** — B, the
+Director twice, and A. **A control that refuses to rule while its precondition is unmet
+has been the most productive single guard in the project tonight, and nobody in this
+project wrote it this week.**
