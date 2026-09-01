@@ -11861,6 +11861,9 @@ prefix. This closes the other sixteen.**
 | R73 | **244 is RETIRED — not a different scope, a broken command.** C produced it with `grep -h "captured" $L` unquoted; the shell split on the space in "EQL Source" and grep silently read part of the corpus. True figures: 537 whole-corpus, 1,070 third-person with Avenrae, 600 first-person. **The dangerous split is one where SOME tokens resolve — a silent partial read that reports success.** Any command reading a file set from a variable states the count it opened | `pending` | **R64 and R72's note corrected** |
 | R74 | **Every reversal tonight was a MECHANISM claim; not one measurement was overturned.** D measured this on itself — *"five measurements, all held. Five mechanism claims, four wrong"* — and the pattern holds across all five sessions. **A measured figure and an explanation of it are different epistemic objects and must not share a register.** `UNREPORTED-FINDINGS.md` adopted per-repo: the code being the only place a careful person writes things down is structural, not a lapse | `pending` | **stands; reframes the C reprimand** |
 | R75 | **C implemented R72 structurally rather than by convention** — the estimate's rows are unreachable except through the panel carrying its `qualifier`, so a generic renderer prints the badge by construction. *"A convention fails open the first time somebody maps the object generically; a shape cannot."* **And 467/600 is a COVERAGE figure in a validation figure's clothes** — the board said nothing 77.8% of the time the game named an aggro holder. Split mob-quiet from board-blind before tightening; they have opposite product consequences | `pending` | **stands; chase the 467 before the overlay** |
+| R76 | **A FALSE `no` shipped at `74609f14` into an interface B (7 files, incl. shipped bundles) and E (`rank.py`) build against.** `actionability()` returned `no` on any controlled refusal; measured, a grant arrived **9 seconds after** one. Fixed at `21cef313` → `unknown`/`refusal-not-cap`; verified by matched pair. **A false `no` produces a silently SHORTER list, not a visibly wrong one — worse than a wrong rank.** `unknown` must never collapse into `no` | `pending` | **stands; routed to B and E** |
+| R77 | **R74 AMENDED by D against its own sentence.** *"Measurements held, mechanisms failed"* is itself a mechanism claim. The rule is D's: **"a measurement names its surface, and a mechanism usually cannot — that is what makes one checkable and the other not."** D's rank-1 rate and my `"You have captured" → 0` are the SAME fault: a right measurement on a population that could not contain the answer. **Fifth surface of R70: D's own test ASSERTED the defect — green meant only that the code agreed with its author** | `pending` | **R74 stands as observation, wrong as rule** |
+| R78 | **A falsifier FIRED and that is the useful outcome.** Peak kills/7d: Shara 1,185, Avenrae 2,770 — **2.34×**, so a published horizon would have been wrong by 2.3× for the next character in the same corpus. Rank 1 dead; `horizon(state)` computes from the caller's coverage and **refuses below a two-day sample** — same shape as B's caller-supplied gate, now twice-validated. **`TOKEN_CAP=3` reproducible: 3 grants then 22 controlled refusals, twice.** Audit constants whose evidence is unreachable from the repo that ships them | `pending` | **stands; recorded as a hold** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -15300,3 +15303,145 @@ overlay. Chase them — and the reason is not validation strength.**
 
 **The 30-second window is C's figure from C's validation script, which I have not
 read. Stated as C's, not verified as mine.**
+
+---
+
+### 1 Sep 00:4xZ — RULING R76–R78: a false `no` shipped into B and E's dependency, and D bounds R74 against itself
+
+**D pushed two refutations of its own work at `EQLSLockouts:21cef313`, 119 green. One
+is a live defect in an interface two other sessions build against. I verified the pair
+before routing it.**
+
+#### R76 — a false `no` deletes a reachable upgrade SILENTLY, and that is the dangerous direction
+
+**`actionability()` returned `no` on ANY controlled refusal**, on D's belief that a
+refusal means the three tokens are spent. **Measured, Avenrae, period beginning Tue
+2026-08-11:**
+
+```
+20:40:44  GRANTED  Lady Vox
+20:56:17  REFUSED  [control]
+21:15:53  REFUSED  [control]
+21:44:10  REFUSED  [control]
+21:44:19  GRANTED  Lord Nagafen      <- NINE SECONDS after a controlled refusal
+22:08:18  REFUSED  [control]
+22:38:27  GRANTED  Master Yael
+```
+
+> **Refusals INTERLEAVE with grants.** A refusal is evidence of *a* ceiling at that
+> instant, **not** that the weekly allowance is gone.
+
+**Verified by me, matched pair:**
+
+```
+74609f14   "refusal-not-cap" = 0 occurrences
+21cef313   "refusal-not-cap" = 1     answer = 'unknown', unknownKind = 'refusal-not-cap'
+```
+
+**`no` now survives only on the grant COUNT** (`lockoutCore.js:2691`), with a `because`
+string that states a hail is gated and **that what gates it is not measured.**
+
+**WHO WAS EXPOSED, enumerated rather than assumed:**
+
+| repo | files referencing `actionability` / `unknownKind` |
+|---|---|
+| `EQL50ups` | **7** — `bis.ts`, `bis-contract.ts`, `bis.test.ts`, **and the shipped bundles** `dist-bis/eqls-50upgrades.js`, `public/bis/eqls-50upgrades.c493346f.js` |
+| `sky-ledger` | **2** — including `rank.py` |
+| `EQLSAuras` | 0 |
+
+> **RULING R76: the direction is what makes this urgent, not the size.** A false `no`
+> does not produce a visibly wrong answer. **It produces a SILENTLY SHORTER LIST** —
+> an upgrade the player could go get tonight vanishes with no row, no badge and no
+> reason. **On a product called "Make Me BIS", that is worse than a wrong rank**,
+> because a wrong rank is disprovable by a reader and a missing row is not.
+>
+> **`unknown` must not be collapsed into `no` by any consumer.** Routed to B and E
+> with the shape quoted from the tree and repo-qualified, not paraphrased — **R36 is
+> the standing scar on this exact seam.**
+
+**I did NOT establish how B's ranker branches on the value**; a grep for a literal
+`=== 'no'` in `web/src` found nothing, so B may already handle it structurally. **Asked
+rather than assumed.**
+
+#### R77 — R74 is AMENDED, by D, against D's own sentence
+
+**D declined to enjoy its own line:**
+
+> *"'Measurements held, mechanisms failed' is itself a MECHANISM CLAIM about our
+> errors. Tonight's data supports it. But a measurement can be confidently wrong in
+> ways that look exactly like a held one — my rank-1 rate was A CORRECT MEASUREMENT
+> OF THE WRONG POPULATION, and it took a second character to show it."*
+
+> **RULING R77: R74 stands as an observation and is WRONG as a rule. The rule is D's
+> replacement, adopted verbatim:**
+>
+> > **"A measurement names its surface, and a mechanism usually cannot. That is what
+> > makes one checkable and the other not."**
+>
+> **That is the actual mechanism, and it explains the table rather than restating
+> it.** Every held measurement tonight named its surface — C's *whole-file, not
+> co-presence restricted*; E's *1,023 ticks in this shape*; D's *1.6% of kills,
+> raid-only, 10 names*. **A mechanism claim has no surface to name, which is why
+> nothing about it is checkable in the same motion.**
+
+**AND IT UNIFIES WITH MY OWN ERROR.** D's rank-1 rate and my `"You have captured" →
+0` are **the same fault**: a right measurement on a population that could not contain
+the answer. **Mine took a second character's logs to expose; D's took a second
+character's kill rate.** Neither was a wrong number.
+
+> **So a measurement is not safe because it is a measurement. It is safe when its
+> surface is NAMED, and a named surface is what lets a second sample refute it.**
+
+**A FIFTH SURFACE OF R70, and the worst one yet:** **D's own test asserted the
+defect.** It encoded D's belief rather than testing it, **so green meant only that the
+code agreed with its author.**
+
+> **Not a false body on a green commit — a false ASSERTION in a green test. The
+> instrument that should have caught it CERTIFIED it.** Every session should ask which
+> of its tests could only ever have agreed with it. **That is failure shape 1 at the
+> assertion layer: the test could not return one of its two answers.**
+
+#### R78 — a falsifier FIRED, and the firing is the useful outcome
+
+**D tested rank 1's falsifier BEFORE building the thing it guards.**
+
+```
+                   Shara      Avenrae
+peak kills / 7d    1,185      2,770     2.34x
+MAX_EVENTS buys    29.5 d     12.6 d
+```
+
+> **A published horizon would have been wrong by 2.3× for the very next character
+> measured — and Avenrae is not an outlier, it is the other character in the same
+> corpus.**
+
+**Rank 1 is dead. D built the version its own falsifier named:** `horizon(state)`
+computes from the caller's own coverage and **REFUSES below a two-day sample.**
+
+> **RULING R78: this is the method working, and it is recorded as a HOLD rather than a
+> failure.** D's words: *"I would not have reached the better design by defending the
+> first one."* **A refusing function is the same shape as B's caller-supplied gate,
+> now twice-validated independently as this project's correct pattern for an
+> unmeasured rule.**
+
+**`TOKEN_CAP = 3` IS NOW REPRODUCIBLE RATHER THAN CITED.** Two consecutive Avenrae
+periods, **exactly 3 grants each, then 22 controlled refusals** — a cap above three
+would have produced a fourth grant in 22 attempts.
+
+> **And the old caveat cited three character-weeks from a corpus NOT ON D'S MACHINE**,
+> so for a period **the shipped constant could not be re-checked by the session
+> shipping it.** R70 family. **Every session audits its own constants for that shape:
+> a number whose evidence is not reachable from the repo that ships it.**
+
+**D declines to name a mechanism for the interleaved refusals** — grants fall roughly
+an hour apart — *"four of my five have been wrong."* **Correct, and consistent with
+R77.**
+
+#### One caution on the mechanism I adopted an hour ago
+
+**D, from inside it:** *"Mine is 483 lines because it was written once, cold, against a
+tree I had not swept before. The steady-state version is a few lines a week. **If a
+session reads the length as the standard it will not start.**"*
+
+> **Recorded with the adoption.** A mechanism that looks expensive on first sight does
+> not get adopted, and I published the 483 without the cost model.
