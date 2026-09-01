@@ -11896,6 +11896,10 @@ prefix. This closes the other sixteen.**
 | R108 | **R93 SPLIT: "an instrument that cannot fail" and "an instrument that works perfectly, aimed away from the thing" are different faults and I had them collapsed.** `_asset_v` is a correct sha1 that was never broken; `stamp.py`'s INPUTS simply did not cover `site.css` — the detector was alive and specifically blind to the one file whose purpose is cache invalidation, **and that already shipped once as unstyled black shapes over a bare headline.** R93 wants a matched pair; R108 wants a coverage audit of the inputs. **RULED: the `bytes` field FAILS, not warns** | `pending` | **stands; gate_selftest 38→42** |
 | R109 | **The GLOBS are the fault, not the missing file.** `stamp.py:20` is four extension-keyed globs and a literal, with no `.css` or `.txt` anywhere — so **a build input in a COVERED DIRECTORY with an UNCOVERED EXTENSION is invisible**, and the extension set is open-ended. Seventh uncovered input found: `_build/planar_raw.txt`, 14,569 B, read at `planardata.py:68`. **Two instances one directory apart in one night.** Six others correctly uncovered and reported as such, which is what makes the one credible. Limit stated: literal paths only, **105 dynamic `open()` calls unseen** | `pending` | **stands; verified in tree** |
 | R110 | **RULING NEEDED, answered: BUILD the watcher-covers-its-inputs check, under three constraints, as its own PR so the OWNER takes the timing risk.** (1) **No completeness claim** — it reports what it audited AND what it cannot see, in the output; without that it is R98's `unknown: []` wearing a badge. (2) Fails on a generator READING an uncovered path, never on a file existing. (3) The scratch-file cost comes from the shipped `INPUTS` fix, not the new check. **Glob inversion considered and rejected** — it would sweep every scratch file in permanently | `pending` | **stands; A building** |
+| R111 | **`_media/` is a build input NO literal-path audit could ever see.** `media.py:35` sets `SRC='_media'`; zero literal reads resolve, five glob/join constructions do — verified here. Edit a file there, no rebuild: `check.py` exit 0. A's fan-out found it after A's own coverage audit reported clean and **was right about what it could see.** **A's reframe, adopted: the 52 unseen dynamic sites "were not a caveat, they were a hiding place" — the stated limit R110 required is a MAP to the next defect, not a disclaimer** | `pending` | **stands; better reason than the one I ruled** |
+| R112 | **A second instrument that EXCEEDS a hand measurement is not overturning it.** The standing "direct measurement beats your reading" governs CONTRADICTION; A's fan-out agreed with every mechanism A measured and added one outside the method's reach. **A's own reading recorded: the audit was SOUND AND INSUFFICIENT, and neither instrument could establish which without the other.** Not filed as the fan-out beating A | `pending` | **stands; rule gains a clause** |
+| R113 | **The comparison FAILING fails; the comparison being IMPOSSIBLE warns — backwards.** `check.py:489-492` warns on a missing stamp and on ANY exception, so the freshness detector can be deleted or die of a syntax error and the build stays green, **inside the check whose own comment says nothing else means anything if it fails.** **RULED FAIL on both.** A's newcomer objection **refuted by a fact A did not check: `state/last-build.json` is TRACKED, so a fresh clone has it — a missing stamp means someone deleted it** | `pending` | **stands; precondition verified on main** |
+| R114 | **#159 is LIVE and took only the first of A's two commits** — merged 21:13:45, A pushed `c0782cce` at 21:18:08. `_build/*.txt` is on the branch, not main, so `_build/planar_raw.txt` remains uncovered. **Merging is the publish, so #159's new FAILING assertions are in production.** Exposure narrow: `assets/*.json` IS covered so a rebuild propagates; only editing the raw file and walking away is invisible. **A kept #160's two commits together and reported the judgement — a PR of the check alone would be RED** | `pending` | **#160 with the owner** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -16741,3 +16745,135 @@ question.** **Told: if it contradicts, the hand measurement wins under the stand
 but REPORT the contradiction, because a fan-out disagreeing with a hand measurement is
 itself a result about the fan-out.** **B refuted 22 of 44 verdicts tonight and verified
 its two ship-blockers by hand for exactly that reason.**
+
+---
+
+### 1 Sep 01:3xZ — RULING R111–R114: #159 is live, a stated limit turned out to be a map, and an impossible comparison was reported as success
+
+#### R111 — `_media/` is a build input no literal-path audit could ever have seen
+
+**A's seven-mechanism fan-out finished AFTER A had already built the R110 check, and found
+two things the coverage audit was STRUCTURALLY incapable of finding. Verified here
+independently before recording it:**
+
+```
+_build/media.py:35   SRC = '_media'
+literal open('_media/…') reads resolvable by a source scan:   0
+glob / os.path.join path constructions:                       5
+```
+
+> **`_media/` is reachable only dynamically.** `media.py` copies from it under a content
+> hash into `public/assets/media`. **Edit a file there, no rebuild: `check.py` exit 0.**
+> **No source read resolves those paths**, so R109's literal-path method could not have
+> found it at any effort.
+
+**A's audit reported the coverage clean an hour earlier and was RIGHT ABOUT WHAT IT COULD
+SEE.**
+
+> **RULING R111, and the framing is A's and is better than the constraint I wrote:**
+>
+> > ***"The 52 dynamic sites were not a caveat, they were a HIDING PLACE, and something
+> > was in it. The line you made me print is not a disclaimer — it is a COUNT OF WHERE
+> > THE NEXT ONE LIVES."***
+>
+> **I ruled R110's constraint 1 to stop the check making a false completeness claim.**
+> **A has shown the stated limit does something I did not anticipate: it is a MAP.**
+> **That is the better reason for the rule, and it is recorded as A's.**
+
+#### R112 — a second instrument that EXCEEDS a hand measurement is not overturning it
+
+**The standing rule — *a session's direct measurement beats your reading* — governs
+CONTRADICTION. This was not a contradiction.**
+
+> **A: *"the fan-out did NOT contradict my hand measurements, it EXCEEDED them. Every
+> mechanism I measured, it agreed with. What it added lay entirely outside my method's
+> reach."***
+
+> **RULING R112: the rule gains a second clause. A second instrument reaching further
+> than the first is not evidence against the first.** **A's own reading is the one that
+> goes in the record: the audit was SOUND AND INSUFFICIENT, and neither instrument could
+> have established which without the other.**
+>
+> **This is not filed as the fan-out beating A. It is two instruments with different
+> reach, and A ran both** — and A verified both findings by hand before believing
+> either, which is B's audit discipline arrived at independently.
+
+#### R113 — the comparison FAILING fails; the comparison being IMPOSSIBLE warns. Backwards.
+
+**A measured it:** `delete state/last-build.json` → **`check.py` exit 0, "All checks
+passed with 1 warning(s)"**.
+
+**Read on `origin/main`, `scripts/check.py:485-492`:**
+
+```python
+486   if want != got:  fail("public/ is stale — a source changed since the last
+                             successful ./build.sh, or a generator crashed part way")
+489   except FileNotFoundError:  warn("state/last-build.json is missing …")
+491   except Exception as e:     warn(f"could not verify build freshness: …")
+```
+
+> **The instrument has two answers — stale, fresh — and a THIRD outcome, "I could not
+> run", is reported in the SUCCESS channel.** **An impossible comparison is strictly
+> worse than a failed one, because a failed comparison told you something true.**
+>
+> **And it sits inside the check whose own comment says that if the stamp does not
+> match, the tree is stale and NOTHING ELSE HERE MEANS ANYTHING.** So the freshness
+> detector can be deleted, or die of a syntax error, and the build stays green — **a
+> dead check reading exactly like a passing one.**
+
+> **RULING R113: FAIL on both branches.** The bare `except Exception` is the worse half —
+> **a corrupt JSON, a `KeyError` on `"inputs"`, a permission error, a syntax error in
+> `stamp.py`: every one currently reads green.**
+
+**A RAISED ONE ARGUMENT AGAINST AND IT IS REFUTED BY A FACT A DID NOT CHECK:**
+
+```
+git cat-file -e origin/main:state/last-build.json   ->  PRESENT
+{"inputs": "b7cb8568fb39c00c05a33a386b99d907cce4d43fd9529a5ff73c1d5e7adc18a1"}
+```
+
+> **The stamp is a TRACKED FILE.** **A fresh clone HAS it**, so the newcomer running
+> `check.py` before `./build.sh` never hits `FileNotFoundError` — they hit a stamp
+> mismatch, which already fails today with an actionable message. **A missing stamp does
+> not mean "never built". It means someone DELETED it**, which is exactly the case that
+> should be loud.
+
+**Ship-night precondition run before ruling a policy change: the stamp is present and
+tracked on main, so this breaks nothing today.** **A's own consistency note is the
+tiebreaker — A's new check fails on exception following `gate.py`, and two adjacent
+checks in one file with opposite exception policies is worse than either policy.**
+
+#### R114 — #159 is LIVE, and it took only the first of two commits
+
+```
+4df8705d  Merge PR #159            21:13:45 EDT
+  b6184bc9  four of six hashes     21:08:08      <- merged
+c0782cce  the coverage audit …     21:18:08      <- pushed 5 min AFTER the merge, NOT in main
+
+origin/claude/hash-sensitivity   1 ahead of main, 1 behind
+_build/*.txt in INPUTS:   main = 0    branch = 1
+```
+
+> **Merging is the publish here** — a Cloudflare Worker serves `public/` and there is no
+> deploy workflow. **So #159's new FAILING assertions are live**, and the owner merged
+> while A was still working.
+
+**EXPOSURE STATED AS NARROWLY AS THE EVIDENCE ALLOWS:** `_build/planar_raw.txt` is a
+build input no staleness check covers on main. **`assets/*.json` IS covered, so a rebuild
+propagates correctly.** **The invisible state is editing the raw file and walking away
+without rebuilding.** **A real gap; not an outage.**
+
+**A confirmed the merge finding by ancestor test BEFORE reading my message**, and is
+bringing `#160` composed against main carrying both #158 and #159 rather than against its
+own branch.
+
+**A kept two commits in one PR and reported the judgement rather than assuming it:**
+*"Without `_build/*.txt` in INPUTS the new check FAILS on main, because `planar_raw.txt`
+is precisely the gap it detects. A PR of the check alone would be red."* **Correct — two
+PRs where the second is red until the first lands is worse than one green PR.**
+
+**Two limits A stated rather than closed:** nothing enforces the `_media/*` line, because
+the selftest harness round-trips utf-8 and `_media` holds only binaries — **weaker than
+the other five and said so in the commit and the PR**; and `inputscover` still cannot see
+**51 dynamic sites**, one of which was real, **and A is not claiming the rest are clean.**
+**Told not to manufacture a case that corrupts a binary to make a number look better.**
