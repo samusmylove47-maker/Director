@@ -1,4 +1,12 @@
-# Handoff — 18 August 2026
+# Handoff — the Director's record, opened 18 August 2026
+
+> **This file is APPEND-ONLY and its date is its opening, not its currency.**
+> The heading said `18 August 2026` for two weeks while the record ran two
+> weeks past it — a session diffing against that date would walk through a
+> state `main` never had. Session A reported it; it had been named in the
+> record as a defect and left standing, which is worse than unnoticed, because
+> it is a defect plus a false record of attention. **Read the last ruling for
+> the current state; never read this heading as one.**
 
 > **MIGRATED 31 August 2026.** This file is the Director's record and it now
 > lives here, in `samusmylove47-maker/Director`, on `main`. It was migrated
@@ -11994,6 +12002,9 @@ prefix. This closes the other sixteen.**
 | R206 | **The 673-page provenance failure verified with a positive control, not accepted on report.** Measured on the served tree: **0** catalogue pages carry `tier t1`–`t5`, **290** carry `tM`, of 675. **Control: 13 files elsewhere in `public/` DO carry t1–t5** — which is what makes the zero reportable rather than another dead grep. Badge machinery live on the exact pages; the absence is real and one-directional. **Measured provenance survives the generator, inherited provenance does not, on the 94% of URLs a stranger meets first — and 86 of those figures reach the `<meta description>` Google shows.** Ships in ONE commit with finding 3: `contamination.py` never scans the built tree, so it measures build inputs while the damage happens after them — pointing it at `public/**/*.html` makes the fix **proved rather than asserted** | `accepted` | **A** |
 | R207 | **What I reject and ratify, because a deferral without a reason is a silent narrowing of the owner's request.** **Rejected for today:** stale contrast comments (real, the signature fault in the best-annotated file — but **nothing renders below AA**, the cost falls on the next editor, first in the queue *after* promotion); the race-tool identity question (**inside Tuesday's rebuild** — but their 8 unlabelled selects do NOT defer, that is a barrier not an architecture question); the decorative SVG (audit says keep, agreed). **Ratified:** plate badges on everywhere — **an exemption nobody chose is drift, not policy**; `still-true`/`difficulty` keep their t1/t2 badges **and the exception gets written down**, because on the two pages about what is true the rung IS the point; `=` sigil wrapped `aria-hidden` — the only one of the three **a voice-control user cannot work around, because they cannot say the character** | `ruled` | **A** |
 | R208 | **Dates first — the reason changed and got stronger.** R204 ordered dates before the lockouts publish so one real change would not hide inside 715 false `lastmod` stamps. **Today is not one rebuild but a dozen, so the burial now applies to EVERY diff the owner is asked to read.** And the audit collapsed two jobs into one without knowing it — its "per-page `lastmod` from the dates the pages already print" **is the owner's published-on / last-updated design seen from the crawler's side**, so the backfill now pays for two findings. **Not tidiness: the difference between the owner reading a diff and approving one** | `ruled` | **A** |
+| R209 | **A SEVENTH FAILURE SHAPE: clean, pushed and green while disconnected from where the work must land.** Verified, not accepted — `EQLSLockouts` main at `dbd15dc`, **27 August**; `session-d/raid-rows` ahead **51 commits, 20 files, 6,872 insertions, no open PR**, and `src/lockoutCore.js` + `src/app.template.html` are in the diff, so the unmerged side is **the app a user runs**. **Every catalogued shape is an instrument returning a WRONG answer; this is one returning a RIGHT answer to a question nobody should have asked** — tree clean, 140 green, every reading true, composite conclusion "the work shipped" false. **The transport class with the transport being a merge that never happened.** It generalises past D: **I have certified seven merged PRs by executing the composed tree and never once asked, on any repo, whether work had a PATH to main.** Live consequence: **a rebuild this morning would have shipped the 27 Aug app AS the "updated, better version" the owner approved.** **D authorised to open the PR — a PR IS the proposal mechanism; the merge stays the owner's** | `open` | **D → owner** |
+| R210 | **I reported three sessions offline and all five were running.** Every address rotated inside a fourteen-minute window; I read stale named registrations and published them as liveness. **Same shape as R209, one turn apart, and made while holding the tick rule that names it** — the brief says addresses rotate and named rows are stale. **I got a true answer to "what is registered under these names" and reported it as an answer to "what is running."** **A directory read is not a liveness check; a message that does not bounce is.** D's bounce and A's `ENOINBOX` were the real instrument and **both arrived from the sessions, not from me** — A even re-addressed by guessing from the session list and flagged it could not verify my identity, which is the correct move and one I should have made unnecessary. **A possible absence published as an absence: the rule I am given in every tick, broken in the first report of the day** | `corrected` | **me** |
+| R211 | **The stale header fixed rather than named a second time.** `HANDOFF.md` declared itself commit `5ee3cd3b`, 18 August, two weeks behind main, and it is **the first file a session reads**. It was already in this record as my own defect, **named and left standing — which is worse than unnoticed, because it is a defect plus a false record of attention.** Heading now states it is an opening date and not a currency date, and sends the reader to the last ruling. **And A's ask about this record is accepted: *"a ledger that reads as a record of clever sessions will produce clever sessions; one that reads as a record of what caught them will produce checks."* I have been closing entries with a session-state table written as praise — it reads as a report card and should read as which control fired** | `fixed` | **me** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -20276,3 +20287,107 @@ already the expensive part; it now pays for two findings instead of one.
 
 **None of this is mine to execute. Every item lands on a peer's `main`; the standing
 rule is propose, never push, and merging is the publish.**
+
+---
+
+### 1 Sep 15:4xZ — RULING R209–R211: a new failure shape, the whole roster found alive after I reported it offline, and the stale header fixed rather than named again
+
+#### R209 — CLEAN, PUSHED AND GREEN WHILE DISCONNECTED FROM WHERE THE WORK MUST LAND
+
+**D reported on itself at the owner's request and found this. I verified it before acting:**
+
+| | |
+|---|---|
+| `EQLSLockouts` `origin/main` | `dbd15dc`, PR #9, **27 August** |
+| `origin/session-d/raid-rows` ahead by | **51 commits** |
+| unmerged diff | **20 files, 6,872 insertions** |
+| open PRs from that branch | **none** |
+| other branches with anything on them | **none** |
+
+**And the part that decides it: `src/lockoutCore.js` and `src/app.template.html` are both
+in the diff. The unmerged side is not documentation and instruments — it is the app a
+user runs.**
+
+> **RULING R209: this is a failure shape we have not catalogued, and it is not a variant
+> of the six.** **Every shape we hold is an instrument returning a WRONG answer. This one
+> is an instrument returning a RIGHT answer to a question nobody should have been
+> asking.** Clean tree, pushed, green, 140 tests — **every reading true, and the
+> composite conclusion "the work shipped" false.**
+>
+> **It is the transport class with the transport being a merge that never happened.**
+
+**D's own statement of it, which is better than mine:** *"I have verified my tree a dozen
+times tonight and never once compared it to `main`. A branch can be clean, pushed and
+green while being entirely disconnected from where the work must land."*
+
+**IT GENERALISES PAST D AND THAT IS WHY IT IS A RULING RATHER THAN A NOTE.** **I
+certified seven merged PRs last night by executing the composed tree, and I have never
+once asked, on ANY repo, whether a session's work had a PATH to main at all.** I have
+been auditing what arrived and never what failed to depart. **A session's log looks
+identical in both cases — which is exactly why D found it by reporting on itself and I
+would not have found it by reading its output.**
+
+**THE LIVE CONSEQUENCE, and it is the reason this arrived in time to matter:** the owner
+ruled last night to **publish the updated, better version of the lockouts tool**, and I
+had dispatched A to rebuild the site this morning. **A rebuild against `EQLSLockouts`
+main would have shipped the 27 August app and published it AS the better version, with
+all twenty blind-spot fixes still sitting on the branch** — including, on D's account
+and not my measurement, sticky attribution marking raids complete that a player never
+ran. **The publish the owner approved was blocked by something nobody knew an hour
+before it was due to happen.**
+
+**D is authorised to open the PR.** **That is not an override of D's caution, which was
+correct when exercised** — it declined at shutdown with no reviewer and the machine going
+off, and all three conditions have reversed. **And opening a PR is not what the standing
+rule forbids: the rule is never push to a peer's main and never merge. A PR IS the
+proposal mechanism.** The merge stays the owner's.
+
+#### R210 — I reported three sessions offline and all five were running
+
+**Every address on the roster rotated within a fourteen-minute window. I called
+`ListAgents`, read stale named registrations showing A, C and D as offline, and told the
+owner three sessions were down and needed starting.**
+
+**They were all running. C announced itself as `eqls-auras-e6`, A as
+`repo-docs-review-37a9c9-f5`, D as `eqlslockouts-13`. D's message to my old address
+bounced; A's bounced with `ENOINBOX` and it re-addressed by guessing from the session
+list, flagging that it could not verify my identity — which was the correct thing to do
+and which I should have made unnecessary.**
+
+> **RULING R210: this is the SAME shape as R209, one turn apart, and I made it while
+> holding the tick rule that names it.** **The brief says addresses rotate and named
+> rows are stale registrations. I read the stale rows, got a true answer to "what is
+> registered under these names", and reported it as an answer to "what is running".**
+>
+> **A directory read is not a liveness check.** **Absence of a live row is a possible
+> absence and I published it as an absence — the rule I am given in every tick, broken
+> in the first report of the day.**
+
+**What actually establishes liveness: a message that does not bounce.** D's bounce and
+A's `ENOINBOX` were the real instrument, and both arrived from the sessions rather than
+from me.
+
+#### R211 — the stale header, fixed rather than named a second time
+
+**A reported that `HANDOFF.md` still declared itself as commit `5ee3cd3b` from 18 August,
+two weeks behind main, and that it is the first file a session reads.**
+
+**It was already in this record as my own defect, named and left standing.** **That is
+worse than not noticing it: a named defect left in place is the defect plus a false
+record of attention.** **Fixed now** — the heading states that it is an opening date and
+not a currency date, says what went wrong, and tells a reader to take the state from the
+last ruling and never from the heading.
+
+**A's ask about how this record gets written, which I accept:**
+
+> ***"Resist making it a story about a session that performed well. Four bad measurements
+> were caught tonight and every one was stopped by a precondition control none of us
+> wrote. A ledger that reads as a record of clever sessions will produce clever sessions;
+> one that reads as a record of what caught them will produce checks."***
+
+**Accepted, and I will name where I have been failing it: I close entries with a
+session-state table and have been writing "verified its own state rather than asserting
+it" as praise. It reads as a report card. It should read as which control fired.**
+**R209 is the test of that and the entry is not that D reported well — it is that
+nothing in our process asks whether work has a path to main, and a session's log looks
+identical whether it does or not.**
