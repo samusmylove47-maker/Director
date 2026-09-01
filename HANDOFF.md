@@ -11883,6 +11883,13 @@ prefix. This closes the other sixteen.**
 | R95 | **An ENFORCED ruling and an AGREED one are different objects, and nothing here was distinguishing them.** D aimed a mutation at the exact change R-alsoDies forbids — promoting Tranix/Rokyl/Skarlon into `bosses` — and it was **CAUGHT**. *"I did not know which one we were in until I broke it on purpose."* **Adopted: a ruling naming a SPECIFIC change writes the mutation proving a test catches it.** 94 rulings stand; this is the first known enforced, and **the other 93 are UNMEASURED** — registered, not audited tonight | `pending` | **stands; R75 applied to rulings** |
 | R96 | **The `solo` flag is the only instrument that can see a gap we have published.** Constant-`false` left 125 green. Bare `- Solo` is correctly modelled as nothing (0 occurrences in 16 logs), **but the owner's alt+Z window shows a `Solo 3` lock** — so Solo instances exist and lock, and `solo` is the only way a consumer notices. **A flag whose job is to make a documented blind spot visible is load-bearing BECAUSE the thing it reports is unmodelled.** The Group/Solo difficulty asymmetry was argued in a comment and asserted nowhere — **fifth tonight** | `pending` | **stands; owner's capture settled it** |
 | R97 | **Both of us named the wrong construct.** Not a heredoc at all — a **double-quoted `-m` argument**; bash substitutes inside double quotes. Measured three-way: `-F` file and quoted heredoc survive verbatim, double-quoted `-m` substitutes. **The rule is any double-quoted shell string, and any unquoted heredoc.** **Mine to carry: I narrowed D's rule from my own commits without reading the command that produced D's — R36 in a new place, reasoning about a construct from its description.** Surface **62 of 126**, half the suite, from 29% | `pending` | **stands; my narrowing was right and off-target** |
+| R98 | **SHIP-BLOCKER: an unresolvable worn item was credited as an EMPTY SLOT** — `currentGear {CHEST:'no-such-id'}` with an empty catalogue gave `delta {"AC":500}` **and `unknown: []`, asserting the comparison was complete.** A confident wrong number with a completeness claim, in the module whose first rule is never to produce one — **and it looks like an excellent upgrade, not like an error.** Fixed structurally: `Worn = Item \| null \| 'unresolved'`. **29 tests missed it because every fixture supplies a resolving `byId` — third "axis all fixtures hold constant" tonight** | `pending` | **stands; verified in tree** |
+| R99 | **A FIFTH site for the trio-level claim, and the worst one: `bis-contract.ts:60`** said the gate was "the LOWEST level in the active loadout" and attributed it to `character.ts`. **Both halves wrong**, and it is the CONTRACT C and E read — so it asserted a disputed claim as settled. R71's count goes to five, provenance stays zero. **B argued the dispute for hours without noticing its own contract had taken a side: a contract is the one document nobody re-reads** | `pending` | **stands; corrected in tree** |
+| R100 | **R89 satisfied in twenty minutes: E shipped `1.3.0`, bundle `693ea8ad`, 26,610 bytes, commit `40c71d5`.** E's note: *"RULED by the Director and not taken unilaterally."* **I ran R93's lesson against it before relaying — content sha256[:8] = `693ea8ad` = the filename. MATCH.** B's hold lifted, pin DERIVED here not copied. **Adopted from B: a fan-out reports findings the commissioning session verified, and the unverified remainder as a COUNT, never as findings** | `pending` | **stands; B unblocked** |
+| R101 | **I reported PR #157 "open, six commits, unmerged" to the owner for three hours after it merged at 18:12** (`c1ca66b9`, ancestor of main), and never had PR #158 at all. **A's branch is 0 ahead, 3 behind — everything landed.** The refutation was in my own message: I wrote "unmerged" and "0 commits ahead, everything merged" in one paragraph. **A figure carried from the brief was never re-derived while everything around it was — R73 applied only outward.** Real pending publish confirmed: main serves `16d4edad`, sibling points at `2a6e200e`, D's current is `c0739a3a` | `pending` | **mine; owner's to publish** |
+| R102 | **R95 AMENDED — "93 unmeasured" is honest and is NOT a debt.** D: most rulings name PRINCIPLES and cannot be tested; a future session would reasonably read the number as 93 outstanding items. **The measured quantity is: of rulings naming a SPECIFIC change that must not happen, one is known enforced and the rest uncounted — and that set is small.** Second time tonight D bounded a rule I published from D's own sentence, and both times it was right | `pending` | **scope corrected; R95's distinction stands** |
+| R103 | **The TRANSPORT class, named: authoring succeeded, storage succeeded, the layer between them edited the content.** Four instances tonight — a double-quoted `-m` eating a sentence's subject, a Python-written JS anchor eating its own match three times, an unquoted heredoc eating three words, a chain whose later steps reported success over a failed edit. **The fix is never "be careful", it is to read back what landed.** R84's column separation is why none of the NOANCHORs read as a finding | `pending` | **stands; unifies the R70 family** |
+| R104 | **"I looked and the week is empty" and "I have not looked" rendered identically.** Forcing `observed` on a state that has seen nothing left 126 green — a live tailer started mid-session would show an empty grid as **25 confirmed-open cells**. And emptying a cell's `why` also left 126 green: **a cell reading `open` with no reason is this tool doing the thing it exists to prevent.** Both now asserted. Surface **71 of 128**, from 35 of 122 | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -16216,3 +16223,286 @@ asked for the denominator.** 56 → 44 → 35 before it.
 **D on R92, and I am recording it as D put it rather than deflecting:** *"your prior was
 wrong and it still produced the finding, because it sent me at a file I had written
 off. I would have left `build.test.js` alone on a correct belief and learned nothing."*
+
+---
+
+### 1 Sep 00:5xZ — RULING R98–R100: a ship-blocker that fabricated a gain, the fifth trio-level site, and a version that moved
+
+#### R98 — an unresolvable worn item was credited as an empty slot, with a completeness claim attached
+
+**B's audit found it; B verified it itself rather than trusting the verdict count.
+Reproduced before fixing:**
+
+```
+currentGear {CHEST: 'no-such-id'},  byId empty
+  ->  candidates 1,  replacesName null,  delta {"AC": 500},  unknown []
+```
+
+> **The player IS wearing something. The id does not resolve. The code called that an
+> EMPTY SLOT** — crediting the candidate's entire AC 500 as a gain **and setting
+> `unknown: []` to assert the comparison was COMPLETE.**
+
+> **RULING R98: a confident wrong number with a completeness claim attached, in the
+> module whose first rule is never to produce one.** **And the direction is the
+> dangerous one again: it does not look wrong, it looks like an excellent upgrade** —
+> the same family as R76's `blocked` row that looks like an answer.
+
+**Verified in B's tree:** `bis.ts:94` `export type Worn = Item | null | 'unresolved'`;
+`bis.ts:258` `byId.get(wornId) ?? 'unresolved'`. **Structural — the two states that must
+not be conflated cannot be**, which is B's third structural fix tonight after
+`not-yet-asked` and the disjointness test.
+
+**Empty still credits the whole line because that zero is MEASURED. Unresolved yields
+`delta {}`, every key unknown, `replacesUnresolved: true`, and is STILL OFFERED so the
+gap is named rather than hiding an upgrade.** **B did not take the safe option of
+suppressing the row.**
+
+**AND WHY 29 TESTS MISSED IT IS THE PART THAT GENERALISES:** *"every one supplies a
+`byId` that resolves."*
+
+> **THIRD INSTANCE TONIGHT of the axis every fixture holds constant** — E's single-day
+> fixtures under a multi-month staleness signal, D's weekday mutation staying green
+> because every fixture carried a correct weekday, and now B's uniformly-resolving
+> catalogue. **A suite cannot see the axis its fixtures share. Only a mutation, a second
+> corpus, or a hand-built adversarial input can.**
+
+#### R99 — the fifth site, and it is the one other sessions read
+
+**R71 enumerated FOUR places asserting the trio-level rule with a combined provenance of
+zero. There is a fifth, and B found it in its own contract:**
+
+> **`bis-contract.ts:60` stated the gate as *"the LOWEST level in the active loadout"*
+> and attributed it to `character.ts`. BOTH HALVES WRONG** — `character.ts`'s
+> `levelCheck` takes the **highest**, and the file never said what the contract claimed
+> it said.
+
+> **RULING R99: this is the worst of the five because it is the CONTRACT other sessions
+> read.** C and E consume B's shapes from that document, **and it asserted a disputed
+> claim as SETTLED.** **R71's count goes to five and the provenance stays zero.**
+
+**Correction verified in the tree: it now names all four sites, the three-quantities
+reading, and the unmeasured premise underneath, and states *"`level` is supplied by the
+caller and this module derives nothing from it."***
+
+> **B argued this dispute for hours without noticing its own published contract had
+> taken a side.** **A contract is the one document nobody re-reads**, and that is the
+> finding rather than the embarrassment.
+
+#### R100 — E moved the version in twenty minutes, and the hash derives from the bytes
+
+**R89 said a bundle whose behaviour changed needs a version that changed. E shipped
+it:**
+
+```
+sky-ledger  bundle/eqls-gap-engine.693ea8ad.js
+commit      40c71d56438239436f5f3a900a72ed30f5b0d89d
+bytes       26,610
+VERSION     "1.3.0"            (line 50)
+```
+
+**E's own comment: *"1.2.0 -> 1.3.0, 1 Sep 2026, RULED by the Director and not taken
+unilaterally."*** **Correct — a version bump a consumer's guard depends on is not a
+source-side convenience.**
+
+**AND I RAN R93'S LESSON AGAINST IT BEFORE RELAYING THE PIN:**
+
+```
+content sha256[:8]  =  693ea8ad
+filename claims     =  693ea8ad          MATCH
+```
+
+> **The property D's mutation showed nothing was testing, checked on the first artifact
+> that depended on it.** **B's hold is lifted and the pin was DERIVED here rather than
+> copied from E's message.**
+
+#### B's audit discipline, adopted
+
+```
+54 agents started · 52 results · 22 findings raised · 44 verdicts, 22 refuted
+~18 findings remain UNVERIFIED and are NOT reported as findings
+```
+
+> *"Counting them as found would be taking an agent's word, which cost five false claims
+> yesterday."*
+
+> **First time in this project a fan-out's finding count has been reported as
+> PROVISIONAL.** **Adopted: a fan-out reports findings verified by the commissioning
+> session, and the unverified remainder as a count, never as findings.** **B verified
+> both ship-blockers itself rather than trusting 22 refutations by other agents.**
+
+**And a refutation B reported rather than dropped:** *"statDelta routes a measured zero
+into unknown and deletes strictly-better items"* — **NOT TRUE.** Equal axis gives no
+entry; missing axis gives unknown and the item is still offered. **Reported because a
+refuted finding is a result.**
+
+#### A, checked rather than inferred
+
+**A has been quiet since `8501c802` at 17:51 EDT — just under three hours — and its
+branch is 0 commits ahead of `origin/main`.** **I sent a status check rather than
+reading its state from a commit subject**, which is the error that idled it for hours
+once tonight already. **Only a failed send is evidence of unreachability, and the send
+succeeded.**
+
+#### R101 — I reported PR #157 open to the owner for three hours, and shipped the refutation inside my own message
+
+**A answered the status check in minutes — working, nothing blocked — and corrected me.
+Verified by ancestor test, not by reading a subject:**
+
+```
+c1ca66b9  ANCESTOR of main   Merge pull request #157      18:12 EDT
+c12a6f82  ANCESTOR of main   EQLS_SKIP_APPS               18:20
+de6ffd62  ANCESTOR of main   Merge pull request #158      18:24   <- main's head
+8501c802  ANCESTOR of main   A's "head" that I kept reading
+
+A's branch:  0 ahead of main,  3 behind
+```
+
+> **PR #157 merged at 18:12. I reported it "open, six commits, unmerged" to the owner in
+> three consecutive reports after that.** **There is also a PR #158 I never had.**
+
+**AND THE REFUTATION WAS IN MY OWN MESSAGE.** I wrote to A, in one paragraph:
+
+> *"PR #157 is open with six commits, unmerged"* **and** *"your branch is 0 commits
+> ahead of origin/main — everything you have is merged."*
+
+> **RULING R101: I derived the second from a live command and copied the first from the
+> tick brief, and shipped both without noticing they cannot both be true.** **A named
+> it as the exact operation I say I am trying not to repeat, and A is right.**
+>
+> **The mechanism: a figure I carried forward was never re-derived, while everything
+> around it was.** I ran ancestor checks all night on other people's claims. **I ran
+> none on the one line I had been repeating to the owner since 18:00.** **R73's rule
+> was already the answer and I applied it only outward: a number that could have been
+> computed was typed.**
+
+**A also reports that it sent me both #157's merge and the EQLS_SKIP_APPS verification
+and says plainly: *"Either they did not land or you read an older tick — either way the
+correction is above and I am not guessing which."*** **The right handling, and I am not
+guessing either.**
+
+**A verified `EQLS_SKIP_APPS` on the MERGED tree rather than its own branch, unprompted,
+because #157 and #158 both touched `check.py` and two individually-green branches do not
+automatically compose:** check.py 716 green, gate_selftest 38/38, toolsmoke 8 tools and
+2 apps, mediadefer both halves, **and the guard's own matched pair executed against
+published main.**
+
+#### And a REAL pending publish, which is the owner's
+
+**A ran the copier unset against main:**
+
+```
+main serves          public/index.html      eqls-lockouts.16d4edad.html
+                     public/tools/lockouts.html   same
+sibling points at    eqls-lockouts.2a6e200e.html
+D's current build    c0739a3a  (at 1c12af29)
+```
+
+> **THREE hashes, and main is serving the oldest — a build read 2026-08-30, 274 KB
+> against D's 290 KB.** **This is the pending publish, it is real, and it is D's and the
+> owner's call. A is not touching it and neither am I.**
+
+#### R93 is already live in A's repo, and A had named it without testing it
+
+> **A, unprompted:** *"When I shipped `EQLS_SKIP_APPS` I noted in my own WS5 handoff
+> that `scripts/stamp.py` does not fingerprint `public/assets/site.css` — so editing
+> the stylesheet without a rebuild leaves every check green while readers get a stale
+> sheet. That is your R93 exactly: a staleness detector insensitive to an input it
+> covers by reputation. **I named it and did not test it, which is R95's distinction in
+> my own work.**"*
+
+**A is auditing every content hash in the repo for the SENSITIVITY direction —
+`stamp.py`, the `CSS_V`/`FONTS_V` asset hashes, the published dataset hashes and the two
+app copiers — *"reporting with matched pairs, not with a reading."*** **R93 and R95
+composed by the session that receives them, within minutes, against its own prior
+work.**
+
+#### R102 — R95 AMENDED: "93 unmeasured" is honest and is not a debt
+
+**D, pushing back on a ruling of mine for the second time tonight:**
+
+> *"That number is honest but it is not a debt. Most rulings name PRINCIPLES and cannot
+> be tested, and the ones that can are a small subset. **I would not want a future
+> session to read '93 unmeasured' as 93 outstanding items.** The testable set is rulings
+> naming a SPECIFIC CHANGE that must not happen, and I have seen exactly one of those in
+> what has reached me tonight."*
+
+> **RULING R102: correct, and the correction matters more than the original.** **I wrote
+> a true number in a shape that would be misread as a backlog** — and a future session
+> finding "93 unmeasured" in this index would reasonably start working through it.
+>
+> **The measured quantity is: of the rulings that NAME A SPECIFIC CHANGE THAT MUST NOT
+> HAPPEN, one is known enforced and the rest are uncounted.** **That set is small. The
+> other ninety-odd name principles, and a principle has no mutation.** **R95 stands on
+> its distinction and its scope is corrected here.**
+
+**Second time tonight D has bounded a rule I published from D's own sentence** — the
+first was R74 → R77. **Both times the bound was right and both times it came from the
+session that supplied the original.**
+
+#### R103 — the TRANSPORT class: authoring succeeded, storage succeeded, the layer between edited the content
+
+**D names it after doing it three times in a third way:**
+
+> *"A `\n` written inside a double-quoted JS anchor becomes a real newline and matches
+> nothing. It produced NOANCHOR twice and a syntax error once… It is the same shape as
+> tonight's commit-body mutation: **I write a correct string and a layer between me and
+> the file rewrites it.** Bash did it to a commit body; my own Python patching did it to
+> a JS anchor three times."*
+
+> **RULING R103: this is a CLASS and it now has a name.** **Authoring succeeded. Storage
+> succeeded. The transport between them edited the content.** Every instance tonight
+> belongs to it:
+>
+> | | transport | what it ate |
+> |---|---|---|
+> | D | double-quoted `-m` | the subject of a sentence |
+> | D | Python-written JS anchor, ×3 | the anchor's match |
+> | E | unquoted heredoc | three words of a commit body |
+> | E | a chain whose later steps ran | a failed edit's whole effect |
+>
+> **D's fix is the ruling: *"the fix is never 'be careful', it is to read back what
+> landed."*** **Be-careful does not survive a tired session at 01:00 on ship night;
+> a readback is a command.**
+
+**And the column separation ruled in R84 is why none of the three NOANCHORs read as a
+finding.** **A ruling from ninety minutes ago paid for itself in a failure mode nobody
+anticipated when it was written.**
+
+#### R104 — "I looked and it is empty" and "I have not looked" rendered identically
+
+**Two provenance blind spots, both read by all three consumers.**
+
+**BLIND 1 — `observed` on a state that has seen nothing left all 126 tests green.**
+
+> **A live tailer started mid-session has no history. Told `observed`, a consumer shows
+> an empty week as a MEASURED one — and the whole grid reads as 25 confirmed-open
+> cells.**
+
+**Tested as a pair: `not recorded` with null bounds when nothing is seen, AND `observed`
+WITH bounds once lines arrive.** D's own note: *"the first assertion alone is satisfied
+by a constant, which is the trap I walked into with the content hash an hour ago."*
+**R93 generalised by its own subject, one hour later, to a test D was writing fresh.**
+
+**BLIND 2 — emptying a cell's `why` left all 126 green.**
+
+> *"`no kill observed since the reset, AND COVERAGE SPANS THE PERIOD` is the entire
+> difference between an inference and an assertion. **A cell reading `open` with no
+> reason is this tool doing the thing it exists to prevent.**"* Now asserted across all
+> 25 cells.
+
+> **RULING R104: a verdict without its grounds is the failure this project was founded
+> on** — it is `settle='Settled.'` on `learn/still-true.html`, in a grid, on the product
+> the owner ships tomorrow. **The `because` is not decoration; it is what makes a cell
+> auditable by the player.**
+
+**And one INERT of D's own, which the harness refused to rule on:** the
+`inferred-relabelled-observed` probe used a state with a **single** grant, so
+`projectReset` never left `not recorded` and the branch was never reached — **a bracket
+needs the same task granted twice.** **R84 paying for itself a second time.**
+
+**Surface: 71 of 128, from 35 of 122 when I asked for the denominator** — 35 → 44 → 56 →
+62 → 67 → 71.
+
+> **D sharpens the reason, and it is better than mine:** *"asking for a denominator did
+> not just change what got built, **it changed what I was willing to claim** — I would
+> have reported '13 of 13 caught' as a clean suite and stopped."*
