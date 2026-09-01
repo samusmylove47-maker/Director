@@ -457,3 +457,23 @@ Compared current remote heads against the 1 Sep 09:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 11:28Z
+
+Compared current remote heads against the 1 Sep 10:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `e9ede665` → `f108ef0f`
+  ("REFUTES the ItemPicker tier finding, and pins the correct behaviour
+  that nothing was guarding"), authored 2026-09-01T11:01:41+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `003fa800` →
+  `1e028355` ("ABSENCE WAS FATAL ONE IMPORT DOWNSTREAM: I verified the
+  file, not the suite"), authored 2026-09-01T10:43:26+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e0efe712`.
+- `EQLSLockouts` `session-d/raid-rows`: `0a5bfcb0`.
+- `EQLSAuras` `main`: `b05741bf`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
