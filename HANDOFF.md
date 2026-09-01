@@ -11926,6 +11926,7 @@ prefix. This closes the other sixteen.**
 | R138 | **R65's block is LIFTED — it was on the WORKER, not the finding.** A is no longer stood down and reports no remaining falsifier-bearing item. **Verified still live on main before dispatching: `build13.py:248-262` makes three claims under one T1 entry that speaks only to the level-11 lock, `settle='Settled.'`, shipping in `still-true.html` (33,899 B, 6 T1 badges).** Claims 1 and 2 keep T1; the trio-level claim gets its own tier or comes out. **R82 may dissolve rather than downgrade it — the honest row may be "not recorded"** | `pending` | **dispatched to A as a PR** |
 | R139 | **#163 and #164 merged 23:15; merged main is GREEN on a default Windows clone** (`autocrlf=true`, `1142939b`, tree clean, exit 0). **R119 conditions 1 and 2 verified IN PRODUCTION OUTPUT** — the caveat now names its exit (`run scripts/inputprobe.py to see those`) and the probe prints its own limits every run. Probe result on main: **152 paths opened, 109 build inputs, 112 fingerprinted, every observed input covered** | `pending` | **stands; verified in the broken config** |
 | R140 | **All three refusal arms verified — and I hit A's vacuous-test trap THREE TIMES proving it.** clean → exit 0; a generator importing `pathlib` → **exit 1**; **its own control neutered → exit 2**. My first two mutations of `inputprobe.py:71` SILENTLY DID NOT APPLY and the probe printed exit 0 both times — **identical to a passing control. I would have filed a MISS against the arm A added of its own initiative, because my test did not run.** **Adopted for everyone, mine first: a mutation is not applied until its new state is READ BACK. An unapplied mutation and a caught one are the same output** | `pending` | **stands; R94's readback moved to experiments** |
+| R141 | **#163 CLOSES R122, verified by complete matched pair.** Clean re-clone, baseline green, `check.py:887` mutated to `if False:` with the change READ BACK before believing it: `gate_selftest` now reports **"1 case(s) did not see the check they were written for fail. Either that check is dead, or this file is now testing something else — both are blockers."** Before #163 the same mutation left all 46 CAUGHT at exit 0. **And A's misfiled-vs-wrong correction is the tool's own message, not a commit note. R113's tracked-file argument likewise now reads to a human: "It is a TRACKED FILE, so this means it was DELETED."** | `pending` | **stands; chain closed** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -18012,3 +18013,59 @@ tell a real failure from a caught one.
 **Recorded because the ruling paid for itself against its own author within two hours,
 and because a harness that mutates a tree must not be launched in a way that can outlive
 the shell that restores it.**
+
+---
+
+### 1 Sep 03:4xZ — RULING R141: #163 verified, and R113's own reasoning is now the harness's message
+
+**Complete matched pair on a clean re-clone at `1142939b`, `autocrlf=true`:**
+
+```
+baseline check.py ............ All checks passed.
+mutate check.py:887 .......... if False:      (the sha1-vs-name branch)
+READBACK ..................... if False:      <- confirmed before believing anything
+gate_selftest ................ "1 case(s) did not see the check they were written
+                                for fail. Either that check is dead, or this file is
+                                now testing something else — both are blockers."
+restored ..................... 0 modified
+```
+
+> **RULING R141: #163 closes R122.** **Before it, disabling that branch left all 46 cases
+> reporting CAUGHT at exit 0. Now exactly one case notices** — the rename case A built
+> after refuting my manifest-edit mutator.
+
+**AND THE HARNESS MESSAGE CARRIES THE MISFILED-VERSUS-WRONG DISTINCTION ITSELF:** *"Either
+that check is dead, or this file is now testing something else — both are blockers."*
+**A's correction of my framing is not a note in a commit; it is what the tool says when it
+fires.**
+
+**Two more things visible in the same run, neither of which I went looking for:**
+
+```
+[caught] the build stamp is gone, so freshness cannot be checked at all
+         "…It is a TRACKED FILE, so this means it was DELETED. Re-run ./build.sh"
+```
+
+> **That is R113's argument verbatim, in the product.** **The tracked-file reasoning I
+> used to refute A's newcomer objection — a fresh clone HAS the stamp, so a missing one
+> means deletion — is now the message a contributor reads.** **A ruling arriving as a
+> sentence a human sees, rather than as a row in this file.**
+
+**And two unrelated cases caught cleanly in passing** — a full zone still naming an open
+gate, and The Index linking an item page not on disk — **which is the negative control for
+the whole run: the harness was working on ordinary cases while the mutated one was
+detected.**
+
+#### The night's verification chain, closed
+
+| PR | ruling | my independent check |
+|---|---|---|
+| #162 | R118/R121 | fresh `autocrlf=true` clone, blob = worktree, **exit 0** |
+| #161 | R113 | both arms **exit 1**, negative control exit 0 |
+| #163 | R122 | disabled branch now **detected**, 1 case where 0 before |
+| #164 | R119 | three refusal arms: **0 / 1 / 2**, tree clean |
+
+> **Every ruling I gave A tonight was implemented, and every implementation was measured
+> here rather than accepted.** **Two of the four measurements first produced a WRONG
+> answer from my own instrument — a stale local `main`, and three mutations that never
+> applied — and both were caught by controls this project's own rulings required.**
