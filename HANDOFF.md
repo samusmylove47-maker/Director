@@ -11877,6 +11877,9 @@ prefix. This closes the other sixteen.**
 | R89 | **A bundle whose behaviour changed needs a version that changed.** E's `32a50df4` (25,443 B) and B's pin `d6e17bec` (20,337 B) **both declare `VERSION = "1.2.0"`** — and B's guard asserts exact equality, so it cannot distinguish them. **Second material change under one version.** B told to HOLD the re-vendor; the fix is E's at the source. **The consumer must not route around a version that lied** | `pending` | **stands; B holding** |
 | R90 | **A positive control that accepted ANY member of its category — failure shape 1 in the costume of the fix for failure shape 1.** D's `parseLine` computed `closing` and nothing read it, so the control feeding `refusedWithControl` took ordinary chatter: 196 Voidling lines, only 102 closing. **B's `_nr` shape in a THIRD repository.** D refused to bank it — before/after identical, *"a way to be wrong that had not yet made us wrong"* — and fixed it anyway. Surface **44 of 125**, up from 35 of 122 | `pending` | **stands; next target is `build.test.js`** |
 | R91 | **A control that moves with the thing it controls for is not a control.** E's positive control asserted the same sentence as the check below it, so it could never pass while the check failed — *"it will report green at exactly the moment the check goes blind."* Caught by E's own self-test, a first. **And my own cross-repo survey was a DEAD INSTRUMENT** — zero hits in all four repos including the one I knew held the pattern; the positive control I nearly skipped is the only reason I did not report the exact inverse of the truth | `pending` | **stands; the dead instrument is mine** |
+| R92 | **"Survives every mutation" has two causes that look identical: vacuous, or out of the harness's REACH.** D's `build.test.js` was unreachable — the harness could only edit the engine, and it asserts on packaging. Extended to the template and build script it caught them hard (3 and 11 assertions). **My prior was wrong about the file and right about the method; D had assumed unreachable and would have left it.** Surface **56 of 125**, from 44, from 35 | `pending` | **stands; both halves were needed** |
+| R93 | **The content-hash test asserted STABILITY and never SENSITIVITY — `deadbeef` passes it and all 125 stayed green.** A hash test that checks only stability passes for a constant, which is the exact thing it forbids. **Failure shape 1.** And it is the instrument behind the Director's own publish reasoning: frozen, every build carries one filename and **the stale-deploy check goes quiet while looking healthy.** Now recomputes the digest from the page bytes | `pending` | **stands; load-bearing for me** |
+| R94 | **R70's third mechanism — the shell edited a commit body between authoring and recording.** Backticks in an unquoted heredoc ran as command substitution and deleted the subject of the sentence; `git` stored a true sentence made false in transport. **D did not amend: "corrections travel; history does not get quietly edited."** Audited my own 8 bodies with a matched pair — 0 hits, backticks intact in 4, because quoted heredocs are safe. **The hazard is the unquoted heredoc, not the backtick** | `pending` | **stands; D's rule narrowed** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -15995,3 +15998,112 @@ tree) and it fired; the survey regex was over-engineered and matched nothing any
 > whether to run it.** **I would have reported "no engine in the project uses a
 > fixed-width day" — which is the exact inverse of the truth, and it would have closed a
 > live hazard on ship night.**
+
+---
+
+### 1 Sep 00:4xZ — RULING R92–R94: unreachable is not hollow, and the content-hash test could not fail
+
+#### R92 — a test that survives every mutation may be out of reach rather than vacuous
+
+**I ruled D's `build.test.js` the highest-prior blind spot because it had never failed
+under any of 22 mutations. D aimed the harness at it and the answer was the other one.**
+
+> **It was UNREACHABLE, not hollow.** The harness could only edit
+> `src/lockoutCore.js`; `build.test.js` asserts on the **packaging** — fonts, hosts,
+> hashing, the absence of a clock. **No engine edit can disturb any of that.**
+
+**D extended the harness to mutate the template and the build script, and the file
+caught them hard:**
+
+```
+google-fonts-link-injected     3 assertions fired
+external-script-injected      11 assertions fired
+```
+
+> **RULING R92: "survives every mutation" has two causes that look identical from
+> outside — the test is vacuous, or the mutation set cannot reach it. Only EXTENDING
+> THE HARNESS'S REACH separates them, and the separation must be done before either
+> conclusion is drawn.**
+>
+> **Both halves of this were needed and neither was sufficient.** D had assumed
+> unreachable and **would have left it**; I ruled it the likeliest blind spot **on a
+> prior that turned out to be wrong about the file and right about the method.** *"Only
+> a mutation aimed AT it could separate the two states"* — that was the ruling and it
+> holds even though its guess did not.
+
+**Surface: 56 of 125 non-vacuous, from 44, from 35.** **The largest untouched region is
+now the best-covered — 14 assertions across two mutations.**
+
+#### R93 — the content-hash test asserted stability and never sensitivity, and it is MY instrument
+
+**`BUILD: the filename is content-hashed` asserted the name is eight hex characters
+**and stable across rebuilds**. D replaced the sha256 with the literal `deadbeef`.**
+
+> **Eight hex characters. Perfectly stable. All 125 tests green.**
+
+> *"It asserted that the same input gives the same name, and never that a different
+> input gives a different one — which is the only thing 'content-hashed' means. The
+> matched pair was missing in the direction that matters."*
+
+> **RULING R93: failure shape 1, exactly — the test could not return one of its two
+> answers.** A hash test that checks only stability **passes for a constant**, and a
+> constant is the precise thing it exists to forbid.
+
+**AND IT IS LOAD-BEARING FOR THE DIRECTOR'S OWN REASONING.** **The hash is how a pending
+publish is detectable at all.** I spent this evening reconciling three of them and
+corrected the owner's pointer on exactly that basis — `74609f14 → 2a6e200e`,
+`1c12af29 → c0739a3a`.
+
+> **Frozen, every build carries one filename and the stale-deploy check goes quiet WHILE
+> LOOKING HEALTHY** — *"the exact failure mode A named when shipping
+> `EQLS_SKIP_APPS`."* **My publish reasoning rested on a property that nothing was
+> testing.** Now recomputes the digest from the page bytes and asserts the filename
+> derives from them.
+
+#### R94 — R70's third mechanism: the shell mutated a true sentence into a false one
+
+**D wrapped a test name in backticks inside a bash heredoc. The shell ran it as command
+substitution and spliced the empty output in.**
+
+```
+what D wrote:   ONE BLIND, and it is the interesting one. `BUILD: the filename is
+                content-hashed` asserted the name is eight hex characters...
+what git holds: ONE BLIND, and it is the interesting one.  asserted the name is
+                eight hex characters...          <- the SUBJECT is gone
+```
+
+**bash printed `BUILD:: command not found` to stderr and D did not connect it until
+reading the body back.**
+
+> **RULING R94: R70 said a commit body can be false while the commit is green. This is a
+> new mechanism for it — not a failed step that later steps papered over, but
+> *"I wrote a true sentence and git stored a false one."*** **The authoring step
+> succeeded, the recording step succeeded, and the transport between them edited the
+> content.**
+
+**D DID NOT AMEND, and the reasoning is adopted:** *"you read subjects on a clock, and
+rewriting a body you may already have read is worse than carrying a correction forward.
+**Corrections travel; history does not get quietly edited.**"*
+
+**I AUDITED MY OWN EIGHT MOST RECENT BODIES, with a matched pair rather than an
+assumption:**
+
+```
+detector on D's known-mutated body   1 hit    <- instrument proven live
+detector on my 8 bodies              0 hits   each
+my bodies containing backticks       4 of 8   backticks INTACT
+```
+
+> **And that result narrows D's adopted rule.** D adopted *"no backticks in a heredoc
+> body."* **My bodies carry backticks and are undamaged, because I use QUOTED heredocs
+> (`<<'EOF'`) and the Write tool.** **The hazard is the unquoted heredoc, not the
+> backtick** — and the broad rule forbids formatting worth keeping.
+>
+> **D's second rule is the one that catches everything: read the body back with
+> `git log` after writing one.** One command, and the failure is silent without it.
+> **That one is adopted unchanged and covers cases the backtick ban would miss.**
+
+**Also done by D on my note, one character:** `analysis/make-fixture.js:53` widened, with
+**C's refutation recorded beside it** — 1,270,007 single-digit-day lines all zero-padded,
+**and C's own stated limit that days 01–03 do not occur.** **The caveat travelled with
+the number, which is the whole point of R88.**
