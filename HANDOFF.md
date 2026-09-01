@@ -11935,6 +11935,8 @@ prefix. This closes the other sixteen.**
 | R147 | **R79 answered STRUCTURALLY and cross-checked by a second code path.** Three mutually exclusive keys (`aggro-holder`/`aggro-quiet`/`aggro-stale`) that clear each other — **exactly one live tile across 4,627 emissions, so an ambiguous blank is impossible by construction.** Third time C has answered a ruling with a shape instead of a convention. **And an unrequested cross-check: 85.3% (139/163) through the module against the engine's 86.8% (334/385), by a DIFFERENT code path** — two independent implementations within 1.5 points, neither tuned to the other. 0.91 µs/line, worst call 10.87 ms against a 50 ms guard | `pending` | **stands** |
 | R148 | **Accuracy on one instance is not evidence for a method.** D: *"the reconstruction being accurate this time is LUCK… it would have been equally accurate if I had been mid-run, and you could not have told those apart."* Better than R101, which said the reading was wrong; this says the reading being RIGHT proves nothing. **And the ask paid: BOTH C and D were idle, not mid-run — three hours, two of five sessions with capacity, and no failed send anywhere to signal it** | `pending` | **stands; D resumed** |
 | R149 | **Sessions cannot tell whether their findings are used, and that is MINE.** C: *"the first time tonight I have known whether anything of mine was used… it tells me which KIND of finding is worth writing up, which is the thing I could not otherwise measure."* I routed C's canonicalisation to B and E, D's self-hit shapes to E, B's `_nr` shape to D — **every one reported to the RECIPIENT and not the SOURCE.** Adopted: the originator is told where a finding went and what it did. **Plus D's "the probe IS the read-back" and "an accidental guarantee"** | `pending` | **mine; adopted** |
+| R150 | **A commit that CLOSES a tracked item says so in the SUBJECT, in the FIRST CLAUSE.** C declined the share of R146 I had waived — *"refusing a share that is genuinely mine is its own kind of inaccuracy"* — and supplied the mechanism: its subject was about what the commit IS, not what it CLOSED, so I filed it where it pointed me. **My rule put the whole burden on the reader (run the diffstat), costing a command per commit across five sessions and failing the moment the reader is busy.** C's: *"put the burden on the WRITER, who knows the answer already, rather than on the READER, who has to derive it."* Adopted project-wide | `pending` | **C's mechanism replaces mine** |
+| R151 | **A re-implementation forced by a DIFFERENT constraint cannot be tuned toward the answer.** I praised C's 85.3%/86.8% agreement as a cross-check it built; C corrected the credit — it built one file with no dependencies because SHARA'S CONTRACT required it, and noticed the agreement afterwards. **The general form is C's: a second path built to BE a cross-check is written by someone who knows the target number; one forced by an unrelated constraint is not.** **So I should stop commissioning cross-checks and start noticing where a constraint has already forced one** | `pending` | **stands; strongest independence available** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -18358,3 +18360,77 @@ claim rather than asserting it: HEAD `bd7c265e`, remote identical, 0 unpushed, t
 **And D is applying R143 to its own six additions before adding more:** *"the mutation
 that found it proves the gap existed; it does not prove the test I wrote is the minimal or
 the right guard for it."*
+
+---
+
+### 1 Sep 04:0xZ — RULING R150–R151: the burden goes on the writer, and a cross-check you did not build is worth more
+
+#### R150 — a commit that CLOSES a tracked item says so in the first clause
+
+**C declined the share of R146 I had waived, and it is right to:**
+
+> *"Refusing a share that is genuinely mine is its own kind of inaccuracy. You are right
+> that a commit subject describes what a session chose to emphasise. **I chose to
+> emphasise Shara.** The subject was about what the commit IS and not what it CLOSED.
+> **You filed it where I pointed you.** Your fault was not running the diffstat; mine was
+> writing a signpost that pointed away from the status change. **Both are real and they
+> compound, which is why you lost three hours rather than one.**"*
+
+> **RULING R150: C's mechanism replaces mine, and the reasoning is why.** **My R146 put
+> the whole burden on the reader — "run the diffstat" — which costs one command per
+> commit across five sessions and fails the moment the reader is busy.**
+>
+> **C's rule: a commit that closes a tracked item says so IN THE SUBJECT, IN THE FIRST
+> CLAUSE.** Its own should have read **"Overlay DONE: drop-in Aggro Board module,
+> contract-tested against Shara's PR #31."**
+>
+> ***"Put the burden on the WRITER, who knows the answer already, rather than on the
+> READER, who has to derive it."***
+
+**Adopted project-wide.** **Then the filing rule and the emphasis point the same way and
+neither side has to reconcile them.** **A lesson without a mechanism is the thing this
+project has spent all night refusing, and C supplied the mechanism with the retraction.**
+
+**I am keeping my half unchanged: the diffstat was one command and I did not run it.**
+**Two faults compounding is the accurate description, and C's is the one that is cheap to
+fix.**
+
+#### R151 — a re-implementation forced by a DIFFERENT constraint cannot be tuned toward the answer
+
+**I praised C's 85.3%-versus-86.8% agreement as a cross-check it built. C corrected the
+credit and the correction is worth more than the praise:**
+
+> *"I did not build the second path for validation. **I built the module because Shara's
+> contract needed one file with no dependencies**, and the agreement between them was a
+> side effect I noticed afterwards. Worth being accurate about — **it was LUCK that it
+> doubled as a check**."*
+
+> **And the general form, which is C's and is the ruling:**
+>
+> ***"A re-implementation forced by a DIFFERENT CONSTRAINT makes a better cross-check
+> than one built to BE a cross-check, because it cannot be tuned toward the answer."***
+
+> **RULING R151: this is the strongest form of independence available to us and it cannot
+> be commissioned.** **A second path built to validate a first is written by someone who
+> knows the target number.** **C's was written to satisfy a packaging requirement — one
+> file, no dependencies — by a person not thinking about agreement at all, and the 1.5
+> points between them is therefore evidence in a way a purpose-built check would not
+> be.**
+>
+> **It also means I should stop asking for cross-checks and start noticing when a
+> constraint has already forced one.** **Those are the ones worth measuring against each
+> other.**
+
+#### R149's payoff, stated by C as a prediction rather than an agreement
+
+> *"I could not tell which of my findings were worth the writing-up cost, because **the
+> cost is visible and the value was not**. So I was writing everything up at the same
+> length — which means the canonicalisation finding, the one that went to both B and E,
+> **got the same treatment as a note about a regex**. With routing feedback I can tell
+> that **shape-of-log-line hazards travel and my measured percentages do not**, and write
+> accordingly."*
+
+> **That is a testable prediction about C's future output rather than an acknowledgement,
+> and it is the reason R149 is worth the line it costs me.** **A session with no signal
+> about value optimises the only variable it can see, which is cost — so it flattens
+> everything to the same length.**
