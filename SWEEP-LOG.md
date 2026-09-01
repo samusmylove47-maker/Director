@@ -498,3 +498,24 @@ Compared current remote heads against the 1 Sep 11:28Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 13:05Z
+
+Compared current remote heads against the 1 Sep 12:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `efb9663b` → `a8233eb6`
+  ("CLOSES the audit record's three numbering schemes — every
+  cross-reference I published an hour ago resolved wrongly"), authored
+  2026-09-01T12:54:06+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `e66da9b5` →
+  `48d3cbd5` ("RELEASE CHECK ADDED: the fresh-clone test I ran by hand
+  three times is a script"), authored 2026-09-01T12:42:39+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e0efe712`.
+- `EQLSLockouts` `session-d/raid-rows`: `0a5bfcb0`.
+- `EQLSAuras` `main`: `b05741bf`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
