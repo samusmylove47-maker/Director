@@ -11903,6 +11903,8 @@ prefix. This closes the other sixteen.**
 | R115 | **#160 merged; MERGED MAIN IS GREEN, executed not inspected** — `check.py` exit 0 at `b210cf2e`, 716 pages, clean tree, `autocrlf=false`. **A's R110 limit line prints live: "89 literal read site(s) checked, 52 dynamic site(s) not visible".** **Matched pairs: FIVE OF FIVE new checks fire** — planar_raw, site.css, fonts/fonts.css, `_media`, items.v1.json, each with its negative control. **The `_media` case A could not enforce in gate_selftest is caught here by a different instrument.** **R113 has NOT shipped — deleting the stamp still gives exit 0.** Three instrument errors of mine, all caught by required controls | `pending` | **stands; production verified** |
 | R116 | **#161 (`claude/staleness-fails`) verified independently on BOTH arms with a negative control.** Delete the stamp → exit 1; corrupt it to a `KeyError` → exit 1; restored → exit 0; tree clean after. `stamp.py:100` now writes `newline="\n"`. **A verified the Director's refutation before acting on it** rather than taking it — a refutation is a claim like any other | `pending` | **stands; owner's to merge** |
 | R117 | **The second fault was found by WRITING the test, not by reading.** `stamp.py` wrote the stamp without `newline="\n"`, so on Windows the JSON indent newlines became CRLF — verified by matched pair (stamp: 2 CR bytes, `check.py`: 0). **It BLOCKED the test: `gate_selftest` restores through an LF round-trip, so a case touching that file would have converted CRLF→LF while claiming to leave the tree as found — R103's shape inside the harness whose job is to leave no trace.** **Third time tonight the artifact under construction was the instrument.** And A's lesson on its third heredoc trap: **a documented trap is a convention; documentation is not a guard** | `pending` | **stands** |
+| R118 | **`check.py` tells a Windows contributor not to commit CORRECT work.** No `.gitattributes` on main + default `core.autocrlf=true` + `os.path.getsize` at `check.py:991` = all four dataset byte assertions fail on correct content (`zones.v1.json` blob 16282 / worktree 16742). **The hashes stay CLEAN because `json.load` discards whitespace — so it reads like data corruption and is line endings.** CI is ubuntu-latest so the site is unaffected; it is a live trap on the owner's machine. **Same root cause as R117 one step earlier: byte-exact assertions were added without declaring line endings.** Found by the 13-agent verification; **I had brushed against it and filed it as my own instrument error — routing around an obstacle is how you stop seeing it** | `pending` | **stands; one file fixes it** |
+| R119 | **RULING: LAND the runtime open() probe, under three conditions.** A grepped first and reports it WORTHLESS — it missed `_media/` again, because `media.py` joins a VARIABLE. *"Grepping harder cannot find a path that does not exist until runtime."* The probe measured **152 paths read, 109 build inputs, 112 fingerprinted — every build input actually read IS fingerprinted.** Conditions: (1) `inputscover`'s caveat must NAME its exit — it currently points at nothing; (2) the tool states its own limits in output; (3) **it must CHECK the eight-route assumption, not assume it — a probe whose soundness rests on an unenforced property is failure shape 1 waiting to happen** | `pending` | **stands; A to build** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -17052,3 +17054,130 @@ target.**
 **One state note, checked rather than assumed:** the stamp on main now reads `569237d4…`
 where it read `b7cb8568…` before #160. **#160 changed `INPUTS`, so the computed hash
 moved and the file was re-stamped. Consistent, not an anomaly.**
+
+---
+
+### 1 Sep 02:1xZ — RULING R118–R119: byte-exact assertions without a `.gitattributes`, and the probe that answers a caveat with no exit
+
+#### R118 — `check.py` tells a Windows contributor not to commit correct work
+
+**A 13-agent verification of the merged tree returned CLEAN on every assertion's
+CONTENT and found one thing neither A nor I had: the new `bytes` assertion is
+newline-sensitive and the repository does not declare its line endings.**
+
+**Verified here independently:**
+
+```
+.gitattributes on origin/main:     ABSENT
+core.autocrlf (default clone):     true
+public/data/zones.v1.json    blob 16282   worktree 16742   (+460 CR, one per line)
+public/data/items.v1.json    blob  9797   worktree 10084   (+287)
+public/data/index.json records:    16282, 9797, 128324, 243228   <- the BLOB sizes
+scripts/check.py:991               _size = os.path.getsize(_p)   <- still live after #160
+```
+
+> **RULING R118: on any Windows checkout with default settings, `check.py` fails all
+> four dataset byte assertions against CORRECT content** — and then prints *"Do not
+> commit until these are fixed."* **It actively instructs a Windows contributor not to
+> commit correct work.**
+
+**AND THE FAILURE SIGNATURE IS THE WORST PART.** The **hashes stay clean**, because
+`json.load` discards whitespace before `check.py` re-serialises it — so **only `bytes`
+fails.** **Four bytes-only errors with every hash green reads like data corruption and is
+line endings.**
+
+**Not an outage:** the only automated runner is
+`.github/workflows/survey-refresh.yml:23`, `runs-on: ubuntu-latest`, whose checkout is
+LF. **CI is green and the published site is unaffected.** **It is a live trap on the
+machine the owner uses, and on A's.**
+
+> **THIS IS THE SAME ROOT CAUSE AS R117, one step earlier.** A fixed the WRITE side —
+> `stamp.py` now writes `newline="\n"`. **Nothing fixes the CHECKOUT side.** **A
+> repository that has begun making byte-exact assertions must declare its line
+> endings**, and this one added the assertions in #159 without adding the declaration.
+> **One file fixes it.**
+
+**AND I BRUSHED AGAINST IT AND FILED IT AS MINE.** I set `core.autocrlf=false` in my
+scratch clone to get a clean run and recorded that as an instrument error of my own in
+R115. **It was that — and it was also a real property of the check, which I did not
+pursue because I had routed around it.** **Routing around an obstacle is how you stop
+seeing it.**
+
+#### The verification's own discipline, worth keeping
+
+**30 concrete assertion instances evaluated against main's canonical blobs — 4 datasets ×
+3 assertions, 6 media × 2, 6 existence checks, plus the stamp over 104 input files. ALL
+30 PASS.** **Denominators stated and closed:** `git ls-tree` holds exactly 4 `.v1.json`
+files and `index.json` lists exactly 4; 6 media files and 6 manifest entries.
+
+**And a matched pair on the stamp that is better than anything I ran:**
+
+> **Recomputing `stamp.fingerprint()` over main's inputs with the NEW `INPUTS` (104
+> files) reproduced `b7cb8568…` exactly; the SAME function over the SAME tree with the
+> OLD pre-#159 `INPUTS` (102 files) reproduced `de6ffd62`'s `b9c63731…` exactly.**
+> **The instrument returns two different answers on one tree and matches the committed
+> stamp for each** — sensitivity and correctness in a single measurement.
+
+**Limits it stated rather than hid:** it did not execute `check.py` end-to-end, so it
+speaks only to #159's additions and not to the ~50 pre-existing checks; it did not run
+`gate_selftest`; the two served-app hash checks predate #159 and were out of scope.
+
+#### R119 — the probe lands, and it must check its own assumption
+
+**A answered the question `inputscover` ships permanently open, and did it by building an
+instrument that FAILS DIFFERENTLY rather than grepping harder.**
+
+> **A tried grepping first and reports it was WORTHLESS:** *"it missed `_media/`
+> entirely, because `media.py` assigns `SRC = '_media'` and joins the VARIABLE. My static
+> method had the same failure mode one level up. **Grepping harder cannot find a path
+> that does not exist until runtime.**"*
+
+**A `sitecustomize` on `PYTHONPATH` patches `builtins.open` in every Python process the
+build starts and records every path opened for reading. Against a real build:**
+
+```
+152  distinct paths opened for reading
+109  of them build inputs (excluding public/, state/, __pycache__)
+112  paths fingerprinted by stamp.py
+
+EVERY BUILD INPUT ACTUALLY READ IS FINGERPRINTED.
+```
+
+**A checked the instrument before believing it** — *"a probe that sees nothing and a probe
+that finds nothing read identically"* — grepping all eight alternate read routes for zero
+uses. **I re-ran that check independently: `pathlib`, `io.open`, `os.open`, `read_text`,
+`read_bytes`, `shutil.copy`, `np.load`, `.open()` — all ZERO, with `open(` as the positive
+control returning hits.** **And A ran `media.py` separately because it is hand-run and
+never in `build.sh`: 6 files, all fingerprinted, tree clean.**
+
+> **RULING R119: LAND IT, as a hand-run script, under three conditions.**
+>
+> **The decisive argument is A's own: `inputscover` prints "52 dynamic site(s) not
+> visible to this check" on every run, and a future reader has no way to answer it.**
+> **R111 established that a stated limit is a MAP. A map with no way to travel it is a
+> permanent shrug**, and this is the only instrument that can answer the question the
+> other one raises.
+
+**CONDITION 1 — the caveat must NAME its exit.** Verified: `inputscover.py:128` and `:138`
+print the count and point at nothing. **The output line names the script that answers it.
+That is one string and it is the entire justification for landing the tool.**
+
+**CONDITION 2 — it states its own limits in its output**, as `inputscover` does: **one build
+observed, so a branch not taken read nothing**; `EQLS_SKIP_APPS` was set so the copiers did
+not read the sibling repos; `geometry.py`, `ogcards.py` and `fetchfonts.py` did not run.
+**A stated all three to me; they belong in the tool, not in a message.**
+
+**CONDITION 3, WHICH A DID NOT RAISE AND IS THE ONE THAT MATTERS.** **The probe's validity
+rests entirely on "zero uses of the eight alternate read routes" — a fact A established by
+hand, once, tonight.** **The moment someone writes `Path(x).read_text()` the probe silently
+under-reports and still prints a confident total.**
+
+> **That check goes INSIDE the tool.** **A probe whose soundness depends on an unenforced
+> property of the code it observes is failure shape 1 waiting to happen — the exact fault
+> the tool exists to hunt.** **It fails, or refuses to report, if a generator uses a route
+> it cannot see.**
+
+**On invasiveness:** `sitecustomize` sounds worse than it is — **it is hand-run, the
+`PYTHONPATH` is set deliberately for one invocation, and it is never in `build.sh`.** **On
+being a fourth tool: it has a NAMED TRIGGER — run it when someone adds a generator — and a
+tool with a trigger condition is not the same object as a tool that merely sits.**
