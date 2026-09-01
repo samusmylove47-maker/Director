@@ -11924,6 +11924,8 @@ prefix. This closes the other sixteen.**
 | R136 | **R133 AMENDED — there is nothing to merge into. `EQL50ups` has exactly ONE remote head, the working branch, and `main` DOES NOT EXIST (0 heads), so `deploy.yml`'s second trigger is dead text.** The only publish path is a push to the branch B works on. **"The owner merges; merging publishes" has no attachment point here — not a gap in coverage, an absent object.** Every other peer has a durable branch no session pushes to (`sky-ledger` 2, `EQLSAuras` 2, `EQLSLockouts` 7). **B has been operating correctly inside a structure nobody chose.** Also found: `sky-ledger`'s durable branch is `master`, not `main` | `pending` | **owner's; needs a branch first** |
 | R137 | **A added a THIRD arm I did not ask for and it is the one that matters.** The route scan carries its own positive control — counts `open(` sites, requires non-zero — because *"a scanner that finds none of the eight forbidden routes BECAUSE ITS MATCHING IS BROKEN is indistinguishable from a clean repository."* Three arms: clean → exit 0; a generator importing `pathlib` → exit 1 refusing; **its own control neutered → exit 2 refusing.** The control lesson applied INSIDE the instrument, one level deeper than the ruling asked. **And A nearly banked a vacuous test: *"the experiment's success and its non-existence render identically"*** | `pending` | **#164 with the owner** |
 | R138 | **R65's block is LIFTED — it was on the WORKER, not the finding.** A is no longer stood down and reports no remaining falsifier-bearing item. **Verified still live on main before dispatching: `build13.py:248-262` makes three claims under one T1 entry that speaks only to the level-11 lock, `settle='Settled.'`, shipping in `still-true.html` (33,899 B, 6 T1 badges).** Claims 1 and 2 keep T1; the trio-level claim gets its own tier or comes out. **R82 may dissolve rather than downgrade it — the honest row may be "not recorded"** | `pending` | **dispatched to A as a PR** |
+| R139 | **#163 and #164 merged 23:15; merged main is GREEN on a default Windows clone** (`autocrlf=true`, `1142939b`, tree clean, exit 0). **R119 conditions 1 and 2 verified IN PRODUCTION OUTPUT** — the caveat now names its exit (`run scripts/inputprobe.py to see those`) and the probe prints its own limits every run. Probe result on main: **152 paths opened, 109 build inputs, 112 fingerprinted, every observed input covered** | `pending` | **stands; verified in the broken config** |
+| R140 | **All three refusal arms verified — and I hit A's vacuous-test trap THREE TIMES proving it.** clean → exit 0; a generator importing `pathlib` → **exit 1**; **its own control neutered → exit 2**. My first two mutations of `inputprobe.py:71` SILENTLY DID NOT APPLY and the probe printed exit 0 both times — **identical to a passing control. I would have filed a MISS against the arm A added of its own initiative, because my test did not run.** **Adopted for everyone, mine first: a mutation is not applied until its new state is READ BACK. An unapplied mutation and a caught one are the same output** | `pending` | **stands; R94's readback moved to experiments** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -17916,3 +17918,97 @@ and the owner's: one read of the Producer's Letter of 8 July 2026.**
 
 **This is a PUBLISHED PAGE and merging is the publish, so it goes as a PR. Four of A's now
 sit with the owner: #163, #164, and this.**
+
+---
+
+### 1 Sep 03:3xZ — RULING R139–R140: three refusal arms verified, and I hit A's vacuous-test trap three times proving it
+
+#### R139 — #163 and #164 are live, and merged main is green on a default Windows clone
+
+**Both merged 23:15. Verified on a fresh clone at `core.autocrlf=true` — the configuration
+that broke everything two hours ago — at `1142939b`, tree clean:**
+
+```
+build inputs: 89 literal read site(s) checked, 52 dynamic site(s) not visible
+              to this check (run scripts/inputprobe.py to see those)
+checked 716 pages
+
+All checks passed.                                            exit 0
+```
+
+> **R119 condition 1 is verified IN PRODUCTION OUTPUT: the caveat now names its exit.**
+> **Condition 2 likewise — `inputprobe.py` prints its own limits every run** (the
+> hand-run generators, what each reads, and that `media.py` reads `_media/` which IS
+> covered).
+
+**And the probe's own result on main: 152 paths opened, 109 build inputs, 112
+fingerprinted — *"Every build input observed on this run is fingerprinted."***
+
+#### R140 — THE THREE ARMS, and the trap I fell into three times proving them
+
+**Condition 3, measured rather than read:**
+
+| arm | result |
+|---|---|
+| clean tree | **exit 0**, reports coverage |
+| a generator importing `pathlib` | **exit 1** — *"Any total printed now would be computed over an incomplete observation and would look exactly like a clean result."* |
+| **its own control regex neutered** | **exit 2** — *"REFUSING TO REPORT: the route scan found no `open(` anywhere in `_build/*.py`, so its own matching is broken and its silence about the other eight routes means nothing."* |
+| restored (negative control) | **exit 0**, tree clean |
+
+> **The third arm is the one A added beyond my ruling, and it is the one I nearly reported
+> as a MISS.**
+
+**MY FIRST TWO ATTEMPTS TO NEUTER THE CONTROL DID NOT HAPPEN.** A regex substitution
+guessed at the literal and matched nothing; a second, targeting
+`CONTROL = ("open(", r"\bopen\s*\(")` at `inputprobe.py:71`, reported **`replaced:
+False`**. **Both times the probe printed exit 0 — identical to a passing control.**
+
+> **RULING R140: I would have filed ARM 2 as a failure of A's new instrument, on the
+> exact arm A added of its own initiative, because MY TEST DID NOT RUN.** **A named this
+> class an hour earlier and I walked into it three times inside one verification:** *"the
+> experiment's success and its non-existence render identically."*
+
+**What broke the loop is the step A used and I adopted mid-run:** replace **line-wise by
+index**, then **print the mutated line and confirm it changed BEFORE believing the exit
+code.**
+
+```
+line 71 was:  CONTROL = ("open(", r"\bopen\s*\(")
+line 71 now:  CONTROL = ("open(", "ZZZNEVERMATCHZZZ")
+VERIFY the mutation landed:  CONTROL = ("open(", "ZZZNEVERMATCHZZZ")
+-> exit 2
+```
+
+> **Adopted as a standing step for every mutation anyone runs, mine first: a mutation is
+> not applied until its new state is READ BACK. An unapplied mutation and a caught one
+> are the same output.** **This is R94's readback rule moved from commit bodies to
+> experiments, and it is the same rule.**
+
+**A's message said it had to redo its own attempt line-wise for the identical reason.**
+**Two sessions, same hour, same trap, same escape — which is what makes it a class rather
+than an anecdote.**
+
+#### And my own orphaned process corrupted the tree my next measurement depended on
+
+**My first attempt to background the #163 verification launched `gate_selftest` with `&`
+and let the shell exit. The child was orphaned, kept running, and mutated
+`state/last-build.json` AFTER my `git checkout -- .` reported the tree clean.**
+
+**The next run refused to proceed, and TWO guards from tonight's own rulings caught it:**
+
+```
+The tree does not pass before mutation. Fix that first — the self-test cannot
+tell a real failure from a caught one.
+  build freshness could not be verified: KeyError: 'inputs'. The check did not
+  fail — it could not run, which is worse.
+```
+
+> **The second line is R113, which I ruled two hours ago and A shipped as #161.** **It was
+> a `warn()` until tonight; had it stayed one, my corrupted scratch tree would have
+> reported green and I would have measured #163 against a lie.** **The first line is
+> `gate_selftest`'s own precondition control, firing on the Director for the second time
+> tonight.**
+
+**Recorded because the ruling paid for itself against its own author within two hours,
+and because a harness that mutates a tree must not be launched in a way that can outlive
+the shell that restores it.**
