@@ -232,3 +232,30 @@ Compared current remote heads against the 31 Aug 23:59Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 01:24Z
+
+Compared current remote heads against the 1 Sep 00:2xZ sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `de6ffd62` → `4df8705d` ("Merge pull request #159
+  from samusmylove47-maker/claude/hash-sensitivity"), authored
+  2026-08-31T21:13:45-04:00. Previously unchanged across every prior sweep
+  in this log — first movement on `main` recorded here.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `14176404` → `fde93fcd`
+  ("TO DIRECTOR: a player could not tell =Upgrades they were a Gnome, and
+  we recommended them Ogre gear"), authored 2026-09-01T01:20:45+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `58b97adf` →
+  `04e4f81a` ("TO DIRECTOR: B re-pinned, so my own REPIN NEEDED line
+  became a false claim and is gone"), authored 2026-09-01T01:15:50+00:00.
+- `EQLSLockouts` `session-d/raid-rows`: `1c12af29` → `bd7c265e` ("TO
+  DIRECTOR: two provenance blind spots — observed-empty, and a verdict
+  with no grounds"), authored 2026-08-31T20:51:23-04:00.
+- `EQLSAuras` `main`: `548fd911` → `c5c2c001` ("TO DIRECTOR: day padding
+  MEASURED - zero-padded, E refuted and unblocked; plus
+  UNREPORTED-FINDINGS.md"), authored 2026-08-31T20:33:20-04:00.
+
+**Unchanged:** none — all five repos moved since the last sweep.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
