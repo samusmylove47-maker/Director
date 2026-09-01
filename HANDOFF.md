@@ -11890,6 +11890,10 @@ prefix. This closes the other sixteen.**
 | R102 | **R95 AMENDED — "93 unmeasured" is honest and is NOT a debt.** D: most rulings name PRINCIPLES and cannot be tested; a future session would reasonably read the number as 93 outstanding items. **The measured quantity is: of rulings naming a SPECIFIC change that must not happen, one is known enforced and the rest uncounted — and that set is small.** Second time tonight D bounded a rule I published from D's own sentence, and both times it was right | `pending` | **scope corrected; R95's distinction stands** |
 | R103 | **The TRANSPORT class, named: authoring succeeded, storage succeeded, the layer between them edited the content.** Four instances tonight — a double-quoted `-m` eating a sentence's subject, a Python-written JS anchor eating its own match three times, an unquoted heredoc eating three words, a chain whose later steps reported success over a failed edit. **The fix is never "be careful", it is to read back what landed.** R84's column separation is why none of the NOANCHORs read as a finding | `pending` | **stands; unifies the R70 family** |
 | R104 | **"I looked and the week is empty" and "I have not looked" rendered identically.** Forcing `observed` on a state that has seen nothing left 126 green — a live tailer started mid-session would show an empty grid as **25 confirmed-open cells**. And emptying a cell's `why` also left 126 green: **a cell reading `open` with no reason is this tool doing the thing it exists to prevent.** Both now asserted. Surface **71 of 128**, from 35 of 122 | `pending` | **stands** |
+| R105 | **A share divided across a POPULATION BOUNDARY: `damage_dealt` is window-scoped, `spells_landed` is all-lines, and B's contract named that exact division.** E measured **202%** on the build log and **324% / 34% / 0%** on three others — four logs are what proved it not a subtractable constant. 1.3.0 makes the populations **machine-readable** (`keys_by_population`), so B's `POPULATION_OF` asserts against E's real bundle. **A caveat became a guard.** *"An engine that will not say which population a number is over is one this app declines to divide by"* | `pending` | **stands; verified in the bundle** |
+| R106 | **A fixture nothing loaded, versioned in its own filename — a DOCUMENT PRETENDING TO BE A CHECK.** Zero readers, confirmed with a different instrument than B's grep; the name went stale the instant the pin moved. Same class as a prose ruling and a convention: reads as verification, enforces nothing. **Second instance same repo: `bis-contract.ts:305` told E to assert a contract version `manifest.json` never carried** — one definition, zero readers. **Adopted: a version says what changed on purpose; a hash says whether anything changed at all** | `pending` | **stands; published path moved, routed to E** |
+| R107 | **Four of six content hashes in `eql-source` were BLIND** — site.css, fonts.css, the datasets and media all returned exit 0 when content changed and the recorded value did not. The two served apps caught it, which is what makes the rest indefensible. **A's dataset case is the canonical statement of R93: `hash` was a REQUIRED field, so DROPPING it failed the build and carrying a WRONG one passed — on the value the published page tells strangers to watch. Presence enforced, truth not** | `pending` | **stands; PR #159 with the owner** |
+| R108 | **R93 SPLIT: "an instrument that cannot fail" and "an instrument that works perfectly, aimed away from the thing" are different faults and I had them collapsed.** `_asset_v` is a correct sha1 that was never broken; `stamp.py`'s INPUTS simply did not cover `site.css` — the detector was alive and specifically blind to the one file whose purpose is cache invalidation, **and that already shipped once as unstyled black shapes over a bare headline.** R93 wants a matched pair; R108 wants a coverage audit of the inputs. **RULED: the `bytes` field FAILS, not warns** | `pending` | **stands; gate_selftest 38→42** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -16506,3 +16510,137 @@ needs the same task granted twice.** **R84 paying for itself a second time.**
 > **D sharpens the reason, and it is better than mine:** *"asking for a denominator did
 > not just change what got built, **it changed what I was willing to claim** — I would
 > have reported '13 of 13 caught' as a clean suite and stopped."*
+
+---
+
+### 1 Sep 01:1xZ — RULING R105–R108: a 202% division across a population boundary, and four of six hashes were blind
+
+#### R105 — a share divided by the wrong population, and four logs are what made it a defect
+
+**B's published fixture called `measured.damage_dealt` "the denominator for
+share-of-output". It is scoped to the ENGAGED WINDOW. `measured.spells_landed` is
+counted over EVERY LINE.**
+
+> **E measured it: 202% on the log the engine was built against, and 324% / 34% / 0% on
+> three others.** **Four numbers across four logs is what proves it is not a constant
+> anyone could subtract out** — a single 202% would have read as a scaling bug.
+
+**Verified in the shipped 1.3.0 bundle rather than in either session's description:**
+
+```
+bundle/eqls-gap-engine.693ea8ad.js:62
+  in_window: ["damage_dealt", "dps", "engaged_seconds", "engagements"]
+  all_lines: ["crit_rate", "hits_counted", "killing_blows_excluded_from_rates",
+              "months_seen", "resists", "spells_landed", "stance_inferred"]
+  keys_by_population: POPULATIONS
+```
+
+> **RULING R105: the fix is that the populations are now MACHINE-READABLE rather than
+> documented.** B's `POPULATION_OF` is asserted **against E's real bundle via its own
+> `keys_by_population`** — so if E re-files either key, **B's test fails rather than
+> B's percentages going quietly wrong.** **A caveat became a guard.**
+
+**B's sentence, adopted: *"an engine that will not say which population a number is over
+is one this app declines to divide by."*** And the reason `window` is type-checked at
+the seam as hard as `months_seen`: **the failure it prevents is SILENT — a wrong
+denominator returns a plausible percentage rather than throwing.**
+
+#### R106 — a fixture nothing loaded, versioned in its own filename
+
+> **`grep` for `gap-contract` across ts/tsx/mjs returned NOTHING. Nothing loaded it.**
+> **It carried its version in its FILENAME, so the name went stale the instant the pin
+> moved.**
+
+**Verified with a different instrument than B's** — any `import`, `require` or
+`readFileSync` of the JSON: **before B's change the only reference was the file
+itself.**
+
+> **RULING R106: a fixture nothing loads is a DOCUMENT PRETENDING TO BE A CHECK**, and
+> it is the same class as R95's prose ruling and R75's convention. **It reads as
+> verification in a review and enforces nothing.** **`git mv` to `gap-contract.json` —
+> a published path moved, routed to E.**
+
+**AND THE SECOND INSTANCE, in the same repo, found the same way:** `bis-contract.ts:305`
+instructs **E** to assert on a contract version before reading a payload — **and
+`manifest.json` never carried it.** `grep -rn BIS_CONTRACT_VERSION` → **one definition,
+zero readers.**
+
+> **An assertion the contract INSTRUCTED another session to make was one that session
+> had no way to make.** Fixed: the publisher now refuses a manifest that cannot name its
+> contract, recording **`contractVersion 1.0.0` AND `contractSha256_8 957fad1a`.**
+
+**B's formulation, adopted, and it is earned rather than borrowed:**
+
+> **"A version says what changed on purpose; a hash says whether anything changed at
+> all."** **Two byte-sets shipped upstream as 1.2.0 in one night — that is why both are
+> recorded.**
+
+#### R107 — four of six content hashes were blind, and the dataset one is the canonical R93
+
+**A audited every hashed thing in `eql-source` by changing the CONTENT and leaving the
+recorded value alone:**
+
+```
+served sky-ledger app     CAUGHT
+served lockouts app       CAUGHT
+public/assets/site.css    MISSED    exit 0
+public/assets/fonts.css   MISSED    exit 0
+public/data/*.vN.json     MISSED    exit 0
+public/assets/media/*     MISSED    exit 0
+```
+
+> **The two served apps are exemplary, and that is what makes the other four
+> indefensible** — `check.py` already recomputes an app hash from its bytes. **Four
+> manifests never got the same treatment.**
+
+**A's dataset finding is the cleanest statement of R93 produced by anyone and is
+recorded as canonical, in A's words:**
+
+> ***`hash` was already a REQUIRED top-level field. So a dataset that DROPPED it failed
+> the build, and a dataset carrying a WRONG one passed*** — **on the value our own
+> published page tells strangers to "watch if you cache". Presence enforced, truth not.**
+> **Sitting inside the contract check.**
+
+#### R108 — a sensitive hash aimed away from its input is a DIFFERENT fault, and I had them collapsed
+
+**A: the stylesheet case is not literal R93 and is worse.** `_asset_v` **is** sensitive —
+sha1 of the file's bytes, **never broken.** **`stamp.py`'s INPUTS did not cover
+`site.css`.**
+
+```
+edit site.css, no rebuild          exit 0,  "All checks passed"
+edit a covered input, no rebuild   exit 1,  "public/ is stale"
+```
+
+> **RULING R108: R93 is "an instrument that cannot fail." This is "an instrument that
+> works perfectly, aimed away from the thing."** **They need different fixes — R93 wants
+> a matched pair; R108 wants a coverage audit of the INPUTS — and I had them
+> collapsed into one ruling.**
+>
+> **The detector was alive and SPECIFICALLY blind, to the one file whose entire purpose
+> is cache invalidation.** **And it already shipped once**: *"unstyled black shapes over
+> a bare headline, found only by inspecting stylesheets one at a time."* **`_asset_v`
+> exists because of that incident, and the watcher was never pointed at it.**
+
+**Fixed with a matched pair each, `gate_selftest` 38 → 42.** **`site.css` and `fonts.css`
+get SEPARATE cases** — one case covering both would pass on either, which is the vacuity
+being audited for.
+
+**RULED, on A's flagged question:** the `bytes` field **FAILS, not warns.** *A `bytes`
+that can be wrong is the `hash` fault one field over; shipping the fix for
+presence-without-truth as a warning reproduces it in the observer.* **A's tree is green
+at 42, so it blocks no publish tonight.**
+
+**A left the two served apps out of `gate_selftest` deliberately** — the harness restores
+through a utf-8 round-trip that corrupted the Sky Ledger once — **proved them by hand and
+said so.** **Correct: a case that damages a binary is worse than a stated manual proof.**
+
+**And the bug A introduced and caught is worth more than the four it fixed:** `hashlib`
+imported inside `if _sl:` and `if _lk:`, used unconditionally by the new checks, **would
+have raised NameError at module scope on an unreadable manifest and reported NOTHING** —
+the same shape as `check.py:151` calling an undefined `page_key()`. **An instrument that
+dies silently when its input is missing.**
+
+**R103 caught A mid-edit within an hour of being written**, on the exact trap `CLAUDE.md`
+documents. **A fixed it by removing the NEED for the escape rather than escaping harder,
+and read the file back with `sed` rather than trusting the write.**
