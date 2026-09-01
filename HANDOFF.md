@@ -11981,6 +11981,11 @@ prefix. This closes the other sixteen.**
 | R193 | **The reader's own recorded state changed silently between visits.** `GearSet.withheld` — written when the importer meets an item no catalogue can score, the **Shadow Rage Helm** — was dropped on every page reload because `sanitizeSet` rebuilt the set field by field. The slot reverted to EMPTY and Upgrades ranked it as a FREE GAIN. **R98's fabricated gain arriving through PERSISTENCE: B fixed the computation hours ago and the VALUE did not survive the round-trip.** Fourth transport carrier after bash, `/tmp` and me. **Share-link half verified unfixed (`codec.ts`: 0 `withheld` against 29 `slot`) and deliberately deferred.** The triggering item is the one on the owner's capture list | `pending` | **stands** |
 | R194 | **C named the class all of tonight's faults belong to: "a true-looking output that is a statement about the INSTRUMENT rather than about the world."** Three sessions, three unrelated engines, one night, none looking for it — D's dedupe counter, E's "no outgoing damage lines matched", C's mob that never attacked anybody. **Every instance parsed cleanly, counted plausibly and raised no error.** And C ranked what actually caught them *"by what worked rather than by what sounds rigorous"*: an independent instrument that can disagree; a re-implementation forced by a different constraint; making the instrument state its own scope; asserting a mutation applied. **Not one item is "be more careful"** | `pending` | **stands; from the R149 notes** |
 | R195 | **C turned the finding on its own product's foundation.** Every reversal tonight was a mechanism claim and no measurement was overturned — **which puts the EQEmu hate model, a mechanism claim about a DIFFERENT GAME'S SERVER, in the loosely-held column, including the threat estimate resting on it.** **And it survives D's bound rather than needing the unbounded ratio**: the rule is that a measurement names its surface and a mechanism usually cannot, and the EQEmu model cannot — it describes EQEmu, EQL launched 2026-07-28, and C's own header already said nobody can say whether EQL follows it | `pending` | **stands; bounded form** |
+| R196 | **R82 ANSWERED — this game does not gate equipping by level at all.** The owner, the only person here who can play it: requirements exist on **click and proc effects only**, because those carry high-level spells that would be game-breaking early. **B's independent finding — its one Tier M "Required Level" sighting was on a click effect — was not looking for this claim and could not have been tuned toward it (R151's shape), which is why no screenshot is needed to act.** Stated at width: owner's direct observation plus a corpus measurement made for another purpose, **not a capture.** Settles EQUIPPING (`levelCheck` answers a question the game does not ask); **does NOT settle the trio-level question** | `pending` | **owner-sourced** |
+| R197 | **The hosting direction is the owner's and the branch question was the wrong question.** Not a publish gate in B's repo — **B's repo stops being a publishing surface, and ships a MODULE into the site A builds.** The owner has held this plan for a while and told B integration was the goal before B started. **NOT for tomorrow: a colossal rebuild and a next-Tuesday scenario in the owner's own words.** Recorded so nobody creates a `main` the plan does not want, and so B's work is understood as becoming a module rather than being discarded | `pending` | **owner's; next Tuesday** |
+| R198 | **I have been writing to the wrong reader all night.** My reports to the owner carry commit hashes, file paths, ruling numbers and internal shorthand — **the register A, B, C, D and E want, and noise to the person the report is for.** The owner is new to all of this, learned it in two months of interacting with Claude, and is fluent in creativity rather than in engineering. **The transport class with the READER as the variable: true at authoring, unusable on arrival, and nothing in its form said so.** Every other instance tonight was caught by a second instrument; **this one was caught by the reader telling me** | `pending` | **mine; Sage consulted at owner's request** |
+| R199 | **A handover in a pull request is a finding in a transcript.** CLAUDE.md sends a session to `HANDOFF.md` then `docs/BACKLOG.md` — **neither is a PR**, so A's sitemap handover sat where nobody would look. A caught it *"twenty minutes after you and I agreed that was the problem"*, moved it to the backlog with acceptance criteria, **misfiled it above the P0 on the first attempt**, and caught that by reading the heading list back. **It added no checker: "a checker for prose ordering is a worse idea than the mistake it prevents."** The entry carries the TRAP in the fix — a per-page mtime is the build date with extra steps | `pending` | **stands** |
+| R200 | **The staleness A found in its HANDOFF is in mine, and I put it there.** `eql-source/HANDOFF.md` still says *"this describes commit `5ee3cd3b`"* — verified an ancestor of main with **144 commits since**. **And this file's own header still reads "Handoff — 18 August 2026" on a record whose last entry is 1 September and which holds 200 rulings** — preserved by my byte-identical migration, correct as a migration and wrong as a title from the first append. **Named, not fixed: the date is unambiguous, what the file should now be CALLED is a small design question, and I have spent the night telling sessions not to open those at 05:20** | `pending` | **mine; named for the next reader** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19837,3 +19842,148 @@ to E's own 1.4.0 recovered from git at `bec765c2`**; vendored contract asserting
 
 **R163's parity fix landed at `bec765c2` and E verified it in the tree before answering
 rather than saying so from memory.**
+
+---
+
+### 1 Sep 05:1xZ — RULING R196–R198: the owner answers R82, sets the hosting direction, and tells me I have been writing to the wrong reader
+
+#### R196 — R82 is ANSWERED: this game does not gate equipping by level at all
+
+**From the owner, who is the only person in this project who can play the game:**
+
+> ***"The game does not gate equipping by level at all. The only requirements are on click
+> effects and proc effects, because those are usually high level spells that would have
+> been considered game-breaking at low levels."***
+
+> **RULING R196: R82 was registered as a POSSIBLE absence. It is now answered, and the
+> answer is the absence.** **B reported that its only Tier M sighting of "Required Level"
+> was on a CLICK EFFECT — and the owner's explanation says that is not a sampling accident
+> but the whole rule: the requirement exists where a high-level spell rides on an item, and
+> nowhere else.**
+
+**TWO INDEPENDENT SOURCES AGREEING, AND THE SECOND WAS NOT BUILT TO TEST THE FIRST.**
+**B's measurement fell out of a catalogue audit; it was not looking for the owner's claim
+and could not have been tuned toward it.** **That is R151's shape and it is why I am
+accepting this without the screenshots.**
+
+**STATED AT ITS ACTUAL WIDTH: this is the owner's direct observation, corroborated by a
+corpus measurement made for another purpose. It is not a capture.** **A screenshot would
+make it citable to a reader who does not know the owner, and the owner has offered six
+tomorrow morning if needed.** **My judgement: not needed for us to act on; needed only if
+we publish the claim as sourced.**
+
+**WHAT IT SETTLES AND WHAT IT DOES NOT.** **It settles EQUIPPING — B's `levelCheck` is
+answering a question the game does not ask, and `item.rl` is not a wear gate.** **It does
+NOT settle the TRIO-LEVEL question** — what level the active trio runs at, for spell
+access or caps, is a different claim and A's `open` / "Not recorded" entry on
+`learn/still-true.html` stands unchanged.
+
+#### R197 — the hosting direction is the owner's and it is not a branch decision
+
+**I had been surfacing "B's repo has no `main`, so there is no publish gate" as a decision
+about creating a branch. The owner has had a different answer for a while and it is
+better:**
+
+> ***"Our site's EQL50ups points to a page on our github, rather than on our actual site.
+> This is not professional… everything on the website funneled into Session A to be
+> actually built and deployed by that session. The other sessions can build their tools as
+> MODULES and ship them to Session A."***
+
+> **RULING R197: the branch question is the wrong question and I was asking it.** **The
+> target is not a publish gate in B's repository — it is that B's repository stops being a
+> publishing surface at all, and ships a module into the site A builds.**
+>
+> **NOT FOR TOMORROW. The owner's own words: a complete rebuild would be a colossal
+> undertaking, and it is a NEXT TUESDAY scenario.** **B built what exists after being told
+> the plan was integration, and it worked hard on it; that work is not wasted by becoming
+> a module.**
+
+**Recorded so the next Director does not re-derive it, and so B is not asked to create a
+`main` that the plan does not want.**
+
+#### R198 — I have been writing to the wrong reader all night
+
+**The owner, on my description of the lockouts publish — three hashes, a sibling repo, byte
+counts:**
+
+> ***"I do not understand this the way you described it. It is too technical… I am
+> extremely new to all of this. Everything that I know and everything that I have done has
+> been learned by interacting with you in the last couple of months. I am fluent in
+> creativity and appreciation of intelligence."***
+
+> **RULING R198: correct, and it is a fault of mine running the whole night.** **Reading
+> back, my reports to the owner carry commit hashes, file paths, ruling numbers and
+> internal shorthand — the register I use with A, B, C, D and E, who want exactly that.**
+> **The owner wants to know what a visitor to the site will see and which decision is
+> theirs. Those are different messages and I have been sending one.**
+>
+> **This is the transport class with the READER as the variable rather than the channel:
+> the content was true at authoring and unusable on arrival, and nothing in its form said
+> so.** **Every other instance tonight was caught by a second instrument. This one was
+> caught by the reader telling me.**
+
+**The owner has asked me to ask the Sage — the previous Director — to tell me about them.
+Sent, and framed as a question about the person rather than about the project.**
+
+**And the immediate fix does not wait on that answer: the lockouts publish, re-stated
+without a single hash, is in the same message as this ruling.**
+
+#### R199 — a handover in a pull request is a finding in a transcript
+
+**A moved the sitemap handover out of a PR body and into the backlog, and named why:**
+
+> ***"CLAUDE.md says a session reads `HANDOFF.md` then `docs/BACKLOG.md` to find out what
+> to do, and NEITHER OF THOSE IS A PULL REQUEST. So the handover was sitting somewhere the
+> next session has no reason to look — which is the same fault as a finding that lives only
+> in a transcript, and I made it TWENTY MINUTES after you and I agreed that was the
+> problem."***
+
+> **RULING R199: the class is durable and the instance rate is what makes it worth
+> recording.** **Knowing a rule an hour ago does not stop you breaking it, and A caught its
+> own instance by re-reading rather than by remembering.** **A backlog entry with
+> acceptance criteria; not `HANDOFF.md`, because that is the Director exchange and a
+> discrete job with an unmade decision belongs in the prioritised list.**
+
+**AND A MISFILED IT ON THE FIRST ATTEMPT** — above the P0, labelled P1, in a document whose
+first line is *"Ordered by value per unit of effort."* **Caught by reading the heading list
+back.** **And A deliberately added no checker: *"a checker for prose ordering is a worse
+idea than the mistake it prevents."*** **Correct — R143's discipline used to decline a
+guard whose cost exceeds its catch.**
+
+**THE ENTRY CARRIES THE TRAP IN THE FIX RATHER THAN JUST THE FIX:** a per-page filesystem
+mtime is **not** an honest modification date here, because every build rewrites every page
+— **so the mtime is the build date again with extra steps.** An honest per-page date
+probably has to come from git history, and **that is the decision to settle before writing
+code.** **Acceptance criteria ask for a matched pair: one page changed, one not, carrying
+different dates.**
+
+#### R200 — the same staleness A found in its HANDOFF is in mine, and I put it there
+
+**A noted, without claiming it as its own to fix: `eql-source/HANDOFF.md` still declares
+*"This describes commit `5ee3cd3b`"* and tells a reader to diff against it.** **Verified:
+`5ee3cd3b` is an ancestor of main with 144 COMMITS SINCE.** **Behind rather than wrong,
+which is the harder kind to notice.**
+
+**AND THE SAME HEADER IS AT THE TOP OF THIS FILE.** `# Handoff — 18 August 2026` — **on a
+record whose last entry is 1 September and which now holds 200 rulings.** **I migrated it
+byte-identically and preserved the date along with everything else, which was correct as a
+migration and wrong as a title from the moment I began appending to it.**
+
+> **RULING R200: recorded against myself and NOT fixed tonight.** **The unambiguous part is
+> that the date is wrong; the part that needs a decision is what the file should call
+> itself now that it is a Director's record rather than a handoff.** **That is a small
+> design question and I have spent the night telling sessions not to open those at 05:20.**
+> **Named, in the file, so the next reader meets it as a known defect rather than as a
+> date they might trust.**
+
+#### And A's correction to R192, which I am taking
+
+> ***"I would rather it be read as a CAUTION than as a compliment to anyone. The most
+> effective instrument in play tonight was written months ago by someone who is not here,
+> and every one of us walked into it. Whatever ninety rulings are worth, THEY WERE NOT WHAT
+> STOPPED THE FOUR BAD MEASUREMENTS."***
+
+> **Taken.** **I wrote R192 as a closing tribute and A is right that it reads better as a
+> warning: the output of a night's reasoning is not the same thing as the guard that
+> actually caught the errors, and mistaking one for the other is how a project starts
+> valuing its own commentary.**
