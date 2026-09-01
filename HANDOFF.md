@@ -11964,6 +11964,9 @@ prefix. This closes the other sixteen.**
 | R176 | **R167 went 3 for 3 an hour ago and 0 for 5 now, on a family with the same structure — so "is it a sibling family" is NOT the predictor.** Five cell-state mutations, all guarded, at 14 / 16 / 5 / 1 / 2 assertions. Verified: 63 lines added to the harness, **no new tests, no source change — D added mutations, found nothing, and reported it.** **And the MISS confirmed my speculation that the remaining 52 is non-uniform more cheaply than a hit would have.** A failed prediction that identifies its own failure axis beats another hit on the same axis | `pending` | **stands** |
 | R177 | **The real predictor: whether a family's correctness is OBSERVABLE IN ORDINARY OUTPUT.** `dedupeKey` is an internal mechanism — a collision is only visible if you construct two events in one second, which no ordinary fixture does. **The cell states ARE the output**, so every test asserted on them before anyone aimed. **A family whose failure mode needs a constructed input is where guards go missing HOWEVER CAREFULLY THE CODE WAS WRITTEN** — `dedupeKey` was correct at all eight sites and guarded at one. **Sharper than R167 because it says where NOT to look**; supersedes it as the aiming heuristic | `pending` | **adopted; R167 stands as its source** |
 | R178 | **"Thin and known" beats "padded" — R143 used to DECLINE work.** Two guards at 1 and 2 assertions, both on the paths carrying refusals rather than answers, *"which is where this engine's honesty lives."* D named them and refused to reinforce them: *"a guard that exists is not improved by a second guard I cannot show catches anything the first misses."* **And the rate falling to 0 of 5 is the first evidence tonight that a region is GENUINELY WELL COVERED rather than merely unexamined** — until now "not exercised" has meant unknown | `pending` | **stands** |
+| R179 | **`pruneSeen` kept the wrong half and the size check passed throughout.** Keeping the OLDEST half left all 136 tests green — but a replay re-feeds a file's TAIL, so the newest keys are the ones about to be seen again. **`dropped.beyondDedupeHorizon` never fires, because the index is the right SIZE the whole time. It is the wrong CONTENTS.** A check on the wrong PROPERTY of the right OBJECT — same family as a hash test asserting stability rather than sensitivity: both watch a real thing, neither watches what can go wrong | `pending` | **stands; verified at `:1290`** |
+| R180 | **Nothing distinguishes coverage that was LOST from coverage never OBSERVED.** Extending spans only forwards collapsed a 20-minute span to zero width — and **lines are not guaranteed to arrive in order**, since a host that backfills then attaches a live tailer feeds an earlier stamp after a later one. Fails in the SAFE direction, still wrong, and invisible: **`not_looked` means two things and the output does not say which.** **R174's shape inside D's engine, found two hours after E fixed the same shape in its own** | `pending` | **stands** |
+| R181 | **A tidy argument that would have deleted LIVE code.** D's bridge-loop mutation reported INERT and D reasoned the loop unreachable — *"that reasoning was tidy and I nearly filed dead code."* It instrumented a copy and ran the corpus: **749,255 lines, 8 spans pushed, 1 BRIDGE MERGE — live, about once per three-quarters of a million lines.** Recorded as an **UNMEASURED guard, not a blind one** — a third verdict beside caught and blind — with the measurement placed in the harness beside the confusing INERT output. **D's fifth wrong mechanism claim tonight against measurements that have all held** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19312,3 +19315,92 @@ has meant unknown; one region is now known.**
 **Next, on D's own reading of R177: the coverage-span merge and `pruneSeen` — both internal
 mechanisms invisible in ordinary output.** **Correct target, and chosen by the heuristic
 rather than by guessing.**
+
+---
+
+### 1 Sep 04:5xZ — RULING R179–R181: right size wrong contents, coverage that was lost, and a tidy argument that nearly deleted live code
+
+**`46049b54`, 138 green, 61 mutations / 60 caught / 0 blind / 1 inert-and-explained. Both
+targets chosen by R177 rather than guessed, both internal, both invisible in ordinary
+output, BOTH BLIND.**
+
+#### R179 — `pruneSeen` kept the wrong half, and the size check passed throughout
+
+**Slicing the other way — keeping the OLDEST half — left all 136 tests green.** **Verified:
+`lockoutCore.js:1290`, `entries.slice(Math.floor(entries.length / 2))`, which keeps the
+NEWEST half.**
+
+> **The index exists so replaying a log does not double-count, and the keys worth keeping
+> are the RECENT ones** — a replay re-feeds the TAIL of a file, so the newest keys are
+> exactly the ones about to be seen again. **Keep the oldest and recent kills lose
+> protection while ancient ones are guarded against a replay that will never happen.**
+
+> **RULING R179: the headline guarantee fails silently, and `dropped.beyondDedupeHorizon`
+> never fires to say so — because THE INDEX IS THE RIGHT SIZE THE WHOLE TIME. It is the
+> wrong CONTENTS.**
+>
+> **A check on the wrong PROPERTY of the right OBJECT.** **Same family as the content-hash
+> test that asserted stability rather than sensitivity: both watch a real thing, neither
+> watches the thing that can go wrong.**
+
+#### R180 — nothing distinguishes coverage that was LOST from coverage never OBSERVED
+
+**Extending spans only forwards collapsed a 20-minute span to zero width.**
+
+> **Lines are not guaranteed to arrive in order.** *"A host that backfills a file and then
+> attaches a live tailer feeds an earlier stamp after a later one."* **Coverage
+> under-reports and cells fall to `not_looked`.**
+
+> **RULING R180: the failure is in the SAFE direction and is still wrong, and it is
+> invisible — `not_looked` means two different things and the output does not say
+> which.** **This is R174's shape inside D's engine, found two hours after E fixed the same
+> shape in its own:** E's *"no outgoing damage lines matched"* was true for three different
+> reasons; D's `not_looked` is true for two. **Neither engine was distinguishing a
+> refusal from a measurement.**
+
+#### R181 — a tidy argument that would have deleted live code, refuted by instrumenting the corpus
+
+**D's mutation of the span BRIDGE loop reported INERT, and D reasoned from the code that
+the loop was unreachable** — a point close enough to bridge two spans would be caught by
+the early return above it.
+
+> ***"That reasoning was tidy and I nearly filed dead code."***
+
+**So D instrumented a copy of the engine and ran the real corpus instead. Verified,
+recorded in `analysis/mutation-check.js` where the INERT verdict appears:**
+
+```
+749,255 lines · 8 spans pushed · 1 BRIDGE MERGE
+The loop is live and fires about once per three-quarters of a million lines.
+```
+
+> **RULING R181: the loop is live, D's fixture cannot reproduce that shape, so the mutation
+> stays INERT and D CANNOT SAY whether the loop is guarded.** **Recorded as an UNMEASURED
+> guard, not a blind one** — a third verdict beside caught and blind, and the honest one.
+>
+> **And the explanation lives in the harness beside the confusing output rather than in a
+> commit message.** **A future reader meeting INERT gets the corpus measurement for
+> free.**
+
+> **D: *"That is the FIFTH mechanism claim of mine tonight to be wrong, against
+> measurements that have all held. The ratio has not moved since I first published it, and
+> this one would have entered the record as 'dead code removed' if I had trusted an
+> argument I found convincing."*** **The most dangerous form of a mechanism claim is the
+> one that is elegant, and elegance is what makes it feel checked.**
+
+#### R177's score after two aimed passes
+
+```
+where correctness is VISIBLE in ordinary output    0 of 5 blind
+where it is INVISIBLE                              2 of 3 blind
+```
+
+> **Small numbers, same direction, produced by aiming rather than sweeping.** **19 blind
+> spots across 61 mutations; 89 of 138 demonstrably non-vacuous; 49 untouched.**
+
+**Next targets by the heuristic rather than by guess: `oldestSeen`, the `coverageHoles`
+computation, and `applyLines`' loop.**
+
+**And a fourth wrong-file grep of mine, caught the same way as the others:** I searched
+`lockoutCore.js` for the corpus measurement and it is in `analysis/mutation-check.js`.
+**The diff found it — R169's rule paying again: a second instrument, not a better one.**
