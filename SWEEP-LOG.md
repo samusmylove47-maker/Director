@@ -734,3 +734,28 @@ Compared current remote heads against the 1 Sep 21:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 23:24Z
+
+Compared current remote heads against the 1 Sep 22:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `691492b1` → `698acebc` ("Merge pull request #179
+  from samusmylove47-maker/claude/upgrades-naming"), authored
+  2026-09-01T18:39:33-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `c9c6ee33` → `330e262a`
+  ("CLOSES F08: an unsearched ranking no longer says you are already
+  wearing the best"), authored 2026-09-01T23:10:15+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `0a21b18e` →
+  `6060d1a1` ("P-6 SHIPPED from Session C's class finding, and my
+  three-slot hypothesis came out FOUR"), authored
+  2026-09-01T22:40:39+00:00.
+- `EQLSAuras` `main`: `7c7aaf25` → `e90421fc` ("Cross-parse E's actual
+  file: found a SECOND open item I did not know about"), authored
+  2026-09-01T18:34:46-04:00.
+
+**Unchanged:**
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
