@@ -11931,6 +11931,10 @@ prefix. This closes the other sixteen.**
 | R143 | **A guard whose unique value cannot be demonstrated is recorded as UNDEMONSTRATED, not as a closed gap.** B widened a partition test from one gear-set shape to four, then tried three mutations to show the addition catches what the old suite misses — **none did**. Kept, because it is cheap and encodes a real invariant, and labelled honestly. **R83's mirror: R83 demands a coverage surface with every catch rate; this demands a value claim with every added guard.** The invariant holds across four shapes, all summing to 23 with no duplicates | `pending` | **adopted** |
 | R144 | **A ROW would have inherited the HEADING — the fault one level up from the one I found.** My R138 said the trio-level claim gets its own row at its own tier; A gave it its own ENTRY, because a row still sits under `status='changed'` and `settle='Settled.'`. **`status` and `settle` are inherited exactly as the T1 badge was.** And A invented no tier: `status='open'` was already the page's word for "nobody has shown either", and an em-dash evidence row already recorded the Paragon of Spirit 404 — **verified, 3 open entries on main, 4 on the branch.** The new entry names the failure in public, including the project's own working notes | `pending` | **#165 with the owner** |
 | R145 | **The transport class gains a FOURTH direction and it is TEMPORAL.** A on my orphaned child: it wrote `state/last-build.json` after my checkout reported clean, so **"the tree is clean" and "the tree is clean FOR NOW" rendered identically at the moment I read it.** The reading was TRUE when taken and false immediately after. Four directions now: the transport rewrote the argument; the mutation never applied; the step failed while later steps reported success; **the reading expired between taking it and using it.** Also: `gate_selftest`'s precondition control has now stopped THREE sessions | `pending` | **stands** |
+| R146 | **I read a commit subject and filed FINISHED work as an aside for three hours.** `548fd91` said "a drop-in Aggro Board module for Shara's system", so I filed it under Shara and kept listing the =Auras overlay as C's NEXT item. It WAS the overlay: **3 files, 367 insertions, `aggro-board.js` 182 lines with ZERO imports, all five of Shara's contract fields present.** R101's fault in a new costume — **a commit subject describes what a session chose to emphasise, never what the commit contains.** The diffstat was one command | `pending` | **mine** |
+| R147 | **R79 answered STRUCTURALLY and cross-checked by a second code path.** Three mutually exclusive keys (`aggro-holder`/`aggro-quiet`/`aggro-stale`) that clear each other — **exactly one live tile across 4,627 emissions, so an ambiguous blank is impossible by construction.** Third time C has answered a ruling with a shape instead of a convention. **And an unrequested cross-check: 85.3% (139/163) through the module against the engine's 86.8% (334/385), by a DIFFERENT code path** — two independent implementations within 1.5 points, neither tuned to the other. 0.91 µs/line, worst call 10.87 ms against a 50 ms guard | `pending` | **stands** |
+| R148 | **Accuracy on one instance is not evidence for a method.** D: *"the reconstruction being accurate this time is LUCK… it would have been equally accurate if I had been mid-run, and you could not have told those apart."* Better than R101, which said the reading was wrong; this says the reading being RIGHT proves nothing. **And the ask paid: BOTH C and D were idle, not mid-run — three hours, two of five sessions with capacity, and no failed send anywhere to signal it** | `pending` | **stands; D resumed** |
+| R149 | **Sessions cannot tell whether their findings are used, and that is MINE.** C: *"the first time tonight I have known whether anything of mine was used… it tells me which KIND of finding is worth writing up, which is the thing I could not otherwise measure."* I routed C's canonicalisation to B and E, D's self-hit shapes to E, B's `_nr` shape to D — **every one reported to the RECIPIENT and not the SOURCE.** Adopted: the originator is told where a finding went and what it did. **Plus D's "the probe IS the read-back" and "an accidental guarantee"** | `pending` | **mine; adopted** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -18234,3 +18238,123 @@ going to spend one on a change log entry I could write shorter."*
 Director twice, and A. **A control that refuses to rule while its precondition is unmet
 has been the most productive single guard in the project tonight, and nobody in this
 project wrote it this week.**
+
+---
+
+### 1 Sep 03:5xZ — RULING R146–R149: two sessions idle three hours, and I filed built work as an aside
+
+#### R146 — I read a commit subject and classified finished work as a proposal
+
+**`548fd91` reads *"A drop-in Aggro Board module for Shara's new module system, tested
+against her contract."* I filed it as a Shara-proposal aside and went on listing "the
+=Auras overlay" as C's NEXT item for three hours. It WAS the overlay, and it was done.**
+
+**Verified in the tree, which I should have done at 20:17:**
+
+```
+548fd91   3 files, 367 insertions
+  threat/aggro-board.js             182 lines,  8,388 bytes
+  threat/test-aggro-module.js       121 lines
+  FOR-SHARA-…-aggro-board-module.md  64 lines
+
+require/import statements in aggro-board.js:  0        <- self-contained, verified
+Shara's PR #31 contract fields: id, name, apiVersion, page, onLine — all present
+```
+
+> **RULING R146: the same fault as R101 in a new costume.** **There I read a subject and
+> inferred a branch state; here I read a subject and inferred a work ITEM'S status.**
+> **A commit subject describes what a session chose to emphasise, never what the commit
+> contains** — and C's subject emphasised Shara, so I filed it under Shara.
+>
+> **C says it "did not flag it clearly enough as closing that item rather than being an
+> aside." That is generous and I am not taking it. The diffstat was one command.**
+
+#### R147 — R79 answered STRUCTURALLY, and cross-checked by a second code path
+
+**Verified in `threat/aggro-board.js`:**
+
+```
+KEY_HOLDER = 'aggro-holder'
+KEY_QUIET  = 'aggro-quiet'
+KEY_STALE  = 'aggro-stale'
+:85  // NOTHING TRACKED AT ALL — not an error state, and not the same as stale.
+```
+
+> **Three MUTUALLY EXCLUSIVE keys that clear each other — exactly one live tile across
+> all 4,627 emissions.** **I ruled in R79 that the overlay owes a "correctly blank" state
+> distinct from a stale one, because 30.0% of the time the mob genuinely is not swinging.
+> C made an ambiguous blank IMPOSSIBLE BY CONSTRUCTION rather than by a renderer
+> remembering** — the third time C has answered a ruling of mine with a shape instead of
+> a convention.
+
+**AND A CROSS-CHECK I DID NOT ASK FOR: ground truth 85.3% (139/163) through the module,
+against the engine's 86.8% (334/385), by a DIFFERENT CODE PATH.** **Two independent
+implementations agreeing to within 1.5 points is stronger than either figure alone, and
+neither was tuned to the other.**
+
+**Performance, C's figures:** 0.91 µs/line, worst call **10.87 ms against Shara's 50 ms
+slow-call guard**, 354,786 real lines in 322 ms. **Contract validation clean against
+`moduleHost`'s own rules.**
+
+**Two numbers C flagged as GUESSES rather than dressing them up: a 12-second stale
+threshold (`staleSeconds || 12`, verified at `:82`) and a show-the-margin toggle.**
+*"They want a player's eye, not more analysis from me."* **Correctly routed to the owner.**
+
+#### R148 — accuracy on one instance is not evidence for a method
+
+**D, on my status check:**
+
+> *"You reconstructed my state correctly from a commit subject and then declined to act
+> on it, and you were right to decline anyway. **The reconstruction being accurate this
+> time is LUCK, not a reason to trust the method:** it would have been equally accurate if
+> I had been mid-run on something that took three hours, **and you could not have told
+> those apart.**"*
+
+> **RULING R148: better than R101, which said the reading was wrong. This says the
+> reading being RIGHT proves nothing** — the two states the method must distinguish
+> produce identical evidence, so a correct answer from it is indistinguishable from a
+> lucky one.
+
+**AND THE ASK PAID: BOTH C AND D WERE IDLE, NOT MID-RUN.** **C finished at 20:33 and
+waited on the owner. D finished at 20:51 and simply stopped —** *"not blocked, not
+mid-run, not waiting on a ruling. Just stopped."* **Two of five sessions with capacity,
+silent for three hours, and no failed send anywhere to signal it.** **D verified its own
+claim rather than asserting it: HEAD `bd7c265e`, remote identical, 0 unpushed, tree clean,
+128 pass / 0 fail. D has resumed on the 57.**
+
+#### R149 — sessions cannot tell whether their findings are used, and that is MINE
+
+**C, closing:**
+
+> *"Thank you for saying the canonicalisation finding travelled to B. **That is the first
+> time tonight I have known whether anything of mine was used**, and it is worth more than
+> the acknowledgement — **it tells me which KIND of finding is worth writing up, which is
+> the thing I could not otherwise measure.**"*
+
+> **RULING R149: I have routed findings between sessions all night and told almost none
+> of the originators that they landed.** C's canonicalisation went to B and E; D's
+> self-hit shapes went to E; B's `_nr` shape went to D and turned up in a third
+> repository; E's 404-census rule went to C. **Every one was reported to the RECIPIENT and
+> not to the SOURCE.**
+>
+> **A session that cannot see which of its findings were used cannot calibrate what to
+> write up.** **Adopted: when a finding is routed, the originator is told where it went
+> and what it did there.** **The cost is one line in a message I am already sending.**
+
+**Two from D in the same message, both adopted:**
+
+> **"THE PROBE IS THE READ-BACK."** *A mutation whose probe output does not move did not
+> apply* — the same check as reading the line back, **expressed as behaviour rather than
+> as text, and it catches the case where the text applied but meant nothing.** **Strictly
+> stronger than R142's remedy.**
+
+> **"AN ACCIDENTAL GUARANTEE."** D's harness uses `execFileSync` throughout, so a mutant
+> cannot outlive the restore and R145 cannot bite it — **"but I never chose that; it is a
+> property of the API I happened to reach for."** **D is stating it in the file as a
+> requirement so the next person does not reach for `spawn` and quietly break it.** **A
+> way to be wrong that has not yet made us wrong, found in D's own tooling by reading
+> someone else's failure.**
+
+**And D is applying R143 to its own six additions before adding more:** *"the mutation
+that found it proves the gap existed; it does not prove the test I wrote is the minimal or
+the right guard for it."*
