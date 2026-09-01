@@ -304,3 +304,28 @@ Compared current remote heads against the 1 Sep 02:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 04:24Z
+
+Compared current remote heads against the 1 Sep 03:35Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `1142939b` → `3e73b4d6` ("Merge pull request #165
+  from samusmylove47-maker/claude/trio-level-claim"), authored
+  2026-08-31T23:58:38-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `66825bc3` → `087c0d44`
+  ("CLOSES the CRLF blindness: re-pinned to 1.4.0 (02543ec8), reproduced
+  on my own bundle first"), authored 2026-09-01T04:15:56+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `77d63d12` →
+  `823e744f` ("R159 CLOSED: the engine now says what KIND of claim its
+  silence is, not just that it is silent"), authored
+  2026-09-01T04:19:56+00:00.
+- `EQLSLockouts` `session-d/raid-rows`: `bd7c265e` → `f271665d` ("TO
+  DIRECTOR: the task dedupe key dropped its name — two weeklies in one
+  second became one"), authored 2026-09-01T00:18:02-04:00.
+
+**Unchanged:**
+- `EQLSAuras` `main`: `c5c2c001`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
