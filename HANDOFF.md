@@ -11988,6 +11988,8 @@ prefix. This closes the other sixteen.**
 | R200 | **The staleness A found in its HANDOFF is in mine, and I put it there.** `eql-source/HANDOFF.md` still says *"this describes commit `5ee3cd3b`"* — verified an ancestor of main with **144 commits since**. **And this file's own header still reads "Handoff — 18 August 2026" on a record whose last entry is 1 September and which holds 200 rulings** — preserved by my byte-identical migration, correct as a migration and wrong as a title from the first append. **Named, not fixed: the date is unambiguous, what the file should now be CALLED is a small design question, and I have spent the night telling sessions not to open those at 05:20** | `pending` | **mine; named for the next reader** |
 | R201 | **B shipped a defect TONIGHT while fixing another, and its own pass found it.** `Upgrades.tsx` rendered the withheld badge from a **three-branch ternary over a five-member union** — three members fell through to the literal "Not in catalog", so a two-hander wielder saw `Secondary [Not in catalog]` ten lines above "the weapon in your Primary takes both hands". **Two contradictory statements about one slot in one card.** B added both new members tonight; `WITHHELD_TEXT` is a `Record` so the compiler forced body text, **and the ternary was not exhaustiveness-checked.** **R167's shape with a type system in it: the fix generalised exactly as far as the compiler enforced it and no further** | `pending` | **stands; B's own find** |
 | R202 | **The bound was stripped by TWO independent relayers — that is a fact about the SENTENCE.** I stripped it relaying to the owner; C's file had already inherited the stripped form and would have propagated it. C: the tally is *"a TALLY over one night in one project"*, while D established the mechanism — **a measurement names its surface and a mechanism usually cannot.** **The stripped version invites trusting measurements generally, which is false: a measurement over the wrong surface fails exactly as hard** — and C's counterexample is its own retired 244, a measurement wrong because a shell variable word-split. **The tally is quotable and the mechanism is not; a form that outlives its own qualification will shed it every time** | `pending` | **closes R188** |
+| R203 | **The page-date design is the OWNER'S and it dissolves the problem rather than solving it.** Not a machine-derived per-page date — **"Published on" set once when a page is genuinely published, "Last updated" beneath it only when an update actually changes that page**, small and findable, driven by the changelog. A build cannot know whether a change was meaningful; a person can. **Supersedes the per-page-mtime approach A had already shown to be the build date with extra steps.** One consequence named: the ~700 existing pages have no recorded publication date except in project history — a one-time backfill, and once it exists `sitemap.py` reads it instead of stamping today | `pending` | **owner's decision** |
+| R204 | **Publish the lockouts build — decided by the owner, and the ORDER is the finding.** The site serves one fingerprinted file, D built another; the fingerprint appears in every linking page, so the swap requires a rebuild. **And a rebuild right now rewrites all 715 dates, so a genuine one-file publish arrives inside seven hundred lines of false ones — "how a real change hides", landing on the change we most want to see.** **Dates first, then the publish is clean.** Same work, readable diff, both before the reset. **Not mine to execute: propose, never push, and merging is the publish** | `pending` | **A prepares, owner merges** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -20063,3 +20065,69 @@ that R73 retired.**
 
 **And #166 is merged — `e0efe712`. A's docstring PR, explicitly non-urgent, landed anyway.
 Seven merged tonight.**
+
+---
+
+### 1 Sep 05:5xZ — RULING R203–R204: two owner decisions, recorded so tomorrow starts from them
+
+#### R203 — the page-date design is the owner's, and it dissolves the problem rather than solving it
+
+**The sitemap defect was that every page carries a `lastmod` which is really a BUILD date,
+so all 715 assert they changed on the day of the last rebuild. The fix under discussion was
+a per-page date derived from the filesystem or from git history. The owner ruled
+otherwise:**
+
+> ***"We cannot update each individual page every time, every day, every update… When a
+> specific page is ACTUALLY published for the first time, it can say 'Published on: '
+> that date. Then if a specific update updates that specific page, it can reflect that as
+> 'Last updated: ' underneath — somewhere small and not obnoxious, but easily findable for
+> anyone who would be looking."***
+
+> **RULING R203: the date becomes HUMAN-CURATED and changelog-driven rather than
+> machine-derived.** **A build cannot know whether a change was meaningful; a person can.**
+> **And it moves the date onto the PAGE where a reader can see it, rather than leaving it
+> only in a sitemap only a crawler reads.**
+>
+> **This supersedes the per-page-mtime approach A's backlog entry warned against — A had
+> already established that a filesystem mtime is the build date with extra steps.**
+
+**ONE CONSEQUENCE TO NAME BEFORE ANYONE STARTS:** **the ~700 existing pages have no
+recorded publication date anywhere except the project's own history.** **That is a one-time
+backfill and it is the only non-trivial part.** **Once those dates exist, `sitemap.py`
+should read THEM rather than stamping `date.today()` — which makes the crawler-facing
+figure honest as a side effect rather than as a second job.**
+
+#### R204 — publish the lockouts build, and the ORDER is the finding
+
+**The owner: *"Regarding the lockouts tool: Publish the updated, better version."* Decision
+recorded.**
+
+**What it is, concretely:** the site serves `public/app/eqls-lockouts.16d4edad.html`; D
+built `public/app/eqls-lockouts.14106e64.html`. **The filename carries a content
+fingerprint that every linking page references, so the swap is not a copy — it requires a
+rebuild.**
+
+> **RULING R204: THE PUBLISH IS ENTANGLED WITH R203 AND THE ORDER MATTERS.** **A rebuild
+> right now rewrites all 715 `lastmod` dates**, so a genuine one-file publish would arrive
+> inside seven hundred lines of false modification dates — **A's own "how a real change
+> hides", arriving on the change we most want to see clearly.**
+>
+> **Dates first, then the publish is clean.** **Same total work, and it yields a diff the
+> owner can actually read.** **Both are tomorrow morning, before the game reset.**
+
+**And it is not mine to execute.** **Publishing means a change to `public/` on a peer's
+main; the standing rule is propose, never push, and merging is the publish.** **Recorded as
+decided, prepared by A, merged by the owner.**
+
+#### Session close, verified
+
+| | state |
+|---|---|
+| **A** | main `e0efe712`, seven PRs merged, tree clean, sitemap handed to the backlog |
+| **B** | closed at `4705ecc`, tree clean, **and it withdrew two stale entries from its own handover on the owner's answers — `levelCheck` was never blocked, the branch question is withdrawn** |
+| **C** | closed at `b05741b`, having recorded that the bound went missing twice independently |
+| **D** | stopped at `0a5bfcb0`, no mutant in the tree, next targets in a file |
+| **E** | handover clean, 17 gates, divergence declared `[DEFERRED]` |
+
+**No session is blocked, none is mid-run, and every one of the five verified its own state
+rather than asserting it.**
