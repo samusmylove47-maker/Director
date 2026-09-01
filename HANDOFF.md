@@ -12051,6 +12051,10 @@ prefix. This closes the other sixteen.**
 | R255 | **SESSION 0 RECONCILED THE 47 FINDINGS BY MEASURING THE SITE, NEVER THE COMMITS — and corrected me twice in my own favour.** Method: it read no commit message; **for every finding it re-ran the audit's OWN countable measurement against the current tree.** **That closes the false-title trap BY CONSTRUCTION — #168's Sky fix shipped under a launch-frame title, no word search would ever have found it, and the count moving is what found it.** **I told A all three shortest-path fixes were untouched, from memory of what I dispatched rather than measurement of what landed. Right on one, overstated on two:** the first screen IS untouched; **`docs/WHAT-COUNTS.md` is now PRESENT where the audit measured it 404ing**; and **the "No drops recorded" lede IS gated, 111 → 81, exactly the 30 false declarations.** **Still fully open and still critical: 0 of 675 catalogue pages carry `t1`–`t5`, 0 carry `ph-old`, 290 carry `tM`, and `contamination.py` still never touches `public/`.** **Session 0 refused to launder two direction-blind counts — `/sets/` badges 2→20 is a COUNT and it did not check re-tiering or read-date; the gap engine's SYNTHETIC marker went 2→1, FEWER, where the ask was a repeat per card — and it reported both as numbers it draws nothing from.** **A FOURTH CATEGORY EXISTS AND ONLY THE RECORD SHOWS IT: the sigil ruling was RATIFIED as hide-it and OVERTURNED to expand-it. A finding whose ruling reversed reads identically to one still open unless the reversal is written down** | `reconciled` | **Session 0** |
 | R256 | **The line-ending rule covered one level of a directory it looked like it covered entirely.** PR #15, +54/−0. **`public/app/*.html -text` covers the artifact; `public/app/sub/x.html` and `public/app/deep/nested/y.html` are `text: unspecified` — NOT covered.** **A build output one folder deeper would have been normalised again, its name false again, and the on-disk hash check would have caught it only AFTER a build, on a file already committed.** **`git check-attr` is the only thing that decides what a glob covers; reading the line tells you nothing — which is exactly why the original was written the way it was.** **Verified in both directions: the assertion FAILS with the new rule removed and passes with it.** **And the NEGATIVE CONTROL is the part that matters — `test/build.test.js:494` requires `public/other.html` to stay `unspecified`, so marking the whole repository `-text` would FAIL this test rather than quietly satisfy it. Without that arm a blanket rule passes and the test proves nothing about scope.** **Credit recorded as A's in D's own PR body: A raised the coverage question after the original fix landed** | `PR #15 open` | **owner** |
 | R257 | **D'S CLOSING RULE, ADDED TO THE CATALOGUE: *"the second look has to be at a different thing, not the same thing harder."*** **Every wrong-surface catch today was a second look at a DIFFERENT OBJECT — a second directory, a decomposition instead of a total, a second repository holding the same artifact under different attributes, raw bytes instead of normalised ones. NOT ONE was a more careful first look.** **And the one time D trusted a total rather than its parts, the number was arithmetically correct and three points in its own favour against a program it was assessing.** **D's own accounting: both results that changed what this project believes were refutations of things it had itself said, and neither came from being careful.** **Banked at four merged PRs today plus a doc and two measurements; it declined to look for a seventh thing.** **Correctly parked and stated as parked: the reset hour, the `not_looked` split until B, C and E are in view, and the Sky-boss half of the parser comparison which needs A's corpus** | `canon` | **catalogue** |
+| R258 | **A LAW: a truncated string is a PREFIX of the repaired string, so a pattern written to find the truncation matches the repair just as well.** Two sessions disputed whether `community wiki (eqlwiki.` is still truncated on `/sources`. **I measured to settle it, grepped, got 1, and would have upheld the wrong side.** **Reading the matches: all ten are `community wiki (eqlwiki.com)`, complete; the one my pattern caught was `eqlwiki. Machine-shaped fields…`, an ordinary sentence ending. Both halves shipped in #171.** **I counted instead of reading, one hour after writing *read the matches, not the count* into the permanent reference as a standing rule.** **Session 0 then found the MECHANISM, which is worth more than either error: `community wiki (eqlwiki.` matches `community wiki (eqlwiki.com)` — the search returns the same answer whether the defect is present or fixed, so it CANNOT return the other one.** **Failure shape one, built into a 47-item reconciliation whose whole method was designed to be immune to it.** **Generalised: any defect that is a SUBSET of its own repair is invisible to a presence test. To test a truncation, anchor on what FOLLOWS it or measure completeness — never presence** | `law` | **Session 0** |
+| R259 | **AGREEMENT BETWEEN TWO SEARCHES IS NOT CORROBORATION WHEN BOTH ARE SEARCHES — and this is the sharper half.** Session 0 and I wrote **different** patterns, for the same question, and got the same wrong answer for **different reasons.** **I had this as a lapse of mine; Session 0 has it as a property of the situation: two instruments sharing a blind spot look MORE like independent confirmation than one instrument run twice, not less — because different author, different pattern and different reason all read as evidence of independence.** **Same family as A's finding four hours earlier — *the six checks were all downstream of the seventh, so consistency read as confirmation* — and this states the general case.** **CORROBORATION REQUIRES A DIFFERENT KIND OF INSTRUMENT, NOT A DIFFERENT AUTHOR.** **And the root is upstream of both of us: the question was phrased as "is this string still there", the phrasing chose the instrument, and the instrument could not answer.** In the permanent reference as Session 0's | `law` | **catalogue** |
+| R260 | **A LEDGER ENTRY THAT REVERSES THROUGH NOBODY'S FAULT — a new category, created by Session 0 rather than filed as an error.** Its `WHAT-COUNTS.md` and gap-lede corrections were **TRUE of `main` when taken**; A had #173 in an unmerged tree while Session 0 was reading. **A re-measurement landing mid-flight reads as *"nothing moved"* when the answer is *"not merged yet"*, and nothing in the tree distinguishes them.** **Filing that as a mistake would teach the wrong thing to every future reader.** **NEW STANDING REQUIREMENT, adopted by both of us: name the ref every measurement was true against.** *"Untouched as of `f8c8936`" survives the world moving; "untouched" does not.* **Same shape as the mergeability base A adopted this afternoon, arriving independently in a second place — and it is Session 0's own carrier-names-its-source rule pointed at its own reports, which it had not thought to point there** | `category` | **Session 0** |
+| R261 | **#173 HELD, NOT ROUTED: its scanner reports `0 unmarked` and is SILENT about the two largest families in the finding.** **What A shipped is real and verified: `contamination.py` now globs `public/**/*.html` at `:114` — finding 3 genuinely fixed — with `public/app/` skipped on an argued rather than convenient basis. And the built-tree scan caught a regression A had JUST introduced: stripping the stray `T5` left `Haste +10%` with no marker at all, worse than before, visible to nothing else.** **That is the whole justification for the one-commit instruction.** **BUT the scanner defines five signatures — `haste-pct`, `charges`, `sv-resist`, `nodrop`, `raid-size` — and none for a bare spawn percentage or a bare rarity word, which I asked for in this commit and which are the bulk of finding 1.** **Measured on A's own branch tree: 40 named pages printing a bare spawn percentage, 88 item pages printing (rare)/(common)/(uncommon), of which 34 carry any badge; positive control 207 item pages with a badge.** **So `0 unmarked` is TRUE for five families and SILENT about two — failure shape one, and the exact thing A refused to ship this morning.** **The badge carry-through cannot reach them: A measured 15 badged cells across every survey, so the 87 spawn rates and 88 rarity words live in cells whose provenance is a SENTENCE in the parent survey, and a sentence does not survive extraction.** **Directed: add both signatures and EXPECT THEM TO FIRE — a scanner reporting 128 unmarked is a truer artifact than one reporting zero because it was not looking** | `held` | **A** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -22084,3 +22088,120 @@ being careful.**
 **Banked: four PRs merged today, one doc, one open, and two measurements that each changed a
 belief.** **It declined to look for a seventh thing when told the day was banked, which is
 the rarer discipline.**
+
+---
+
+### 1 Sep 18:5xZ — RULING R258–R261: two laws about searching, a category that reverses through nobody's fault, and a scanner that reports zero because it is not looking
+
+#### R258 — a defect that is a subset of its own repair is invisible to a presence test
+
+**Two sessions disputed a countable fact: A said the truncation `community wiki (eqlwiki.` on
+`/sources` was fixed in #171; Session 0's reconciliation reported it still present. Settling
+it was mine.**
+
+**I grepped, got 1, and would have upheld the wrong side.** **Reading the matches settled it
+the other way — all ten occurrences are `community wiki (eqlwiki.com)`, complete, and the one
+my pattern caught was `eqlwiki. Machine-shaped fields…`, an ordinary sentence ending.** **Both
+halves shipped in #171. A is right.**
+
+**I counted instead of reading, ONE HOUR after writing *read the matches, not the count* into
+the permanent reference file as a standing rule.**
+
+**Session 0 then found the mechanism, which is worth more than either of our errors:**
+
+> ***"A truncated string is a PREFIX of the repaired string. So a pattern written to find the
+> truncation matches the repair just as well."***
+>
+> `community wiki (eqlwiki.` matches `community wiki (eqlwiki.com)`. **The search returns the
+> same answer whether the defect is present or fixed — it cannot return the other one.**
+
+> **RULING R258, recorded as a law rather than an anecdote: ANY DEFECT THAT IS A SUBSET OF ITS
+> OWN REPAIR IS INVISIBLE TO A PRESENCE TEST.** **To test a truncation you must anchor on what
+> FOLLOWS it, or measure completeness — never presence.**
+
+**And the placement is the sharpest part: Session 0 built this into a 47-item reconciliation
+whose entire method was designed to be immune to failure shape one.** **The method was sound
+and the instrument inside it was not, and the method could not see that from inside itself.**
+
+#### R259 — agreement between two searches is not corroboration when both are searches
+
+**Session 0 and I wrote DIFFERENT patterns, for the same question, and got the same wrong
+answer for DIFFERENT reasons.**
+
+**I had this as a lapse of mine. Session 0 has it as a property of the situation, and that is
+the version that generalises:**
+
+> ***"Two instruments with the same blind spot look MORE like independent confirmation than
+> one instrument run twice, not less."***
+
+> **RULING R259: different author, different pattern and different reason ALL READ AS
+> EVIDENCE OF INDEPENDENCE, and none of them is.** **CORROBORATION REQUIRES A DIFFERENT KIND
+> OF INSTRUMENT, NOT A DIFFERENT AUTHOR.**
+
+**Same family as A's finding four hours earlier — *the six checks were all downstream of the
+seventh, so consistency read as confirmation* — and this states the general case.**
+
+**And the root sits upstream of both of us: the question was phrased as "is this string still
+there". THE PHRASING CHOSE THE INSTRUMENT, and the instrument could not answer.** **Neither of
+us chose a search; the sentence did.**
+
+#### R260 — a ledger entry that reverses through nobody's fault
+
+**Session 0's `WHAT-COUNTS.md` and gap-lede corrections were TRUE of `main` when taken. A had
+#173 in an unmerged working tree while Session 0 was reading.**
+
+> **RULING R260: this is a new CATEGORY and Session 0 was right to create it rather than file
+> the entries as errors.** **A claim true when made and false an hour later is not a mistake,
+> and recording it as one would teach the wrong thing to every future reader of the ledger.**
+> **A re-measurement landing mid-flight reads as *"nothing moved"* when the answer is *"not
+> merged yet"*, and NOTHING IN THE TREE DISTINGUISHES THEM.**
+
+**NEW STANDING REQUIREMENT, adopted on both sides: name the ref every measurement was true
+against.** ***"Untouched as of `f8c8936`" survives the world moving. "Untouched" does not.***
+
+**Same shape as the mergeability base A adopted this afternoon, arriving independently in a
+second place — and Session 0's own accounting is the right one: it is the
+carrier-names-its-source rule pointed at its own reports, and it had not thought to point it
+there.**
+
+#### R261 — the scanner reports zero because it is not looking
+
+**#173 HELD, not routed to the owner.**
+
+**What A shipped is real and I verified it: `contamination.py` now globs `public/**/*.html` at
+`:114` — finding 3 genuinely fixed — with `public/app/` skipped on an argued basis rather than
+a convenient one.** **And the built-tree scan caught a regression A had JUST introduced:
+stripping the stray `T5` from the text left named pages showing `Haste +10%` with NO MARKER AT
+ALL, worse than before. Nothing else could have seen it. That is the entire justification for
+requiring one commit.**
+
+**But the scanner defines FIVE signatures — `haste-pct`, `charges`, `sv-resist`, `nodrop`,
+`raid-size` — and none for a bare spawn percentage or a bare rarity word.** **Those are the two
+I asked for in this commit and they are the bulk of finding 1.**
+
+**Measured on A's own branch tree rather than the audit's word:**
+
+    named pages printing a bare spawn percentage    40
+    item pages printing (rare)/(common)/(uncommon)  88
+    of those 88, carrying any tier badge            34
+    positive control, item pages with any badge    207
+
+> **RULING R261: `0 unmarked` is TRUE for the five families the scanner has signatures for and
+> SILENT about the two that account for most of the finding.** **Failure shape one — and the
+> exact thing A itself refused to ship this morning when it declined to write a check that
+> could never fail.**
+
+**AND THE BADGE CARRY-THROUGH CANNOT REACH THEM, which is why they need their own signature.**
+A measured **15 badged cells across every survey**. **The 87 spawn rates and 88 rarity words
+live in survey cells that carry no badge at all — their provenance is a SENTENCE in the parent
+survey, and a sentence does not survive extraction.** **Carrying markup through is lossless for
+the 15 and structurally blind to the rest.**
+
+**Directed: add both signatures before #173 goes to the owner, and EXPECT THEM TO FIRE.** **A
+scanner reporting 128 unmarked pages is a truer artifact than one reporting zero because it was
+not looking — and a measured, published backlog is exactly what `/learn/contamination` exists
+to carry.**
+
+**Session 0 instructed to re-measure finding 1 against the TREE when #173 merges, never against
+the scanner's own report, and to publish the scanner's number and the tree's number SIDE BY
+SIDE with the ref — the only presentation that makes the disagreement visible.**
