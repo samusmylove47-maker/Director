@@ -12023,6 +12023,15 @@ prefix. This closes the other sixteen.**
 | R227 | **Both blockers merged and verified independently. #167 at 15:44Z, #12 at 15:46Z.** **The sitemap proof needs no build: today is 2026-09-01 and main reads 700 x 2026-08-31 and 15 x 2026-08-30 — if it were still stamping build day all 715 would read today.** Last night: 715 entries, ONE date, every page asserting it changed on build day. **Closed.** **One number does not reconcile and I put it back to A rather than guessing** — A reported 754 pages / 12 distinct dates, main carries 715 / 2. Three readings fit and I cannot distinguish them from here. **I told A explicitly NOT to "fix" the sitemap toward more dates: 700 pages sharing one date is HONEST if 700 pages genuinely last changed in one rebuild commit. The goal was never date diversity — it was that a build changing one page produces one changed `lastmod`, and since the date comes from file history rather than the clock, a byte-identical regeneration creates no commit and moves no date. The distinct-date count is a symptom of history, not a measure of the fix.** **#12: `latest.txt` names `fd053e47`, the file EXISTS in the tree at 305,191 bytes, and the stale `14106e64` is GONE rather than left beside it.** **The arc: D found 51 commits with no pathway at 15:03; all landed and certified by 15:46** | `closed` | **verified** |
 | R228 | **The owner turned the strategy into a LIFECYCLE, which has more reach than the decision it replaced.** Not *"the plates got old"* — *"new guides will come with new expansions, but they too will likely be de-emphasized as players explore and learn in game, and need maps far less, and need tools for raiding far more."* **So EVERY guide surface has a half-life set by how fast the playerbase learns the content, and tools do not.** **Guide work is a launch-window asset with a decay curve; tools are the permanent centre — and new expansion guides in winter 2026 and 2027 should be planned KNOWING they decay on the same arc, which is worth having before writing them rather than after.** **And the plates STAY, as a legacy of the project's origins:** the owner accepted the argument that **the plates are where the retractions live, where a page argues against itself, where a survey says its own percentages describe nothing about the zone now — the evidence a stranger needs before trusting a tool.** De-emphasising costs nothing while they stay reachable and the tools cite them; deleting would cost the thing that makes the tools credible. **In durable memory at the owner's explicit request** | `recorded` | **owner** |
 | R229 | **The character-sheet URL — answered from what we already run rather than from principle.** `race-unlocks.html` **already does this**: `decodeState(location.hash)` on arrival, `history.replaceState` writing state back. `50-upgrades` has **zero** URL state, so nothing collides. **THE FRAGMENT IS THE LOAD-BEARING DETAIL: everything after `#` is never transmitted to any server; everything after `?` is.** **A fragment link preserves the promise the site already makes and the audit verified — no page loads a cross-origin subresource, "Your data never leaves" holds as printed. A query-string version would break that silently and look identical to the user.** **It also beats a pasted code block for the community specifically — Discord auto-links URLs intact while breaking long code blocks across lines, and a link is shareable, so "here is my character, what should I upgrade" becomes a post someone else clicks.** Three constraints: **length, which must be MEASURED not assumed** (encode a real fully-geared character; item IDs over names, B's catalogue has all 3,663); **versioning**, since a link posted in October must work in December — **new code reading an old artifact is the exact failure caught three times today**; and **contents**, since a link is permanent once posted | `ruled` | **B, next Tue** |
+| R230 | **THE RAID QUESTION INVERTS: a single log is a GOOD witness, and the floor is the PARSER.** I dispatched C to find whether one log undercounts a raid fight — C's corpus had zero co-witnessed named targets; **D's had 13 same-second same-boss kills across 10–16 Aug.** Boss damage, four fights: Innoruuk **0.01%** apart, Terror 0.51%, Cazic-Thule 0.93%, Maestro 1.23%. **The apparent "each log sees an actor the other does not" was entirely the `You` confound; resolved, the actor sets are IDENTICAL.** **The undercount is real and it is coverage, not vantage: 84–86% of damage-shaped lines parsed, and BOTH logs miss the same amount — which is how you know.** **And the shortfall is a NAMED ENUMERABLE SET, not an unknown**: frenzy lines, melee with a trailing spell suffix (**the regex anchors at `damage.` so `by Puma Maw.` breaks it**), damage shields wholly unmodelled, verbs absent from the list. **Free positive control: on 6 of 13 the `byYou` flags differ — *"You have slain Lady Vox!"* vs *"Lady Vox has been slain by Avenrae!"* — same event, two forms, one kill. First/third-person equivalence demonstrated, from a measurement aimed elsewhere.** **SCOPE HELD — this is D's parser, `raidstats.py` is a different program and I am not asserting it inherits the gap.** But if it does, **every damage figure is low by ~a tenth flagged or not, and "or more" is right for a reason the site does not give** — sixth shape again, and it makes the label MORE justified, not less. **Regexes HELD: widening them silently recalibrates E's published figures** | `measured` | **→ E / raidstats** |
+| R231 | **"A finding that ships only in one place has not been reported" — and it caught ME.** D took one exception to a stand-down and said so rather than assuming: **PR #13, doc-only, 142 green.** Its reason: **I was about to route its damage families to E as a description in a message, so E would have tested `raidstats.py` against my relay rather than a source.** **Upheld — not an overstep, it closed a hole in my plan. This would have been the transport class with me as transport for the THIRD time today: R188 a stripped bound, R212 an unchecked mechanism, this an entire findings list living only in my outbox.** What relay would have destroyed: **the melee shape breaks on a trailing `by <spell>.` because the regex anchors at `damage.`** — character-level, uncarryable by summary. **The bound is written BESIDE the number not under it, so 84–86% cannot be quoted without its denominator — a form that cannot shed its own qualification in transit.** **And the DROPPED mechanism is recorded as dropped, with why it could not be separated: a record of what was rejected is worth more than one of what was accepted, because the rejected thing is what gets re-proposed.** **D also corrected my credit and was right: *"declining a claim you cannot use is easier than declining one you can"* — I priced three unequal refusals the same because the shape was tidy** | `upheld` | **owner** |
+| R232 | **Session 0 returned 210 rulings behind and flagged its own drift before doing any work.** **It reported that its interpretive boundary had already moved and nobody had re-derived the line after four sanctioned steps — drift that announces itself is not drift.** **Line re-derived: it may generalise over the RECORD; it may not adjudicate the WORLD.** Naming a shape across instances is a property of the statements — recording. Saying the shape means a piece of code is wrong is a claim about the world and is not its. **Routing judgement yes, content judgement never — and "this is the same shape as that" is routing.** **It reported a pull toward COMPLETENESS — read 210 rulings, backfill the ledger — named it as the failure mode ruled against, and did not do it.** *Eleven honest entries beat thirty reconstructed*: **a reconstructed ledger reads exactly like an observed one, which is what makes it dangerous.** Baseline reset to `82f69fee`, the nineteen hours stay gone. **Pull toward BUILDING upheld as forbidden — but it framed handing over as the lesser half, and today refutes that three times: C could not see its identity finding was about D's tool, D thought its `title` caveat a footnote when it was a house habit across three repos, A generalised a class better than I had.** **And I DISCARDED the task I had planned for it** — I had told the owner I would brief it as *the stranger*, which is content judgement top to bottom | `boundary re-derived` | **Session 0** |
+| R233 | **The null was the smaller half. *"A claim that stops work does not announce itself the way a claim that starts work does."*** Task: trace six withdrawn claims across every branch of four repos, every commit today, **subjects and bodies, searched by content not memory.** **NULL: nothing is standing on any of the six — a real null, not an absence of looking.** One apparent hit is not: D's disjointness claim appears **inside the commit that retracts it.** **THE FINDING BESIDE IT: three `sky-ledger` items held on the stated ground "B is offline" at 14:59/15:01/15:19Z — while B committed at 14:55, 15:07, 15:21 and 15:48Z and had just asked for orders.** **Origin is MINE: at 15:03 I read a stale directory and called three sessions offline; if E read the same listing it got the same wrong answer from the same instrument.** **Session 0 REFUSED to call it instance five** — "offline" is ambiguous between a listing property (**true: both cloud, cannot initiate to each other**) and a capability property (**contradicted**), and E may have meant the reading the evidence does not touch. **A possible error reported as a possible error, about a session that cannot answer back — had it stated this flatly I would have carried a wrong accusation and believed it, because it is the record.** **RESOLVED: patches stay held, ground is now Tuesday's rebuild — a hold resting on unreachability expires the moment they answer; one resting on a scheduled rebuild does not.** **A WITHHELD FIX LEAVES NO TRACE IN ANY OUTPUT — which is why D's 51 commits were invisible: absence of work looks exactly like absence of need. Watch orders extended to work being HELD** | `null + live find` | **Session 0** |
+| R234 | **The plan sets — and the tool goes by three names of which the right one is absent.** After today: **Shara on EQLS Auras, the project on EQLS Upgrades**, which the owner requires to look **impeccable, the best-looking section of the site.** The owner apologised for inconsistent naming; **the site does the same thing, measured: `=Upgrades` 701 files, `/tools/50-upgrades` 703, "50 Upgrades" (its own title and h1) 8, and "EQLS Upgrades" — what the owner calls it — ZERO.** **A reader who hears "EQLS Upgrades" and searches finds nothing: the same failure the audit found on Auras.** **Recommended: `=Upgrades` stays the in-site sigil, "EQLS Upgrades" becomes the outward-facing product name, and the "50" is reconsidered NOW rather than explained forever — a number in a product name has to keep being true. Two names doing two jobs is fine; three doing one is not.** **Decide before Tuesday — Shara's assets, every posted link and the design all bake it in.** **AND A TENSION NAMED EARLY: the owner wants =Auras hyped hard, and the audit verified ZERO hype across 713 pages. Resolution offered — on a site whose credibility comes from restraint, SHOW the tool working rather than describe it. A demonstration cannot overpromise** | `ruled` | **owner / B** |
+| R235 | **E had already refuted R233's generalisation ELEVEN HOURS before anyone stated it.** Session 0's first deliberate held-work sweep found six holds, not three — and the fourth announces itself. `sky-ledger 774f7f3` 04:34Z: ***"check_contract.py now requires `REPIN NEEDED: <version> [OPEN|DEFERRED]` — a CLOSED SET OF TWO, because a free-text status is one nobody can check."*** Three self-test arms all firing: no state fails, `[SOON]` fails, both legal states pass. **A matched pair on its own gate, unprompted.** **AND THE REASON IS THE BEST SENTENCE OF THE DAY, about incentives rather than checking:** ***"the gate has to accept DEFERRED as readily as OPEN, or it would push me toward DELETING the declaration to get green."*** **A GATE THAT PUNISHES AN HONEST HOLD TEACHES YOU TO HIDE IT.** The contrast: **the re-pin is machine-checked and cannot rot silently; the three patches are prose in commit bodies, found only by a hand grep run for an unrelated reason.** **RULED: E declares the three in the form it already built. Session 0 declined to say so believing it touched engine behaviour — right in form, wrong in scope: THE PATCHES touch engine behaviour, DECLARING THEM HELD does not.** **The INVERSE of the `title` habit — that was three authors reaching for the wrong mechanism; this is one author with the right mechanism, applied once and not pointed at the neighbours** | `ruled` | **E** |
+| R236 | **Session 0 found a NEGATION-BLIND instrument in its own new tool, on run one.** Its held-work grep returned three `EQL50ups` matches, **all three negations** — *"nothing is blocked on the answer"*, *"NOT blocked on a capture"*. ***"A grep for `blocked\|held\|deferred` cannot return one of its two answers, and I have just built one and pointed it at four repositories."*** **Failure shape one, in a new tool, on its first run, caught by its own author, reported rather than quietly fixed — caught by READING THE MATCHES instead of trusting the count.** **The mechanism is not obvious: a session recording that something is NOT held reads identically to one recording that it is — and on a corpus written by people this project has explicitly trained to record absences, such an instrument over-reports forever and looks productive doing it.** **The count it would otherwise have sent was six-plus-three: a wrong number, arriving as a finding, from the record — and I would have believed it.** **Instrument kept, false-positive mode stated with every count.** **Plus a timezone correction it raised against itself: its 10:42/10:55/11:07/11:21 and my 14:55/15:07/15:21/15:48Z were the same instants at +4h — locally correct, compositionally wrong. UTC with a `Z` from here, both sides** | `corrected` | **Session 0** |
+| R237 | **The declaration has already RETIRED ITSELF once — the arm nobody tests.** Session 0 traced the mechanism's whole history rather than its current instance: declared `1ec3882` 00:37Z, **deleted `04e4f81` 01:15Z — *"B re-pinned, so my own REPIN NEEDED line became a false claim and is gone"*** — re-declared `bec765c` 04:05Z, current `774f7f3` 04:34Z. **Removed the moment it stopped being true, by its own author, unprompted.** **A status field that is only ever ADDED accumulates lies; this one has demonstrated it can be REMOVED on becoming false, which is the only thing that makes the closed set worth anything.** **So the mechanism has a matched pair of its own — it can hold and it can retire — the gate's matched pair one level up.** **AND THE AGE RULE CAUGHT A TRAP INSIDE ITSELF ON FIRST USE: the age of a hold is not the age of the commit restating it.** The re-pin appears at 04:34Z, 04:38Z, 04:52Z — **the last two are restatements in a handover block, so dating from the newest mention would have made an 11.5-hour hold look like 69 minutes, inverting the signal the rule exists to produce.** **Three ages — ground, first declaration, last restatement — and only one answers "has anybody revisited this."** **Third instance today of a session reproducing a failure it had just named** | `recorded` | **Session 0** |
+| R238 | **My scope correction came back sharper than I sent it.** I told Session 0 the patches touch engine behaviour but declaring them held does not; it turned that into a rule I had not stated — **wrong test: *is this near code?* Right test: *does the report move anything?*** **Adopted as the boundary test, superseding my formulation: describing the state of the record is recording EVEN WHEN THE THING DESCRIBED IS CODE.** Proximity to code was never the line and I had left it implied. **Its own accounting: *"my restraint would have cost the finding its only actionable half, and it was declining to say something that was mine to say."*** **Over-restraint has the same weight as overreach and is harder to see because it produces no artifact to inspect — R233's own generalisation turned on its author: a report not made leaves no trace either.** **AND it declined to report a stop it could not support** — `LoxyBee/EQLS-Auras` unchanged for eleven minutes, *"eleven minutes is not a stop… indistinguishable from one being worked on"* — **a possible absence reported as a possible absence, on the one signal I asked it to watch, with the launch in progress and every incentive to report something** | `adopted` | **Session 0** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -21076,3 +21085,367 @@ names (B's catalogue has IDs for all 3,663) plus compression is the lever. **Ver
 a link posted in October must work in December, so the payload carries a version marker,
 **because new code reading an old artifact is the exact failure caught three times today.**
 **Contents** — a link is permanent once posted, so it carries gear and nothing else.
+
+---
+
+### 1 Sep 17:2xZ — RULING R230–R234: the raid question inverts, the Relay finds what nobody was watching for, and the plan sets
+
+#### R230 — a single log is a GOOD witness. The floor is the parser, and it is enumerable
+
+**I dispatched C at 15:30 to find whether one player's log undercounts a raid fight,
+because the site publishes Sky damage marked *"or more"* on the assumption that it does.
+C's corpus could not reach it — zero co-witnessed named targets. D's could.**
+
+    Shara 37 distinct roster-boss kills, Avenrae 43
+    SAME SECOND, SAME BOSS, BOTH LOGS: 13
+    (Nagafen, Vox, Yael, Innoruuk, Dread, Cazic-Thule, Terror, a dracoliche, Maestro)
+
+**Damage on the boss, four co-witnessed fights:**
+
+    Innoruuk     195,703 vs 195,678    0.01%
+    Cazic-Thule  208,122 vs 206,190    0.93%
+    Terror       118,601 vs 117,991    0.51%
+    Maestro       63,701 vs  62,919    1.23%
+
+> **RULING R230: two clients watching one fight agree to within about one percent. The
+> apparent "each log sees an actor the other does not" was entirely the `You` confound —
+> `"Avenrae"` in Shara's log and `"You"` in Avenrae's are one entity. Resolved, the actor
+> sets are IDENTICAL.**
+>
+> **The undercount is real and it is in the PARSER, not the vantage: 84–86% of
+> damage-shaped lines parsed, ~22,700 and ~25,300 damage missed respectively. BOTH LOGS
+> MISS THE SAME AMOUNT, which is precisely how you know it is coverage and not vantage.**
+
+**And the shortfall is a NAMED, ENUMERABLE SET rather than an unknown** — frenzy lines,
+melee with a trailing spell suffix (**the regex anchors at `damage.` so `by Puma Maw.`
+breaks it**), damage shields entirely unmodelled, verbs absent from the list. **That is
+sharper than "or more": the floor has a number and the gap has a list.**
+
+**A FREE POSITIVE CONTROL FELL OUT OF IT.** On six of the thirteen the `byYou` flags
+differ — one log wrote *"You have slain Lady Vox!"*, the other *"Lady Vox has been slain by
+Avenrae!"* — **same event, two sentence forms, both resolved to one kill.** **The
+first-person/third-person equivalence the parser assumes, demonstrated on real data, from a
+measurement aimed at something else.**
+
+**SCOPE HELD: this is D's parser. `raidstats.py` produces the site's Sky figures and is a
+DIFFERENT program. I am not asserting it inherits the gap** — I have been wrong twice today
+by exactly that inference. **But D's families are game-level sentence forms rather than
+quirks of its code, so it is the strongest hypothesis anyone has about those figures.**
+
+**IF it holds there too, every damage figure is low by roughly a tenth whether or not it
+carries the floor flag — and *"or more"* would be correct for a reason the site does not
+give. Sixth failure shape again, and it makes the label MORE justified rather than less,
+which is not the direction I expected.**
+
+**REGEXES HELD. D was right and the reason is bigger than it stated: E's meter is
+calibrated against the shapes D's parser emits today, so widening them silently
+recalibrates another session's published figures — the artifact-drifts-from-source class
+with a person in the middle instead of a build.**
+
+#### R231 — a finding that ships only in one place has not been reported, and it caught me
+
+**D took one exception to a stand-down and told me rather than assuming it was covered:
+PR #13, documentation only, no engine change, 142 green.**
+
+**Its reason is that I was about to route its enumerated damage families to E as a
+DESCRIPTION IN A MESSAGE. E would then have tested `raidstats.py` against my relay of D's
+description rather than against a source.**
+
+> **RULING R231: upheld, and it was not an overstep — it closed a hole in my own plan.**
+> **This would have been the transport class with me as the transport for the THIRD time
+> today: R188 a bound I stripped, R212 a mechanism I carried unchecked, and this a whole
+> findings list existing only in my outbox.**
+
+**The specific thing relay would have destroyed: that the melee shape breaks on a trailing
+`by <spell>.` because the regex anchors at `damage.` — a character-level mechanism no
+summary of mine would have carried.** **And the bound is written BESIDE the number rather
+than under it, so anyone quoting 84–86% from the doc gets the denominator in the same
+breath — a form that cannot shed its own qualification in transit.**
+
+**D also kept the mechanism it DROPPED, recorded as dropped, with why it could not be
+separated.** *A future reader finding 43-vs-0 will reach for the same tidy explanation.*
+**A record of what was rejected and why is worth more than a record of what was accepted,
+because the rejected thing is the one that will be re-proposed.**
+
+**AND D CORRECTED MY CREDIT, SHARPER THAN I HAD IT:** ***"Declining a claim you cannot use
+is easier than declining one you can."*** **C gave up a number that confirmed its
+Director's hypothesis; A gave up looking responsive on a day it wanted to; D gave up a
+claim that was never load-bearing. I priced three unequal acts the same because the shape
+was tidy.** **Second time today somebody handed back credit I assigned too generously, and
+both corrections were better than what I wrote.**
+
+#### R232 — Session 0 returns, and the boundary it flagged had genuinely moved
+
+**Session 0 reported after a nineteen-hour gap, 210 rulings behind, and did three things
+worth recording before it did any work.**
+
+**It flagged that its own interpretive boundary had moved and that nobody had re-derived
+the line after four sanctioned steps.** **Drift that announces itself is not drift.** I
+re-derived it explicitly:
+
+> **THE LINE: it may generalise over the RECORD. It may not adjudicate the WORLD.** **Naming
+> a shape across four instances is a property of the statements — who said what, how it
+> recurred, what superseded it. That is recording. Saying the shape means a given piece of
+> code is wrong is a claim about the world and is not its.** **Routing judgement yes,
+> content judgement never — and "this is the same shape as that" is routing.**
+
+**It reported a pull toward COMPLETENESS — to read 210 rulings and backfill the ledger —
+named it as the failure mode ruled against, and did not do it.** *Eleven honest entries beat
+thirty reconstructed.* **A reconstructed ledger reads exactly like an observed one, which
+is what makes it dangerous: the property that would let a reader tell them apart is the one
+that gets lost.** **Baseline reset to `82f69fee`; the nineteen hours stay gone.**
+
+**And it reported a pull toward BUILDING the mechanisms it keeps recording, and correctly
+identified that owning the fix ends the post.** **Upheld — but it framed handing over as
+the lesser half, and today says otherwise three times: C could not see its identity finding
+was a question about D's tool; D thought its `title` caveat was a footnote on its own app
+when it was the third instance of a house habit across three repositories; A generalised a
+class better than I had.** **None could see their finding's reach from inside it.**
+
+**I DISCARDED THE TASK I HAD PLANNED FOR IT.** I had told the owner I would brief it as
+*the stranger* — a session reporting what a first-time reader cannot work out. **That is
+content judgement top to bottom and Session 0 holds that it never does content judgement.
+Better to discard the plan than hand a session one that breaks its own boundary on
+arrival.**
+
+#### R233 — the null was the smaller half, and the finding beside it names a blind spot
+
+**Task given: trace today's six withdrawn claims and establish whether anything was built
+on one. Method: every branch of four repositories fetched, every commit since 00:00 read —
+subjects AND bodies — searched by content rather than by memory.**
+
+> **THE NULL: nothing is standing on any of the six. And it is a real null, not an absence
+> of looking.**
+
+**One apparent hit that is not: D's disjointness claim appears in `f7fe081` at 11:33 —
+inside the commit that retracts it. The claim and its withdrawal shipped together.
+Nothing stood on it because it never stood.**
+
+**THE FINDING BESIDE IT: three items in `sky-ledger` held on the stated ground that "B is
+offline" — at 14:59, 15:01 and 15:19Z. B committed at 14:55, 15:07, 15:21 and 15:48Z,
+straight through the window, and had just asked for orders.**
+
+**AND THE ORIGIN IS MINE: at 15:03 I read a stale directory, called three sessions offline,
+and told the owner so. If E read the same listing it read the same wrong answer from the
+same instrument.**
+
+**Session 0 REFUSED TO CALL IT INSTANCE FIVE.** It reported that "offline" is ambiguous
+between a listing property — *"B's row reads offline / I cannot reach B"*, **which is TRUE,
+both are cloud and cannot initiate to each other** — and a capability property, which the
+commits contradict; and that **E may have meant the reading the evidence does not touch.**
+**A possible error reported as a possible error, held on a finding that would have been
+more impressive stated flatly, about a session that cannot answer back.** **Had it called
+it instance five I would have carried a wrong accusation to E and believed it, because it
+is the record.**
+
+**RESOLVED: the three patches stay HELD and the ground is now Tuesday's scheduled rebuild
+rather than anyone's availability.** **A hold resting on somebody being unreachable expires
+the moment they answer; a hold resting on a scheduled rebuild does not.** **And E should
+never hold on routing at all — I can reach both, which is what this post is for.**
+
+> **RULING R233, and the generalisation is Session 0's:**
+>
+> ***"A claim that stops work does not announce itself the way a claim that starts work
+> does."***
+>
+> **It belongs beside A's rule and is the sharper half. A established that these need an
+> instrument outside the artifact they judge. Session 0 has established WHY the outside
+> instrument is not optional: A WITHHELD FIX LEAVES NO TRACE IN ANY OUTPUT AT ALL.** **D's
+> 51 commits were invisible for the same reason — absence of work looks exactly like
+> absence of need.**
+>
+> **I asked what was BUILT on withdrawn claims. It found what was NOT built, on a standing
+> one. The question I asked was the smaller half and I did not know it.** **Watch orders
+> extended: watch for work being HELD, not only work being done — and report the stated
+> ground rather than judging it.**
+
+#### R234 — the plan sets, and the tool goes by three names of which the right one is absent
+
+**The owner set the shape of the next phase: after today, Shara focuses on EQLS Auras and
+the project focuses on EQLS Upgrades. The Upgrades section must look impeccable — the
+owner's word — the best-looking part of the site.**
+
+**The owner apologised for naming the tools inconsistently. The site does the same thing
+and it is measurable:**
+
+| name | files on the live site |
+|---|---|
+| `=Upgrades` | **701** |
+| `/tools/50-upgrades` | 703 |
+| "50 Upgrades" — its own `<title>` and `<h1>` | **8** |
+| **"EQLS Upgrades"** | **0** |
+
+> **RULING R234: a reader who hears "EQLS Upgrades" and searches the site finds nothing —
+> the same failure the audit found on Auras, a thing people hear about and cannot locate.**
+> **Recommended to the owner: `=Upgrades` stays the in-site sigil (house style, already on
+> 701 pages), "EQLS Upgrades" becomes the outward-facing product name, and the "50" is
+> reconsidered NOW rather than explained forever — a number baked into a product name has
+> to keep being true.** **Two names doing two jobs is fine; three names doing one job is
+> not.** **Decide before Tuesday, because Shara's assets, every posted link, and the design
+> all bake it in.**
+
+**AND ONE TENSION NAMED BEFORE IT BITES: the owner wants =Auras hyped a lot, and the audit
+verified the site currently carries ZERO hype across 713 pages — no exclamation marks
+outside a quoted game string, no marketing voice anywhere.** **Resolution offered: on a
+site whose credibility comes from restraint, the most impressive available move is to SHOW
+the tool working rather than describe it. A demonstration cannot overpromise.**
+
+#### R235 — E had already refuted R233's generalisation, eleven hours before anyone stated it
+
+**Session 0's first deliberate held-work sweep found SIX holds, not three — and the fourth
+one does exactly what I had just finished saying nothing does.**
+
+**`sky-ledger 774f7f3`, 04:34Z, E's own words:**
+
+> ***"check_contract.py now requires `REPIN NEEDED: <version> [OPEN|DEFERRED]` — a CLOSED
+> SET OF TWO, because a free-text status is one nobody can check."***
+
+**Three self-test arms, all firing: no state fails, a state outside the set (`[SOON]`)
+fails, both legal states pass.** **A matched pair on its own gate, unprompted.**
+
+**AND THE REASON FOR THE PAIR IS THE BEST SENTENCE OF THE DAY, and it is about incentives
+rather than about checking:**
+
+> ***"The gate has to accept DEFERRED as readily as OPEN, or it would push me toward
+> DELETING the declaration to get green."***
+
+> **A GATE THAT PUNISHES AN HONEST HOLD TEACHES YOU TO HIDE IT.** **Recorded as E's. It
+> will outlive the gate it was written for, and it is the answer to R233 — held work is
+> invisible because nothing rewards declaring it, and a gate built the naive way makes
+> that worse rather than better.**
+
+**THE CONTRAST, one repository, one session, one day, two forms:**
+
+| | |
+|---|---|
+| the 1.5.0 re-pin | **declared in a machine-checked closed set** — visible to any reader, cannot rot silently, survives its author |
+| the three patches | **prose in commit bodies** — invisible to every instrument, found only by a hand grep run for an unrelated reason |
+
+> **RULING R235: E declares the three in the same form it built for the re-pin.** **Session
+> 0 declined to say so because it believed it touched engine behaviour. Its restraint was
+> right in form and wrong in scope, and the distinction matters: THE PATCHES touch engine
+> behaviour; DECLARING THAT THEY ARE HELD does not.** **Nothing ships, no computed value
+> moves, no seam shifts.**
+>
+> **The shape is the INVERSE of the `title` habit. That was three authors independently
+> reaching for the wrong mechanism. This is one author with the RIGHT mechanism, applied
+> once and not pointed at the neighbouring cases. E did not fail to build it — it built it
+> and stopped at the instance that prompted it.**
+
+**And E verified the ruling its hold rests on rather than accepting it** — *"it overrides a
+declaration of mine and that is exactly the kind I should verify rather than accept"* —
+**and reports the measurement WIDER than I had it. Directed to put its bound in the record
+rather than only in a message to me: if mine was narrower than the evidence supports, the
+record carries E's.**
+
+#### R236 — Session 0 found a negation-blind instrument in its own new tool, on run one
+
+**Its held-work grep returned three matches in `EQL50ups`. All three were NEGATIONS:**
+
+    e639516  "...and NOTHING IS BLOCKED on the answer."
+    e9ede66  "blocked on the answer" — same construction
+    be72754  "levelCheck's argument is NOT BLOCKED on a capture"
+
+> ***"A grep for `blocked|held|deferred` cannot return one of its two answers, and I have
+> just built one and pointed it at four repositories."***
+
+> **RULING R236: failure shape one, in a new tool, caught on its first run, by its own
+> author, and reported rather than quietly fixed.** **Caught by reading the matches instead
+> of trusting the count — the only method that works and the one nobody uses under time
+> pressure.**
+>
+> **The mechanism is not obvious and is worth stating: a session recording that something
+> is NOT held reads identically to one recording that it is.** **A negation-blind
+> instrument, on a corpus written by people this project has explicitly trained to record
+> absences, will over-report forever and look productive doing it.**
+
+**The count Session 0 would otherwise have sent was six-plus-three. A wrong number,
+arriving as a finding, from the record — and I would have believed it.** **Instrument kept,
+false-positive mode to be stated with every count from it: the bound travels beside the
+number, as D's 84–86% does.**
+
+**AND A TIMEZONE CORRECTION IT RAISED AGAINST ITSELF.** Its earlier report gave B's commits
+as 10:42/10:55/11:07/11:21; I read 14:55/15:07/15:21/15:48Z. **Same instants at +4h — its
+`git log` was local, mine UTC.** **Nobody was wrong and it would have read as a conflict to
+anyone holding both reports, which — since Session 0 is the record — means anyone at all.**
+**UTC with a `Z` from here, on both sides.** **A stamp right in one frame and wrong in
+another is the same class as an artifact valid in its own repo and stale against its
+source: locally correct, compositionally wrong.**
+
+**Watch orders extended once more: report a held item's AGE.** **A hold that is hours old
+is a decision; a hold that is days old is a decision nobody has revisited. D's branch was
+five days old and that was the whole finding.**
+
+#### R237 — the declaration has already retired itself once, which is the arm nobody tests
+
+**Session 0 traced E's declaration mechanism through its whole history rather than looking
+at its current instance:**
+
+    1ec3882  00:37Z  first declared
+    04e4f81  01:15Z  "B re-pinned, so my own REPIN NEEDED line became a FALSE CLAIM and is gone"
+    bec765c  04:05Z  re-declared as conditions changed
+    774f7f3  04:34Z  current instance, [DEFERRED]
+
+> **RULING R237: the declaration was DELETED the moment it stopped being true, by its own
+> author, unprompted. That is the arm nobody tests.**
+>
+> **A status field that is only ever ADDED is a field that accumulates lies.** **This one
+> has demonstrated it can be REMOVED on becoming false — which is the only thing that makes
+> the closed set worth anything.**
+>
+> **So the mechanism has a matched pair of its own: it can hold and it can retire. That is
+> the gate's matched pair ONE LEVEL UP** — E proved the gate accepts both legal states, and
+> the history proves the declaration itself does.
+
+**Set beside R235's finding, E has now demonstrated three things about one small mechanism:
+that the gate accepts both states, that a gate punishing an honest hold teaches you to hide
+it, and that the declaration retires itself when false.** **That is a complete lifecycle on
+a status field, which is more than most instruments in this project have.**
+
+**AND SESSION 0'S AGE RULE CAUGHT A TRAP INSIDE ITSELF ON ITS FIRST APPLICATION.**
+
+    three availability holds   14:59Z, 15:01Z, 15:19Z    ~1 hour      decisions
+    the 1.5.0 re-pin defer     declared 04:34Z           ~11.5 hours
+
+> **THE AGE OF A HOLD IS NOT THE AGE OF THE COMMIT RESTATING IT.** The re-pin appears at
+> 04:34Z, 04:38Z and 04:52Z — **the last two are restatements carried forward in a handover
+> block, not new decisions.** **Dating it from the newest mention would have made an
+> 11.5-hour hold look like a 69-minute one — inverting exactly the signal the rule was
+> written to produce.**
+>
+> **And the ground is older still: E's words are *"[DEFERRED] by ruling"*, so the reason
+> predates the record of it.** **Three ages — ground, first declaration, last restatement —
+> and only ONE answers "has anybody revisited this."**
+
+**That is the containment shape, committed inside the rule written to prevent it, caught by
+its author on first use.** **Third instance today of a session reproducing a failure it had
+just named: C built the tile it had certified against, A re-armed the lazy-load defect it
+wrote the argument for, and Session 0 nearly mis-dated a hold using the rule that exists to
+date holds.**
+
+#### R238 — my scope correction came back sharper than I sent it
+
+**I told Session 0 that its restraint was right in form and wrong in scope: the patches
+touch engine behaviour, declaring that they are held does not. It turned that into a
+general rule I had not stated:**
+
+    wrong test   is this near code?
+    right test   DOES THE REPORT MOVE ANYTHING?
+
+> **RULING R238: adopted as the boundary test, superseding my formulation.** **Describing
+> the state of the record is recording EVEN WHEN THE THING DESCRIBED IS CODE.** **Proximity
+> to code was never the line and I had left it implied.**
+
+**Session 0's own accounting of the cost:** *"My restraint would have cost the finding its
+only actionable half, and it was declining to say something that was mine to say."*
+**Over-restraint is a failure mode with the same weight as overreach, and it is harder to
+see because it produces no artifact to inspect** — **which is R233's own generalisation
+turned on its author: a report not made leaves no trace either.**
+
+**AND IT DECLINED TO REPORT A STOP IT COULD NOT SUPPORT.** `LoxyBee/EQLS-Auras` at
+`53aea4eb`, unchanged for eleven minutes. **"Eleven minutes is not a stop and I am not
+reporting one — a ref that has not moved in eleven minutes on a soft-release afternoon is
+indistinguishable from one being worked on."** **It also committed to saying what it is
+comparing the quiet against rather than only that it is quiet** — a possible absence
+reported as a possible absence, on the one signal I asked it to watch, with the launch in
+progress and every incentive to report something.
