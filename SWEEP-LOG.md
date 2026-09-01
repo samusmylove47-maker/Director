@@ -477,3 +477,24 @@ Compared current remote heads against the 1 Sep 10:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 12:24Z
+
+Compared current remote heads against the 1 Sep 11:28Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `f108ef0f` → `efb9663b`
+  ("CLOSES the handover's broken citation and its five wrong figures,
+  and lifts the fan-out out of the container"), authored
+  2026-09-01T11:59:29+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `1e028355` →
+  `e66da9b5` ("THE SHARD GATE VERIFIED BYTES THE CONSUMER NEVER READ:
+  model4 hard-coded its repo root"), authored 2026-09-01T11:48:39+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e0efe712`.
+- `EQLSLockouts` `session-d/raid-rows`: `0a5bfcb0`.
+- `EQLSAuras` `main`: `b05741bf`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
