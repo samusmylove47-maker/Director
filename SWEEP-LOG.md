@@ -560,3 +560,31 @@ Compared current remote heads against the 1 Sep 14:25Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 16:24Z
+
+Compared current remote heads against the 1 Sep 15:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `e0efe712` → `74a38b44` ("Merge pull request #169
+  from samusmylove47-maker/claude/sky-correction-log"), authored
+  2026-09-01T16:21:05Z.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `522637fa` → `8a6523c0`
+  ("ANSWERS the URL-length order: 351 characters fully geared — and the
+  link dies on patch day, on a catalogue whose items have no IDs"),
+  authored 2026-09-01T16:04:41+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `a2f162b9` →
+  `9250907a` ("P-3 SIZED ON THE PUBLISHED NUMBERS: one character's DPS
+  is 16.6% too low, another's is 1.1% too HIGH"), authored
+  2026-09-01T16:23:19+00:00.
+- `EQLSLockouts` `session-d/raid-rows`: `0a5bfcb0` → `e54bc20c` ("The
+  artifact did not survive its own repository: git normalisation broke
+  the hash"), authored 2026-09-01T12:09:40-04:00.
+- `EQLSAuras` `main`: `b05741bf` → `14cb64a1` ("STRANGER TEST: one swing
+  named a tank, and 4 observations looked like 4,000"), authored
+  2026-09-01T11:37:47-04:00.
+
+**Unchanged:** none — all five repos moved since the last sweep.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
