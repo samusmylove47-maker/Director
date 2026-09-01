@@ -11918,6 +11918,9 @@ prefix. This closes the other sixteen.**
 | R130 | **A proved R122 by KILLING the branch — disabling the sha1-vs-name check left all 46 cases CAUGHT, exit 0.** And **my proposed mutator was refuted by measurement**: changing the manifest's recorded filename makes the file MISSING, so a third branch fires first; the hash comparison is reachable only when a file EXISTS whose name disagrees with its content, **a state that cannot be constructed from the manifest alone.** A renames the file instead (byte-preserving), adding a cleanup callable to `SPECIAL` — 47 of 47. **And A corrected my framing: the byte-count case was MISFILED, not wrong** | `pending` | **stands; my fix refuted** |
 | R131 | **The MSYS path fault is the MACHINE's, not my instrument — A reproduced it independently, by accident, the same tick.** `git show <ref>:.dotfile` → `origin\main;.gitattributes`, pipeline prints **0 lines**, indistinguishable from an empty file. **Any session on this machine reading a dot-path through a colon is exposed.** Three working readings recorded. **A's framing of my control failure: same shape as its LEDGERS finding — a positive drawn from outside the blind region — but arriving in a READING instrument. The control has to share the property under test** | `pending` | **machine-wide; all sessions** |
 | R132 | **Ship seam checked and CLEAR — recorded because the zero was real and the inference from it would have been wrong.** Zero pages on main reference `eqls-50upgrades.*.js`, and =Upgrades is not among `check.py`'s two served apps. **But `public/tools/50-upgrades.html` is 15,275 B / 3 scripts / 2 inputs — the same shape as `lockouts.html` and `sky-ledger.html` — and links out to B's GitHub Pages app.** B's bundle was never meant to live in `eql-source`. No defect, no redirect for A. **The live question is B's: does a merge republish the hosted app** | `pending` | **no finding; asked of B** |
+| R133 | **B's OWN WORKING BRANCH is a publish trigger — `deploy.yml` fires `on: push: branches: [claude/eql-gear-optimizer-tfzvh6, main]`, one workflow, no others.** Every push B makes goes to players; there is no staging step. **The project's rule — "the owner merges; merging publishes" — assumes merging is the gate, and in B's repo it is not.** B flagged it rather than letting me discover it. **A governance fact, surfaced to the owner with file and line; not mine to change.** Upside: R124's ship-blocker fix is ALREADY LIVE, no merge pending | `pending` | **owner's decision** |
+| R134 | **The served artifact verified from the BYTES, not the manifest:** `98005988`, 17,357 B, sha matching local, the completed-comparison reject rule present, manifest field-for-field including `builtAt`. Tonight's fixes confirmed by string in the served bundle; **the served self-audit names its own uncovered file, `data/focus-effects.json`.** **And my null-id question is CLOSED by refuting its premise — the served 509,656-byte app has ZERO references to `bis-catalog.json` or `bis/`, so the file I loaded is one no player fetches** | `pending` | **stands; question was misdirected** |
+| R135 | **I was enumerating a SUBSET of the remote and calling it the remote.** I reported #163's branch missing; it is `claude/media-hash-case` at `852a0762`, +1 ahead. `for-each-ref refs/remotes/origin` reads my fetched cache; `ls-remote` queries the server and returns **143 heads**. Three branches existed that my cached enumeration could never have shown. **R101's shape — carried state read as live state — and the tick brief guards a FAILED fetch, not one that succeeded for the wrong set.** Census now comes from `ls-remote` or a full refspec | `pending` | **mine; adopted** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -17671,3 +17674,104 @@ reach a player. Asked.**
 **A proceeds with the R119 probe. Nothing has changed my ruling, condition 3 remains the
 real work, and A has already named it correctly: the tool refuses to report if a
 generator uses a route it cannot see.**
+
+---
+
+### 1 Sep 03:1xZ — RULING R133–R135: a working branch is a publish trigger, and I was enumerating a subset of the remote
+
+#### R133 — B's own working branch deploys to players, and the project's control model does not cover it
+
+**I asked B whether a merge republishes the hosted app. B measured it and the answer
+inverts the question. Verified here in `.github/workflows/deploy.yml`:**
+
+```yaml
+name: Deploy EQL Upgrades to GitHub Pages
+on:
+  push:
+    branches: [claude/eql-gear-optimizer-tfzvh6, main]
+```
+
+**Builds `web/dist` → `actions/upload-pages-artifact@v3` → `actions/deploy-pages@v4`.
+Surveyed rather than searched: `.github/workflows/` holds exactly one file.**
+
+> **B's own working branch is a publish trigger.** **Every push B makes goes to players.
+> Not a branch-serve, not a committed `docs/` — it publishes the BUILT OUTPUT, on push.**
+
+**B named it before I could, and named both halves:**
+
+> *"The fix does not need a merge and did not wait for one. It went live on the push.
+> That is the good news and the uncomfortable news in one sentence — **there is no
+> staging step between my push and a player**, and you should know that about this
+> repository rather than discover it."*
+
+> **RULING R133: this is a GOVERNANCE fact and it is the owner's, not mine.** The
+> standing rule of this project is *"Never push to main. Never merge a PR. The owner
+> merges; merging publishes."* **That rule assumes merging is the publish gate. In B's
+> repository it is not** — pushing to a working branch is. **So B has been publishing to
+> players all night by the design of an Action nobody re-read, and the owner's control
+> model does not reach it.**
+>
+> **I am not changing it and I am not proposing which way it should go.** Removing the
+> branch from the trigger, or gating on a Pages environment, are both available and both
+> are capability decisions. **Surfaced to the owner with the file and the line.**
+
+**The upside is real and is why this is not an alarm: R124's ship-blocker fix — 3,910
+erased upgrades — IS ALREADY LIVE.** **No merge was needed and none is pending.**
+
+#### R134 — verified from the wire, and my null-id question is answered by refuting its premise
+
+**B checked the served artifact against the bytes rather than the manifest:**
+
+```
+served   eqls-50upgrades.98005988.js   17,357 bytes   sha256[:8] 98005988
+local    same name                                    sha256[:8] 98005988
+served bytes contain the completed-comparison reject rule:  1 occurrence
+manifest matches field-for-field, builtAt included (2026-09-01T02:43:38.363Z both sides)
+```
+
+**Tonight's fixes confirmed present in the served bundle by string —
+`offhand-unpriceable`, `offhand-occupied`, `"High Elf"`, `"all fifteen playable"` — and
+the data payload deploys with it: `meta.json` `8a27d4e8`, `contamination.json`
+`8c361da9`, both matching local.**
+
+> **And the served self-audit NAMES ITS OWN UNCOVERED FILE, `data/focus-effects.json`.**
+> **B's R109-shape finding is visible to a player inside the product's own self-audit
+> rather than only in a commit message.**
+
+**MY NULL-ID QUESTION IS CLOSED, and correctly — B refuted its relevance rather than
+answering it:**
+
+```
+served app bundle: 509,656 bytes
+  references to bis-catalog.json ... 0
+  references to bis/ .............. 0
+```
+
+> **The catalogue ships at `/bis/` and the player-facing app never fetches it.** **The
+> file I loaded to reproduce R124 is not the one that matters, so 92% null `id` is a
+> property of an artifact no player reads.** **I asked a question about the wrong file
+> and B established that rather than answering inside my frame.**
+
+#### R135 — I was enumerating a SUBSET of the remote and calling it the remote
+
+**I reported #163's branch missing. It is `claude/media-hash-case` at `852a0762`, pushed
+22:59, +1 ahead of main.**
+
+```
+git for-each-ref refs/remotes/origin   -> reads MY FETCHED CACHE
+git ls-remote --heads origin           -> queries the SERVER: 143 heads
+```
+
+> **I fetch named branches each tick and then enumerate `refs/remotes/origin` as though
+> it were the repository.** **It is the subset I happened to ask for.** **`ls-remote`
+> plus a full `+refs/heads/*` fetch found `media-hash-case`, `selftest-standing` and
+> `fix/gate-selftest-proves-its-own-check` — none of which my cached enumeration could
+> ever have shown.**
+
+> **RULING R135: R101's shape again — carried state read as live state.** **The tick
+> brief tells me to diagnose a failed fetch; it does not protect against a fetch that
+> SUCCEEDED for the wrong set.** **Adopted for my own state reads: the branch census
+> comes from `ls-remote` or a full-refspec fetch, never from cached remote-tracking refs
+> alone.**
+
+**#163 is open and waiting on the owner.**
