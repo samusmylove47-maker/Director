@@ -10,3 +10,8 @@ Thumbs.db
 # Claude Code local runtime state (session ids, pids, lock files). Machine-local,
 # and this repository is public.
 .claude/
+
+# A message about a person, placed here by the owner. The Sage wrote:
+# "deliberately not in any repository — information about a person is theirs
+# to place." Ignored so `git add -A` cannot sweep it into the record.
+forthedirectorabouttheowner.md
