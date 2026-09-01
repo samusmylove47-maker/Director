@@ -12015,6 +12015,11 @@ prefix. This closes the other sixteen.**
 | R219 | **D retracted its own disjointness finding for the exact fault it had warned me about.** It compared `Desktop-Shara` against `state/logs-Avenrae` — **five more Shara logs sat in the same directory as Avenrae's, never looked at.** *A live instrument on the wrong population returns a real number* — D's own sentence to me about my sticky-attribution error, found in its own work an hour later. **Corrected: 7.38 days of overlap, 88,997 seconds logged by both.** **And my hypothesis was confirmed — each grouped player DOES receive their own first-person task grant, five matched pairs at −4 to +26 s.** **C's fact was right and its inference wrong; neither C nor I could settle it, D could, holding corpus and parser.** No capture request goes up. **Stating it as reasoning-to-be-checked rather than a finding is the only reason it did not become my third wrong mechanism of the day** | `retracted / confirmed` | **D** |
 | R220 | **Two players, one group, same raids, same week — ALL 25 CELLS DISAGREE.** Shara `notLooked 25, spans=false`, one hole of **24.51 h**; Avenrae `completed 8 / open 10 / conditional 7, spans=true`, none. **A 31-MINUTE MARGIN ON A 24-HOUR TOLERANCE DECIDES EVERY CELL, discarding 37 recorded and attributed kills.** Both observed ~38–40% of the period **so the observation floor is not the cause.** D's own prediction 3, understated: **compare only completions and you see 37 against 43 and conclude they raided differently — the disagreement is entirely in coverage and entirely invisible where anyone would look.** **D refused to call the tolerance wrong and I upheld it. What is established is that the failure is a CLIFF not a slope, and a player cannot see which side they are on** — fully supported without knowing the right threshold. **CLOSED BY PR #11: the engine now says *1.3h over the 24h tolerance*, derived from the measured hole and the published threshold, with a test that fails a hardcoded string. The threshold is unchanged. My fix shape, D's execution — it had the cliff and had stopped at describing it** | `fixed, PR #11` | **owner** |
 | R221 | **Cleared to publish — established by EXECUTION — and the caveat turned out to be a house habit.** D built from `main`, opened the real artifact, injected the failing state, pinned the clock, called the page's own `render()`, read the DOM: headline reads `not looked`; beneath it unprompted *"The log does not cover this week yet — so this is 'I do not know', not 'nothing is done'"*; 25/25 cells carry the reason. **Failure shape five would be 25 blank cells with the reason trapped in the engine; that is not what happens.** **But the reason lives in a `title` — absent on touch, unannounced — and that is the THIRD instance:** the 7px gate dot, the coverage score's 400-character explanation the audit calls the page's best material **also `title`-only** and pointing at a 404, and now a lockout cell in another repo by another author. **Three independent authors reached for the one attribute that does not survive a phone — a house habit, and the audit's central verdict with a third data point.** **Finding 4 re-scoped from markup fix to RULE: every `title`-only explanation gets a visually-hidden span, plus a check assertion that no `title` may be the sole carrier of a claim.** **D declined to fix its own tooltip ahead of the rule — *a one-off fix in my repo is exactly how this became a house habit.*** **Four sessions converged on one class today: D's wrong directory, my two read-instead-of-run claims, C's colliding key, A's fifth heredoc trap — instrument sound, aim not, every correction from a second independent look rather than a more careful first one** | `ruled` | **A + D** |
+| R222 | **THREE ARTIFACTS, NO TWO AGREEING — and nothing wrong is live.** `eql-source` serves `16d4edad` (the original); `EQLSLockouts` main commits `14106e64` (30 Aug); its source builds to `fd053e47`; **`latest.txt` names the stale one and has since 30 August, with SEVEN engine commits since** — token cap, false-`no` fix, mutation harness, Voidling control, unconditional-assignment, dedupe-horizon, and #11's over-tolerance message. **D reported "a live problem with what A published"; I measured and A confirmed by measurement that A has published NOTHING.** The supported claim is **"an armed trap in what A is about to publish"** — publishing by copying the artifact or following `latest.txt` lands none of the seven, **including the floor fix that was the reason I unblocked the publish and the fix the owner merged twenty minutes earlier.** **D held the discipline on the step it guarded and lost it on the step before: it refused to infer WHICH method A used, then assumed A had acted at all.** **Structural: `latest.txt` can name an artifact its own source no longer produces and nothing complains — R209 one level down, local validity with broken composition and no instrument** | `caught before firing` | **D → A** |
+| R223 | **C BUILT THE INVERSE OF WHAT IT HAD CERTIFIED SIX HOURS EARLIER.** Its stranger test found its own tile naming a tank — `"Grimtusk"`, confidently — **off a SINGLE mob swing.** Six hours before, C had measured the lockout grid's degradation at five evidence levels, confirmed it says `not_looked` 25 times rather than guessing, and reported that as correct. **C's own words: *"I found the shape, wrote it up, routed it — and had built the inverse."*** **This is the strongest evidence today for something asserted all day without proof: KNOWING A FAILURE SHAPE DOES NOT PROTECT YOU FROM IT.** C held the concept in words, in a message it had just sent, and it did not fire looking at its own tile. **The lockout grid was protected by a coverage-span test somebody wrote into the code, not by anybody remembering the principle. A principle in a head catches nothing; a guard in the build catches everything it covers.** Fixed with a fourth mutually exclusive key, **contract re-verified rather than assumed local — one live tile across all 4,614 emissions, ground truth held at 85.3%** | `fixed` | **C** |
+| R224 | **THE FIFTH SURFACE REMOVED, and C's is the cleanest statement of the shape.** C's tile rendered four observations identically to four thousand; it **nearly reached for a minimum-observations threshold and did not.** ***"Displaying the evidence beats judging it, and there is nothing to tune."*** Counts now always on the tile — `Grimtusk (4)` reads thin to anybody, `Grimtusk (312)` reads solid. **No constant, no calibration, nothing to defend — a design with nothing to tune cannot drift.** Third defect retired the same way: `showMargin` deleted because `(+3)` rendered identically to `(+3000)` and a three-swing margin is noise reading as a finding. **Five instances today of the only correction shape that has held: no backslash content through a heredoc; no reporting a behaviour unexecuted; no `title` as sole carrier of a claim; no pointer without a producer check; display the evidence rather than judging it.** **BADGE QUESTION RULED not routed: a badge marks a claim weaker than it looks, the overlay carries measurement only, so there is no unsourced claim there to protect — design upheld, and surfacing the estimate on the overlay REFUSED as trading a real guarantee for a convenience on launch day.** Residual is discoverability, not provenance | `ruled` | **C** |
+| R225 | **A's sharpening supersedes my pairing and is recorded as A's.** A **refused** to write the invariant in `eql-source` because it cannot rebuild D's source there, so the assertion could never fail — ***"the first of the two fault shapes I wrote into `inputscover.py` this morning, and I am not shipping one."*** **A check that cannot return one of its two answers converts an unmeasured property into a green tick.** **And A identified the actual mechanism I had missed: `lockouts.py` records file, hash, sha256, bytes, kb, read-date — every one a property of the FILE, none of the SOURCE — so a seven-commit-stale artifact and a current one are indistinguishable to A.** That is why the trap was armed against A's action, not D's. Contract term approved **as a follow-up, not today**: producing repo emits the source commit beside the artifact. **THE GENERALISATION:** *"Neither was caught by a check inside the thing that was wrong… every one of these needs an instrument that lives OUTSIDE the artifact it judges."* **R209 caught by a session reporting on itself; R222 by a Director measuring a repo he does not own. It explains why every catch today came from a second independent look and never a more careful first one — a careful first look is still inside.** **And A's own escape was structural: `EQLS_SKIP_APPS=1`, a guard A shipped in #158 — *"I did not avoid this trap by remembering it. The flag meant I could not walk into it"*** | `ruled` | **A** |
+| R226 | **D verified its own new check as a MATCHED PAIR, and ran the precondition before the negatives.** PR #12: **`EQLSLockouts` is served nowhere** — `repos/EQLSLockouts` 200 as the precondition (**without which the 404 below is uninformative**), `has_pages false`, no homepage, `/pages` 404, zero `.github` files on any ref, **and a control repo it cannot read returning the same 404.** So the rebuild is **self-consistency, not a publish.** **The new assertion reads the COMMITTED pointer out of git, builds from current source, and requires a match — comparing against the working-tree `latest.txt` would be a tautology, since every other test in that file builds first and overwrites it.** **And D ran it deliberately in the broken state FIRST: it fails before the rebuild and passes after.** ***"A check only ever seen to pass is not known to work"* — the rule D had been applying to everyone else's guards all day, applied for the first time to one it was writing at the moment of writing it.** 142 green | `PR #12 open` | **owner** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -20756,3 +20761,219 @@ in a session — it is a property of the work.**
 than promising more care.** A will not write backslash content through a heredoc at all. I
 do not report a behaviour I have not executed. **I hit the same heredoc trap writing this
 entry, twenty minutes after recording A's rule, and applied A's rule instead of retrying.**
+
+---
+
+### 1 Sep 16:5xZ — RULING R222–R224: three artifacts and no two agree, C builds the inverse of what it certified, and the fifth surface removed
+
+#### R222 — an armed trap, not a live problem, and the difference is the whole ruling
+
+**#11 merged at `5e44de17`. D certified it by executing: composed tree at `origin/main`,
+clean worktree, 141 pass. Then D reported "a live problem with what A published."**
+
+**I measured instead of accepting it, and the picture is different:**
+
+    eql-source main SERVES        eqls-lockouts.16d4edad.html   <- the ORIGINAL, unchanged
+    EQLSLockouts main COMMITS     eqls-lockouts.14106e64.html   <- built 30 August
+    main's SOURCE builds to       eqls-lockouts.fd053e47.html   <- current
+    latest.txt on main NAMES      eqls-lockouts.14106e64.html   <- points at the stale one
+
+> **RULING R222: three artifacts, no two agreeing — and NOTHING WRONG IS LIVE. A has not
+> published. The accurate statement is not "a live problem with what A published" but "an
+> armed trap in what A is about to publish."**
+
+**`latest.txt` has named `14106e64` since 30 August and the engine has moved SEVEN commits
+since that artifact was built** — token cap, the false-`no` fix, the mutation harness, the
+Voidling control fix, the unconditional-assignment requirement, the dedupe-horizon counter,
+and #11's over-tolerance message. **Publishing by copying the committed artifact or by
+following `latest.txt` ships the 30 August build and lands none of the seven — including
+the floor fix that was the entire reason I unblocked the publish, and the fix the owner
+merged twenty minutes earlier.**
+
+**D held the right discipline on the step it guarded and lost it on the step before.** It
+explicitly refused to infer WHICH method A had used, and assumed A had acted at all.
+**Recognition rather than reproach: I made that exact error twice today.**
+
+**THE STRUCTURAL FINDING, and it is R209 one level down.**
+
+> **`latest.txt` can name an artifact the current source no longer produces, and nothing
+> complains.** **The build is deterministic, so the mismatch is ALWAYS detectable — but
+> only by someone who runs the build and compares, and that check does not exist.**
+>
+> **R209: a branch clean, pushed and green while disconnected from where the work must
+> land. R222: an artifact committed and internally valid while disconnected from the
+> source that produces it.** **Both look right locally and are wrong compositionally.
+> Neither had an instrument.**
+
+**Directed: D rebuilds from `5e44de17` and PRs the artifact WITH `latest.txt`, making its
+own repository self-consistent — explicitly NOT a publish, since publishing is a change to
+`public/` on `eql-source`, A's proposal and the owner's merge.** **D instructed to say
+BEFORE pushing if `EQLSLockouts` is itself served anywhere, in which case I route it as a
+publish instead. I do not know whether it is and am not assuming.** **And a build-time
+assertion added: the artifact `latest.txt` names must be the artifact the current source
+reproduces.**
+
+#### R223 — C built the inverse of what it had certified six hours earlier
+
+**C ran the stranger test on its own module and found three defects. The first is the most
+interesting result of the day.**
+
+> ***"That is exactly the failure I certified the lockout grid against six hours ago… I
+> found the shape, wrote it up, routed it — and had built the inverse."***
+
+**Cold start, C's tile named a tank — `"Grimtusk"`, confidently — off a SINGLE mob swing.**
+**Six hours earlier C had measured the lockout grid's degradation at five evidence levels,
+confirmed it says `not_looked` twenty-five times rather than guessing, and reported that as
+correct behaviour.**
+
+> **RULING R223: this is the strongest evidence today for something we have asserted all
+> day without proof — KNOWING A FAILURE SHAPE DOES NOT PROTECT YOU FROM IT.** **C held the
+> concept in words, in a message it had just sent, and it did not fire when C looked at
+> its own tile.**
+>
+> **The lockout grid was protected by a coverage-span test somebody wrote into the code,
+> not by anybody remembering the principle.** **A principle in a head catches nothing. A
+> guard in the build catches everything it covers.**
+
+**Fixed with a fourth mutually exclusive key — `aggro-watching`, "Aggro — watching (1
+swing)" — preserving the four-key contract: exactly one live tile across all 4,614
+emissions, re-verified after the change rather than assumed local. Ground truth held at
+85.3%.**
+
+#### R224 — the fifth surface removed, and C's is the best statement of the shape
+
+**C's second defect: four observations rendered identically to four thousand. A first-time
+user could not tell a reading from a rumour. C nearly reached for a minimum-observations
+threshold and did not.**
+
+> ***"Displaying the evidence beats judging it, and there is nothing to tune."***
+
+**The counts now sit on the tile always — `Grimtusk (4)` reads thin to anybody,
+`Grimtusk (312)` reads solid to anybody. No constant, no calibration, nothing to defend.**
+**A design with nothing to tune cannot drift.** **C's third defect retired the same way:
+`showMargin` deleted, because `(+3)` rendered identically to `(+3000)` and in a raid a
+three-swing margin is noise reading as a finding.**
+
+> **RULING R224: that is the FIFTH instance today of the only correction shape that has
+> held, and C's sentence is the cleanest statement of it.** **A will not write backslash
+> content through a heredoc at all. I do not report a behaviour I have not executed. No
+> `title` may be the sole carrier of a claim. `latest.txt` must name what the source
+> produces. And now: display the evidence rather than judging it.** **Every one removes a
+> surface instead of promising attention.**
+
+**THE BADGE QUESTION, RULED RATHER THAN ROUTED.** C asked whether the estimate's badge
+should appear on the overlay, since a tile-only user never meets it, and called it the
+owner's product call. **On the provenance half it is mine and it is NOT a defect: a badge
+marks a claim as weaker than it looks; the overlay carries the measurement only; there is
+no unsourced claim there for a badge to protect.** **The design is self-consistent and
+upheld — the mid-fight line must not carry unsourced weights.** **What survives is a
+discoverability question, not a provenance one: does a tile-only user know the panel
+exists? Cheap, and C to check it.** **Surfacing the estimate on the overlay to solve it is
+refused — that trades a real guarantee for a convenience, on launch day.**
+
+**AND A THIRD INSTANCE OF DOCUMENTATION OUTLIVING WHAT IT DESCRIBED:** C fixed two strings
+its own fix had made stale within ten minutes — a header reading "three states" and a test
+asserting the tile carries no evidence indicator. **Beside C's stale role definition and
+A's stale record header, both flagged to me this morning. Three in one day.**
+
+#### R225 — A's sharpening supersedes my pairing, and the instrument must live outside what it judges
+
+**A confirmed by measurement that it has published nothing** — `eql-source` main serves
+`16d4edad`, `assets/lockouts.json` records `file=16d4edad, kb=274`, and **all seven of its
+working branches touch the app surface zero times.** **D inferred; I measured; A measured
+its own side. The measurement wins and nothing wrong is live.**
+
+**AND THE REASON IS STRUCTURAL RATHER THAN CAREFUL, which is the part that decides whether
+it holds tomorrow:** every build A has run since yesterday carried `EQLS_SKIP_APPS=1` — a
+guard **A itself shipped in #158**, precisely so a branch about something else cannot
+republish someone else's app. ***"I did not avoid this trap by remembering it. The flag
+meant I could not walk into it."***
+
+**A REFUSED TO WRITE THE INVARIANT ON ITS OWN SIDE, AND THE REFUSAL IS WORTH MORE THAN THE
+CHECK WOULD HAVE BEEN.** The invariant is *the artifact `latest.txt` names is what the
+current source produces*, and answering it requires running the build. **`eql-source`
+cannot rebuild D's source, so any assertion A wrote there could never fail** — ***"which is
+the first of the two fault shapes I wrote into `inputscover.py` this morning, and I am not
+shipping one."*** **A check that cannot return one of its two answers is worse than no
+check: it converts an unmeasured property into a green tick.**
+
+**THE DOWNSTREAM HALF IS A'S AND IT IS THE ACTUAL MECHANISM OF TODAY'S HAZARD, which I had
+not identified:**
+
+> **`lockouts.py` records file, hash, sha256, bytes, kb and read-date — every one a
+> property of the FILE, and not one a property of the SOURCE it came from. A seven-commit-
+> stale artifact and a current one are indistinguishable to A.**
+
+**That is why the trap was armed against A's action rather than D's. D can always tell; A
+structurally cannot.** **Approved as a follow-up, not today: the producing repo emits the
+SOURCE COMMIT beside the artifact, same shape as `BUNDLE-CONTRACT.md`. The useful half is
+the human one — a person comparing two numbers sees staleness at a glance instead of
+deriving it.**
+
+> **RULING R225: A's generalisation supersedes mine and is recorded as A's. I had "local
+> correctness, broken composition", which is a description. A has the operational
+> consequence:**
+>
+> ***"Neither was caught by a check inside the thing that was wrong. That is the property
+> the class has, and it is why every one of these needs an instrument that lives OUTSIDE
+> the artifact it judges."***
+>
+> **R209 was caught by a session asked to report on ITSELF. R222 was caught by a Director
+> measuring a repo he does not own.** **It explains why every catch today came from a
+> second independent look and never from a more careful first one — a careful first look
+> is still inside.**
+
+**#167 ROUTED TO THE OWNER AS A MERGE-FIRST ITEM.** **+76/−18, and A's Sky branch is
+currently carrying 1,430 lines of sitemap against 79 lines of actual fix.** **That is
+precisely the failure I ordered the whole day around this morning, still live because the
+fix sits unmerged while everything else merges around it.** **R208 moved from work order to
+merge order: until #167 lands, every diff the owner is handed today is unreadable.** **A
+instructed not to wait on it — and if the Sky PR is ready first, to open it anyway and
+state in the body that 1,430 of its lines are noise #167 removes, because a stated defect
+is readable and an unstated one is what buries the change.**
+
+#### R226 — D verified its own new check as a matched pair, and ran the precondition before the negatives
+
+**PR #12: the rebuilt artifact, `latest.txt`, and the assertion. 142 green.**
+
+**THE PRECONDITION CAME FIRST, WHICH IS WHY THE NEGATIVES MEAN ANYTHING.** I had asked D
+to say before pushing whether `EQLSLockouts` is itself served anywhere, since that would
+make the rebuild a publish rather than a repair. D answered by measurement:
+
+    repos/EQLSLockouts        200      <- the precondition; without it the 404 below is uninformative
+    has_pages                 false
+    homepage                  none
+    /pages                    404      <- meaningful only because the line above is 200
+    .github files on ANY ref  0
+    control: a repo it cannot read -> the SAME 404
+
+**A bare 404 from an endpoint is exactly the reading that fooled me twice with a mangled
+path — an absent thing and a broken instrument are indistinguishable without the pair.**
+**D established that its instrument can see the repo at all, and separately that an
+unreadable repo returns the identical 404. Both halves.** **So the rebuild is
+self-consistency, not a publish, and it went ahead on that basis rather than on my
+assumption.**
+
+**THE CHECK ITSELF AVOIDS A TAUTOLOGY THAT WOULD HAVE MADE IT WORTHLESS.** It reads the
+**committed** pointer out of git, builds from current source, and requires a match.
+***"Comparing against the working-tree `latest.txt` would be a tautology — every other test
+in that file builds first and overwrites it."*** **A check comparing a freshly-written file
+against the thing that just wrote it cannot fail.** That is the same shape A refused an
+hour earlier for the same reason, found independently.
+
+> **RULING R226: and this is the part that certifies it — D ran the new assertion
+> DELIBERATELY IN THE BROKEN STATE FIRST. It fails before the rebuild and passes after.**
+>
+> ***"A check only ever seen to pass is not known to work."***
+>
+> **That is the matched-pair rule this project runs on, applied by D for the first time to
+> a guard it was writing at the moment of writing it — having spent all day applying it to
+> everyone else's.**
+
+**The drift it caught, for the record: `latest.txt` named `14106e64`, built 30 August at
+`fe147286`; the source produces `fd053e47`; seven engine commits between.**
+
+**D's own accounting of its error, which I did not have to extract:** *"I refused to infer
+WHICH method A used and then assumed A had acted at all — the step before the one I
+guarded."* **Fourth wrong-surface variant today. Two mine, two D's, and every correction
+came from a second independent look.**
