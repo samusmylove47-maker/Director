@@ -11905,6 +11905,10 @@ prefix. This closes the other sixteen.**
 | R117 | **The second fault was found by WRITING the test, not by reading.** `stamp.py` wrote the stamp without `newline="\n"`, so on Windows the JSON indent newlines became CRLF — verified by matched pair (stamp: 2 CR bytes, `check.py`: 0). **It BLOCKED the test: `gate_selftest` restores through an LF round-trip, so a case touching that file would have converted CRLF→LF while claiming to leave the tree as found — R103's shape inside the harness whose job is to leave no trace.** **Third time tonight the artifact under construction was the instrument.** And A's lesson on its third heredoc trap: **a documented trap is a convention; documentation is not a guard** | `pending` | **stands** |
 | R118 | **`check.py` tells a Windows contributor not to commit CORRECT work.** No `.gitattributes` on main + default `core.autocrlf=true` + `os.path.getsize` at `check.py:991` = all four dataset byte assertions fail on correct content (`zones.v1.json` blob 16282 / worktree 16742). **The hashes stay CLEAN because `json.load` discards whitespace — so it reads like data corruption and is line endings.** CI is ubuntu-latest so the site is unaffected; it is a live trap on the owner's machine. **Same root cause as R117 one step earlier: byte-exact assertions were added without declaring line endings.** Found by the 13-agent verification; **I had brushed against it and filed it as my own instrument error — routing around an obstacle is how you stop seeing it** | `pending` | **stands; one file fixes it** |
 | R119 | **RULING: LAND the runtime open() probe, under three conditions.** A grepped first and reports it WORTHLESS — it missed `_media/` again, because `media.py` joins a VARIABLE. *"Grepping harder cannot find a path that does not exist until runtime."* The probe measured **152 paths read, 109 build inputs, 112 fingerprinted — every build input actually read IS fingerprinted.** Conditions: (1) `inputscover`'s caveat must NAME its exit — it currently points at nothing; (2) the tool states its own limits in output; (3) **it must CHECK the eight-route assumption, not assume it — a probe whose soundness rests on an unenforced property is failure shape 1 waiting to happen** | `pending` | **stands; A to build** |
+| R120 | **A refutation verdict must be per-PROPOSITION, not per-finding.** B measured its sweep's skeptics producing FOUR false refutations of real defects, two by 2-of-3 majority: *"a skeptic is another oracle failing in the opposite direction, and 'refuted' reads as reassurance."* **Mine failed differently and worse: 7 verdicts, 6 not refuted, and the one 'refuted' confirmed the MECHANISM while killing the severity — my boolean filter deleted the only real defect in the run from the survivor list.** Adopted: the commissioning session reads the REFUTED pile, not only the survivors | `pending` | **mine; binds my own workflows first** |
+| R121 | **Following `check.py`'s own instruction rewrites 702 published pages.** Fresh clone at `4df8705d`, `porcelain`=0, `autocrlf=true` → check.py exit 1, 5 blockers; `build.sh` → exit 0; `git diff --numstat` → **702 files**, every page's `site.css?v=43f19197`→`dae4961c`. **A path from a pristine clone to corrupting the published site by obeying the tool.** `_partials.py` hashes stylesheets as they sit on disk; #159 turns the mismatch into a blocker and forces the rebuild. **`.gitattributes` STILL ABSENT after #159/#160/#161** | `pending` | **highest-value unmerged change** |
+| R122 | **The media selftest case tests the branch it is not named for.** `_media_poke` (`gate_selftest.py:211-216`) only increments the recorded `bytes`, so the case named *"hashed media disagreeing with its manifest"* asserts on `check.py:864` (size), never `:858` (the sha1-name branch #159 was written to add). **264 evaluations, 0 taken, across all 42 cases.** R93's shape inside #159's own fix — the live check is fine (6 of 6 caught), the regression coverage is aimed away from it. The section banner claims every case mutates content; false for this one | `pending` | **stands; found by two agents independently** |
+| R123 | **The contract's entry point THREW when called as declared.** `bis-contract.ts` published `CandidatesFn = (input) => …` while the shipped function always required the catalogue: `candidates({...})` → **TypeError: catalog is not iterable**. **E, writing to the contract as published, got a crash** — R106's class, a type in one file and a function in another. Fixed by making the compiler the guard. **B refused the tempting fix, citing R98 back correctly: a `candidates()` returning `[]` for a missing catalogue is an empty answer wearing a completeness claim.** Plus two `ZoneSurvey` types in one repo, and `publish-bis.mjs` promising a refusal it never implemented | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -17181,3 +17185,160 @@ under-reports and still prints a confident total.**
 `PYTHONPATH` is set deliberately for one invocation, and it is never in `build.sh`.** **On
 being a fourth tool: it has a NAMED TRIGGER — run it when someone adds a generator — and a
 tool with a trigger condition is not the same object as a tool that merely sits.**
+
+---
+
+### 1 Sep 02:2xZ — RULING R120–R123: skeptics fail in the opposite direction, and following `check.py`'s instruction rewrites 702 pages
+
+#### R120 — a refutation verdict must be per-PROPOSITION, and B measured why
+
+**B ran a sweep whose adversarial layer reported 21 raised, 20 killed, 1 surviving — and
+FOUR of the twenty it killed are defects B independently confirmed and has already
+fixed:**
+
+```
+zones.v1.json downgrades 3 checks      refuted x1    measured: exit 0, PASSED, 65 -> 62
+"checks run: N" is unguarded           refuted x2    one occurrence repo-wide
+depth-1 makes every date read as today refuted x2    2026-09-01 vs true 2026-08-16
+publish-bis blind to shard loss        refuted x1    19 shards gone -> exit 0, 3456 -> 0
+```
+
+> **B: *"A skeptic is not a safer oracle than a finder — it is another oracle failing in
+> the opposite direction, and 'refuted' reads as REASSURANCE in a way a finder's claim
+> does not."*** **Two of the four were killed by a 2-of-3 MAJORITY.**
+
+**I ran the same pattern tonight and read my own journal because of B's finding. Mine
+did not fail the same way, and the way it DID fail is worse:**
+
+```
+7 refutation verdicts       6 NOT REFUTED       1 refuted
+```
+
+**The one marked refuted:** *"The physical mechanism is real and I reproduced it, but the
+claim's causal attribution and its SHIP_BLOCKER severity are both refuted by
+measurement."*
+
+> **The refuter was RIGHT and my script was wrong.** It refuted the SEVERITY and the
+> ATTRIBUTION while CONFIRMING the mechanism — and my filter, `!verdict.refuted`, deleted
+> the whole finding from the survivor list. **I acted on that defect only because my
+> report also printed the raw dimension findings. Had I read `survivors` alone, I would
+> have dropped the one real defect in the run.**
+
+> **RULING R120: a finding is not one proposition.** *Mechanism*, *severity*, *scope* and
+> *attribution* are separable, and a skeptic that kills one usually leaves the others
+> standing. **A boolean `refuted` collapses them, and it collapses them toward
+> reassurance.**
+>
+> **Adopted, and it binds my own workflows first: the commissioning session reads the
+> REFUTED pile, not only the survivors.** **R100 stands and is strengthened — the
+> fan-out neither finds nor refutes on its own authority.**
+
+**Six of my seven refuters SHARPENED the finding rather than killing it** — two measured
+the scope I had asserted (*"of 59 files directly in `_build/`, exactly 58 are covered and
+exactly one is not"*), and one corrected a causal attribution while widening the defect.
+**That is what an adversarial layer is for, and it only works if its output is read as
+prose rather than as a flag.**
+
+#### R121 — following `check.py`'s own instruction rewrites 702 published pages
+
+**R118 was understated. Reproduced end-to-end on a FRESH clone at `4df8705d`,
+`git status --porcelain` = 0, `core.autocrlf=true`:**
+
+```
+python scripts/check.py                    ->  exit 1, 5 blocker(s)
+   "the data index lists 128324 bytes for sky.v1.json, which is 134041 on disk"
+   + sightings 243228/256004, zones 16282/16742, items 9797/10084
+
+EQLS_SKIP_APPS=1 bash build.sh             ->  exit 0
+python scripts/check.py                    ->  All checks passed
+git diff --numstat                         ->  702 FILES
+   public/404.html:  assets/site.css?v=43f19197  ->  ?v=dae4961c
+                     fonts/fonts.css?v=4c604a33  ->  ?v=4558f57e
+```
+
+> **RULING R121: `check.py` fails on a pristine checkout, prints "Do not commit until
+> these are fixed", and the only route back to green REWRITES EVERY PUBLISHED PAGE'S
+> STYLESHEET URL to a hash computed over CRLF bytes.** **That is a path from a clean
+> clone to corrupting the published site by following the tool's own instruction.**
+>
+> **`_partials.py` hashes the stylesheets AS THEY SIT ON DISK.** The hashing is
+> pre-existing; **#159 is what turns the byte mismatch into a blocker and therefore
+> forces the rebuild.**
+
+**`.gitattributes` is STILL ABSENT on `origin/main` after #159, #160 and #161.** **One
+file fixes it and it is the highest-value unmerged change in the project right now.**
+
+#### R122 — the media selftest case tests the branch it is not named for
+
+**Found independently by two agents, and confirmed here by reading rather than by the
+timed-out run:**
+
+```
+gate_selftest.py:211-216   _media_poke:  d[k]["bytes"] = int(d[k]["bytes"]) + 1
+                                          -- it NEVER touches file content
+gate_selftest.py:616       the case, named "hashed media disagreeing with its manifest"
+
+check.py:858   if len(_parts) != 3 or _parts[1] != _mshort:      <- the HASH branch
+check.py:864   f"against {_ent['bytes']} recorded in assets/media.json"   <- the SIZE branch
+```
+
+**The case's expect-string is *"recorded in assets/media.json"*, which is `:864`.**
+
+> **RULING R122: the case is filed under hash-sensitivity and exercises the size
+> comparison.** **The sha1-name check at `:857-861` — the only line that makes the media
+> check content-sensitive, and the one #159 was written to add — is guarded by nothing**;
+> the reported measurement is **264 evaluations, 0 taken, across all 42 cases.**
+>
+> **This is R93's shape INSIDE #159's own fix.** **The live check is not defective** — a
+> refuter measured it catching 6 of 6 media files at constant length. **What is defective
+> is the regression coverage, and a dead check would be indistinguishable from a live
+> one.** **And `gate_selftest.py:546-553` banners the section "Each case below mutates
+> content and requires the check to notice", which is false for this case.**
+
+#### R123 — the contract's own entry point threw when called as declared
+
+**B probed the shipped bundle rather than reasoning about it:**
+
+```
+EQLS50Upgrades.candidates.length      -> 2
+EQLS50Upgrades.candidates({...})      -> TypeError: catalog is not iterable
+EQLS50Upgrades.candidates(input, [])  -> 0 candidates
+```
+
+**`bis-contract.ts` published `CandidatesFn = (input: BisInput) => BisCandidate[]` while
+the shipped function has ALWAYS required the catalogue as a second argument.**
+
+> **E, writing to the contract exactly as published, got a crash.** **R106's class: a
+> type in one file and a function in another, with nothing comparing them.**
+
+**Fixed by one line — `const _contractShape: CandidatesFn = candidates;` — with an A/B:
+reverting the type fails `tsc` with *"Target signature provides too few arguments.
+Expected 2 or more, but got 1."*** **The guard is the compiler, not a comment.**
+
+> **AND B REFUSED THE TEMPTING FIX, citing my own ruling back at me correctly:** *"I did
+> NOT make the catalogue optional. A `candidates()` returning `[]` for a missing
+> catalogue is R98 again: an empty answer wearing a completeness claim."*
+
+**Two more from the same commit.** **`ZoneSurvey` existed as TWO different types in one
+codebase** — `engine/types.ts:84` `{zone,slug,title,survey,measured,facets}` against
+`bis.ts` `{title,levels?}`; a consumer reading the contract and grepping the name lands
+on the other and builds to six fields that are not there. **R81's hazard inside one
+repo.** Renamed `BisZoneSurvey`.
+
+**And `publish-bis.mjs` promised a refusal it did not implement** — its header has always
+said it *"refuses rather than publishing a stale bundle"* and **the only check was
+`existsSync`: it refused an ABSENT bundle and published a STALE one silently.** Now
+implemented, **and the source set is WALKED, not globbed by extension — R109 applied the
+hour it was ruled.**
+
+#### #161 is merged, and the reasoning is in the source
+
+**`d4ab6ce0`, 22:16 EDT.** `check.py` now carries: *"A COMPARISON THAT CANNOT RUN IS
+WORSE THAN ONE THAT FAILS, AND IT USED TO BE THE QUIETER OF THE TWO."* **R113 in the
+code rather than only in this file.**
+
+**And a hygiene note on myself:** the timed-out `gate_selftest` run left MY scratch tree
+dirty — `public/index.html` and `scripts/check.py` modified. **Caught by checking rather
+than assuming, and restored to 0 before any further measurement.** **A harness that
+mutates a tree and is interrupted leaves the tree mutated; the restore is not
+transactional.**
