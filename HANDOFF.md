@@ -11894,6 +11894,8 @@ prefix. This closes the other sixteen.**
 | R106 | **A fixture nothing loaded, versioned in its own filename — a DOCUMENT PRETENDING TO BE A CHECK.** Zero readers, confirmed with a different instrument than B's grep; the name went stale the instant the pin moved. Same class as a prose ruling and a convention: reads as verification, enforces nothing. **Second instance same repo: `bis-contract.ts:305` told E to assert a contract version `manifest.json` never carried** — one definition, zero readers. **Adopted: a version says what changed on purpose; a hash says whether anything changed at all** | `pending` | **stands; published path moved, routed to E** |
 | R107 | **Four of six content hashes in `eql-source` were BLIND** — site.css, fonts.css, the datasets and media all returned exit 0 when content changed and the recorded value did not. The two served apps caught it, which is what makes the rest indefensible. **A's dataset case is the canonical statement of R93: `hash` was a REQUIRED field, so DROPPING it failed the build and carrying a WRONG one passed — on the value the published page tells strangers to watch. Presence enforced, truth not** | `pending` | **stands; PR #159 with the owner** |
 | R108 | **R93 SPLIT: "an instrument that cannot fail" and "an instrument that works perfectly, aimed away from the thing" are different faults and I had them collapsed.** `_asset_v` is a correct sha1 that was never broken; `stamp.py`'s INPUTS simply did not cover `site.css` — the detector was alive and specifically blind to the one file whose purpose is cache invalidation, **and that already shipped once as unstyled black shapes over a bare headline.** R93 wants a matched pair; R108 wants a coverage audit of the inputs. **RULED: the `bytes` field FAILS, not warns** | `pending` | **stands; gate_selftest 38→42** |
+| R109 | **The GLOBS are the fault, not the missing file.** `stamp.py:20` is four extension-keyed globs and a literal, with no `.css` or `.txt` anywhere — so **a build input in a COVERED DIRECTORY with an UNCOVERED EXTENSION is invisible**, and the extension set is open-ended. Seventh uncovered input found: `_build/planar_raw.txt`, 14,569 B, read at `planardata.py:68`. **Two instances one directory apart in one night.** Six others correctly uncovered and reported as such, which is what makes the one credible. Limit stated: literal paths only, **105 dynamic `open()` calls unseen** | `pending` | **stands; verified in tree** |
+| R110 | **RULING NEEDED, answered: BUILD the watcher-covers-its-inputs check, under three constraints, as its own PR so the OWNER takes the timing risk.** (1) **No completeness claim** — it reports what it audited AND what it cannot see, in the output; without that it is R98's `unknown: []` wearing a badge. (2) Fails on a generator READING an uncovered path, never on a file existing. (3) The scratch-file cost comes from the shipped `INPUTS` fix, not the new check. **Glob inversion considered and rejected** — it would sweep every scratch file in permanently | `pending` | **stands; A building** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -16644,3 +16646,98 @@ dies silently when its input is missing.**
 **R103 caught A mid-edit within an hour of being written**, on the exact trap `CLAUDE.md`
 documents. **A fixed it by removing the NEED for the escape rather than escaping harder,
 and read the file back with `sed` rather than trusting the write.**
+
+---
+
+### 1 Sep 01:2xZ — RULING R109–R110: the glob is the fault, and a new watcher must state what it cannot see
+
+#### R109 — an extension-keyed coverage list is structurally blind to new extensions
+
+**R108 said A's variant wanted a coverage audit rather than a matched pair. A ran one
+within the hour: every literal path the generators open for reading, minus what
+`stamp.py`'s `INPUTS` globs match. 37 read paths across `_build/` and `scripts/`.**
+
+**Seven uncovered. Six correctly so — five are OUTPUTS that checkers read back, and the
+sixth is `state/last-build.json`, the stamp itself, which would be circular.**
+
+> **The seventh is real.** `_build/planar_raw.txt`, **14,569 bytes**, read at
+> `_build/planardata.py:68` and consumed by `build.sh:73` to write `assets/planar.json`.
+
+```
+edit it, no rebuild                     exit 0
+after adding _build/*.txt to INPUTS     exit 1
+```
+
+**Verified in the tree before ruling on the fix — `scripts/stamp.py:20`:**
+
+```python
+INPUTS = ("_build/*.py", "_build/source/*.html", "assets/*.json",
+          "site.config.json", "build.sh")
+```
+
+> **RULING R109: the GLOBS are the fault, not the missing file.** **Four globs and a
+> literal, every one extension-keyed, and no `.css` or `.txt` anywhere.** **A build input
+> in a COVERED DIRECTORY with an UNCOVERED EXTENSION is invisible**, and the set of
+> extensions a generator might read is open-ended. **`_build/*.py` was there;
+> `_build/*.txt` was not. `site.css` was the same shape one directory over. Two
+> instances in one night.**
+
+**A stated the mitigation, which narrows the fault rather than inflating it:**
+`assets/*.json` **is** covered, so a **rebuild propagates correctly**. **What nothing
+could see is the raw file and the generated one disagreeing** — *"the state you are in
+after editing the source and walking away, which is exactly what the staleness check is
+for."*
+
+**And the limit, unprompted:** the audit reads **literal paths only**; **105 dynamic
+`open()` calls it cannot see.** *"This is 'everything reachable by reading the source',
+not 'everything'."*
+
+**Six correctly-uncovered reported alongside the one real gap is what makes the finding
+credible.** **A coverage audit that reported seven gaps would have been noise.**
+
+#### R110 — RULING NEEDED, answered: build it, and it must state what it cannot see
+
+**A asked for a ruling rather than deciding new mechanism itself: a check that FAILS when
+a generator reads a literal path under `_build/` or `assets/` that `INPUTS` does not
+cover — the watcher asserting it is pointed at everything it reads.**
+
+> **RULING R110: BUILD IT, under three constraints, landing as its own PR so the OWNER
+> decides whether it merges before or after the ship.** **The timing risk is real and it
+> is not mine to absorb on the owner's behalf.**
+
+**CONSTRAINT 1 — no completeness claim.** It sees literal paths and cannot see 105
+dynamic ones. **It reports what it audited AND what it could not, in the OUTPUT rather
+than a comment.**
+
+> **Without that line it is R98 exactly: `unknown: []` asserting the comparison was
+> complete.** **A watcher announcing "I am pointed at everything it reads" while seeing
+> 32 of 137 read sites is the fault it was built to catch, wearing a badge.**
+
+**CONSTRAINT 2** — it fails on **a generator READING an uncovered literal path**, never on
+a file merely existing. **A scratch file nobody reads is not a finding**, which removes
+most of the usability cost.
+
+**CONSTRAINT 3 — two costs were conflated and have different remedies.** The *"scratch
+file in `_build/` breaks the build"* cost comes from **the fix already shipped**
+(`_build/*.txt` in `INPUTS` means any `.txt` dropped there moves the stamp), **not from
+the proposed check.**
+
+**Inversion considered and rejected:** covering the directory and excluding known output
+extensions would sweep every scratch file into `INPUTS` — **the named usability cost,
+worse and permanent.** **Enumeration plus a guard that notices when the enumeration falls
+behind is the right shape.** A invited to refute; A knows the repo.
+
+**`gate_selftest` 42 → 43, its own case, same reasoning as the separate `site.css` and
+`fonts.css` cases.**
+
+**On `bytes`, A verified all four datasets reproduce their recorded size BEFORE writing
+the check** rather than discovering it after. **That is the difference between shipping a
+check and shipping an outage**, and it is the second time tonight A has run the
+precondition before the assertion.
+
+**A's seven-agent audit of the same hashes is still running and is now a CROSS-CHECK
+rather than a dependency, because A's hand measurements already answered its central
+question.** **Told: if it contradicts, the hand measurement wins under the standing rule —
+but REPORT the contradiction, because a fan-out disagreeing with a hand measurement is
+itself a result about the fan-out.** **B refuted 22 of 44 verdicts tonight and verified
+its two ship-blockers by hand for exactly that reason.**
