@@ -11952,6 +11952,9 @@ prefix. This closes the other sixteen.**
 | R164 | **STICKY ATTRIBUTION — the widest blast radius of anything found tonight.** `currentInstance` is assigned on EVERY zone-in including the open world, **and that assignment is what CLEARS it** — so guarding it to instanced zones makes the last instance stick: enter Nagafen's Lair G3, zone out, kill anything on the roster anywhere, and the raid reports COMPLETE. **All 130 tests stayed green.** No rare input, no unusual state. **And the clearing was an ACCIDENTAL GUARANTEE in production code** — D named that class about its own harness two hours earlier | `pending` | **stands; verified in tree** |
 | R165 | **`0` looks like a placeholder and is a claim.** A kill with no instance defaulting to difficulty `0` rather than `null` — **and difficulty 0 is a REAL TIER, Normal**, so an unattributed kill silently completes it. Verified load-bearing at three sites (`lockoutCore.js:473`, `:484`, `:1508`). **R98's family with the sign flipped: R98 was an empty answer wearing a completeness claim; this is a DEFAULT wearing an absence.** A sentinel that is also a valid value cannot be a sentinel | `pending` | **stands** |
 | R166 | **The matched-pair doctrine gains a criterion for its own SIZE: the smallest set in which EVERY WRONG IMPLEMENTATION FAILS AT LEAST ONE.** Here that is three, because both single assertions are satisfiable by a constant **in opposite directions** — "inside attributes D3" passes for sticky attribution, "after leaving attributes null" passes for attribution that never works. Verified: inside / after-leaving / never-entered, all three in one test. **Fourth constant trap tonight and the first needing three cases.** **And D's pacing: 13 blind spots in 47 mutations, rate NOT dropping — evidence the remaining 54 is not a tail** | `pending` | **stands** |
+| R167 | **A NEW CLASS: the code generalised, the justification and the guard did not.** Verified — the commit adds 32 test lines and changes NO source; `dedupeKey`'s every branch already carried its discriminator, but the `kill` case has **twelve lines of reasoning and a test** while the sibling `task-assigned`/`task-updated` three lines above had **neither**. Dropping the task name left all 131 green and collapsed two weeklies granted in one second. **Not an unexamined claim — reasoning that was done, correctly, written down, and applied to one of the two places it governs.** Adopted: a fix in a switch is incomplete until every sibling is named covered or excluded | `pending` | **stands** |
+| R168 | **Two defects an hour apart, opposite directions, both corrupting the ONE thing the tool does.** Sticky attribution = a completion the player did not earn (false YES); collapsed grant = a grant the player DID spend, uncounted — and `actionability()` counts grants against the cap of three, **so it reports a raid actionable when the allowance is spent** (false NO). D: *"both are the tool lying about what is LEFT, which is the only thing it does."* Tested as a pair under R166's criterion. **And my suggestion shipped — two accidental guarantees converted to stated ones in one night, one in tooling and one in production** | `pending` | **stands** |
+| R169 | **A positive control proves the instrument WORKS, not that it is AIMED CORRECTLY** — and I have been running them as though it proved both since the first hour. D, on my two wrong-file greps: my control fired at 47 test calls, so the instrument was live and pointed at the wrong file, and **a live instrument on the wrong surface returns a REAL NUMBER**, formatted identically to a right one. **What catches aim is a SECOND INSTRUMENT asking the same question a different way — the diffstat — "not a better control, a different one."** Gap in R73's framing, closed by D | `pending` | **mine; doctrine corrected** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -18958,3 +18961,95 @@ instrument was live and I was reading the wrong file.** **Caught by running the 
 which is the habit R146 cost me three hours to acquire.** **And I grepped the commit BODY
 for phrases that were in D's MESSAGE — two different artifacts, and I treated them as
 one.**
+
+---
+
+### 1 Sep 04:3xZ — RULING R167–R169: a fix whose reasoning stopped three lines short, and what a positive control does not prove
+
+#### R167 — the code generalised; the justification and the guard did not
+
+**`f271665d`, 132 green, 50 mutations, 50 caught. Verified: the commit adds 32 test lines
+and CHANGES NO SOURCE.** **`dedupeKey` was already correct in every branch:**
+
+```js
+case 'task-assigned':
+case 'task-updated':
+  return `${civil}|${ev.kind}|${ev.task}`;      // <- discriminator present, no comment
+case 'given':
+  return `${civil}|given|${ev.item}`;
+case 'kill':
+  // Keyed on the SLAIN NAME, not just the second. Without this … two different
+  // bosses dying in the same second collapse into one — a silent lost completion,
+  // which for a tool whose job is "do not forget a raid" is the wrong direction
+  // to fail in.                                          [12 lines of reasoning]
+  return `${civil}|kill|${ev.slain}`;
+```
+
+> **Dropping the task name from its key left all 131 green**, collapsing two different
+> weeklies granted in the same second into one. **The `kill` case has twelve lines of
+> analysis and a test. The sibling three lines above has the same shape, no comment, and
+> had no guard.**
+
+> **RULING R167: this is a class we have not had tonight.** **Everything else was a claim
+> nobody checked or an instrument that could not fail. This is reasoning that was DONE,
+> CORRECTLY, WRITTEN DOWN — and applied to one of the two places it governs.**
+>
+> ***"A defect was reasoned about, fixed, and documented at one call site, and the sibling
+> call site three lines away was never revisited."*** **The code generalised. The
+> justification and the guard stayed put** — so the sibling was one careless edit from
+> breaking, with nothing to catch it.
+
+**Adopted: when a defect is fixed in a `switch`, a dispatch table or any structure whose
+cases are siblings, the fix is not complete until every sibling has been named as covered
+or excluded.** **A comment explaining why one case is careful is evidence that the others
+were not considered, not evidence that they were.**
+
+#### R168 — two defects an hour apart, opposite directions, both corrupting the one thing the tool does
+
+```
+sticky attribution   a completion the player did NOT earn        -> false YES
+collapsed grant      a grant the player DID spend, uncounted     -> false NO
+```
+
+> **`actionability()` counts grants against the cap of three, so a collapsed grant leaves
+> the count short and reports a raid ACTIONABLE when the allowance is spent.**
+
+> **RULING R168: D's framing is the ruling — *"one hour apart, opposite directions, both
+> are the tool lying about what is LEFT, which is the only thing it does."*** **A tool
+> with one job found two ways to fail at it in one hour, and neither was reachable from
+> the other's test.**
+
+**Tested as a pair under R166's criterion: two DIFFERENT tasks in one second are two
+grants; the SAME task twice is one assignment with `dropped.duplicate` at 1.** **The first
+alone passes for a key that never dedupes, the second alone for a key that collapses
+everything.**
+
+**And my suggestion shipped: the unconditional-assignment requirement is now stated at the
+line with the incident attached, the same treatment as `execFileSync` in the harness.**
+**Two accidental guarantees converted to stated ones in one night — one in tooling, one in
+production — and the production one is worse exactly because guarding that line reads as a
+tidy-up.**
+
+#### R169 — a positive control proves the instrument works, NOT that it is aimed correctly
+
+**D, on my two wrong-file greps, and this is a gap in doctrine I have been running past all
+night:**
+
+> *"Your positive control fired at 47 test calls, so the instrument was live and pointed at
+> the WRONG FILE — that is the case my own R73 framing does not cover. I have been saying a
+> result must name the surface it was measured on. **Yours named a surface and it was the
+> wrong one, and a live instrument on the wrong surface returns a REAL NUMBER.** The
+> diffstat caught it because it was a SECOND INSTRUMENT, not a better one."*
+
+> **RULING R169: adopted, and it corrects how I have used positive controls since the
+> first hour.** **I have been running them as though a firing control validated the
+> MEASUREMENT. It validates the INSTRUMENT.** **Aim is a separate question and a control
+> cannot answer it** — a live grep on the wrong file returns a real count, formatted
+> identically to a right one.
+>
+> **What catches aim is a SECOND INSTRUMENT asking the same question a different way**
+> — here, the diffstat naming which files the commit touched. **Not a better control. A
+> different one.**
+
+**State: 132 tests, 80 demonstrably non-vacuous, 52 untouched. 14 blind spots across 50
+mutations, and D reports the rate holding at roughly one in three.**
