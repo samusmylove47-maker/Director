@@ -11921,6 +11921,7 @@ prefix. This closes the other sixteen.**
 | R133 | **B's OWN WORKING BRANCH is a publish trigger — `deploy.yml` fires `on: push: branches: [claude/eql-gear-optimizer-tfzvh6, main]`, one workflow, no others.** Every push B makes goes to players; there is no staging step. **The project's rule — "the owner merges; merging publishes" — assumes merging is the gate, and in B's repo it is not.** B flagged it rather than letting me discover it. **A governance fact, surfaced to the owner with file and line; not mine to change.** Upside: R124's ship-blocker fix is ALREADY LIVE, no merge pending | `pending` | **owner's decision** |
 | R134 | **The served artifact verified from the BYTES, not the manifest:** `98005988`, 17,357 B, sha matching local, the completed-comparison reject rule present, manifest field-for-field including `builtAt`. Tonight's fixes confirmed by string in the served bundle; **the served self-audit names its own uncovered file, `data/focus-effects.json`.** **And my null-id question is CLOSED by refuting its premise — the served 509,656-byte app has ZERO references to `bis-catalog.json` or `bis/`, so the file I loaded is one no player fetches** | `pending` | **stands; question was misdirected** |
 | R135 | **I was enumerating a SUBSET of the remote and calling it the remote.** I reported #163's branch missing; it is `claude/media-hash-case` at `852a0762`, +1 ahead. `for-each-ref refs/remotes/origin` reads my fetched cache; `ls-remote` queries the server and returns **143 heads**. Three branches existed that my cached enumeration could never have shown. **R101's shape — carried state read as live state — and the tick brief guards a FAILED fetch, not one that succeeded for the wrong set.** Census now comes from `ls-remote` or a full refspec | `pending` | **mine; adopted** |
+| R136 | **R133 AMENDED — there is nothing to merge into. `EQL50ups` has exactly ONE remote head, the working branch, and `main` DOES NOT EXIST (0 heads), so `deploy.yml`'s second trigger is dead text.** The only publish path is a push to the branch B works on. **"The owner merges; merging publishes" has no attachment point here — not a gap in coverage, an absent object.** Every other peer has a durable branch no session pushes to (`sky-ledger` 2, `EQLSAuras` 2, `EQLSLockouts` 7). **B has been operating correctly inside a structure nobody chose.** Also found: `sky-ledger`'s durable branch is `master`, not `main` | `pending` | **owner's; needs a branch first** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -17775,3 +17776,50 @@ git ls-remote --heads origin           -> queries the SERVER: 143 heads
 > alone.**
 
 **#163 is open and waiting on the owner.**
+
+#### R136 — R133 AMENDED: there is nothing to merge into. B's repo has ONE branch.
+
+**The live census I adopted an hour ago answered a question I had not thought to ask:**
+
+```
+EQL50ups   remote heads: 1
+           888005f9  refs/heads/claude/eql-gear-optimizer-tfzvh6
+           `main`:  0 heads — IT DOES NOT EXIST
+
+deploy.yml  on: push: branches: [claude/eql-gear-optimizer-tfzvh6, main]
+                                                                  ^^^^
+                                                        can never fire
+```
+
+**For contrast, the same census on the other peers:**
+
+| repo | heads |
+|---|---|
+| `EQL50ups` | **1** — the working branch, and it publishes |
+| `sky-ledger` | 2 — working branch + `master` (not `main`) |
+| `EQLSAuras` | 2 — `main` + a session branch |
+| `EQLSLockouts` | 7 — `main` + six session branches |
+
+> **RULING R136: R133 said the owner's control model "does not reach" B's repository.
+> That was too weak. THERE IS NO TARGET TO MERGE INTO.** **`main` does not exist, so
+> `deploy.yml`'s second trigger is dead text, and the ONLY publish path in that
+> repository is a push to the branch B works on.**
+>
+> **"The owner merges; merging publishes" has no attachment point here at all** — not a
+> gap in coverage, an absent object. **B is the only peer in this shape: every other
+> repository has a durable branch a session does not push to.**
+
+**This makes B's own framing exactly right rather than merely candid** — *"there is no
+staging step between my push and a player"* — **and it means B could not have created one
+without the owner making a branch.** **B has been operating correctly inside a structure
+nobody chose.**
+
+> **Still the owner's, and now with a concrete first move: the repository needs a branch
+> that is not the one a session works on, before the trigger question is even
+> answerable.** **I am not creating it — capability acquisition is the owner's to grant,
+> and creating a publish target is a capability.**
+
+**And a smaller one found by the same census, recorded rather than acted on:
+`sky-ledger` names its durable branch `master`, not `main`.** **The tick brief's own
+warning about `LoxyBee-EQLS-Auras` having `master` and no `main` applies to a second
+repository, and a fetch of `main` there would read exactly like "no change".**
