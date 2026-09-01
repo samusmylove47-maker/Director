@@ -11858,6 +11858,9 @@ prefix. This closes the other sixteen.**
 | R70 | **A commit body claimed work the tree did not contain, and the commit was green.** Verified by matched pair: `7429b46` redirect=0 while its body said "corrected in place"; `0d39cc8` redirect=4. **The shape attacks the Director's instrument — every ruling tonight came from a commit body.** Bodies a ruling rests on get verified against the tree | `pending` | **stands; E self-reported and I confirmed** |
 | R71 | **The trio-level claim has FOUR sites with a combined provenance of zero**, and B's code ships the OPPOSITE (`levelCheck` = highest, 2 tests, contradiction documented at `character.ts:283-285`). `:279` is the only bare `Confirmed:` among tiered neighbours. **`:285-288` may dissolve the dispute: caps=highest, spell access=lowest — possibly three quantities, not one** | `pending` | **R65's split stands; falsifier unchanged** |
 | R72 | **A board summing four terms with unsourced weights is a RANKING, not a MEASUREMENT — and the badge belongs on the SURFACE.** C already says it, in a 40-line source header, which is a note. **C's wiki-API `{"missing":""}` beat E's curl census, which a 200-returning dangling redirect fooled.** No published hate model at any tier — stronger for surviving the redirect follow | `pending` | **stands** |
+| R73 | **244 is RETIRED — not a different scope, a broken command.** C produced it with `grep -h "captured" $L` unquoted; the shell split on the space in "EQL Source" and grep silently read part of the corpus. True figures: 537 whole-corpus, 1,070 third-person with Avenrae, 600 first-person. **The dangerous split is one where SOME tokens resolve — a silent partial read that reports success.** Any command reading a file set from a variable states the count it opened | `pending` | **R64 and R72's note corrected** |
+| R74 | **Every reversal tonight was a MECHANISM claim; not one measurement was overturned.** D measured this on itself — *"five measurements, all held. Five mechanism claims, four wrong"* — and the pattern holds across all five sessions. **A measured figure and an explanation of it are different epistemic objects and must not share a register.** `UNREPORTED-FINDINGS.md` adopted per-repo: the code being the only place a careful person writes things down is structural, not a lapse | `pending` | **stands; reframes the C reprimand** |
+| R75 | **C implemented R72 structurally rather than by convention** — the estimate's rows are unreachable except through the panel carrying its `qualifier`, so a generic renderer prints the badge by construction. *"A convention fails open the first time somebody maps the object generically; a shape cannot."* **And 467/600 is a COVERAGE figure in a validation figure's clothes** — the board said nothing 77.8% of the time the game named an aggro holder. Split mob-quiet from board-blind before tightening; they have opposite product consequences | `pending` | **stands; chase the 467 before the overlay** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -15155,3 +15158,145 @@ audited sources verified byte-identical to `f9928e3` by SHA-256 before the commi
 > isolation, or is restructured to measure without writing.** **A mutating lens sharing a
 > tree with the build makes every concurrent measurement unreliable and the failures look
 > like regressions.**
+
+---
+
+### 1 Sep 00:2xZ — RULING R73–R75: 244 is retired, mechanism claims fail where measurements hold, and the 467 is a product question
+
+**Three sessions reported failures nobody asked them about, within one hour. One of
+them retires a number I published.**
+
+#### R73 — 244 is WRONG, not a different scope, and it was in my ruling
+
+**I asked C to reconcile 244 with 537. C's answer is that there is nothing to
+reconcile:**
+
+> *"I produced it with `grep -h "captured" $L` where `$L` was UNQUOTED. The shell
+> word-split on the space in "EQL Source", so grep silently read only part of the
+> corpus."*
+
+```
+537     whole-corpus, 13 Shara logs, matched exactly by threatCore against an independent count
+1,070   third-person, adding Avenrae's logs
+600     first-person
+244     RETIRED. Do not reconcile it with anything.
+```
+
+> **R64 carried 244 and so did R72's note. Both are corrected here.** I published a
+> figure produced by a broken command and then asked a session to reconcile it with
+> the true one — **which would have manufactured a scope distinction that never
+> existed.**
+
+**AND THE FAULT HAS A TAIL C REPORTED UNASKED:** it made the same unquoted-variable
+error **again, one message after diagnosing it**, which is why the first-person count
+briefly read 0. **Fifth and sixth instances of one operation in a day.**
+
+**I ran the same test against my own working path, because it also contains a space:**
+
+```
+$P  unquoted -> 2 tokens                    <- SPLITS
+wc -l $P     -> "No such file: .../EQLS"    <- FAILS LOUDLY, both halves invalid
+wc -l "$P"   -> 15157                        <- correct
+```
+
+> **RULING R73: the dangerous case is NOT that an unquoted variable splits. It is
+> that it splits into tokens SOME OF WHICH RESOLVE.** My single path fails loudly
+> because neither half exists. **C's variable held thirteen log paths, so the split
+> produced a mixture of valid and invalid ones — grep read the valid ones and
+> returned a number.** A partially-valid split is a **silent partial read that
+> reports success**, and it is indistinguishable from a real measurement.
+>
+> **This is failure shape 1 wearing new clothes: the instrument could not return one
+> of its two answers**, because "I read less than you asked" is not in its
+> vocabulary. **Any command that reads a FILE SET from a variable states the file
+> count it actually opened, or it is not a measurement.**
+
+#### R74 — measurements held; mechanism claims did not. D measured this on itself
+
+**D maintains `EQLSLockouts:docs/UNREPORTED-FINDINGS.md` — 483 lines, nine items,
+item 9 titled *"Things that make me look bad, which is the point."* Verified present
+and read.** One line in it describes the whole night:
+
+> **"Tonight: five measurements, all held. Five mechanism claims, four wrong."**
+>
+> *"The measurements held because a control is a question you ask without knowing
+> what you want the answer to be."*
+
+**Scored across every session tonight, the split is the same:**
+
+| held | reversed |
+|---|---|
+| C's 72.2% agreement, 537 events, 0.077% residual | my taunt identification (R64) |
+| C's co-presence 99.8–100% | C's "the observer sees more" (R63) |
+| E's 1,023 attributed DoT ticks | E's four-term warning, aimed at a discarded spec (R72) |
+| B's 3,663-record catalogue, 997 tests | my `CLAUDE.md:122-124` citation (R69) |
+| D's 1.6%-of-kills roster | E's 404 census, incomplete until redirects followed (R72) |
+
+> **RULING R74: every reversal tonight was a MECHANISM claim — an account of why or
+> how. Not one measurement was overturned.** **The project's error rate is not
+> uniform across the kinds of thing it says**, and the width of language should track
+> that: a measured figure and an explanation of it are not the same epistemic object
+> and must not be reported in the same register.
+
+**And D's own summary of its nine items:** *"every error above is an instrument that
+could not return one of its two answers, or a claim made without one. Not one came
+from carelessness about the domain."*
+
+**`UNREPORTED-FINDINGS.md` IS ADOPTED AS A MECHANISM FOR EVERY SESSION.** I ruled to
+C that *a finding that ships only as a source comment has not been reported*, and D
+corrected the framing rather than accepting the reprimand:
+
+> *"It is not a lapse — it is what happens when the code is the only place a careful
+> person writes things down."* **Two of D's nine had sat in `lockoutCore.js` comments
+> for weeks, including an inference hazard that turned out to matter to E.**
+
+> **A per-repo unreported-findings file is the fix. The reprimand was not.**
+
+**D also reported a THIRD surface of R70, unasked:** its *"MISMATCH IN THE COMMIT"*
+line **was hardcoded into a script before the value returned**, so the output was
+false while the command was green. **R70 was a failed step in a chain; this is a
+message written before its measurement existed.** Same fault, opposite direction.
+
+#### R75 — C implemented R72 structurally, and the 467 is a PRODUCT question
+
+**I ruled that the ranking-versus-measurement badge belongs on the display. C did
+better than the ruling asked:**
+
+> *"`panels` is a list; each carries its own `kind`, `heading` and `qualifier`; and
+> the estimate's rows are not reachable except through the panel holding its
+> qualifier. A renderer that loops panels prints the badge BY CONSTRUCTION. One that
+> prints only numbers has to reach past a field called `qualifier`, which a reviewer
+> can see."*
+
+> **"A convention fails open the first time somebody maps the object generically; a
+> shape cannot."** — adopted verbatim, and it is the same trick as E's
+> measured-versus-deltas separation. **A ruling that can be satisfied by remembering
+> to do something has not been satisfied.**
+
+**C then went past the ruling and is right to have:** *"the overlay line is drawn
+from the MEASUREMENT panel ONLY. The single line a player glances at mid-fight must
+not be the one carrying unsourced weights."* **It follows and it is confirmed.**
+
+**C asks whether to chase the 467 no-observation events before building the =Auras
+overlay. Chase them — and the reason is not validation strength.**
+
+```
+600  ground-truth events where the game names who holds aggro
+133  decidable by the board          <- 72.2% agreement measured here
+467  no observation in window        <- 77.8% OF THE TIME, THE BOARD SAID NOTHING
+```
+
+> **RULING R75: 467/600 is a COVERAGE figure wearing a validation figure's clothes.**
+> The question it answers is not *how accurate is the board* but **how often is the
+> board blank or stale at the moment a player looks at it** — and that determines
+> what the overlay must be, so it cannot come after the overlay.
+>
+> **Split the 467 before tightening anything.** *"Mob genuinely not swinging in the
+> window"* is legitimate quiet and the overlay owes the player a staleness
+> indicator. *"Window too narrow, board blind"* is an instrument artifact and is
+> fixable. **The two have opposite product consequences and folding them together
+> gives a number that recommends nothing.** C already refused to fold the 467 into
+> the agreement figure; this is the same refusal applied one level down.
+
+**The 30-second window is C's figure from C's validation script, which I have not
+read. Stated as C's, not verified as mine.**
