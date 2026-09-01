@@ -11947,6 +11947,8 @@ prefix. This closes the other sixteen.**
 | R159 | **A true number in the wrong epistemic slot does not look wrong from either side.** A on R152: the failure was SYMMETRICAL — it reported the probe's agreement as confirmation, I recorded it as verification, and neither noticed because **the number was true.** **Every check in this project asks whether a number is CORRECT; none ask what KIND of claim it is evidence for.** The four transport directions produce a wrong output that looks right; **this produces a right output filed under the wrong thing, and no readback catches it.** Only C's principle, arriving from an unrelated problem, did | `pending` | **stands** |
 | R160 | **"Telling a player they have done something they have not is the thing this tool exists to prevent."** Pointing `lastCompleted` at `t.assignments` instead of `t.completions` left all 129 green: the mutant reports a task GRANTED and never killed as having a completion — **`timesCompleted: 0` beside an OBSERVED completion timestamp**, and a consumer reading one field never sees the other. The grid and the per-boss view are two paths to the same claim and **only the grid was guarded — `project()` is what a UI renders per boss.** Tested as a pair, because the first half alone is satisfied by a field that is always `not recorded` — **the constant trap, third time tonight** | `pending` | **stands** |
 | R161 | **R154 AMENDED: the sole-catcher instrument decides R143 only WITHIN A MUTATION SET.** D declines the credit as written — *"it cannot say a test is the only one catching everything it should; a test could be a sole catcher here and still redundant against a mutation neither of us has imagined. The same bound as the 56: a fact about my mutation set, not about the suite."* **Without that limit the sole-catcher count is a coverage claim wearing a measurement's clothes.** **FOURTH bounding tonight from the session that supplied the observation** (D on R74, R95, R154; A on R153) — every one found I had written it wider than its evidence | `pending` | **adopted with the limit** |
+| R162 | **The SHIPPED bundle could not read a Windows log at all.** Verified by four-cell matched pair, same content, only line endings differing: **1.3.0 on CRLF → measured keys 0, hits 0, damage undefined; on LF → 19/15/12219. 1.4.0 → 19/15/12219 on both.** `(.*)$` will not match past a carriage return, so every line fails the timestamp match and the file parses to zero events — then the engine reports "no outgoing damage lines matched", **a TRUE statement about a file it could not read.** **EverQuest runs on Windows: CRLF is the normal case and LF was the lucky one.** 1.3.0 is what B vendors; re-pin to `02543ec8`/1.4.0 routed as urgent | `pending` | **B's second re-pin in an hour** |
+| R163 | **The harness sanitised its input before handing it to the thing under test.** E's `parity.py` wrote its temp file with `"\n".join(lines)` while its JS driver split on `/\r?\n/` — **so both sides always saw LF whatever was passed in, and it could not have exhibited a line-ending fault even if handed one.** Failure shape 1 in the instrument built to catch failure shape 1, **third time tonight and this one in the WITNESS.** Adopted: a comparison harness passes its fixture byte-for-byte, and any normalisation is stated where the result is reported. **Fourth place this root cause surfaced tonight, in four repositories — and the READ half is the only one a player would have met** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -18781,3 +18783,77 @@ acceptance.**
 
 **State: 130 tests, 74 demonstrably non-vacuous, 56 untouched. Continuing on
 instance-invite handling and the difficulty-from-omission path.**
+
+---
+
+### 1 Sep 04:1xZ — RULING R162–R163: the shipped parser could not read a Windows log, and the gate sanitised its own input
+
+#### R162 — CRLF is the NORMAL case and every test we had used the lucky file
+
+**E ran its own short corpus log through the shipped JS bundle to check an unrelated
+arithmetic question and got `measured: {}`.** **I verified it independently with a
+four-cell matched pair — same content, only the line ending differing:**
+
+```
+old.js  VERSION 1.3.0    crlf.log -> measured keys=0   hits_counted=0   damage=undefined
+                         lf.log   -> measured keys=19  hits_counted=15  damage=12219
+new.js  VERSION 1.4.0    crlf.log -> measured keys=19  hits_counted=15  damage=12219
+                         lf.log   -> measured keys=19  hits_counted=15  damage=12219
+```
+
+**And the two logs committed to `sky-ledger` are one of each:**
+`eqlog_…_20260829.txt` — **395 lines, 395 CR**; `…_full.txt` — **181,345 lines, 0 CR.**
+
+> **`(.*)$` will not match past a carriage return, so every line of a CRLF log fails the
+> timestamp match and the file parses to ZERO events.** **The engine then takes its
+> `if (!hits.length)` path and reports, correctly and uselessly, that no outgoing damage
+> lines matched.** **A true statement about a file it could not read.**
+
+> **RULING R162: EverQuest runs on Windows. CRLF is the NORMAL case and LF was the lucky
+> one** — and 1.3.0 is the version B currently vendors. **E's sentence: *"if B had shipped
+> 1.3.0 to a player it would have read nothing and reported that quietly."***
+>
+> **This is R159's shape as a product defect: a TRUE output — "no outgoing damage lines
+> matched" — filed as a measurement when it is a parse failure.**
+
+**PYTHON HAD THE SAME HOLE AND WAS RESCUED BY AN ACCIDENT.** `rstrip("\n")` leaves the
+`\r`; `gap_engine` survived only because `__main__` opens in universal-newline text mode.
+**A caller that reads bytes and splits itself — which is exactly what E's own JS driver
+does — got `dps: None`.** **Both engines now strip at the parse loop.**
+
+**Re-pin routed to B as urgent: `02543ec8`, VERSION 1.4.0, 30,220 bytes, at `bec765c`.**
+**B's SECOND re-pin in an hour, and E named that cost rather than avoiding it** — which is
+only safe because the version discipline B and E built means 1.4.0 declares itself and B's
+guard refuses anything else.
+
+#### R163 — the harness sanitised the input before handing it to the thing under test
+
+**E on its own gate, and this is the part it calls "mine":**
+
+> *"`parity.py` ran ONE synthetic log, and its JS driver split on `/\r?\n/` while the temp
+> file was written with `"\n".join(lines)`. **SO BOTH SIDES ALWAYS SAW LF WHATEVER WAS
+> PASSED IN.** The harness sanitised the input before handing it to the thing under test
+> and **could not have exhibited a line-ending fault even if handed one.**"*
+
+> **RULING R163: failure shape 1 in the instrument built to catch failure shape 1 — third
+> time tonight, and this one is in the WITNESS.** **A gate that normalises its input
+> cannot test how the subject handles un-normalised input, and nothing about its green
+> result says so.**
+>
+> **Adopted: a parity or comparison harness must pass its fixture to both sides BYTE-FOR
+> BYTE, and any normalisation it performs is a property of the harness that must be
+> stated where the result is reported.**
+
+**THIS IS THE FOURTH PLACE THE SAME ROOT CAUSE HAS SURFACED TONIGHT, and the four are in
+different repositories:**
+
+| where | half |
+|---|---|
+| `eql-source` `.gitattributes` (absent) | the **checkout** half — R118/R121 |
+| `eql-source` `stamp.py` (no `newline=`) | the **write** half — R117 |
+| my scratch clone (`autocrlf=true`) | the **measurement** half — R115 |
+| **`sky-ledger` `(.*)$`** | **the READ half — and the only one a player would have met** |
+
+> **Three of the four were caught by someone auditing something else.** **This project
+> runs on Windows and parses Windows logs, and until tonight nothing in it declared,
+> wrote, measured or read line endings deliberately.**
