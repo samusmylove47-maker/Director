@@ -11975,6 +11975,9 @@ prefix. This closes the other sixteen.**
 | R187 | **R166 is MINE — D supplied the instance, I made the criterion, and D handed it back.** *"Mine was a fact about one defect; yours is a rule about test-set size."* **Taking it back rather than performing modesty: handing it to D would leave the record wrong in the direction that flatters me for being generous.** D keeps the other three, which came out of its own failures. **And the pattern is mine to watch — four sessions bounded rules I wrote wider than their evidence tonight, and now the inverse: I have been giving away generalisations I made from a session's material. Same failure to hold the line between an observation and the rule drawn from it** | `pending` | **mine; credit corrected** |
 | R188 | **I sent the owner a tally with its bound stripped off.** D bounded "mechanism claims fail where measurements hold" at R77 and re-bounded it tonight — *"the bound has not weakened just because the ratio held six more times… a measurement can be a correct reading of the WRONG POPULATION."* **My report minutes earlier read "six of its mechanism claims wrong; every one of its measurements held" — the unbounded form, no surface, no caveat.** I applied the base-rate rule to the LEDGER while failing it on a session's own ratio. **The only form that travels: a measurement names its surface and a mechanism usually cannot.** Corrected to the owner in the same breath | `pending` | **mine; corrected upward** |
 | R189 | **The TRANSPORT CLASS with a PERSON as the transport, and it is the worst of the three variants.** Bash dropped a clause from a commit body; a `/tmp` round-trip dropped an entire test and the suite went GREEN; **and I dropped the bound off a ratio while relaying it upward.** *"The bound was present at authoring, absent at delivery, and nothing in the delivered form looked incomplete"* — the unbounded sentence reads perfectly well, which is why it survived. **D's reason it is the worst: a number that never had a bound is honestly unqualified; one that HAD it and lost it carries the authority of having been careful.** Remedy unchanged: **read back what LANDED, not what you sent** — third same-kind result today | `pending` | **stands; D's close** |
+| R190 | **A MATCHED PAIR CANNOT FIND AN AIMED-AWAY INSTRUMENT** — the half I did not have when I split R93 from R108. *"Mutate a covered input and the check fails exactly as it should; the pair passes and proves nothing about the region OUTSIDE it."* `stamp.py`'s fingerprint was never broken: correct, sensitive to every byte it covered, and not pointed at `site.css`. **The two faults need different instruments and the reflex one cannot see the second.** A's separating question, adopted: **would the check pass if the code were CORRECT? If no, it may be dead. If yes, ask what it is looking at.** In the code at PR #166, docstring only — and A grepped first, finding half of it already there | `pending` | **stands** |
+| R191 | **715 pages assert a modification date they did not earn.** Verified on main: `sitemap.py:9` stamps `date.today()`, and `public/sitemap.xml` carries **715 `<lastmod>` entries at ONE distinct date**. *"`lastmod` is a BUILD date wearing a MODIFICATION date's name"* — it tells crawlers every page changed today, every day anyone rebuilds. **And any PR opened on a rebuild day carries a 715-line diff nobody made, which is how a real change hides.** A reverted it and handed it over: it touches `public/`, carries an unmade decision, and the machine goes down in an hour. **Found by running `git status` on a docstring change — the scope check found a defect it was not for** | `pending` | **owner's; tomorrow** |
+| R192 | **The most productive guard tonight was written months ago by someone not present.** `gate_selftest`'s precondition control — *"the self-test cannot tell a real failure from a caught one"* — **stopped the Director twice, B once and A once, and none of them wrote it.** Tonight produced ~90 rulings, four aiming heuristics, five transport directions and two new failure classes. **The single most effective instrument in play was none of them.** A's closing judgement, recorded as the closing entry | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19655,3 +19658,80 @@ the delivered artefact rather than the intended one.**
 **D's final state, re-confirmed rather than remembered: `0a5bfcb0` both sides, 0 unpushed,
 0 dirty. Handover placed in `docs/UNREPORTED-FINDINGS.md` where a session with none of
 tonight's context can act on it.**
+
+---
+
+### 1 Sep 05:0xZ — RULING R190–R192: a matched pair cannot find an aimed-away instrument, and 715 pages claim a date they did not earn
+
+#### R190 — the question that separates the two failures, now in the code
+
+**PR #166, docstring only, and A checked before acting:** *"'A stated limit is a map' was
+ALREADY at `inputscover.py:38`, written when I added the exit. Only one of the two was
+missing, so only one went in — **I grepped rather than trusting that I remembered which I
+had recorded.**"*
+
+**What was nowhere, and is now in the file:**
+
+```
+an instrument that CANNOT FAIL              -> matched pair. gate_selftest hunts this well.
+an instrument that WORKS and is AIMED AWAY  -> coverage audit.
+```
+
+> **AND THE REASON, which is the half I did not have when I split R93 into R93 and R108:**
+> ***"A MATCHED PAIR CANNOT FIND THE SECOND ONE. Mutate a covered input and the check
+> fails exactly as it should; the pair passes and proves nothing about the region OUTSIDE
+> it."*** **`stamp.py`'s fingerprint was never broken — correct, sensitive to every byte
+> it covered, and not pointed at `site.css`.**
+
+> **RULING R190: the two faults need different instruments, and the one this project
+> reaches for by reflex cannot detect the second.** **A's separating question, adopted:**
+> ***"Would the check pass if the code were CORRECT? If no, it may be dead. If yes, ask
+> what it is LOOKING AT."***
+
+#### R191 — 715 pages assert a modification date they did not earn
+
+**Verified on `origin/main` rather than taken from A's report:**
+
+```
+_build/sitemap.py:9     today = datetime.date.today().isoformat()
+public/sitemap.xml      718 lines · 715 <lastmod> entries
+                        distinct dates: ONE — 2026-08-31, all 715
+```
+
+> ***"`lastmod` is a BUILD date wearing a MODIFICATION date's name."*** **It tells crawlers
+> every page changed today, every day anyone rebuilds** — **a figure asserting something
+> the data does not support, which is this project's oldest rule.**
+
+**AND THE OPERATIONAL HALF:** *"Any PR opened on a day the site was rebuilt carries a
+715-line diff nobody made, **which is how a real change hides.**"*
+
+> **RULING R191: real, live, and NOT A JOB FOR TONIGHT.** **A reverted it out of its own
+> branch and handed it over rather than starting it** — it touches `public/`, it carries a
+> genuine decision (per-page mtime, or drop `lastmod` entirely), and the machine goes down
+> in under an hour. **Correct: a change to published content with an unmade design
+> decision in it is the worst possible thing to start at 05:00.**
+
+**AND HOW IT SURFACED IS THE FINDING BEHIND THE FINDING:** *"Not by looking at the sitemap,
+but because I ran `git status` on a docstring change and something I had not touched was in
+it. **The scope check found a defect the scope check was not for.**"*
+
+#### R192 — the most productive guard tonight was written by someone who was not here
+
+**A's close, which is a judgement about the whole night rather than about its own work:**
+
+> ***"The single most productive guard tonight was `gate_selftest`'s precondition control —
+> it stopped you twice, B once and me once, and NONE OF US WROTE IT. Whatever else goes in
+> the ledger, that one is evidence that a check written months ago by someone not present
+> is worth more than any of tonight's cleverness."***
+
+> **RULING R192: recorded as the closing entry it deserves to be.** **Four stops across
+> three sessions and a Director, from one line refusing to rule while its precondition was
+> unmet** — *"the self-test cannot tell a real failure from a caught one."*
+>
+> **Tonight produced roughly ninety rulings, four aiming heuristics, five transport
+> directions and two new failure classes. The single most effective instrument in play was
+> none of them.** **It was already there, and its author has no idea any of this
+> happened.**
+
+**A's state: main `3e73b4d6`, tree clean, 0 unpushed, six PRs merged tonight, #166 open and
+explicitly non-urgent.**
