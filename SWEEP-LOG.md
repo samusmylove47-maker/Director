@@ -666,3 +666,26 @@ Compared current remote heads against the 1 Sep 18:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 20:24Z
+
+Compared current remote heads against the 1 Sep 19:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `9d21593d` → `dd02a1d7` ("Merge pull request #176
+  from samusmylove47-maker/claude/difficulty-naming"), authored
+  2026-09-01T16:02:27-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `d89560ea` → `7d4d6731`
+  ("CLOSES F05 — a stale withheld entry withheld a position that now
+  holds a real, fully-statted item"), authored
+  2026-09-01T20:07:08+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `409eae17` →
+  `8c163dc9` ("The harness that certified 1.6.0 at 100% generated NONE of
+  the ten verbs 1.6.0 added"), authored 2026-09-01T19:55:36+00:00.
+
+**Unchanged:**
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `7c7aaf25`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
