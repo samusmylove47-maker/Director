@@ -11986,6 +11986,8 @@ prefix. This closes the other sixteen.**
 | R198 | **I have been writing to the wrong reader all night.** My reports to the owner carry commit hashes, file paths, ruling numbers and internal shorthand — **the register A, B, C, D and E want, and noise to the person the report is for.** The owner is new to all of this, learned it in two months of interacting with Claude, and is fluent in creativity rather than in engineering. **The transport class with the READER as the variable: true at authoring, unusable on arrival, and nothing in its form said so.** Every other instance tonight was caught by a second instrument; **this one was caught by the reader telling me** | `pending` | **mine; Sage consulted at owner's request** |
 | R199 | **A handover in a pull request is a finding in a transcript.** CLAUDE.md sends a session to `HANDOFF.md` then `docs/BACKLOG.md` — **neither is a PR**, so A's sitemap handover sat where nobody would look. A caught it *"twenty minutes after you and I agreed that was the problem"*, moved it to the backlog with acceptance criteria, **misfiled it above the P0 on the first attempt**, and caught that by reading the heading list back. **It added no checker: "a checker for prose ordering is a worse idea than the mistake it prevents."** The entry carries the TRAP in the fix — a per-page mtime is the build date with extra steps | `pending` | **stands** |
 | R200 | **The staleness A found in its HANDOFF is in mine, and I put it there.** `eql-source/HANDOFF.md` still says *"this describes commit `5ee3cd3b`"* — verified an ancestor of main with **144 commits since**. **And this file's own header still reads "Handoff — 18 August 2026" on a record whose last entry is 1 September and which holds 200 rulings** — preserved by my byte-identical migration, correct as a migration and wrong as a title from the first append. **Named, not fixed: the date is unambiguous, what the file should now be CALLED is a small design question, and I have spent the night telling sessions not to open those at 05:20** | `pending` | **mine; named for the next reader** |
+| R201 | **B shipped a defect TONIGHT while fixing another, and its own pass found it.** `Upgrades.tsx` rendered the withheld badge from a **three-branch ternary over a five-member union** — three members fell through to the literal "Not in catalog", so a two-hander wielder saw `Secondary [Not in catalog]` ten lines above "the weapon in your Primary takes both hands". **Two contradictory statements about one slot in one card.** B added both new members tonight; `WITHHELD_TEXT` is a `Record` so the compiler forced body text, **and the ternary was not exhaustiveness-checked.** **R167's shape with a type system in it: the fix generalised exactly as far as the compiler enforced it and no further** | `pending` | **stands; B's own find** |
+| R202 | **The bound was stripped by TWO independent relayers — that is a fact about the SENTENCE.** I stripped it relaying to the owner; C's file had already inherited the stripped form and would have propagated it. C: the tally is *"a TALLY over one night in one project"*, while D established the mechanism — **a measurement names its surface and a mechanism usually cannot.** **The stripped version invites trusting measurements generally, which is false: a measurement over the wrong surface fails exactly as hard** — and C's counterexample is its own retired 244, a measurement wrong because a shell variable word-split. **The tally is quotable and the mechanism is not; a form that outlives its own qualification will shed it every time** | `pending` | **closes R188** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19987,3 +19989,77 @@ migration and wrong as a title from the moment I began appending to it.**
 > warning: the output of a night's reasoning is not the same thing as the guard that
 > actually caught the errors, and mistaking one for the other is how a project starts
 > valuing its own commentary.**
+
+---
+
+### 1 Sep 05:2xZ — RULING R201–R202: a three-branch ternary over a five-member union, and a bound two relayers stripped
+
+#### R201 — B shipped a defect tonight while fixing something else, and its own pass found it
+
+**Reported after the handover was written, because the fan-out finished late and *"its
+best-evidenced finding is mine."***
+
+> **`Upgrades.tsx` rendered the withheld badge from a THREE-BRANCH TERNARY OVER A
+> FIVE-MEMBER UNION.** It named `worn-unstatted` and `profile-blind-to-weapons`; **the
+> other three fell through to the literal "Not in catalog".**
+
+**What a player wielding a two-hander saw:**
+
+```
+Secondary   [ Not in catalog ]
+The weapon in your Primary takes both hands, so there is no offhand to fill.
+```
+
+> **Two contradictory statements about one slot, ten lines apart, in one card** — and one
+> of them says a catalogued item is not in the catalogue.
+
+**AND B ADDED THE TWO NEW UNION MEMBERS TONIGHT.** `offhand-occupied` and
+`offhand-unpriceable`, from R129. **`WITHHELD_TEXT` is a `Record<WithheldReason, string>`,
+so the compiler FORCED body text for both — and the ternary was not checked for
+exhaustiveness, so it silently absorbed them.**
+
+> **RULING R201: R167's shape with a type system in it.** **The extension generalised
+> exactly as far as the compiler enforced it and no further** — the `Record` was made
+> total, the ternary was not, and both live in the same change. **A comment explaining why
+> one case is careful is evidence the others were not considered; a compiler enforcing one
+> site is evidence about that site only.**
+>
+> **And the phrase was not arbitrary: `SlotCard.tsx` and `SetCompare.tsx` both gate "Not in
+> catalog" strictly on `unresolved`. `Upgrades` was the single place printing it
+> otherwise** — which is how it read as a real state rather than as a fallback.
+
+**Recorded as a defect B INTRODUCED tonight, in the same commit family that fixed R129, and
+found by its own pass rather than by a consumer.**
+
+#### R202 — the bound was stripped by two relayers independently, which is a fact about the sentence
+
+**C had inherited the stripped form and would have propagated it:**
+
+> ***"WHAT I HAD: 'every reversal tonight was a mechanism claim, not one measurement was
+> overturned.' That is a TALLY over one night in one project.***
+>
+> ***WHAT D ESTABLISHED: a measurement NAMES ITS SURFACE and a mechanism usually cannot.
+> That is the mechanism of the difference, and the tally is EVIDENCE FOR IT rather than the
+> rule itself."***
+
+> **And why it matters, in C's words: *"The stripped version invites a reader to trust
+> measurements generally and distrust mechanisms generally, and that is FALSE — a
+> measurement over the WRONG SURFACE fails exactly as hard."***
+
+**AND C'S COUNTEREXAMPLE IS ITS OWN WORST MEASUREMENT OF THE NIGHT:** *"My own 244 capture
+events were a measurement, and they were wrong because the surface was a shell variable
+that had silently word-split."* **The stripped rule would have told C to trust the number
+that R73 retired.**
+
+> **RULING R202: two independent relayers stripped the same bound — I did it to the owner,
+> C's file had it before I caught mine.** **That is not two careless readers. It is a
+> property of the sentence: THE TALLY IS QUOTABLE AND THE MECHANISM IS NOT.** **A form that
+> survives transport better than its own qualification will shed the qualification every
+> time it is passed on.**
+>
+> **So the durable statement is the mechanism, and the tally goes with it as evidence or
+> not at all.** **Recorded as the closing entry on R188, and it is the strongest argument
+> tonight for writing rules in the form that cannot be usefully truncated.**
+
+**And #166 is merged — `e0efe712`. A's docstring PR, explicitly non-urgent, landed anyway.
+Seven merged tonight.**
