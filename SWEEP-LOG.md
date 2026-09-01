@@ -436,3 +436,24 @@ Compared current remote heads against the 1 Sep 08:23Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 10:24Z
+
+Compared current remote heads against the 1 Sep 09:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `6119db87` → `e9ede665`
+  ("CLOSES the share dialog promising 'the whole plan travels in the
+  link' when two fields never leave the browser"), authored
+  2026-09-01T09:52:27+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `5b27c73f` →
+  `003fa800` ("PUBLISHED FIGURES WERE UNREPRODUCIBLE: residual.py's
+  dataset lives on one container"), authored 2026-09-01T09:48:19+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e0efe712`.
+- `EQLSLockouts` `session-d/raid-rows`: `0a5bfcb0`.
+- `EQLSAuras` `main`: `b05741bf`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
