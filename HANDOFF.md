@@ -11915,6 +11915,9 @@ prefix. This closes the other sixteen.**
 | R127 | **I reported `.gitattributes` ABSENT to the owner twice while it was PRESENT.** MSYS2 path conversion rewrote `origin/main:.gitattributes` to `origin\main;.gitattributes` before git saw it — `cat-file -e` failed and printed ABSENT, and **`git show \| wc -l` returned 0, which is indistinguishable from "the file is empty".** R103's transport class in my own READING instrument, on the fact I had been escalating as highest-value. **And my positive control (`CLAUDE.md`, no leading dot) PASSED while the region under test was broken — rule 5(c), which I had been quoting at other sessions all night** | `pending` | **mine; corrected** |
 | R128 | **R121 is CLOSED, verified in the configuration that caused it.** A's `.gitattributes` shipped at `812b711e`, merged as **#162**. Fresh clone at `core.autocrlf=true` against `9765cc6d`: `zones.v1.json` blob 16282 = worktree 16282 (was 16742), `check.py` **exit 0**, dirty 0. **The path from a pristine Windows clone to rewriting 702 published pages by obeying the tool no longer exists.** A also found a consequence I missed — `stamp.py` fingerprints raw bytes, so a CRLF clone reported "public/ is stale", **which is what my own first scratch run hit and I attributed to one cause and stopped** | `pending` | **stands; trap closed** |
 | R129 | **One `null` covering two different hands.** `twoHandedCost` bailed identically for an EMPTY offhand (costs nothing, measured) and an UNRESOLVED one (something is there, worth unknown) — and `gain` subtracted `?? 0`: **a cost of zero asserted for an unpriced item, with no note on the row.** R98's shape one slot over. Now REJECTED rather than netted, or WITHHELD with `'offhand-unpriceable'`. **And the half B nearly shipped untested: a worn offhand scoring zero dropped the TWO-HANDED note, so the reader was never told their offhand empties — *"the arithmetic was never wrong; the disclosure was missing."*** B's A/B caught its own fix unguarded (1044 green) and it wrote the test first | `pending` | **stands** |
+| R130 | **A proved R122 by KILLING the branch — disabling the sha1-vs-name check left all 46 cases CAUGHT, exit 0.** And **my proposed mutator was refuted by measurement**: changing the manifest's recorded filename makes the file MISSING, so a third branch fires first; the hash comparison is reachable only when a file EXISTS whose name disagrees with its content, **a state that cannot be constructed from the manifest alone.** A renames the file instead (byte-preserving), adding a cleanup callable to `SPECIAL` — 47 of 47. **And A corrected my framing: the byte-count case was MISFILED, not wrong** | `pending` | **stands; my fix refuted** |
+| R131 | **The MSYS path fault is the MACHINE's, not my instrument — A reproduced it independently, by accident, the same tick.** `git show <ref>:.dotfile` → `origin\main;.gitattributes`, pipeline prints **0 lines**, indistinguishable from an empty file. **Any session on this machine reading a dot-path through a colon is exposed.** Three working readings recorded. **A's framing of my control failure: same shape as its LEDGERS finding — a positive drawn from outside the blind region — but arriving in a READING instrument. The control has to share the property under test** | `pending` | **machine-wide; all sessions** |
+| R132 | **Ship seam checked and CLEAR — recorded because the zero was real and the inference from it would have been wrong.** Zero pages on main reference `eqls-50upgrades.*.js`, and =Upgrades is not among `check.py`'s two served apps. **But `public/tools/50-upgrades.html` is 15,275 B / 3 scripts / 2 inputs — the same shape as `lockouts.html` and `sky-ledger.html` — and links out to B's GitHub Pages app.** B's bundle was never meant to live in `eql-source`. No defect, no redirect for A. **The live question is B's: does a merge republish the hosted app** | `pending` | **no finding; asked of B** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -17561,3 +17564,110 @@ tests green. **So B wrote the test before shipping and re-ran the mutation: 1 fa
 > **That is R95 applied to a fix IN FLIGHT: B established that its own repair was
 > enforced rather than merely present, before shipping it.** **The first session to run
 > that check on itself pre-emptively rather than after being asked.**
+
+---
+
+### 1 Sep 03:0xZ — RULING R130–R132: my mutator was refuted by measurement, and the MSYS fault is the machine's not mine
+
+#### R130 — A proved R122 by KILLING the branch, and refuted my proposed fix
+
+**Confirmation first, and it is the strongest form available:**
+
+> **A disabled `check.py`'s sha1-vs-name comparison outright. `gate_selftest` reported
+> ALL 46 CASES CAUGHT, exit 0.** **The only line that makes the media check
+> content-sensitive was guarded by nothing, inside #159's own fix.**
+
+**AND MY SUGGESTED MUTATOR DOES NOT REACH THAT BRANCH.** I proposed changing the
+manifest's recorded FILENAME hash to exercise `:858` without touching a binary. **A
+measured it rather than arguing:**
+
+> **Changing the name makes the file MISSING, and a THIRD branch fires first —**
+> *"assets/media.json names auras-poster.deadbeef.jpg, which is not in
+> public/assets/media/"*.
+>
+> **The hash comparison is reachable only when a file EXISTS whose name disagrees with
+> its own content, and that state CANNOT BE CONSTRUCTED FROM THE MANIFEST ALONE.**
+
+**A's fix: RENAME the file — byte-preserving, no binary edit — and update the manifest to
+match.** That required one harness change: **`SPECIAL` may now return a third element, a
+cleanup callable, because the runner restores exactly one text file and cannot undo a
+rename.** Two-element returns unchanged; the other two SPECIALs untouched.
+
+```
+hash branch live       47 of 47 caught, tree clean
+hash branch disabled   [WRONG CHECK] hashed media whose name no longer describes its content
+```
+
+> **RULING R130: a proposed fix from the Director is a claim like any other, and this one
+> was wrong on a mechanism I had not traced.** **I reasoned about which branch a mutation
+> would reach without following the branch order — the same fault I ruled on in R97,
+> where I reasoned about a construct from its description.**
+
+**AND A KEPT THE BYTE-COUNT CASE, correcting my framing:** *"It guards the other media
+failure and was never wrong, it was MISFILED. Deleting it to fix a naming problem would
+trade one dead branch for another."* **I called the case wrong; it was mis-labelled.
+Those need different remedies.**
+
+#### R131 — the MSYS path fault is the MACHINE's, and every session here is exposed
+
+**A reproduced my R127 bug independently, by accident, in the same tick, verifying #162:**
+
+```
+git show origin/main:.gitattributes
+  -> fatal: ambiguous argument 'origin\main;.gitattributes'
+  -> git show line count: 0
+```
+
+> **Identical. Colon to semicolon, slash to backslash, and the pipeline printed 0 lines.**
+
+> **RULING R131: this is the ENVIRONMENT, not my instrument.** **Any session on this
+> machine reading a dot-path through a colon is exposed, and the failure prints as an
+> EMPTY FILE rather than as an error.** **Two readings verified to work, and both are
+> recorded because they fail differently:**
+>
+> ```
+> git cat-file -s <blob-id>                    no colon, nothing to convert
+> MSYS_NO_PATHCONV=1 git show <ref>:<path>     conversion disabled  (A's)
+> MSYS2_ARG_CONV_EXCL='*' git show <ref>:<path>  same effect        (mine)
+> ```
+
+**A's own framing of the control failure, which is better than mine:**
+
+> *"You had a control and drew it from `CLAUDE.md`, which has no leading dot, so it passed
+> while the region under test was broken. That is the same shape as my LEDGERS finding
+> earlier tonight — a positive drawn from outside the blind region — **arriving in a
+> READING instrument instead of a checker.** Two instances, different mechanisms, same
+> fault. **The control has to share the property under test.**"*
+
+**And on the stale-clone half A declined the credit I offered:** *"I only had the second
+half because I was staring at `stamp.py`'s byte fingerprint at the time — not superior
+method, different vantage."* **Recorded as A stated it.**
+
+#### R132 — the ship seam checked and CLEAR, recorded because I nearly reported a gap
+
+**Tonight established that a pending publish can sit undetected for days. So before
+redirecting A, I checked whether B's engine reaches the live site.**
+
+```
+pages on origin/main referencing eqls-50upgrades.*.js   ->  0
+check.py's SERVED APPS  ->  public/app/eqls-lockouts.*.html, public/app/sky-ledger.*.html
+                            (=Upgrades is NOT among them)
+```
+
+> **That reads like a gap and is not one.** `public/tools/50-upgrades.html` is **15,275
+> bytes, 3 scripts, 2 inputs — the same shape as `lockouts.html` (17,637) and
+> `sky-ledger.html` (23,357)** — and it **links out** to
+> `https://samusmylove47-maker.github.io/EQL50ups/`.
+
+> **RULING R132: B's app is hosted from B's own repository by design, and its bundle was
+> never meant to live in `eql-source`. There is no seam defect and no redirect for A.**
+> **Recorded because the zero was real, the inference from it would have been wrong, and
+> I checked what the page IS before reporting what it lacks.**
+
+**The live question this leaves is B's, not A's: whether a merge to B's repository
+republishes the hosted app, or whether the dropped-upgrades fix needs a publish step to
+reach a player. Asked.**
+
+**A proceeds with the R119 probe. Nothing has changed my ruling, condition 3 remains the
+real work, and A has already named it correctly: the tool refuses to report if a
+generator uses a route it cannot see.**
