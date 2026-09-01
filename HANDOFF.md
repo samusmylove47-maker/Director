@@ -12055,6 +12055,16 @@ prefix. This closes the other sixteen.**
 | R259 | **AGREEMENT BETWEEN TWO SEARCHES IS NOT CORROBORATION WHEN BOTH ARE SEARCHES — and this is the sharper half.** Session 0 and I wrote **different** patterns, for the same question, and got the same wrong answer for **different reasons.** **I had this as a lapse of mine; Session 0 has it as a property of the situation: two instruments sharing a blind spot look MORE like independent confirmation than one instrument run twice, not less — because different author, different pattern and different reason all read as evidence of independence.** **Same family as A's finding four hours earlier — *the six checks were all downstream of the seventh, so consistency read as confirmation* — and this states the general case.** **CORROBORATION REQUIRES A DIFFERENT KIND OF INSTRUMENT, NOT A DIFFERENT AUTHOR.** **And the root is upstream of both of us: the question was phrased as "is this string still there", the phrasing chose the instrument, and the instrument could not answer.** In the permanent reference as Session 0's | `law` | **catalogue** |
 | R260 | **A LEDGER ENTRY THAT REVERSES THROUGH NOBODY'S FAULT — a new category, created by Session 0 rather than filed as an error.** Its `WHAT-COUNTS.md` and gap-lede corrections were **TRUE of `main` when taken**; A had #173 in an unmerged tree while Session 0 was reading. **A re-measurement landing mid-flight reads as *"nothing moved"* when the answer is *"not merged yet"*, and nothing in the tree distinguishes them.** **Filing that as a mistake would teach the wrong thing to every future reader.** **NEW STANDING REQUIREMENT, adopted by both of us: name the ref every measurement was true against.** *"Untouched as of `f8c8936`" survives the world moving; "untouched" does not.* **Same shape as the mergeability base A adopted this afternoon, arriving independently in a second place — and it is Session 0's own carrier-names-its-source rule pointed at its own reports, which it had not thought to point there** | `category` | **Session 0** |
 | R261 | **#173 HELD, NOT ROUTED: its scanner reports `0 unmarked` and is SILENT about the two largest families in the finding.** **What A shipped is real and verified: `contamination.py` now globs `public/**/*.html` at `:114` — finding 3 genuinely fixed — with `public/app/` skipped on an argued rather than convenient basis. And the built-tree scan caught a regression A had JUST introduced: stripping the stray `T5` left `Haste +10%` with no marker at all, worse than before, visible to nothing else.** **That is the whole justification for the one-commit instruction.** **BUT the scanner defines five signatures — `haste-pct`, `charges`, `sv-resist`, `nodrop`, `raid-size` — and none for a bare spawn percentage or a bare rarity word, which I asked for in this commit and which are the bulk of finding 1.** **Measured on A's own branch tree: 40 named pages printing a bare spawn percentage, 88 item pages printing (rare)/(common)/(uncommon), of which 34 carry any badge; positive control 207 item pages with a badge.** **So `0 unmarked` is TRUE for five families and SILENT about two — failure shape one, and the exact thing A refused to ship this morning.** **The badge carry-through cannot reach them: A measured 15 badged cells across every survey, so the 87 spawn rates and 88 rarity words live in cells whose provenance is a SENTENCE in the parent survey, and a sentence does not survive extraction.** **Directed: add both signatures and EXPECT THEM TO FIRE — a scanner reporting 128 unmarked is a truer artifact than one reporting zero because it was not looking** | `held` | **A** |
+| R262 | **THE PUBLISHED CONTAMINATION FIGURE WAS 17d 16h STALE — the code was fixed and the artifact readers see was not.** `contamination.py` last changed 1 Sep; `assets/contamination.json` last regenerated **15 Aug 02:57Z**. The page published *24 files scanned, 291 unmarked, 4 signatures* while the code scanned `public/**` with 6. **Session 0's framing: *a finding that ships only in one place has not been reported* — INVERTED. A FIX shipped in the code and not in the artifact that speaks to readers.** **And it is the held-work shape again: nothing red, nothing blocked, the gap invisible in output because THE OUTPUT IS THE STALE THING.** **CLOSED in #174: `785c1a27`, scanned 24→736, unmarked 291→1990, marked 27→48, `rarity-word` added; `build.sh:116` now runs `--write` so it cannot drift silently, with the eighteen-day fault written into the build script at lines 101–104 — the record of the fault living where the fix does** | `closed` | **A** |
+| R263 | **A SCRIPT WHOSE DEFAULT MODE REPORTS AND WHOSE PUBLISHING MODE IS OPT-IN WILL BE RUN IN THE MODE THAT TEACHES YOU NOTHING ABOUT THE DIFFERENCE.** A's own diagnosis and the best generalisation of the day. **It ran the scanner a dozen times while building #173, read the output carefully every time, and never passed `--write`.** **So it read a live scan while the site published an eighteen-day-old one — and nothing it saw could have told it, because the report it read was correct.** **Every run confirmed the code worked; none touched the artifact.** **A's fix goes past the incident: the default should be `--write` and the flag `--dry-run`, because THE SAFE DEFAULT IS THE ONE WHERE THE TWO CANNOT DIVERGE.** **Every convention that puts the side-effect behind a flag builds this hazard on purpose.** **And A answered the durable question honestly: there was no reason for it to be manual, only history — 1.7 seconds, no network, no game install, and its number is read by strangers** | `law` | **A** |
+| R264 | **A SHALLOW CLONE MAKES STALE THINGS LOOK FRESH — and it ran all day inside the post whose job is spotting staleness.** `git log -1 -- <path>` on a `--depth 1` clone returns the **shallow boundary commit**: a real sha, a real message, a real date, the wrong answer, **and it cannot return "I do not know."** Eighteen days reported as five hours. **The bias runs in exactly the direction that produces SILENCE rather than false alarms — the class that leaves no trace.** **I checked my own clones because of it: all full, 614/102/225/253/128/111 — but FULL BY CONFIGURATION, NOT BY CHECKING.** I had reported dozens of dates without once establishing the instrument could give me a wrong one. **A clean result from an unverified instrument is not evidence the instrument works; passing by luck and passing by construction are indistinguishable from inside the result** | `law` | **Session 0** |
+| R265 | **DOING THE RIGHT THING MAKES THE ARTIFACT HARDER TO MEASURE — Session 0's, and it joins two laws into one property.** **A repaired truncation contains the broken string. A documented withdrawal contains the withdrawn name. A carefully-recorded absence reads as a presence.** Session 0 read A's comment *"a `spawn-pct` signature was written here and WITHDRAWN before shipping"* as a live definition and reported that A had shipped a family it said it withdrew. **A had six signatures and was truthful about every one.** **The edge that makes this matter: A was penalised BY THE INSTRUMENT PRECISELY FOR DOCUMENTING HONESTLY — had it deleted the code silently, the grep would have been right.** **And it is a warning about this project specifically: we ask every session to record what it rejected and why, so we are systematically manufacturing artifacts that presence tests will misread.** **Expect the well-behaved artifact to be the one your pattern gets wrong** | `law` | **Session 0** |
+| R266 | **A DISCOUNT IS A CLAIM AND IT CAN BE WRONG IN EITHER DIRECTION.** Session 0 retracted *"anything I said about WHEN is not sound"* after checking its other clones: **one of seven was shallow.** **A too-wide discount looks like caution and is not — it throws away sound measurements and teaches a future reader to distrust a class of work that was correct.** **And the mechanism generalises: THE PARTY MOST LIKELY TO OVER-CORRECT IS THE PARTY WHO ERRED, with the honest position between the original claim and the retraction.** Scope a retraction as precisely as a finding. **Session 0 instanced a shape from this book inside a correction for a different fault, and caught it** | `law` | **Session 0** |
+| R267 | **THE `Z` WAS A LITERAL AND I STOPPED A FALSE STATEMENT ABOUT A PERSON FROM REACHING THE OWNER.** Session 0 reported `LoxyBee/EQLS-Auras` quiet for **5h 38m** on the day Shara's media was expected, having read `13:43:15-04:00` and labelled it `13:43Z`. **`--date=format:'%H:%MZ'` renders the commit's own local time and appends a character; the `Z` was never a conversion.** **True figure: last movement 17:43Z, quiet 102 min — 2.3x the longest gap inside an 81-minute burst that ENDED WITH A MERGE closing a hardening PR. Not a signal.** **That sentence would have told the owner the most important person in this project to them had gone silent for six hours on her launch day. Not a rounding error — a false statement about a person, to someone who would act on it.** **A DISCIPLINE MARKER APPLIED WITHOUT THE OPERATION BEHIND IT IS WORSE THAN NO MARKER** — the `Z` had been appended for hours as a rigour convention, three hours after Session 0 raised the local-versus-UTC fault against itself. **And it compounded with the containment error it had just found: TWO FAULTS THAT PARTLY CANCEL ARE WORSE THAN EITHER ALONE, because the result reads as merely imprecise rather than wrong** | `caught` | **me** |
+| R268 | **A BLAST-RADIUS ASSESSMENT IS ITS OWN CLAIM AND CAN BE WRONG — and this was the more propagating error.** Session 0 bounded the timezone fault to Shara's repository — *"every session commits in UTC, her machine does not"* — and stood the concern down. **Measured: the fault touched four repositories including the Director's own.** **Its re-derivation sample was drawn entirely from `sky-ledger`, the half of the corpus where the instrument is right.** > **A corpus that genuinely lacks the control tells you nothing. A corpus that CONTAINS it and was not sampled tells you that you were fine, with evidence.** **And a stood-down concern stops being checked, so a wrong boundary propagates further than the fault it was drawn around** | `law` | **Session 0** |
+| R269 | **THE OFFSET IS A PROPERTY OF THE COMMIT, NOT THE REPOSITORY — Session 0 corrected MY generalisation, and it was worse than either of us measured.** I wrote a repo-level table into the permanent reference from **40 commits on one ref**; Session 0 produced *"eql-source, all 459 commits, uniform"* from **3 fetched refs against 154 on the remote.** **Truth across all refs: `eql-source` 470 at −04:00 and 146 at `Z`; `sky-ledger` 128 `Z` and 2 at −04:00. EVERY repository is mixed, because a repository receives commits from whatever machine pushed them.** **BOTH OF US GOT "UNIFORM" FROM PARTIAL SAMPLES, IN OPPOSITE DIRECTIONS, AND SESSION 0'S WRONG ANSWER CONFIRMED MINE.** **And `--all` means all refs YOU HAVE FETCHED — a flag whose name implies exhaustiveness, silently bounded by local state, the same family as the shallow clone.** *My own clone: 156 refs against 154 remote, so my figures stood.* **Table replaced with the rule in the reference** | `corrected` | **me** |
+| R270 | **THE FIRST SIDE-BY-SIDE THAT AGREED — and it reconciles to the unit, exactly.** Scanner `rarity-word`: **351 unmarked + 5 marked = 356.** Session 0's morning figure: **88.** **It did not report a conflict — it tried four reconciliations, none matched, then READ THEIR PATTERN and found it byte-equivalent to its own, so the pattern was not the variable.** Splitting by source group: **`public/**/*.html` 267 + `_build/source/*.html` 89 = 356. EXACT.** **I verified all three numbers independently.** > **Both instruments were correct and were answering different questions: pages in `public/items` versus occurrences across published HTML PLUS the build sources those pages are generated from.** **NEITHER NUMBER NEEDED CORRECTING; BOTH NEEDED LABELLING.** **And the rarity gap did not close — it became MEASURABLE: 351 unmarked where the scanner previously had no signature for the family at all** | `reconciled` | **Session 0** |
+| R271 | **#174: the audit's shortest path is closed.** Verified on the merged tree at `4ce21c73`: **"Start here" is now the FIRST band after the hero** (was fifth, behind 684 words); nav reads **Items & mobs** and **Site search**, closing the `=Index` misroute; **distinct `og:image` values 2 → 20 across 717 pages** — every link pasted into a chat showed a card reading "Dungeons" this morning, **on the day a product launched into a community that shares links.** **And A caught its own build failure by MEASURING rather than reading: a keyword argument before a positional one made `set -e` stop the build at `build17.py`, and A noticed only because the card count had not moved from 2.** > **A build that stops is indistinguishable from a build that succeeds if you check the wrong thing afterwards. The count was the control; the absence of a visible traceback was not.** **The safety mechanism worked perfectly and still produced a silent wrong outcome downstream** | `merged` | **A** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -22205,3 +22215,140 @@ to carry.**
 **Session 0 instructed to re-measure finding 1 against the TREE when #173 merges, never against
 the scanner's own report, and to publish the scanner's number and the tree's number SIDE BY
 SIDE with the ref — the only presentation that makes the disagreement visible.**
+
+---
+
+### 1 Sep 19:3xZ — RULING R262–R271: the shortest path closes, and an evening spent finding out that our instruments were the problem
+
+**Six laws in ninety minutes, every one of them about a measuring device rather than
+about the site. Recorded together because they are one argument.**
+
+#### R262–R263 — the fix shipped in the code and not in the artifact readers see
+
+**`/learn/contamination` published *24 files scanned, 291 unmarked* for seventeen days and
+sixteen hours while its own code scanned the whole built tree.** **Nothing was red. Nothing
+was blocked. The gap was invisible in output BECAUSE THE OUTPUT WAS THE STALE THING.**
+
+**A found the cause in itself and it is narrower and worse than "a hand-run script drifts":**
+
+> ***"A script whose default mode REPORTS and whose publishing mode is OPT-IN will be run in
+> the mode that teaches you nothing about the difference."***
+
+**A ran it a dozen times while building #173, read the output carefully every time, and
+never passed `--write`.** **Every run confirmed the code worked. None touched the artifact.
+The report it read was correct.**
+
+**Its fix goes past the incident: `--write` should have been the DEFAULT and `--dry-run` the
+flag, because the safe default is the one where the two cannot diverge.** **Every convention
+that puts a side-effect behind a flag builds this hazard on purpose.**
+
+**Closed in #174: 24 → 736 files, 291 → 1990 unmarked, `--write` now in `build.sh:116`, and
+the eighteen-day fault written into the build script at lines 101–104 — the record of the
+fault living where the fix does.**
+
+#### R264–R266 — three laws about instruments, all found by the sessions that owned them
+
+**A SHALLOW CLONE MAKES STALE THINGS LOOK FRESH.** `git log -1 -- <path>` on `--depth 1`
+returns the boundary commit — real sha, real date, wrong answer, **and it cannot return "I do
+not know."** **The bias runs toward silence rather than false alarms, which is the class that
+leaves no trace, and it ran all day inside the post whose job is spotting staleness.**
+
+**I checked my own clones because of it and found them full — BY CONFIGURATION, NOT BY
+CHECKING.** **A clean result from an unverified instrument is not evidence the instrument
+works.**
+
+**DOING THE RIGHT THING MAKES THE ARTIFACT HARDER TO MEASURE.** **A repaired truncation
+contains the broken string. A documented withdrawal contains the withdrawn name.** **A was
+penalised by a search precisely for recording honestly what it chose not to ship — had it
+deleted the code silently, the grep would have been right.** **And this project asks every
+session to record what it rejected, so we manufacture these artifacts deliberately.**
+
+**A DISCOUNT IS A CLAIM AND IT CAN BE WRONG IN EITHER DIRECTION.** **A too-wide retraction
+throws away sound measurements and teaches a future reader to distrust work that was
+correct.** **The party most likely to over-correct is the party who erred.**
+
+#### R267 — the `Z` was a literal, and it was about to become a claim about a person
+
+**Session 0 reported Shara's repository quiet for 5h 38m on the day her media was expected.
+It had read `13:43:15-04:00` and labelled it `13:43Z`.** **True quiet: 102 minutes, after an
+81-minute burst that ended with a merge closing a hardening PR. Not a signal.**
+
+> **That sentence, taken to the owner, says the most important person in this project to them
+> went silent for six hours on her launch day.** **Not a rounding error — a false statement
+> about a person, delivered to someone who would have acted on it.**
+
+**A DISCIPLINE MARKER APPLIED WITHOUT THE OPERATION BEHIND IT IS WORSE THAN NO MARKER.** The
+`Z` had been appended for hours as a rigour convention, **three hours after Session 0 raised
+the local-versus-UTC fault against itself and committed to UTC.**
+
+**And it compounded with the containment error found in the same figure — one under-reporting,
+one over-reporting.** **TWO FAULTS THAT PARTLY CANCEL ARE WORSE THAN EITHER ALONE, because the
+result reads as merely imprecise rather than wrong.**
+
+#### R268–R269 — two wrong generalisations that confirmed each other
+
+**Session 0 bounded the timezone fault to Shara's repository and stood the concern down.
+Measured, it touched four repositories including mine.** **Its re-derivation sample was drawn
+entirely from the half of the corpus where the instrument is right.**
+
+> **A corpus that genuinely lacks the control tells you nothing. A corpus that CONTAINS it and
+> was not sampled tells you that you were fine, with evidence.** **And a stood-down concern
+> stops being checked, so a wrong boundary propagates further than the fault it bounds.**
+
+**Then it corrected ME, and was right: the offset is a property of the COMMIT, not the
+repository.** **I had written a repo-level table into the permanent reference from 40 commits
+on one ref. Session 0 produced its own uniform answer from 3 fetched refs against 154 on the
+remote — because `--all` MEANS ALL REFS YOU HAVE FETCHED, a flag whose name implies
+exhaustiveness while being silently bounded by local state.**
+
+    eql-source   470 at -04:00  and  146 at Z
+    sky-ledger   128 at Z       and    2 at -04:00
+
+> **Both of us got "uniform" from partial samples, in opposite directions, AND ITS WRONG
+> ANSWER CONFIRMED MINE.** **Table replaced with the rule.**
+
+#### R270 — the first side-by-side that agreed, and it reconciled to the unit
+
+**Scanner: `rarity-word` 351 unmarked + 5 marked = 356. Session 0's morning figure: 88.**
+
+**It did not report a conflict. It tried four reconciliations, none matched, and then READ
+THEIR PATTERN — byte-equivalent to its own, so the pattern was not the variable.** Splitting
+by source group:
+
+    public/**/*.html        267
+    _build/source/*.html     89
+                           ----
+                            356   = 351 unmarked + 5 marked   EXACT
+
+**Verified independently, all three numbers.**
+
+> **Both instruments were correct and were answering different questions — pages in
+> `public/items` versus occurrences across published HTML PLUS the build sources those pages
+> are generated from.** **NEITHER NUMBER NEEDED CORRECTING; BOTH NEEDED LABELLING.**
+
+**And the rarity gap did not close — it became MEASURABLE. 351 unmarked, where the scanner
+previously had no signature for that family at all.**
+
+#### R271 — the audit's shortest path is closed
+
+**#174 at `4ce21c73`, verified on the merged tree:**
+
+| | |
+|---|---|
+| "Start here" | **first band after the hero** (was fifth, behind 684 words) |
+| nav | **Items & mobs**, **Site search** — the `=Index` misroute closed |
+| distinct `og:image` | **2 → 20** across 717 pages |
+
+**Every link pasted into a chat showed a card reading "Dungeons" this morning — closed on the
+day a product launched into a community that shares links.**
+
+**AND A CAUGHT ITS OWN BUILD FAILURE BY MEASURING RATHER THAN READING.** A keyword argument
+before a positional one made `set -e` stop the build at `build17.py`. **A noticed only because
+the card count had not moved from 2.**
+
+> ***"A build that stops is indistinguishable from a build that succeeds if you check the
+> wrong thing afterwards. The count was the control; the absence of a visible traceback was
+> not."***
+
+**The safety mechanism worked perfectly and still produced a silent wrong outcome
+downstream.**
