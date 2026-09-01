@@ -11955,6 +11955,9 @@ prefix. This closes the other sixteen.**
 | R167 | **A NEW CLASS: the code generalised, the justification and the guard did not.** Verified — the commit adds 32 test lines and changes NO source; `dedupeKey`'s every branch already carried its discriminator, but the `kill` case has **twelve lines of reasoning and a test** while the sibling `task-assigned`/`task-updated` three lines above had **neither**. Dropping the task name left all 131 green and collapsed two weeklies granted in one second. **Not an unexamined claim — reasoning that was done, correctly, written down, and applied to one of the two places it governs.** Adopted: a fix in a switch is incomplete until every sibling is named covered or excluded | `pending` | **stands** |
 | R168 | **Two defects an hour apart, opposite directions, both corrupting the ONE thing the tool does.** Sticky attribution = a completion the player did not earn (false YES); collapsed grant = a grant the player DID spend, uncounted — and `actionability()` counts grants against the cap of three, **so it reports a raid actionable when the allowance is spent** (false NO). D: *"both are the tool lying about what is LEFT, which is the only thing it does."* Tested as a pair under R166's criterion. **And my suggestion shipped — two accidental guarantees converted to stated ones in one night, one in tooling and one in production** | `pending` | **stands** |
 | R169 | **A positive control proves the instrument WORKS, not that it is AIMED CORRECTLY** — and I have been running them as though it proved both since the first hour. D, on my two wrong-file greps: my control fired at 47 test calls, so the instrument was live and pointed at the wrong file, and **a live instrument on the wrong surface returns a REAL NUMBER**, formatted identically to a right one. **What catches aim is a SECOND INSTRUMENT asking the same question a different way — the diffstat — "not a better control, a different one."** Gap in R73's framing, closed by D | `pending` | **mine; doctrine corrected** |
+| R170 | **R167 made a falsifiable prediction within the hour and it held, 3 of 3.** Audited all eight `dedupeKey` siblings: `given`, `entered` and `instance-invite` were **BLIND**; only the one carrying twelve lines of reasoning was guarded. **Every discriminator-carrying sibling except the commented one was unguarded** — so *"a comment explaining why one case is careful is evidence the others were NOT considered"* is confirmed rather than plausible. **The only ruling tonight that was falsifiable in advance rather than after the fact.** Code correct at eight sites; reasoning and tests at one | `pending` | **verified in tree** |
+| R171 | **THREE UNRELATED causes converging on ONE consequence — not a root cause with symptoms.** Sticky attribution, the difficulty-`0` default, and now `entered`'s dedupe collapsing a same-second tier change (leaving `currentInstance` at the FIRST tier, so a later kill lands in the wrong cell of the RIGHT raid). **None reachable from the others' tests, and fixing any one leaves the consequence live.** D: *"attribution is where this engine is most fragile, and it is fragile in ways that do not share a cause."* **A concentration in the CONSEQUENCE is worth auditing as a region even when the causes are unrelated** | `pending` | **stands** |
+| R172 | **The EXCLUSION has to be written down too, or the next audit rediscovers it as a gap.** D's sharpening of R167's second half: `weekly-request` and `voidling-reply` now carry a test asserting they COLLAPSE BY DESIGN, with the reasons — **so the omission reads as a decision rather than the oversight the other three were.** An unexamined omission and a deliberate one are indistinguishable in code. **And a distinction between kinds of doctrine: R167 raised the DISCOVERY RATE (3 of 3) rather than the coverage — the first tonight to improve TARGETING rather than rigour** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19053,3 +19056,96 @@ night:**
 
 **State: 132 tests, 80 demonstrably non-vacuous, 52 untouched. 14 blind spots across 50
 mutations, and D reports the rate holding at roughly one in three.**
+
+---
+
+### 1 Sep 04:4xZ — RULING R170–R172: a ruling that predicted where to look, and was right three times
+
+#### R170 — R167 made a falsifiable prediction within the hour and it held, 3 of 3
+
+**`ccc09f5e`, 136 green, 53 mutations / 53 caught. Verified: all eight `dedupeKey`
+siblings, and 68 test lines added.**
+
+```
+kill                          COVERED   twelve lines of reasoning + a test
+task-assigned / task-updated  covered an hour ago, same method
+given                         BLIND     probe 2 -> 1
+entered                       BLIND     probe [2,4] -> [1,3]
+instance-invite               BLIND     probe 0 -> 1
+weekly-request                no discriminator — collapse is the INTENT
+voidling-reply                no discriminator — collapse is the INTENT
+default                       bare, reached only by unmodelled kinds
+```
+
+> **EVERY discriminator-carrying sibling except the one with the comment was unguarded.**
+
+> **RULING R170: R167's sharper half is now CONFIRMED rather than plausible.** I wrote
+> that *"a comment explaining why one case is careful is evidence the others were NOT
+> considered, not evidence that they were."* **D tested it against all eight siblings and
+> the prediction held three times out of three.**
+>
+> **Most of tonight's rulings describe what happened. This one said WHERE TO LOOK and was
+> right** — and it is the only ruling of the night that has been falsifiable in advance
+> rather than after the fact.
+
+**Verified in the tree: `given` keys on `ev.item`, `entered` on `ev.zone` AND
+`ev.difficulty`, `instance-invite` on `ev.from`/`ev.zone`/`ev.difficulty` — all correct in
+the source, all previously unguarded.** **The code was right at eight sites; the reasoning
+and the tests existed at one.**
+
+#### R171 — a concentration of THREE UNRELATED causes on ONE consequence
+
+**`entered` is attribution for the third time tonight.** Dropping difficulty from its key
+collapses a same-second re-entry at a different tier, **leaving `currentInstance` at the
+FIRST tier — so a later kill is credited to the wrong cell of the RIGHT raid.**
+
+| # | mechanism | consequence |
+|---|---|---|
+| 1 | sticky attribution (unconditional assignment was the clearing) | kill in the wrong cell |
+| 2 | difficulty `0` default instead of `null` | kill in the wrong cell |
+| 3 | `entered` dedupe collapsing a tier change | kill in the wrong cell |
+
+> **RULING R171: three separate mechanisms, all landing on "the kill is in the wrong
+> cell", NONE reachable from the others' tests.** **This is not one root cause with three
+> symptoms — it is three causes converging on one consequence**, which is the harder shape
+> because fixing any one of them leaves the consequence live.
+>
+> **D's reading, adopted: *"attribution is where this engine is most fragile, and it is
+> fragile in ways that DO NOT SHARE A CAUSE."*** **A concentration in the CONSEQUENCE is
+> worth auditing as a region even when the causes are unrelated** — which is the opposite
+> of how a root-cause hunt would treat it.
+
+#### R172 — the EXCLUSION has to be written down, and a ruling can raise the rate rather than the coverage
+
+**D sharpens R167 on the half I stated but did not weight:**
+
+> *"`weekly-request` and `voidling-reply` are now TESTED, so the omission reads as a
+> DECISION rather than as the oversight the other three were. **That is the half of R167 I
+> would keep for other sessions: named covered OR EXCLUDED — the exclusion has to be
+> written down too, or the next audit rediscovers it as a gap.**"*
+
+**Verified: the fourth added test is `DEDUPE SIBLINGS 'weekly-request' and 'voidling-reply'
+COLLAPSE BY DESIGN`, carrying the reasons — `COLLAPSE_MS` already folds repeats within six
+seconds, and the Voidling set is a set of SECONDS used as a presence control.**
+
+> **RULING R172: an unexamined omission and a deliberate one are indistinguishable in
+> code.** **Writing the exclusion down is what makes the difference legible, and without
+> it every future audit pays the same cost again.**
+
+**AND D REPORTS SOMETHING NO OTHER RULING TONIGHT HAS DONE:**
+
+> ***"17 real blind spots across 55 mutations. The rate went UP this pass — 3 of 3 —
+> because R167 AIMED the mutations rather than my guessing where to look. That is the first
+> time tonight a ruling has raised the DISCOVERY RATE rather than the coverage."***
+
+> **Recorded as a distinction between kinds of doctrine.** **Most of what this project has
+> produced tonight improves RIGOUR — check it this way, state that surface, prove the
+> instrument can fail. R167 improved TARGETING.** **The first tells you how to trust a
+> result; the second tells you where the next one is.**
+
+**On R169, D generalises my own line past greps:** *"My own probes are controls of the same
+kind, and when one reported INERT twice tonight the fix was never a STRONGER probe — it was
+a probe that asked a DIFFERENT QUESTION, on a fixture where the two hypotheses could
+disagree."*
+
+**State: 136 tests, 84 demonstrably non-vacuous, 52 untouched.**
