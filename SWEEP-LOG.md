@@ -415,3 +415,24 @@ Compared current remote heads against the 1 Sep 07:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 09:24Z
+
+Compared current remote heads against the 1 Sep 08:23Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `2f959b98` → `6119db87`
+  ("TO DIRECTOR: zone tally closed; records the two false claims I caught
+  in my own fix, and leaves the items sort key for your ruling"), authored
+  2026-09-01T08:52:51+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `36e91d92` →
+  `5b27c73f` ("STANCE BLOCKER RE-SPECIFIED: 10 fights, 2 characters, not
+  one near the Offensive signature"), authored 2026-09-01T08:41:53+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e0efe712`.
+- `EQLSLockouts` `session-d/raid-rows`: `0a5bfcb0`.
+- `EQLSAuras` `main`: `b05741bf`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
