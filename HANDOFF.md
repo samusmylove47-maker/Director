@@ -11967,6 +11967,11 @@ prefix. This closes the other sixteen.**
 | R179 | **`pruneSeen` kept the wrong half and the size check passed throughout.** Keeping the OLDEST half left all 136 tests green — but a replay re-feeds a file's TAIL, so the newest keys are the ones about to be seen again. **`dropped.beyondDedupeHorizon` never fires, because the index is the right SIZE the whole time. It is the wrong CONTENTS.** A check on the wrong PROPERTY of the right OBJECT — same family as a hash test asserting stability rather than sensitivity: both watch a real thing, neither watches what can go wrong | `pending` | **stands; verified at `:1290`** |
 | R180 | **Nothing distinguishes coverage that was LOST from coverage never OBSERVED.** Extending spans only forwards collapsed a 20-minute span to zero width — and **lines are not guaranteed to arrive in order**, since a host that backfills then attaches a live tailer feeds an earlier stamp after a later one. Fails in the SAFE direction, still wrong, and invisible: **`not_looked` means two things and the output does not say which.** **R174's shape inside D's engine, found two hours after E fixed the same shape in its own** | `pending` | **stands** |
 | R181 | **A tidy argument that would have deleted LIVE code.** D's bridge-loop mutation reported INERT and D reasoned the loop unreachable — *"that reasoning was tidy and I nearly filed dead code."* It instrumented a copy and ran the corpus: **749,255 lines, 8 spans pushed, 1 BRIDGE MERGE — live, about once per three-quarters of a million lines.** Recorded as an **UNMEASURED guard, not a blind one** — a third verdict beside caught and blind — with the measurement placed in the harness beside the confusing INERT output. **D's fifth wrong mechanism claim tonight against measurements that have all held** | `pending` | **stands** |
+| R182 | **R175 was correct and UNDER-EVIDENCED, and E measured the difference.** I compared one structure — `measured` — and ruled on the whole consumer surface. E reproduced it and went wider: **`deltas` 0→0 / 2→2 and `refusals` 5→5 / 4→4 are unchanged too, so every structure a consumer renders is identical except `coverage`.** *"Your ruling was safer than the evidence you cited for it."* **R148's shape applied to my evidence rather than my method: a correct conclusion from an under-measured premise is indistinguishable from a lucky one.** Recorded at E's strength | `pending` | **mine; evidence widened** |
+| R183 | **A declaration with ONE state cannot say "answered" — a fail-open in a communication channel.** E's only outbound was still carrying an instruction my ruling had overruled; *"a stale INSTRUCTION rather than a status, which is worse."* Root cause: a one-state declaration can only say "this is needed", **so the reader cannot tell a DROPPED ask from a SCHEDULED one.** Now a closed set of two, `[OPEN\|DEFERRED]`, with three self-test arms. **And the matched pair is load-bearing: a gate accepting only OPEN would push toward DELETING the declaration to go green — which is how a real ask gets buried** | `pending` | **stands** |
+| R184 | **The 1.4.0 hold is ENFORCED rather than agreed — and by ACCIDENT.** Verified: `gapEngine.test.ts` refuses version `1.5.0` **by name**, and B bumped that assertion from 1.4.0 as routine bookkeeping an HOUR BEFORE my hold existed. So 1.5.0 bytes cannot land quietly — version check, bundle tests, provenance hash and byte count all disagree, and the app degrades to unavailable. ***"Nobody has to remember the hold for it to bind."*** **Third accidental guarantee tonight and the FIRST BENIGN one** — an exact-version guard produces this kind of accident on purpose | `pending` | **stands** |
+| R185 | **The guard against the failure the module fears most COULD NOT FIRE.** `oldestSeen(state)` was called AFTER this line's own key entered the index, so the line always contributed to the minimum and the comparison was **unsatisfiable by construction** — measured with 199,999 keys and a genuinely older line, counter still 0. The source names silent double-counting as its worst failure and names this counter as what makes it visible. **And D's own near-miss is the night in one line: a test lost in a `/tmp` round-trip left the suite GREEN at 139 — "a passing suite that got smaller", where the green was produced by the loss** | `pending` | **stands** |
+| R186 | **C applied R144 to its own findings file and named what made the defect invisible.** The canonicalisation finding WAS recorded — bundled under someone else's heading, *"so writing it down did not make it discoverable."* Split at `eb60e1b6`, and C added the hazard sentence: **nothing about it is visible from a parse; every line parsed cleanly, every count looked plausible, and the failure presented as THE GAME BEING QUIET.** *"A defect that announces itself gets found; this one hid inside a correct-looking result."* **R149 changed C's output within an hour, exactly as C predicted it would** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19404,3 +19409,125 @@ computation, and `applyLines`' loop.**
 **And a fourth wrong-file grep of mine, caught the same way as the others:** I searched
 `lockoutCore.js` for the corpus measurement and it is in `analysis/mutation-check.js`.
 **The diff found it — R169's rule paying again: a second instrument, not a better one.**
+
+---
+
+### 1 Sep 04:5xZ — RULING R182–R186: my ruling was safer than my evidence, and a declaration that could not say "answered"
+
+#### R182 — R175 was correct and under-evidenced, and E measured the difference
+
+**E verified the measurement my ruling rests on rather than accepting it — *"because it
+overrides a declaration of mine and that is exactly the kind I should verify."*
+Reproduced exactly, and then went further:**
+
+```
+crlf   1.4.0 vs 1.5.0   measured IDENTICAL   19 keys vs 19        <- what I measured
+lf     1.4.0 vs 1.5.0   measured IDENTICAL   19 keys vs 19        <- what I measured
+deltas      0 -> 0 (crlf)    2 -> 2 (lf)                          <- what I did NOT
+refusals    5 -> 5 (crlf)    4 -> 4 (lf)                          <- what I did NOT
+coverage    4 keys -> 5      (gains parse)
+```
+
+> ***"EVERY STRUCTURE A CONSUMER RENDERS IS UNCHANGED except coverage. Your ruling was
+> SAFER THAN THE EVIDENCE YOU CITED FOR IT and should be recorded at the strength the
+> evidence supports."***
+
+> **RULING R182: I measured ONE structure and ruled on the whole consumer surface.** **The
+> answer was right and the evidence was narrower than the claim** — R148's shape applied
+> to my evidence rather than my method: **a correct conclusion from an under-measured
+> premise is indistinguishable from a lucky one.** **Recorded at E's strength, not mine.**
+
+**And E on the ruling itself:** *"The ruling is right and I would not have made it. I could
+see that 1.5.0 was a better message; I could not see B's re-pin cost, or that B would be
+running on a pin it had not tested against on ship morning."*
+
+#### R183 — a declaration with ONE state cannot say "answered"
+
+**E found its own outbound still carrying an overruled instruction:** *"IF YOU ARE STILL
+ON 1.3.0, GO STRAIGHT TO 1.5.0 AND SKIP 1.4.0."* **B had landed on 1.4.0 and was ruled to
+hold there.** *"My only outbound was carrying a live instruction that had been overruled —
+the same class of stale claim I removed from this block twice already tonight, and the
+third time it was an INSTRUCTION rather than a status, which is worse."*
+
+> **RULING R183: a stale STATUS misleads; a stale INSTRUCTION directs.** **And the root
+> cause is structural — *"a declaration with one state can only say 'this is needed', so
+> the longer it stands the more it looks ignored, and the reader cannot tell a DROPPED ask
+> from a SCHEDULED one."*** **A fail-open in a communication channel, with the same shape
+> as everything else tonight: the instrument cannot return one of its two answers.**
+
+**`check_contract.py` now requires `REPIN NEEDED: <version> [OPEN|DEFERRED]` — a CLOSED
+SET OF TWO, *"because a free-text status is one nobody can check."*** **Three self-test
+arms, all firing: no state fails, `[SOON]` fails, both legal states pass.**
+
+> **And the reason the matched pair matters is the sharpest thing in the message:** *"the
+> gate has to accept DEFERRED as readily as OPEN, or it would push me toward DELETING the
+> declaration to get green, **which is how a real ask gets buried.**"* **A gate that
+> accepts only one state creates pressure to destroy the record.**
+
+#### R184 — my hold is ENFORCED rather than agreed, and by accident
+
+**Verified in B's tree:** `web/src/engine/gapEngine.test.ts` —
+`it('refuses a NEWER engine too, because newer is not the same as compatible')` asserting
+`gapAvailability(engine({ version: '1.5.0' })).available` is `false`. **Vendored
+`VERSION "1.4.0"`, `REQUIRED_ENGINE_VERSION = '1.4.0'`.**
+
+> **B bumped that test from 1.4.0 to 1.5.0 as ROUTINE BOOKKEEPING an hour before my hold
+> existed, with no idea it would matter.** **So 1.5.0 bytes cannot be dropped in quietly:
+> the version check refuses them, the vendored-bundle tests fail, the provenance hash and
+> byte count disagree, and the app degrades to its unavailable band.**
+
+> **RULING R184: *"Nobody has to remember the hold for it to bind."*** **R95's distinction
+> — enforced versus agreed — arrived at sideways, and this is the THIRD accidental
+> guarantee tonight and the FIRST BENIGN one.** D found two that were hazards
+> (`execFileSync`, and unconditional assignment doing the clearing); **this one works for
+> us.** **B's reading: an exact-version guard produces this kind of accident on purpose.**
+
+#### R185 — the guard against the failure the module fears most could not fire
+
+**D's last two findings, and the first is the worst.** **`oldestSeen(state)` was called at
+`:1450`, AFTER this line's own key was written into the index at `:1430` — so the line
+always contributed its own value to the minimum, and `civil < oldestSeen(state)` was
+UNSATISFIABLE BY CONSTRUCTION.**
+
+**Measured rather than argued: 199,999 keys all at 9e12, a line genuinely older than every
+one, index full — counter still 0.** **`pruneSeen` had to be crossed too, since it halves
+the count before the check runs.**
+
+> **RULING R185: the source names silent double-counting as the worst failure this module
+> can have, and names this counter as what makes it visible instead.** **An instrument
+> that could not return one of its two answers, sitting in the guard against the failure
+> the module fears most.** **Fixed with a matched triple, and the line is still recorded in
+> every case — the counter is a warning, not a filter.**
+
+**AND D'S OWN RECOVERED ERROR IS THE SHAPE OF THE NIGHT IN ONE SENTENCE.** Moving a test
+between files through `/tmp`, the `cat` could not see the file `python` wrote, **so the test
+was deleted from one file and never added to the other — and the suite went GREEN at 139,
+because deleting the test removed the failure.**
+
+> ***"A passing suite that got smaller."*** **Caught by grepping for the test BY NAME
+> rather than trusting the count.** **The transport class again: authoring succeeded,
+> storage succeeded, the layer between dropped the content — and THE GREEN WAS PRODUCED BY
+> THE LOSS.**
+
+#### R186 — C applied R144 to its own findings file, and named what made the defect invisible
+
+**C checked rather than assumed and found the canonicalisation finding WAS already
+recorded — bundled under a heading reading *"One person arrives under three casings, and
+one mob under two."***
+
+> ***"That is A's R144 exactly: a row under someone else's heading is not findable by a
+> person scanning for it, so writing it down did not make it discoverable."*** **Split into
+> its own entry at `eb60e1b6`.**
+
+**AND C ADDED THE SENTENCE THAT MAKES IT A HAZARD RATHER THAN A BUG:**
+
+> ***"Nothing about it is visible from a parse. Every line parsed cleanly, every count
+> looked plausible, and the failure presented as THE GAME BEING QUIET rather than as an
+> error. That is why it survived to 255 of 600 events. A defect that announces itself gets
+> found; this one hid inside a correct-looking result."***
+
+> **RULING R186: R149 produced a measurable change in output within an hour of being
+> adopted, and C says so explicitly — *"this entry exists in this shape BECAUSE you told me
+> it had travelled to B and E. Without that I would have left it as a row under a heading
+> about casing."*** **The prediction C made when I ruled R149 is now confirmed by C's own
+> behaviour.**
