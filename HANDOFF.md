@@ -12005,6 +12005,9 @@ prefix. This closes the other sixteen.**
 | R209 | **A SEVENTH FAILURE SHAPE: clean, pushed and green while disconnected from where the work must land.** Verified, not accepted — `EQLSLockouts` main at `dbd15dc`, **27 August**; `session-d/raid-rows` ahead **51 commits, 20 files, 6,872 insertions, no open PR**, and `src/lockoutCore.js` + `src/app.template.html` are in the diff, so the unmerged side is **the app a user runs**. **Every catalogued shape is an instrument returning a WRONG answer; this is one returning a RIGHT answer to a question nobody should have asked** — tree clean, 140 green, every reading true, composite conclusion "the work shipped" false. **The transport class with the transport being a merge that never happened.** It generalises past D: **I have certified seven merged PRs by executing the composed tree and never once asked, on any repo, whether work had a PATH to main.** Live consequence: **a rebuild this morning would have shipped the 27 Aug app AS the "updated, better version" the owner approved.** **D authorised to open the PR — a PR IS the proposal mechanism; the merge stays the owner's** | `open` | **D → owner** |
 | R210 | **I reported three sessions offline and all five were running.** Every address rotated inside a fourteen-minute window; I read stale named registrations and published them as liveness. **Same shape as R209, one turn apart, and made while holding the tick rule that names it** — the brief says addresses rotate and named rows are stale. **I got a true answer to "what is registered under these names" and reported it as an answer to "what is running."** **A directory read is not a liveness check; a message that does not bounce is.** D's bounce and A's `ENOINBOX` were the real instrument and **both arrived from the sessions, not from me** — A even re-addressed by guessing from the session list and flagged it could not verify my identity, which is the correct move and one I should have made unnecessary. **A possible absence published as an absence: the rule I am given in every tick, broken in the first report of the day** | `corrected` | **me** |
 | R211 | **The stale header fixed rather than named a second time.** `HANDOFF.md` declared itself commit `5ee3cd3b`, 18 August, two weeks behind main, and it is **the first file a session reads**. It was already in this record as my own defect, **named and left standing — which is worse than unnoticed, because it is a defect plus a false record of attention.** Heading now states it is an opening date and not a currency date, and sends the reader to the last ruling. **And A's ask about this record is accepted: *"a ledger that reads as a record of clever sessions will produce clever sessions; one that reads as a record of what caught them will produce checks."* I have been closing entries with a session-state table written as praise — it reads as a report card and should read as which control fired** | `fixed` | **me** |
+| R212 | **Right decision, FALSE PREMISE — and I had already passed the premise to the owner.** I claimed a rebuild would ship sticky attribution "marking raids complete a player never ran"; D refuted it and I verified the refutation: `git log -S` on the assignment returns **one commit, its introduction, 23 Aug, never changed**. **The shipped code was always correct; the defect existed only in a mutation D wrote on purpose.** **A correct decision resting on a false premise is not a good decision, it is a lucky one** — and this premise was carrying weight immediately, as the sentence justifying blocking a publish the owner had approved. **D nearly made the same error inverted ten minutes later** — hypothesised the removed clock still rendered, grepped, got 3 hits, **stopped to look**: comments and a `setInterval` poll both versions have. **D checked before writing; I did not.** Attributing to D limited the damage and did not prevent it — **the transport class with me as transport again, this time an unchecked claim carried intact rather than a bound stripped** | `corrected` | **me** |
+| R213 | **The real reason is worse, and two faults compose on promotion day.** Verified by absence with a control: **`MIN_OBSERVED_FRACTION` does not exist in the shipped tool — there is no floor.** So the live app can render **a full week of 25 `open` cells from a handful of log lines**, read by a player as "you still owe all of these." **`/tools/lockouts` publishes *"A cell it has no history for reads not looked. It does not read open"* — the app violates the standard the page linking it asserts.** Heavier than a missing test: **the site keeps a promise on one page and breaks it in the software that page ships.** **Composes with the audit's finding that `/log on` appears zero times on the page and zero times in the 280KB app, and EQ logging is off by default** — so a thin log is **the condition most first-time readers arrive in**, and precisely the one producing confident `open` cells. **PR #10's headline to the owner is this, not "51 commits unmerged"** | `open` | **owner** |
+| R214 | **C killed its own headline with a control, and the finding outlives the result. "CANONICALISE THE KEY, AND IT IS STILL NOT AN IDENTITY."** C returned median 23.2%, p90 54.3%, 81% of pairs disagreeing — my hypothesis confirmed and quotable — **and did not send it**, because its control (each character's own damage, completely recorded in their own log) came back 88.8% disagreeing with rows reading *"Shara 0, Avenrae 930"*. **Impossible for one mob, therefore not one mob.** Measured cause: **"a dar ghoul knight" slain five times in one minute, 201 kills of that name, 24 damage lines against it in one second** — mass pulls of identically-named mobs, so a (name, second) key merges several entities and each log sums a different subset. **The disagreement was C's key colliding, not the logs disagreeing.** **C's item 5 said canonicalising fixes two spellings of one mob; this says canonicalising is correct AND INSUFFICIENT — a bug fix versus a fact about the data model.** **Q1 recorded as ANSWERED "the corpus cannot reach it"** — 9,275 co-witnessed cells, 115 qualifying fights, **0 co-witnessed named targets**, a measured boundary with a number on it. **Routed to D as a hypothesis and explicitly not a defect** (its tool keys on mob identity to decide what a player cleared); C now pointed at Lockouts. **Acquisition ask carried up: two players' logs of one raid answers Q1 in an hour** | `answered` | **C → D** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -20391,3 +20394,108 @@ it" as praise. It reads as a report card. It should read as which control fired.
 **R209 is the test of that and the entry is not that D reported well — it is that
 nothing in our process asks whether work has a path to main, and a session's log looks
 identical whether it does or not.**
+
+---
+
+### 1 Sep 16:0xZ — RULING R212–R214: I relayed an unchecked mechanism and D refuted it, C killed its own headline with a control, and a mob name is not an identity
+
+#### R212 — right decision, false premise, and I had already passed the premise to the owner
+
+**I told D that a rebuild from `EQLSLockouts` main would ship sticky attribution "marking
+raids complete a player never ran", and I told the OWNER the same thing, attributed to D.
+D checked it and it is false.**
+
+    git log -S'state.currentInstance = ev.instanced'   ONE commit, 8ff1879, 23 Aug, its introduction
+    MIN_OBSERVED_FRACTION in origin/main               0
+    MIN_OBSERVED_FRACTION in origin/session-d/...      present, src/lockoutCore.js
+    (branch > 0 is the control; a dead grep returns 0 on both)
+
+**The shipped code has always been correct. The defect existed only in a mutation D wrote
+on purpose to prove no test guarded it.** D put the correction in its own PR body under
+*what I would not defend*.
+
+> **RULING R212: my decision to stop A's rebuild was RIGHT and my reason was WRONG, which
+> is the less comfortable version of being right.** **A correct decision resting on a
+> false premise is not a good decision, it is a lucky one, and it fails the moment the
+> premise carries any weight.** Here it would have carried weight immediately — it was
+> the sentence I gave the owner to justify blocking a publish they had approved.
+
+**THE SHAPE, and D nearly made it in the opposite direction ten minutes later:** D
+hypothesised the removed clock still rendered on main, grepped, got **3 hits**, and
+stopped to look — comments and a `setInterval` file poll that both versions carry. **No
+clock in either, and it never entered the PR. D checked before writing; I did not.** Same
+hazard, opposite outcomes, one step apart.
+
+**I attributed the claim to D rather than asserting it, which limited the damage and did
+not prevent it. Relaying an unverified mechanism into a decision the owner is making is
+the transport class with me as the transport again — R188 and R202 were a stripped bound;
+this is an unchecked claim carried intact.**
+
+#### R213 — the real reason is worse, and it is two faults composing on promotion day
+
+**Verified by absence with a control: `MIN_OBSERVED_FRACTION` does not exist in the
+shipped tool. There is no floor.**
+
+> **RULING R213: the live tool can render a full week of 25 `open` cells from a handful
+> of log lines, and a player reads that as "you still owe all of these."**
+> **`/tools/lockouts` publishes the sentence *"A cell it has no history for reads not
+> looked. It does not read open."* — so the app violates the standard the page linking
+> to it asserts.** **That is heavier than a missing test: it is the site keeping a
+> promise on one page and breaking it in the software that page ships.**
+
+**AND IT COMPOSES WITH A FINDING FROM THIS MORNING'S SITE AUDIT.** `/log on` occurs zero
+times on the tool page and zero times in the 280KB app, and EverQuest logging is off by
+default. **So a thin log is not an edge case — it is the condition most first-time
+readers arrive in, and it is exactly the condition that produces a grid of confident
+`open` cells.** **Promotion to the community is today.**
+
+**The two together give a wrong answer, confidently, to almost every new user. That is
+what goes to the owner as PR #10's headline — not "51 commits are unmerged."**
+
+#### R214 — C killed its own headline with a control, and the finding is better than the result
+
+**C ran the two-vantage measurement I dispatched and came back with: third-party damage
+totals disagreeing between vantages, median 23.2%, p90 54.3%, 81% of pairs off by more
+than 2%. My hypothesis, confirmed, striking, quotable.**
+
+**C did not send it.** Its control was each character's OWN damage, which that character's
+own log records completely. It returned **88.8% of pairs disagreeing**, with rows reading
+*"Shara 0, Avenrae 930"*.
+
+> **A character's own log cannot show them dealing 0 damage while another log shows 930
+> in the same second for one mob. Therefore it is not one mob.**
+
+**Measured cause: "a dar ghoul knight" slain FIVE TIMES IN ONE MINUTE, 201 kills of that
+single name across the corpus, up to 24 damage lines against that name in one second.**
+Mass pulls of identically-named mobs; a key of (name, second) merges several simultaneous
+entities and each log sums a different subset. **The disagreement was C's key colliding,
+not the game's logs disagreeing.**
+
+> **RULING R214, and C's own sentence is the ruling because it is already in the form
+> that cannot be usefully truncated:**
+>
+> **"CANONICALISE THE KEY, AND IT IS STILL NOT AN IDENTITY."**
+>
+> **C's item 5 established that canonicalising a name fixes a collision between two
+> spellings of one mob. This establishes that canonicalising is CORRECT AND INSUFFICIENT
+> — the name is genuinely shared by many live entities at once. The first is a bug fix;
+> the second is a fact about the data model.**
+
+**Q1 IS ANSWERED AS "THE CORPUS CANNOT REACH IT" AND THAT IS RECORDED AS AN ANSWER, NOT A
+NON-RESULT.** 9,275 co-witnessed cells, 115 qualifying fights, **0 co-witnessed named
+targets.** **A search establishes presence and only a survey establishes absence; C
+established that the survey cannot be run on this data, which is a measured boundary with
+a number on it.**
+
+**ROUTED, because C cannot see where its own findings land:** the identity finding is a
+question about D's tool, which keys on mob identity to decide what a player has cleared.
+**Given to D as a hypothesis with a corpus behind it and explicitly NOT as a defect — I
+had just been wrong by asserting an unmeasured mechanism and was not doing it twice in
+one hour.** C is now pointed at Lockouts with the two-vantage method: **do two players in
+the same group on the same evening produce the same grid?**
+
+**ONE ACQUISITION ASK CARRIED UP RATHER THAN FILED:** C converted a blocked analysis into
+a concrete request — **two players' logs of the same raid makes Q1 answerable in about an
+hour.** It needs targets whose name IS an identity, which is exactly the content the site
+publishes and exactly what C's corpus lacks. **E may hold two vantages of one Sky fight;
+the owner could ask a guildmate. Neither is today.**
