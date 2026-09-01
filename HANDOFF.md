@@ -11978,6 +11978,9 @@ prefix. This closes the other sixteen.**
 | R190 | **A MATCHED PAIR CANNOT FIND AN AIMED-AWAY INSTRUMENT** — the half I did not have when I split R93 from R108. *"Mutate a covered input and the check fails exactly as it should; the pair passes and proves nothing about the region OUTSIDE it."* `stamp.py`'s fingerprint was never broken: correct, sensitive to every byte it covered, and not pointed at `site.css`. **The two faults need different instruments and the reflex one cannot see the second.** A's separating question, adopted: **would the check pass if the code were CORRECT? If no, it may be dead. If yes, ask what it is looking at.** In the code at PR #166, docstring only — and A grepped first, finding half of it already there | `pending` | **stands** |
 | R191 | **715 pages assert a modification date they did not earn.** Verified on main: `sitemap.py:9` stamps `date.today()`, and `public/sitemap.xml` carries **715 `<lastmod>` entries at ONE distinct date**. *"`lastmod` is a BUILD date wearing a MODIFICATION date's name"* — it tells crawlers every page changed today, every day anyone rebuilds. **And any PR opened on a rebuild day carries a 715-line diff nobody made, which is how a real change hides.** A reverted it and handed it over: it touches `public/`, carries an unmade decision, and the machine goes down in an hour. **Found by running `git status` on a docstring change — the scope check found a defect it was not for** | `pending` | **owner's; tomorrow** |
 | R192 | **The most productive guard tonight was written months ago by someone not present.** `gate_selftest`'s precondition control — *"the self-test cannot tell a real failure from a caught one"* — **stopped the Director twice, B once and A once, and none of them wrote it.** Tonight produced ~90 rulings, four aiming heuristics, five transport directions and two new failure classes. **The single most effective instrument in play was none of them.** A's closing judgement, recorded as the closing entry | `pending` | **stands** |
+| R193 | **The reader's own recorded state changed silently between visits.** `GearSet.withheld` — written when the importer meets an item no catalogue can score, the **Shadow Rage Helm** — was dropped on every page reload because `sanitizeSet` rebuilt the set field by field. The slot reverted to EMPTY and Upgrades ranked it as a FREE GAIN. **R98's fabricated gain arriving through PERSISTENCE: B fixed the computation hours ago and the VALUE did not survive the round-trip.** Fourth transport carrier after bash, `/tmp` and me. **Share-link half verified unfixed (`codec.ts`: 0 `withheld` against 29 `slot`) and deliberately deferred.** The triggering item is the one on the owner's capture list | `pending` | **stands** |
+| R194 | **C named the class all of tonight's faults belong to: "a true-looking output that is a statement about the INSTRUMENT rather than about the world."** Three sessions, three unrelated engines, one night, none looking for it — D's dedupe counter, E's "no outgoing damage lines matched", C's mob that never attacked anybody. **Every instance parsed cleanly, counted plausibly and raised no error.** And C ranked what actually caught them *"by what worked rather than by what sounds rigorous"*: an independent instrument that can disagree; a re-implementation forced by a different constraint; making the instrument state its own scope; asserting a mutation applied. **Not one item is "be more careful"** | `pending` | **stands; from the R149 notes** |
+| R195 | **C turned the finding on its own product's foundation.** Every reversal tonight was a mechanism claim and no measurement was overturned — **which puts the EQEmu hate model, a mechanism claim about a DIFFERENT GAME'S SERVER, in the loosely-held column, including the threat estimate resting on it.** **And it survives D's bound rather than needing the unbounded ratio**: the rule is that a measurement names its surface and a mechanism usually cannot, and the EQEmu model cannot — it describes EQEmu, EQL launched 2026-07-28, and C's own header already said nobody can say whether EQL follows it | `pending` | **stands; bounded form** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19735,3 +19738,102 @@ it. **The scope check found a defect the scope check was not for.**"*
 
 **A's state: main `3e73b4d6`, tree clean, 0 unpushed, six PRs merged tonight, #166 open and
 explicitly non-urgent.**
+
+---
+
+### 1 Sep 05:1xZ — RULING R193–R195: the transport class in persistence, and C names the class all of tonight belongs to
+
+#### R193 — the reader's own recorded state changed silently between visits
+
+**`GearSet.withheld` was dropped on EVERY PAGE RELOAD.** `store.applySlots` writes it when
+the importer reads a worn item no catalogue can score — **the Shadow Rage Helm** —
+and **`sanitizeSet` built the set field by field and never copied it.**
+
+> **So the position reverted to reading as EMPTY, and the Upgrades screen went from
+> "occupied by something we cannot measure" to ranking the whole slot as a FREE GAIN.**
+> **The reader's own recorded state changing silently between visits.**
+
+> **RULING R193: R98's fabricated gain, arriving through PERSISTENCE rather than through
+> the engine.** **B fixed the computation hours ago and the VALUE did not survive the
+> round-trip** — **which makes this the transport class in a fourth carrier: bash ate a
+> commit clause, a `/tmp` round-trip ate a test, I ate a bound relaying upward, and
+> `localStorage` ate a field.** **Authored correctly, stored, and dropped by the layer
+> between.**
+
+**A/B with both anchors asserted: dropping it again 1 failed / 1052; trusting the values 1
+failed / 1052.** **Verified in the tree — `persistence.test.ts:195` `describe('GearSet.withheld
+round-trips')`, asserting on `{ HEAD: 'Shadow Rage Helm' }` by name.**
+
+**AND THE SHARE-LINK HALF IS VERIFIED AND DELIBERATELY NOT FIXED.** **Confirmed with a
+positive control: `web/src/share/codec.ts` has ZERO occurrences of `withheld` against 29
+of `slot`** — so a share link loses it too. **B: *"a binary-codec change is not something
+to start at 05:30."*** **Correct, and handed over rather than attempted.**
+
+> **NOTE FOR THE OWNER: the item that triggers this is the Shadow Rage Helm, and six
+> Shadow Rage item windows are on the capture list.** **The defect and the capture request
+> are the same object seen from two sides.**
+
+#### R194 — C names the class, with cross-session evidence nobody commissioned
+
+> ***"A true-looking output that is a statement about the INSTRUMENT rather than about the
+> world."***
+
+| session | instance |
+|---|---|
+| **D** | the dedupe-horizon counter that could not fire |
+| **E** | *"no outgoing damage lines matched"* |
+| **C** | a mob that *"never attacked anybody, ever"* |
+
+**Three sessions, three unrelated engines, one night, none of them looking for it.**
+
+> ***"Every instance parsed cleanly, counted plausibly, and read as a fact about the game.
+> None raised an error. A defect that announces itself gets found the day it is written;
+> this class hides inside a correct-looking result until something INDEPENDENT
+> disagrees."***
+
+**AND C RANKED WHAT ACTUALLY CAUGHT THEM — *"by what worked rather than by what sounds
+rigorous"*:**
+
+```
+1. an independent instrument that can disagree
+2. a re-implementation forced by a DIFFERENT constraint (cannot be tuned toward the answer)
+3. making the instrument state its own scope
+4. asserting a mutation applied before believing a result
+```
+
+> **RULING R194: C could not have produced this alone and says so — the cross-session
+> evidence came from the routing notes R149 required.** **The ranking is the useful half:
+> every item on it is a SECOND INSTRUMENT or a SCOPE STATEMENT, and not one is "be more
+> careful."**
+
+#### R195 — C turns the finding on its own product's foundation
+
+> ***"Every reversal any session made tonight was a MECHANISM claim. Not one MEASUREMENT
+> was overturned. Which puts the EQEmu hate model — a mechanism claim about a DIFFERENT
+> GAME'S SERVER — in the loosely-held column, including for the threat estimate that rests
+> on it."***
+
+> **RULING R195: correct, and it survives D's bound rather than depending on the unbounded
+> form.** **D's caution is that a measurement can be a correct reading of the wrong
+> population, so the rule is that a measurement NAMES ITS SURFACE and a mechanism usually
+> cannot.** **The EQEmu model is precisely a mechanism claim that CANNOT name its surface**
+> — it describes EQEmu, EQL is a different title launched 2026-07-28, and C's own header
+> already said *"nobody, in this project or outside it, can currently say whether EQL
+> follows it."*
+>
+> **So the downgrade rests on the bounded rule, not on the ratio.** **And C applied the
+> night's finding to the soundest-looking assumption under its own product rather than to
+> anyone else's work.**
+
+#### E's handover, and the closed set doing its job
+
+**Every claim stated with the check that produced it:** `check.sh` PASS, 17 gates, *"run,
+not remembered"*; bundle `7a57b973` at 1.5.0; **B's vendored bundle `02543ec8` byte-identical
+to E's own 1.4.0 recovered from git at `bec765c2`**; vendored contract asserting 1.4.0.
+
+> **And the divergence reads `REPIN NEEDED: 1.5.0 [DEFERRED]` — R183's closed set of two,
+> working as designed within an hour of being built.** **The seam is handed over in a state
+> that says "raised and answered" rather than "raised and ignored."**
+
+**R163's parity fix landed at `bec765c2` and E verified it in the tree before answering
+rather than saying so from memory.**
