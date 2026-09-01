@@ -12046,6 +12046,11 @@ prefix. This closes the other sixteen.**
 | R250 | **A moving base is not a lazy status — A corrected my account and the distinction decides the defence.** I diagnosed a lazily-computed check; A had read `MERGEABLE/CLEAN` and it was TRUE WHEN TAKEN, then the owner merged #171 and #172 went dirty underneath it. **A LAZY STATUS wants re-querying until it is not `UNKNOWN` — and `UNKNOWN` renders as "no problem reported", which is failure shape one inside the instrument.** **A MOVING BASE cannot be fixed by re-querying at all: the answer was correct and then the world changed. Its only defence is that the reading is true AS OF A BASE — "clean against `06f44b86`", never "clean".** **A adopted both and reached past them: it now confirms with `git merge-tree`, which computes locally and CANNOT return `UNKNOWN`.** The day's rule again — **the external instrument answers while the internal one is still thinking** | `ruled` | **A** |
 | R251 | **The day's queue closes.** #172 merged 17:58Z; verified from the merged tree on RAW bytes: `eqls-lockouts.fd053e47.html`, 309,040, sha256 `fd053e47` — **the name describes the contents** — stale `16d4edad` gone rather than left beside it. **Six merged on the site today (#167 sitemap, #168 =Auras frame plus the Sky correction that rode in unrecorded, #169 its change-log entry, #170 Shara's pitch, #171 four self-contradictions and `/sources` restored from a 9 Aug blob, #172 the lockouts build with seven fixes and `/log on`), plus five in EQLSLockouts (#10–#14).** **A handed forward rather than proposed, and the restraint is right: every rebuilding PR regenerates `public/search.html` and `state/last-build.json`, so any two open at once collide by construction.** **I measured the claim and it is slightly wider than the evidence — of five merged today, three touch both shared outputs, one touches one, and #168 touches NEITHER. Most PRs, not every PR; the bound belongs on it.** **Durable fix — generated artefacts do not belong in a diff a human reconciles — recorded, NOT actioned: decided deliberately before Tuesday rather than paid indefinitely** | `handed forward` | **owner** |
 | R252 | **The owner settled what two sessions' measurement could not, and the record was RIGHT to refuse.** PR #122 (Cursor, 19 Aug, 796 files) was still OPEN and MERGEABLE — the only open PR left, in the list the owner had clicked merge in six times today. **Armed, not inert.** Surveyed five repos before reporting containment: one branch, one repo, zero elsewhere. **CLOSED 18:14Z at the owner's direction — `mergedAt: null`, main unchanged, branch preserved at `71c47f9b`, public comment left. Zero open PRs anywhere.** **THE SAGE OPENED BY DISQUALIFYING ITSELF AS A WITNESS** — context compacted, everything measured this hour rather than recalled — **which should come first in every report of this kind and almost never does.** **It measured survival TWICE and the second reversed the first: ten lines looked like surviving Cursor content and all ten pre-existed at the fork point. Cursor had RELOCATED the project's own prose. Genuinely Cursor-authored text on main: ZERO.** **And the mechanism was neither of our guesses: CURSOR NEVER PUSHED TO MAIN, IT PUSHED A BRANCH — the hole was the deploy config building non-production branches, already closed.** **So Cursor can COMMIT and cannot PUBLISH: the owner never had to choose between its access for another project and this site's safety.** **THEN THE OWNER RESOLVED THE THIRTEEN-DAY UNKNOWN: the page showed for MINUTES in the early morning; the twenty-four hours was BLOCKED PUSHES, not exposure. Both readings on the table were wrong in opposite directions, and no instrument here distinguishes exposure time from recovery time.** **SOME FACTS ARE NOT IN THE REPOSITORY AT ALL — asking the witness is a measurement technique, not a failure to measure** | `closed` | **owner** |
+| R253 | **THE 10% HYPOTHESIS IS REFUTED IN THE OPPOSITE DIRECTION — `raidstats.py` is BETTER than D's parser, not equally broken.** I had routed to the owner that if the site's parser shared D's damage families, every Sky figure would be low by roughly a tenth. **Measured, same fight, same window: `raidstats.py` 94.8–95.1% of damage-shaped lines against D's 84.1–85.8%.** **I verified the mechanism in A's source: `MELEE_VERB` at `:287-288` already carries `frenzies on` and `cleaves`, and the spell pattern at `:319` is `has taken (\d+) damage from (.+?)\.$` with NO trailing ` by <caster>` requirement — so it catches the first-person DoT form D's drops.** **352 lines it catches that D misses.** **THE SHARED RESIDUAL IS DAMAGE SHIELDS AND IT IS 0.72%, NOT 10% — 1,755 over 90 lines against 243,326 counted.** **So the Sky figures are not systematically low and there is nothing to fix there.** **AND D NEARLY SENT AN UNFAIR COMPARISON: its first run tested two of the three damage patterns, omitting `melee=`, scoring 91.4% — crediting itself with 133 lines the site's parser does catch. Caught by reading the decomposition rather than the total.** **Arithmetically correct, three points wrong, in exactly the direction that flattered the measurer.** **Bounds travel: one fight, one boss, one vantage, D's own definition of damage-shaped. A refutation of the hypothesis, NOT a certification of `raidstats.py` — the Sky-boss half needs A's corpus and cannot be done from D's side** | `refuted` | **D** |
+| R254 | **A MECHANISM DROPPED AS UNTESTABLE TURNED OUT TO BE REAL, AND BOTH DECISIONS WERE RIGHT.** At 16:0x D had *"the parser has a first-person spell-damage gap"* — tidy, and it could not separate a parser gap from the game not echoing your own spell damage. **It did not claim it.** **Measured now: `Cazic-Thule has taken N damage from your Denon's Disruptive Discord V.` is in the 352 lines `raidstats.py` catches and D misses.** **The family was real.** > **RULING R254: refusing to claim it then and claiming it now are the SAME discipline, not two different ones. A mechanism you cannot test is not a mechanism you can never test — it is one you have not earned yet.** **And D's record of the dropped mechanism, kept as dropped with the reason it could not be separated, is what made the later claim checkable rather than a rediscovery** | `earned` | **D** |
+| R255 | **SESSION 0 RECONCILED THE 47 FINDINGS BY MEASURING THE SITE, NEVER THE COMMITS — and corrected me twice in my own favour.** Method: it read no commit message; **for every finding it re-ran the audit's OWN countable measurement against the current tree.** **That closes the false-title trap BY CONSTRUCTION — #168's Sky fix shipped under a launch-frame title, no word search would ever have found it, and the count moving is what found it.** **I told A all three shortest-path fixes were untouched, from memory of what I dispatched rather than measurement of what landed. Right on one, overstated on two:** the first screen IS untouched; **`docs/WHAT-COUNTS.md` is now PRESENT where the audit measured it 404ing**; and **the "No drops recorded" lede IS gated, 111 → 81, exactly the 30 false declarations.** **Still fully open and still critical: 0 of 675 catalogue pages carry `t1`–`t5`, 0 carry `ph-old`, 290 carry `tM`, and `contamination.py` still never touches `public/`.** **Session 0 refused to launder two direction-blind counts — `/sets/` badges 2→20 is a COUNT and it did not check re-tiering or read-date; the gap engine's SYNTHETIC marker went 2→1, FEWER, where the ask was a repeat per card — and it reported both as numbers it draws nothing from.** **A FOURTH CATEGORY EXISTS AND ONLY THE RECORD SHOWS IT: the sigil ruling was RATIFIED as hide-it and OVERTURNED to expand-it. A finding whose ruling reversed reads identically to one still open unless the reversal is written down** | `reconciled` | **Session 0** |
+| R256 | **The line-ending rule covered one level of a directory it looked like it covered entirely.** PR #15, +54/−0. **`public/app/*.html -text` covers the artifact; `public/app/sub/x.html` and `public/app/deep/nested/y.html` are `text: unspecified` — NOT covered.** **A build output one folder deeper would have been normalised again, its name false again, and the on-disk hash check would have caught it only AFTER a build, on a file already committed.** **`git check-attr` is the only thing that decides what a glob covers; reading the line tells you nothing — which is exactly why the original was written the way it was.** **Verified in both directions: the assertion FAILS with the new rule removed and passes with it.** **And the NEGATIVE CONTROL is the part that matters — `test/build.test.js:494` requires `public/other.html` to stay `unspecified`, so marking the whole repository `-text` would FAIL this test rather than quietly satisfy it. Without that arm a blanket rule passes and the test proves nothing about scope.** **Credit recorded as A's in D's own PR body: A raised the coverage question after the original fix landed** | `PR #15 open` | **owner** |
+| R257 | **D'S CLOSING RULE, ADDED TO THE CATALOGUE: *"the second look has to be at a different thing, not the same thing harder."*** **Every wrong-surface catch today was a second look at a DIFFERENT OBJECT — a second directory, a decomposition instead of a total, a second repository holding the same artifact under different attributes, raw bytes instead of normalised ones. NOT ONE was a more careful first look.** **And the one time D trusted a total rather than its parts, the number was arithmetically correct and three points in its own favour against a program it was assessing.** **D's own accounting: both results that changed what this project believes were refutations of things it had itself said, and neither came from being careful.** **Banked at four merged PRs today plus a doc and two measurements; it declined to look for a seventh thing.** **Correctly parked and stated as parked: the reset hour, the `not_looked` split until B, C and E are in view, and the Sky-boss half of the parser comparison which needs A's corpus** | `canon` | **catalogue** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -21949,3 +21954,133 @@ site; the configuration now permits only `main`.* **True, checkable, and it does
 the thing nobody established.** **Recommended as one line, at the owner's discretion — it
 bears on reader trust because it means content could once reach the site without the review
 the project claims for it.**
+
+---
+
+### 1 Sep 18:4xZ — RULING R253–R257: the ten-percent hypothesis dies, and the audit is reconciled by measuring the site rather than the commits
+
+#### R253 — refuted in the opposite direction: the site's parser is BETTER
+
+**I routed to the owner that if `raidstats.py` shared D's damage families, every Sky figure
+would be low by roughly a tenth. D measured it and the hypothesis is dead the other way
+round.**
+
+    Cazic-Thule, 3-minute window, damage-shaped lines mentioning the boss
+    Shara     shaped 2,801   raidstats 2,656 (94.8%)   D's parser 2,402 (85.8%)
+    Avenrae   shaped 2,800   raidstats 2,662 (95.1%)   D's parser 2,356 (84.1%)
+
+**I verified the mechanism in A's source rather than accepting the numbers:** `MELEE_VERB`
+at `:287-288` already carries **`frenzies on`** and **`cleaves`**; the spell pattern at
+`:319` is `has taken (\d+) damage from (.+?)\.$` — **no trailing ` by <caster>` required**,
+so it catches the first-person DoT form D's parser drops. **352 lines it catches that D
+misses.**
+
+> **RULING R253: THE SHARED RESIDUAL IS DAMAGE SHIELDS AND IT IS 0.72%, NOT 10% — 1,755
+> damage over 90 lines against 243,326 counted.** **The Sky figures are not systematically
+> low. There is nothing to fix there, and it would have been wrong to route the tenth.**
+
+**AND D NEARLY SENT AN UNFAIR COMPARISON.** Its first run tested **two of the three** damage
+patterns, omitting `melee=` — the one that catches boss-attacks-player lines — **and scored
+`raidstats.py` at 91.4%, crediting D's own parser with 133 lines the site's does catch.**
+**Caught by reading the decomposition rather than trusting the total.** **An arithmetically
+correct number, three points wrong, in exactly the direction that flattered the measurer,
+about a program it was assessing.**
+
+**Bounds travel: one fight, one boss, one vantage, and "damage-shaped" is D's own definition
+— its instrument, its denominator.** **This is a refutation of the hypothesis, NOT a
+certification of `raidstats.py`.** **The Sky-boss half needs A's corpus and cannot be done
+from D's side; recorded as the open half rather than as a gap in the work.**
+
+**And D reported as SCOPE, not as a defect, that 46 lines it catches and `raidstats.py`
+misses are DoTs the boss puts ON players — incoming damage, irrelevant to a boss-damage
+figure.** **I would have taken that as a finding had it been offered as one.**
+
+#### R254 — a mechanism dropped as untestable turned out to be real, and both calls were right
+
+**At 16:0x D had *"the parser has a first-person spell-damage gap"* — tidy, and it could not
+separate a parser gap from the game simply not echoing your own spell damage. It did not
+claim it.**
+
+**Measured now: `Cazic-Thule has taken N damage from your Denon's Disruptive Discord V.` sits
+in the 352 lines `raidstats.py` catches and D misses. The family was real.**
+
+> **RULING R254: refusing to claim it then and claiming it now are THE SAME DISCIPLINE, not
+> two different ones.** **A mechanism you cannot test is not a mechanism you can never test —
+> it is one you have not earned yet.**
+>
+> **And D's record of the DROPPED mechanism, kept as dropped with the reason it could not be
+> separated, is what made the later claim checkable rather than a rediscovery.** *A record of
+> what was rejected and why is worth more than a record of what was accepted, because the
+> rejected thing is the one that will be re-proposed.*
+
+#### R255 — the audit reconciled by measuring the site, never the commits
+
+**Session 0's method decides what the result is worth: it read no commit message. For every
+finding it re-ran the audit's OWN countable measurement against the current tree.**
+
+> **That closes the false-title trap BY CONSTRUCTION.** **#168's Sky fix shipped under a
+> launch-frame title; no search on the finding's words would ever have found it. THE COUNT
+> MOVING IS WHAT FOUND IT.**
+
+**I told A that all three shortest-path fixes were untouched — from memory of what I
+dispatched rather than measurement of what landed. Right on one, overstated on two, and both
+corrections run in our favour:**
+
+| | |
+|---|---|
+| the first screen | **UNTOUCHED** — `=Index` still in nav, 3 occurrences. My belief held |
+| the verification signal | **PARTIAL** — `docs/WHAT-COUNTS.md` is now **PRESENT** where the audit measured it 404ing; the 13 empty `gate` spans and the missing legend remain |
+| carry provenance through | **PARTIAL** — the "No drops recorded" lede **IS gated: 111 → 81**, exactly the 30 false declarations |
+
+**Still fully open and still the critical one: 0 of 675 catalogue pages carry `tier t1`–`t5`,
+0 carry `ph-old`, 290 carry `tM`; and `contamination.py` still globs `_build/source/*.html`
+and never touches `public/`.**
+
+**SESSION 0 REFUSED TO LAUNDER TWO DIRECTION-BLIND COUNTS, unprompted:** `/sets/` badges
+**2 → 20** is a COUNT, and it did not check the re-tiering to T5 or the read-date the audit
+also asks for; the gap engine's `SYNTHETIC` marker went **2 → 1 — FEWER —** where the ask was
+a repeat per stat card. **It reported both as numbers it draws nothing from.**
+
+> **AND A FOURTH CATEGORY EXISTS THAT ONLY THE RECORD SHOWS: the sigil was RATIFIED as
+> hide-it and OVERTURNED to expand-it within nine hours.** **A finding whose RULING reversed
+> reads identically to one still open, unless the reversal is written down.**
+
+#### R256 — the rule covered one level of a directory it looked like it covered entirely
+
+**PR #15, +54/−0.**
+
+    public/app/eqls-lockouts.<hash>.html   text: unset         covered
+    public/app/sub/x.html                  text: unspecified   NOT covered
+    public/app/deep/nested/y.html          text: unspecified   NOT covered
+
+**A build output one folder deeper would have been normalised again, its name false again —
+and the on-disk hash check would have caught it only AFTER a build, on a file already
+committed.** **`git check-attr` is the only thing that decides what a glob covers. Reading the
+line tells you nothing, which is exactly why the original was written the way it was.**
+
+**Verified in both directions: the assertion FAILS with the new rule removed and passes with
+it.** **And the negative control is the part that matters — `test/build.test.js:494` requires
+`public/other.html` to stay `unspecified`, so marking the whole repository `-text` would FAIL
+this test rather than quietly satisfy it.** **Without that arm a blanket rule passes and the
+test proves nothing about scope.**
+
+**Credit recorded as A's, in D's own PR body: A raised the coverage question after the
+original fix landed, and the measurement is what turned a tidiness note into a live gap.**
+
+#### R257 — D's closing rule, added to the catalogue
+
+> ***"The second look has to be at a different thing, not the same thing harder."***
+
+**Every wrong-surface catch today was a second look at a DIFFERENT OBJECT — a second
+directory, a decomposition instead of a total, a second repository holding the same artifact
+under different attributes, raw bytes instead of normalised ones.** **NOT ONE was a more
+careful first look.** **And the single time D trusted a total rather than its parts, the
+number was correct arithmetic and three points in its own favour.**
+
+**D's own accounting, and it is the honest shape of the day: both results that changed what
+this project believes were refutations of things it had itself said, and neither came from
+being careful.**
+
+**Banked: four PRs merged today, one doc, one open, and two measurements that each changed a
+belief.** **It declined to look for a seventh thing when told the day was banked, which is
+the rarer discipline.**
