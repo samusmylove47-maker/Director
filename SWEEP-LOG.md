@@ -689,3 +689,25 @@ Compared current remote heads against the 1 Sep 19:23Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 21:24Z
+
+Compared current remote heads against the 1 Sep 20:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `dd02a1d7` → `253d29ae` ("Merge pull request #177
+  from samusmylove47-maker/claude/a11y-batch"), authored
+  2026-09-01T16:40:41-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `7d4d6731` → `cc9864be`
+  ("CLOSES F22 — the picker ranked a candidate above the worn item and
+  labelled the same swap a loss"), authored 2026-09-01T20:57:30+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `8c163dc9` →
+  `82ef2332` ("Poll record: 20:38Z, C at 7c7aaf2, UNREACHABLE (no peer
+  mailbox yet)"), authored 2026-09-01T20:38:28+00:00.
+
+**Unchanged:**
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `7c7aaf25`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
