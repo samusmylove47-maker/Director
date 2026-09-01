@@ -393,3 +393,25 @@ Compared current remote heads against the 1 Sep 06:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 08:23Z
+
+Compared current remote heads against the 1 Sep 07:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `7340dc0d` → `2f959b98`
+  ("CLOSES all 7 browser-suite failures — 26px of sideways scroll, and
+  three numbers typed where they could have been read"), authored
+  2026-09-01T08:18:19+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `fcc0922c` →
+  `36e91d92` ("TASK 2 STARTED, and the first answer is a refusal: a log
+  supplies at most 6 of model4's 13 inputs"), authored
+  2026-09-01T07:43:37+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e0efe712`.
+- `EQLSLockouts` `session-d/raid-rows`: `0a5bfcb0`.
+- `EQLSAuras` `main`: `b05741bf`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
