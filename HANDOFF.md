@@ -12032,6 +12032,12 @@ prefix. This closes the other sixteen.**
 | R236 | **Session 0 found a NEGATION-BLIND instrument in its own new tool, on run one.** Its held-work grep returned three `EQL50ups` matches, **all three negations** — *"nothing is blocked on the answer"*, *"NOT blocked on a capture"*. ***"A grep for `blocked\|held\|deferred` cannot return one of its two answers, and I have just built one and pointed it at four repositories."*** **Failure shape one, in a new tool, on its first run, caught by its own author, reported rather than quietly fixed — caught by READING THE MATCHES instead of trusting the count.** **The mechanism is not obvious: a session recording that something is NOT held reads identically to one recording that it is — and on a corpus written by people this project has explicitly trained to record absences, such an instrument over-reports forever and looks productive doing it.** **The count it would otherwise have sent was six-plus-three: a wrong number, arriving as a finding, from the record — and I would have believed it.** **Instrument kept, false-positive mode stated with every count.** **Plus a timezone correction it raised against itself: its 10:42/10:55/11:07/11:21 and my 14:55/15:07/15:21/15:48Z were the same instants at +4h — locally correct, compositionally wrong. UTC with a `Z` from here, both sides** | `corrected` | **Session 0** |
 | R237 | **The declaration has already RETIRED ITSELF once — the arm nobody tests.** Session 0 traced the mechanism's whole history rather than its current instance: declared `1ec3882` 00:37Z, **deleted `04e4f81` 01:15Z — *"B re-pinned, so my own REPIN NEEDED line became a false claim and is gone"*** — re-declared `bec765c` 04:05Z, current `774f7f3` 04:34Z. **Removed the moment it stopped being true, by its own author, unprompted.** **A status field that is only ever ADDED accumulates lies; this one has demonstrated it can be REMOVED on becoming false, which is the only thing that makes the closed set worth anything.** **So the mechanism has a matched pair of its own — it can hold and it can retire — the gate's matched pair one level up.** **AND THE AGE RULE CAUGHT A TRAP INSIDE ITSELF ON FIRST USE: the age of a hold is not the age of the commit restating it.** The re-pin appears at 04:34Z, 04:38Z, 04:52Z — **the last two are restatements in a handover block, so dating from the newest mention would have made an 11.5-hour hold look like 69 minutes, inverting the signal the rule exists to produce.** **Three ages — ground, first declaration, last restatement — and only one answers "has anybody revisited this."** **Third instance today of a session reproducing a failure it had just named** | `recorded` | **Session 0** |
 | R238 | **My scope correction came back sharper than I sent it.** I told Session 0 the patches touch engine behaviour but declaring them held does not; it turned that into a rule I had not stated — **wrong test: *is this near code?* Right test: *does the report move anything?*** **Adopted as the boundary test, superseding my formulation: describing the state of the record is recording EVEN WHEN THE THING DESCRIBED IS CODE.** Proximity to code was never the line and I had left it implied. **Its own accounting: *"my restraint would have cost the finding its only actionable half, and it was declining to say something that was mine to say."*** **Over-restraint has the same weight as overreach and is harder to see because it produces no artifact to inspect — R233's own generalisation turned on its author: a report not made leaves no trace either.** **AND it declined to report a stop it could not support** — `LoxyBee/EQLS-Auras` unchanged for eleven minutes, *"eleven minutes is not a stop… indistinguishable from one being worked on"* — **a possible absence reported as a possible absence, on the one signal I asked it to watch, with the launch in progress and every incentive to report something** | `adopted` | **Session 0** |
+| R239 | **The =Auras launch frame is LIVE and it publishes an absence rather than a guess.** #168 merged 16:04Z; "Auras" now on **4 pages** where this morning it was on **1** — the audit's finding closed. Media slots are fixed 16:9 so **assets arriving late cost a rebuild, not a redesign**; every copy field is Shara's words moved verbatim, none authored by A. **No download address exists in the repo, so the page publishes none and says so in one line that vanishes when the field is filled — the alternative was a plausible releases URL, the one thing every other page refuses. An empty field declared as empty is the same discipline as `not_looked`.** **AND FEATURING THE BAND SILENTLY RE-ARMED YESTERDAY'S DEFECT** — load-when-visible became load-immediately, **839 KB of trailer plus a 175 KB poster in front of first paint, on the page every arrival hits, on launch day.** **A check A built 24 hours earlier caught it, and A did NOT weaken it** — naming the temptation: *"the fastest path was to teach mediadefer that above-the-fold videos are exempt."* **A check taught to exempt the case that broke it still reports green and has stopped measuring.** Click-to-play instead, **proved with a CDP probe on both halves, because a play button that does nothing passes every check A owns and is worse than autoplay** | `live` | **owner fills** |
+| R240 | **THREE CORRECT MEASUREMENTS, THREE DIFFERENT FILES, ONE NAME.** A's copier refused to publish because `eqls-lockouts.fd053e47.html` did not hash to its own name; I re-measured, could not reproduce A's control, and **told A its diagnosis was unestablished.** **D read its own build and settled it: the same string is hashed and written, so the convention IS sha256 of the file's own bytes.** **THE CRUX IS 50 NEWLINES THAT ARE CONTENT, NOT LINE ENDINGS** — git normalised to LF going in, expanded to CRLF coming out, and folded those 50 in with the rest. **The round trip is lossy: the artifact leaving the repo was not the one that entered it.** **as built 309,040 B → `fd053e47` (its own name) · stored blob 305,191 B → `15f045ad` (mine) · fresh checkout 309,090 B → `41c1a2cb` (A's copier).** **Nobody's instrument was wrong and nobody's control was wrong — THE OBJECT WAS NOT STABLE ACROSS THE LAYERS WE WERE EACH READING IT AT.** **And the lesson is not that I should have trusted A: when two careful measurements of one object disagree, THE OBJECT IS THE THING TO DOUBT. D reached it because it could read the build.** I called the `.gitattributes` gap independent; **it is the cause, and I had both halves in front of me** | `fixed, PR #14` | **owner** |
+| R241 | **The escaping fault, twice in one session, caught by reading the output back.** D wrote a PR description with backticks inside a double-quoted shell argument; **the shell executed them, deleting its own measurement table and the words `.gitattributes` and `fd053e47`** — after adopting a rule against exactly that this morning. **Caught by READING THE PUBLISHED TEXT BACK rather than trusting that it sent, and repaired with a body file rather than more care.** **Fourth instance today of a session reproducing a fault it had personally named: C built the tile it had certified against, A re-armed the lazy-load defect it wrote the argument for, Session 0 nearly mis-dated a hold using its own age rule, D did this.** The process note went into the PR itself rather than a message to me — same reasoning as #13. **And A's `/log on` wording needs no ruling: it reuses `build28.py:261`'s sanctioned phrasing rather than authoring a new claim** | `recorded` | **D** |
+| R242 | **MY INSTRUMENT DESTROYED THE FILE BEFORE MEASURING IT, AND CARE WAS THE DEFECT.** A challenged my challenge and the decisive test was one I never ran: **raw stored bytes, no normalisation — 280,212 B, CR 3,308, LF 3,364, sha256[:8] = `16d4edad`, ITS OWN NAME.** **All four of my measurements normalised — forced LF, forced CRLF, never the bytes as stored. A's control was reproducing perfectly the whole time.** **I built a test to check whether a name describes its content, and the test ALTERED THE CONTENT BEFORE CHECKING — and I normalised precisely BECAUSE I was being careful about line endings.** **The day's rule in its hardest form: it is not enough for the instrument to be external to the ARTIFACT, it must be external to the TRANSFORMATION.** Three things wrong in one message: that A's control failed; that A should downgrade to "unestablished" — **weakening a correct finding, the exact inverse of the error I was preventing**; and that `.gitattributes` stood alone. **A corrected itself before I did.** **A and D converged from opposite directions without knowing it — D's crux 50 content newlines, A's 3,308 CR in a mixed-ending file.** **Exposure is older than today: the stored `16d4edad` from 30 Aug is already broken the same way.** **And A's trap: a bare `* text=auto eol=lf` would have made it WORSE, normalising exactly the artifacts whose hashes are their names** | `corrected` | **me** |
+| R243 | **A fix pushed mid-review makes the reader approve something they did not read.** I asked D whether anything asserts `.gitattributes` COVERS `public/app/`; **D tested the premise rather than taking it and it holds — `public/app/sub/x.html` is `text: unspecified`, already outside the glob, so the gap is real today for any path one level deeper.** **And D declined to fix it now, mechanically rather than by judgement:** *"PR #14's head branch is my branch. Any commit I push goes into the PR the owner is currently reading. Adding a fix mid-review changes what they approved into something they did not — the same class as an artifact drifting from its source, with me as the drift."* **UPHELD, and the generalisation is D's: a branch under review is a published artifact, and pushing to it is a silent republish.** Same shape as `latest.txt` naming what the source no longer produces, with a person as the mutating layer. Queued as a separate PR after #14 | `queued` | **D** |
+| R244 | **A SEVENTH FAILURE SHAPE, named by D out of my own error: THE INSTRUMENT DESTROYS THE PROPERTY UNDER TEST, VIA THE STEP THAT WAS SUPPOSED TO MAKE IT RIGOROUS.** D refused to file it under any existing shape: *"every other fault today was an instrument aimed wrongly or unable to return an answer. Yours DESTROYED THE PROPERTY IT WAS MEASURING, and it did so through the step taken to make it rigorous."* **Worse than the catalogued six because the defensive move IS the fault — forcing LF and forcing CRLF is exactly what a careful person does with a line-endings question, and all four measurements agreed with each other. The only thing that finds it is hashing the raw bytes, WHICH LOOKS LESS CAREFUL.** **D also declined to price the two hours as mine — the question only D could answer, and nobody could ask it until A's alarm made it the question; the time bought the diagnosis rather than being lost to it.** **And the exposure D had not checked: every content-addressed artifact that repo has ever stored has been wrong, and it never bit because nobody verified a name against its bytes until A built a copier that did — a fault surviving because no instrument existed to meet it** | `named` | **catalogue** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -21449,3 +21455,213 @@ indistinguishable from one being worked on."** **It also committed to saying wha
 comparing the quiet against rather than only that it is quiet** — a possible absence
 reported as a possible absence, on the one signal I asked it to watch, with the launch in
 progress and every incentive to report something.
+
+---
+
+### 1 Sep 17:5xZ — RULING R239–R241: three correct measurements, three different files, one name
+
+#### R239 — the =Auras launch frame is live, and it publishes an absence rather than a guess
+
+**#168 merged 16:04Z. `assets/auras.json` is live and "Auras" now appears on four pages
+where this morning it appeared on one — the audit's finding that the word existed nowhere
+but the home page is closed.**
+
+**A built the frame so that Shara's assets are a rebuild rather than a redesign:** each
+media slot a fixed 16:9 frame, so adding one moves no layout; `links[]` renders nothing
+when empty; **and every copy field carries Shara's words moved verbatim out of `build1.py`,
+with none authored by A.**
+
+> **AND IT PUBLISHES NO DOWNLOAD ADDRESS, because none exists in the repository. The page
+> says in one line that it does not yet carry the address, and that line disappears when
+> the field is filled.** **A's alternative was a plausible releases URL — the one thing
+> every other page on this site refuses. An empty field declared as empty is the same
+> discipline as `not_looked`.**
+
+**AND FEATURING THE BAND SILENTLY RE-ARMED YESTERDAY'S DEFECT.** Moving it above the fold
+turned load-when-visible into load-immediately: **839 KB of trailer plus a 175 KB poster
+back in front of first paint, on the page every new arrival hits, on launch day.** **A check
+A built twenty-four hours earlier caught it.**
+
+**A did not weaken the check, and named the temptation:** *"the fastest path was to teach
+mediadefer that above-the-fold videos are exempt."* **A check taught to exempt the case that
+broke it still reports green and has silently stopped measuring the thing it exists for.**
+**Click-to-play instead, proved with a CDP probe on both halves — zero `<video>` before the
+click, one with a src and playing after — because a play button that does nothing passes
+every check A owns and is worse than autoplay.**
+
+**Third instance today of a session reproducing a failure it had itself named**, after C's
+tile and Session 0's age rule. **In all three the catch came from a mechanism already in the
+build, never from anyone remembering the principle.**
+
+#### R240 — THREE CORRECT MEASUREMENTS, THREE DIFFERENT FILES, ONE NAME
+
+**A ran the lockouts publish, its copier refused, and it reported rather than working
+around it: `eqls-lockouts.fd053e47.html` did not hash to its own name.**
+
+**I re-measured before letting that travel as a defect in another session's repository, and
+A's control did not reproduce for me — in either line-ending form, in either repository.**
+**So I told A its diagnosis was UNESTABLISHED and to keep the block on a weaker stated
+reason.**
+
+**D read its own build and settled it in one command:**
+
+    const hash = crypto.createHash('sha256').update(html).digest('hex').slice(0,8)
+    fs.writeFileSync(path.join(OUT_DIR, name), html, 'utf8')
+
+**The same string is hashed and written. The convention IS sha256 of the file's own bytes.
+A's expectation was correct and my test was the right instrument.**
+
+> **THE CRUX IS 50 NEWLINES. The built page carries 50 newlines that are CONTENT, not line
+> endings. Git normalised everything to LF going in, expanded everything to CRLF coming
+> out, and folded those 50 in with the rest. THE ROUND TRIP IS LOSSY — the artifact leaving
+> the repository was not the one that entered it, and it could not hash to its name.**
+
+| | bytes | endings | sha256[:8] | who measured it |
+|---|---|---|---|---|
+| **as built** | 309,040 | 3,849 CRLF + **50 bare LF** | **fd053e47** — its own name | D |
+| stored as blob | 305,191 | all LF | 15f045ad | me |
+| fresh checkout | 309,090 | 3,899 CRLF, 0 bare LF | 41c1a2cb | A's copier |
+
+> **RULING R240: nobody's instrument was wrong and nobody's control was wrong. THE OBJECT
+> WAS NOT STABLE ACROSS THE LAYERS WE WERE EACH READING IT AT.** **Three careful
+> measurements of "the same file" produced three answers because there were three files.**
+>
+> **AND THE LESSON IS NOT THAT I SHOULD HAVE TRUSTED A. It is that when two careful
+> measurements of one object disagree, THE OBJECT IS THE THING TO DOUBT — and neither of us
+> reached for that. D did, because it could read the build.**
+
+**I called the `.gitattributes` gap an independent finding that stood alone. IT IS THE
+CAUSE.** **I had both halves side by side and did not join them.** **Fixed at
+`public/app/*.html -text`; I verified the blob independently at 309,040 bytes hashing to
+`fd053e47`, with exactly 50 bare LF.**
+
+**A's refusal was correct and not a false alarm: before #14, NO checkout on any machine
+produced a file matching that name.**
+
+**And A's assertion is added now that the convention is established rather than assumed:**
+after building, recompute the hash of the file **on disk** and require it to equal the hash
+in its own filename. **The existing test proved the name is DERIVED from the content; this
+proves the file still IS that content — and it fires before `latest.txt` is written, so a
+corrupted artifact can never be advertised.**
+
+#### R241 — the escaping fault, twice in one session, caught by reading the output back
+
+**D wrote a PR description with backticks inside a double-quoted shell argument. The shell
+executed them, deleting the measurement table and the words `.gitattributes` and
+`fd053e47`.** **It had adopted a rule against exactly this earlier today and did not follow
+it.**
+
+> **Caught by READING THE PUBLISHED TEXT BACK rather than trusting that it sent.**
+
+**That is the same class as A's fifth heredoc trap and my two read-instead-of-run claims —
+and it is the fourth instance today of a session reproducing a fault it had personally
+named.** **The correction that worked was not more care: it was a body file, removing the
+surface, and the process note went into the PR itself rather than into a message to me.**
+
+**A's `/log on` wording needs no ruling: it reuses `build28.py:261`'s already-sanctioned
+phrasing — *"Anything looted before /log on is invisible"* — rather than authoring a new
+claim.**
+
+#### R242 — MY INSTRUMENT DESTROYED THE FILE BEFORE MEASURING IT, AND CARE WAS THE DEFECT
+
+**A challenged my challenge, and the decisive test was one I never ran:**
+
+    raw stored bytes, eql-source, NO normalisation
+      280,212 B   CR 3,308   LF 3,364   sha256[:8] = 16d4edad   <- ITS OWN NAME
+
+**I ran four measurements and normalised in every one — forced LF, forced CRLF, never the
+bytes as stored.** **A's control was reproducing perfectly the whole time.**
+
+> **RULING R242: I built a test to check whether a name describes its content, and the test
+> ALTERED THE CONTENT BEFORE CHECKING.** **And I normalised precisely BECAUSE I was being
+> careful about line endings. The care was the defect.**
+>
+> **The day's rule, in its hardest form: it is not enough for the instrument to be external
+> to the ARTIFACT. It must be external to the TRANSFORMATION.** **Mine sat inside the
+> transformation, which is how it produced four confident wrong answers that agreed with
+> each other.**
+
+**Three things I told A in one message, all wrong, struck together:** that its control did
+not reproduce; that it should downgrade its stated reason to "unestablished" — **which
+weakened a correct finding, the exact inverse of the error I was trying to prevent**; and
+that the `.gitattributes` gap stood alone when it is the cause.
+
+**A had already corrected itself before I did**, saying the name is fine and the repository
+is eating the file — *"my statement was true of the stored artifact and wrong about the
+cause"* — **which is the thing I had asked it to avoid an hour earlier and then did twice
+myself in the same conversation.**
+
+**A AND D CONVERGED FROM OPPOSITE DIRECTIONS WITHOUT KNOWING IT.** D read its own build:
+the same string is hashed and written, so the convention is sha256 of raw bytes, and its
+crux was **50 content newlines**. A held the same artifact in a second repository under
+`-text` and its crux was **3,308 CR in a mixed-ending file**. **One mechanism, two routes.**
+
+**AND THE EXPOSURE IS OLDER THAN TODAY: the stored `16d4edad` from 30 August is already
+broken the same way. Every content-addressed artifact in that repo has been mis-named since
+before this morning.**
+
+**A's trap warning, which would have bitten somebody later: a bare `* text=auto eol=lf`
+would have made this WORSE, because it normalises exactly the artifacts whose hashes are
+their names. The `-text` exemption is the entire point** — and A hit that trap itself this
+morning and caught it before shipping.
+
+**A'S INSTRUMENT NOTE IS THE THIRD TODAY AND THE STRONGEST:** *"Nothing inside D's repo can
+see this: their drift assertion compares the pointer to the source, and both are consistent
+with each other while the stored file is wrong."* **A correct check that structurally cannot
+see this class, because it compares two things that were altered together.** **It took a
+second repository holding the same artifact under different attributes — and the instrument
+was an unrelated fix A shipped six hours earlier for a different reason.**
+
+#### R243 — a fix pushed mid-review makes the reader approve something they did not read
+
+**I asked D whether anything asserts that `.gitattributes` COVERS `public/app/`, since the
+`-text` line fixes today's file and a future path outside the glob would silently
+reintroduce the fault. D tested the premise rather than taking it, and it holds exactly:**
+
+    public/app/eqls-lockouts.fd053e47.html   text: unset          <- covered
+    public/app/sub/x.html                    text: unspecified    <- NOT covered
+    public/other.html                        text: unspecified    <- NOT covered
+
+**A subdirectory one level deeper is already outside the glob. The gap is not hypothetical
+and `git check-attr` is the instrument that decides it.**
+
+**AND D DECLINED TO FIX IT NOW, for a mechanical reason rather than a judgement:**
+
+> ***"PR #14's head branch is `session-d/raid-rows`. My branch is `session-d/raid-rows`.
+> Any commit I push goes into the PR the owner is currently reading. Adding a fix
+> mid-review changes what they approved into something they did not — the same class as an
+> artifact drifting from its source, with me as the drift."***
+
+> **RULING R243: upheld, and the generalisation is D's.** **A branch under review is a
+> published artifact, and pushing to it is a silent republish.** **Same shape as
+> `latest.txt` naming a file the source no longer produces, and as an artifact whose stored
+> bytes differ from its built bytes — with a person as the mutating layer.** **Queued as a
+> separate PR after #14 lands.**
+
+#### R244 — a seventh failure shape, named by D from my own error
+
+**D declined to file my normalisation error under any existing shape:**
+
+> ***"Every other fault today was an instrument aimed wrongly or unable to return an
+> answer. Yours was an instrument that DESTROYED THE PROPERTY IT WAS MEASURING, and it did
+> so through the step taken to make it rigorous."***
+
+> **RULING R244, recorded as a distinct shape: THE INSTRUMENT DESTROYS THE PROPERTY UNDER
+> TEST, VIA THE STEP THAT WAS SUPPOSED TO MAKE IT RIGOROUS.**
+>
+> **It is worse than the catalogued six because the defensive move IS the fault. Forcing LF
+> and forcing CRLF is exactly what a careful person does with a line-endings question, and
+> all four of my measurements agreed with each other.** **The only thing that finds it is
+> hashing the raw bytes, WHICH LOOKS LESS CAREFUL.**
+
+**D also declined to price the two hours as mine:** *"the question 'what does the build
+hash' is one only I could answer, and nobody could ask it until A's alarm made it the
+question — and A's alarm depended on A having built a copier. The two hours bought the
+diagnosis; they were not lost to it."*
+
+**AND THE EXPOSURE D HAD NOT CHECKED, WHICH MATTERS MORE THAN THE FIX:** *"Every
+content-addressed artifact this repo has ever stored has been wrong, and the only reason it
+never bit is that nobody verified a name against its bytes until A built a copier that
+did."* **A guard nobody had, protecting nothing that was ever checked — the accidental
+guarantee, inverted: not a property holding by side effect, but a fault surviving because
+no instrument existed to meet it.**
