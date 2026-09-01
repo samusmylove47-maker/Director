@@ -11901,6 +11901,8 @@ prefix. This closes the other sixteen.**
 | R113 | **The comparison FAILING fails; the comparison being IMPOSSIBLE warns — backwards.** `check.py:489-492` warns on a missing stamp and on ANY exception, so the freshness detector can be deleted or die of a syntax error and the build stays green, **inside the check whose own comment says nothing else means anything if it fails.** **RULED FAIL on both.** A's newcomer objection **refuted by a fact A did not check: `state/last-build.json` is TRACKED, so a fresh clone has it — a missing stamp means someone deleted it** | `pending` | **stands; precondition verified on main** |
 | R114 | **#159 is LIVE and took only the first of A's two commits** — merged 21:13:45, A pushed `c0782cce` at 21:18:08. `_build/*.txt` is on the branch, not main, so `_build/planar_raw.txt` remains uncovered. **Merging is the publish, so #159's new FAILING assertions are in production.** Exposure narrow: `assets/*.json` IS covered so a rebuild propagates; only editing the raw file and walking away is invisible. **A kept #160's two commits together and reported the judgement — a PR of the check alone would be RED** | `pending` | **#160 with the owner** |
 | R115 | **#160 merged; MERGED MAIN IS GREEN, executed not inspected** — `check.py` exit 0 at `b210cf2e`, 716 pages, clean tree, `autocrlf=false`. **A's R110 limit line prints live: "89 literal read site(s) checked, 52 dynamic site(s) not visible".** **Matched pairs: FIVE OF FIVE new checks fire** — planar_raw, site.css, fonts/fonts.css, `_media`, items.v1.json, each with its negative control. **The `_media` case A could not enforce in gate_selftest is caught here by a different instrument.** **R113 has NOT shipped — deleting the stamp still gives exit 0.** Three instrument errors of mine, all caught by required controls | `pending` | **stands; production verified** |
+| R116 | **#161 (`claude/staleness-fails`) verified independently on BOTH arms with a negative control.** Delete the stamp → exit 1; corrupt it to a `KeyError` → exit 1; restored → exit 0; tree clean after. `stamp.py:100` now writes `newline="\n"`. **A verified the Director's refutation before acting on it** rather than taking it — a refutation is a claim like any other | `pending` | **stands; owner's to merge** |
+| R117 | **The second fault was found by WRITING the test, not by reading.** `stamp.py` wrote the stamp without `newline="\n"`, so on Windows the JSON indent newlines became CRLF — verified by matched pair (stamp: 2 CR bytes, `check.py`: 0). **It BLOCKED the test: `gate_selftest` restores through an LF round-trip, so a case touching that file would have converted CRLF→LF while claiming to leave the tree as found — R103's shape inside the harness whose job is to leave no trace.** **Third time tonight the artifact under construction was the instrument.** And A's lesson on its third heredoc trap: **a documented trap is a convention; documentation is not a guard** | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -16967,3 +16969,86 @@ stale, and the harness stopped:**
 > **Recorded because the ratio is the point: five real results and three instrument
 > errors, and every error was caught by a control this project's own rulings required.**
 > **Number 2 would have produced a false alarm about production on deadline night.**
+
+---
+
+### 1 Sep 02:0xZ — RULING R116–R117: R113 verified on both arms, and writing the test is what found the fault
+
+#### R116 — #161 does what it claims, executed independently
+
+**A shipped R113 as `claude/staleness-fails`. I ran both arms in my own harness rather
+than accepting A's measurements:**
+
+```
+baseline (bd8c215a, clean tree)                     All checks passed.        exit 0
+ARM 1  delete state/last-build.json                 1 blocker(s)              exit 1
+ARM 2  corrupt it -> KeyError on "inputs"           1 blocker(s)              exit 1
+NEGATIVE CONTROL  restored                          All checks passed.        exit 0
+tree clean afterwards:                              0 modified
+```
+
+> **Both arms fire, the negative control passes, and the harness leaves no trace.**
+> **`stamp.py:100` now writes with `newline="\n"`, with the reason at `:96`.**
+
+**A verified MY refutation before acting on it** — `git cat-file -e
+origin/main:state/last-build.json` — rather than taking the Director's word that the
+newcomer objection was dead. **Correct: a refutation is a claim like any other.**
+
+#### R117 — the second fault was found by WRITING the test, not by reading
+
+**`stamp.py` wrote `state/last-build.json` without `newline="\n"`, which `CLAUDE.md` §5
+requires of every write. On Windows, `json.dump`'s indent newlines became CRLF — so the
+committed file carries them and a Linux build rewrites every line of a file nobody
+edited.**
+
+**Verified here with a matched pair, so the finding is not an artefact of my own
+pipeline:**
+
+```
+state/last-build.json   CR bytes: 2      {  \r  \n  " i n p u t s " …
+scripts/check.py        CR bytes: 0
+```
+
+**AND IT BLOCKED THE TEST, which is the part that matters:**
+
+> **`gate_selftest` restores through a text round-trip with `newline="\n"`, so a case
+> touching that file would have converted CRLF to LF WHILE CLAIMING TO LEAVE THE TREE
+> EXACTLY AS IT FOUND IT.** **R103's shape — the transport editing the content — inside
+> the harness whose entire job is to leave no trace.**
+
+> **RULING R117: A's method is the ruling.** *"I did not find it by reading; I found it
+> by trying to write the test and asking whether the restore was lossless first."*
+>
+> **Writing the test is an instrument that finds faults reading cannot.** **Third
+> instance tonight of the same shape**: D aimed a mutation at a ruling and learned it was
+> enforced rather than remembered (R95); A's `inputscover` check found `_media` while
+> being built (R111); and now the act of making a case writable exposed a write that
+> corrupted its own file. **In all three the artifact under construction was the
+> instrument.**
+
+**`gate_selftest` 44 → 46.** **Missing-stamp is a SPECIAL because the harness cannot
+express a deletion through a text mutator; unreadable-stamp is an ordinary case.** **The
+limit named rather than worked around.**
+
+#### And the third heredoc trap, where A's lesson is better than the rule
+
+**A hit the escape trap a THIRD time tonight — on the newline fix itself.** Backslash-n
+arrived as a real newline and `stamp.py` would not parse.
+
+> **A: *"The lesson I am taking is not 'be careful with heredocs' — it is that I treated
+> a DOCUMENTED TRAP as advice to remember rather than a PATH TO STOP USING."***
+
+> **That is R75 and R95 applied to a hazard rather than to a rule: a documented trap is a
+> CONVENTION, and documentation is not a guard.** **`CLAUDE.md` documents this one in
+> full and it caught A three times in one night.** **Twice A routed around it by removing
+> the need for an escape; the third time A did what the rule actually says and used the
+> editor.**
+
+**A declined to build a `gate_selftest` case that corrupts a binary to move 46 to 47:**
+*"The coverage exists; the number is not the point."* **Correct, and it is R83's
+discipline turned down rather than up — the surface number is a report, never a
+target.**
+
+**One state note, checked rather than assumed:** the stamp on main now reads `569237d4…`
+where it read `b7cb8568…` before #160. **#160 changed `INPUTS`, so the computed hash
+moved and the file was re-stamped. Consistent, not an anomaly.**
