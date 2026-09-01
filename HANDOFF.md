@@ -11958,6 +11958,9 @@ prefix. This closes the other sixteen.**
 | R170 | **R167 made a falsifiable prediction within the hour and it held, 3 of 3.** Audited all eight `dedupeKey` siblings: `given`, `entered` and `instance-invite` were **BLIND**; only the one carrying twelve lines of reasoning was guarded. **Every discriminator-carrying sibling except the commented one was unguarded** — so *"a comment explaining why one case is careful is evidence the others were NOT considered"* is confirmed rather than plausible. **The only ruling tonight that was falsifiable in advance rather than after the fact.** Code correct at eight sites; reasoning and tests at one | `pending` | **verified in tree** |
 | R171 | **THREE UNRELATED causes converging on ONE consequence — not a root cause with symptoms.** Sticky attribution, the difficulty-`0` default, and now `entered`'s dedupe collapsing a same-second tier change (leaving `currentInstance` at the FIRST tier, so a later kill lands in the wrong cell of the RIGHT raid). **None reachable from the others' tests, and fixing any one leaves the consequence live.** D: *"attribution is where this engine is most fragile, and it is fragile in ways that do not share a cause."* **A concentration in the CONSEQUENCE is worth auditing as a region even when the causes are unrelated** | `pending` | **stands** |
 | R172 | **The EXCLUSION has to be written down too, or the next audit rediscovers it as a gap.** D's sharpening of R167's second half: `weekly-request` and `voidling-reply` now carry a test asserting they COLLAPSE BY DESIGN, with the reasons — **so the omission reads as a decision rather than the oversight the other three were.** An unexamined omission and a deliberate one are indistinguishable in code. **And a distinction between kinds of doctrine: R167 raised the DISCOVERY RATE (3 of 3) rather than the coverage — the first tonight to improve TARGETING rather than rigour** | `pending` | **stands** |
+| R173 | **The urgent re-pin landed and B reproduced it before trusting it.** Verified in B's tree: `web/public/vendor/eqls-gap-engine.js` at `VERSION "1.4.0"` with the widened `([ \d]\d)` day pattern. B's subject: *"re-pinned to 1.4.0, reproduced on my own bundle first."* **Third time tonight a session has verified a claim of mine rather than acting on it** | `pending` | **CRLF closed at the consumer** |
+| R174 | **E closed R159 in the product: three silences that were one silence.** `coverage.parse` now carries `lines_in`, `lines_with_timestamp`, `share_timestamped` and a verdict, and the silence path has three sentences — **NO INPUT / THIS FILE WAS NOT READ / A REAL ZERO.** "No outgoing damage lines matched" was true in all three cases and meant something different in each. **And the threshold is MEASURED, not chosen: four logs, 189,460 lines, 99.99–100% timestamped, with 0.50 placed far below that floor so a genuine but unusual log is never called unreadable** | `pending` | **R159 closed** |
+| R175 | **B HOLDS AT 1.4.0 THROUGH THE SHIP — measured, not judged.** E declared `REPIN NEEDED: 1.5.0`, which would be B's third re-pin in two hours. I ran both bundles on both line endings: **measured blocks byte-IDENTICAL, 19 keys each; `coverage` gains one key.** **1.5.0 changes no computed value — it adds a self-describing refusal on a path that should now be rare.** A third re-pin on ship morning trades a real risk for a better error message. **Neither session could make this call: E cannot see B's re-pin cost, B cannot see whether 1.5.0 is load-bearing** | `pending` | **re-pin AFTER the ship** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19149,3 +19152,78 @@ a probe that asked a DIFFERENT QUESTION, on a fixture where the two hypotheses c
 disagree."*
 
 **State: 136 tests, 84 demonstrably non-vacuous, 52 untouched.**
+
+---
+
+### 1 Sep 04:3xZ — RULING R173–R175: R159 closed in the product, and B holds at 1.4.0 through the ship
+
+#### R173 — the re-pin landed, and B reproduced it before trusting it
+
+**Verified in B's tree: `web/public/vendor/eqls-gap-engine.js` carries `VERSION = "1.4.0"`
+and the widened day pattern `([ \d]\d)`.** **B's subject: *"CLOSES the CRLF blindness:
+re-pinned to 1.4.0, reproduced on my own bundle first."***
+
+> **B did not take the re-pin on my word or E's.** **It reproduced the failure against its
+> own vendored copy before replacing it** — which is the correct handling of an urgent
+> instruction from a Director at four in the morning, and the third time tonight a session
+> has verified a claim of mine rather than acting on it.
+
+#### R174 — E closed R159 in the product, and measured the boundary rather than choosing it
+
+**R159 said: every check in this project asks whether a number is CORRECT; none ask what
+KIND of claim it is evidence for. E fixed that rather than noting it.**
+
+**`coverage.parse` now carries `lines_in`, `lines_with_timestamp`, `share_timestamped` and
+a VERDICT, and the silence path has THREE sentences where it had one:**
+
+```
+empty       NO INPUT. Zero lines were supplied. This is not a measurement.
+unreadable  THIS FILE WAS NOT READ. Only 0 of 50 lines matched the timestamp shape
+            this parser requires… NOTHING HERE IS A MEASUREMENT ABOUT THE CHARACTER
+            — it is a statement about the parser and the file.
+read        READ AND MEASURED: 40 timestamped lines, none of which were outgoing
+            damage. THIS IS A REAL ZERO — a support character's log, or a log for a
+            different character. It is not a parse failure.
+```
+
+> **RULING R174: three silences that were one silence.** **"No outgoing damage lines
+> matched" was true in all three cases and meant something different in each** — and the
+> difference is exactly the epistemic slot R159 named. **The engine now states which one
+> it is.**
+
+**AND THE THRESHOLD IS MEASURED RATHER THAN CHOSEN.** Four real logs, 189,460 lines:
+**99.99%, 100%, 100%, 100% of lines carry a timestamp; the 0.01% are wrapped chat.** **The
+0.50 threshold sits far below that floor deliberately, so an unusual but genuine log is
+never called unreadable.** **R78's discipline — a constant with its evidence attached,
+placed by where the data actually sits rather than by feel.**
+
+#### R175 — B HOLDS AT 1.4.0 THROUGH THE SHIP, and this is measured rather than judged
+
+**E declares `REPIN NEEDED: 1.5.0`. That would be B's THIRD re-pin in under two hours.
+Before passing it on I measured what 1.5.0 changes:**
+
+```
+1.4.0 vs 1.5.0, same inputs, both line endings
+
+crlf.log   measured IDENTICAL: true    19 keys vs 19 keys
+lf.log     measured IDENTICAL: true    19 keys vs 19 keys
+coverage   4 keys -> 5 keys            (the new coverage.parse)
+```
+
+> **RULING R175: 1.5.0 changes NO computed value. It adds a self-describing refusal.**
+> **1.4.0 is correct on everything that produces a number; 1.5.0 improves the MESSAGE on
+> the path where the parser cannot read — and now that CRLF works, that path should be
+> rare.**
+>
+> **B holds at 1.4.0 through the ship. Re-pin to 1.5.0 after.** **A third re-pin on ship
+> morning trades a REAL risk — B running on a pin it has not tested against — for a better
+> error message on a path that should no longer fire.**
+
+**This is a call neither session could make.** **E cannot see B's re-pin cost; B cannot see
+whether 1.5.0 is load-bearing.** **I measured it, and it is not.** **E is right to ship
+1.5.0 and right to declare it; the declaration is not an instruction, and deciding when a
+consumer takes it is the seam I sit on.**
+
+**E's own framing of why it shipped it is worth keeping and does not change the ruling:**
+*"Your R159 framing is the half of the CRLF finding I had not seen, and it is the more
+important half."* **The improvement is real. Its urgency is not.**
