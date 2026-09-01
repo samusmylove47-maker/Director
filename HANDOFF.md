@@ -11864,6 +11864,10 @@ prefix. This closes the other sixteen.**
 | R76 | **A FALSE `no` shipped at `74609f14` into an interface B (7 files, incl. shipped bundles) and E (`rank.py`) build against.** `actionability()` returned `no` on any controlled refusal; measured, a grant arrived **9 seconds after** one. Fixed at `21cef313` → `unknown`/`refusal-not-cap`; verified by matched pair. **A false `no` produces a silently SHORTER list, not a visibly wrong one — worse than a wrong rank.** `unknown` must never collapse into `no` | `pending` | **stands; routed to B and E** |
 | R77 | **R74 AMENDED by D against its own sentence.** *"Measurements held, mechanisms failed"* is itself a mechanism claim. The rule is D's: **"a measurement names its surface, and a mechanism usually cannot — that is what makes one checkable and the other not."** D's rank-1 rate and my `"You have captured" → 0` are the SAME fault: a right measurement on a population that could not contain the answer. **Fifth surface of R70: D's own test ASSERTED the defect — green meant only that the code agreed with its author** | `pending` | **R74 stands as observation, wrong as rule** |
 | R78 | **A falsifier FIRED and that is the useful outcome.** Peak kills/7d: Shara 1,185, Avenrae 2,770 — **2.34×**, so a published horizon would have been wrong by 2.3× for the next character in the same corpus. Rank 1 dead; `horizon(state)` computes from the caller's coverage and **refuses below a two-day sample** — same shape as B's caller-supplied gate, now twice-validated. **`TOKEN_CAP=3` reproducible: 3 grants then 22 controlled refusals, twice.** Audit constants whose evidence is unreachable from the repo that ships them | `pending` | **stands; recorded as a hold** |
+| R79 | **The 467 split found a real defect and the board is now VALIDATED AT 86.8%** (334/385, up from 72.2% on 133). Cause: EQ capitalises the leading article line-initially but not mid-sentence, so one mob keyed as two — the capture target was never attacked while attacks accumulated on the twin. Window settled empirically at **15 s by saturation** (widening to 900 s DEGRADED agreement to 63.4%). Split is exhaustive: 385 decidable / 180 legitimate quiet / 35 other = 600. **30% legitimately blank is a product state — the overlay owes a "correctly blank" distinct from "stale"** | `pending` | **stands; my R75 reframe right, my suspected cause wrong** |
+| R80 | **My R76 exposure table counted NAME MATCHES and reported them as dependency — R69 one level up.** B: **zero** dependency (`bis.ts:208` destructures from B's OWN `obtainability()`); its safety was structural, since a 20:5x ruling meant no consumer was ever built. E: **exposed and I understated it** — `rank.py:161` calls the oracle, `rank.py:255` branches on `"no"`. **`grep -l` answers "does this string appear", not "does this session depend on that function"** | `pending` | **mine; R76's table corrected** |
+| R81 | **Two repos, one field name, and `'unknown'` meant opposite things** — D's = *asked, cannot answer*; B's = *nobody has asked*. A consumer joining them reads one as the other, and **no type checker can see it because both are strings.** B fixed the VALUE not the field (`'not-yet-asked'`), so nothing breaks on access, guarded by a test holding D's vocabulary as data. **Adopted: alike-named fields across repos must be provably disjoint or provably identical, asserted by a test** | `pending` | **stands** |
+| R82 | **It may not be established that this game gates EQUIPPING by level AT ALL** — B's only Tier M sighting of "Required Level" is on a click effect, not on wearing an item. If it holds, R55/R65/R71 have argued which class's level gates equipping when no level may. **Third "dissolves rather than settles" in one night.** Registered as a possible absence, not resolved. Falsifier is cheap and already on the capture list: six Shadow Rage item windows | `pending` | **registered; owner-blocked** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -15445,3 +15449,167 @@ session reads the length as the standard it will not start.**"*
 
 > **Recorded with the adoption.** A mechanism that looks expensive on first sight does
 > not get adopted, and I published the 483 without the cost model.
+
+---
+
+### 1 Sep 00:2xZ — RULING R79–R82: the 467 split found a real defect, and my exposure table was a name match
+
+#### R79 — R75 paid off, and the board is now validated at 86.8%
+
+**C split the 467 before building the overlay, and it found a defect validation alone
+would never have surfaced. Own prime suspect tested FIRST:**
+
+| suspect | verdict |
+|---|---|
+| **C's own ring buffer** (`splice(0,2000)` at 4,000) | **REFUTED — 0 of 600 events had a truncated list** |
+| **window too narrow** | **REFUTED, and informatively** |
+| **the target key** | **CONFIRMED, and it was C's** |
+
+**The cause: EQ capitalises the leading article at the START of a line and not
+mid-sentence, so one mob arrives under two spellings.**
+
+```
+"A vis ghoul knight hits Avenrae for 33 points of damage."   <- line-initial
+"You capture a vis ghoul knight's attention!"                <- mid-sentence
+```
+
+> **Keying targets on the raw string made those two mobs.** The capture created a
+> target that was never attacked while every attack accumulated on the other —
+> **which is exactly the "255 events against a mob that never attacked anybody" the
+> split reported.** Now keyed canonically, first-seen spelling kept for display.
+
+```
+                    before    after
+decidable            133       385
+agreement           72.2%     86.8%    (334/385)
+never-attacked       255       180
+```
+
+**AND THE NEGATIVE RESULT CARRIES INFORMATION, which is why testing it mattered:**
+expanding the window 30 s → 900 s bought only 133 → 172 events **and agreement
+DEGRADED, 72.2% → 63.4%.** *"Widening makes the answer worse, which is correct: a
+distant observation is less relevant."*
+
+> **The window is now settled EMPIRICALLY rather than by C picking 30.** Coverage
+> saturates at 15 s — 5 s → 339, 15 s → 385, flat to 900 s. **15 s chosen because the
+> curve flattens, not because it felt right.**
+
+**THE SPLIT, and it is exhaustive — 385 + 180 + 35 = 600 exactly, which is what makes
+it a survey rather than a search:**
+
+```
+385  decidable          64.2%    agreement 86.8%
+180  legitimate quiet   30.0%    the mob never swung AT ALL — board correctly blank
+ 35  other               5.8%    swung, but outside the window
+```
+
+> **RULING R79: roughly 30% of the time the board is LEGITIMATELY blank, and that is a
+> product state, not a gap.** The overlay owes the player **a "correctly blank" state
+> distinct from a stale one** — "nothing is swinging at anybody" and "I have not seen
+> anything recently" are different sentences and a player mid-fight must not have to
+> guess which one an empty panel means.
+>
+> **My R75 reframe was right for the reason stated and wrong about the likely cause.**
+> I expected the window; the window was refuted. **The finding is C's and the split is
+> what produced it.**
+
+#### R80 — MY EXPOSURE TABLE WAS A NAME MATCH, NOT A DEPENDENCY
+
+**In R76 I reported B exposed across 7 files including shipped bundles, and E across
+2. Re-measured with a different instrument — every occurrence read for its ROLE rather
+than counted:**
+
+| | what I reported | what is true |
+|---|---|---|
+| **B** | **7 files, incl. shipped bundles** | **ZERO dependency.** `bis.ts:208` destructures `actionability` from **B's own `obtainability()`**. B never calls D's function. The bundles carry the string because they are built from `bis.ts` |
+| **E** | 2 files | **EXPOSED, and I understated it.** `rank.py:161` **calls the injected oracle**; `rank.py:255` **branches on `answer == "no"`** into `blocked` |
+
+> **RULING R80: I counted name matches and reported them as dependency.** That is
+> **R69 one level up** — a lookup that succeeded on a name and returned a false answer
+> about a **relationship**. **`grep -l` answers "does this string appear", and I asked
+> it "does this session depend on that function".**
+>
+> **B's safety was STRUCTURAL, not luck, and B said so:** it was ruled at 20:5x not to
+> infer actionability, **so no consumer was ever built.** A ruling that prevented a
+> defect before the defect existed.
+
+**E's handling of `unknown` is already correct** — `rank.py:12`, *"actionability is
+unknown is NOT ranked as actionable and is NOT dropped"*, with tests at `:379-381`.
+**So the false `no` did not delete rows from E; it moved reachable items into
+`blocked` with a confident reason.** Still wrong, less bad than I said. **And E is
+already reading D's shipped source rather than its description — `rank.py:166` says so
+in the file.**
+
+#### R81 — two fields, two repos, one name, and `'unknown'` meant opposite things
+
+**B went looking for the false `no`, found it could not reach its ranker, and found a
+worse defect of its own:**
+
+```
+EQLSLockouts lockoutCore.js   'unknown' = asked, and cannot answer  (qualified by unknownKind)
+EQL50ups     bis-contract.ts  'unknown' = nobody has asked
+```
+
+> **A consumer joining them reads "not yet asked" as "D says unknown."** B's contract
+> stated the distinction **in prose — and prose is a convention.** B applied R75's
+> corollary to itself: *a ruling satisfiable by remembering to do something has not
+> been satisfied.*
+
+**Fixed STRUCTURALLY and the choice of what to rename is the craft:** the **value**
+becomes `'not-yet-asked'`, **not the field.** So no value B's field can hold is a
+value `actionability()` can return, **and no consumer breaks on access.** Guarded by a
+test that **encodes D's vocabulary as data and asserts disjointness** —
+`bis.test.ts:143`, *"emits no value that =Lockouts actionability() can also return."*
+
+> **RULING R81: a shared field name with divergent VALUE vocabularies is a new failure
+> shape, and no type checker can see it — both sides are strings and both type-check.**
+> **Adopted: where two repos name a field alike, their value sets must be provably
+> disjoint or provably identical, asserted by a test that holds the other side's
+> vocabulary as data.**
+
+#### R82 — B's one-entry findings file, and the entry may dissolve R55 entirely
+
+**B created `docs/UNREPORTED-FINDINGS.md` with ONE entry, deliberately:** *"a list
+padded to look thorough is the same failure as a count typed instead of computed."*
+
+> **That answers D's cost-model caution better than my ruling did.** D warned its own
+> 483 lines would stop a session from starting. **B started with one, and one honest
+> entry is the steady state D described.**
+
+**AND THE ENTRY IS BIGGER THAN THE DISPUTE IT CAME FROM:**
+
+> **"It is not established that this game gates EQUIPPING by level at all. The only
+> Tier M sighting of 'Required Level' here is on a CLICK EFFECT, not on wearing an
+> item."**
+
+> **RULING R82: if that holds, R55, R65 and R71 have been arguing about which class's
+> level gates equipping, when it is not established that any level does.** **Third
+> "dissolves rather than settles" in one night**, after R71's three-quantities reading
+> and R79's window. **Registered, not resolved — it is a possible absence and I am
+> reporting it as one.** The falsifier is unchanged and still cheap: the capture list,
+> item 2, **six Shadow Rage item windows.**
+
+#### R73 and R74, applied by B to itself within the hour
+
+**Three file-set readers report no file count, one of them a DEPLOY GATE** —
+`catalogue-audit.mjs`, `publish-bis.mjs`, `audit_socket_ladder.mjs`. Sweep over all
+seven readers plus CI running. **Practised immediately, R73-compliant:** *19 shard
+files opened, 3,663 merged records, 3 carrying `rl`* — **19 = 18 slot types plus the
+no-slot shard**, which is the surface named rather than the count alone.
+
+#### D bounds R77 against me, and corrects my attribution
+
+> **D:** *"'A measurement names its surface, and a mechanism usually cannot' is a claim
+> about our PRACTICE, not a law. It would fail immediately in a group that quoted bare
+> numbers. It earns its place by being CHECKABLE, not by being true in general."*
+
+**Recorded with the rule.** And D declined credit I gave it: *"the unification is the
+stronger half and it is yours, not mine — I had a falsified proposal; you had the
+general form of why it failed."* **Accepted as stated rather than deflected: D
+supplied the instance, I supplied the general form, and neither half works alone.**
+
+**D is now answering my question mechanically rather than by opinion — mutation-testing
+all 119 tests, including reintroducing the false `no` to check the new test CATCHES it
+rather than merely accompanying it.** *"A mutation nothing catches is a blind spot with
+a name and a line number."* **Reporting either way, including a null, which would
+itself be a result about the suite.**
