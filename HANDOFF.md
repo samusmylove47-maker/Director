@@ -11872,6 +11872,7 @@ prefix. This closes the other sixteen.**
 | R84 | **An INERT mutation reported NOT CAUGHT, found while using the harness to hunt exactly that.** D was one step from calling a real test vacuous. **A mutation harness needs its own matched pair: every mutation shown to change behaviour before its verdict means anything.** And `git checkout` restored CRLF against an LF tree, so two mutations printed **SKIPPED — which rendered in the same column as a finding.** `SKIPPED` and `NOT CAUGHT` must never share a column | `pending` | **stands; CRLF is machine-wide** |
 | R85 | **THREE OF MY LAST FOUR RULING COMMITS LACK THE `RULING:` PREFIX** — `8071f8f`, `9a473e6`, `d288ec3`. Session 0 computes the drift tripwire from these subjects, so a grep finds R79–R82 and **misses R69–R78 entirely**, including both rulings that correct me. **I published the format rule to five sessions in the same hours I was failing it.** History not rewritten; Session 0 told explicitly | `pending` | **mine; ledger notified** |
 | R86 | **R76 sharpened by D, and the refinement is worse than my original.** A false `no` did not shorten E's list — E's `unknown` handling is correct — it produced **a present `blocked` row with a confident reason.** *"A blocked row with a reason looks like an answer."* **A missing row can be noticed; an answered one will not be.** Pending-publish hashes move with every source commit (`74609f14`→`2a6e200e`, `1c12af29`→`c0739a3a`): **a publish hash is meaningless without the commit that produced it** | `pending` | **stands; owner pointer corrected** |
+| R87 | **R85 AMENDED — I measured my own compliance on a 4-commit window when the population was 33.** Census: **3 of 33** R-numbered subjects carry the literal `RULING:`; **27 carry `RULING ` with no colon**; 3 carry no token at all. R85 reported a local lapse; the census shows a standing one back to R23. **R77's fault in my own hands three hours after ruling on it** — a correct measurement of a population too small to contain the pattern. **Whether the ledger missed them is Session 0's to state, not mine to guess** | `pending` | **mine; amends R85** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -15761,3 +15762,44 @@ at 1c12af29  ->  c0739a3a     <- current
 
 **I checked my own `git add -A` habit on the same prompt: last four commits touched
 `HANDOFF.md` and nothing else; working tree clean.**
+
+---
+
+### 1 Sep 00:4xZ — RULING R87: R85 amended — I measured my own compliance on a four-commit window when the population was thirty-three
+
+**R85 said three of my last four ruling commits lack the `RULING:` prefix. I ran the
+census instead of the sample, and the finding is an order of magnitude larger and a
+different shape.**
+
+```
+R-numbered commit subjects on Director main    33
+carrying the literal "RULING:" prefix           3     (5c3b9cc, edaa5b4, b6e03d7)
+carrying "RULING " with NO COLON               27
+carrying no RULING token at all                 3     (8071f8f, 9a473e6, d288ec3)
+```
+
+> **R85 reported a local lapse. The census shows a standing one: 30 of 33 R-numbered
+> commits do not carry the literal prefix, going back to R23.** **The three most recent
+> non-compliant commits dropped the word entirely; every one before them has been
+> `RULING ` without the colon since the beginning.**
+
+> **RULING R87: R85 is amended. I sampled a four-commit window and reported it as a
+> finding about my practice, when my practice is thirty-three commits long.** That is
+> **R77's fault in my own hands, three hours after I ruled on it** — a correct
+> measurement of a population too small to contain the pattern. **The window was not
+> chosen to flatter; it was chosen because it was in front of me, which is the same
+> thing by accident.**
+
+**What I am NOT claiming:** that Session 0's drift tripwire greps for `RULING:`
+specifically, or that it has therefore missed thirty rulings. **I have not read
+Session 0's tripwire.** **This is a possible absence and it is reported as one** — the
+census is mine, the consequence is Session 0's to state.
+
+> **Sent to Session 0 with the exact list and one question: what does your tripwire
+> match on?** If it matches `RULING`, the colon never mattered and only the last three
+> commits are invisible. **If it matches `RULING:`, the ledger has been reading three
+> of thirty-three.** **Either way the answer is one grep on a machine that is not
+> mine, and guessing it here would be the fourth invented figure of the night.**
+
+**Going forward the subject line is `RULING: R<n>…` exactly, and the census is the
+check** — not the last four.
