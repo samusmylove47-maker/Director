@@ -12012,6 +12012,9 @@ prefix. This closes the other sixteen.**
 | R216 | **The two-vantage method cannot reach the lockout grid — closed by C and D independently, minutes apart, and C's reason is stronger.** D: the two characters' logs share **not one second** (Shara 19–29 Aug, Avenrae 9–17 Aug), zero co-witnessed roster kills from **disjoint** windows. **C: the grid's drivers are FIRST-PERSON** — `"You have been assigned the task"` 4 vs 6, `"has been slain by"` 7,558 vs 1,530 the only shared line. **Task grants exist only in the log of the character they happened to, so two grids are two legitimately different states, not one state seen twice** — which would hold even with perfect overlap. **Recorded as a property of the tool, not a gap in a corpus.** **And C kept the number worth more than the comparison: the entire lockout state rests on 4–6 task-grant lines, 45 drivers in 354,786 lines — 0.0127% of the input.** **Left OPEN rather than asserted:** whether two grouped players each receive their **own** grant line — if so a purpose-captured pair still answers it. **A fact about the game nobody has measured; put to D** | `answered / one open` | **D** |
 | R217 | **The cleanest accidental guarantee in the record, named by its holder with its expiry attached.** D on why C's identity finding misses its grid: *"that safety is a property of the roster being 10 hand-checked names, not of the engine handling the general case. If the roster ever discovers itself from timer rows, as the source says it should, that safety evaporates and C's finding becomes mine."* **147 same-second same-name collisions, 8.3% of kill lines, all trash; zero touching a roster boss; zero touching an `alsoDies` mob — the check that mattered, since a collision there would mean D's published 12/12 and 14/15 counts had been counting deduped events.** **The condition is not hypothetical — the source already says the roster should self-discover. A SCHEDULED hazard.** Directed into `UNREPORTED-FINDINGS.md` **as a precondition on that change, not a finding about today: a hazard recorded where the work will happen beats one recorded where it was found** | `recorded` | **D** |
 | R218 | **A dissolved my ordering constraint and asked me to re-rule rather than reordering quietly** — the behaviour the standing rules exist to produce. PR #167 derives `lastmod` from one `git log --name-only` pass, so **two consecutive builds now produce a byte-identical sitemap** and the fix's own diff is **15 lines where yesterday's build was 715**; 754 pages in 0.24s. **My order rested on ONE thing, diff noise, not on dates being valuable first — A did not argue the rationale, it removed the condition the rationale depended on. The ordering was a workaround for a defect and A fixed the defect; a workaround outliving its defect is the drift I ruled against this morning on the badge exemption.** Safe because it is the crawler field only and the owner's plan already ends with the sitemap reading the curated dates. **A's strongest argument was one I had not seen: the backfill is the one item that cannot be half-done across a promotion — real dates on some pages and nothing on others is worse than uniform silence.** A re-measured both my findings first, control included. **And the correction shape is the transferable part: after a FIFTH heredoc escape trap A's rule is not to be more careful but *"I do not write backslash content through a heredoc at all"* — care does not survive the fifth instance, a rule that eliminates the surface does. My equivalent, adopted: I do not report a behaviour I have not executed** | `re-ruled` | **A** |
+| R219 | **D retracted its own disjointness finding for the exact fault it had warned me about.** It compared `Desktop-Shara` against `state/logs-Avenrae` — **five more Shara logs sat in the same directory as Avenrae's, never looked at.** *A live instrument on the wrong population returns a real number* — D's own sentence to me about my sticky-attribution error, found in its own work an hour later. **Corrected: 7.38 days of overlap, 88,997 seconds logged by both.** **And my hypothesis was confirmed — each grouped player DOES receive their own first-person task grant, five matched pairs at −4 to +26 s.** **C's fact was right and its inference wrong; neither C nor I could settle it, D could, holding corpus and parser.** No capture request goes up. **Stating it as reasoning-to-be-checked rather than a finding is the only reason it did not become my third wrong mechanism of the day** | `retracted / confirmed` | **D** |
+| R220 | **Two players, one group, same raids, same week — ALL 25 CELLS DISAGREE.** Shara `notLooked 25, spans=false`, one hole of **24.51 h**; Avenrae `completed 8 / open 10 / conditional 7, spans=true`, none. **A 31-MINUTE MARGIN ON A 24-HOUR TOLERANCE DECIDES EVERY CELL, discarding 37 recorded and attributed kills.** Both observed ~38–40% of the period **so the observation floor is not the cause.** D's own prediction 3, understated: **compare only completions and you see 37 against 43 and conclude they raided differently — the disagreement is entirely in coverage and entirely invisible where anyone would look.** **D refused to call the tolerance wrong and I upheld it. What is established is that the failure is a CLIFF not a slope, and a player cannot see which side they are on** — fully supported without knowing the right threshold. **CLOSED BY PR #11: the engine now says *1.3h over the 24h tolerance*, derived from the measured hole and the published threshold, with a test that fails a hardcoded string. The threshold is unchanged. My fix shape, D's execution — it had the cliff and had stopped at describing it** | `fixed, PR #11` | **owner** |
+| R221 | **Cleared to publish — established by EXECUTION — and the caveat turned out to be a house habit.** D built from `main`, opened the real artifact, injected the failing state, pinned the clock, called the page's own `render()`, read the DOM: headline reads `not looked`; beneath it unprompted *"The log does not cover this week yet — so this is 'I do not know', not 'nothing is done'"*; 25/25 cells carry the reason. **Failure shape five would be 25 blank cells with the reason trapped in the engine; that is not what happens.** **But the reason lives in a `title` — absent on touch, unannounced — and that is the THIRD instance:** the 7px gate dot, the coverage score's 400-character explanation the audit calls the page's best material **also `title`-only** and pointing at a 404, and now a lockout cell in another repo by another author. **Three independent authors reached for the one attribute that does not survive a phone — a house habit, and the audit's central verdict with a third data point.** **Finding 4 re-scoped from markup fix to RULE: every `title`-only explanation gets a visually-hidden span, plus a check assertion that no `title` may be the sole carrier of a claim.** **D declined to fix its own tooltip ahead of the rule — *a one-off fix in my repo is exactly how this became a house habit.*** **Four sessions converged on one class today: D's wrong directory, my two read-instead-of-run claims, C's colliding key, A's fifth heredoc trap — instrument sound, aim not, every correction from a second independent look rather than a more careful first one** | `ruled` | **A + D** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -20671,3 +20674,85 @@ not survive the fifth instance; a rule that eliminates the surface does.**
 > the tool at five evidence levels; D ran its suite on the merged tree rather than its
 > branch; A measured two builds for byte-identity. Reading a guard tells you what is
 > written. Only running it tells you what happens.**
+
+#### R219 — D retracted its own finding for the fault it had warned me about, and the corrected result is the day's sharpest
+
+**D reported that the two characters' logs shared not one second, and retracted it an hour
+later.** It had compared `Desktop-Shara` against `state/logs-Avenrae` — **five more Shara
+logs sat in the same directory as Avenrae's and were never looked at.** ***A live
+instrument on the wrong population returns a real number*** — D's own sentence to me about
+my sticky-attribution error, found in its own work immediately after writing it.
+
+    corrected:  Shara 5 files  9-16 Aug     Avenrae 3 files  9-17 Aug
+                OVERLAP 7.38 DAYS — 88,997 seconds logged by both
+
+**MY HYPOTHESIS WAS CONFIRMED AND I WAS ONE MESSAGE FROM ASSERTING IT.** Each grouped
+player does receive their own first-person task grant — five matched pairs, offsets −4 to
++26 seconds. **C's fact was right (grants are `You` lines) and C's inference from it was
+wrong. Neither C nor I could have settled it; D could, holding the corpus and the parser.**
+**No capture request goes to the owner — the shared session was already on the machine.**
+**Stating it as reasoning to be checked rather than as a finding is the only reason it did
+not become my third wrong mechanism of the day.**
+
+#### R220 — two players in one group, same raids, same week, and all 25 cells disagree
+
+    Shara     notLooked 25   spans=false   frac 0.3817   HOLES: one, 24.51 h
+    Avenrae   completed 8, open 10, conditional 7   spans=true   frac 0.3995   none
+    disagreeing cells: 25 of 25
+
+> **RULING R220: A 31-MINUTE MARGIN ON A 24-HOUR TOLERANCE DECIDES EVERY CELL.** **37
+> roster-attributed kills are recorded, attributed, and never reach an answer.** Both
+> players observed ~38–40% of the period, **so the observation floor is not the cause.**
+
+**D's own prediction 3, and it understated itself:** *compare only completions and you see
+37 against 43 and conclude they raided differently.* **The disagreement is entirely in
+coverage and entirely invisible where anyone would look for it.**
+
+**D refused to claim the tolerance is wrong and I upheld that.** It has no measurement that
+a better number exists. **What it has is that the failure is a CLIFF rather than a slope,
+and that a player cannot see which side they are on — fully supported, and independent of
+knowing the right threshold.**
+
+#### R221 — not a blocker, established by execution; and the caveat is a house habit
+
+**I put one question to D and required that it be executed rather than read.** D built from
+`main`, opened the real artifact in a browser, injected a state reproducing the failing
+shape, pinned the clock, called the page's own `render()`, and read the DOM.
+
+**Three levels, the top two needing no interaction:** the headline reads `not looked`, not
+blank and not zero; beneath it, unprompted, *"The log does not cover this week yet — so
+this is 'I do not know', not 'nothing is done'."*; and all 25 cells carry the specific
+reason in a `title`.
+
+> **RULING R221: cleared to publish. The failure-shape-five case would be 25 blank cells
+> with the reason trapped in the engine, and that is not what happens.**
+
+**BUT D'S CAVEAT IS THE THIRD INSTANCE OF A PATTERN, AND IT UPGRADES THE AUDIT'S FINDING
+4.** The reason lives in a `title` — **discoverable on hover, absent on touch, unannounced
+to a screen reader.** Beside it:
+
+- **the zone gate status**, a 7px empty span whose entire meaning is in `title`;
+- **the coverage score's 400-character per-zone explanation** — which the audit calls the
+  best material on that page — **also `title`-only**, pointing at a document that 404s;
+- **and now a lockout cell's reason, in a different repository, by a different author.**
+
+> **Three independent authors reached for the one attribute that does not survive a phone.
+> That is a HOUSE HABIT, not three oversights — and it is the audit's central verdict with
+> a third data point: the site repeatedly knows the right answer and puts it somewhere the
+> reader cannot reach it.**
+>
+> **So finding 4 is no longer a markup fix. Directed to A as a RULE: every explanation
+> living only in a `title` gets a visually-hidden span beside it, plus a check assertion
+> that no `title` may be the sole carrier of a claim.** **That converts a habit into
+> something the build refuses — the only correction shape that has held all day.**
+
+**FOUR SESSIONS CONVERGED ON ONE CLASS TODAY, INDEPENDENTLY.** D's wrong directory, my two
+read-instead-of-run claims, C's colliding key, A's fifth heredoc trap. **In every case the
+instrument was sound and the aim was not; in every case the correction came from a second
+independent look rather than from a more careful first one.** **That is no longer a pattern
+in a session — it is a property of the work.**
+
+**And the corrections that held today all have one shape: they removed a surface rather
+than promising more care.** A will not write backslash content through a heredoc at all. I
+do not report a behaviour I have not executed. **I hit the same heredoc trap writing this
+entry, twenty minutes after recording A's rule, and applied A's rule instead of retrying.**
