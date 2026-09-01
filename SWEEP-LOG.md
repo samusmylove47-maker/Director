@@ -539,3 +539,24 @@ Compared current remote heads against the 1 Sep 13:05Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 15:23Z
+
+Compared current remote heads against the 1 Sep 14:25Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `795319ce` → `522637fa`
+  ("CLOSES F11 — 23 of 23 rows told a new reader nobody had measured
+  the item, while the data was still arriving"), authored
+  2026-09-01T15:21:10+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `d438ad49` →
+  `a2f162b9` ("ROUND-TRIP ACCURACY 90.0%, and the missing 10% is a live
+  bug the simulator found"), authored 2026-09-01T15:19:29+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `e0efe712`.
+- `EQLSLockouts` `session-d/raid-rows`: `0a5bfcb0`.
+- `EQLSAuras` `main`: `b05741bf`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
