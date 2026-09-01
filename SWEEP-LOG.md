@@ -259,3 +259,25 @@ Compared current remote heads against the 1 Sep 00:2xZ sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 02:24Z
+
+Compared current remote heads against the 1 Sep 01:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `4df8705d` → `d4ab6ce0` ("Merge pull request #161
+  from samusmylove47-maker/claude/staleness-fails"), authored
+  2026-08-31T22:16:05-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `fde93fcd` → `ebe7f1f2`
+  ("TO DIRECTOR: the ship-blocker I refuted was real — I had tested a
+  different function"), authored 2026-09-01T02:21:51+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `04e4f81a` →
+  `095ac495` ("Tick 18: check.sh PASS, B moved three commits and none
+  touched my seam"), authored 2026-09-01T01:38:47+00:00.
+
+**Unchanged:**
+- `EQLSLockouts` `session-d/raid-rows`: `bd7c265e`.
+- `EQLSAuras` `main`: `c5c2c001`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
