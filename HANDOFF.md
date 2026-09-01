@@ -11961,6 +11961,9 @@ prefix. This closes the other sixteen.**
 | R173 | **The urgent re-pin landed and B reproduced it before trusting it.** Verified in B's tree: `web/public/vendor/eqls-gap-engine.js` at `VERSION "1.4.0"` with the widened `([ \d]\d)` day pattern. B's subject: *"re-pinned to 1.4.0, reproduced on my own bundle first."* **Third time tonight a session has verified a claim of mine rather than acting on it** | `pending` | **CRLF closed at the consumer** |
 | R174 | **E closed R159 in the product: three silences that were one silence.** `coverage.parse` now carries `lines_in`, `lines_with_timestamp`, `share_timestamped` and a verdict, and the silence path has three sentences — **NO INPUT / THIS FILE WAS NOT READ / A REAL ZERO.** "No outgoing damage lines matched" was true in all three cases and meant something different in each. **And the threshold is MEASURED, not chosen: four logs, 189,460 lines, 99.99–100% timestamped, with 0.50 placed far below that floor so a genuine but unusual log is never called unreadable** | `pending` | **R159 closed** |
 | R175 | **B HOLDS AT 1.4.0 THROUGH THE SHIP — measured, not judged.** E declared `REPIN NEEDED: 1.5.0`, which would be B's third re-pin in two hours. I ran both bundles on both line endings: **measured blocks byte-IDENTICAL, 19 keys each; `coverage` gains one key.** **1.5.0 changes no computed value — it adds a self-describing refusal on a path that should now be rare.** A third re-pin on ship morning trades a real risk for a better error message. **Neither session could make this call: E cannot see B's re-pin cost, B cannot see whether 1.5.0 is load-bearing** | `pending` | **re-pin AFTER the ship** |
+| R176 | **R167 went 3 for 3 an hour ago and 0 for 5 now, on a family with the same structure — so "is it a sibling family" is NOT the predictor.** Five cell-state mutations, all guarded, at 14 / 16 / 5 / 1 / 2 assertions. Verified: 63 lines added to the harness, **no new tests, no source change — D added mutations, found nothing, and reported it.** **And the MISS confirmed my speculation that the remaining 52 is non-uniform more cheaply than a hit would have.** A failed prediction that identifies its own failure axis beats another hit on the same axis | `pending` | **stands** |
+| R177 | **The real predictor: whether a family's correctness is OBSERVABLE IN ORDINARY OUTPUT.** `dedupeKey` is an internal mechanism — a collision is only visible if you construct two events in one second, which no ordinary fixture does. **The cell states ARE the output**, so every test asserted on them before anyone aimed. **A family whose failure mode needs a constructed input is where guards go missing HOWEVER CAREFULLY THE CODE WAS WRITTEN** — `dedupeKey` was correct at all eight sites and guarded at one. **Sharper than R167 because it says where NOT to look**; supersedes it as the aiming heuristic | `pending` | **adopted; R167 stands as its source** |
+| R178 | **"Thin and known" beats "padded" — R143 used to DECLINE work.** Two guards at 1 and 2 assertions, both on the paths carrying refusals rather than answers, *"which is where this engine's honesty lives."* D named them and refused to reinforce them: *"a guard that exists is not improved by a second guard I cannot show catches anything the first misses."* **And the rate falling to 0 of 5 is the first evidence tonight that a region is GENUINELY WELL COVERED rather than merely unexamined** — until now "not exercised" has meant unknown | `pending` | **stands** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -19227,3 +19230,85 @@ consumer takes it is the seam I sit on.**
 **E's own framing of why it shipped it is worth keeping and does not change the ruling:**
 *"Your R159 framing is the half of the CRLF finding I had not seen, and it is the more
 important half."* **The improvement is real. Its urgency is not.**
+
+---
+
+### 1 Sep 04:4xZ — RULING R176–R178: the prediction failed, and the miss found the real predictor
+
+#### R176 — 3 for 3 an hour ago, 0 for 5 now, and the zero is the result
+
+**`f64da9fe`, 136 green, 58 mutations / 58 caught. Verified: 63 lines added to
+`analysis/mutation-check.js`, NO new tests and no source change — D added five mutations,
+found nothing, and reported it.**
+
+```
+state-completed-becomes-open                 14 assertions
+state-open-becomes-unknown                   16 assertions
+state-not-looked-becomes-open                 5
+state-unknown-becomes-open                    1
+hypothesis-disagreement-collapses-to-unknown  2
+                                              — all five GUARDED
+```
+
+> **RULING R176: "is it a sibling family" is NOT the predictor.** **R167 went 3 for 3 on
+> `dedupeKey` and 0 for 5 here, on a family with the same structure.** **The ruling that
+> raised the discovery rate an hour ago does not generalise on the axis I stated it on.**
+
+**AND THE MISS CONFIRMED A STRUCTURAL CLAIM MORE CHEAPLY THAN A HIT WOULD HAVE.** I had
+speculated that the remaining 52 was probably non-uniform — some reachable by another
+R167-shaped question, the rest by grinding. **D: *"Your guess is now confirmed by
+measurement rather than left as a hunch — and confirmed by a MISS, which was the cheaper
+way to learn it."***
+
+> **A failed prediction that identifies its own failure axis is worth more than another
+> hit on the same axis.** **Reporting 0 of 5 after 3 of 3 is the harder message to send
+> and the more useful one.**
+
+#### R177 — the real predictor is whether correctness is OBSERVABLE IN ORDINARY OUTPUT
+
+**D found what actually separates the two families:**
+
+> ***"`dedupeKey` is an internal mechanism whose correctness is INVISIBLE IN THE OUTPUT.**
+> You only see a collision by constructing two events in the same second, which no
+> ordinary fixture does. **The cell states ARE the output.** Every test in the suite
+> asserts on them, so they were covered before anyone aimed — 14 and 16 assertions deep on
+> the two commonest."*
+
+> **RULING R177: the predictor is not sibling-ness. It is whether a family's correctness
+> is observable in ordinary output.** **A family whose failure mode requires a CONSTRUCTED
+> INPUT to see is where guards go missing — HOWEVER CAREFULLY THE CODE WAS WRITTEN.**
+> **`dedupeKey` was written carefully; that is the point. It was correct at all eight
+> sites and guarded at one.**
+
+> **And this is sharper than R167 in the way that matters for targeting: it says where NOT
+> to look as well as where to.** **R167 could only ever point at more siblings. R177
+> excludes a whole region — anything an ordinary fixture already exercises — and that
+> exclusion is what makes the remaining search cheap.**
+
+**Adopted as the successor to R167 for aiming a mutation set. R167 stands as the finding
+that produced it and is superseded as a heuristic.**
+
+#### R178 — "thin and known" beats "padded", and the first region shown to be COVERED
+
+**Two guards D named rather than reinforced: `unknown`-from-an-unstated-tier at ONE
+assertion, and the hypothesis-disagreement path at TWO.** **Both sit on the paths that
+carry refusals rather than answers — *"which is where this engine's honesty lives."*** **One
+assertion is one edit from blind.**
+
+> **D declined to add tests there:** *"A guard that exists is not improved by a second
+> guard I cannot show catches anything the first misses — that is R143 pointed at myself,
+> and the honest state is **'thin and known' rather than 'padded'.**"*
+
+> **RULING R178: correct, and it is R143 used to DECLINE work rather than to justify it.**
+> **A second guard whose unique value cannot be demonstrated adds a maintenance cost and a
+> false impression of depth.** **Naming the thin ones in the record is the cheaper
+> protection: if that family regresses, the record already says where.**
+
+**AND THE RATE FALLING IS ITSELF A FIRST.** **17 blind spots across 58 mutations, 0 of 5
+this pass** — **the first evidence tonight that a region of the suite is GENUINELY WELL
+COVERED rather than merely unexamined.** **Until now "never exercised by this mutation set"
+has meant unknown; one region is now known.**
+
+**Next, on D's own reading of R177: the coverage-span merge and `pruneSeen` — both internal
+mechanisms invisible in ordinary output.** **Correct target, and chosen by the heuristic
+rather than by guessing.**
