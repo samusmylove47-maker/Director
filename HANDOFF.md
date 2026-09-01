@@ -11922,6 +11922,8 @@ prefix. This closes the other sixteen.**
 | R134 | **The served artifact verified from the BYTES, not the manifest:** `98005988`, 17,357 B, sha matching local, the completed-comparison reject rule present, manifest field-for-field including `builtAt`. Tonight's fixes confirmed by string in the served bundle; **the served self-audit names its own uncovered file, `data/focus-effects.json`.** **And my null-id question is CLOSED by refuting its premise — the served 509,656-byte app has ZERO references to `bis-catalog.json` or `bis/`, so the file I loaded is one no player fetches** | `pending` | **stands; question was misdirected** |
 | R135 | **I was enumerating a SUBSET of the remote and calling it the remote.** I reported #163's branch missing; it is `claude/media-hash-case` at `852a0762`, +1 ahead. `for-each-ref refs/remotes/origin` reads my fetched cache; `ls-remote` queries the server and returns **143 heads**. Three branches existed that my cached enumeration could never have shown. **R101's shape — carried state read as live state — and the tick brief guards a FAILED fetch, not one that succeeded for the wrong set.** Census now comes from `ls-remote` or a full refspec | `pending` | **mine; adopted** |
 | R136 | **R133 AMENDED — there is nothing to merge into. `EQL50ups` has exactly ONE remote head, the working branch, and `main` DOES NOT EXIST (0 heads), so `deploy.yml`'s second trigger is dead text.** The only publish path is a push to the branch B works on. **"The owner merges; merging publishes" has no attachment point here — not a gap in coverage, an absent object.** Every other peer has a durable branch no session pushes to (`sky-ledger` 2, `EQLSAuras` 2, `EQLSLockouts` 7). **B has been operating correctly inside a structure nobody chose.** Also found: `sky-ledger`'s durable branch is `master`, not `main` | `pending` | **owner's; needs a branch first** |
+| R137 | **A added a THIRD arm I did not ask for and it is the one that matters.** The route scan carries its own positive control — counts `open(` sites, requires non-zero — because *"a scanner that finds none of the eight forbidden routes BECAUSE ITS MATCHING IS BROKEN is indistinguishable from a clean repository."* Three arms: clean → exit 0; a generator importing `pathlib` → exit 1 refusing; **its own control neutered → exit 2 refusing.** The control lesson applied INSIDE the instrument, one level deeper than the ruling asked. **And A nearly banked a vacuous test: *"the experiment's success and its non-existence render identically"*** | `pending` | **#164 with the owner** |
+| R138 | **R65's block is LIFTED — it was on the WORKER, not the finding.** A is no longer stood down and reports no remaining falsifier-bearing item. **Verified still live on main before dispatching: `build13.py:248-262` makes three claims under one T1 entry that speaks only to the level-11 lock, `settle='Settled.'`, shipping in `still-true.html` (33,899 B, 6 T1 badges).** Claims 1 and 2 keep T1; the trio-level claim gets its own tier or comes out. **R82 may dissolve rather than downgrade it — the honest row may be "not recorded"** | `pending` | **dispatched to A as a PR** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -17823,3 +17825,94 @@ nobody chose.**
 `sky-ledger` names its durable branch `master`, not `main`.** **The tick brief's own
 warning about `LoxyBee-EQLS-Auras` having `master` and no `main` applies to a second
 repository, and a fetch of `main` there would read exactly like "no change".**
+
+---
+
+### 1 Sep 03:2xZ — RULING R137–R138: a control inside the instrument, and R65's block is lifted
+
+#### R137 — A added a third arm I did not ask for, and it is the one that matters
+
+**#164 meets all three R119 conditions. Condition 1 prints the exit:**
+
+```
+"52 dynamic site(s) not visible to this check (run scripts/inputprobe.py to see those)"
+```
+
+**Condition 3 is proved on THREE arms rather than two:**
+
+```
+clean tree                       exit 0, reports coverage
+a generator importing pathlib    exit 1, REFUSING TO REPORT, names the file
+its own control regex neutered   exit 2, REFUSING TO REPORT
+```
+
+> **The third is not in my ruling.** A's reason: **the route scan carries its own POSITIVE
+> CONTROL — it counts `open(` sites and requires non-zero — because *"a scanner that
+> finds none of the eight forbidden routes BECAUSE ITS MATCHING IS BROKEN is
+> indistinguishable from a clean repository."***
+
+> **RULING R137: that is the `.gitattributes` control lesson applied INSIDE the
+> instrument rather than to it.** I ruled that the probe must check its own assumption; A
+> saw that the CHECKER OF THE ASSUMPTION needs a control too, **or the whole chain
+> terminates in something that cannot fail.** **Third place tonight for the same fault,
+> and the first time a session has closed it one level deeper than the ruling asked.**
+
+**AND A RAN A VACUOUS TEST AND NEARLY BANKED IT:**
+
+> *"My first attempt to break the control neutered nothing — the heredoc ate the escape,
+> no replacement happened, and the probe printed '182 open() call sites found, so the
+> scan works' exactly as before. **For one moment I read that as the control passing. It
+> was the TEST not running, wearing the same face as the thing under test.**"*
+
+> **Adopted, and it is the sharpest statement of the transport class yet: THE
+> EXPERIMENT'S SUCCESS AND ITS NON-EXISTENCE RENDER IDENTICALLY.** **My MSYS read and A's
+> three heredoc traps are the same object — a mutation that did not happen looks exactly
+> like a mutation that was caught.** **Redone line-wise; exit 2.**
+
+**Result on main: 152 paths opened, 109 build inputs, 112 fingerprinted, every observed
+input covered.**
+
+**Two corrections A offered that I am recording as A stated them.** On my refuted mutator:
+*"I would not file that as a failure of yours. You proposed a mechanism from its
+description and I had the tree in front of me — that is VANTAGE, not method. What matters
+is that it was cheap to test, and it was."* **And on misfiled-versus-wrong, put more
+plainly than I had it:** *"A check aimed at the wrong branch is not a broken check, and
+the remedy is a SECOND CASE rather than a repaired one."*
+
+#### R138 — A is no longer stood down, so R65's block is lifted
+
+**R65 registered a LIVE PUBLISHED DEFECT as BLOCKED rather than routing around it,
+explicitly because *"A is stood down for three P0s."* A has just reported no remaining
+self-dispatch item carrying a falsifier. The reason for the block is gone.**
+
+**Verified still live on `origin/main` before dispatching it — `_build/build13.py:248-262`:**
+
+```python
+legends='<strong>No. Characters run three classes at once.</strong> Two at creation, a '
+        'third at level 10, with primary class and race locking permanently at 11. The '
+        'active trio uses the level of the <em>lowest</em> class in it.',
+evidence=[('T1', 'Official documentation and the level 11 lock',
+           '…priced in the Producer&rsquo;s Letter of 8 July 2026, which only makes '
+           'sense because those choices lock.')],
+settle='Settled.',
+```
+
+**And it ships: `public/learn/still-true.html`, 33,899 bytes, 6 T1 badges, 2 "Settled."**
+
+> **RULING R138: the ruling is unchanged and it is A's to implement as a PR — the block
+> was on the WORKER, not on the finding.** **One block makes three claims under one
+> evidence entry that speaks only to the level-11 lock, on the page whose entire purpose
+> is separating what Legends does from inherited classic text.**
+>
+> **Claims 1 and 2 keep T1 on the evidence that earned it. The trio-level claim gets its
+> own row at its own tier — or comes out until sourced — and `settle='Settled.'` does not
+> cover it.**
+
+**AND R82 MAY DISSOLVE IT RATHER THAN DOWNGRADE IT.** B reports it is not established
+that this game gates EQUIPPING by level at all; its only Tier M sighting of "Required
+Level" is on a click effect. **So the honest row may be "not recorded" rather than a lower
+tier, and A should consider that before picking one.** **The falsifier is unchanged, cheap
+and the owner's: one read of the Producer's Letter of 8 July 2026.**
+
+**This is a PUBLISHED PAGE and merging is the publish, so it goes as a PR. Four of A's now
+sit with the owner: #163, #164, and this.**
