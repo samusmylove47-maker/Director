@@ -208,3 +208,27 @@ Compared current remote heads against the 22:25Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 00:2xZ
+
+Compared current remote heads against the 31 Aug 23:59Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `f9928e3b` → `14176404`
+  ("TO DIRECTOR: 90 mob names collide by case and 35 by article — I folded
+  the case and refused the article"), authored 2026-09-01T00:17:37+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `6dc1b44d` →
+  `58b97adf` ("TO DIRECTOR: the DPS meter published a 202% share on the log
+  it was built against"), authored 2026-09-01T00:11:18+00:00.
+- `EQLSLockouts` `session-d/raid-rows`: `421d4871` → `1c12af29` ("TO
+  DIRECTOR: mutation-tested my own suite — 2 real blind spots, and I
+  overstated a claim"), authored 2026-08-31T20:16:57-04:00.
+- `EQLSAuras` `main`: `65d9247e` → `548fd911` ("A drop-in Aggro Board
+  module for Shara's new module system, tested against her contract"),
+  authored 2026-08-31T20:17:44-04:00.
+
+**Unchanged:**
+- `eql-source` `main`: `de6ffd62`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
