@@ -11880,6 +11880,9 @@ prefix. This closes the other sixteen.**
 | R92 | **"Survives every mutation" has two causes that look identical: vacuous, or out of the harness's REACH.** D's `build.test.js` was unreachable — the harness could only edit the engine, and it asserts on packaging. Extended to the template and build script it caught them hard (3 and 11 assertions). **My prior was wrong about the file and right about the method; D had assumed unreachable and would have left it.** Surface **56 of 125**, from 44, from 35 | `pending` | **stands; both halves were needed** |
 | R93 | **The content-hash test asserted STABILITY and never SENSITIVITY — `deadbeef` passes it and all 125 stayed green.** A hash test that checks only stability passes for a constant, which is the exact thing it forbids. **Failure shape 1.** And it is the instrument behind the Director's own publish reasoning: frozen, every build carries one filename and **the stale-deploy check goes quiet while looking healthy.** Now recomputes the digest from the page bytes | `pending` | **stands; load-bearing for me** |
 | R94 | **R70's third mechanism — the shell edited a commit body between authoring and recording.** Backticks in an unquoted heredoc ran as command substitution and deleted the subject of the sentence; `git` stored a true sentence made false in transport. **D did not amend: "corrections travel; history does not get quietly edited."** Audited my own 8 bodies with a matched pair — 0 hits, backticks intact in 4, because quoted heredocs are safe. **The hazard is the unquoted heredoc, not the backtick** | `pending` | **stands; D's rule narrowed** |
+| R95 | **An ENFORCED ruling and an AGREED one are different objects, and nothing here was distinguishing them.** D aimed a mutation at the exact change R-alsoDies forbids — promoting Tranix/Rokyl/Skarlon into `bosses` — and it was **CAUGHT**. *"I did not know which one we were in until I broke it on purpose."* **Adopted: a ruling naming a SPECIFIC change writes the mutation proving a test catches it.** 94 rulings stand; this is the first known enforced, and **the other 93 are UNMEASURED** — registered, not audited tonight | `pending` | **stands; R75 applied to rulings** |
+| R96 | **The `solo` flag is the only instrument that can see a gap we have published.** Constant-`false` left 125 green. Bare `- Solo` is correctly modelled as nothing (0 occurrences in 16 logs), **but the owner's alt+Z window shows a `Solo 3` lock** — so Solo instances exist and lock, and `solo` is the only way a consumer notices. **A flag whose job is to make a documented blind spot visible is load-bearing BECAUSE the thing it reports is unmodelled.** The Group/Solo difficulty asymmetry was argued in a comment and asserted nowhere — **fifth tonight** | `pending` | **stands; owner's capture settled it** |
+| R97 | **Both of us named the wrong construct.** Not a heredoc at all — a **double-quoted `-m` argument**; bash substitutes inside double quotes. Measured three-way: `-F` file and quoted heredoc survive verbatim, double-quoted `-m` substitutes. **The rule is any double-quoted shell string, and any unquoted heredoc.** **Mine to carry: I narrowed D's rule from my own commits without reading the command that produced D's — R36 in a new place, reasoning about a construct from its description.** Surface **62 of 126**, half the suite, from 29% | `pending` | **stands; my narrowing was right and off-target** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -16107,3 +16110,109 @@ my bodies containing backticks       4 of 8   backticks INTACT
 **C's refutation recorded beside it** — 1,270,007 single-digit-day lines all zero-padded,
 **and C's own stated limit that days 01–03 do not occur.** **The caveat travelled with
 the number, which is the whole point of R88.**
+
+---
+
+### 1 Sep 00:5xZ — RULING R95–R97: a ruling that a test enforces, and I reasoned about a construct from its description
+
+#### R95 — an ENFORCED ruling is a different state from an agreed one, and we did not know which we were in
+
+**D aimed a mutation at the exact change I ruled must not happen — promoting King
+Tranix, Magus Rokyl and Warlord Skarlon out of `alsoDies` into `bosses`. CAUGHT.**
+
+**Verified in the tree, `src/lockoutCore.js:773`:**
+
+```js
+alsoDies: Object.freeze(['King Tranix', 'Magus Rokyl', 'Warlord Skarlon']),
+```
+
+> *"So the ruling is not just recorded in prose and a source comment; a future session
+> cannot arm it by accident without a test going red. That is a different and better
+> state than 'we agreed not to', and **I did not know which one we were in until I broke
+> it on purpose**."*
+
+> **RULING R95: a ruling that a test enforces and a ruling that a session remembers are
+> different objects, and nothing in this project has been distinguishing them.** **This
+> is R75's corollary applied to the rulings themselves** — *a convention fails open the
+> first time somebody maps the object generically; a shape cannot* — and **a ruling in
+> prose is a convention.**
+>
+> **Adopted: where a ruling names a SPECIFIC change that must not happen, the session it
+> binds writes the mutation that proves a test catches it, and reports caught or blind.**
+> A ruling naming a principle cannot be tested and stays prose; **one naming three
+> string literals can be, and now is.**
+
+**Ninety-four rulings stand. This is the first known to be ENFORCED rather than agreed,
+and the state of the other ninety-three is UNMEASURED.** **I am not commissioning that
+audit tonight — three P0s hold the floor and it would be exactly the "communication
+layer" work that is not the project.** **Registered as a known unmeasured quantity
+rather than left as an assumption that they hold.**
+
+#### R96 — the `solo` flag is the only instrument that can see a gap we have published
+
+**Replacing `solo` with a constant `false` left all 125 tests green.**
+
+**Why it is not an unused field:**
+
+- **Bare `- Solo` is deliberately modelled as NOTHING** — zero occurrences across all 16
+  log files, so extending the bare-`Group` difficulty rule to it **would be inventing a
+  number.** Correct, and it stays.
+- **But the owner's alt+Z window shows a `Solo 3` lock.** **Solo instances exist and
+  they lock.**
+- **`solo` is the only thing in this engine that lets a consumer notice one at all.**
+
+> **RULING R96: stuck false, we lose the single signal that a KNOWN, PUBLISHED gap is
+> being hit.** **A flag whose only job is to make a documented blind spot visible is
+> load-bearing precisely because the thing it reports is unmodelled** — it is the
+> difference between a gap we can watch and a gap that is silent. **A constant-false
+> instrument reports "no Solo locks" forever, which is the one answer the corpus already
+> tells us is wrong.**
+
+**Now tested as a triple: Solo is flagged, the Group shape is not, and bare `- Solo` gets
+NO difficulty where bare `- Group` gets 0.**
+
+> **That asymmetry was argued at length in a source comment and asserted NOWHERE.**
+> **Fifth instance tonight of a finding that lives in a comment.**
+
+**AND THE EVIDENCE IS THE OWNER'S, not the corpus's.** The `Solo 3` lock comes from the
+owner's own alt+Z window. **A capture the corpus structurally cannot contain, which
+settled a question 16 log files could not** — the same shape as R66's corpus-scope zero,
+running the other way.
+
+#### R97 — both of us named the wrong construct, and I reasoned from a description
+
+**D's correction, measured, and I ran my own three-way pair to confirm it:**
+
+```
+file via -F            A `date` B      <- survives verbatim
+quoted heredoc         A `date` B      <- survives verbatim
+double-quoted -m       A X B           <- SUBSTITUTED
+```
+
+> **It was never a heredoc.** `git commit -m "… \`BUILD: …\` …"` — **a double-quoted `-m`
+> argument.** Bash substitutes inside double quotes. **Every one of D's `-F - <<'MSGEOF'`
+> commits was a quoted heredoc and was never at risk.**
+
+> **RULING R97: the accurate rule is not about heredocs at all — it is ANY
+> double-quoted shell string, and any UNQUOTED heredoc.** D's original rule named the
+> wrong construct; **my narrowing of it named a different wrong construct**, and both of
+> us were describing a command neither had re-read.
+
+> **And that is mine to carry: I narrowed D's rule from evidence in my own commits
+> without reading the command that produced D's.** My conclusion — *the hazard is the
+> unquoted heredoc* — is true and was not the case at hand. **R36, in a new place: I
+> reasoned about a CONSTRUCT from its description instead of from the command, exactly as
+> I once relayed an interface from its description instead of its source.**
+
+**D's readback instrument was itself bad on first write:** `grep -c "  "` **counts every
+indented line rather than mangling, and returned 2 on a clean body.** Replaced with a
+check for a sentence resuming in lower case after a gap — **which is the form I had
+used**, and the convergence is worth recording as corroboration rather than as either
+of us being clever.
+
+**Surface: 62 of 126 — HALF THE SUITE demonstrably non-vacuous, from 29% when I first
+asked for the denominator.** 56 → 44 → 35 before it.
+
+**D on R92, and I am recording it as D put it rather than deflecting:** *"your prior was
+wrong and it still produced the finding, because it sent me at a file I had written
+off. I would have left `build.test.js` alone on a correct belief and learned nothing."*
