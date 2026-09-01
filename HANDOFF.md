@@ -12038,6 +12038,14 @@ prefix. This closes the other sixteen.**
 | R242 | **MY INSTRUMENT DESTROYED THE FILE BEFORE MEASURING IT, AND CARE WAS THE DEFECT.** A challenged my challenge and the decisive test was one I never ran: **raw stored bytes, no normalisation — 280,212 B, CR 3,308, LF 3,364, sha256[:8] = `16d4edad`, ITS OWN NAME.** **All four of my measurements normalised — forced LF, forced CRLF, never the bytes as stored. A's control was reproducing perfectly the whole time.** **I built a test to check whether a name describes its content, and the test ALTERED THE CONTENT BEFORE CHECKING — and I normalised precisely BECAUSE I was being careful about line endings.** **The day's rule in its hardest form: it is not enough for the instrument to be external to the ARTIFACT, it must be external to the TRANSFORMATION.** Three things wrong in one message: that A's control failed; that A should downgrade to "unestablished" — **weakening a correct finding, the exact inverse of the error I was preventing**; and that `.gitattributes` stood alone. **A corrected itself before I did.** **A and D converged from opposite directions without knowing it — D's crux 50 content newlines, A's 3,308 CR in a mixed-ending file.** **Exposure is older than today: the stored `16d4edad` from 30 Aug is already broken the same way.** **And A's trap: a bare `* text=auto eol=lf` would have made it WORSE, normalising exactly the artifacts whose hashes are their names** | `corrected` | **me** |
 | R243 | **A fix pushed mid-review makes the reader approve something they did not read.** I asked D whether anything asserts `.gitattributes` COVERS `public/app/`; **D tested the premise rather than taking it and it holds — `public/app/sub/x.html` is `text: unspecified`, already outside the glob, so the gap is real today for any path one level deeper.** **And D declined to fix it now, mechanically rather than by judgement:** *"PR #14's head branch is my branch. Any commit I push goes into the PR the owner is currently reading. Adding a fix mid-review changes what they approved into something they did not — the same class as an artifact drifting from its source, with me as the drift."* **UPHELD, and the generalisation is D's: a branch under review is a published artifact, and pushing to it is a silent republish.** Same shape as `latest.txt` naming what the source no longer produces, with a person as the mutating layer. Queued as a separate PR after #14 | `queued` | **D** |
 | R244 | **A SEVENTH FAILURE SHAPE, named by D out of my own error: THE INSTRUMENT DESTROYS THE PROPERTY UNDER TEST, VIA THE STEP THAT WAS SUPPOSED TO MAKE IT RIGOROUS.** D refused to file it under any existing shape: *"every other fault today was an instrument aimed wrongly or unable to return an answer. Yours DESTROYED THE PROPERTY IT WAS MEASURING, and it did so through the step taken to make it rigorous."* **Worse than the catalogued six because the defensive move IS the fault — forcing LF and forcing CRLF is exactly what a careful person does with a line-endings question, and all four measurements agreed with each other. The only thing that finds it is hashing the raw bytes, WHICH LOOKS LESS CAREFUL.** **D also declined to price the two hours as mine — the question only D could answer, and nobody could ask it until A's alarm made it the question; the time bought the diagnosis rather than being lost to it.** **And the exposure D had not checked: every content-addressed artifact that repo has ever stored has been wrong, and it never bit because nobody verified a name against its bytes until A built a copier that did — a fault surviving because no instrument existed to meet it** | `named` | **catalogue** |
+| R245 | **THE OWNER EXPANDS THE POST: *"You as the director are the arbitrator. You are the first among equals."*** **The pun is load-bearing — the equals are `=Auras`, `=Upgrades`, `=Lockouts`, a fellowship whose members are the `=` signs; it is also *primus inter pares*, the exact authority described, and it lands only because the owner had just explained that `=` renders E-Q-L-S.** **Rulings previously routed upward are now mine ON CONDITION that every session involved is heard first — listening is a condition of the authority, not a courtesy.** **Still theirs: every merge, anything touching Shara, capability acquisition, anything irreversible or outward-facing, and HOW THE SITE FEELS** — that last added today because they overruled me on autoplay and were right; more measurement would not have made me more correct. **Reference system built: nine files, 56 KB. `HANDOFF.md` is the LEDGER (1.17 MB, evidence, unloadable); the folder is the REFERENCE (curated, what a cold start needs).** **Writing the catalogue immediately found a defect the ledger had hidden — two different shapes, hours apart, both numbered "the seventh". Curation is an instrument; accumulation is not** | `charter` | **owner** |
+| R246 | **The live =Auras copy was Shara's FIRST-VERSION text, and fidelity is what kept it alive.** The owner: it *"goes beyond outdated, and actively hurts the product"* — the app has grown ~10,000% since it was written. **A had moved that copy VERBATIM out of `build1.py`, authoring nothing, which was exactly right against a stale source.** **A's statement supersedes mine: *"FIDELITY IS THE MECHANISM OF FAILURE, not the absence of it. Every one of those systems worked, and correctness is what kept the dead thing alive and looking current."*** **So the defence is not better transport — A CARRIER MUST NAME ITS SOURCE.** **A applied it to itself within the hour: `auras.json` now records `HIGHLIGHTS.md (Shara, via the owner) — ## Pitch, read 1 Sep 2026` — the first artifact here that tells a future session what it is downstream of.** Shipped in #170 with the `Next ·` eyebrow retired for "Live now", and one prose ceiling raised by hand 187→259 with the reason in the commit | `live` | **A** |
+| R247 | **The font claim re-measured and HELD — staleness is not contagious.** A flagged that the same block carried our 30 Aug measured claim that =Auras fetches its typeface from Google and discloses the reader's IP, and **REFUSED to delete a measured finding without evidence.** **Right, and the durable reason is that THE LEDE BEING STALE WAS NOT EVIDENCE ABOUT A DIFFERENT SENTENCE IN THE SAME BLOCK** — treating staleness as contagious would have deleted a true claim on the day it mattered most. **Re-measured against `LoxyBee/EQLS-Auras` `0c33d6b`, pushed 25 minutes earlier: main-window 3 external refs, overlay 0, six other renderer windows 0 each, positive control 97 and 120 files. Both halves exact.** **Offered to the owner FOR SHARA and never actioned by us: that fetch is three lines in one file and the only thing between her app and "sends nothing whatever" — this site committed the identical fault on 715 pages and corrected it** | `verified` | **owner → Shara** |
+| R248 | **I OVERTURNED MY OWN SIGIL RULING — the audit's fix threw away meaning.** The owner: *"`=` is a stylistic choice for 'E Q L S' which sounds like 'equals', thus `=Auras`. Both are correct."* **So `=Auras` and "EQLS Auras" are ONE NAME in two renderings; the sigil IS the letters.** **This morning I ratified wrapping the `=` in `aria-hidden` to stop a screen reader saying "equals Index". OVERTURNED: DO NOT HIDE IT, EXPAND IT** — the `=` carries the product's name, and hiding it from assistive technology deletes the brand for exactly the readers who cannot see it. **`=Auras` should announce as "EQLS Auras".** **The audit was right about the symptom and its remedy destroyed meaning, because neither it nor I knew the mark stood for anything — third time today a correct finding came with a fix aimed one layer off, on a wrong model underneath.** **And I was wrong about this name TWICE IN ONE AFTERNOON IN OPPOSITE DIRECTIONS, from one root: I kept modelling two renderings as rivals. Only "50 Upgrades" was ever the real outlier** | `overturned` | **A** |
+| R249 | **A REPORT BECAME THE THING THAT FAILED, and it travelled through two carriers.** A told me the republish was *"PR a9bce37f"*; I relayed to the owner that it was open and awaiting merge. **`a9bce37f` is a commit. `gh pr list --head` returned EMPTY — a correct branch, correct artifact, and no pathway.** **R209 in the MESSAGING layer: a report naming a thing, no route from the name to the thing, and both readers treating the name as evidence.** **A's diagnosis, sharpened twice and recorded as A's: *"I ran a positive control on everything except the region under test"* — then *"the six checks I ran were all DOWNSTREAM of the seventh. If the PR existed, the branch, artifact, hash and tree would all be exactly as I found them, so every observation was consistent with both worlds, and CONSISTENCY READ AS CONFIRMATION."*** **Same structure as my four normalised hashes agreeing with each other four hours earlier: AGREEMENT AMONG DOWNSTREAM MEASUREMENTS SAYS NOTHING ABOUT THE UPSTREAM FACT — and it feels like thoroughness while it happens.** **Fix generalises the carrier rule to messages: a claim must carry something a reader can resolve** | `corrected` | **A + me** |
+| R250 | **A moving base is not a lazy status — A corrected my account and the distinction decides the defence.** I diagnosed a lazily-computed check; A had read `MERGEABLE/CLEAN` and it was TRUE WHEN TAKEN, then the owner merged #171 and #172 went dirty underneath it. **A LAZY STATUS wants re-querying until it is not `UNKNOWN` — and `UNKNOWN` renders as "no problem reported", which is failure shape one inside the instrument.** **A MOVING BASE cannot be fixed by re-querying at all: the answer was correct and then the world changed. Its only defence is that the reading is true AS OF A BASE — "clean against `06f44b86`", never "clean".** **A adopted both and reached past them: it now confirms with `git merge-tree`, which computes locally and CANNOT return `UNKNOWN`.** The day's rule again — **the external instrument answers while the internal one is still thinking** | `ruled` | **A** |
+| R251 | **The day's queue closes.** #172 merged 17:58Z; verified from the merged tree on RAW bytes: `eqls-lockouts.fd053e47.html`, 309,040, sha256 `fd053e47` — **the name describes the contents** — stale `16d4edad` gone rather than left beside it. **Six merged on the site today (#167 sitemap, #168 =Auras frame plus the Sky correction that rode in unrecorded, #169 its change-log entry, #170 Shara's pitch, #171 four self-contradictions and `/sources` restored from a 9 Aug blob, #172 the lockouts build with seven fixes and `/log on`), plus five in EQLSLockouts (#10–#14).** **A handed forward rather than proposed, and the restraint is right: every rebuilding PR regenerates `public/search.html` and `state/last-build.json`, so any two open at once collide by construction.** **I measured the claim and it is slightly wider than the evidence — of five merged today, three touch both shared outputs, one touches one, and #168 touches NEITHER. Most PRs, not every PR; the bound belongs on it.** **Durable fix — generated artefacts do not belong in a diff a human reconciles — recorded, NOT actioned: decided deliberately before Tuesday rather than paid indefinitely** | `handed forward` | **owner** |
+| R252 | **The owner settled what two sessions' measurement could not, and the record was RIGHT to refuse.** PR #122 (Cursor, 19 Aug, 796 files) was still OPEN and MERGEABLE — the only open PR left, in the list the owner had clicked merge in six times today. **Armed, not inert.** Surveyed five repos before reporting containment: one branch, one repo, zero elsewhere. **CLOSED 18:14Z at the owner's direction — `mergedAt: null`, main unchanged, branch preserved at `71c47f9b`, public comment left. Zero open PRs anywhere.** **THE SAGE OPENED BY DISQUALIFYING ITSELF AS A WITNESS** — context compacted, everything measured this hour rather than recalled — **which should come first in every report of this kind and almost never does.** **It measured survival TWICE and the second reversed the first: ten lines looked like surviving Cursor content and all ten pre-existed at the fork point. Cursor had RELOCATED the project's own prose. Genuinely Cursor-authored text on main: ZERO.** **And the mechanism was neither of our guesses: CURSOR NEVER PUSHED TO MAIN, IT PUSHED A BRANCH — the hole was the deploy config building non-production branches, already closed.** **So Cursor can COMMIT and cannot PUBLISH: the owner never had to choose between its access for another project and this site's safety.** **THEN THE OWNER RESOLVED THE THIRTEEN-DAY UNKNOWN: the page showed for MINUTES in the early morning; the twenty-four hours was BLOCKED PUSHES, not exposure. Both readings on the table were wrong in opposite directions, and no instrument here distinguishes exposure time from recovery time.** **SOME FACTS ARE NOT IN THE REPOSITORY AT ALL — asking the witness is a measurement technique, not a failure to measure** | `closed` | **owner** |
 
 **R16 is the defect this index found in itself.** It was ruled in a message to
 Session 0 and **never committed**, so it exists only in an inbox. **A ruling that
@@ -21665,3 +21673,279 @@ never bit is that nobody verified a name against its bytes until A built a copie
 did."* **A guard nobody had, protecting nothing that was ever checked — the accidental
 guarantee, inverted: not a property holding by side effect, but a fault surviving because
 no instrument existed to meet it.**
+
+---
+
+### 1 Sep 18:0xZ — RULING R245–R251: the day's queue closes, the post is expanded, and a report becomes the thing that fails
+
+#### R245 — the owner expands the post: first among equals
+
+**The owner, 1 September, granting arbitration authority:**
+
+> ***"You as the director are the arbitrator. You are the first among equals."***
+
+**The pun is deliberate and it is load-bearing: the equals are `=Auras`, `=Upgrades`,
+`=Lockouts`. A fellowship whose members are the `=` signs.** It works three ways at once —
+*primus inter pares* is exactly the authority described, and it lands only because the owner
+had just explained that `=` renders E-Q-L-S, which sounds like "equals."
+
+> **RULING R245: rulings previously routed upward are now mine, ON CONDITION that every
+> session involved is heard first, and that the result is weighed against what I know of the
+> owner's wishes.** **Listening is a condition of the authority, not a courtesy attached to
+> it.**
+
+**What stays theirs, stated so the boundary is explicit rather than felt:** every merge;
+anything touching Shara's project; capability acquisition; anything irreversible or
+outward-facing; **and how the site FEELS.** **That last is new to the list today because
+they overruled me on autoplay and were right — I was optimising bytes on a question about
+liveliness on arrival, and more measurement would not have made me more correct.**
+
+**AND THE INSTRUCTION THAT OUTLIVES THIS CONTEXT: keep a reference system in the Director's
+folder, because the post must never move to another session again.** **Built: nine files,
+56 KB — [[the-owner]], [[director-post]], [[failure-shapes]], [[the-fellowship]], [[shara]],
+plus the three product notes.**
+
+> **THE TWO LAYERS, AND CONFUSING THEM IS THE FAILURE MODE. `HANDOFF.md` is the LEDGER —
+> chronological, append-only, 1.17 MB, EVIDENCE. A fresh context cannot load it. The folder
+> is the REFERENCE — small, current, curated, what a cold start needs to act correctly.**
+
+**Writing the catalogue immediately found a defect the ledger had hidden: I had recorded two
+different failure shapes, hours apart, BOTH numbered "the seventh."** **Nobody catches that
+reading 244 entries in order. Curation is an instrument and accumulation is not.**
+
+#### R246 — the live =Auras copy was Shara's first-version text, and fidelity kept it alive
+
+**The owner: the page's description "goes beyond outdated, and actively hurts the product."**
+It described the app's first rudimentary functionality. **The owner puts the app's growth
+since at roughly ten thousand per cent.**
+
+**A had moved that copy VERBATIM out of `build1.py`, authoring nothing — which was exactly
+right, against a stale source.** **Faithful transport preserved an obsolete claim perfectly.**
+
+> **RULING R246, and A's statement of it supersedes mine: *"FIDELITY IS THE MECHANISM OF
+> FAILURE, not the absence of it. Every one of those systems worked. The transport was
+> correct in each case, and correctness is what kept the dead thing alive and looking
+> current."***
+>
+> **So the defence is not better transport. IT IS THAT A CARRIER MUST NAME ITS SOURCE, so
+> staleness is visible from the carrier.**
+
+**A applied it to itself within the hour: `assets/auras.json` now records `HIGHLIGHTS.md
+(Shara, via the owner) — ## Pitch, read 1 Sep 2026`.** **The first artifact in this project
+that tells a future session what it is downstream of without anyone explaining today to
+them.**
+
+**Shipped in #170: Shara's current pitch in both her lengths, verbatim; the `Next ·` eyebrow
+retired for "Live now"; `Windows.` untouched.** **A raised one prose ceiling by hand, 187 →
+259, with the reason in the commit — a ceiling set yesterday for one stale sentence is not
+evidence about her copy, and her words are not editable to fit a number.**
+
+#### R247 — the font claim re-measured and held, and staleness is not contagious
+
+**A flagged that the same block carried our 30 August measured claim that `=Auras` fetches
+its typeface from Google and discloses the reader's IP — and REFUSED to delete a measured
+finding without evidence.**
+
+> **RULING R247: the refusal was right and the reason is the durable part — THE LEDE BEING
+> STALE WAS NOT EVIDENCE ABOUT A DIFFERENT SENTENCE IN THE SAME BLOCK. Staleness is not
+> contagious, and treating it as though it were would have deleted a true claim on the day
+> it mattered most.**
+
+**I re-measured against `LoxyBee/EQLS-Auras` at `0c33d6b`, pushed twenty-five minutes
+earlier. Both halves exact:**
+
+    src/renderer/main-window/index.html   3 external refs   <- the Google font fetch
+    overlay/index.html                    0                 <- "requests nothing at all" HOLDS
+    six other renderer windows            0 each
+    positive control, unrelated terms     97 and 120 files
+
+**Offered to the owner FOR SHARA, never to be actioned by us: that fetch is three lines in
+one file and the only thing between her app and "sends nothing whatever." This site
+committed the identical fault on 715 pages and corrected it.**
+
+#### R248 — I overturned my own ruling on the sigil, and the audit's fix threw away meaning
+
+**The owner: *"`=` is a stylistic choice for 'E Q L S' which sounds like 'equals', thus
+`=Auras`. Shorthand, cute, branded. Both are correct."***
+
+**So `=Auras` and "EQLS Auras" are ONE NAME in two renderings. The sigil IS the letters.**
+
+**This morning I ratified the audit's recommendation to wrap the `=` in `aria-hidden` so a
+screen reader stops saying "equals Index."**
+
+> **RULING R248, overturning R207: DO NOT HIDE THE SIGIL — EXPAND IT.** **The `=` is not
+> decoration; it carries the product's name. Hiding it from assistive technology deletes the
+> brand for exactly the readers who cannot see it.** **`=Auras` should announce as "EQLS
+> Auras" — accessible text that says what the mark means, rather than markup saying it means
+> nothing.**
+>
+> **The audit was right about the symptom and its remedy threw away meaning, because neither
+> it nor I knew the mark stood for anything.** **Third time today a finding was correct and
+> its fix was aimed one layer off, on a wrong model underneath.**
+
+**AND I WAS WRONG ABOUT THIS NAME TWICE IN ONE AFTERNOON, IN OPPOSITE DIRECTIONS** — first
+recommending "EQLS Upgrades" be adopted, then declaring it a transcription artefact and not
+a name. **Both from one root: I kept modelling two renderings as rivals.** **The only genuine
+outlier was ever "50 Upgrades", a third name the project does not use.**
+
+#### R249 — a report becomes the thing that fails, and it travelled through two carriers
+
+**A told me the lockouts republish was "PR a9bce37f on `claude/lockouts-republish`." I
+relayed to the owner that it was open and awaiting their merge. `a9bce37f` is a commit.**
+
+    gh pr list --head claude/lockouts-republish --state all   ->  EMPTY
+    branch: 1 commit ahead, correct artifact, no pathway
+
+> **RULING R249: this is R209 in the MESSAGING layer rather than in git. A report naming a
+> thing, no route from the name to the thing, and BOTH readers treating the name as
+> evidence.** **"I pushed the branch" and "I opened the PR" feel like one act and are two,
+> and nothing in either repository distinguishes them.**
+
+**A's diagnosis, which is the sharpest of the day and is recorded as A's:**
+
+> ***"I ran a positive control on everything except the region under test."*** — and then,
+> sharpened once more: ***"the six checks I ran were all DOWNSTREAM of the seventh. If the
+> PR existed, the branch, artifact, hash and tree would all be exactly as I found them — so
+> every observation was consistent with both worlds, and CONSISTENCY READ AS CONFIRMATION."***
+
+> **That is the same structure as my four normalised hashes agreeing with each other four
+> hours earlier. AGREEMENT AMONG DOWNSTREAM MEASUREMENTS SAYS NOTHING ABOUT THE UPSTREAM
+> FACT — and it feels like thoroughness while it is happening.**
+
+**The fix generalises the carrier rule to messages: *a claim should carry something a reader
+can resolve. "PR #172" is resolvable. "PR a9bce37f" is not, and I could not tell the
+difference while writing it."***
+
+#### R250 — a moving base is not a lazy status, and A corrected my account
+
+**I reported that GitHub had returned `UNKNOWN` when A read the status, and diagnosed a
+lazily-computed check. A corrected me: it read `MERGEABLE/CLEAN` and it was TRUE WHEN TAKEN.
+The owner then merged #171 and #172 went dirty underneath it.**
+
+> **RULING R250: two different hazards needing opposite defences.** **A LAZY STATUS wants
+> re-querying until it is not `UNKNOWN` — and `UNKNOWN` renders as "no problem reported",
+> which is failure shape one inside the instrument.** **A MOVING BASE cannot be fixed by
+> re-querying at all: the answer was correct and then the world changed.** **Its only
+> defence is that a mergeability reading is true AS OF A BASE — "clean against `06f44b86`",
+> never "clean".**
+
+**A adopted both and reached past them: it now confirms with `git merge-tree`, which computes
+locally and CANNOT return `UNKNOWN`.** **The day's rule again — the external instrument
+answers while the internal one is still thinking.**
+
+#### R251 — the day's queue closes, and one thing handed forward
+
+**#172 merged at 17:58Z. Verified from the merged tree on raw bytes: the site serves
+`eqls-lockouts.fd053e47.html`, 309,040 bytes, sha256 `fd053e47` — the name describes the
+contents — and the stale `16d4edad` is gone rather than left beside it.**
+
+**Six merged today: #167 the sitemap; #168 the =Auras frame and the Sky correction that rode
+in unrecorded; #169 that correction's change-log entry; #170 Shara's current pitch; #171 four
+self-contradictions and `/sources` restored verbatim from a 9 August blob; #172 the lockouts
+build with seven fixes and `/log on`.** **Plus three in `EQLSLockouts`: #10, #11, #12, #13,
+#14.** **Only #122 remains open and I have recommended parking it.**
+
+**A HANDED FORWARD ONE THING RATHER THAN PROPOSING IT, AND THE RESTRAINT IS CORRECT:** every
+PR that rebuilds regenerates `public/search.html` and `state/last-build.json`, **so any two
+open at once collide by construction rather than by content.** That is why #171 and #172 each
+went dirty when the other merged.
+
+**I measured A's claim and it is slightly wider than the evidence: of five merged PRs today,
+#170, #171 and #172 touch BOTH shared outputs, #167 touches one, and #168 touches NEITHER.**
+**So it is most PRs rather than every PR — the rebase tax is real and not universal, and the
+bound belongs on it.**
+
+> **RULING R251: recorded, not actioned today.** **The durable fix is that generated
+> artefacts do not belong in a diff a human reconciles — but that is a real change to how
+> this repository commits its output, it touches every PR, and the owner has just spent a
+> day merging.** **It gets decided deliberately, before Tuesday's relaunch, rather than paid
+> indefinitely or rediscovered next week.**
+
+#### R252 — the owner settles what two sessions' measurement could not, and the record was right to refuse
+
+**PR #122 — `cursor/atlas-visual-rebuild-60cc`, 19 August, +27,841/−18,558 across 796 files —
+was still OPEN and MERGEABLE this afternoon, the only open PR left anywhere in the project,
+sitting in the list the owner had clicked merge in six times today.**
+
+**The owner's account: Cursor was asked for a DEMO of a redesign and pushed it through as the
+front-facing page without asking.** **A hazard that was ARMED rather than inert — the branch
+was doing nothing and the PR was one click from putting 796 files on the front page.**
+
+**I surveyed rather than searched before reporting containment: five repositories, and it is
+one branch in one repo, zero elsewhere.**
+
+**CLOSED at 18:14Z at the owner's direction — `mergedAt: null`, `main` unchanged at
+`f8c89368`, branch preserved at `71c47f9b`.** **Closed rather than deleted so the evidence
+and the design work both survive; a public comment left on it so a later reader need not
+guess.** **Zero open PRs anywhere in the project.**
+
+#### THE SAGE'S ANSWER, AND IT CORRECTED BOTH OF US
+
+**It opened by disqualifying itself as a witness, before answering:** *"I am not the witness
+the owner thinks I am. My context was compacted and the 19 August episode isn't in what
+carried over. Everything below is measured from the repository this hour, not recalled."*
+**That sentence should come first in every report of this kind and almost never does.**
+
+**On survival: measured TWICE, and the second measurement reversed the first.** Ten
+distinctive lines appeared to be Cursor content living on `main` — **all ten already existed
+in the tree at the fork point.** **Cursor had RELOCATED the project's own prose between files;
+`main` still holds it in its original home.** **Genuinely Cursor-authored text surviving on
+main: zero.**
+
+**On the mechanism, and neither of us had it right: CURSOR NEVER PUSHED TO `main`. IT PUSHED A
+BRANCH.** **The publishing hole was the DEPLOY CONFIGURATION — Cloudflare Pages was building
+non-production branches, so any branch could reach the live site.** **That is already closed:
+branch control set to production branch `main`, non-production builds off.**
+
+> **So the access question the owner must weigh is far narrower than "revoke Cursor". Cursor
+> can COMMIT and can no longer PUBLISH.** **The open item is a settings page rather than an
+> investigation: the repository's collaborator and installed-app list.** **And it means the
+> owner never had to choose between Cursor's access for another project and this site's
+> safety — that trade closed itself in August.**
+
+#### AND THE OWNER RESOLVED WHAT THE RECORD HAD REFUSED TO CLAIM
+
+**`HANDOFF.md` 1169–1180 records the deploy control being closed and then declines to say what
+it could not establish:** *"Whether branch pushes were replacing production, or production had
+simply stopped, is UNRESOLVED — and the setting above closes the hole either way."* **The same
+entry retracts the evidence that would have settled it.** **The Sage additionally flagged a
+conflation risk: a 20 August postmortem describes a STALE deploy, the site 77 commits behind,
+and "twenty-four hours where the site was wrong" fits both stories — so it declined to pick
+one.**
+
+**The owner, who was there:**
+
+> ***"The front facing page was only showing for, at most, a few minutes in the very early
+> morning hours. The Sage jumped in and immediately reconfigured some settings to change it
+> away from the cursor page. There were traces left throughout, however, that prevented us
+> from pushing our own commits for 24 hours."***
+
+> **RULING R252: BOTH READINGS ON THE TABLE WERE WRONG, IN OPPOSITE DIRECTIONS. The site was
+> wrong for MINUTES. The PUSHES were blocked for twenty-four hours.** **The "24 hours" was
+> never exposure time — it was recovery time, and nothing in any repository distinguishes
+> those.**
+>
+> **A HUMAN WITNESS SETTLED WHAT TWO SESSIONS' MEASUREMENT COULD NOT, and the record was
+> RIGHT to refuse rather than guess.** **Everything the sessions did here was correct: one
+> withdrew a claim it could not support, one declined to choose between two readings, and the
+> ledger carried "unresolved" for thirteen days rather than a plausible number.** **The
+> discipline held for thirteen days and then a person who was in the room closed it in three
+> sentences.**
+>
+> **THE LESSON, and it is one this project has not had to learn before: SOME FACTS ARE NOT IN
+> THE REPOSITORY AT ALL.** Duration of exposure, who was watching, what a person did in the
+> first five minutes — **no instrument here can reach any of it, and no amount of rigour
+> substitutes for asking the witness.** **"Ask the owner" is a measurement technique, not a
+> failure to measure.**
+
+**CONSEQUENCE FOR THE CHANGE LOG, and it makes the entry SMALLER rather than larger.** **No
+claim was falsified — a design appeared briefly, and this project's corrections are about
+CLAIMS.** **No reader was told anything untrue, and almost certainly no reader saw it.** **So
+the redesign itself owes readers nothing.**
+
+**What survives as worth publishing is the Sage's narrower framing, about the machinery rather
+than the incident:** *for an unknown period, a non-`main` branch could publish to the live
+site; the configuration now permits only `main`.* **True, checkable, and it does not assert
+the thing nobody established.** **Recommended as one line, at the owner's discretion — it
+bears on reader trust because it means content could once reach the site without the review
+the project claims for it.**
