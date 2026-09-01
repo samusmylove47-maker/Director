@@ -281,3 +281,26 @@ Compared current remote heads against the 1 Sep 01:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 03:35Z
+
+Compared current remote heads against the 1 Sep 02:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `d4ab6ce0` → `1142939b` ("Merge pull request #164
+  from samusmylove47-maker/claude/input-probe"), authored
+  2026-08-31T23:15:58-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `ebe7f1f2` → `66825bc3`
+  ("TO DIRECTOR: the partition holds, and tonight's useful find is a
+  method one — a no-op mutation reports success"), authored
+  2026-09-01T03:22:46+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `095ac495` →
+  `77d63d12` ("Tick 19: check.sh PASS, and I fixed a watch key that
+  cried MOVED three ticks running"), authored 2026-09-01T02:40:48+00:00.
+
+**Unchanged:**
+- `EQLSLockouts` `session-d/raid-rows`: `bd7c265e`.
+- `EQLSAuras` `main`: `c5c2c001`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
