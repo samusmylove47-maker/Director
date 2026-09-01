@@ -329,3 +329,29 @@ Compared current remote heads against the 1 Sep 03:35Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 1 Sep 2026 sweep — read at 05:24Z
+
+Compared current remote heads against the 1 Sep 04:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `3e73b4d6` → `e0efe712` ("Merge pull request #166
+  from samusmylove47-maker/claude/record-the-reframing"), authored
+  2026-09-01T01:16:43-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `087c0d44` → `eb88e2b9`
+  ("CLOSES the false \"Not in catalog\" badge — a defect I introduced
+  tonight, found by my own pass"), authored 2026-09-01T05:13:19+00:00.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `823e744f` →
+  `fcc0922c` ("HANDOVER CLEAN: 17 gates green, 0 unpushed, three
+  blockers restated, no bundle bump"), authored 2026-09-01T04:52:31+00:00.
+- `EQLSLockouts` `session-d/raid-rows`: `f271665d` → `0a5bfcb0` ("STOPPED
+  at f64f3a2d + this doc; next is oldestSeen / coverageHoles / applyLines
+  loop"), authored 2026-09-01T00:51:18-04:00.
+- `EQLSAuras` `main`: `c5c2c001` → `69c1a76e` ("Restate D's rule in its
+  BOUNDED form - I had published the stripped version"), authored
+  2026-09-01T01:11:58-04:00.
+
+**Unchanged:** none — all five tracked heads moved since the prior entry.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
