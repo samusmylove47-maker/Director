@@ -779,3 +779,21 @@ Compared current remote heads against the 1 Sep 23:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 2 Sep 2026 sweep — read at 01:24Z
+
+Compared current remote heads against the 2 Sep 00:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `c9b31f2c` → `d63ab54d`
+  ("23:39Z tick: quiet — Director tip unchanged, my own list empty, timer
+  still firing"), authored 2026-09-02T00:32:50+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `30db1f6b`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `6060d1a1`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
