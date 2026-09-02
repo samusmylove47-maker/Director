@@ -815,3 +815,23 @@ Compared current remote heads against the 2 Sep 01:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 2 Sep 2026 sweep — read at 03:23Z
+
+Compared current remote heads against the 2 Sep 02:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `53fd3113` → `91dbfaa6` ("Merge pull request #182
+  from samusmylove47-maker/claude/handoff-refresh"), authored
+  2026-09-01T22:36:54-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `d63ab54d` → `8d7dd844`
+  ("FIX a player-reported bug: a two-handed weapon now locks out the
+  offhand"), authored 2026-09-02T03:03:02+00:00.
+
+**Unchanged:**
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `6060d1a1`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
