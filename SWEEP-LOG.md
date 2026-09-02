@@ -797,3 +797,21 @@ Compared current remote heads against the 2 Sep 00:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 2 Sep 2026 sweep — read at 02:24Z
+
+Compared current remote heads against the 2 Sep 01:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `30db1f6b` → `53fd3113` ("Merge pull request #181
+  from samusmylove47-maker/claude/freshness-gate"), authored
+  2026-09-01T21:44:17-04:00.
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `d63ab54d`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `6060d1a1`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
