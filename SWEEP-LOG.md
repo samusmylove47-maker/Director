@@ -871,3 +871,21 @@ Compared current remote heads against the 2 Sep 09:23Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 2 Sep 2026 sweep — read at 19:23Z
+
+Compared current remote heads against the 2 Sep 10:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `91dbfaa6` → `5b4352f8` ("Merge pull request #184 from
+  samusmylove47-maker/claude/fix-my-own-propagation"), authored
+  2026-09-02T15:19:16-04:00 (2026-09-02T19:19:16Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `ff48c64d`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `6060d1a1`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
