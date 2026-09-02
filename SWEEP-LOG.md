@@ -835,3 +835,21 @@ Compared current remote heads against the 2 Sep 02:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 2 Sep 2026 sweep — read at 09:23Z
+
+Compared current remote heads against the 2 Sep 03:23Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `8d7dd844` → `5c1477a6`
+  ("RESEARCH: why items are missing from the index — measured against the
+  live wiki"), authored 2026-09-02T09:17:31+00:00.
+
+**Unchanged:**
+- `eql-source` `main`: `91dbfaa6`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `6060d1a1`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
