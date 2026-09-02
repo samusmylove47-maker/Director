@@ -759,3 +759,23 @@ Compared current remote heads against the 1 Sep 22:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 2 Sep 2026 sweep — read at 00:24Z
+
+Compared current remote heads against the 1 Sep 23:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `698acebc` → `30db1f6b` ("Merge pull request #180
+  from samusmylove47-maker/claude/extensionless-hrefs"), authored
+  2026-09-01T19:59:11-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `330e262a` → `c9b31f2c`
+  ("CLOSES F07: no longer says \"nothing scored\" about positions where
+  something did"), authored 2026-09-02T00:05:41+00:00.
+
+**Unchanged:**
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `6060d1a1`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
