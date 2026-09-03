@@ -1050,3 +1050,28 @@ Compared current remote heads against the 3 Sep 19:24Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 3 Sep 2026 sweep — read at 21:24Z
+
+Compared current remote heads against the 3 Sep 20:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `8145dee7` → `b71567bb` ("Merge pull request #186
+  from samusmylove47-maker/claude/refresh-upgrades"), authored
+  2026-09-03T16:23:55-04:00 (20:23:55Z).
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `b14bc991` →
+  `2cb8ab1f` ("NINE OF TEN CONDITIONS ARE LOAD-BEARING AND NONE IS VISIBLE
+  IN A REGEX -- and the audit understated itself 16x before I caught it"),
+  authored 2026-09-03T20:31:32Z.
+- `EQLSLockouts` `session-d/raid-rows`: `8cc03f9e` → `96ee2144` ("Licence
+  guard reads the artifact now; and boss-match was not a false
+  completion"), authored 2026-09-03T17:09:59-04:00 (21:09:59Z).
+- `EQLSAuras` `main`: `9fb11f23` → `450f2d67` ("Withdraw the Cannibalize
+  finding: I compared against the wrong file, not a lost guard"), authored
+  2026-09-03T17:22:56-04:00 (21:22:56Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `2e6aaafe`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
