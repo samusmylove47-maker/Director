@@ -1026,3 +1026,27 @@ Compared current remote heads against the 3 Sep 10:24Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 3 Sep 2026 sweep — read at 20:23Z
+
+Compared current remote heads against the 3 Sep 19:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `20d804b6` → `2e6aaafe`
+  ("Rename the standing label; verify 1.7.0 fully and hold the pin at
+  1.4.0"), authored 2026-09-03T19:29:09Z.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `1a6654f7` →
+  `b14bc991` ("NO P-7: the Cannibalize defect is not in my engine, and the
+  guard that stops it is not a pattern"), authored 2026-09-03T19:32:29Z.
+- `EQLSLockouts` `session-d/raid-rows`: `2537b4a3` → `8cc03f9e` ("Guard the
+  two page claims; the bound family is FIVE and a lost kill is in it"),
+  authored 2026-09-03T16:17:11-04:00 (20:17:11Z).
+- `EQLSAuras` `main`: `ee4dafe1` → `9fb11f23` ("Parser seam measured: E
+  counts the player hurting themselves as damage output, 571 lines"),
+  authored 2026-09-03T15:26:45-04:00 (19:26:45Z).
+
+**Unchanged:**
+- `eql-source` `main`: `8145dee7`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
