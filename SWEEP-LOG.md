@@ -925,3 +925,26 @@ Compared current remote heads against the 2 Sep 22:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 3 Sep 2026 sweep — read at 02:24Z
+
+Compared current remote heads against the 3 Sep 01:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `5b4352f8` → `8145dee7`
+  ("Merge pull request #185 from samusmylove47-maker/claude/refresh-upgrades"),
+  authored 2026-09-02T21:35:32-04:00.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `88a42c7d` → `5b436157`
+  ("Note to the Director: crawler blocking is a site-wide decision, and it
+  protects nothing we care about"), authored 2026-09-03T02:14:14Z.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `6060d1a1` → `b739b51b`
+  ("NOT-MINE: the observation sweep was not created by this session, and the
+  evidence says it has no agent parent at all"), authored 2026-09-03T02:12:18Z.
+
+**Unchanged:**
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change. Two of the moved commit subjects (EQL50ups, sky-ledger) address
+the Director or the sweep process by name — reported as-is, not acted on.
