@@ -1002,3 +1002,27 @@ Compared current remote heads against the 3 Sep 05:23Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 3 Sep 2026 sweep — read at 19:24Z
+
+Compared current remote heads against the 3 Sep 10:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `b191bc41` → `20d804b6`
+  ("Ship product screenshots for the site page, and fix two defects they
+  found"), authored 2026-09-03T19:18:01Z.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `b739b51b` →
+  `1a6654f7` ("D-13 BRANCH ELIMINATED BY MEASUREMENT, and closes= built with
+  the contract the Director asked for"), authored 2026-09-03T19:23:19Z.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521` → `2537b4a3` ("The owner
+  settled the Hate lockout; the page says so and says who settled it"),
+  authored 2026-09-03T15:19:34-04:00 (19:19:34Z).
+- `EQLSAuras` `main`: `e90421fc` → `ee4dafe1` ("193,765 was thorns only,
+  published as ALL shield damage -- and the script is committed this
+  time"), authored 2026-09-03T15:21:39-04:00 (19:21:39Z).
+
+**Unchanged:**
+- `eql-source` `main`: `8145dee7`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
