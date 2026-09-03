@@ -984,3 +984,21 @@ Compared current remote heads against the 3 Sep 03:24Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 3 Sep 2026 sweep — read at 10:24Z
+
+Compared current remote heads against the 3 Sep 05:23Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `0c49d939` → `b191bc41`
+  ("Regenerate the payload so the self-audit matches the tree it ships
+  with"), authored 2026-09-03T09:39:36Z.
+
+**Unchanged:**
+- `eql-source` `main`: `8145dee7`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `b739b51b`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
