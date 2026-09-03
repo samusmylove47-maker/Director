@@ -966,3 +966,21 @@ Compared current remote heads against the 3 Sep 02:24Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 3 Sep 2026 sweep — read at 05:23Z
+
+Compared current remote heads against the 3 Sep 03:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `65ea5fc9` → `0c49d939`
+  ("Carry era provenance to the app; correct a false sentence rather than a
+  metric"), authored 2026-09-03T04:37:34Z.
+
+**Unchanged:**
+- `eql-source` `main`: `8145dee7`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `b739b51b`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
