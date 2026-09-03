@@ -907,3 +907,21 @@ Compared current remote heads against the 2 Sep 19:23Z sweep entry above.
 
 No content read beyond commit subjects and timestamps; no judgement made on
 any change.
+
+## 3 Sep 2026 sweep — read at 01:23Z
+
+Compared current remote heads against the 2 Sep 22:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `d1df0c6c` → `88a42c7d`
+  ("Scrape the wiki spell corpus, and record what spells still cannot
+  answer"), authored 2026-09-03T01:21:34Z.
+
+**Unchanged:**
+- `eql-source` `main`: `5b4352f8`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `6060d1a1`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
