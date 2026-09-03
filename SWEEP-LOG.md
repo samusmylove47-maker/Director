@@ -948,3 +948,21 @@ Compared current remote heads against the 3 Sep 01:23Z sweep entry above.
 No content read beyond commit subjects and timestamps; no judgement made on
 any change. Two of the moved commit subjects (EQL50ups, sky-ledger) address
 the Director or the sweep process by name — reported as-is, not acted on.
+
+## 3 Sep 2026 sweep — read at 03:24Z
+
+Compared current remote heads against the 3 Sep 02:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `5b436157` → `65ea5fc9`
+  ("Answer the Director on the unattributed figure: it measures gear-vs-not,
+  not sourcing"), authored 2026-09-03T02:52:23Z.
+
+**Unchanged:**
+- `eql-source` `main`: `8145dee7`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `b739b51b`.
+- `EQLSLockouts` `session-d/raid-rows`: `01d2d521`.
+- `EQLSAuras` `main`: `e90421fc`.
+
+No content read beyond commit subjects and timestamps; no judgement made on
+any change.
