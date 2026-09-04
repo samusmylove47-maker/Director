@@ -87,13 +87,31 @@ The install was fully patched as of 2026-09-03.
 
 ### 1.2 What was searched
 
-| Scope | Count |
-|---|---|
-| Top-level entries in install root | **3,085** |
-| All files, recursive | **12,034** |
-| Shipped files searched (player-generated excluded) | **11,973** |
-| PFS containers (.eqg/.s3d/.pak/.pfs) parsed | **2,272** (0 failures) |
-| Members inside those containers | **83,137** |
+| Scope | Count | Method |
+|---|---|---|
+| Top-level entries, excluding dotfiles | **3,085** | `ls -1` |
+| Top-level entries, including dotfiles | **3,087** | `ls -A` |
+| All files, recursive | **12,034** | `find . -type f` |
+| Subdirectories, recursive | **63** | `find . -type d` minus `.` itself |
+| Shipped files searched (player-generated excluded) | **11,973** | see exclusions below |
+| PFS containers (.eqg/.s3d/.pak/.pfs) parsed | **2,272** (0 failures) | `method/scanall.py` |
+| Members inside those containers | **83,137** | `method/total.py` |
+
+**Every enumeration here names its method, because two of them differ by method rather
+than by fact.** Session 0 independently measured 3,087 and 63 where I had 3,085 and 64;
+both pairs are correct and neither is a disagreement:
+
+- **3,085 vs 3,087** — exactly two dotfiles, `.DownloadInfo.txt` and `.DownloadStats.txt`.
+  `ls -1` hides them, `ls -A` shows them. Both are launcher-written logs, so both were
+  already excluded from the 11,973 shipped set either way; the choice changes no result.
+- **63 vs 64** — `find . -type d` counts the root `.` itself. 63 is the count of actual
+  subdirectories and is the better number.
+- **12,034 recursive files** — reached independently by two sessions using different
+  tools, and identical. That is the figure the conclusions rest on.
+
+For anything published, use **3,087 top-level entries and 63 subdirectories**, stated with
+the method. The earlier project figure of ~2,300 is superseded; Session 0, which produced
+it, has withdrawn it and named how it arose.
 
 Excluded as player-generated, not shipped: `Logs/`, `Screenshots/`, `userdata/`,
 `backup/`, `GPUCache/`, `*Inventory.txt`, `Avenrae_*`, `UI_*.ini`, `eqclient.ini`,

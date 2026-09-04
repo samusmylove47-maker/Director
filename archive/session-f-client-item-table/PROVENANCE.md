@@ -16,12 +16,22 @@ owner's to authorise.**
 
 ## What is here, and how to check it against the source
 
-    d7fddf0aec04  CLIENT-ITEM-TABLE-COUNT.md
+**Pinned to source commit `141eef7783f7`.** Not to "copy time" — my first version of this
+file said *verified identical to the source tree at copy time*, which was true when
+written and false four minutes later, because Session F committed again while I was
+archiving. **A snapshot must name the commit it snapshots, never the clock.** That is the
+same fault as a read-date that has done its job being indistinguishable from one that has
+gone stale, and it caught me inside the file whose only purpose is verification.
+
+    f9ac576cd073  CLIENT-ITEM-TABLE-COUNT.md
     e1a9c2ae0c47  method/checktext.py
     3947d381afbe  method/pfs.py
     3ca0ee427102  method/scanall.py
 
-sha256, first twelve. Verified identical to the source tree at copy time.
+sha256, first twelve, of the bytes as stored here. `.gitattributes` marks this directory
+`-text` so git normalisation cannot rewrite them — a content hash that its own repository
+silently invalidates is a fault this project has already found once, in an artifact that
+did not survive its own repository.
 
 ## The source commits, in order
 
