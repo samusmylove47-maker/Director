@@ -1147,3 +1147,29 @@ Compared current remote heads against the 4 Sep 05:23Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 4 Sep 2026 sweep — read at 15:24Z
+
+Compared current remote heads against the 4 Sep 06:25Z sweep entry above.
+
+**Moved (all five):**
+- `eql-source` `main`: `2b830680` → `9e068ad0` ("Merge pull request #191
+  from samusmylove47-maker/claude/lockouts-release"), authored
+  2026-09-04T11:07:37-04:00 (2026-09-04T15:07:37Z).
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `2e6aaafe` → `eb3f1838`
+  ("Base the two hand-written links so a subdirectory deploy keeps its
+  type"), authored 2026-09-04T15:03:44Z.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `2cb8ab1f` →
+  `8863354b` ("Replace a placeholder minute in C's reply with the real
+  one"), authored 2026-09-04T15:13:09Z.
+- `EQLSLockouts` `session-d/raid-rows`: `96ee2144` → `5ea0bfe9` ("The
+  bounds guard was complete over the wrong category — renamed, not
+  widened"), authored 2026-09-04T11:04:48-04:00 (2026-09-04T15:04:48Z).
+- `EQLSAuras` `main`: `450f2d67` → `ee3d20ff` ("TO DIRECTOR: the lockouts
+  branch is UNHARVESTED, and 141 is the wrong number"), authored
+  2026-09-04T11:14:56-04:00 (2026-09-04T15:14:56Z). Commit subject is
+  addressed to the Director by name; noted here as a pointer only — not
+  opened, not judged.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
