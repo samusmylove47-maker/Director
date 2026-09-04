@@ -39,6 +39,7 @@ did not survive its own repository.
     e5e8ee5  10:53:40  Publish bounded negative: client ships no item table
     a94c5eb  11:00:34  Close input gaps; evaluate union and V2 against named objects
     9da35e0  11:02:48  Show the 18 corroborated names; explain the 417->416 change
+    141eef7  11:04:07  Resolve the 3085/3087 and 63/64 enumeration differences by naming methods
 
 **The eleven minutes between the first two are the load-bearing fact.** A
 pre-registration is only worth what its ordering can prove, and that ordering is
