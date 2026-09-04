@@ -1129,3 +1129,21 @@ Compared current remote heads against the 4 Sep 03:23Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 4 Sep 2026 sweep — read at 06:25Z
+
+Compared current remote heads against the 4 Sep 05:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `3d723774` → `2b830680` ("Merge pull request #190
+  from samusmylove47-maker/claude/clip-probe"), authored
+  2026-09-04T01:49:03-04:00 (2026-09-04T05:49:03Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `2e6aaafe`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `2cb8ab1f`.
+- `EQLSLockouts` `session-d/raid-rows`: `96ee2144`.
+- `EQLSAuras` `main`: `450f2d67`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
