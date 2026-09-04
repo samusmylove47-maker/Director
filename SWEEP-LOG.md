@@ -1194,3 +1194,21 @@ Compared current remote heads against the 4 Sep 15:24Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 4 Sep 2026 sweep — read at 17:24Z
+
+Compared current remote heads against the 4 Sep 16:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `23c2f909` → `f98e7cd0` ("Merge pull request #196
+  from samusmylove47-maker/claude/backlog-invite-scope"), authored
+  2026-09-04T13:02:25-04:00 (2026-09-04T17:02:25Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `eb3f1838`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `8863354b`.
+- `EQLSLockouts` `session-d/raid-rows`: `cda4712a`.
+- `EQLSAuras` `main`: `ee3d20ff`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
