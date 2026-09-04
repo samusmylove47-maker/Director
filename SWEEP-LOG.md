@@ -1173,3 +1173,24 @@ Compared current remote heads against the 4 Sep 06:25Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 4 Sep 2026 sweep — read at 16:24Z
+
+Compared current remote heads against the 4 Sep 15:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `9e068ad0` → `23c2f909` ("Merge pull request #193
+  from samusmylove47-maker/claude/og-freshness"), authored
+  2026-09-04T11:49:19-04:00 (2026-09-04T15:49:19Z).
+- `EQLSLockouts` `session-d/raid-rows`: `5ea0bfe9` → `cda4712a`
+  ("\"Discounted as a mutation catcher\" is not \"low value\" — say so
+  where it is discounted"), authored 2026-09-04T11:47:44-04:00
+  (2026-09-04T15:47:44Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `eb3f1838`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `8863354b`.
+- `EQLSAuras` `main`: `ee3d20ff`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
