@@ -1111,3 +1111,21 @@ Compared current remote heads against the 3 Sep 22:23Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 4 Sep 2026 sweep — read at 05:23Z
+
+Compared current remote heads against the 4 Sep 03:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `c997649f` → `3d723774` ("Merge pull request #189
+  from samusmylove47-maker/claude/raids-melee"), authored
+  2026-09-04T00:58:52-04:00 (2026-09-04T04:58:52Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `2e6aaafe`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `2cb8ab1f`.
+- `EQLSLockouts` `session-d/raid-rows`: `96ee2144`.
+- `EQLSAuras` `main`: `450f2d67`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
