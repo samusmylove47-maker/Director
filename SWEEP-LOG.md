@@ -1212,3 +1212,21 @@ Compared current remote heads against the 4 Sep 16:24Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 5 Sep 2026 sweep — read at 03:05Z
+
+Compared current remote heads against the 4 Sep 17:24Z sweep entry above.
+
+**Moved:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `eb3f1838` → `05904054`
+  ("Take the owner's character name out of everything this tool ships"),
+  authored 2026-09-05T02:59:36Z.
+
+**Unchanged:**
+- `eql-source` `main`: `f98e7cd0`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `8863354b`.
+- `EQLSLockouts` `session-d/raid-rows`: `cda4712a`.
+- `EQLSAuras` `main`: `ee3d20ff`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
