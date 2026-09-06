@@ -16,29 +16,56 @@ owner's to authorise.**
 
 ## What is here, and how to check it against the source
 
-**Pinned to source commit `b7a0a8189437`. THIS IS THE THIRD RE-PIN.** The archive has chased this
-repository three times in two days — `141eef7`, then `e42fadc`, now this — because Session F
-is actively working in it and has no remote to push to.
+**Pinned to source commit `b45ba7f3ce9a`. THIS IS THE FOURTH RE-PIN, AND THE FIRST TAKEN AT
+REST.** The archive chased this repository three times in two days — `141eef7`, `e42fadc`,
+`b7a0a81` — every one of them while Session F was still working in it.
 
 > **ARCHIVING A LIVE REPOSITORY IS CHASING A MOVING TARGET, AND EVERY LAG IS A WINDOW IN
-> WHICH THE ARCHIVE STATES SOMETHING ITS SOURCE HAS RETRACTED.** That window has been open
-> twice already. **The fix is not a faster archiver; it is a remote, which is the owner's to
-> authorise.**
+> WHICH THE ARCHIVE STATES SOMETHING ITS SOURCE HAS RETRACTED.** That window was open twice.
+> **The fix is not a faster archiver; it is a remote, which is the owner's to authorise.**
 
-    2662a678cc5b  CLIENT-DEEP-RESEARCH.md
+**WHAT CHANGED THE METHOD: PIN AT REST, NOT ON A CLOCK.** Session F now works to a stop, and
+the archive is taken when its working tree is quiet. **This pin was taken with F stopped and
+`git status` empty**, so for the first time the copy and the source cannot have diverged
+mid-copy. *That is the same fault as recording hashes "verified identical at copy time" — a
+snapshot must name the commit it snapshots, never the clock.*
+
     00625edae9df  CLIENT-ITEM-TABLE-COUNT.md
-    50f1333cb997  method/agree.py
-    e1a9c2ae0c47  method/checktext.py
     208e4f5632e6  method/dupcheck.py
-    f389fa1a2a94  method/fields.py
+    2d58106edc01  method/slots.py
+    30b9c1e1d710  method/lockout.py
     323073f7f561  method/join.py
-    bee41c1d3a65  method/pattern.py
     3947d381afbe  method/pfs.py
     3ca0ee427102  method/scanall.py
-    c64b807c1ae6  method/spellparse.py
+    45172814c604  method/deep.py
+    50f1333cb997  method/agree.py
+    560177eb8933  CLIENT-DEEP-RESEARCH.md
+    82464b135e79  method/spa_harness.py
     b0f3c7e1ba3e  method/total.py
+    bee41c1d3a65  method/pattern.py
+    c64b807c1ae6  method/spellparse.py
+    e1a9c2ae0c47  method/checktext.py
+    edcaa5546ef0  method/allcols.py
+    f389fa1a2a94  method/fields.py
 
 sha256, first twelve, of the bytes as stored here, verified against the source at pin time.
+**Verified at this pin: all 17 tracked files byte-identical to the source, source working
+tree clean, source HEAD `b45ba7f`.**
+
+**A SECOND CORRECTION LANDED BETWEEN PINS AND IS NOT SHOWN BELOW, BECAUSE IT NEVER REACHED
+THIS ARCHIVE — but it reached further than the archive did.** At `019b4b7` Session F
+published a structure for column 172 of `spells_us.txt` as *1 + 5n pipe fields, a slot count
+followed by five fields per slot*; at `e02fb99` it retracted that. **The true format is
+`slot|SPA|base1|base2|max|calc`, six fields always, slots separated by `$`, and the leading
+number is an index rather than a count** — validated whole-file at 275,022 slots, none of
+them the wrong width. *The documents copied here already carry the corrected version.*
+
+**The reason it is recorded at all: the Director had already relayed the wrong structure to
+Session C as its next morning's first task, and retracted it the same night.** F's ground for
+demanding that was *a wrong structure is worse than no structure, because it is actionable*.
+**The conclusion it supported never changed** — the client ships computable spell effects for
+all 73,975 spells — **only the recipe, which is the half a downstream session codes against.**
+
 `.gitattributes` marks this directory `-text` so git normalisation cannot rewrite them.
 
 ## The source commits, in order
@@ -50,6 +77,10 @@ sha256, first twelve, of the bytes as stored here, verified against the source a
     141eef7  04 Sep 11:04  Resolve the 3085/3087 and 63/64 enumeration differences by naming methods
     e42fadc  06 Sep 01:23  MATERIAL CORRECTION: client does ship a partial item table (1,158 items)
     b7a0a81  06 Sep 01:30  Deep research partial: client contradicts published spell data
+    019b4b7  06 Sep 01:32  Full 173-column sweep of spells_us.txt: effect slots, recourse FK
+    721679d  06 Sep 01:35  Priority 4: client ships the lockout schema and rules, not the durations
+    e02fb99  06 Sep 01:38  CORRECTION: col 172 structure was wrong - $ separates slots, not 1+5n
+    b45ba7f  06 Sep 01:42  Priority 3: two different five-tier difficulty scales; do not conflate
 
 ## The finding — CORRECTED 6 September, and the first version is shown because it was wrong
 

@@ -3,7 +3,7 @@
 **Session:** eqlsdeep-4f [abc245]
 **Branch:** `client-item-table-count`
 **Date:** 2026-09-06
-**Status:** PARTIAL — priorities 1 and 2 answered, 3–5 not started. Reporting as instructed.
+**Status:** priorities 1, 2, 3 and 4 answered. Priority 5 NOT STARTED. Session stopping — pin here.
 **Companion:** `CLIENT-ITEM-TABLE-COUNT.md` (the item-table assignment, closed)
 
 ---
@@ -169,6 +169,73 @@ The scattered cast-time and mana conflicts are a different matter: 41 and 64 dis
 value-pairs are not one rule, and those are the ones most likely to be genuine
 transcription defects worth checking individually.
 
+### 2.6 The full 173-column sweep — done properly, not sampled
+
+The Director's instruction was to sweep rather than characterise from a sample — my own
+step 7, written after IF6. I had profiled roughly 50 of 173 columns. **Profiling all 173
+found three payloads I would otherwise have missed**, which is IF6's lesson holding.
+
+| Col | Content | Evidence |
+|---|---|---|
+| **172** | **the spell EFFECT SLOTS, packed pipe-delimited** | see below |
+| **81** | **recourse spell id** (spell → spell FK) | `Siphon Strength` → 2463 `Siphon Strength Recourse`; `Dark Empathy` → 3650 `Dark Empathy Recourse` |
+| 145 | a second spell-id reference | `Flames of Kesh`yk I/II/III` → 429 `Strength of Stone` |
+| 167 | item-ID-space reference, only 3 real values (177700/1/2) on 254 spells; −1 elsewhere | — |
+| 3 | pet/actor tag, 3,341 distinct | `PCPetMagS01L005ElemErf` |
+| 165 | ability-id-shaped text, 1,930 distinct | `100110600` |
+
+> **CORRECTED 2026-09-06, same session.** My first description of this column said the
+> record was `1 + 5n` pipe-separated fields, a slot **count** followed by five fields per
+> slot, with the SPA first in each slot. **That was wrong** — I had split on `|` only and
+> missed that `$` is the slot separator, so multi-slot spells were being mangled and the
+> leading number is a slot **index**, not a count. Filed as IF9. The corrected structure is
+> below and is now validated across every row rather than read off three examples.
+
+**Column 172 is the largest untapped payload in the install: the spell effect slots.**
+
+**Structure — `$` separates slots, `|` separates fields within a slot:**
+
+```
+slot | SPA | base1 | base2 | max | calc          (6 fields, always)
+```
+
+```
+Gate           id 36     1|26|98|1|100|0
+Complete Heal  id 1292   1|101|1|0|100|1
+Harm Touch     id 40993  1|0|-139210|0|100|0
+multi-slot     1|36|-1|0|100|0 $ 2|35|-1|0|100|0 $ 3|0|5|0|100|0
+```
+
+**Validated across the whole file, not sampled:**
+
+| Check | Result |
+|---|---|
+| Total effect slots | **275,022** |
+| Slots that are **not** exactly 6 fields wide | **0** |
+| Rows whose slot indices run exactly 1,2,3,… | **71,237** (3 exceptions) |
+| Rows with no effect data | 2,735 |
+| **Distinct SPA values in field 1** | **434** — against EverQuest's ~500-entry SPA table |
+
+**Field 1 is the SPA (effect type), confirmed against independently-known values:**
+
+- **Gate carries SPA 26** — 26 is Gate in EQ's long-known SPA table.
+- **Complete Heal carries SPA 101** — 101 is the Complete Heal SPA. *(This is better
+  evidence than the example in my first version, which came from a different record — see
+  IF9.)*
+- **Harm Touch carries SPA 0** (hit-point change) with base **−139,210** — right sign,
+  right magnitude.
+- The two commonest SPAs across 275,022 slots are **10** (89,152) and **0** (26,789) —
+  a null/stat effect and hit-point change, exactly the expected shape.
+
+**So the client ships computable spell effects — type, base, and formula inputs — for all
+73,975 spells.** Session C's 1,067-entry hand-maintained roster and its 56-heading stacking
+table are transcriptions of something the client states outright.
+
+**What I have NOT established:** the identity and order of `base1 / base2 / max / calc`.
+The slot framing and the SPA position are now proven across 275,022 slots; **the remaining
+four fields are named here by convention, not by evidence.** That is the afternoon's work
+against the published SPA table, and it is the highest-value thing left in this file.
+
 ---
 
 ## 3. PRIORITY 2 — `Resources/ItemDistillerDefs.txt`
@@ -200,8 +267,7 @@ this is a ten-minute check rather than an open question.
 
 ## 4. NOT STARTED
 
-Priorities 3 (zones/difficulty), 4 (lockouts/instances) and 5 (systematic contradiction
-sweep) are untouched. Reported as not started rather than left to be inferred from silence.
+**Priority 4 is answered in §4; priority 3 in §5.** Priority 5 (systematic contradiction sweep) is not started. Reported as not started rather than left to be inferred from silence.
 
 The §2.4 method generalises directly to priority 5: join a published dataset to a
 first-party client table, group conflicts by value-pair, and **read the shape before
@@ -209,13 +275,206 @@ reporting the count.**
 
 ---
 
-## 5. INSTRUMENT FAULTS
+## 4. PRIORITY 4 — LOCKOUTS AND INSTANCES
+
+**The client describes the lockout system in full. It ships the SCHEMA and the RULES; it
+ships no DURATIONS.** Both halves matter to Session D.
+
+Method: exhaustive term sweep of `eqstr_us.txt` (7,144 lines read, 97 matched, **all 97
+printed and read — not sampled**), then a whole-install sweep, then the UI definitions.
+
+### 4.1 There are TWO separate mechanisms, and the client names both
+
+| | Replay timer | Event lockout |
+|---|---|---|
+| Keyed to | **a zone** | **an event** |
+| Client's own words | *"the amount of time you must wait before being allowed to enter another instance of **that zone**"* (str 3536) | *"they have recently experienced %2 … until they can **experience it again**"* (3561, 3592) |
+| Cleared by | time only | time **or the event occurring** — *"or until event %2 has occurred"* (3592); *"once %2 has been completed"* (3561) |
+
+**Conflating these two would be a modelling error, and only the client distinguishes them
+this cleanly.**
+
+### 4.2 Replay timers are per-zone AND per-difficulty
+
+> **str 3519: `You have %1d:%2h:%3m:%4s remaining until you may enter %5 (Difficulty %6).`**
+
+This is the template behind the `/dzListTimers` line recorded earlier in this project — the
+one that printed a null as a 56-year duration. **The `(Difficulty %6)` parameter is
+first-party evidence that a replay timer is scoped to zone *and difficulty*, not zone
+alone.**
+
+### 4.3 The lockout record is a triple — from the client's own UI
+
+`uifiles/default_modern/EQUI_DynamicZoneWnd.xml`, listbox `DZ_TimerList`:
+
+> **columns: `Lockout Time` | `Instance Name` | `Event Name`**
+
+That is the client's own schema for a lockout row. `DZ_MemberList` carries
+`Members: | Status: | Flagged:` — so members also carry a per-player **Flagged** state.
+
+### 4.4 A third mechanism: instance CHARGES
+
+Separate from both timers, and easy to miss:
+
+- str 257 — *"You are out of instance charges, you must wait."*
+- str 396 — *"…you must wait until you have at least one charge available."*
+- str 3527 — *"Accepting will incur you **a charge or a replay timer**."*
+
+**"a charge OR a replay timer" is the client stating these are alternative costs.** Any
+model with only timers in it is missing a mechanic.
+
+### 4.5 Event lockouts propagate to the whole group
+
+> str 5089: *"Including %1 in the expedition **will prevent everyone in the expedition from
+> experiencing %2**."*
+> str 5043: *"One or more raid members has an event lockout for this instance: %1 Click yes
+> to **apply the above lockout(s)** and begin the expedition."*
+
+**One locked-out member can impose that lockout on every other member.** For a tool that
+projects a raid's availability, this is the difference between a per-character model and a
+per-roster one.
+
+### 4.6 THE BOUND — no durations ship, and this is the useful negative
+
+**Every duration in every one of these strings is a format parameter** (`%1d:%2h:%3m:%4s`),
+not a value. I swept the whole install: no lockout period, no reset interval, and **no
+weekly or daily reset constant** appears in any shipped file.
+
+**So Session D cannot get reset periods from the client, and should stop looking.** The
+durations are server-sent, exactly as item data is. What the client *does* settle for free
+is the **shape**: two mechanisms plus charges, replay scoped by zone+difficulty, lockouts
+scoped by event, group propagation, and a three-field timer record.
+
+**Stated at the width of the evidence:** I did not find durations in the install. Given the
+sweep was exhaustive over shipped files rather than sampled, that is a strong negative —
+but it remains "I did not find", not "they are not there".
+
+---
+
+## 5. PRIORITY 3 — ZONES AND DIFFICULTY
+
+**The most important result here is a warning, not a finding: there are TWO five-tier
+difficulty scales in this game and they are different objects.**
+
+### 5.1 The client's five-tier scale is NOT the site's five tiers
+
+Exhaustive regex over `eqstr_us.txt` (7,144 lines read, **102 tier strings matched, all
+counted**) yields **exactly five distinct tiers**:
+
+| Client tier | Occurrences |
+|---|---|
+| LOW DIFFICULTY | 15 |
+| LOW TO MODERATE DIFFICULTY | 31 |
+| MODERATE DIFFICULTY | 28 |
+| MODERATE TO HIGH DIFFICULTY | 13 |
+| HIGH DIFFICULTY | 15 |
+
+**Every one of the 102 is a Race / Class / Deity rating shown at character creation** —
+the string is literally *"This Race / Class / Deity combination is of … DIFFICULTY"*.
+
+The site's `learn/difficulty.html` publishes a *different* five: **instanced zone
+difficulty, "5 tiers", "D4 is the maximum", "the zone line names yours"** — mob damage,
+resists, aggro range and loot condition.
+
+> **Two unrelated five-tier scales, both called "difficulty", in the same client. Anyone
+> joining them on the number five will produce a confident, wrong result.**
+
+I nearly did: I found a five-tier scale while looking for a five-tier scale, and the count
+matched. **It matched because five is a common number of tiers, not because they are the
+same thing.**
+
+### 5.2 Does the client corroborate the ZONE tiers? Unevaluable — and here is why
+
+The client **confirms instanced zone difficulty exists as a first-class parameter**:
+
+- str 3519 — `…until you may enter %5 (Difficulty %6)`
+- str 15605 — *"The current zone you are currently in does not match your instanced
+  difficulty zone."*
+- `EQUI_PersonalInstanceWnd.xml` and `EQUI_RaidRequestWnd.xml` both carry a
+  **`Difficulty:` combobox**, alongside `Type:` and a third `Spawning` selector.
+
+**But the comboboxes are empty in the XML — they are populated at runtime from the
+server.** The client therefore **names the axis and ships none of its values.**
+
+**So "5 tiers" and "D4 is the maximum" are UNEVALUABLE against the client.** Not
+contradicted, not confirmed. The site cites EQL Tools for that scaling work and labels it
+by how it is known, which remains the right provenance; **the client cannot be added as a
+second witness.**
+
+### 5.3 Zone experience modifiers — a bounded negative
+
+`Resources/ZoneNames.txt` is **700 rows, uniformly 4 fields**: `id ^ name ^ a ^ b`.
+577 distinct names, ids to 999. Fields 3 and 4 are **binary**, not modifiers:
+
+| (a, b) | rows |
+|---|---|
+| (0, 0) | 622 |
+| (12, 60) | 74 |
+| (12, 0) | 4 |
+
+The 74 carrying `12^60` are the classic home and newbie zones (South Qeynos, North Qeynos,
+Surefall Glade, Qeynos Hills, Highpass Hold…). **Whatever the pair encodes, it is a flag
+with two states, not a per-zone experience multiplier.**
+
+**I found no zone experience modifier anywhere in the install.** The only experience
+mechanic the client states is a *legacy server max-level bonus* (strs 9079, 9085, 9124 —
+*"Your legacy server experience bonus … has increased to %1%"*), which is account-scoped,
+not zone-scoped.
+
+**Stated at the width of the evidence: I did not find zone experience modifiers. The sweep
+was exhaustive over shipped files rather than sampled, so it is a strong negative — but it
+remains "I did not find."**
+
+### 5.4 Three additions to the lockout picture (§4), found in the difficulty UI
+
+Worth folding into D's model:
+
+- **Charges regenerate on a timer.** `PersonalInst_TimerList` columns are
+  **`Next Charge` | `Current Charges`** — so charges are a replenishing pool, not a fixed
+  allowance.
+- **Raid lockouts carry a Type.** `RaidRqst_TimerList` columns are
+  **`Lockout Time` | `Name` | `Type`** — a *different* schema from `DZ_TimerList`
+  (`Lockout Time | Instance Name | Event Name`). **Two lockout lists with two schemas.**
+- **Instances have three independent axes**, not one: `Difficulty`, `Type`, and
+  `Spawning`. The placeholder text in both windows reads `South Qeynos 1 (Adaptive)` —
+  **"Adaptive" is a named mode**, and it appears in the instance's display name.
+
+---
+
+## 6. INSTRUMENT FAULTS
 
 **IF7 — The first-row join would have manufactured 18 conflicts.** Spell names are not
 unique (3,604 duplicated). Comparing against the first matching row alone produced 172/56/71
 disagreements; comparing against all rows sharing a name gives 163/51/67. Caught by asking
 whether the join key was unique **before** reporting, not after. **A join on a non-unique
 key does not fail — it produces plausible wrong answers.**
+
+**IF9 — I published the wrong structure for column 172, and it was IF7 wearing a new coat.**
+
+My first pass split column 172 on `|` alone and reported the record as `1 + 5n` — a slot
+**count** followed by five fields per slot. **`$` is the slot separator.** The leading
+number is a slot **index**. Multi-slot spells were being silently mangled into one
+over-long row, and the tell was sitting in my own output: fields ending `0$2`, which I had
+in front of me and read past.
+
+**Two compounding causes, both mine, both previously catalogued:**
+
+1. **Sampling.** I described the format from three examples — all of which happened to be
+   single-slot spells, where splitting on `|` alone gives the right answer. **The sample was
+   accurate and unrepresentative at once**, which is precisely IF6's shape.
+2. **IF7 again, in a new place.** My probe used `{r[1]: r for r in rows}`, which keeps the
+   **last** row per name, while every other section of this report used the **first**. So my
+   `Complete Heal` example came from id 46303 and my recast figures from id 1292 — **two
+   different records quoted as one spell in the same document.** Spell names are not unique
+   and I already knew it.
+
+**Corrected and validated across all 275,022 slots: every slot is exactly 6 fields, zero
+exceptions.** The SPA conclusion survives and is stronger — 434 distinct SPA values against
+a ~500-entry table.
+
+**Caught before anyone acted on it, but only just:** the Director was relaying the old
+structure to Session C as tomorrow's first task the same evening. **A wrong structure is
+worse than no structure, because it is actionable.**
 
 **IF8 — Counting conflicts without grouping them nearly produced a false headline.** "163
 recast contradictions" was my first result and it was arithmetically correct. 136 of them
