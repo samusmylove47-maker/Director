@@ -1230,3 +1230,21 @@ Compared current remote heads against the 4 Sep 17:24Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 6 Sep 2026 sweep — read at 03:24Z
+
+Compared current remote heads against the 5 Sep 03:05Z sweep entry above.
+
+**Moved:**
+- `EQLSAuras` `main`: `ee3d20ff` → `70b754d2` ("Real-world-identity scan on
+  all seven images: clean, with the control that makes the zero mean
+  something"), authored 2026-09-05T23:23:20-04:00 (2026-09-06T03:23:20Z).
+
+**Unchanged:**
+- `eql-source` `main`: `f98e7cd0`.
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `05904054`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `8863354b`.
+- `EQLSLockouts` `session-d/raid-rows`: `cda4712a`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
