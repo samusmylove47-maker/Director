@@ -1248,3 +1248,24 @@ Compared current remote heads against the 5 Sep 03:05Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 6 Sep 2026 sweep — read at 04:23Z
+
+Compared current remote heads against the 6 Sep 03:24Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `f98e7cd0` → `3661227a` ("Merge pull request #200 from
+  samusmylove47-maker/claude/the-mark" — "The site has its mark, on 702
+  pages, placed and not altered"), authored 2026-09-06T00:17:25-04:00
+  (2026-09-06T04:17:25Z).
+- `EQLSAuras` `main`: `70b754d2` → `365125a4` ("Withdraw a self-correction
+  that was wrong: I asserted a miss against a claim I never made"),
+  authored 2026-09-05T23:25:45-04:00 (2026-09-06T03:25:45Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `05904054`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `8863354b`.
+- `EQLSLockouts` `session-d/raid-rows`: `cda4712a`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
