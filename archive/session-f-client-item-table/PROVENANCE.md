@@ -16,35 +16,26 @@ owner's to authorise.**
 
 ## What is here, and how to check it against the source
 
-**Pinned to source commit `141eef7783f7`.** Not to "copy time" — my first version of this
-file said *verified identical to the source tree at copy time*, which was true when
-written and false four minutes later, because Session F committed again while I was
-archiving. **A snapshot must name the commit it snapshots, never the clock.** That is the
-same fault as a read-date that has done its job being indistinguishable from one that has
-gone stale, and it caught me inside the file whose only purpose is verification.
+**Pinned to source commit `e42fadc13dc2`.** Re-taken 6 September after Session F materially
+corrected its own headline — see below. The earlier snapshot pinned `141eef7`.
 
-    f9ac576cd073  CLIENT-ITEM-TABLE-COUNT.md
+    00625edae9df  CLIENT-ITEM-TABLE-COUNT.md
     e1a9c2ae0c47  method/checktext.py
     3947d381afbe  method/pfs.py
     3ca0ee427102  method/scanall.py
+    b0f3c7e1ba3e  method/total.py
 
 sha256, first twelve, of the bytes as stored here. `.gitattributes` marks this directory
-`-text` so git normalisation cannot rewrite them — a content hash that its own repository
-silently invalidates is a fault this project has already found once, in an artifact that
-did not survive its own repository.
+`-text` so git normalisation cannot rewrite them.
 
 ## The source commits, in order
 
-    f7bd04a  10:42:50  Pre-register population decision and verification conditions
+    f7bd04a  10:42:50  Pre-register population decision and verification conditions before counting
     e5e8ee5  10:53:40  Publish bounded negative: client ships no item table
-    a94c5eb  11:00:34  Close input gaps; evaluate union and V2 against named objects
-    9da35e0  11:02:48  Show the 18 corroborated names; explain the 417->416 change
+    a94c5eb  11:00:34  Close input gaps; evaluate union and V2 against named substitute objects
+    9da35e0  11:02:48  Show the 18 corroborated names with item IDs; explain the 417->416 change
     141eef7  11:04:07  Resolve the 3085/3087 and 63/64 enumeration differences by naming methods
-
-**The eleven minutes between the first two are the load-bearing fact.** A
-pre-registration is only worth what its ordering can prove, and that ordering is
-in the git history rather than in the prose — verifiable independently of
-anything the session says about itself. Session 0 checked it there.
+    e42fadc  01:23:18  MATERIAL CORRECTION: client does ship a partial item table (1,158 items)
 
 ## The finding, in one line
 
