@@ -1290,3 +1290,25 @@ Compared current remote heads against the 6 Sep 04:23Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 6 Sep 2026 sweep — read at 06:23Z
+
+Compared current remote heads against the 6 Sep 05:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `584c9706` → `c596b7c9` ("Merge pull request #204 from
+  samusmylove47-maker/claude/typed-figures"), authored
+  2026-09-06T02:15:34-04:00 (2026-09-06T06:15:34Z).
+- `EQLSLockouts` `session-d/raid-rows`: `cda4712a` → `91e0b96b` ("projectGrid
+  can be told where the period starts — and it is inert until it is"),
+  authored 2026-09-06T01:18:38-04:00 (2026-09-06T05:18:38Z).
+- `EQLSAuras` `main`: `f9b82592` → `b68c609b` ("Second correction to entry
+  29: only TWO of the six fields are identified, not six"), authored
+  2026-09-06T02:00:26-04:00 (2026-09-06T06:00:26Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `05904054`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `8863354b`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
