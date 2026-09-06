@@ -395,7 +395,87 @@ I nearly did: I found a five-tier scale while looking for a five-tier scale, and
 matched. **It matched because five is a common number of tiers, not because they are the
 same thing.**
 
-### 5.2 Does the client corroborate the ZONE tiers? Unevaluable — and here is why
+### 5.2 The client DOES ship the zone tiers — all five. CORRECTED.
+
+> **CORRECTED 2026-09-06.** This section previously concluded that the client *"names the
+> axis and ships none of its values"* and that **"5 tiers" and "D4 max" were UNEVALUABLE**.
+> **Both statements were wrong.** I checked the UI XML, found the difficulty comboboxes
+> empty, and generalised from one carrier to the whole client without sweeping the string
+> table. Filed as IF10.
+
+**`eqstr_us.txt` ships the complete difficulty ladder, and it matches the site exactly:**
+
+| eqstr id | string | site's published tier |
+|---|---|---|
+| 15519 | `0 (Normal)` | D0 Normal |
+| 15520 | `1 (Awakened)` | D1 Awakened — *"the first instanced tier"* |
+| 15521 | `2 (Adaptive)` | D2 Adaptive |
+| 15522 | `3 (Fused)` | D3 Fused |
+| **15571** | **`4 (Refined)`** | **D4 Refined** |
+
+**Five tiers, indices 0-4, maximum D4.** Found by an exhaustive regex for `N (Name)`
+strings across all 7,144 lines — **note that 15571 sits 49 ids away from the block**, so
+reading the neighbours of 15521 finds four tiers and misses the fifth. The count "five"
+only survives a sweep.
+
+#### These are TWO claims and they need separate evidence
+
+The site publishes *"5 tiers"* **and** *"D4 is the maximum"*. **Finding five strings proves
+the first. It does not prove the second** — a sixth tier could exist elsewhere in the table.
+The Director made this distinction after re-deriving the ladder independently, and it is
+the right one: **the maximum is the claim that needed the evidence, because it is an
+assertion about an absence.**
+
+**Both are now measured, by an unconstrained sweep of all 7,144 lines:**
+
+```
+regex: ^\d+\s+(\d+)\s*\(([^)]+)\)\s*$     -- any index, any name, no assumptions
+result: exactly 5 matches, indices 0,1,2,3,4 -- and nothing else in the file
+```
+
+The pattern was widened past what my first sweep used — **multi-digit indices and
+multi-word names** — and still returns exactly five. **There is no index above 4 anywhere in
+the string table.**
+
+*In fairness to my own first pass: its regex was `(\d)`, a single unconstrained digit, so
+the no-sixth-tier result was already in my data. **But I never stated it as a claim.** I
+asserted "maximum D4" alongside the five names as though one sweep settled both. The
+evidence existed; the argument did not — and an unstated argument cannot be checked by
+anyone.*
+
+**Robustness of the identification:** `Awakened`, `Adaptive`, `Fused` and `Refined` each
+occur **exactly once** in the entire 7,144-line string table, so there is no ambiguity about
+which string is the tier name. `Normal` occurs **7 times**, being a common word — that one
+is identified by its position in the `15519-15522` block, not by uniqueness.
+
+> **VERDICT: the site's "5 tiers" AND "D4 is the maximum" are both CONFIRMED first-party,
+> including all five tier names.** This is the first case in this work where the client
+> **corroborates** a published claim rather than contradicting it or being silent.
+> Independently re-derived by the Director from the install, by a different regex, with the
+> same result.
+
+The client can now be added as a second, independent witness for the tier ladder itself —
+**not** for the scaling figures, which remain EQL Tools' and are not in the client.
+
+#### The dead placeholder, and why it is not evidence of anything
+
+`South Qeynos 1 (Adaptive)` appears in `EQUI_PersonalInstanceWnd.xml` and
+`EQUI_RaidRequestWnd.xml`. Session D read it as pairing *Adaptive* with index **1**, against
+canon's **2**, and recorded it as neither corroboration nor discrepancy. **D's caution was
+right, and the reason is stronger than it knew:**
+
+1. **All four occurrences sit inside `<!-- -->` comment blocks.** Across 517 XML files,
+   `Adaptive` has **zero live occurrences**. Commented-out dead UI, not a rendered
+   placeholder.
+2. **The `1` is an instance ordinal, not a tier index** — the element is
+   `PersonalInst_CurrentLabel` and the text reads *zone name + instance number + (mode)*.
+
+**So there was never a discrepancy to resolve, and the live string table independently says
+`2 (Adaptive)`, matching canon.** *(My own §5.4 note that "Adaptive is a named mode
+appearing in the instance's display name" came from that same commented block. The
+conclusion happens to be right; the evidence I cited for it was dead code.)*
+
+### 5.2b The original reasoning, kept because it was wrong in an instructive way
 
 The client **confirms instanced zone difficulty exists as a first-class parameter**:
 
@@ -408,10 +488,10 @@ The client **confirms instanced zone difficulty exists as a first-class paramete
 **But the comboboxes are empty in the XML — they are populated at runtime from the
 server.** The client therefore **names the axis and ships none of its values.**
 
-**So "5 tiers" and "D4 is the maximum" are UNEVALUABLE against the client.** Not
-contradicted, not confirmed. The site cites EQL Tools for that scaling work and labels it
-by how it is known, which remains the right provenance; **the client cannot be added as a
-second witness.**
+**That reasoning was sound about the XML and wrong about the client.** The comboboxes
+really are runtime-populated — but the *values* live in the string table, which I had not
+swept for them. **An empty control does not mean absent data; it means the data is
+somewhere else.**
 
 ### 5.3 Zone experience modifiers — a bounded negative
 
@@ -460,6 +540,28 @@ unique (3,604 duplicated). Comparing against the first matching row alone produc
 disagreements; comparing against all rows sharing a name gives 163/51/67. Caught by asking
 whether the join key was unique **before** reporting, not after. **A join on a non-unique
 key does not fail — it produces plausible wrong answers.**
+
+**IF10 — I concluded "the client ships none of its values" from ONE carrier.**
+
+I opened the difficulty comboboxes in the UI XML, found them empty, and reported to the
+Director that the client *"names the axis and ships none of its values"* and that the
+site's tier claims were **UNEVALUABLE**. **All five tier values were in `eqstr_us.txt` the
+whole time.**
+
+**The fault is generalising from one carrier to "the client".** I had already swept
+`eqstr_us.txt` twice that session — once for lockout strings, once for difficulty *tiers* —
+and the tier sweep matched the 102 Race/Class/Deity strings. **So I believed I had asked
+the string table about difficulty and received its answer. I had asked a different question
+and accepted the answer to that one.**
+
+**This is IF6's shape a third time**: a sample of *carriers* rather than of records,
+accurate and unrepresentative at once. It is also the first of my errors to make a finding
+*weaker* than the truth — I reported "unevaluable" where the honest answer was "confirmed".
+**Four of five flattered me; this one cost the project a corroboration it had earned.**
+
+**What would have caught it** is the rule I proposed to the Director an hour earlier:
+re-derive by a path that could fail differently. A sweep for `N (Name)`-shaped strings is
+that path, and it is one line.
 
 **IF9 — I published the wrong structure for column 172, and it was IF7 wearing a new coat.**
 

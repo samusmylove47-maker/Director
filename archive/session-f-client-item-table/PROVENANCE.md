@@ -16,7 +16,7 @@ owner's to authorise.**
 
 ## What is here, and how to check it against the source
 
-**Pinned to source commit `5c95017332900`. THE FIFTH RE-PIN, AND THE SECOND TAKEN AT REST.**
+**Pinned to source commit `3df1fb4e5c84`. THE SIXTH RE-PIN, AND THE THIRD TAKEN AT REST.**
 
 **WHY A FIFTH PIN IS NOT A RETURN TO CHASING, WHICH IS THE HABIT PIN-AT-REST REPLACED.**
 Session F explicitly recommended *not* re-pinning on its account — `b45ba7f` is **weaker, not
@@ -36,12 +36,14 @@ reader building a parser copies the diagram and never reaches the paragraph** �
 would have preserved, permanently, the one artefact most likely to be acted on and least likely
 to carry its own caveat.
 
-### THIS PIN CARRIES A VERDICT THAT HAS SINCE BEEN OVERTURNED — read this before citing §5
+### THE TWO PREVIOUS PINS CARRIED A FALSE VERDICT. THIS ONE CARRIES THE CORRECTION.
 
-**`5c95017` states that the client is UNEVALUABLE on the site's zone difficulty tiers, and
-that it *"names the axis and ships none of its values."* THAT IS WRONG, AND IT IS WRONG IN
-THE DIRECTION OF UNDERSTATING WHAT THE CLIENT SUPPORTS.** Session F overturned it at
-`cb0692c`, reopening after it had stopped.
+**Pins four and five — `b45ba7f` and `5c95017` — state that the client is UNEVALUABLE on the
+site's zone difficulty tiers, and that it *"names the axis and ships none of its values."*
+THAT IS WRONG, AND IT IS WRONG IN THE DIRECTION OF UNDERSTATING WHAT THE CLIENT SUPPORTS.**
+Session F overturned it at `cb0692c`, reopening after it had stopped, and refined it at
+`3df1fb4`. **This pin carries the corrected text; the note is kept because those two pins are
+in this file's own history and a reader tracing them needs to know.**
 
 **The client ships all five tier values and confirms the site exactly:**
 
@@ -61,14 +63,31 @@ exactly once in the whole string table.*
 > contradicting it or being silent. **The client is a second independent witness for the tier
 > ladder** — not for the scaling figures, which remain EQL Tools' and are genuinely absent.
 
-**THE ARCHIVE IS NOT BEING REWRITTEN TO HIDE THIS, AND IT IS NOT BEING RE-PINNED TO OUTRUN
-IT.** *F is working again and asked not to be chased; the pinning discipline holds.* **This
-copy faithfully preserves what F had established at `5c95017`, which is what an archive is
-for. The correction is recorded beside it, in the file a reader reaches first.**
+**THE ARCHIVE IS NOT REWRITTEN TO HIDE ANY OF THIS.** *Nothing above has been deleted; the
+superseded verdict is named, dated and attributed.*
 
-**And no pinning discipline could have prevented this one: the source was wrong AT REST.**
-*Pin-at-rest protects against copying a half-finished state. It cannot protect against copying
-a finished and mistaken one — only a note like this can.*
+**AND F KEPT THE WRONG REASONING RATHER THAN DELETING IT.** §5.2b of the pinned document is
+headed *"The original reasoning, kept because it was wrong in an instructive way"*, states the
+false conclusion in full, and then says why it failed: **the comboboxes really are
+runtime-populated — but the values live in the string table, which had not been swept for
+them.** *An empty control does not mean absent data; it means the data is somewhere else.*
+
+*A grep for the false sentence still finds it in this archive. It is inside a section that
+exists to preserve it.* **That is the same discipline this file applies to the item-table
+retraction: show the retraction rather than replace it.**
+
+**THE THIRD PIN-AT-REST CROSSED ANYWAY.** F named `cb0692c` as the commit to take and had
+committed `3df1fb4` by the time the pin was taken — the fourth crossing in two days. **The
+copy is of HEAD as verified at pin time, not of the commit named in the request**, because the
+verification is what the hashes below attest and a named commit is a claim about a moment that
+had already passed.
+
+**AND THE BOUND ON PIN-AT-REST, WHICH THIS EPISODE ESTABLISHED AND WHICH NO FASTER ARCHIVER
+FIXES:** *pins four and five were both taken correctly, at rest, with clean trees and verified
+byte-identity, and both preserved a falsehood.* **PIN-AT-REST PROTECTS AGAINST COPYING A
+HALF-FINISHED STATE. IT CANNOT PROTECT AGAINST COPYING A FINISHED AND MISTAKEN ONE.** *Only a
+note beside the pin can — and only if the note is kept when the pin moves, which is why it is
+still here.*
 
 **Original pin-at-rest note, which stands:** The archive chased this repository three times in two days — `141eef7`, `e42fadc`,
 `b7a0a81` — every one of them while Session F was still working in it.
@@ -102,7 +121,17 @@ snapshot must name the commit it snapshots, never the clock.*
     45172814c604  method/deep.py
     50f1333cb997  method/agree.py
     82464b135e79  method/spa_harness.py
-    8f37a85fcebe  CLIENT-DEEP-RESEARCH.md
+    00625edae9df  CLIENT-ITEM-TABLE-COUNT.md
+    208e4f5632e6  method/dupcheck.py
+    2d58106edc01  method/slots.py
+    30b9c1e1d710  method/lockout.py
+    323073f7f561  method/join.py
+    3947d381afbe  method/pfs.py
+    3ca0ee427102  method/scanall.py
+    45172814c604  method/deep.py
+    50f1333cb997  method/agree.py
+    82464b135e79  method/spa_harness.py
+    854e4c4b7398  CLIENT-DEEP-RESEARCH.md
     b0f3c7e1ba3e  method/total.py
     bee41c1d3a65  method/pattern.py
     c64b807c1ae6  method/spellparse.py
@@ -112,7 +141,7 @@ snapshot must name the commit it snapshots, never the clock.*
 
 sha256, first twelve, of the bytes as stored here, verified against the source at pin time.
 **Verified at this pin: all 17 tracked files byte-identical to the source, source working
-tree clean, source HEAD `5c95017`.**
+tree clean, source HEAD `3df1fb4`.**
 
 **A SECOND CORRECTION LANDED BETWEEN PINS AND IS NOT SHOWN BELOW, BECAUSE IT NEVER REACHED
 THIS ARCHIVE — but it reached further than the archive did.** At `019b4b7` Session F
@@ -144,6 +173,8 @@ all 73,975 spells — **only the recipe, which is the half a downstream session 
     e02fb99  06 Sep 01:38  CORRECTION: col 172 structure was wrong - $ separates slots, not 1+5n
     b45ba7f  06 Sep 01:42  Priority 3: two different five-tier difficulty scales; do not conflate
     5c95017  06 Sep 01:59  Write fields 2-5 of the effect slot as unknowns, not as guessed names
+    cb0692c  06 Sep 02:05  CORRECTION: the client DOES ship all five difficulty tiers
+    3df1fb4  06 Sep 02:09  Separate 'five tiers exist' from 'D4 is the maximum'; both now measured
 
 ## The finding — CORRECTED 6 September, and the first version is shown because it was wrong
 
