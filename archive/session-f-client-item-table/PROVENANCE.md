@@ -16,26 +16,40 @@ owner's to authorise.**
 
 ## What is here, and how to check it against the source
 
-**Pinned to source commit `e42fadc13dc2`.** Re-taken 6 September after Session F materially
-corrected its own headline — see below. The earlier snapshot pinned `141eef7`.
+**Pinned to source commit `b7a0a8189437`. THIS IS THE THIRD RE-PIN.** The archive has chased this
+repository three times in two days — `141eef7`, then `e42fadc`, now this — because Session F
+is actively working in it and has no remote to push to.
 
+> **ARCHIVING A LIVE REPOSITORY IS CHASING A MOVING TARGET, AND EVERY LAG IS A WINDOW IN
+> WHICH THE ARCHIVE STATES SOMETHING ITS SOURCE HAS RETRACTED.** That window has been open
+> twice already. **The fix is not a faster archiver; it is a remote, which is the owner's to
+> authorise.**
+
+    2662a678cc5b  CLIENT-DEEP-RESEARCH.md
     00625edae9df  CLIENT-ITEM-TABLE-COUNT.md
+    50f1333cb997  method/agree.py
     e1a9c2ae0c47  method/checktext.py
+    208e4f5632e6  method/dupcheck.py
+    f389fa1a2a94  method/fields.py
+    323073f7f561  method/join.py
+    bee41c1d3a65  method/pattern.py
     3947d381afbe  method/pfs.py
     3ca0ee427102  method/scanall.py
+    c64b807c1ae6  method/spellparse.py
     b0f3c7e1ba3e  method/total.py
 
-sha256, first twelve, of the bytes as stored here. `.gitattributes` marks this directory
-`-text` so git normalisation cannot rewrite them.
+sha256, first twelve, of the bytes as stored here, verified against the source at pin time.
+`.gitattributes` marks this directory `-text` so git normalisation cannot rewrite them.
 
 ## The source commits, in order
 
-    f7bd04a  10:42:50  Pre-register population decision and verification conditions before counting
-    e5e8ee5  10:53:40  Publish bounded negative: client ships no item table
-    a94c5eb  11:00:34  Close input gaps; evaluate union and V2 against named substitute objects
-    9da35e0  11:02:48  Show the 18 corroborated names with item IDs; explain the 417->416 change
-    141eef7  11:04:07  Resolve the 3085/3087 and 63/64 enumeration differences by naming methods
-    e42fadc  01:23:18  MATERIAL CORRECTION: client does ship a partial item table (1,158 items)
+    f7bd04a  04 Sep 10:42  Pre-register population decision and verification conditions before counting
+    e5e8ee5  04 Sep 10:53  Publish bounded negative: client ships no item table
+    a94c5eb  04 Sep 11:00  Close input gaps; evaluate union and V2 against named substitute objects
+    9da35e0  04 Sep 11:02  Show the 18 corroborated names with item IDs; explain the 417->416 change
+    141eef7  04 Sep 11:04  Resolve the 3085/3087 and 63/64 enumeration differences by naming methods
+    e42fadc  06 Sep 01:23  MATERIAL CORRECTION: client does ship a partial item table (1,158 items)
+    b7a0a81  06 Sep 01:30  Deep research partial: client contradicts published spell data
 
 ## The finding — CORRECTED 6 September, and the first version is shown because it was wrong
 
