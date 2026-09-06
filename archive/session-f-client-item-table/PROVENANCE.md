@@ -16,7 +16,7 @@ owner's to authorise.**
 
 ## What is here, and how to check it against the source
 
-**Pinned to source commit `3df1fb4e5c84`. THE SIXTH RE-PIN, AND THE THIRD TAKEN AT REST.**
+**Pinned to source commit `a5d7fe762388`. THE SEVENTH RE-PIN, AND THE FOURTH TAKEN AT REST.**
 
 **WHY A FIFTH PIN IS NOT A RETURN TO CHASING, WHICH IS THE HABIT PIN-AT-REST REPLACED.**
 Session F explicitly recommended *not* re-pinning on its account — `b45ba7f` is **weaker, not
@@ -76,11 +76,29 @@ them.** *An empty control does not mean absent data; it means the data is somewh
 exists to preserve it.* **That is the same discipline this file applies to the item-table
 retraction: show the retraction rather than replace it.**
 
-**THE THIRD PIN-AT-REST CROSSED ANYWAY.** F named `cb0692c` as the commit to take and had
-committed `3df1fb4` by the time the pin was taken — the fourth crossing in two days. **The
-copy is of HEAD as verified at pin time, not of the commit named in the request**, because the
-verification is what the hashes below attest and a named commit is a claim about a moment that
-had already passed.
+**EVERY PIN-AT-REST SO FAR HAS CROSSED ANYWAY — FIVE TIMES IN TWO DAYS.** F named `cb0692c`
+and had committed `3df1fb4`; it then named `3df1fb4`, said *"I will not commit again without
+telling you first"*, and had committed `a5d7fe7` before that pin was verified. **This is not a
+failure of F's good faith — each commit was a genuine improvement, and the last one fixes a
+fault the Director's own tooling had just hit.** *It is a property of two agents working
+concurrently against one tree, and no promise fixes it.*
+
+> **HENCE THE RULE, AND IT IS THE ONLY THING THAT MAKES THE HASHES BELOW MEAN ANYTHING: THE
+> COPY IS OF HEAD AS VERIFIED AT PIN TIME, NEVER OF THE COMMIT NAMED IN THE REQUEST.** *A named
+> commit is a claim about a moment that has already passed. The hashes attest what was actually
+> read, and that is the only thing a future reader can check.*
+
+**WHY THIS SEVENTH PIN WAS TAKEN RATHER THAN LEFT — the discriminator, applied honestly.**
+`a5d7fe7` marks every superseded sentence in §5.2b with an inline `[SUPERSEDED]` /
+`[SUPERSEDED — FALSE]` prefix, **so that a grep or a search lands on the retraction rather than
+on the bare false phrase.** *It exists because the Director's own verdict-check tool matched the
+false sentence retained in that subsection and nearly reported that F's correction had not
+landed.* **For an archive — a copy that outlives its repository and will be searched by someone
+who cannot ask its author — that is material, not cosmetic.**
+
+> **AND IT GENERALISES THE LAW ONE STEP: A HEADING DOES NOT TRAVEL WITH A MATCHED LINE.** *Prose
+> caveats do not travel; the diagram travels; and a search result is a LINE, so the retraction
+> has to be on the line.* **Mark the sentence, not the section.**
 
 **AND THE BOUND ON PIN-AT-REST, WHICH THIS EPISODE ESTABLISHED AND WHICH NO FASTER ARCHIVER
 FIXES:** *pins four and five were both taken correctly, at rest, with clean trees and verified
@@ -131,7 +149,17 @@ snapshot must name the commit it snapshots, never the clock.*
     45172814c604  method/deep.py
     50f1333cb997  method/agree.py
     82464b135e79  method/spa_harness.py
-    854e4c4b7398  CLIENT-DEEP-RESEARCH.md
+    00625edae9df  CLIENT-ITEM-TABLE-COUNT.md
+    208e4f5632e6  method/dupcheck.py
+    2d58106edc01  method/slots.py
+    30b9c1e1d710  method/lockout.py
+    323073f7f561  method/join.py
+    3947d381afbe  method/pfs.py
+    3ca0ee427102  method/scanall.py
+    45172814c604  method/deep.py
+    4c43aeba6a0c  CLIENT-DEEP-RESEARCH.md
+    50f1333cb997  method/agree.py
+    82464b135e79  method/spa_harness.py
     b0f3c7e1ba3e  method/total.py
     bee41c1d3a65  method/pattern.py
     c64b807c1ae6  method/spellparse.py
@@ -141,7 +169,7 @@ snapshot must name the commit it snapshots, never the clock.*
 
 sha256, first twelve, of the bytes as stored here, verified against the source at pin time.
 **Verified at this pin: all 17 tracked files byte-identical to the source, source working
-tree clean, source HEAD `3df1fb4`.**
+tree clean, source HEAD `a5d7fe7`.**
 
 **A SECOND CORRECTION LANDED BETWEEN PINS AND IS NOT SHOWN BELOW, BECAUSE IT NEVER REACHED
 THIS ARCHIVE — but it reached further than the archive did.** At `019b4b7` Session F
@@ -175,6 +203,7 @@ all 73,975 spells — **only the recipe, which is the half a downstream session 
     5c95017  06 Sep 01:59  Write fields 2-5 of the effect slot as unknowns, not as guessed names
     cb0692c  06 Sep 02:05  CORRECTION: the client DOES ship all five difficulty tiers
     3df1fb4  06 Sep 02:09  Separate 'five tiers exist' from 'D4 is the maximum'; both now measured
+    a5d7fe7  06 Sep 02:13  Mark superseded sentences inline so a grep hit carries its own retraction
 
 ## The finding — CORRECTED 6 September, and the first version is shown because it was wrong
 

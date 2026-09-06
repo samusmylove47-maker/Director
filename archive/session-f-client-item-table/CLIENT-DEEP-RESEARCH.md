@@ -475,9 +475,19 @@ right, and the reason is stronger than it knew:**
 appearing in the instance's display name" came from that same commented block. The
 conclusion happens to be right; the evidence I cited for it was dead code.)*
 
-### 5.2b The original reasoning, kept because it was wrong in an instructive way
+### 5.2b SUPERSEDED REASONING — retained deliberately, false as written
 
-The client **confirms instanced zone difficulty exists as a first-class parameter**:
+> **Every claim in this subsection is WRONG and is kept only to show how.** The correct
+> finding is §5.2. **Each superseded sentence below is prefixed `[SUPERSEDED]` on its own
+> line**, so that a grep or a search lands on the retraction and not on the bare false
+> phrase. *(Added after the Director's verdict-check tool matched the false sentence here
+> and nearly reported that my correction had not landed — a true positive for the question
+> it asked, and the wrong answer to the question being asked. Marking the line, not the
+> heading, is the same lesson as putting uncertainty in the diagram rather than the
+> paragraph after it.)*
+
+The client **confirms instanced zone difficulty exists as a first-class parameter** — this
+part is correct and survives:
 
 - str 3519 — `…until you may enter %5 (Difficulty %6)`
 - str 15605 — *"The current zone you are currently in does not match your instanced
@@ -485,8 +495,9 @@ The client **confirms instanced zone difficulty exists as a first-class paramete
 - `EQUI_PersonalInstanceWnd.xml` and `EQUI_RaidRequestWnd.xml` both carry a
   **`Difficulty:` combobox**, alongside `Type:` and a third `Spawning` selector.
 
-**But the comboboxes are empty in the XML — they are populated at runtime from the
-server.** The client therefore **names the axis and ships none of its values.**
+`[SUPERSEDED]` **But the comboboxes are empty in the XML — they are populated at runtime from the server.**
+`[SUPERSEDED — FALSE]` **The client therefore names the axis and ships none of its values.**
+`[SUPERSEDED — FALSE]` **"5 tiers" and "D4 is the maximum" are UNEVALUABLE against the client.**
 
 **That reasoning was sound about the XML and wrong about the client.** The comboboxes
 really are runtime-populated — but the *values* live in the string table, which I had not
