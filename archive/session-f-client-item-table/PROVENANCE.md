@@ -36,6 +36,40 @@ reader building a parser copies the diagram and never reaches the paragraph** �
 would have preserved, permanently, the one artefact most likely to be acted on and least likely
 to carry its own caveat.
 
+### THIS PIN CARRIES A VERDICT THAT HAS SINCE BEEN OVERTURNED — read this before citing §5
+
+**`5c95017` states that the client is UNEVALUABLE on the site's zone difficulty tiers, and
+that it *"names the axis and ships none of its values."* THAT IS WRONG, AND IT IS WRONG IN
+THE DIRECTION OF UNDERSTATING WHAT THE CLIENT SUPPORTS.** Session F overturned it at
+`cb0692c`, reopening after it had stopped.
+
+**The client ships all five tier values and confirms the site exactly:**
+
+    eqstr_us.txt   15519  0 (Normal)
+                   15520  1 (Awakened)
+                   15521  2 (Adaptive)
+                   15522  3 (Fused)
+                   15571  4 (Refined)     <- 49 ids from the block
+
+**Independently re-derived by the Director on a different path** — an unconstrained regex for
+`<id> <digit> (<Name>)` over all 7,144 lines, assuming no ids — **returning exactly those five
+and nothing else. No `5 (...)` exists, which is what makes "D4 is the maximum" a checkable
+claim rather than only "five tiers exist".** *Awakened, Adaptive, Fused and Refined each occur
+exactly once in the whole string table.*
+
+> **THIS IS THE FIRST TIME IN THIS WORK THE CLIENT CORROBORATES A PUBLISHED CLAIM** rather than
+> contradicting it or being silent. **The client is a second independent witness for the tier
+> ladder** — not for the scaling figures, which remain EQL Tools' and are genuinely absent.
+
+**THE ARCHIVE IS NOT BEING REWRITTEN TO HIDE THIS, AND IT IS NOT BEING RE-PINNED TO OUTRUN
+IT.** *F is working again and asked not to be chased; the pinning discipline holds.* **This
+copy faithfully preserves what F had established at `5c95017`, which is what an archive is
+for. The correction is recorded beside it, in the file a reader reaches first.**
+
+**And no pinning discipline could have prevented this one: the source was wrong AT REST.**
+*Pin-at-rest protects against copying a half-finished state. It cannot protect against copying
+a finished and mistaken one — only a note like this can.*
+
 **Original pin-at-rest note, which stands:** The archive chased this repository three times in two days — `141eef7`, `e42fadc`,
 `b7a0a81` — every one of them while Session F was still working in it.
 
