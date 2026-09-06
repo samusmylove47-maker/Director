@@ -1312,3 +1312,23 @@ Compared current remote heads against the 6 Sep 05:23Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 6 Sep 2026 sweep — read at 07:24Z
+
+Compared current remote heads against the 6 Sep 06:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `c596b7c9` → `74f9c91d` ("Merge pull request #206 from
+  samusmylove47-maker/claude/derived-counts"), authored
+  2026-09-06T02:50:29-04:00 (2026-09-06T06:50:29Z).
+- `EQLSAuras` `main`: `b68c609b` → `cefd7915` ("Reconcile the sweep's summary
+  with its own section 5"), authored 2026-09-06T03:19:59-04:00
+  (2026-09-06T07:19:59Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `05904054`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `8863354b`.
+- `EQLSLockouts` `session-d/raid-rows`: `91e0b96b`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
