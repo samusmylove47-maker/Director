@@ -1269,3 +1269,24 @@ Compared current remote heads against the 6 Sep 03:24Z sweep entry above.
 
 No content read beyond commit subject and timestamp; no judgement made on
 any change.
+
+## 6 Sep 2026 sweep — read at 05:23Z
+
+Compared current remote heads against the 6 Sep 04:23Z sweep entry above.
+
+**Moved:**
+- `eql-source` `main`: `3661227a` → `584c9706` ("Merge pull request #201 from
+  samusmylove47-maker/claude/shots-still-hashes"), authored
+  2026-09-06T01:11:26-04:00 (2026-09-06T05:11:26Z).
+- `EQLSAuras` `main`: `365125a4` → `f9b82592` ("CRLF class swept across six
+  repos: nothing shipping wrong, and the one real finding is a guard I
+  documented but never wrote"), authored 2026-09-06T01:20:35-04:00
+  (2026-09-06T05:20:35Z).
+
+**Unchanged:**
+- `EQL50ups` `claude/eql-gear-optimizer-tfzvh6`: `05904054`.
+- `sky-ledger` `claude/eq-legends-class-analysis-q68111`: `8863354b`.
+- `EQLSLockouts` `session-d/raid-rows`: `cda4712a`.
+
+No content read beyond commit subject and timestamp; no judgement made on
+any change.
