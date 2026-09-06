@@ -16,8 +16,27 @@ owner's to authorise.**
 
 ## What is here, and how to check it against the source
 
-**Pinned to source commit `b45ba7f3ce9a`. THIS IS THE FOURTH RE-PIN, AND THE FIRST TAKEN AT
-REST.** The archive chased this repository three times in two days — `141eef7`, `e42fadc`,
+**Pinned to source commit `5c95017332900`. THE FIFTH RE-PIN, AND THE SECOND TAKEN AT REST.**
+
+**WHY A FIFTH PIN IS NOT A RETURN TO CHASING, WHICH IS THE HABIT PIN-AT-REST REPLACED.**
+Session F explicitly recommended *not* re-pinning on its account — `b45ba7f` is **weaker, not
+false** — and warned that a pin taken to chase a commit is the exact practice we had just
+abandoned. **The discriminator that made this one worth taking, and it is a rule rather than a
+judgement call:**
+
+> **RE-PIN AT REST WHEN THE SOURCE HAS MATERIALLY CHANGED — NOT WHEN IT HAS SIMPLY MOVED.**
+> *Chasing is pinning because a commit exists. This is pinning because the copy would otherwise
+> preserve a superseded artefact, and an archive outlives the repository it copies.*
+
+`b45ba7f` carried a structure diagram reading `slot | SPA | base1 | base2 | max | calc`, with a
+paragraph beneath it saying the last four were named by convention rather than by evidence.
+**`5c95017` replaces the diagram itself with `slot | SPA | ? | ? | ? | ?` and marks the four
+explicitly NOT ESTABLISHED.** *The prose caveat was already there and was not enough.* **A
+reader building a parser copies the diagram and never reaches the paragraph** — so the archive
+would have preserved, permanently, the one artefact most likely to be acted on and least likely
+to carry its own caveat.
+
+**Original pin-at-rest note, which stands:** The archive chased this repository three times in two days — `141eef7`, `e42fadc`,
 `b7a0a81` — every one of them while Session F was still working in it.
 
 > **ARCHIVING A LIVE REPOSITORY IS CHASING A MOVING TARGET, AND EVERY LAG IS A WINDOW IN
@@ -39,8 +58,17 @@ snapshot must name the commit it snapshots, never the clock.*
     3ca0ee427102  method/scanall.py
     45172814c604  method/deep.py
     50f1333cb997  method/agree.py
-    560177eb8933  CLIENT-DEEP-RESEARCH.md
+    00625edae9df  CLIENT-ITEM-TABLE-COUNT.md
+    208e4f5632e6  method/dupcheck.py
+    2d58106edc01  method/slots.py
+    30b9c1e1d710  method/lockout.py
+    323073f7f561  method/join.py
+    3947d381afbe  method/pfs.py
+    3ca0ee427102  method/scanall.py
+    45172814c604  method/deep.py
+    50f1333cb997  method/agree.py
     82464b135e79  method/spa_harness.py
+    8f37a85fcebe  CLIENT-DEEP-RESEARCH.md
     b0f3c7e1ba3e  method/total.py
     bee41c1d3a65  method/pattern.py
     c64b807c1ae6  method/spellparse.py
@@ -50,7 +78,7 @@ snapshot must name the commit it snapshots, never the clock.*
 
 sha256, first twelve, of the bytes as stored here, verified against the source at pin time.
 **Verified at this pin: all 17 tracked files byte-identical to the source, source working
-tree clean, source HEAD `b45ba7f`.**
+tree clean, source HEAD `5c95017`.**
 
 **A SECOND CORRECTION LANDED BETWEEN PINS AND IS NOT SHOWN BELOW, BECAUSE IT NEVER REACHED
 THIS ARCHIVE — but it reached further than the archive did.** At `019b4b7` Session F
@@ -81,6 +109,7 @@ all 73,975 spells — **only the recipe, which is the half a downstream session 
     721679d  06 Sep 01:35  Priority 4: client ships the lockout schema and rules, not the durations
     e02fb99  06 Sep 01:38  CORRECTION: col 172 structure was wrong - $ separates slots, not 1+5n
     b45ba7f  06 Sep 01:42  Priority 3: two different five-tier difficulty scales; do not conflate
+    5c95017  06 Sep 01:59  Write fields 2-5 of the effect slot as unknowns, not as guessed names
 
 ## The finding — CORRECTED 6 September, and the first version is shown because it was wrong
 

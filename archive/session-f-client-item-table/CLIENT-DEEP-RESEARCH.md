@@ -196,8 +196,19 @@ found three payloads I would otherwise have missed**, which is IF6's lesson hold
 **Structure — `$` separates slots, `|` separates fields within a slot:**
 
 ```
-slot | SPA | base1 | base2 | max | calc          (6 fields, always)
+  slot  |  SPA  |  ?  |  ?  |  ?  |  ?           (6 fields, always)
+   ^       ^       \_______________/
+   |       |         NOT ESTABLISHED - four unnamed fields
+   |       +-- ESTABLISHED: the effect type (SPA)
+   +---------- ESTABLISHED: 1-based slot index
 ```
+
+**The last four fields are deliberately left unnamed.** An earlier draft of this section
+labelled them `base1 | base2 | max | calc`. Those were my working guesses from the EQ
+spell format, **not** things I established from this file, and printing them inside the
+structure diagram made six fields look equally verified when two are. **A plausible name is
+the most dangerous kind, because it is the form someone else will code against.** Whoever
+decodes them should name them from evidence and not inherit my guesses.
 
 ```
 Gate           id 36     1|26|98|1|100|0
@@ -231,10 +242,11 @@ multi-slot     1|36|-1|0|100|0 $ 2|35|-1|0|100|0 $ 3|0|5|0|100|0
 73,975 spells.** Session C's 1,067-entry hand-maintained roster and its 56-heading stacking
 table are transcriptions of something the client states outright.
 
-**What I have NOT established:** the identity and order of `base1 / base2 / max / calc`.
-The slot framing and the SPA position are now proven across 275,022 slots; **the remaining
-four fields are named here by convention, not by evidence.** That is the afternoon's work
-against the published SPA table, and it is the highest-value thing left in this file.
+**What I have NOT established:** anything about fields 2, 3, 4 and 5 — not their
+identity, not their order. The slot framing and the SPA position are proven across 275,022
+slots; **the other four are unknowns, and this document now writes them as unknowns.**
+Decoding them is the afternoon's work against the published SPA table, and it is the
+highest-value thing left in this file.
 
 ---
 
